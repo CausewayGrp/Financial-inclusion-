@@ -210,7 +210,8 @@
         "percent of population ages 25+": "UI-VIS-UNIT-PCT-AGES-25-PLUS",
         "YER_billion": "UI-VIS-UNIT-YER-BILLION",
         "USD_million": "UI-VIS-UNIT-USD-MILLION",
-        "SAR_million": "UI-VIS-UNIT-SAR-MILLION"
+        "SAR_million": "UI-VIS-UNIT-SAR-MILLION",
+        "YER per USD": "UI-VIS-UNIT-YER-PER-USD"
       },
       "corridor": {
         "Saudi Arabia": "UI-VIS-CAT-CORRIDOR-SA",
@@ -1179,16 +1180,19 @@
           }
         ],
         "ordering": "Chronological.",
-        "transformation": "None; nominal YER million. No price or exchange-rate adjustment and no exchange-rate annotation (it would invite a causal reading).",
+        "transformation": "None; nominal YER million. No price or exchange-rate adjustment, and the line carries no exchange-rate mark (it would invite a causal reading); the frame note UI-VIS-NOTE-POS-RATE-WINDOW says the window spans the 2025 move in the published rate.",
         "missing": "September 2025 is MISSING: gap in the line, labelled.",
         "breaks": "None governed.",
-        "annotation": "UI-VIS-NOMINAL on the axis; MISSING label on September 2025.",
+        "annotation": "UI-VIS-NOMINAL on the axis; MISSING label on September 2025. Frame note UI-VIS-NOTE-POS-RATE-WINDOW.",
         "credit": {
           "passport_id": "EP-CBY-POS-MONTHLY"
         },
         "mobile": "Stacked panel.",
         "rtl": "Time axis left to right.",
-        "fallback": "Table: month, value (YER million) or 'no verified value'."
+        "fallback": "Table: month, value (YER million) or 'no verified value'.",
+        "frame_labels": [
+          "UI-VIS-NOTE-POS-RATE-WINDOW"
+        ]
       }
     },
     {
@@ -3399,6 +3403,555 @@
           },
           {
             "marker": "UI-VIS-NOTE-FINDEX-GROUPS"
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-CBY-MONETARY-SNAPSHOT",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "Eight indicators of the monetary survey and the banks' consolidated balance sheet at two dated positions, as the bulletin prints them: a table, because the rows are in different units and the two columns are two vintages, not a series.",
+      "promotion_requires": "A drawn comparison would need each indicator as a governed monthly series in one vintage; the table keeps two dated columns.",
+      "table": {
+        "form": "One row per indicator in its own unit; two dated columns (the end of 2025 and June 2026); values and shares as the bulletin prints them; governed notes close the table. No change column, no growth rate.",
+        "objects": [
+          {
+            "id": "cby",
+            "rows": {
+              "file": "data/cby_monetary.json",
+              "header_key": "observation_id",
+              "ids": [
+                "OBS-CBY-00681",
+                "OBS-CBY-00696",
+                "OBS-CBY-00010",
+                "OBS-CBY-00687",
+                "OBS-CBY-00202",
+                "OBS-CBY-00689",
+                "OBS-CBY-00094",
+                "OBS-CBY-00691",
+                "OBS-CBY-00247",
+                "OBS-CBY-00692",
+                "OBS-CBY-00259",
+                "OBS-CBY-00693",
+                "OBS-CBY-00379",
+                "OBS-CBY-00695",
+                "OBS-CBY-00355",
+                "OBS-CBY-00694"
+              ]
+            },
+            "fields": {
+              "value": "value",
+              "period": "period",
+              "source": "source_id"
+            },
+            "must_equal": {
+              "OBS-CBY-00681": {
+                "value": 1624.45
+              },
+              "OBS-CBY-00696": {
+                "value": 1560.95
+              },
+              "OBS-CBY-00010": {
+                "value": 11429.3
+              },
+              "OBS-CBY-00687": {
+                "value": 11925.0
+              },
+              "OBS-CBY-00202": {
+                "value": 28.6
+              },
+              "OBS-CBY-00689": {
+                "value": 28.4
+              },
+              "OBS-CBY-00094": {
+                "value": 71.0
+              },
+              "OBS-CBY-00691": {
+                "value": 68.0
+              },
+              "OBS-CBY-00247": {
+                "value": 12341.8
+              },
+              "OBS-CBY-00692": {
+                "value": 13761.2
+              },
+              "OBS-CBY-00259": {
+                "value": 4116.5
+              },
+              "OBS-CBY-00693": {
+                "value": 4650.0
+              },
+              "OBS-CBY-00379": {
+                "value": 1392.3
+              },
+              "OBS-CBY-00695": {
+                "value": 1362.9
+              },
+              "OBS-CBY-00355": {
+                "value": 1928.8
+              },
+              "OBS-CBY-00694": {
+                "value": 1966.8
+              }
+            }
+          }
+        ],
+        "head": [
+          "UI-VIS-TH-CBY-ITEM",
+          "UI-VIS-TH-CBY-END-2025",
+          "UI-VIS-TH-CBY-2026-06"
+        ],
+        "caption": [
+          "UI-VIS-CAP-CBY-MFD-55",
+          "UI-VIS-CAP-CBY-AS-PRINTED"
+        ],
+        "rows": [
+          {
+            "head": "UI-VIS-ROW-CBY-RATE",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00681.value",
+                "dp": 2
+              },
+              {
+                "ref": "cby.OBS-CBY-00696.value",
+                "dp": 2
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-M2",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00010.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00687.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-CIC-SHARE",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00202.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00689.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-FX-SHARE",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00094.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00691.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-ASSETS",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00247.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00692.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-FOREIGN",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00259.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00693.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-PRIVATE",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00379.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00695.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-GOV",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00355.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00694.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": "UI-VIS-NOTE-CBY-RATE-SOURCE"
+          },
+          {
+            "marker": "UI-VIS-NOTE-CBY-FIREWALL"
+          },
+          {
+            "marker": "UI-VIS-NOTE-CBY-COVERAGE"
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-YER-MARKET-RATE",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "The published monthly average market rate, beside the rial balance sheets: the monthly line primitive of the POS panels, the 2025 move annotated, not smoothed.",
+      "contract": {
+        "form": "Monthly line of the published average market rate, January 2017 to June 2026; one point per month; no smoothing and no trend line.",
+        "series": [
+          {
+            "id": "rate",
+            "rows": {
+              "file": "data/cby_monetary.json",
+              "header_key": "observation_id",
+              "where": {
+                "indicator_id": "^YER_USD_MARKET_RATE$"
+              }
+            },
+            "fields": {
+              "x": "period",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_status",
+              "source": "source_id"
+            },
+            "state": "REPORTED",
+            "expected_x": [
+              "2017-01",
+              "2017-02",
+              "2017-03",
+              "2017-04",
+              "2017-05",
+              "2017-06",
+              "2017-07",
+              "2017-08",
+              "2017-09",
+              "2017-10",
+              "2017-11",
+              "2017-12",
+              "2018-01",
+              "2018-02",
+              "2018-03",
+              "2018-04",
+              "2018-05",
+              "2018-06",
+              "2018-07",
+              "2018-08",
+              "2018-09",
+              "2018-10",
+              "2018-11",
+              "2018-12",
+              "2019-01",
+              "2019-02",
+              "2019-03",
+              "2019-04",
+              "2019-05",
+              "2019-06",
+              "2019-07",
+              "2019-08",
+              "2019-09",
+              "2019-10",
+              "2019-11",
+              "2019-12",
+              "2020-01",
+              "2020-02",
+              "2020-03",
+              "2020-04",
+              "2020-05",
+              "2020-06",
+              "2020-07",
+              "2020-08",
+              "2020-09",
+              "2020-10",
+              "2020-11",
+              "2020-12",
+              "2021-01",
+              "2021-02",
+              "2021-03",
+              "2021-04",
+              "2021-05",
+              "2021-06",
+              "2021-07",
+              "2021-08",
+              "2021-09",
+              "2021-10",
+              "2021-11",
+              "2021-12",
+              "2022-01",
+              "2022-02",
+              "2022-03",
+              "2022-04",
+              "2022-05",
+              "2022-06",
+              "2022-07",
+              "2022-08",
+              "2022-09",
+              "2022-10",
+              "2022-11",
+              "2022-12",
+              "2023-01",
+              "2023-02",
+              "2023-03",
+              "2023-04",
+              "2023-05",
+              "2023-06",
+              "2023-07",
+              "2023-08",
+              "2023-09",
+              "2023-10",
+              "2023-11",
+              "2023-12",
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12",
+              "2025-01",
+              "2025-02",
+              "2025-03",
+              "2025-04",
+              "2025-05",
+              "2025-06",
+              "2025-07",
+              "2025-08",
+              "2025-09",
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06"
+            ],
+            "must_equal": {
+              "OBS-CBY-00574": 315.64,
+              "OBS-CBY-00675": 2733.85,
+              "OBS-CBY-00677": 1624.5,
+              "OBS-CBY-00696": 1560.95
+            },
+            "label_fields": {
+              "unit": "unit"
+            }
+          }
+        ],
+        "ordering": "Chronological.",
+        "transformation": "None; the monthly averages as published, in rials per US dollar.",
+        "missing": "None: every month from January 2017 to June 2026 is published.",
+        "breaks": "None governed. The June to August 2025 move is a change in the published rate, annotated in the frame, not a break in the series.",
+        "annotation": "Frame notes UI-VIS-NOTE-CBY-RATE-SOURCE (what the rate is and is not) and UI-VIS-NOTE-RATE-2025-MOVE (the June to August 2025 move with its two published values); no point is marked as a cause.",
+        "credit": {
+          "source_ids": [
+            "SRC-CBY-001"
+          ]
+        },
+        "mobile": "Single panel; the line keeps its full span.",
+        "rtl": "Time axis left to right.",
+        "fallback": "Table: month, average market rate (rials per US dollar).",
+        "frame_labels": [
+          "UI-VIS-NOTE-CBY-RATE-SOURCE",
+          "UI-VIS-NOTE-RATE-2025-MOVE"
+        ]
+      }
+    },
+    {
+      "visual_id": "RV-CWR-011",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The bound CBY-BANKS positions behind Reading CWR-011, at three dated positions, as the bulletin prints them; levels only, the record carries the one share it computes.",
+      "promotion_requires": "A drawn composition would need governed shares of total assets for each date (computed by CauseWay and held as rows).",
+      "table": {
+        "form": "One row per balance-sheet line; three dated columns (the end of 2025, May 2026, June 2026); values as the bulletin prints them; governed notes close the table. No share column, no growth rate.",
+        "objects": [
+          {
+            "id": "cby",
+            "rows": {
+              "file": "data/cby_monetary.json",
+              "header_key": "observation_id",
+              "ids": [
+                "OBS-CBY-00247",
+                "OBS-CBY-00249",
+                "OBS-CBY-00692",
+                "OBS-CBY-00259",
+                "OBS-CBY-00261",
+                "OBS-CBY-00693",
+                "OBS-CBY-00355",
+                "OBS-CBY-00357",
+                "OBS-CBY-00694",
+                "OBS-CBY-00379",
+                "OBS-CBY-00381",
+                "OBS-CBY-00695"
+              ]
+            },
+            "fields": {
+              "value": "value",
+              "period": "period",
+              "source": "source_id"
+            },
+            "must_equal": {
+              "OBS-CBY-00247": {
+                "value": 12341.8
+              },
+              "OBS-CBY-00249": {
+                "value": 13362.1
+              },
+              "OBS-CBY-00692": {
+                "value": 13761.2
+              },
+              "OBS-CBY-00259": {
+                "value": 4116.5
+              },
+              "OBS-CBY-00261": {
+                "value": 4448.0
+              },
+              "OBS-CBY-00693": {
+                "value": 4650.0
+              },
+              "OBS-CBY-00355": {
+                "value": 1928.8
+              },
+              "OBS-CBY-00357": {
+                "value": 2145.0
+              },
+              "OBS-CBY-00694": {
+                "value": 1966.8
+              },
+              "OBS-CBY-00379": {
+                "value": 1392.3
+              },
+              "OBS-CBY-00381": {
+                "value": 1350.4
+              },
+              "OBS-CBY-00695": {
+                "value": 1362.9
+              }
+            }
+          }
+        ],
+        "head": [
+          "UI-VIS-TH-CBY-ITEM",
+          "UI-VIS-TH-CBY-END-2025",
+          "UI-VIS-TH-CBY-2026-05",
+          "UI-VIS-TH-CBY-2026-06"
+        ],
+        "caption": [
+          "UI-VIS-CAP-CBY-MFD-55",
+          "UI-VIS-CAP-CBY-VALUES-AS-PRINTED"
+        ],
+        "rows": [
+          {
+            "head": "UI-VIS-ROW-CBY-ASSETS",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00247.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00249.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00692.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-FOREIGN",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00259.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00261.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00693.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-GOV",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00355.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00357.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00694.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-ROW-CBY-PRIVATE",
+            "cells": [
+              {
+                "ref": "cby.OBS-CBY-00379.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00381.value",
+                "dp": 1
+              },
+              {
+                "ref": "cby.OBS-CBY-00695.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": "UI-VIS-NOTE-CBY-NOT-ALL-LINES"
+          },
+          {
+            "marker": "UI-VIS-NOTE-CBY-FIREWALL"
+          },
+          {
+            "marker": "UI-VIS-NOTE-CBY-COVERAGE"
           }
         ]
       }

@@ -1248,5 +1248,101 @@
       "/people",
       "/remittances"
     ]
+  },
+  {
+    "visual_id": "VIS-CBY-MONETARY-SNAPSHOT",
+    "title_en": "Money and bank balance sheets: the end of 2025 and June 2026",
+    "title_ar": "النقود وميزانيات البنوك: نهاية 2025 ويونيو 2026",
+    "visual_form": "TABLE_TEXT_FIRST",
+    "question_en": "What does the latest issue of CBY-Aden's monthly bulletin (June 2026) show for money and bank balance sheets?",
+    "question_ar": "ماذا يُظهر أحدث عدد من النشرة الشهرية للبنك المركزي اليمني – عدن (يونيو 2026) عن النقود وميزانيات البنوك؟",
+    "what_it_shows_en": "Eight indicators from the monthly bulletin of the Central Bank of Yemen – Aden at the end of 2025 and in June 2026: the average market rate, broad money, the shares of currency in circulation and of foreign-currency deposits, and the banks' total assets, foreign assets, credit to the private sector and loans and advances to government, as the bulletin prints them.",
+    "what_it_shows_ar": "ثمانية مؤشرات من النشرة الشهرية للبنك المركزي اليمني – عدن في نهاية 2025 وفي يونيو 2026: متوسط سعر الصرف السوقي، والعرض النقدي الواسع، وحصتا العملة المتداولة والودائع بالعملات الأجنبية، وإجمالي أصول البنوك وأصولها الخارجية والائتمان الممنوح منها للقطاع الخاص وقروضها وسلفياتها للحكومة، كما ترد في النشرة.",
+    "decision_value_en": "Gives two dated positions of the monetary and banking system side by side, in the bulletin's own units, before any reading of change.",
+    "decision_value_ar": "يضع مركزين مؤرخين للنظام النقدي والمصرفي جنبًا إلى جنب، بوحدات النشرة نفسها، قبل أي قراءة للتغير.",
+    "source_period": "End of 2025; June 2026 (Issue No. 55)",
+    "evidence_strength": "HIGH_ADMIN",
+    "freshness_profile": "2025 year-end; 2026-06",
+    "data_inputs": "CBY-BANKS-2026-05 + CLM-033 + rows of 18_CBY_MONETARY: market rate, M2, currency in circulation share, FX deposit share, bank total assets, foreign assets, private credit, loans and advances to government (end of 2025 and June 2026)",
+    "unit_or_object": "YER billion; percent; rials per US dollar, each row in its own unit",
+    "denominator_universe": "The monetary survey and the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) in Monetary and Financial Developments; the bulletin defines banks as those operating in the Republic of Yemen but does not say which banks and branches report to it.",
+    "period": "End of 2025; June 2026",
+    "encoding_contract": "Table: one row per indicator in its own unit; two dated columns; values and shares as printed; no change column and no growth rate.",
+    "prohibited_inference_en": "Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services. Money and balance-sheet values are nominal rials, partly valued at market exchange rates, so a change between the two columns cannot be read as real growth; the figures are not shown to cover all of Yemen.",
+    "prohibited_inference_ar": "تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها. وقيم النقود والميزانيات بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية، فلا يمكن قراءة التغير بين العمودين على أنه نمو حقيقي؛ ولا يثبت أن الأرقام تغطي اليمن كله.",
+    "accessible_summary_en": "From the end of 2025 to June 2026, as the bulletin of the Central Bank of Yemen – Aden prints them: the average market rate went from 1,624.45 to 1,560.95 rials per US dollar (December 2025 and June 2026 monthly averages); broad money from 11,429.3 to 11,925.0 billion rials; currency in circulation from 28.6% to 28.4% of broad money; foreign-currency deposits from 71.0% to 68.0% of total deposits; the banks' total assets from 12,341.8 to 13,761.2 billion rials, their foreign assets from 4,116.5 to 4,650.0 billion, their credit to the private sector from 1,392.3 to 1,362.9 billion and their loans and advances to government from 1,928.8 to 1,966.8 billion. Money and balance-sheet values are in nominal rials; all of these describe the banking system, not people's access or use; the bulletin does not say which banks and branches report to it.",
+    "accessible_summary_ar": "من نهاية 2025 إلى يونيو 2026، كما ترد في نشرة البنك المركزي اليمني – عدن: انتقل متوسط سعر الصرف السوقي من 1,624.45 إلى 1,560.95 ريالًا للدولار الأمريكي (المتوسطان الشهريان لديسمبر 2025 ويونيو 2026)؛ والعرض النقدي الواسع من 11,429.3 إلى 11,925.0 مليار ريال؛ والعملة المتداولة من 28.6% إلى 28.4% من العرض النقدي الواسع؛ والودائع بالعملات الأجنبية من 71.0% إلى 68.0% من إجمالي الودائع؛ وإجمالي أصول البنوك من 12,341.8 إلى 13,761.2 مليار ريال، وأصولها الخارجية من 4,116.5 إلى 4,650.0 مليار، والائتمان الممنوح منها للقطاع الخاص من 1,392.3 إلى 1,362.9 مليار، وقروضها وسلفياتها للحكومة من 1,928.8 إلى 1,966.8 مليار. وقيم النقود والميزانيات بالريال الاسمي، وكلها تصف الجهاز المصرفي لا وصول الأفراد أو استخدامهم؛ ولا تذكر النشرة أيُّ البنوك والفروع تقدم بياناتها إليها.",
+    "public_routes": [
+      "/finance"
+    ],
+    "period_ar": "نهاية 2025؛ يونيو 2026",
+    "universe_ar": "المسح النقدي والميزانية المجمعة للبنوك التجارية والإسلامية كما ينشرهما البنك المركزي اليمني – عدن في نشرته الشهرية «التطورات النقدية والمالية»؛ وتُعرِّف النشرة البنوك بأنها العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها.",
+    "public_route_list": [
+      "/finance"
+    ]
+  },
+  {
+    "visual_id": "VIS-YER-MARKET-RATE",
+    "title_en": "The rial's average market rate published by CBY-Aden, monthly",
+    "title_ar": "متوسط سعر الصرف السوقي للريال كما ينشره البنك المركزي اليمني – عدن، شهريًا",
+    "visual_form": "LINE_MONTHLY_ANNOTATED",
+    "question_en": "How has the average market rate that CBY-Aden publishes moved since 2017?",
+    "question_ar": "كيف تحرك متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن منذ 2017؟",
+    "what_it_shows_en": "The monthly average market rate of the rial against the US dollar that the Central Bank of Yemen – Aden publishes, from January 2017 to June 2026, drawn as published, with the June to August 2025 move annotated rather than smoothed.",
+    "what_it_shows_ar": "متوسط سعر الصرف السوقي الشهري للريال مقابل الدولار الأمريكي الذي ينشره البنك المركزي اليمني – عدن، من يناير 2017 إلى يونيو 2026، مرسومًا كما نُشر، مع تعليق توضيحي على التحرك بين يونيو وأغسطس 2025 بدل تنعيمه.",
+    "decision_value_en": "Puts the published monthly average market rate beside balance-sheet values in rials, so that a move in rial values is checked against the rate before it is read as economic change; the bulletin does not say which rate, or which day's rate, values the banks' foreign-currency items.",
+    "decision_value_ar": "يضع متوسط سعر الصرف السوقي الشهري المنشور بجانب قيم الميزانيات بالريال، حتى يُفحص تحرك القيم بالريال في ضوء السعر قبل أن يُقرأ على أنه تغير اقتصادي؛ ولا تبيّن النشرة بأي سعر، ولا بسعر أي يوم، تُقيَّم البنود المقوّمة بالعملات الأجنبية لدى البنوك.",
+    "source_period": "2017-01→2026-06 monthly",
+    "evidence_strength": "HIGH_ADMIN",
+    "freshness_profile": "2017-01→2026-06",
+    "data_inputs": "CLM-033 + rows of 18_CBY_MONETARY YER_USD_MARKET_RATE (Table 6)",
+    "unit_or_object": "rials per US dollar, monthly average",
+    "denominator_universe": "The monthly average market exchange rate of the rial against the US dollar published by the Central Bank of Yemen – Aden (CBY-Aden) in Monetary and Financial Developments (Table 6), which the English edition of the bulletin calls the parallel-market rate; not the rate in Sana'a and not any single day's rate.",
+    "period": "January 2017 to June 2026",
+    "encoding_contract": "Monthly line, one point per published month; the June to August 2025 move is annotated in the frame; no smoothing and no trend line.",
+    "prohibited_inference_en": "The line shows the monthly average market rate that CBY-Aden publishes. It is not the rate in Sana'a or any single day's rate; it does not explain why the rate moved, and it does not show that the rate was held or administered.",
+    "prohibited_inference_ar": "يعرض الخط متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه؛ ولا يفسر سبب تحرك السعر، ولا يُظهر أن السعر ثُبِّت أو حُدِّد إداريًا.",
+    "accessible_summary_en": "The average market rate of the rial published by the Central Bank of Yemen – Aden went from 315.64 rials per US dollar in January 2017 to 2,733.85 in June 2025, then to 2,212.7 in July and 1,624.5 in August 2025, and stood at 1,560.95 in June 2026. The line joins the published monthly averages and adds no smoothing of its own. It is not the rate in Sana'a or any single day's rate, and it does not explain why the rate moved.",
+    "accessible_summary_ar": "انتقل متوسط سعر الصرف السوقي للريال الذي ينشره البنك المركزي اليمني – عدن من 315.64 ريالًا للدولار الأمريكي في يناير 2017 إلى 2,733.85 في يونيو 2025، ثم إلى 2,212.7 في يوليو و1,624.5 في أغسطس 2025، وبلغ 1,560.95 في يونيو 2026. ويصل الخط بين المتوسطات الشهرية المنشورة ولا يضيف إليها أي تنعيم. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه، ولا يفسر سبب تحرك السعر.",
+    "public_routes": [
+      "/finance"
+    ],
+    "period_ar": "من يناير 2017 إلى يونيو 2026",
+    "universe_ar": "متوسط سعر الصرف السوقي الشهري للريال مقابل الدولار الأمريكي كما ينشره البنك المركزي اليمني – عدن في نشرته الشهرية «التطورات النقدية والمالية» (الجدول 6)، وتسميه النسخة الإنجليزية من النشرة سعر السوق الموازية؛ وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه.",
+    "public_route_list": [
+      "/finance"
+    ]
+  },
+  {
+    "visual_id": "RV-CWR-011",
+    "title_en": "Where the banks' assets sit: three dated positions",
+    "title_ar": "أين تقع أصول البنوك: ثلاثة مراكز مؤرخة",
+    "visual_form": "TABLE_TEXT_FIRST",
+    "question_en": "How much of the banks' total assets sits in foreign assets, loans and advances to government and credit to the private sector?",
+    "question_ar": "كم من إجمالي أصول البنوك يقع في الأصول الخارجية، وفي القروض والسلفيات للحكومة، وفي الائتمان الممنوح للقطاع الخاص؟",
+    "what_it_shows_en": "The consolidated balance sheet of commercial and Islamic banks at the end of 2025, in May 2026 and in June 2026: total assets, foreign assets, loans and advances to government and credit to the private sector, as the bulletin of the Central Bank of Yemen – Aden prints them.",
+    "what_it_shows_ar": "الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية 2025 وفي مايو 2026 ويونيو 2026: إجمالي الأصول والأصول الخارجية والقروض والسلفيات للحكومة والائتمان الممنوح للقطاع الخاص، كما ترد في نشرة البنك المركزي اليمني – عدن.",
+    "decision_value_en": "Keeps the composition behind the Reading's hypothesis visible in the bulletin's own figures, so that the hypothesis is read against them and not against a share alone.",
+    "decision_value_ar": "يُبقي التوزيع الذي تستند إليه فرضية القراءة ظاهرًا بأرقام النشرة نفسها، حتى تُقرأ الفرضية في ضوئها لا في ضوء حصة منفردة.",
+    "source_period": "End of 2025; May 2026; June 2026",
+    "evidence_strength": "HIGH_ADMIN",
+    "freshness_profile": "2025 year-end; 2026-05; 2026-06",
+    "data_inputs": "CBY-BANKS-2026-05 + rows of 18_CBY_MONETARY T4: the CBY-BANKS-2026-05 rows and the June 2026 rows (Issue No. 55)",
+    "unit_or_object": "YER billion",
+    "denominator_universe": "The consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden); the bulletin defines banks as those operating in the Republic of Yemen but does not say which banks and branches report to it.",
+    "period": "End of 2025; May 2026; June 2026",
+    "encoding_contract": "Table: one row per balance-sheet line, three dated columns, values as printed; no share column and no growth rate; a note says the lines shown do not add up to total assets.",
+    "prohibited_inference_en": "The positions do not show why banks hold these assets, a credit allocation decision, or people's access to credit; values are nominal rials, partly valued at market exchange rates.",
+    "prohibited_inference_ar": "لا تُظهر هذه المراكز سبب احتفاظ البنوك بهذه الأصول، ولا قرارًا بتخصيص الائتمان، ولا وصول الأفراد إلى الائتمان؛ والقيم بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية.",
+    "accessible_summary_en": "As the bulletin of the Central Bank of Yemen – Aden prints them, the banks' total assets were 12,341.8 billion rials at the end of 2025, 13,362.1 billion in May 2026 and 13,761.2 billion in June 2026; foreign assets 4,116.5, 4,448.0 and 4,650.0 billion; loans and advances to government 1,928.8, 2,145.0 and 1,966.8 billion; and credit to the private sector 1,392.3, 1,350.4 and 1,362.9 billion. The three lines do not add up to total assets, and the positions do not show why banks hold these assets or people's access to credit.",
+    "accessible_summary_ar": "كما ترد في نشرة البنك المركزي اليمني – عدن، بلغ إجمالي أصول البنوك 12,341.8 مليار ريال في نهاية 2025، و13,362.1 مليار في مايو 2026، و13,761.2 مليار في يونيو 2026؛ والأصول الخارجية 4,116.5 و4,448.0 و4,650.0 مليار؛ والقروض والسلفيات للحكومة 1,928.8 و2,145.0 و1,966.8 مليار؛ والائتمان الممنوح للقطاع الخاص 1,392.3 و1,350.4 و1,362.9 مليار. ولا يساوي مجموع البنود الثلاثة إجمالي الأصول، ولا تُظهر هذه المراكز سبب احتفاظ البنوك بهذه الأصول ولا وصول الأفراد إلى الائتمان.",
+    "public_routes": [
+      "/readings/where-bank-balance-sheets-sit"
+    ],
+    "period_ar": "نهاية 2025؛ مايو 2026؛ يونيو 2026",
+    "universe_ar": "الميزانية المجمعة للبنوك التجارية والإسلامية كما ينشرها البنك المركزي اليمني – عدن؛ وتُعرِّف النشرة البنوك بأنها العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها.",
+    "public_route_list": [
+      "/readings/where-bank-balance-sheets-sit"
+    ]
   }
 ]

@@ -3,7 +3,7 @@
     "dataset_id": "LOCAL-CBY-MONETARY",
     "file": "data/cby_monetary.json",
     "domain": "Banking and macro context relevant to inclusion",
-    "record_rows": 689,
+    "record_rows": 699,
     "runtime_role": "LOCAL_STATIC_INPUT",
     "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
   },

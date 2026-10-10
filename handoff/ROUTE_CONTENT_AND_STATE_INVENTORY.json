@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "d2cd2ad16bd84f9b4963261f0c2291b4eac8ba621458c3be5734ee2c8599b6a3",
-  "page_specs_sha256": "42f303019da65ec059e08c9a7bf5d7b4fe85912b8670544e67199617dcc1bc36",
+  "production_master_sha256": "49de81b3bc533aa839cce880109d83b2b06f2b9a8f849842ae13a721b35ce482",
+  "page_specs_sha256": "2e434e794b20c0027f7c8dcf567652aa2f92411f0db1fec1a6dc010a2995d883",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -16,7 +16,7 @@
   "readings": 11,
   "measurement_priorities": 10,
   "entry_questions": 11,
-  "visual_contracts": 39,
+  "visual_contracts": 42,
   "evidence_passports": 55,
   "search_records": 476,
   "page_specs": 144
@@ -4470,7 +4470,9 @@
     "VIS-MFI-SPINE"
    ],
    "visual_ids": [
-    "VIS-MFI-DIVERGENCE"
+    "VIS-CBY-MONETARY-SNAPSHOT",
+    "VIS-MFI-DIVERGENCE",
+    "VIS-YER-MARKET-RATE"
    ],
    "reading_ids": [
     "CWR-002",
@@ -5350,7 +5352,9 @@
     "CBY-BANKS-2026-05",
     "CLM-033"
    ],
-   "visual_ids": [],
+   "visual_ids": [
+    "RV-CWR-011"
+   ],
    "reading_ids": [
     "CWR-002",
     "CWR-011"
@@ -5959,7 +5963,8 @@
     "VIS-POS-TRANSACTIONS",
     "VIS-POS-VALUE",
     "VIS-REMITTANCE-COST",
-    "VIS-REMITTANCE-MACRO"
+    "VIS-REMITTANCE-MACRO",
+    "VIS-YER-MARKET-RATE"
    ],
    "RETIRE_FROM_DESIGN": [
     "VIS-CAPITAL-CONTEXT"
@@ -5984,7 +5989,9 @@
     "VIS-PAYMENT-RAILS"
    ],
    "TABLE_TEXT_FIRST": [
+    "RV-CWR-011",
     "VIS-ACCESS-EVIDENCE-LAYER",
+    "VIS-CBY-MONETARY-SNAPSHOT",
     "VIS-EVIDENCE-FRESHNESS",
     "VIS-EVIDENCE-GAPS",
     "VIS-FINDEX-ACCESS-USE",

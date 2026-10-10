@@ -4380,7 +4380,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4639,7 +4639,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5048,7 +5048,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -6737,7 +6737,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7626,7 +7626,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8067,7 +8067,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8467,7 +8467,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8880,7 +8880,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -10284,7 +10284,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -10678,7 +10678,7 @@
       },
       {
         "source_id": "SRC-CBY-001",
-        "primary_url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -11166,6 +11166,102 @@
     "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
     "lineage_from": "VIS-FINDEX-FLOW-CHANNELS"
+  },
+  {
+    "object_type": "visual",
+    "object_id": "VIS-CBY-MONETARY-SNAPSHOT",
+    "public_routes": [
+      "/finance/"
+    ],
+    "lineage_state": "COMPOSITE_OF_OBJECTS",
+    "dependency_ids": [
+      "CBY-BANKS-2026-05",
+      "CLM-033"
+    ],
+    "direct_source_ids": [],
+    "resolved_source_ids": [],
+    "resolved_via_object_ids": [
+      "CBY-BANKS-2026-05",
+      "CLM-033"
+    ],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [],
+    "closure_state": "COMPOSITE_OF_OBJECTS",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
+  },
+  {
+    "object_type": "visual",
+    "object_id": "VIS-YER-MARKET-RATE",
+    "public_routes": [
+      "/finance/"
+    ],
+    "lineage_state": "COMPOSITE_OF_OBJECTS",
+    "dependency_ids": [
+      "CLM-033"
+    ],
+    "direct_source_ids": [],
+    "resolved_source_ids": [],
+    "resolved_via_object_ids": [
+      "CLM-033"
+    ],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [],
+    "closure_state": "COMPOSITE_OF_OBJECTS",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
+  },
+  {
+    "object_type": "visual",
+    "object_id": "RV-CWR-011",
+    "public_routes": [
+      "/readings/where-bank-balance-sheets-sit/"
+    ],
+    "lineage_state": null,
+    "dependency_ids": [
+      "CBY-BANKS-2026-05"
+    ],
+    "direct_source_ids": [
+      "SRC-CBY-001",
+      "SRC-WB-FMIIP-P180708"
+    ],
+    "resolved_source_ids": [
+      "SRC-CBY-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001"
+    ],
+    "resolved_via_object_ids": [
+      "CBY-BANKS-2026-05",
+      "CLM-033"
+    ],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-CBY-001",
+        "primary_url": "https://english.cby-ye.com/files/6ab393186466e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2022-001",
+        "primary_url": "https://cby-ye.com/files/64a1f54c878e1.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2023-001",
+        "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
+    "lineage_from": "CWR-011"
   },
   {
     "object_type": "measurement",

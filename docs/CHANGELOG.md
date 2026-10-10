@@ -1,5 +1,42 @@
 # Repository Change Log
 
+## 2026-10-10 — CLOSE-3C: the monetary context of CBY-Aden and the bank-composition table of CWR-011 (Stage A, W3c, U4, U5)
+
+Master `d2cd2ad16bd8` → `fb065fa69583`, 242 cells (`audit/close_out/close_3c.py`; ledger and run report in
+`audit/close_out/runs/`), plus the controlled visual contract (three new contracts and a frame note on VIS-POS-VALUE);
+then CLOSE-3C-L, `fb065fa69583` → `49de81b3bc53`, 3 cells (`audit/close_out/close_3c_lineage.py`): the new visuals'
+data_inputs name the Evidence Records that bind their rows (CBY-BANKS-2026-05, CLM-033), so no visual's lineage is left
+SOURCE_NOT_YET_BOUND.
+Read in the original: Monetary and Financial Developments, Issue No. 55 (June 2026), Tables 1, 4, 5 and 6, its
+definitions and its Disclaimer, in the English and Arabic editions. An independent red-team (1 blocker, 4 should-fix, 7
+nits) and an Arabic editor (2 must-fix, 9 should-fix; then 1 must-fix and 3 should-fix on a second read of the
+rewritten strings) read the text before the run; applied (PROGRESS records the departures from the brief).
+
+- **U4, the data.** 18_CBY_MONETARY gains the June 2026 values of the ten series the new objects use; the transaction
+  stops unless the end-2025 and May 2026 values in the Master equal those Issue No. 55 prints. SRC-CBY-001 now names
+  Issue No. 55; Issue No. 54 (the back data, all earlier values) and the Arabic edition stay beside it.
+- **U4, on /finance/ (in the page's Views, so the first screen is unchanged).** VIS-CBY-MONETARY-SNAPSHOT, a dated
+  table of eight indicators at the end of 2025 and in June 2026, values and shares as the bulletin prints them, closed
+  by the firewall line (monetary aggregates describe the banking system, not people's access or use) and a coverage
+  line (the bulletin defines banks as those operating in the Republic of Yemen but does not say which banks and
+  branches report to it). VIS-YER-MARKET-RATE, the monthly average market rate CBY-Aden publishes, January 2017 to June
+  2026, drawn with the POS panels' monthly line; the June–August 2025 move (2,733.85, 2,212.7, 1,624.5 rials per US
+  dollar) is annotated, not smoothed; the frame says it is not the rate in Sana'a, not any single day's rate, and does
+  not explain why the rate moved or show that it was held or administered.
+- **U4, the 2025 episode.** CLM-033 and Reading CWR-002: between the end of 2024 and the end of 2025 total assets fell
+  from 15,329.7 to 12,341.8 billion rials and foreign-currency deposits from 7,999.9 to 5,792.8 billion as the December
+  average rate went from 2,059.2 to 1,624.45; part of that is consistent with revaluation, but the bulletin also amended
+  its monetary and banking data to the IMF's Monetary and Financial Statistics Manual (2016) from December 2025, so
+  valuation, the change of method and other movements cannot be separated. VIS-POS-VALUE's frame says its window spans
+  the 2025 rate move, in nominal rials, and that the chart does not show whether the move changed the values.
+- **U5.** RV-CWR-011, bound to CWR-011: total assets, foreign assets, loans and advances to government and credit to the
+  private sector at the end of 2025, in May 2026 and in June 2026, with a note that the three lines do not add up to
+  total assets.
+- **Renderer.** A monthly axis longer than 24 periods labels the Januaries by their year (every other one on phones) and
+  draws smaller marks; shorter series are unchanged.
+- **Gate.** RC-B12 checks a tabled text-first contract without an Evidence Record on its canonical page (+1 negative
+  control).
+
 ## 2026-10-10 — CLOSE-3B: the held payment values, the cash-transfer, provider, women's and measurement evidence (Stage A, W3c, U2, U3, U6, U8–U14, CR-06, AR-004)
 
 Master `52fb937a4f50` → `d2cd2ad16bd8`, 312 cells (`audit/close_out/close_3b.py`; ledger and run report in

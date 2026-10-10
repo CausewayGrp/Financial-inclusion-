@@ -89,3 +89,27 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   U8–U14, CR-06; register AR-004 applied. Note: the Master commit `da858d55` carries its trailers as
   `Master-Transaction:` and `Findings-Closed:` instead of CONTRIBUTING's `Transaction:` and `Findings:` (Master-Before
   and Master-After are standard); history is not rewritten, so this line records it.
+- 2026-10-10 · A · W3c · CLOSE-3C run (runner COMMITTED; Master `d2cd2ad16bd8` → `fb065fa69583`; contract installed):
+  U4 CLOSED (18: ten June 2026 rows from Issue No. 55; guard: the end-2025 and May 2026 values equal Issue No. 55's;
+  SRC-CBY-001 → Issue No. 55, Issue No. 54 and the Arabic edition kept as locators, locator note rewritten; on /finance/
+  VIS-CBY-MONETARY-SNAPSHOT, 8 indicators × end-2025 / June 2026, and VIS-YER-MARKET-RATE, 114 months; CLM-033 and
+  CWR-002 s3 gain the 2025 episode with the December 2025 change of method; VIS-POS-VALUE frame note), U5 CLOSED
+  (RV-CWR-011, 4 lines × 3 dates, bound to CWR-011). Departures, each recorded in the docstring: (1) the table's rate row
+  shows December 2025 and June 2026 (the brief: "May 2026 and May 2025"), so every row has the same two columns; June
+  2025 (2,733.85) is in the line's annotation; (2) "not the street rate" is worded "not any single day's rate": the
+  English edition calls the series the parallel-market rate (the Arabic edition does not); (3) the coverage line says
+  the bulletin defines banks as those operating in the Republic of Yemen but does not say which report (the brief: "does
+  not state its territorial coverage"; the bulletin's definitions, printed p.20, say more than that); (4) /finance/ is
+  not added to CWR-011's domain surfaces: rule F2 caps an answer page at two Readings and /finance/ carries CWR-002 and
+  CWR-006 — owner question; (5) both /finance/ visuals sit in the page's Views (the 114-row table of the rate line would
+  otherwise add about six phone screens to the first load). Red-team: 1 blocker applied (the Disclaimer, printed p.23:
+  data amended to the IMF MFSM 2016 from December 2025, so valuation, method and other movements cannot be separated),
+  4 should-fix and 7 nits applied; 37/37 numbers and all 114 months match Issue No. 55. Arabic editor: 2 must-fix
+  («مراكز» not «مواقع»; "parallel market" is in the English edition only) and 9 should-fix applied; second read of the
+  rewritten strings: 1 must-fix (the decision value said the bulletin names no rate at all) and 3 should-fix applied. Gate RC-B12 extended to canonical pages (+1 control); renderer: long monthly axes.
+- 2026-10-10 · A · W3c · CLOSE-3C-L run (runner COMMITTED; Master `fb065fa69583` → `49de81b3bc53`, 3 cells): the gate
+  run after CLOSE-3C showed VIS-YER-MARKET-RATE as the only SOURCE_NOT_YET_BOUND visual and VIS-CBY-MONETARY-SNAPSHOT
+  as a composite with no listed members (their data_inputs named the sheet, not records). The three new visuals now
+  name CBY-BANKS-2026-05 and CLM-033 (both closed to SRC-CBY-001); lineage: COMPOSITE_OF_OBJECTS 2 → 4,
+  SOURCE_NOT_YET_BOUND back to 0. A corrective transaction, not a re-run: the working-tree reset was refused, and the
+  audit trail stays append-only.

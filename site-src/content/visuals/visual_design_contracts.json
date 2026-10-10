@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "d2cd2ad16bd84f9b4963261f0c2291b4eac8ba621458c3be5734ee2c8599b6a3",
+  "authority_master_sha256": "49de81b3bc533aa839cce880109d83b2b06f2b9a8f849842ae13a721b35ce482",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -12,9 +12,9 @@
   },
   "tier_counts": {
     "SIGNATURE": 3,
-    "CORE_ANALYTICAL": 9,
+    "CORE_ANALYTICAL": 10,
     "SUPPORTING": 12,
-    "TABLE_TEXT_FIRST": 14,
+    "TABLE_TEXT_FIRST": 16,
     "RETIRE_FROM_DESIGN": 1
   },
   "grammar": {
@@ -3381,10 +3381,10 @@
       "contract": {
         "form": "Line of nominal monthly value; panel 3 of the POS small multiple; NOMINAL on the axis title.",
         "ordering": "Chronological.",
-        "transformation": "None; nominal YER million. No price or exchange-rate adjustment and no exchange-rate annotation (it would invite a causal reading).",
+        "transformation": "None; nominal YER million. No price or exchange-rate adjustment, and the line carries no exchange-rate mark (it would invite a causal reading); the frame note UI-VIS-NOTE-POS-RATE-WINDOW says the window spans the 2025 move in the published rate.",
         "missing": "September 2025 is MISSING: gap in the line, labelled.",
         "breaks": "None governed.",
-        "annotation": "UI-VIS-NOMINAL on the axis; MISSING label on September 2025.",
+        "annotation": "UI-VIS-NOMINAL on the axis; MISSING label on September 2025. Frame note UI-VIS-NOTE-POS-RATE-WINDOW.",
         "mobile": "Stacked panel.",
         "rtl": "Time axis left to right.",
         "fallback": "Table: month, value (YER million) or 'no verified value'.",
@@ -3395,6 +3395,12 @@
           "text": "Central Bank of Yemen — Aden",
           "text_ar": "البنك المركزي اليمني – عدن",
           "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
+        },
+        "frame_labels": {
+          "UI-VIS-NOTE-POS-RATE-WINDOW": {
+            "en": "The months shown span the move in the rial's published market rate between June and August 2025; the values are nominal rials, not adjusted for it, and the chart does not show whether the move changed them.",
+            "ar": "تشمل الأشهر المعروضة تحرّك سعر الصرف السوقي المنشور للريال بين يونيو وأغسطس 2025؛ والقيم بالريال الاسمي ولا تُعدَّل لمراعاة هذا التحرك، ولا يُظهر الرسم ما إذا كان التحرك قد غيّرها."
+          }
         },
         "series": [
           {
@@ -7370,6 +7376,2199 @@
               "en": "World Bank published values, shown without an interval: no interval is published here for a group value, each group rests on fewer than the 1,000 interviews, and a difference between groups is not a cause.",
               "ar": "قيم ينشرها البنك الدولي، تُعرض دون فترة ثقة: لا تُنشر هنا فترة ثقة لقيمة أي فئة، وتستند كل فئة إلى أقل من مقابلات العينة البالغة 1,000، والفرق بين الفئات ليس سببًا.",
               "ui_id": "UI-VIS-NOTE-FINDEX-GROUPS"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-CBY-MONETARY-SNAPSHOT",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "Eight indicators of the monetary survey and the banks' consolidated balance sheet at two dated positions, as the bulletin prints them: a table, because the rows are in different units and the two columns are two vintages, not a series.",
+      "promotion_requires": "A drawn comparison would need each indicator as a governed monthly series in one vintage; the table keeps two dated columns.",
+      "governed": {
+        "title_en": "Money and bank balance sheets: the end of 2025 and June 2026",
+        "question_en": "What does the latest issue of CBY-Aden's monthly bulletin (June 2026) show for money and bank balance sheets?",
+        "prohibited_inference_en": "Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services. Money and balance-sheet values are nominal rials, partly valued at market exchange rates, so a change between the two columns cannot be read as real growth; the figures are not shown to cover all of Yemen.",
+        "alt_text_en": "From the end of 2025 to June 2026, as the bulletin of the Central Bank of Yemen – Aden prints them: the average market rate went from 1,624.45 to 1,560.95 rials per US dollar (December 2025 and June 2026 monthly averages); broad money from 11,429.3 to 11,925.0 billion rials; currency in circulation from 28.6% to 28.4% of broad money; foreign-currency deposits from 71.0% to 68.0% of total deposits; the banks' total assets from 12,341.8 to 13,761.2 billion rials, their foreign assets from 4,116.5 to 4,650.0 billion, their credit to the private sector from 1,392.3 to 1,362.9 billion and their loans and advances to government from 1,928.8 to 1,966.8 billion. Money and balance-sheet values are in nominal rials; all of these describe the banking system, not people's access or use; the bulletin does not say which banks and branches report to it. Does not establish: Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services. Money and balance-sheet values are nominal rials, partly valued at market exchange rates, so a change between the two columns cannot be read as real growth; the figures are not shown to cover all of Yemen.",
+        "period_en": "End of 2025; June 2026",
+        "universe_en": "The monetary survey and the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) in Monetary and Financial Developments; the bulletin defines banks as those operating in the Republic of Yemen but does not say which banks and branches report to it.",
+        "title_ar": "النقود وميزانيات البنوك: نهاية 2025 ويونيو 2026",
+        "question_ar": "ماذا يُظهر أحدث عدد من النشرة الشهرية للبنك المركزي اليمني – عدن (يونيو 2026) عن النقود وميزانيات البنوك؟",
+        "prohibited_inference_ar": "تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها. وقيم النقود والميزانيات بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية، فلا يمكن قراءة التغير بين العمودين على أنه نمو حقيقي؛ ولا يثبت أن الأرقام تغطي اليمن كله.",
+        "alt_text_ar": "من نهاية 2025 إلى يونيو 2026، كما ترد في نشرة البنك المركزي اليمني – عدن: انتقل متوسط سعر الصرف السوقي من 1,624.45 إلى 1,560.95 ريالًا للدولار الأمريكي (المتوسطان الشهريان لديسمبر 2025 ويونيو 2026)؛ والعرض النقدي الواسع من 11,429.3 إلى 11,925.0 مليار ريال؛ والعملة المتداولة من 28.6% إلى 28.4% من العرض النقدي الواسع؛ والودائع بالعملات الأجنبية من 71.0% إلى 68.0% من إجمالي الودائع؛ وإجمالي أصول البنوك من 12,341.8 إلى 13,761.2 مليار ريال، وأصولها الخارجية من 4,116.5 إلى 4,650.0 مليار، والائتمان الممنوح منها للقطاع الخاص من 1,392.3 إلى 1,362.9 مليار، وقروضها وسلفياتها للحكومة من 1,928.8 إلى 1,966.8 مليار. وقيم النقود والميزانيات بالريال الاسمي، وكلها تصف الجهاز المصرفي لا وصول الأفراد أو استخدامهم؛ ولا تذكر النشرة أيُّ البنوك والفروع تقدم بياناتها إليها. لا يثبت: تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها. وقيم النقود والميزانيات بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية، فلا يمكن قراءة التغير بين العمودين على أنه نمو حقيقي؛ ولا يثبت أن الأرقام تغطي اليمن كله.",
+        "period_ar": "نهاية 2025؛ يونيو 2026",
+        "universe_ar": "المسح النقدي والميزانية المجمعة للبنوك التجارية والإسلامية كما ينشرهما البنك المركزي اليمني – عدن في نشرته الشهرية «التطورات النقدية والمالية»؛ وتُعرِّف النشرة البنوك بأنها العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها.",
+        "canonical_route": "/finance/",
+        "public_routes": [
+          "/finance"
+        ]
+      },
+      "table": {
+        "form": "One row per indicator in its own unit; two dated columns (the end of 2025 and June 2026); values and shares as the bulletin prints them; governed notes close the table. No change column, no growth rate.",
+        "head": [
+          {
+            "en": "Indicator (unit)",
+            "ar": "المؤشر (الوحدة)",
+            "ui_id": "UI-VIS-TH-CBY-ITEM"
+          },
+          {
+            "en": "End of 2025",
+            "ar": "نهاية 2025",
+            "ui_id": "UI-VIS-TH-CBY-END-2025"
+          },
+          {
+            "en": "June 2026",
+            "ar": "يونيو 2026",
+            "ui_id": "UI-VIS-TH-CBY-2026-06"
+          }
+        ],
+        "caption": [
+          {
+            "en": "CBY-Aden, Monetary and Financial Developments, Issue No. 55",
+            "ar": "البنك المركزي اليمني – عدن، التطورات النقدية والمالية، العدد 55",
+            "ui_id": "UI-VIS-CAP-CBY-MFD-55"
+          },
+          {
+            "en": "values and shares as the bulletin prints them; rial values are nominal",
+            "ar": "القيم والحصص كما ترد في النشرة؛ والقيم بالريال اسمية",
+            "ui_id": "UI-VIS-CAP-CBY-AS-PRINTED"
+          }
+        ],
+        "rows": [
+          {
+            "head": {
+              "en": "Average market rate for the month, rials per US dollar (December 2025; June 2026)",
+              "ar": "متوسط سعر الصرف السوقي للشهر، ريال لكل دولار أمريكي (ديسمبر 2025؛ يونيو 2026)",
+              "ui_id": "UI-VIS-ROW-CBY-RATE"
+            },
+            "cells": [
+              {
+                "number": 1624.45,
+                "ref": "cby.OBS-CBY-00681.value",
+                "dp": 2
+              },
+              {
+                "number": 1560.95,
+                "ref": "cby.OBS-CBY-00696.value",
+                "dp": 2
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Broad money, M2 (YER billion)",
+              "ar": "العرض النقدي الواسع M2 (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-M2"
+            },
+            "cells": [
+              {
+                "number": 11429.3,
+                "ref": "cby.OBS-CBY-00010.value",
+                "dp": 1
+              },
+              {
+                "number": 11925.0,
+                "ref": "cby.OBS-CBY-00687.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Currency in circulation (% of M2)",
+              "ar": "العملة المتداولة (% من M2)",
+              "ui_id": "UI-VIS-ROW-CBY-CIC-SHARE"
+            },
+            "cells": [
+              {
+                "number": 28.6,
+                "ref": "cby.OBS-CBY-00202.value",
+                "dp": 1
+              },
+              {
+                "number": 28.4,
+                "ref": "cby.OBS-CBY-00689.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Foreign-currency deposits (% of total deposits)",
+              "ar": "الودائع بالعملات الأجنبية (% من إجمالي الودائع)",
+              "ui_id": "UI-VIS-ROW-CBY-FX-SHARE"
+            },
+            "cells": [
+              {
+                "number": 71,
+                "ref": "cby.OBS-CBY-00094.value",
+                "dp": 1
+              },
+              {
+                "number": 68.0,
+                "ref": "cby.OBS-CBY-00691.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Banks' total assets (YER billion)",
+              "ar": "إجمالي أصول البنوك (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-ASSETS"
+            },
+            "cells": [
+              {
+                "number": 12341.8,
+                "ref": "cby.OBS-CBY-00247.value",
+                "dp": 1
+              },
+              {
+                "number": 13761.2,
+                "ref": "cby.OBS-CBY-00692.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Banks' foreign assets (YER billion)",
+              "ar": "الأصول الخارجية للبنوك (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-FOREIGN"
+            },
+            "cells": [
+              {
+                "number": 4116.5,
+                "ref": "cby.OBS-CBY-00259.value",
+                "dp": 1
+              },
+              {
+                "number": 4650.0,
+                "ref": "cby.OBS-CBY-00693.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Banks' credit to the private sector (YER billion)",
+              "ar": "الائتمان الممنوح من البنوك للقطاع الخاص (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-PRIVATE"
+            },
+            "cells": [
+              {
+                "number": 1392.3,
+                "ref": "cby.OBS-CBY-00379.value",
+                "dp": 1
+              },
+              {
+                "number": 1362.9,
+                "ref": "cby.OBS-CBY-00695.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Banks' loans and advances to government (YER billion)",
+              "ar": "قروض البنوك وسلفياتها للحكومة (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-GOV"
+            },
+            "cells": [
+              {
+                "number": 1928.8,
+                "ref": "cby.OBS-CBY-00355.value",
+                "dp": 1
+              },
+              {
+                "number": 1966.8,
+                "ref": "cby.OBS-CBY-00694.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": {
+              "en": "The rate is the monthly average market rate that CBY-Aden publishes; it is not the rate in Sana'a and not any single day's rate.",
+              "ar": "السعر هو متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن؛ وهو ليس سعر الصرف في صنعاء، ولا سعر يوم واحد بعينه.",
+              "ui_id": "UI-VIS-NOTE-CBY-RATE-SOURCE"
+            }
+          },
+          {
+            "marker": {
+              "en": "Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services.",
+              "ar": "تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها.",
+              "ui_id": "UI-VIS-NOTE-CBY-FIREWALL"
+            }
+          },
+          {
+            "marker": {
+              "en": "The bulletin defines banks as the commercial and Islamic banks operating in the Republic of Yemen but does not say which banks and branches report to it; the figures are not shown to cover all of Yemen.",
+              "ar": "تُعرِّف النشرة البنوك بأنها البنوك التجارية والإسلامية العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها؛ ولا يثبت أن الأرقام تغطي اليمن كله.",
+              "ui_id": "UI-VIS-NOTE-CBY-COVERAGE"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-YER-MARKET-RATE",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "The published monthly average market rate, beside the rial balance sheets: the monthly line primitive of the POS panels, the 2025 move annotated, not smoothed.",
+      "governed": {
+        "title_en": "The rial's average market rate published by CBY-Aden, monthly",
+        "question_en": "How has the average market rate that CBY-Aden publishes moved since 2017?",
+        "prohibited_inference_en": "The line shows the monthly average market rate that CBY-Aden publishes. It is not the rate in Sana'a or any single day's rate; it does not explain why the rate moved, and it does not show that the rate was held or administered.",
+        "alt_text_en": "The average market rate of the rial published by the Central Bank of Yemen – Aden went from 315.64 rials per US dollar in January 2017 to 2,733.85 in June 2025, then to 2,212.7 in July and 1,624.5 in August 2025, and stood at 1,560.95 in June 2026. The line joins the published monthly averages and adds no smoothing of its own. It is not the rate in Sana'a or any single day's rate, and it does not explain why the rate moved. Does not establish: The line shows the monthly average market rate that CBY-Aden publishes. It is not the rate in Sana'a or any single day's rate; it does not explain why the rate moved, and it does not show that the rate was held or administered.",
+        "period_en": "January 2017 to June 2026",
+        "universe_en": "The monthly average market exchange rate of the rial against the US dollar published by the Central Bank of Yemen – Aden (CBY-Aden) in Monetary and Financial Developments (Table 6), which the English edition of the bulletin calls the parallel-market rate; not the rate in Sana'a and not any single day's rate.",
+        "title_ar": "متوسط سعر الصرف السوقي للريال كما ينشره البنك المركزي اليمني – عدن، شهريًا",
+        "question_ar": "كيف تحرك متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن منذ 2017؟",
+        "prohibited_inference_ar": "يعرض الخط متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه؛ ولا يفسر سبب تحرك السعر، ولا يُظهر أن السعر ثُبِّت أو حُدِّد إداريًا.",
+        "alt_text_ar": "انتقل متوسط سعر الصرف السوقي للريال الذي ينشره البنك المركزي اليمني – عدن من 315.64 ريالًا للدولار الأمريكي في يناير 2017 إلى 2,733.85 في يونيو 2025، ثم إلى 2,212.7 في يوليو و1,624.5 في أغسطس 2025، وبلغ 1,560.95 في يونيو 2026. ويصل الخط بين المتوسطات الشهرية المنشورة ولا يضيف إليها أي تنعيم. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه، ولا يفسر سبب تحرك السعر. لا يثبت: يعرض الخط متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه؛ ولا يفسر سبب تحرك السعر، ولا يُظهر أن السعر ثُبِّت أو حُدِّد إداريًا.",
+        "period_ar": "من يناير 2017 إلى يونيو 2026",
+        "universe_ar": "متوسط سعر الصرف السوقي الشهري للريال مقابل الدولار الأمريكي كما ينشره البنك المركزي اليمني – عدن في نشرته الشهرية «التطورات النقدية والمالية» (الجدول 6)، وتسميه النسخة الإنجليزية من النشرة سعر السوق الموازية؛ وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه.",
+        "canonical_route": "/finance/",
+        "public_routes": [
+          "/finance"
+        ]
+      },
+      "contract": {
+        "form": "Monthly line of the published average market rate, January 2017 to June 2026; one point per month; no smoothing and no trend line.",
+        "ordering": "Chronological.",
+        "transformation": "None; the monthly averages as published, in rials per US dollar.",
+        "missing": "None: every month from January 2017 to June 2026 is published.",
+        "breaks": "None governed. The June to August 2025 move is a change in the published rate, annotated in the frame, not a break in the series.",
+        "annotation": "Frame notes UI-VIS-NOTE-CBY-RATE-SOURCE (what the rate is and is not) and UI-VIS-NOTE-RATE-2025-MOVE (the June to August 2025 move with its two published values); no point is marked as a cause.",
+        "mobile": "Single panel; the line keeps its full span.",
+        "rtl": "Time axis left to right.",
+        "fallback": "Table: month, average market rate (rials per US dollar).",
+        "credit": {
+          "rule": {
+            "source_ids": [
+              "SRC-CBY-001"
+            ]
+          },
+          "text": "Central Bank of Yemen — Aden",
+          "text_ar": "البنك المركزي اليمني – عدن",
+          "language_note": "Publisher names are governed in both languages (15 publisher/publisher_ar; 34 publisher/publisher_ar). The Arabic uses the institution's established Arabic name without a Latin acronym, and keeps in parentheses a product name that Arabic writes in English (Global Findex, Remittance Prices Worldwide)."
+        },
+        "frame_labels": {
+          "UI-VIS-NOTE-CBY-RATE-SOURCE": {
+            "en": "The rate is the monthly average market rate that CBY-Aden publishes; it is not the rate in Sana'a and not any single day's rate.",
+            "ar": "السعر هو متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن؛ وهو ليس سعر الصرف في صنعاء، ولا سعر يوم واحد بعينه."
+          },
+          "UI-VIS-NOTE-RATE-2025-MOVE": {
+            "en": "The line joins the published monthly averages and adds no smoothing of its own. The average was 2,733.85 rials per US dollar in June 2025, 2,212.7 in July and 1,624.5 in August.",
+            "ar": "يصل الخط بين المتوسطات الشهرية المنشورة ولا يضيف إليها أي تنعيم. وكان المتوسط 2,733.85 ريالًا للدولار الأمريكي في يونيو 2025، و2,212.7 في يوليو، و1,624.5 في أغسطس."
+          }
+        },
+        "series": [
+          {
+            "id": "rate",
+            "state": "REPORTED",
+            "markers": [],
+            "values": [
+              {
+                "id": "OBS-CBY-00574",
+                "x": "2017-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 315.64,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00575",
+                "x": "2017-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 330.68,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00576",
+                "x": "2017-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 348.02,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00577",
+                "x": "2017-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 362.86,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00578",
+                "x": "2017-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 362.03,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00579",
+                "x": "2017-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 356.05,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00580",
+                "x": "2017-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 368.48,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00581",
+                "x": "2017-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 372.08,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00582",
+                "x": "2017-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 375.26,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00583",
+                "x": "2017-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 381.33,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00584",
+                "x": "2017-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 416.3,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00585",
+                "x": "2017-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 444.65,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00586",
+                "x": "2018-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 477.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00587",
+                "x": "2018-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 481.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00588",
+                "x": "2018-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 488,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00589",
+                "x": "2018-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 488,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00590",
+                "x": "2018-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 494.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00591",
+                "x": "2018-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 522.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00592",
+                "x": "2018-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 567,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00593",
+                "x": "2018-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 644.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00594",
+                "x": "2018-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 625,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00595",
+                "x": "2018-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 622,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00596",
+                "x": "2018-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 550.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00597",
+                "x": "2018-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 499.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00598",
+                "x": "2019-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 536,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00599",
+                "x": "2019-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 581.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00600",
+                "x": "2019-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 579.75,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00601",
+                "x": "2019-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 513.4,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00602",
+                "x": "2019-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 538.75,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00603",
+                "x": "2019-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 560.2,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00604",
+                "x": "2019-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 578.13,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00605",
+                "x": "2019-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 597,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00606",
+                "x": "2019-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 610.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00607",
+                "x": "2019-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 596,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00608",
+                "x": "2019-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 574,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00609",
+                "x": "2019-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 601,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00610",
+                "x": "2020-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 645.29,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00611",
+                "x": "2020-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 655.69,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00612",
+                "x": "2020-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 656.33,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00613",
+                "x": "2020-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 669.36,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00614",
+                "x": "2020-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 698.85,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00615",
+                "x": "2020-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 735.39,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00616",
+                "x": "2020-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 753.09,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00617",
+                "x": "2020-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 778.26,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00618",
+                "x": "2020-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 815.91,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00619",
+                "x": "2020-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 799.92,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00620",
+                "x": "2020-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 821.71,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00621",
+                "x": "2020-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 792.69,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00622",
+                "x": "2021-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 787.39,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00623",
+                "x": "2021-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 865.38,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00624",
+                "x": "2021-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 891.52,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00625",
+                "x": "2021-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 867.83,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00626",
+                "x": "2021-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 908.66,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00627",
+                "x": "2021-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 933.9,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00628",
+                "x": "2021-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 981.9,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00629",
+                "x": "2021-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1022.58,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00630",
+                "x": "2021-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1105.88,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00631",
+                "x": "2021-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1269.26,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00632",
+                "x": "2021-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1500.6,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00633",
+                "x": "2021-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1255.26,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00634",
+                "x": "2022-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1102.69,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00635",
+                "x": "2022-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1125.11,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00636",
+                "x": "2022-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1246.52,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00637",
+                "x": "2022-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 963.65,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00638",
+                "x": "2022-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 999.99,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00639",
+                "x": "2022-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1094.85,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00640",
+                "x": "2022-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1137.07,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00641",
+                "x": "2022-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1154.47,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00642",
+                "x": "2022-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1134.89,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00643",
+                "x": "2022-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1146.87,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00644",
+                "x": "2022-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1151.03,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00645",
+                "x": "2022-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1172.48,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00646",
+                "x": "2023-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1239.03,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00647",
+                "x": "2023-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1243.95,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00648",
+                "x": "2023-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1248.05,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00649",
+                "x": "2023-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1225.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00650",
+                "x": "2023-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1316.3,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00651",
+                "x": "2023-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1379.3,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00652",
+                "x": "2023-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1431.25,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00653",
+                "x": "2023-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1453.85,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00654",
+                "x": "2023-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1440.05,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00655",
+                "x": "2023-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1513.25,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00656",
+                "x": "2023-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1518.3,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00657",
+                "x": "2023-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1529.4,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00658",
+                "x": "2024-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1621.1,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00659",
+                "x": "2024-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1667.75,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00660",
+                "x": "2024-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1662.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00661",
+                "x": "2024-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1686.3,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00662",
+                "x": "2024-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1755.54,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00663",
+                "x": "2024-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1824.15,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00664",
+                "x": "2024-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1895.4,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00665",
+                "x": "2024-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1914.45,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00666",
+                "x": "2024-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1905.4,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00667",
+                "x": "2024-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2048.65,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00668",
+                "x": "2024-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2058.75,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00669",
+                "x": "2024-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2059.2,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00670",
+                "x": "2025-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2195.1,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00671",
+                "x": "2025-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2241.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00672",
+                "x": "2025-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2326,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00673",
+                "x": "2025-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2575,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00674",
+                "x": "2025-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2533.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00675",
+                "x": "2025-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2733.85,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00676",
+                "x": "2025-07",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 2212.7,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00677",
+                "x": "2025-08",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1624.5,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00678",
+                "x": "2025-09",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1623.99,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00679",
+                "x": "2025-10",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1624.44,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00680",
+                "x": "2025-11",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1624.54,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00681",
+                "x": "2025-12",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1624.45,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00682",
+                "x": "2026-01",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1624.69,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00683",
+                "x": "2026-02",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1566.62,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00684",
+                "x": "2026-03",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1564.17,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00685",
+                "x": "2026-04",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1562.93,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00686",
+                "x": "2026-05",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1562.49,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              },
+              {
+                "id": "OBS-CBY-00696",
+                "x": "2026-06",
+                "unit": "YER per USD",
+                "flag": "SOURCE_DEFINED",
+                "source": "SRC-CBY-001",
+                "y": 1560.95,
+                "grammar_state": "REPORTED",
+                "markers": [],
+                "unit_label": {
+                  "en": "Rials per US dollar (monthly average)",
+                  "ar": "ريال لكل دولار أمريكي (متوسط شهري)",
+                  "ui_id": "UI-VIS-UNIT-YER-PER-USD"
+                }
+              }
+            ],
+            "missing_x": [],
+            "label_fields": {
+              "unit": "unit"
+            }
+          }
+        ],
+        "objects": [],
+        "derived": [],
+        "blockers": []
+      },
+      "detached_caption_en": "The rial's average market rate published by CBY-Aden, monthly · January 2017 to June 2026 · The monthly average market exchange rate of the rial against the US dollar published by the Central Bank of Yemen – Aden (CBY-Aden) in Monetary and Financial Developments (Table 6), which the English edition of the bulletin calls the parallel-market rate; not the rate in Sana'a and not any single day's rate. · Source: Central Bank of Yemen — Aden · Does not establish: The line shows the monthly average market rate that CBY-Aden publishes. It is not the rate in Sana'a or any single day's rate; it does not explain why the rate moved, and it does not show that the rate was held or administered. · Full record: /en/finance/",
+      "detached_caption_ar": "متوسط سعر الصرف السوقي للريال كما ينشره البنك المركزي اليمني – عدن، شهريًا · من يناير 2017 إلى يونيو 2026 · متوسط سعر الصرف السوقي الشهري للريال مقابل الدولار الأمريكي كما ينشره البنك المركزي اليمني – عدن في نشرته الشهرية «التطورات النقدية والمالية» (الجدول 6)، وتسميه النسخة الإنجليزية من النشرة سعر السوق الموازية؛ وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه. · المصدر: البنك المركزي اليمني – عدن · لا يثبت: يعرض الخط متوسط سعر الصرف السوقي الشهري الذي ينشره البنك المركزي اليمني – عدن. وهو ليس سعر الصرف في صنعاء ولا سعر يوم واحد بعينه؛ ولا يفسر سبب تحرك السعر، ولا يُظهر أن السعر ثُبِّت أو حُدِّد إداريًا. · السجل الكامل: /ar/finance/"
+    },
+    {
+      "visual_id": "RV-CWR-011",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The bound CBY-BANKS positions behind Reading CWR-011, at three dated positions, as the bulletin prints them; levels only, the record carries the one share it computes.",
+      "promotion_requires": "A drawn composition would need governed shares of total assets for each date (computed by CauseWay and held as rows).",
+      "governed": {
+        "title_en": "Where the banks' assets sit: three dated positions",
+        "question_en": "How much of the banks' total assets sits in foreign assets, loans and advances to government and credit to the private sector?",
+        "prohibited_inference_en": "The positions do not show why banks hold these assets, a credit allocation decision, or people's access to credit; values are nominal rials, partly valued at market exchange rates.",
+        "alt_text_en": "As the bulletin of the Central Bank of Yemen – Aden prints them, the banks' total assets were 12,341.8 billion rials at the end of 2025, 13,362.1 billion in May 2026 and 13,761.2 billion in June 2026; foreign assets 4,116.5, 4,448.0 and 4,650.0 billion; loans and advances to government 1,928.8, 2,145.0 and 1,966.8 billion; and credit to the private sector 1,392.3, 1,350.4 and 1,362.9 billion. The three lines do not add up to total assets, and the positions do not show why banks hold these assets or people's access to credit. Does not establish: The positions do not show why banks hold these assets, a credit allocation decision, or people's access to credit; values are nominal rials, partly valued at market exchange rates.",
+        "period_en": "End of 2025; May 2026; June 2026",
+        "universe_en": "The consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden); the bulletin defines banks as those operating in the Republic of Yemen but does not say which banks and branches report to it.",
+        "title_ar": "أين تقع أصول البنوك: ثلاثة مراكز مؤرخة",
+        "question_ar": "كم من إجمالي أصول البنوك يقع في الأصول الخارجية، وفي القروض والسلفيات للحكومة، وفي الائتمان الممنوح للقطاع الخاص؟",
+        "prohibited_inference_ar": "لا تُظهر هذه المراكز سبب احتفاظ البنوك بهذه الأصول، ولا قرارًا بتخصيص الائتمان، ولا وصول الأفراد إلى الائتمان؛ والقيم بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية.",
+        "alt_text_ar": "كما ترد في نشرة البنك المركزي اليمني – عدن، بلغ إجمالي أصول البنوك 12,341.8 مليار ريال في نهاية 2025، و13,362.1 مليار في مايو 2026، و13,761.2 مليار في يونيو 2026؛ والأصول الخارجية 4,116.5 و4,448.0 و4,650.0 مليار؛ والقروض والسلفيات للحكومة 1,928.8 و2,145.0 و1,966.8 مليار؛ والائتمان الممنوح للقطاع الخاص 1,392.3 و1,350.4 و1,362.9 مليار. ولا يساوي مجموع البنود الثلاثة إجمالي الأصول، ولا تُظهر هذه المراكز سبب احتفاظ البنوك بهذه الأصول ولا وصول الأفراد إلى الائتمان. لا يثبت: لا تُظهر هذه المراكز سبب احتفاظ البنوك بهذه الأصول، ولا قرارًا بتخصيص الائتمان، ولا وصول الأفراد إلى الائتمان؛ والقيم بالريال الاسمي، ويُقيَّم جزء منها بأسعار الصرف السوقية.",
+        "period_ar": "نهاية 2025؛ مايو 2026؛ يونيو 2026",
+        "universe_ar": "الميزانية المجمعة للبنوك التجارية والإسلامية كما ينشرها البنك المركزي اليمني – عدن؛ وتُعرِّف النشرة البنوك بأنها العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها.",
+        "canonical_route": "/readings/where-bank-balance-sheets-sit/",
+        "public_routes": [
+          "/readings/where-bank-balance-sheets-sit"
+        ]
+      },
+      "table": {
+        "form": "One row per balance-sheet line; three dated columns (the end of 2025, May 2026, June 2026); values as the bulletin prints them; governed notes close the table. No share column, no growth rate.",
+        "head": [
+          {
+            "en": "Indicator (unit)",
+            "ar": "المؤشر (الوحدة)",
+            "ui_id": "UI-VIS-TH-CBY-ITEM"
+          },
+          {
+            "en": "End of 2025",
+            "ar": "نهاية 2025",
+            "ui_id": "UI-VIS-TH-CBY-END-2025"
+          },
+          {
+            "en": "May 2026",
+            "ar": "مايو 2026",
+            "ui_id": "UI-VIS-TH-CBY-2026-05"
+          },
+          {
+            "en": "June 2026",
+            "ar": "يونيو 2026",
+            "ui_id": "UI-VIS-TH-CBY-2026-06"
+          }
+        ],
+        "caption": [
+          {
+            "en": "CBY-Aden, Monetary and Financial Developments, Issue No. 55",
+            "ar": "البنك المركزي اليمني – عدن، التطورات النقدية والمالية، العدد 55",
+            "ui_id": "UI-VIS-CAP-CBY-MFD-55"
+          },
+          {
+            "en": "values as the bulletin prints them; nominal rials",
+            "ar": "القيم كما ترد في النشرة؛ بالريال الاسمي",
+            "ui_id": "UI-VIS-CAP-CBY-VALUES-AS-PRINTED"
+          }
+        ],
+        "rows": [
+          {
+            "head": {
+              "en": "Banks' total assets (YER billion)",
+              "ar": "إجمالي أصول البنوك (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-ASSETS"
+            },
+            "cells": [
+              {
+                "number": 12341.8,
+                "ref": "cby.OBS-CBY-00247.value",
+                "dp": 1
+              },
+              {
+                "number": 13362.1,
+                "ref": "cby.OBS-CBY-00249.value",
+                "dp": 1
+              },
+              {
+                "number": 13761.2,
+                "ref": "cby.OBS-CBY-00692.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Banks' foreign assets (YER billion)",
+              "ar": "الأصول الخارجية للبنوك (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-FOREIGN"
+            },
+            "cells": [
+              {
+                "number": 4116.5,
+                "ref": "cby.OBS-CBY-00259.value",
+                "dp": 1
+              },
+              {
+                "number": 4448,
+                "ref": "cby.OBS-CBY-00261.value",
+                "dp": 1
+              },
+              {
+                "number": 4650.0,
+                "ref": "cby.OBS-CBY-00693.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Banks' loans and advances to government (YER billion)",
+              "ar": "قروض البنوك وسلفياتها للحكومة (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-GOV"
+            },
+            "cells": [
+              {
+                "number": 1928.8,
+                "ref": "cby.OBS-CBY-00355.value",
+                "dp": 1
+              },
+              {
+                "number": 2145,
+                "ref": "cby.OBS-CBY-00357.value",
+                "dp": 1
+              },
+              {
+                "number": 1966.8,
+                "ref": "cby.OBS-CBY-00694.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "head": {
+              "en": "Banks' credit to the private sector (YER billion)",
+              "ar": "الائتمان الممنوح من البنوك للقطاع الخاص (مليار ريال يمني)",
+              "ui_id": "UI-VIS-ROW-CBY-PRIVATE"
+            },
+            "cells": [
+              {
+                "number": 1392.3,
+                "ref": "cby.OBS-CBY-00379.value",
+                "dp": 1
+              },
+              {
+                "number": 1350.4,
+                "ref": "cby.OBS-CBY-00381.value",
+                "dp": 1
+              },
+              {
+                "number": 1362.9,
+                "ref": "cby.OBS-CBY-00695.value",
+                "dp": 1
+              }
+            ]
+          },
+          {
+            "marker": {
+              "en": "The three lines do not add up to total assets: reserves, loans and advances to public enterprises and other assets are not shown.",
+              "ar": "لا يساوي مجموع البنود الثلاثة إجمالي الأصول: فالاحتياطيات والقروض والسلفيات للمؤسسات العامة والأصول الأخرى غير معروضة.",
+              "ui_id": "UI-VIS-NOTE-CBY-NOT-ALL-LINES"
+            }
+          },
+          {
+            "marker": {
+              "en": "Monetary aggregates and bank balance sheets describe the banking system, not people's access to or use of financial services.",
+              "ar": "تصف المجاميع النقدية وميزانيات البنوك الجهاز المصرفي، لا وصول الأفراد إلى الخدمات المالية ولا استخدامهم لها.",
+              "ui_id": "UI-VIS-NOTE-CBY-FIREWALL"
+            }
+          },
+          {
+            "marker": {
+              "en": "The bulletin defines banks as the commercial and Islamic banks operating in the Republic of Yemen but does not say which banks and branches report to it; the figures are not shown to cover all of Yemen.",
+              "ar": "تُعرِّف النشرة البنوك بأنها البنوك التجارية والإسلامية العاملة في الجمهورية اليمنية، لكنها لا تذكر أيُّ البنوك والفروع تقدم بياناتها إليها؛ ولا يثبت أن الأرقام تغطي اليمن كله.",
+              "ui_id": "UI-VIS-NOTE-CBY-COVERAGE"
             }
           }
         ]
