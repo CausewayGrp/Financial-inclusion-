@@ -553,9 +553,9 @@
     "section_order": 1,
     "section_role": null,
     "heading_en": null,
-    "body_en": "Find an original source by its title or reference, browse the curated reports and method references, or open the full register of sources. Each source record keeps its public link and, where recorded, its title, publisher and date; reuse terms have not yet been assessed for any source. The figures themselves are recorded in the evidence records that cite the source.",
+    "body_en": "Find an original source by its title or reference, browse the curated reports and method references, or open the full register of sources. Each source record shows its public link and, where recorded, its title, publisher and date, with the state of its reuse-terms assessment, which for most sources is \"not yet assessed\". A public link is not permission to redistribute a source's files, tables or charts; check the publisher's terms before reusing them. The figures themselves are recorded in the evidence records that cite the source.",
     "heading_ar": null,
-    "body_ar": "ابحث عن مصدر أصلي بعنوانه أو بمرجعه، أو تصفح التقارير والمراجع المنهجية المختارة، أو افتح السجل الكامل للمصادر. ويحتفظ كل سجل مصدر برابطه العام، وبعنوانه وجهته الناشرة وتاريخه حيثما سُجّلت؛ ولم تُقيَّم بعدُ شروط إعادة الاستخدام لأي مصدر. أما الأرقام نفسها فتحملها سجلات الأدلة التي تستشهد بالمصدر."
+    "body_ar": "ابحث عن المصدر الأصلي بعنوانه أو مرجعه، أو تصفّح التقارير والمراجع المنهجية المختارة، أو افتح سجل المصادر كاملًا. ويعرض سجل كل مصدر رابطه العام وعنوانه وناشره وتاريخه حيث سُجّلت، وحالة تقييم شروط إعادة استخدامه، وهي «لم تُقيَّم بعد» في معظم المصادر. ولا تعني إتاحة رابط المصدر إذنًا بإعادة توزيع ملفاته أو جداوله أو رسومه؛ فتحقّق من شروط الناشر قبل إعادة استخدامها. أما الأرقام فترد في سجلات الأدلة التي تستشهد بالمصدر."
   },
   {
     "route": "/data/",
@@ -591,7 +591,7 @@
     "heading_en": null,
     "body_en": null,
     "heading_ar": "القيمة المنقولة من هنا ما تزال تحتاج إلى سياقها",
-    "body_ar": "قد يكتسب الرقم معنى مختلفًا إذا أُعيد استخدامه من دون وحدته، أو المجتمع أو قاعدة الاحتساب، أو الفترة، أو الجغرافيا، أو المصدر. لذلك انقل مع أي رقم تنسخه أو تستشهد به مرجع سجل الدليل الخاص به، كي يبقى معناه مرتبطًا بقيمته."
+    "body_ar": "قد يُفهم الرقم على غير معناه إذا نُقل من دون وحدته، أو المجتمع الذي ينطبق عليه، أو قاعدة الاحتساب، أو الفترة، أو النطاق الجغرافي، أو المصدر. لذلك انقل مع أي رقم تنسخه أو تستشهد به مرجع سجل الدليل الخاص به، كي يبقى معناه مرتبطًا بقيمته."
   },
   {
     "route": "/data/",
@@ -609,14 +609,14 @@
     "heading_en": null,
     "body_en": null,
     "heading_ar": "ما الذي لا يعنيه توفر البيانات؟",
-    "body_ar": "كون السجل متاحًا للعامة لا يعني تلقائيًا أنه ممثل وطنيًا أو حديث أو قابل للمقارنة مع سجل آخر أو متاح لإعادة التوزيع بلا قيود. الإتاحة تعني أن عرض السجل ممكن، لكنها لا تعني أن إعادة توزيع البيانات الأصلية مسموحة، ولا تلغي حدوده المنهجية."
+    "body_ar": "إتاحة السجل للجمهور لا تعني تلقائيًا أنه ممثل على المستوى الوطني، أو حديث، أو قابل للمقارنة مع سجل آخر أو متاح لإعادة التوزيع بلا قيود. الإتاحة تعني أن عرض السجل ممكن، لكنها لا تعني أن إعادة توزيع البيانات الأصلية مسموحة، ولا تلغي حدوده المنهجية."
   },
   {
     "route": "/data/",
     "section_order": 5,
     "section_role": "System context",
     "heading_en": "Reuse terms belong to the original publisher",
-    "body_en": "Some sources permit public display but not redistribution of the underlying table; others permit source metadata while the values themselves remain restricted. Reuse terms have not yet been assessed for any source in this library, so no source record states them. The original publisher’s terms apply and should be checked before any redistribution. Including a source here does not mean CauseWay endorses its analysis or conclusions.",
+    "body_en": "Some sources permit public display but not redistribution of the underlying table; others permit source metadata while the values themselves remain restricted. Reuse terms have not yet been assessed for most sources in this library, so most source records do not state them. The original publisher’s terms apply and should be checked before any redistribution. Including a source here does not mean CauseWay endorses its analysis or conclusions.",
     "heading_ar": null,
     "body_ar": null
   },
@@ -627,7 +627,7 @@
     "heading_en": null,
     "body_en": null,
     "heading_ar": "شروط إعادة الاستخدام تحددها الجهة الناشرة",
-    "body_ar": "تسمح بعض المصادر بالعرض العام لكنها لا تسمح بإعادة توزيع الجدول الأصلي، وتسمح مصادر أخرى ببيانات المصدر الوصفية بينما تظل القيم نفسها مقيدة. ولم تُقيَّم حتى الآن شروط إعادة الاستخدام لأي مصدر في هذه المكتبة، ولذلك لا يذكرها أي سجل مصدر. وتسري شروط الجهة الناشرة الأصلية، ويجب التحقق منها قبل أي إعادة توزيع. ولا يعني إدراج مصدر هنا أن CauseWay تتبنى تحليله أو استنتاجاته."
+    "body_ar": "تسمح بعض المصادر بالعرض العام لكنها لا تسمح بإعادة توزيع الجدول الأصلي، وتسمح مصادر أخرى ببيانات المصدر الوصفية بينما تظل القيم نفسها مقيدة. ولم تُقيَّم حتى الآن شروط إعادة الاستخدام لمعظم المصادر في هذه المكتبة، ولذلك لا تذكرها معظم سجلات المصادر. وتسري شروط الجهة الناشرة الأصلية، ويجب التحقق منها قبل أي إعادة توزيع. ولا يعني إدراج مصدر هنا أن CauseWay تتبنى تحليله أو استنتاجاته."
   },
   {
     "route": "/data/",
@@ -1014,7 +1014,7 @@
     "heading_en": null,
     "body_en": "In a 2022 survey of formal firms in seven governorates, 22% named access to finance as a business challenge, against 50% for electricity and 46% for fuel shortages. Among firms in the report’s finance-obstacle tabulation, which excludes firms that said they did not need a loan, 91.84% rated financing obstacles as major or moderate. These answers, the credit paths of the few firms with a line of credit and what a programme reports for the firms it supported address different questions and cannot be merged into one national percentage.",
     "heading_ar": null,
-    "body_ar": "في مسح أُجري عام 2022 على المنشآت الرسمية في سبع محافظات، ذكرت 22% منها الوصول إلى التمويل بوصفه تحديًا للأعمال، مقابل 50% للكهرباء و46% لنقص الوقود. وبين المنشآت التي شملها جدول عوائق التمويل في التقرير، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض، صنّفت 91.84% عوائق التمويل بأنها كبيرة أو متوسطة. وتجيب هذه النتائج، ومسارات الائتمان لدى المنشآت القليلة التي لديها خط ائتمان، وما يورده أحد البرامج عن المنشآت التي دعمها، عن أسئلة مختلفة، ولا يمكن دمجها في نسبة وطنية واحدة."
+    "body_ar": "في مسح شمل منشآت رسمية في سبع محافظات عام 2022، عدّت 22% من المنشآت الوصول إلى التمويل أحد تحديات الأعمال، مقابل 50% للكهرباء و46% لنقص الوقود. لكن نتيجة أخرى في التقرير نفسه تبدو مختلفة للوهلة الأولى: فقد صنّفت 91.84% من المنشآت المشمولة في جدول عوائق التمويل هذه العوائق بأنها كبيرة أو متوسطة، بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض.\n\nليس الرقمان تقديرين متعارضين لمشكلة واحدة؛ فالسؤال وقاعدة الاحتساب مختلفان. وكذلك تختلف عنهما البيانات الخاصة بمسارات الائتمان لدى المنشآت القليلة التي لديها خط ائتمان، والنتائج التي يوردها أحد البرامج عن المنشآت التي دعمها. لكل منها مجتمعها وسؤالها، ولا يجوز جمعها في نسبة وطنية واحدة."
   },
   {
     "route": "/firms/",
@@ -1067,7 +1067,7 @@
     "section_role": "التحليل",
     "heading_en": null,
     "body_en": null,
-    "heading_ar": "خطوط الائتمان نادرة في هذه العينة، ولا يُعرف مصدرها إلا لدى 18 منشأة",
+    "heading_ar": "خطوط الائتمان نادرة في هذه العينة، ولا تتوافر إجابات عن مصادرها إلا من 18 منشأة",
     "body_ar": "داخل عينة المنشآت الرسمية في المسح، أبلغت 31 من أصل 328 منشأة عن وجود خط ائتمان من مؤسسات مالية أو غير مالية، ولا تتوفر سوى 18 استجابة صالحة لسؤال مصدر القرض. لذلك لا يمكن وصف تركيبة مصادر الائتمان إلا لهذه الاستجابات الـ18، لا لجميع منشآت العينة ولا لجميع المقترضين ولا لجميع المنشآت اليمنية."
   },
   {
@@ -1149,7 +1149,7 @@
     "heading_en": null,
     "body_en": "These measurement priorities link evidence gaps to specific decision questions. They do not rank national priorities or use a hidden score. Each item states the decision affected, what evidence is missing, the feasibility and sensitivity constraints, and what would become knowable if that evidence existed. Priority labels describe sequencing within this resource; they are not government, funding or policy rankings.",
     "heading_ar": null,
-    "body_ar": "تربط هذه الأولويات فجوات الأدلة بأسئلة قرار محددة، ولا تمثل ترتيبًا للأولويات الوطنية، ولا تستند إلى درجة خفية. يوضح كل بند القرار المتأثر، والدليل المفقود، وقيود إمكانية التنفيذ والحساسية، وما الذي يمكن معرفته إذا توفر ذلك الدليل. وتصف تسميات الأولوية ترتيب فجوات الأدلة داخل هذا المورد فقط؛ فهي ليست ترتيبًا حكوميًا أو تمويليًا أو للسياسات."
+    "body_ar": "تربط هذه الأولويات فجوات الأدلة بأسئلة قرار محددة، ولا تمثل ترتيبًا للأولويات الوطنية، ولا تقوم على درجات حسابية غير منشورة. يوضح كل بند القرار المتأثر، والدليل المفقود، وقيود إمكانية التنفيذ والحساسية، وما الذي يمكن معرفته إذا توفر ذلك الدليل. وتعبّر تسميات الأولوية عن ترتيب فجوات الأدلة داخل هذا المورد وحده؛ فهي ليست ترتيبًا حكوميًا أو تمويليًا أو للسياسات."
   },
   {
     "route": "/measurement/",
@@ -1167,7 +1167,7 @@
     "heading_en": null,
     "body_en": null,
     "heading_ar": "كيف تُقرأ أولويات القياس؟",
-    "body_ar": "بند القياس هو سجل يربط الدليل بالقرار، وليس توصية للحكومة أو قائمة أمنيات. فهو يحدد الصفحات والقرارات المتأثرة، والدليل المفقود حاليًا، وقيود إمكانية التنفيذ والحساسية، وأساس ترتيبه بين أولويات الأدلة في هذا المورد، وما الذي سيتغير إذا توفر الدليل."
+    "body_ar": "بند القياس هو سجل يربط الدليل بالقرار، ولا يمثل توصية للحكومة أو قائمة مقترحات عامة لجمع البيانات. فهو يحدد الصفحات والقرارات المتأثرة، والدليل المفقود حاليًا، وقيود إمكانية التنفيذ والحساسية، وأساس ترتيبه بين أولويات الأدلة في هذا المورد، وما الذي سيتغير إذا توفر الدليل."
   },
   {
     "route": "/measurement/",
@@ -1392,7 +1392,7 @@
     "heading_en": null,
     "body_en": null,
     "heading_ar": "المقارنة مشروطة بالتوافق",
-    "body_ar": "قبل وضع القيم على مقياس واحد، يُتحقَّق من التعريف والفترة والجغرافيا والمجتمع أو قاعدة الاحتساب والوحدة ونطاق المصدر والمنهج. يبقى عدم التوافق الجوهري ظاهرًا وقد يمنع إنشاء مقياس مشترك. الهدف ليس منع المقارنة، بل منع المقارنة الزائفة."
+    "body_ar": "قبل وضع القيم على مقياس واحد، يُتحقَّق من التعريف والفترة والجغرافيا والمجتمع أو قاعدة الاحتساب والوحدة ونطاق المصدر والمنهج. ويُذكر أي عدم توافق جوهري صراحةً، وقد يحول دون إنشاء مقياس مشترك. الهدف ليس منع المقارنة، بل منع المقارنة الزائفة."
   },
   {
     "route": "/methodology/",
@@ -1815,7 +1815,7 @@
     "heading_en": null,
     "body_en": "How this resource handles information about visitors.",
     "heading_ar": null,
-    "body_ar": "كيف يتعامل هذا المورد مع معلومات الزوار."
+    "body_ar": "توضح هذه الصفحة كيفية التعامل مع معلومات زوار هذا المورد."
   },
   {
     "route": "/privacy/",
@@ -2022,7 +2022,7 @@
     "heading_en": null,
     "body_en": "Evidence-led essays on the points where Yemen’s financial-inclusion data change the question—not just the answer. Each Reading is traceable to the evidence behind it.",
     "heading_ar": null,
-    "body_ar": "قراءات تحليلية تنطلق من الأدلة عند النقاط التي تغيّر فيها بيانات الشمول المالي في اليمن السؤال نفسه، لا الإجابة فقط. ويمكن تتبّع كل قراءة إلى الأدلة التي قامت عليها."
+    "body_ar": "قراءات تحليلية قائمة على الأدلة، تتناول المواضع التي تغيّر فيها بيانات الشمول المالي في اليمن السؤال نفسه، لا الإجابة وحدها. ويمكن تتبّع كل قراءة إلى الأدلة التي تستند إليها."
   },
   {
     "route": "/readings/after-transfer-persistence/",
@@ -2031,7 +2031,7 @@
     "heading_en": null,
     "body_en": "A transfer can succeed before a financial relationship begins. The intended recipient can be identified, the payment authorised and the funds delivered; the recipient can reach them; an account can be opened and made usable; and a programme can extend a new delivery channel into places where distributing cash is hard. Those are real results, and they should be measured and credited as such. Financial inclusion asks a different question: what happens after the money arrives?\nWorld Bank and G2Px material from May 2024 describes a digital-payment pilot in eight districts within Yemen’s unconditional cash-transfer programme, reported by programme partners to have benefited 45,460 recipients. The pilot emphasised payment into fully functional accounts and recipient choice. That goes beyond a change in disbursement technology. A fully functional account can, by design, receive money, hold value and make payments; and choice matters because a system built around recipients should not treat them as passive receivers of a programme payment.\nBut possibility is not persistence. The available Yemen evidence does not yet tell us whether recipients used those accounts between transfers, kept balances in them, received other money, paid merchants or bills, made transfers of their own, switched providers, or kept using the account after the programme payments that prompted it weakened or ended. That is the missing observation.",
     "heading_ar": null,
-    "body_ar": "قد تنجح عملية التحويل قبل أن تبدأ علاقة مالية. فيمكن تحديد المستفيد المقصود، واعتماد الدفعة، وإيصال الأموال، وتمكين المستفيد من الوصول إليها، وفتح حساب صالح للاستخدام، وتوسيع قناة صرف جديدة إلى أماكن يصعب فيها توزيع النقد. وهذه نتائج حقيقية ينبغي قياسها والاعتراف بها كما هي. أما الشمول المالي فيطرح سؤالًا آخر: ماذا يحدث بعد وصول المال؟\nتصف مواد البنك الدولي ومبادرة G2Px الصادرة في مايو 2024 تجربة للدفع الرقمي ضمن برنامج التحويلات النقدية غير المشروطة في اليمن، نُفذت في ثماني مديريات، وأفاد شركاء البرنامج بأنها شملت 45,460 مستفيدًا. وركزت التجربة على الدفع إلى حسابات كاملة الوظائف وعلى حرية المستفيد في الاختيار. وهذا يتجاوز مجرد تغيير أداة الصرف؛ فالحساب الكامل الوظائف يستطيع، من حيث التصميم، أن يستقبل الأموال ويحتفظ بالقيمة ويُجري المدفوعات، والاختيار مهم لأن نظامًا يضع المستفيد في مركزه لا ينبغي أن يعامله متلقيًا سلبيًا لدفعة برنامجية.\nلكن الإمكانية لا تعني الاستمرار. فالأدلة المتاحة عن اليمن لا تخبرنا بعدُ ما إذا كان المستفيدون قد استخدموا هذه الحسابات بين دفعة وأخرى، أو أبقوا فيها أرصدة، أو تلقوا فيها أموالًا من خارج البرنامج، أو دفعوا منها لتجار أو سددوا فواتير، أو أجروا تحويلات بمبادرتهم، أو بدّلوا مقدم الخدمة، أو واصلوا استخدام الحساب بعد أن ضعفت دفعات البرنامج التي دفعتهم إليه أو انتهت. وهذه هي الملاحظة المفقودة."
+    "body_ar": "يمكن أن تنجح الدفعة من دون أن تنشأ بعدها علاقة مالية مستمرة. فقد ينجح البرنامج في تحديد المستفيد المقصود، واعتماد الدفعة، وإيصال الأموال إليه، وتمكينه من الوصول إليها. وقد يفتح له حسابًا صالحًا للاستخدام ويوسّع قناة الصرف إلى مناطق يصعب فيها توزيع النقد. هذه نتائج ينبغي قياسها والاعتراف بها. لكن سؤال الشمول المالي يبدأ من نقطة أخرى: ماذا يحدث بعد وصول المال؟\n\nتصف مواد البنك الدولي ومبادرة G2Px الصادرة في مايو 2024 تجربة للدفع الرقمي ضمن برنامج التحويلات النقدية غير المشروطة في اليمن. نُفذت التجربة في ثماني مديريات، وأفاد شركاء البرنامج بأنها شملت 45,460 مستفيدًا. وقد ركزت على إيداع الدفعات في حسابات كاملة الوظائف وعلى حرية المستفيد في الاختيار. وهذا أوسع من مجرد تبديل أداة الصرف: فالحساب كامل الوظائف يستطيع، بحسب تصميمه، استقبال الأموال والاحتفاظ بالقيمة وإجراء المدفوعات. أما الاختيار فيعني أن يُعامل المستفيد صاحب قرار، لا متلقيًا سلبيًا لدفعة برنامجية.\n\nغير أن إمكان الاستخدام شيء واستمراره شيء آخر. فالأدلة المتاحة عن اليمن لا تُظهر بعدُ ما إذا كان المستفيدون قد استخدموا حساباتهم بين دفعة وأخرى، أو احتفظوا بأرصدة، أو تلقوا أموالًا من خارج البرنامج، أو دفعوا للتجار وسددوا الفواتير، أو بادروا بتحويلات، أو انتقلوا إلى مقدم خدمة آخر. ولا تبين ما إذا كانوا واصلوا استخدام الحساب بعد أن تراجعت دفعات البرنامج أو انتهت. هذه هي الملاحظة التي لا تزال تنقصنا."
   },
   {
     "route": "/readings/after-transfer-persistence/",
@@ -2244,9 +2244,9 @@
     "route": "/readings/finance-constraint-different-questions/",
     "section_order": 3,
     "section_role": null,
-    "heading_en": "Two questions, two groups of firms",
+    "heading_en": "Two questions, two calculation bases",
     "body_en": "The 22% is comparative. It places finance among electricity, fuel, transport, taxation and instability, following the survey’s own item wording; it is not the “biggest obstacle” indicator of the World Bank’s standard Enterprise Surveys, and it does not rank constraints by their causal effect. A loan does not make electricity reliable, and a guarantee does not reopen a road. Finance belongs inside the business environment, not above it.\nThe 91.84% describes severity within a narrower, finance-relevant group. It does not mean that 91.84% of Yemeni firms, or even of the surveyed firms, face a major or moderate finance obstacle: the group changed before the percentage was calculated, and the number of firms in that tabulation is not recorded in the evidence base.",
-    "heading_ar": "سؤالان ومجموعتان من المنشآت",
+    "heading_ar": "سؤالان وقاعدتا احتساب مختلفتان",
     "body_ar": "نسبة 22% ذات طابع مقارن؛ فهي تضع التمويل بين الكهرباء والوقود والنقل والضرائب وعدم الاستقرار، وفق صياغة البنود في المسح نفسه، وليست مؤشر «أكبر عائق» في المسوح المعيارية للمنشآت التي يجريها البنك الدولي، ولا ترتب القيود بحسب أثرها السببي. فالقرض لا يجعل الكهرباء موثوقة، والضمان لا يعيد فتح طريق. التمويل جزء من بيئة الأعمال، لا فوقها.\nأما 91.84% فتصف شدة القيد داخل مجموعة أضيق معنية بالتمويل. ولا تعني أن 91.84% من المنشآت اليمنية، أو حتى من المنشآت التي شملها المسح، تواجه عائقًا تمويليًا كبيرًا أو متوسطًا؛ فالمجموعة تغيّرت قبل حساب النسبة، وعدد المنشآت في ذلك الجدول غير متوافر في قاعدة الأدلة."
   },
   {
@@ -2361,9 +2361,9 @@
     "route": "/readings/gender-gap-measured-causes-open/",
     "section_order": 3,
     "section_role": null,
-    "heading_en": "The mechanism is still open",
+    "heading_en": "The causes are not yet established",
     "body_en": "Plausible mechanisms include income, employment, identity documents, phone ownership and control, distance, mobility, trust, household decision-making, provider practice and product design. For Yemen these are hypotheses to test, not findings; the current evidence does not divide the 12.9-point gap among them.\nThe same survey records a gap of 9.0 percentage points between adults in the poorest 40% of households by income (6.5%) and those in the richest 60% (15.5%). That does not explain the gender gap. It shows why one-dimensional explanations are risky.",
-    "heading_ar": "الآلية ما تزال مفتوحة",
+    "heading_ar": "أسباب الفجوة لم تُثبَت بعد",
     "body_ar": "من الآليات المحتملة: الدخل، والعمل، ووثائق الهوية، وامتلاك الهاتف والتحكم فيه، والمسافة، والقدرة على التنقل، والثقة، واتخاذ القرار داخل الأسرة، وممارسات مقدمي الخدمة، وتصميم المنتجات. وهذه في حالة اليمن فرضيات ينبغي اختبارها، لا نتائج؛ فالأدلة الحالية لا توزع فجوة الـ12.9 نقطة بين هذه الآليات.\nويسجل المسح نفسه فجوة قدرها 9.0 نقطة مئوية بين البالغين في أفقر 40% من الأسر بحسب الدخل (6.5%) وأغنى 60% (15.5%). وهذا لا يفسر الفجوة بين النساء والرجال، لكنه يبين لماذا تنطوي التفسيرات الأحادية على مخاطرة."
   },
   {
@@ -2488,9 +2488,9 @@
     "section_order": 2,
     "section_role": null,
     "heading_en": null,
-    "body_en": "Two annual reports of the Central Bank of Yemen – Aden (CBY-Aden) give markedly different remittance values for the same reference year. The 2024 report put remittances in 2024 at USD 6,245 million; the 2025 report restated 2024 at USD 3,422.16 million.\nThe gap is large, but it does not show that remittances collapsed. Both values describe 2024. Before the difference can be read as economic movement, the change in statistical vintage, scope or method has to be understood.",
+    "body_en": "A more recently published figure is not necessarily a figure for a more recent year. The 2024 annual report of the Central Bank of Yemen – Aden (CBY-Aden) put remittances in 2024 at USD 6,245 million; the 2025 annual report then published another value for the same year: USD 3,422.16 million.\n\nThis is a difference between two releases about 2024 itself, not a fall between two years. The gap between the two amounts does not, by itself, reveal the actual path of remittances in 2024; interpreting it first requires knowing whether the scope, method or presentation of the statistic changed between the two releases.",
     "heading_ar": null,
-    "body_ar": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للحوالات في السنة المرجعية نفسها. فقد قدّر تقرير 2024 الحوالات في عام 2024 بمبلغ 6,245 مليون دولار، ثم أعاد تقرير 2025 عرض قيمة عام 2024 عند 3,422.16 مليون دولار.\nالفرق كبير، لكنه لا يثبت أن الحوالات انهارت؛ فالقيمتان تصفان عام 2024 نفسه. وقبل قراءة الفرق حركةً في الاقتصاد، ينبغي فهم ما تغيّر في نسخة النشر أو نطاق الإحصاء أو منهجه."
+    "body_ar": "الرقم الأحدث نشرًا ليس بالضرورة رقمًا عن سنة أحدث. فقد قدّر التقرير السنوي 2024 للبنك المركزي اليمني – عدن الحوالات في عام 2024 بمبلغ 6,245 مليون دولار. ثم نشر التقرير السنوي 2025 قيمة أخرى للسنة نفسها: 3,422.16 مليون دولار.\n\nهذا اختلاف بين إصدارين عن عام 2024 نفسه، وليس هبوطًا بين عامين. ولا يكشف فرق المبلغين وحده عن مسار الحوالات الفعلي في عام 2024؛ فتفسيره يتطلب أولًا معرفة ما إذا تغيّر نطاق الإحصاء أو منهجه أو طريقة عرضه بين نسختَي النشر."
   },
   {
     "route": "/readings/same-year-different-number/",
@@ -2901,10 +2901,10 @@
     "route": "/rights/",
     "section_order": 2,
     "section_role": null,
-    "heading_en": "Citation, factual use and redistribution are separate",
-    "body_en": "A source may be valid evidence, and may be cited, even when its publisher has not granted permission to republish its file, table, figure, dataset or substantial text. This resource therefore treats evidence fitness, citation, factual use and redistribution as separate questions. Reuse terms have not yet been assessed for any source, so this resource reports facts with attribution, links to the original publisher, and does not host copies of source files.",
-    "heading_ar": "الاستشهاد، والإفادة من الوقائع والأرقام، وإعادة التوزيع: ثلاثة أذونات منفصلة",
-    "body_ar": "قد يكون المصدر صالحًا للاستدلال ويجوز الاستشهاد به من دون أن يمنح ذلك إذنًا بإعادة نشر ملفه أو جدوله أو رسمه أو مجموعة بياناته أو جزء جوهري من نصه. لذلك يعامل هذا المورد صلاحية الدليل للاستدلال، والاستشهاد، والإفادة من الوقائع والأرقام، وإعادة التوزيع بوصفها أسئلة منفصلة. ولم تُقيَّم بعدُ شروط إعادة الاستخدام لأي مصدر، لذلك يورد هذا المورد الوقائع منسوبة إلى مصادرها، ويحيل إلى الناشر الأصلي، ولا يستضيف نسخًا من ملفات المصادر."
+    "heading_en": "Evidence fitness, citation, factual use and redistribution are separate questions",
+    "body_en": "A source may be valid evidence, and may be cited, even when its publisher has not granted permission to republish its file, table, figure, dataset or substantial text. This resource therefore treats evidence fitness, citation, factual use and redistribution as separate questions. Reuse terms have not yet been assessed for most sources, so this resource reports facts with attribution, links to the original publisher, and does not host copies of source files.",
+    "heading_ar": "صلاحية الدليل، والاستشهاد به، واستخدام الوقائع والأرقام، وإعادة نشر المواد: مسائل منفصلة",
+    "body_ar": "قد يكون المصدر صالحًا للاستدلال ويجوز الاستشهاد به من دون أن يمنح ذلك إذنًا بإعادة نشر ملفه أو جدوله أو رسمه أو مجموعة بياناته أو جزء جوهري من نصه. لذلك يعامل هذا المورد صلاحية الدليل للاستدلال، والاستشهاد، والإفادة من الوقائع والأرقام، وإعادة التوزيع بوصفها أسئلة منفصلة. ولم تُقيَّم بعدُ شروط إعادة الاستخدام لمعظم المصادر، لذلك يورد هذا المورد الوقائع منسوبة إلى مصادرها، ويحيل إلى الناشر الأصلي، ولا يستضيف نسخًا من ملفات المصادر."
   },
   {
     "route": "/rights/",
@@ -3009,7 +3009,7 @@
     "route": "/providers/",
     "section_order": 2,
     "section_role": "Scope",
-    "heading_en": "Whose list is this?",
+    "heading_en": "Who issued these lists, and what do they cover?",
     "body_en": "The provider lists and status decisions on this page come from instruments issued by the Central Bank of Yemen – Aden (CBY-Aden); the bank list was checked on 3 October 2026. Since 2016 central-bank authority has been divided, and some banks on that list have addresses in Sana'a and Taiz in the source. Status under any other authority is not established here; this defines the scope of the evidence and is not a judgement about either authority. Absence from a CBY-Aden list does not show that a provider is unlicensed elsewhere, and presence on it does not show that a provider can operate across all of Yemen.",
     "heading_ar": null,
     "body_ar": null
@@ -3020,7 +3020,7 @@
     "section_role": "النطاق",
     "heading_en": null,
     "body_en": null,
-    "heading_ar": "قائمة مَن هذه؟",
+    "heading_ar": "من أصدر هذه القوائم؟ وما نطاقها؟",
     "body_ar": "تأتي قوائم مقدمي الخدمات والقرارات المتعلقة بأوضاعهم في هذه الصفحة من وثائق صادرة عن البنك المركزي اليمني – عدن، وقد اطُّلع على قائمة البنوك في 3 أكتوبر 2026. ومنذ 2016 انقسمت سلطة البنك المركزي، وترد لبعض البنوك في تلك القائمة عناوين في صنعاء وتعز بحسب المصدر. ولا تثبت هذه الصفحة وضع أي جهة لدى سلطة أخرى؛ فهذا تحديد لنطاق الدليل وليس حكمًا على أي من السلطتين. وغياب جهة عن قائمة البنك المركزي اليمني – عدن لا يعني أنها غير مرخصة في مكان آخر، كما أن ورودها فيها لا يعني أنها قادرة على العمل في كل أنحاء اليمن."
   },
   {
@@ -3255,7 +3255,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-003/",
@@ -3273,7 +3273,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-009/",
@@ -3291,7 +3291,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-010/",
@@ -3309,7 +3309,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-011/",
@@ -3327,7 +3327,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-015/",
@@ -3345,7 +3345,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-INCLUSION-TRANSMISSION/",
@@ -3363,7 +3363,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-EVIDENCE-FRESHNESS/",
@@ -3381,7 +3381,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-SOURCE-COMPARISON/",
@@ -3399,7 +3399,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-PROVIDER-TIME/",
@@ -3417,7 +3417,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FCP-REDRESS-PATH/",
@@ -3435,7 +3435,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-E-MONEY-RULE-STACK/",
@@ -3453,7 +3453,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-MECHANISM-METRIC-BRIDGE/",
@@ -3471,7 +3471,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-PROVIDER-OBSERVABILITY/",
@@ -3489,7 +3489,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/DS-FCP-ARCH/",
@@ -3507,7 +3507,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/DS-QUAL-EVIDENCE/",
@@ -3525,7 +3525,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-016/",
@@ -3543,7 +3543,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-017/",
@@ -3561,7 +3561,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-018/",
@@ -3579,7 +3579,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-019/",
@@ -3597,7 +3597,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-020/",
@@ -3615,7 +3615,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-021/",
@@ -3633,7 +3633,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-MFI-SPINE/",
@@ -3651,7 +3651,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-002/",
@@ -3660,7 +3660,7 @@
     "heading_en": null,
     "body_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 18.3% of men and 5.4% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.9 percentage points.",
     "heading_ar": null,
-    "body_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة من يملكون حسابًا 18.3% بين الرجال و5.4% بين النساء بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.9 نقطة مئوية."
+    "body_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة امتلاك الحساب 18.3% بين الرجال و5.4% بين النساء من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.9 نقطة مئوية."
   },
   {
     "route": "/evidence/CLM-002/",
@@ -3669,7 +3669,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-007/",
@@ -3687,7 +3687,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/PSE-011/",
@@ -3705,7 +3705,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-012/",
@@ -3723,7 +3723,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/XW-FMIIP-005/",
@@ -3741,7 +3741,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/QUAL-001/",
@@ -3759,7 +3759,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/MFI-SPINE-2015-Q4/",
@@ -3777,7 +3777,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/MF-ORIG-001+002/",
@@ -3795,7 +3795,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-013/",
@@ -3813,7 +3813,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-023/",
@@ -3831,7 +3831,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-024/",
@@ -3849,7 +3849,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-025/",
@@ -3867,7 +3867,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-026/",
@@ -3885,7 +3885,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FINDEX-SAMPLE-SUPPORT/",
@@ -3903,7 +3903,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FINDEX-ACCESS-USE/",
@@ -3921,7 +3921,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FINDEX-BARRIERS/",
@@ -3939,7 +3939,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FINDEX-RESILIENCE/",
@@ -3957,7 +3957,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FINDEX-FLOW-CHANNELS/",
@@ -3975,7 +3975,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-027/",
@@ -3993,7 +3993,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-028/",
@@ -4011,7 +4011,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-029/",
@@ -4029,7 +4029,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-030/",
@@ -4047,7 +4047,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-031/",
@@ -4065,7 +4065,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FINDEX-OBSERVED-WAVES/",
@@ -4083,7 +4083,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-DEMAND-VINTAGE-LADDER/",
@@ -4101,7 +4101,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-BORROWING-SOURCES-2014/",
@@ -4119,7 +4119,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-DOMESTIC-REMITTANCE-PATH-2014/",
@@ -4137,7 +4137,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/DS-FINDEX-PUBLIC-HISTORY/",
@@ -4155,7 +4155,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/DS-FINDEX-HISTORY-CROSSWALK/",
@@ -4173,7 +4173,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/DS-DEMAND-VINTAGE-LENS/",
@@ -4191,7 +4191,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-004/",
@@ -4209,7 +4209,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-005/",
@@ -4227,7 +4227,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-006/",
@@ -4245,7 +4245,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-008/",
@@ -4263,7 +4263,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-014/",
@@ -4281,7 +4281,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-022/",
@@ -4299,7 +4299,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FINDEX-GAPS/",
@@ -4317,7 +4317,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-POS-TERMINALS/",
@@ -4335,7 +4335,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-POS-TRANSACTIONS/",
@@ -4353,7 +4353,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-POS-VALUE/",
@@ -4371,7 +4371,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-PAYMENT-ANATOMY/",
@@ -4389,7 +4389,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-MFI-2014-PANEL/",
@@ -4407,7 +4407,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-REMITTANCE-MACRO/",
@@ -4425,7 +4425,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-REMITTANCE-COST/",
@@ -4443,7 +4443,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FIRM-CONSTRAINTS/",
@@ -4461,7 +4461,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FIRM-FINANCE-PATH/",
@@ -4479,7 +4479,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FIRM-FINANCE-SEVERITY/",
@@ -4497,7 +4497,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-OECD-FCP-TIMELINE/",
@@ -4515,7 +4515,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-CAPITAL-CONTEXT/",
@@ -4533,7 +4533,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-EVIDENCE-GAPS/",
@@ -4551,7 +4551,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-PAYMENT-RAILS/",
@@ -4569,7 +4569,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-EVIDENCE-CLASS-LADDER/",
@@ -4587,7 +4587,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-FL-EVIDENCE-LADDER/",
@@ -4605,7 +4605,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-MFI-RUPTURE-LENS/",
@@ -4623,7 +4623,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/VIS-TARGET-RESULT-STATE/",
@@ -4641,7 +4641,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-040/",
@@ -4659,7 +4659,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-041/",
@@ -4677,7 +4677,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-042/",
@@ -4695,7 +4695,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-043/",
@@ -4713,7 +4713,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-044/",
@@ -4731,7 +4731,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-045/",
@@ -4749,7 +4749,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-046/",
@@ -4767,7 +4767,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-047/",
@@ -4785,7 +4785,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-048/",
@@ -4803,7 +4803,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-049/",
@@ -4821,7 +4821,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-050/",
@@ -4839,7 +4839,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-051/",
@@ -4857,7 +4857,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-052/",
@@ -4875,7 +4875,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-053/",
@@ -4893,7 +4893,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-054/",
@@ -4911,7 +4911,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-055/",
@@ -4929,7 +4929,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-056/",
@@ -4947,7 +4947,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-057/",
@@ -4965,7 +4965,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-058/",
@@ -4983,7 +4983,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-032/",
@@ -5001,7 +5001,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-033/",
@@ -5019,7 +5019,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-034/",
@@ -5037,7 +5037,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-035/",
@@ -5055,7 +5055,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-036/",
@@ -5073,7 +5073,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-037/",
@@ -5091,7 +5091,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-038/",
@@ -5109,7 +5109,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-039/",
@@ -5127,7 +5127,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-059/",
@@ -5145,7 +5145,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-060/",
@@ -5163,7 +5163,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CLM-062/",
@@ -5181,7 +5181,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/FMIIP-BASELINE-2025-01/",
@@ -5199,7 +5199,7 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   },
   {
     "route": "/evidence/CBY-BANKS-2026-05/",
@@ -5217,6 +5217,6 @@
     "heading_en": "How to read this evidence",
     "body_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
     "heading_ar": "كيف تقرأ هذا الدليل",
-    "body_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر."
+    "body_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه."
   }
 ]

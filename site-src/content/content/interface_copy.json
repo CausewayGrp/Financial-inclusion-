@@ -8,7 +8,7 @@
   {
     "ui_id": "UI-VERIFY-PARTIAL",
     "label_en": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
-    "label_ar": "تستند بعض أرقام هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة، ولم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. فطابِق كل رقم مع أحد المصادر المدرجة قبل إعادة استخدامه، وعامِل الرقم الذي لا تجد له مقابلًا على أنه غير متحقق منه.",
+    "label_ar": "تستند بعض أرقام هذا السجل إلى المصادر المدرجة في الصفحة، بينما لم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. وقبل إعادة استخدام رقم، راجع المصدر المرتبط به وتحقق من مطابقته. وإذا تعذرت مطابقته بمصدر أصلي، فلا تتعامل معه بوصفه رقمًا متحققًا منه.",
     "use_rule": "Stage 1 Lead addition (BOUND_PARTIAL). 06 verification text and evidence-page source statement when some inputs are bound and others are open."
   },
   {
@@ -68,7 +68,7 @@
   {
     "ui_id": "UI-READING-PATH-RECORD-PARTIAL",
     "label_en": "Not yet fully traced to a source",
-    "label_ar": "لم يُتتبّع بالكامل إلى مصدر بعدُ",
+    "label_ar": "لم تكتمل إحالته إلى مصادره الأصلية بعدُ",
     "use_rule": "P1.5. Label on a path step whose record is PARTIALLY_RESOLVED."
   },
   {
@@ -194,7 +194,7 @@
   {
     "ui_id": "UI-VIS-NOMINAL",
     "label_en": "Nominal — not adjusted for prices or exchange rates",
-    "label_ar": "اسمية — لم تُعدَّل لمراعاة تغيّر الأسعار أو سعر الصرف",
+    "label_ar": "قيم اسمية — لم تُعدّل لمراعاة تغيّر الأسعار أو سعر الصرف",
     "use_rule": "Pre-Tranche-C P3 visual grammar. Nominal currency series."
   },
   {
@@ -745,8 +745,8 @@
   },
   {
     "ui_id": "UI-VIS-CAT-PRV-NAMED-COMPLETE",
-    "label_en": "Names complete for the source list",
-    "label_ar": "الأسماء مكتملة لقائمة المصدر",
+    "label_en": "All names in the source list",
+    "label_ar": "جميع الأسماء الواردة في قائمة المصدر",
     "use_rule": "Pre-Tranche-C P4 (V-D5). Chart label: provider_named_state value 'COMPLETE_FOR_SOURCE_LIST'."
   },
   {
@@ -980,7 +980,7 @@
   {
     "ui_id": "UI-EVID-READING-GUIDANCE",
     "label_en": "Read this evidence within the definition, population or group covered, calculation base where relevant, period, geography and method shown on the page. Before reusing or comparing it, check the source, limitations, evidence date and correction history. If a value or source link is unavailable, the page says so rather than filling the gap by inference. This resource does not host source files; where an original-source link is given, check the publisher’s terms before republishing.",
-    "label_ar": "يُقرأ هذا الدليل ضمن التعريف، والمجتمع الذي ينطبق عليه الرقم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدامه أو مقارنته، راجع المصدر والحدود وحداثة الدليل وسجل التصحيح. وإذا كانت قيمة أو وصلة مصدر غير متاحة، تُذكر الفجوة صراحةً بدل ملئها بالاستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، تحقق من شروط الناشر قبل إعادة النشر.",
+    "label_ar": "يُقرأ هذا الدليل في ضوء ما يقيسه، والمجتمع الذي تنطبق عليه القيم، وقاعدة الاحتساب عند الاقتضاء، والفترة، والنطاق الجغرافي، والطريقة المبينة في الصفحة. وقبل إعادة استخدام أي قيمة أو مقارنتها بغيرها، راجع المصدر وحدود القياس وتاريخ الدليل وسجل التصحيحات. وإذا لم تتوافر قيمة أو رابط لمصدر، تذكر الصفحة ذلك صراحةً بدل ملء الفجوة باستنتاج. ولا يستضيف هذا المورد ملفات المصادر؛ وحيثما وُجد رابط للمصدر الأصلي، فتحقّق من شروط الناشر قبل إعادة نشر أي مادة منه.",
     "use_rule": "Tranche C TC-S1. Reading guidance on every Evidence Record; TRUST-03/EN-23: no download is offered, so the old 'Download and reuse are offered only where source rights permit' sentence is replaced."
   },
   {
@@ -1346,7 +1346,7 @@
   {
     "ui_id": "UI-DOM-WHAT-MEASUREMENT-WOULD-CHANGE-THE",
     "label_en": "What measurement would change the decision?",
-    "label_ar": "ما القياس الذي سيغيّر القرار؟",
+    "label_ar": "ما القياس الذي قد يغيّر القرار؟",
     "use_rule": "scripts/yfie/content.py _DOMAIN_LABELS['measure']"
   },
   {
@@ -1718,7 +1718,7 @@
   {
     "ui_id": "UI-HERO-THIS-RESOURCE-PRESENTS-THE-STRONGEST",
     "label_en": "This resource gives the answer the evidence best supports and shows its scope, limits and source, so you can verify it.",
-    "label_ar": "يقدّم هذا المورد الإجابة التي تسندها الأدلة أكثر من سواها، ويُظهر نطاقها وحدودها ومصدرها لتتمكن من التحقق منها.",
+    "label_ar": "يقدّم هذا المورد أقوى إجابة تسندها الأدلة، ويبيّن نطاقها وحدودها ومصدرها لتتمكن من التحقق منها.",
     "use_rule": "build.py hero()"
   },
   {
@@ -2593,8 +2593,8 @@
   },
   {
     "ui_id": "UI-DATA-REUSE-TERMS-ONCE",
-    "label_en": "This resource links to original sources and quotes them briefly. It has not assessed the reuse terms of any source; check each source's own terms before reusing its content.",
-    "label_ar": "يربط هذا المورد بالمصادر الأصلية ويقتبس منها باختصار. ولم يُقيّم شروط إعادة استخدام أي مصدر؛ فتحقّق من شروط كل مصدر قبل إعادة استخدام محتواه.",
+    "label_en": "This resource links to original sources and quotes them briefly. Reuse terms have not been assessed for most sources, and a public link is not permission to republish a source's content; check the original publisher's terms before reusing any material from it.",
+    "label_ar": "يحيل هذا المورد إلى المصادر الأصلية ويقتبس منها باختصار. ولم تُقيَّم شروط إعادة الاستخدام لمعظم المصادر، ولا تعني إتاحة رابط المصدر السماح بإعادة نشر محتواه؛ فتحقّق من شروط الناشر الأصلي قبل إعادة استخدام أي مادة منه.",
     "use_rule": "RC-4 (Part B B8). /data/ stated once above the source list; each card keeps its own reuse-terms label."
   },
   {

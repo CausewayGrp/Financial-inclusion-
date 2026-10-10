@@ -1,0 +1,48 @@
+# AR-1 render check (10 October 2026)
+
+Every cell AR-1 wrote, counted in the visible text of the rebuilt pages (scratch script render_check.py; inline tags removed, whitespace normalised). Bodies render exactly once on their page. A section heading renders three times on its page by construction — the h2 plus its two navigation copies (the page strip and the side index); an unchanged control heading on /en/rights/ ("What a rights restriction changes") also counts 3. Interface strings render once wherever their component appears (AR-049/053: the visual and its text table; AR-058: the domain-page block and its two navigation copies; AR-060: the three BOUND_PARTIAL records; AR-061: all 110 record pages). AR-062 renders on /evidence/CLM-002/ and on /people/, where the record's summary is shown.
+
+AR-061's condition (shared by about 110 record pages): read at 390 px in Arabic, with the disclosures open, on a BOUND_EXACT record (CLM-001), a BOUND_PARTIAL record (CLM-039) and a FRAMING_NO_FACT record (CLM-004): the paragraph is the same on all three, 315 px tall, and reads correctly on each.
+
+```
+AR-1:R33:AR-002              03_PAGE_SECTIONS!R119C7                              ar pages=  1 max/page=1 e.g. [('ar/firms/index.html', 1)]
+AR-1:R33:AR-003              03_PAGE_SECTIONS!R285C7                              ar pages=  1 max/page=1 e.g. [('ar/readings/same-year-different-number/index.html', 1)]
+AR-1:R33:AR-003              03_PAGE_SECTIONS!R285C5                              en pages=  1 max/page=1 e.g. [('en/readings/same-year-different-number/index.html', 1)]
+AR-1:R33:AR-005              03_PAGE_SECTIONS!R234C7                              ar pages=  1 max/page=1 e.g. [('ar/readings/after-transfer-persistence/index.html', 1)]
+AR-1:R33:AR-008              03_PAGE_SECTIONS!R66C7                               ar pages=  1 max/page=1 e.g. [('ar/data/index.html', 1)]
+AR-1:R33:AR-008              03_PAGE_SECTIONS!R66C5                               en pages=  1 max/page=1 e.g. [('en/data/index.html', 1)]
+AR-1:R33:AR-009              03_PAGE_SECTIONS!R70C7                               ar pages=  1 max/page=1 e.g. [('ar/data/index.html', 1)]
+AR-1:R33:AR-010              03_PAGE_SECTIONS!R72C7                               ar pages=  1 max/page=1 e.g. [('ar/data/index.html', 1)]
+AR-1:R33:AR-012              03_PAGE_SECTIONS!R136C7                              ar pages=  1 max/page=1 e.g. [('ar/measurement/index.html', 1)]
+AR-1:R33:AR-013              03_PAGE_SECTIONS!R138C7                              ar pages=  1 max/page=1 e.g. [('ar/measurement/index.html', 1)]
+AR-1:R33:AR-016              03_PAGE_SECTIONS!R163C7                              ar pages=  1 max/page=1 e.g. [('ar/methodology/index.html', 1)]
+AR-1:R33:AR-019              03_PAGE_SECTIONS!R125C6                              ar pages=  1 max/page=3 e.g. [('ar/firms/index.html', 3)]
+AR-1:R33:AR-023              03_PAGE_SECTIONS!R344C6                              ar pages=  1 max/page=3 e.g. [('ar/providers/index.html', 3)]
+AR-1:R33:AR-023              03_PAGE_SECTIONS!R343C4                              en pages=  1 max/page=3 e.g. [('en/providers/index.html', 3)]
+AR-1:R33:AR-026              03_PAGE_SECTIONS!R233C7                              ar pages=  1 max/page=1 e.g. [('ar/readings/index.html', 1)]
+AR-1:R33:AR-029              03_PAGE_SECTIONS!R258C6                              ar pages=  1 max/page=3 e.g. [('ar/readings/finance-constraint-different-questions/index.html', 3)]
+AR-1:R33:AR-029              03_PAGE_SECTIONS!R258C4                              en pages=  1 max/page=3 e.g. [('en/readings/finance-constraint-different-questions/index.html', 3)]
+AR-1:R33:AR-031              03_PAGE_SECTIONS!R271C6                              ar pages=  1 max/page=3 e.g. [('ar/readings/gender-gap-measured-causes-open/index.html', 3)]
+AR-1:R33:AR-031              03_PAGE_SECTIONS!R271C4                              en pages=  1 max/page=3 e.g. [('en/readings/gender-gap-measured-causes-open/index.html', 3)]
+AR-1:R33:AR-037              03_PAGE_SECTIONS!R331C6                              ar pages=  1 max/page=3 e.g. [('ar/rights/index.html', 3)]
+AR-1:R33:AR-037              03_PAGE_SECTIONS!R331C4                              en pages=  1 max/page=3 e.g. [('en/rights/index.html', 3)]
+AR-1:R33:AR-039              03_PAGE_SECTIONS!R210C7                              ar pages=  1 max/page=1 e.g. [('ar/privacy/index.html', 1)]
+AR-1:R33:AR-043              04_NAV_UX!R362C3                                     ar pages=  1 max/page=2 e.g. [('ar/index.html', 2)]
+AR-1:R33:AR-045              04_NAV_UX!R87C3                                      ar pages=  1 max/page=1 e.g. [('ar/readings/microfinance-structural-divergence/index.html', 1)]
+AR-1:R33:AR-049              04_NAV_UX!R200C3                                     ar pages=  2 max/page=2 e.g. [('ar/providers/index.html', 2), ('ar/evidence/VIS-PROVIDER-OBSERVABILITY/index.html', 2)]
+AR-1:R33:AR-049              04_NAV_UX!R200C2                                     en pages=  2 max/page=2 e.g. [('en/providers/index.html', 2), ('en/evidence/VIS-PROVIDER-OBSERVABILITY/index.html', 2)]
+AR-1:R33:AR-053              04_NAV_UX!R108C3                                     ar pages=  2 max/page=2 e.g. [('ar/payments/index.html', 2), ('ar/evidence/VIS-POS-VALUE/index.html', 2)]
+AR-1:R33:AR-056              04_NAV_UX!R508C3                                     ar pages=  1 max/page=1 e.g. [('ar/data/index.html', 1)]
+AR-1:R33:AR-056              04_NAV_UX!R508C2                                     en pages=  1 max/page=1 e.g. [('en/data/index.html', 1)]
+AR-1:R33:AR-058              04_NAV_UX!R300C3                                     ar pages=  8 max/page=3 e.g. [('ar/remittances/index.html', 3), ('ar/reforms/index.html', 3), ('ar/providers/index.html', 3)]
+AR-1:R33:AR-060              04_NAV_UX!R77C3                                      ar pages=  3 max/page=1 e.g. [('ar/evidence/CLM-039/index.html', 1), ('ar/evidence/CLM-046/index.html', 1), ('ar/evidence/CLM-056/index.html', 1)]
+AR-1:R33:AR-061              04_NAV_UX!R239C3                                     ar pages=110 max/page=1 e.g. [('ar/evidence/VIS-FL-EVIDENCE-LADDER/index.html', 1), ('ar/evidence/CLM-027/index.html', 1), ('ar/evidence/CLM-012/index.html', 1)]
+AR-1:R33:AR-062              06_EVIDENCE_OBJECTS!R28C7                            ar pages=  2 max/page=1 e.g. [('ar/evidence/CLM-002/index.html', 1), ('ar/people/index.html', 1)]
+AR-1:AR-060                  CLM-046.verification_ar                              ar pages=  3 max/page=1 e.g. [('ar/evidence/CLM-039/index.html', 1), ('ar/evidence/CLM-046/index.html', 1), ('ar/evidence/CLM-056/index.html', 1)]
+AR-1:AR-060                  CLM-056.verification_ar                              ar pages=  3 max/page=1 e.g. [('ar/evidence/CLM-039/index.html', 1), ('ar/evidence/CLM-046/index.html', 1), ('ar/evidence/CLM-056/index.html', 1)]
+AR-1:AR-060                  CLM-039.verification_ar                              ar pages=  3 max/page=1 e.g. [('ar/evidence/CLM-039/index.html', 1), ('ar/evidence/CLM-046/index.html', 1), ('ar/evidence/CLM-056/index.html', 1)]
+AR-1:ADJ-RG-01               /rights/#s2.body_en                                  en pages=  1 max/page=1 e.g. [('en/rights/index.html', 1)]
+AR-1:ADJ-RG-01               /rights/#s2.body_ar                                  ar pages=  1 max/page=1 e.g. [('ar/rights/index.html', 1)]
+AR-1:ADJ-RG-01               /data/#s5.body_en                                    en pages=  1 max/page=1 e.g. [('en/data/index.html', 1)]
+AR-1:ADJ-RG-01               /data/#s5.body_ar                                    ar pages=  1 max/page=1 e.g. [('ar/data/index.html', 1)]
+```

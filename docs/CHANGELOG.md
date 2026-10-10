@@ -1,5 +1,27 @@
 # Repository Change Log
 
+## 2026-10-10 — AR-1: the accepted Arabic edits that depend on no factual fix (Stage A)
+
+Master `190b148abf2d` → `250586ce71ee`, 40 cells (`audit/close_out/ar_1.py`; ledger, run report and render check in
+`audit/close_out/runs/`). Owner decision D11: only the adjudicated register is applied.
+
+- **25 register rows applied, 0 stopped.** AR-002, 003, 005, 008, 009, 010, 012, 013, 016, 019, 023, 026, 029, 031, 037,
+  039, 043, 045, 049, 053, 056, 058, 060, 061, 062. Before each write, the cell matched the register's `exact_old_ar`, and
+  `exact_old_ar` matched `original_sha256`; every write is whole-cell and exact-value. The eight CHANGE_EN rows (AR-003,
+  008, 023, 029, 031, 037, 049, 056) change the English in the same transaction; the PARITY_CHECK rows leave it as it is.
+  AR-035 was applied in CLOSE-1; the conditional rows wait for CLOSE-2, CLOSE-3 and CLOSE-5; the three RETAIN rows are
+  not applied.
+- **AR-060** rewrites the governed template UI-VERIFY-PARTIAL. The three BOUND_PARTIAL records that carry it verbatim
+  (CLM-039, CLM-046, CLM-056) take the new text with it, as the generator requires.
+- **AR-062:** the identical sentence occurs in none of the four other cells the register lists, so nothing is
+  propagated (the register: never retype a longer cell).
+- **ADJ-RG-01:** "reuse terms have not been assessed for any source" was false (166 of 167 are not assessed; one carries
+  a research licence). Every such sentence, English and Arabic, now says "most sources": /rights/ §2 and /data/ §5 here;
+  /data/ §1 and UI-DATA-REUSE-TERMS-ONCE through AR-008 and AR-056. The transaction fails if any "any source" sentence
+  remains.
+- **Render check:** each changed body renders exactly once on its page; AR-061's shared paragraph reads the same on a
+  full, a partial and a framing record at 390 px in Arabic.
+
 ## 2026-10-10 — CLOSE-1: decisions and truth fixes that need no new reading (Stage A, W1)
 
 Master `58b8f3ec5ac1` → `190b148abf2d`, 226 cells (`audit/close_out/close_1.py`; ledger and run report in
