@@ -583,11 +583,21 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
         g.append(f'<line class="grid" x1="12%" y1="{Y(t):.1f}" x2="96%" y2="{Y(t):.1f}"/><text class="lbl" x="10.5%" y="{Y(t)+4:.1f}" text-anchor="end">{plain_num(int(t) if float(t).is_integer() else t)}</text>')
         t += step
     g.append(f'<text class="lbl origin" x="10.5%" y="{hi+4}" text-anchor="end">0</text>')
+    januaries = 0
     for i, x in enumerate(xs):
         cls = "lbl" if (i in (0, (len(xs) // 2) // 2 * 2, len(xs) - 1) or len(xs) <= 7) else ("lbl alt2" if i % 2 == 0 else "lbl alt")
         if len(xs) > 12 and cls != "lbl" and (i % 2 == 1 or (i == len(xs) - 2 and (len(xs) - 1) % 2 == 1)):
             cls = "lbl alt3"   # RC-10: beyond twelve periods alternate labels only, at every width (the table names every period)
-        g.append(f'<text class="{cls}" x="{X(x):.2f}%" y="{hi+18}" text-anchor="middle">{esc(x)}</text>')
+        label = x
+        if len(xs) > 24:
+            # close-out U4: a long monthly axis (the market rate, 114 months) labels its first and last periods and the
+            # Januaries between them by their year, every other January at every width and the rest from 481 px, none
+            # within a year of the last label (within eighteen months only from 481 px); the table names every period
+            jan = x.endswith("-01") and 0 < i < len(xs) - 12
+            cls = "lbl" if i in (0, len(xs) - 1) else ("lbl alt3" if not jan else ("lbl" if januaries % 2 == 0 and i < len(xs) - 18 else "lbl alt2"))
+            label = x[:4] if x.endswith("-01") and i < len(xs) - 1 else x
+            januaries += x.endswith("-01")
+        g.append(f'<text class="{cls}" x="{X(x):.2f}%" y="{hi+18}" text-anchor="middle">{esc(label)}</text>')
     missing = {str(m["x"]): m.get("marker") for m in series.get("missing_x") or []}
     break_before = {i for i, r in enumerate(valued) if any(m.startswith("BREAK") for m in r["markers"])}
     notes = []
@@ -620,8 +630,9 @@ def line_panel(v: dict, series: dict, panel_id: str, height: int = 200) -> tuple
                 if m.startswith("BREAK"):
                     notes.append(("brk", (str(prev["x"]), str(r["x"])), marker_label(v, m)))
         shape = MARK_SHAPE.get(r["state"], "circle")
-        mark = {"circle": svg_mark("circle", f"{x:.2f}%", round(y, 1), 5), "square": f'<rect class="mark a" x="{x:.2f}%" y="{y-5:.1f}" width="10" height="10" transform="translate(-5,0)"/>',
-                "hollow": f'<circle class="mark b" cx="{x:.2f}%" cy="{y:.1f}" r="5"/>'}[shape]
+        rm = 5 if len(xs) <= 24 else 2.5   # close-out U4: a long axis keeps its marks apart
+        mark = {"circle": svg_mark("circle", f"{x:.2f}%", round(y, 1), rm), "square": f'<rect class="mark a" x="{x:.2f}%" y="{y-rm:.1f}" width="{2*rm:g}" height="{2*rm:g}" transform="translate(-{rm:g},0)"/>',
+                "hollow": f'<circle class="mark b" cx="{x:.2f}%" cy="{y:.1f}" r="{rm:g}"/>'}[shape]
         if "DISAGREEMENT" in r["markers"]:
             mark += f'<circle class="ring" cx="{x:.2f}%" cy="{y:.1f}" r="9"/>'
         g.append(mark)
@@ -1169,7 +1180,7 @@ def firm_constraints(v: dict, cite_label: str, origin: str | None, heading: str 
 
 
 DRAWERS = {"VIS-FINDEX-GAPS": findex_gaps, "VIS-REMITTANCE-MACRO": remittance_macro, "VIS-POS-TERMINALS": pos_panel, "VIS-POS-TRANSACTIONS": pos_panel,
-           "VIS-POS-VALUE": pos_panel, "VIS-REMITTANCE-COST": remittance_cost, "VIS-PAYMENT-ANATOMY": payment_anatomy, "RV-CWR-009": rv009_figure,
+           "VIS-POS-VALUE": pos_panel, "VIS-YER-MARKET-RATE": pos_panel, "VIS-REMITTANCE-COST": remittance_cost, "VIS-PAYMENT-ANATOMY": payment_anatomy, "RV-CWR-009": rv009_figure,
            "VIS-PAYMENT-RAILS": payment_rails,
            "VIS-PROVIDER-OBSERVABILITY": provider_matrix, "RV-CWR-004": dated_lanes, "VIS-FIRM-CONSTRAINTS": firm_constraints}   # D6
 

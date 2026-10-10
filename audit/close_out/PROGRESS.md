@@ -85,3 +85,7 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   kept (four figures: the concordance discusses four). Arabic editor: 3 must-fix + 14 should-fix applied; period-form
   unification left. Gate CO-G05 added (+3 controls). Trial runs fixed: P2-G01 (CLM-002 was lifted above CLM-001 for
   «امتلاك الحساب»; the women's shares moved to CLM-027), P4-G01 (checkpoint 174/167/476), R85-G04 (NFC).
+- 2026-10-10 · A · W3c · PR #32 merged at `4bd931d0` (9/9 CI; negative controls 6/6 shards). Closed: U2, U3, U6,
+  U8–U14, CR-06; register AR-004 applied. Note: the Master commit `da858d55` carries its trailers as
+  `Master-Transaction:` and `Findings-Closed:` instead of CONTRIBUTING's `Transaction:` and `Findings:` (Master-Before
+  and Master-After are standard); history is not rewritten, so this line records it.

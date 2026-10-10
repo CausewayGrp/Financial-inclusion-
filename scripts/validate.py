@@ -3067,7 +3067,12 @@ try:
                         for r in _v["table"]["rows"] for c in r.get("cells", []) if "number" in c]
                        + [str(r["group"]["number"]) for r in _v["table"]["rows"] if "group" in r])
         for _lang in ("en", "ar"):
-            _h = (DIST / _lang / "evidence" / _v["visual_id"] / "index.html").read_text(encoding="utf-8")
+            _rec = DIST / _lang / "evidence" / _v["visual_id"] / "index.html"
+            if _rec.exists():
+                _h = _rec.read_text(encoding="utf-8")
+            else:   # close-out U4/U5: a tabled contract without an Evidence Record prints its table on its canonical page
+                _h = (DIST / _lang / str(_v["governed"]["canonical_route"]).strip("/") / "index.html").read_text(encoding="utf-8")
+                _h = _h[_h.find(f'data-visual-id="{_v["visual_id"]}"'):] if f'data-visual-id="{_v["visual_id"]}"' in _h else ""
             _t = re.search(r"<div data-text-first-table>.*?</table>", _h, re.S)
             if not _t:
                 errors.append(f"RC-B12 a bound text-first table is missing {_lang} {_v['visual_id']}")
