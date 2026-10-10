@@ -755,26 +755,39 @@ def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str =
 
 
 # ------------------------------------------------------------------------------------------------ objects (VIS-PAYMENT-ANATOMY)
+# Close-out U6: each series of the contract is one publication, drawn as its own panel under its governed heading (a
+# frame label of the contract) with its own table; the panels are never compared, so no value crosses from one to the other.
+PAY_PANEL_LABELS = {"h1_objects": "UI-VIS-PANEL-PAY-2025H1", "q3_2024_channels": "UI-VIS-PANEL-PAY-2024Q3"}
+
+
 def payment_anatomy(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
-    vals = v["series"][0]["values"]
+    FLD = v.get("frame_labels") or {}
+    many = len(v["series"]) > 1
     withheld_label = marker_label(v, "WITHHELD")
-    nc_label = marker_label(v, "NOT_COMPARABLE")
-    items = []
-    for r in vals:
-        if r.get("withheld") or r.get("y") is None:
-            value = f'<span class="withheld">{esc(withheld_label)}</span>'
-        else:
-            value = num(r["y"]) + (f' <span class="unit-l">{esc(r["unit"])}</span>' if r["unit"] != vals[0]["unit"] else "")
-        marks = "".join(f'<span class="mk">{esc(marker_label(v, m))}</span>' for m in r["markers"] if m != "WITHHELD" and marker_label(v, m))
-        marks_html = f'<div class="mks">{marks}</div>' if marks else ""
-        items.append(f'<li class="obj-card"><span class="rubric">{esc(r["x_text"])}</span><div class="v">{value}</div><p class="cl2">{iso_run(v.get("period") or "")} · {esc(state_label(v, "ADMINISTRATIVE"))}</p><div class="isnot">{esc(r["is_not_text"])}</div>{marks_html}</li>')
-    panel = f'<div class="panels"><div class="panel"><p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, "ADMINISTRATIVE"))}</p><ol class="anatomy">{"".join(items)}</ol></div></div>'
-    shared_marks = set.intersection(*[{m for m in r["markers"] if m != "WITHHELD"} for r in vals]) if vals else set()   # a marker every object carries stands once in the caption
-    head, per_row = value_head(v, vals, vals[0]["unit"])
-    rows = [[esc(r["x_text"]), qual(esc(withheld_label) if r.get("withheld") or r.get("y") is None else num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != vals[0]["unit"]) else "", esc(r["is_not_text"]),
-                                    esc(sep(v).join(marker_label(v, m) for m in r["markers"] if m != "WITHHELD" and m not in shared_marks)))] for r in vals]
-    tbl = table(caption_of(v, qual("" if per_row else esc(vals[0]["unit"]), esc(state_label(v, "ADMINISTRATIVE")), esc(sep(v).join(marker_label(v, m) for m in sorted(shared_marks))))), [esc(th(v, "object")), head], rows)
-    return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)
+    sub = sub_heading(heading)
+    panels, tables = [], []
+    for s in v["series"]:
+        vals = s["values"]
+        ph = FLD.get(PAY_PANEL_LABELS.get(s["id"], ""), "") if many else ""
+        items = []
+        for r in vals:
+            if r.get("withheld") or r.get("y") is None:
+                value = f'<span class="withheld">{esc(withheld_label)}</span>'
+            else:
+                value = num(r["y"]) + (f' <span class="unit-l">{esc(r["unit"])}</span>' if r["unit"] != vals[0]["unit"] else "")
+            marks = "".join(f'<span class="mk">{esc(marker_label(v, m))}</span>' for m in r["markers"] if m != "WITHHELD" and marker_label(v, m))
+            marks_html = f'<div class="mks">{marks}</div>' if marks else ""
+            when = "" if many else f'{iso_run(v.get("period") or "")} · '   # with two panels the panel heading carries the period
+            items.append(f'<li class="obj-card"><span class="rubric">{esc(r["x_text"])}</span><div class="v">{value}</div><p class="cl2">{when}{esc(state_label(v, "ADMINISTRATIVE"))}</p><div class="isnot">{esc(r["is_not_text"])}</div>{marks_html}</li>')
+        head_html = f'<{sub} class="ph">{esc(ph)}</{sub}>' if ph else ""
+        panels.append(f'<div class="panel">{head_html}<p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, "ADMINISTRATIVE"))}</p><ol class="anatomy">{"".join(items)}</ol></div>')
+        shared_marks = set.intersection(*[{m for m in r["markers"] if m != "WITHHELD"} for r in vals]) if vals else set()   # a marker every object carries stands once in the caption
+        head, per_row = value_head(v, vals, vals[0]["unit"])
+        rows = [[esc(r["x_text"]), qual(esc(withheld_label) if r.get("withheld") or r.get("y") is None else num(r["y"]), esc(r["unit"]) if (per_row or r["unit"] != vals[0]["unit"]) else "", esc(r["is_not_text"]),
+                                        esc(sep(v).join(marker_label(v, m) for m in r["markers"] if m != "WITHHELD" and m not in shared_marks)))] for r in vals]
+        tables.append(table(caption_of(v, qual(esc(ph), "" if per_row else esc(vals[0]["unit"]), esc(state_label(v, "ADMINISTRATIVE")), esc(sep(v).join(marker_label(v, m) for m in sorted(shared_marks))))), [esc(th(v, "object")), head], rows))
+    v = {**v, "frame_labels": {k: t for k, t in FLD.items() if k not in PAY_PANEL_LABELS.values()}}   # printed as panel headings, not again as frame notes
+    return frame_open(v, heading) + f'<div class="panels">{"".join(panels)}</div>' + frame_close(v, cite_label, origin, "".join(tables), heading=heading)
 
 
 # ------------------------------------------------------------------------------------------------ the chain (RV-CWR-009, VIS-PAYMENT-RAILS)

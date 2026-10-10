@@ -3334,5 +3334,89 @@
     "label_en": "Each value is a share of all adults in the group, not of those who received or sent the money; the channels through which it was paid, sent or received are not shown.",
     "label_ar": "كل قيمة نسبة من جميع البالغين في الفئة، لا ممن تلقوا الأموال أو أرسلوها؛ ولا تُعرض القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها.",
     "use_rule": "Close-out U1. Marker row, VIS-FINDEX-FLOW-CHANNELS."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-YER",
+    "label_en": "ATM withdrawals in rials",
+    "label_ar": "سحوبات الصراف الآلي بالريال اليمني",
+    "use_rule": "Close-out U6. Payment object IND-0007."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-USD",
+    "label_en": "ATM withdrawals in US dollars",
+    "label_ar": "سحوبات الصراف الآلي بالدولار الأمريكي",
+    "use_rule": "Close-out U6. Payment object IND-0008."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-SAR",
+    "label_en": "ATM withdrawals in Saudi riyals",
+    "label_ar": "سحوبات الصراف الآلي بالريال السعودي",
+    "use_rule": "Close-out U6. Payment object IND-0009."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-CHEQUES",
+    "label_en": "Cheques",
+    "label_ar": "الشيكات",
+    "use_rule": "Close-out U6. Payment object IND-0013."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-CHEQUE-VALUE",
+    "label_en": "Value of cheques",
+    "label_ar": "قيمة الشيكات",
+    "use_rule": "Close-out U6. Payment object IND-0014."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-SWIFT-LOCAL",
+    "label_en": "Local SWIFT transfers",
+    "label_ar": "التحويلات المحلية عبر SWIFT",
+    "use_rule": "Close-out U6. Payment object IND-0015."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-PAY-SWIFT-LOCAL-VALUE",
+    "label_en": "Value of local SWIFT transfers",
+    "label_ar": "قيمة التحويلات المحلية عبر SWIFT",
+    "use_rule": "Close-out U6. Payment object IND-0016."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-ATM-WITHDRAWALS",
+    "label_en": "An amount withdrawn in the quarter, not a number of withdrawals or people",
+    "label_ar": "مبلغ سُحب خلال الربع، لا عدد عمليات سحب ولا أشخاص",
+    "use_rule": "Close-out U6. 'Is not' line, IND-0007/0008/0009."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-CHEQUES",
+    "label_en": "The CBY main centre and its Mukalla, Seiyun and Taiz branches only; not people",
+    "label_ar": "المركز الرئيسي للبنك المركزي وفروعه في المكلا وسيئون وتعز فقط؛ لا أشخاص",
+    "use_rule": "Close-out U6. 'Is not' line, IND-0013/0014."
+  },
+  {
+    "ui_id": "UI-VIS-NOT-PAY-SWIFT-LOCAL",
+    "label_en": "Transfers between local banks and government institutions; not people",
+    "label_ar": "تحويلات بين البنوك المحلية والجهات الحكومية؛ لا أشخاص",
+    "use_rule": "Close-out U6. 'Is not' line, IND-0015/0016."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-YER-BILLION",
+    "label_en": "YER billion (nominal)",
+    "label_ar": "مليار ريال يمني (بالقيمة الاسمية)",
+    "use_rule": "Close-out U6. Unit YER_billion."
+  },
+  {
+    "ui_id": "UI-VIS-UNIT-SAR-MILLION",
+    "label_en": "SAR million",
+    "label_ar": "مليون ريال سعودي",
+    "use_rule": "Close-out U6. Unit SAR_million."
+  },
+  {
+    "ui_id": "UI-VIS-PANEL-PAY-2025H1",
+    "label_en": "First half of 2025: payment report (infographic)",
+    "label_ar": "النصف الأول من 2025: تقرير المدفوعات (إنفوغرافيك)",
+    "use_rule": "Close-out U6. Panel heading, VIS-PAYMENT-ANATOMY series h1_objects."
+  },
+  {
+    "ui_id": "UI-VIS-PANEL-PAY-2024Q3",
+    "label_en": "Third quarter of 2024: payments bulletin, a separate publication, not compared",
+    "label_ar": "الربع الثالث من 2024: نشرة المدفوعات، وهي إصدار منفصل لا يُقارَن بالإصدار الآخر",
+    "use_rule": "Close-out U6. Panel heading, VIS-PAYMENT-ANATOMY series q3_2024_channels."
   }
 ]

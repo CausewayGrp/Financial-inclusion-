@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "52fb937a4f50f0971b0b495a393b2ae6c648c4b4ee5f77456768fb0907a0053a",
+  "authority_master_sha256": "d2cd2ad16bd84f9b4963261f0c2291b4eac8ba621458c3be5734ee2c8599b6a3",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -3681,35 +3681,35 @@
     {
       "visual_id": "VIS-PAYMENT-ANATOMY",
       "tier": "CORE_ANALYTICAL",
-      "rationale": "Keeps cards, accounts, subscribers, terminals and transactions as different objects before any comparison. Card-first; no totals.",
+      "rationale": "Keeps cards, accounts, subscribers, terminals, transactions, withdrawals, cheques and transfers as different objects, and the 2025 report apart from the 2024 bulletin, before any comparison. Card-first; no totals.",
       "governed": {
         "title_en": "What does the payment system actually count?",
         "question_en": "What does each administrative payment metric actually count?",
-        "prohibited_inference_en": "Cards, accounts, subscribers, transactions and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not comparable with the third-quarter 2024 payments bulletin until the reporting scope and definitions of the two publications are reconciled.",
-        "alt_text_en": "The first-half 2025 payment report of the Central Bank of Yemen – Aden (CBY-Aden) counts cards, ATMs, POS terminals, POS transactions, e-wallets, e-wallet subscribers and accounts. Each uses its own unit: accounts and subscribers are not necessarily unique people, transactions are events, and terminals are equipment. They cannot be combined into a people-level inclusion rate, because no documented method exists for matching and deduplicating them. Does not establish: Cards, accounts, subscribers, transactions and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not comparable with the third-quarter 2024 payments bulletin until the reporting scope and definitions of the two publications are reconciled.",
-        "period_en": "2025 H1",
-        "universe_en": "Cards, ATMs, POS terminals, transactions, e-wallets, subscribers and accounts within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), first half of 2025; each has its own unit.",
+        "prohibited_inference_en": "Cards, accounts, subscribers, transactions, amounts withdrawn and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not compared with the third-quarter 2024 bulletin until the reporting scope and definitions of the two publications are reconciled; the bulletin's cheques cover the CBY main centre and three of its branches only, and the 2025 accounts count has no published definition.",
+        "alt_text_en": "The first-half 2025 payment report of the Central Bank of Yemen – Aden (CBY-Aden) counts cards, ATMs, POS terminals, POS transactions, e-wallets, e-wallet subscribers and accounts; its third-quarter 2024 payments bulletin, a separate publication shown in its own panel, counts POS terminals and transactions, ATMs and the amounts withdrawn from them, cheques at the CBY main centre and three of its branches, and local SWIFT transfers. Each uses its own unit: accounts and subscribers are not necessarily unique people, transactions are events, amounts are nominal, and terminals are equipment. They cannot be combined into a people-level inclusion rate, because no documented method exists for matching and deduplicating them, and the two publications are not compared, because their reporting scope and definitions have not been reconciled. Does not establish: Cards, accounts, subscribers, transactions, amounts withdrawn and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not compared with the third-quarter 2024 bulletin until the reporting scope and definitions of the two publications are reconciled; the bulletin's cheques cover the CBY main centre and three of its branches only, and the 2025 accounts count has no published definition.",
+        "period_en": "2025 H1; 2024 Q3 (a separate publication)",
+        "universe_en": "Payment-system items within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) in each publication, each in its own unit; the 2024 cheques cover the CBY main centre and its Mukalla, Seiyun and Taiz branches only, and the local SWIFT transfers are transfers between local banks and government institutions.",
         "title_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟",
         "question_ar": "ما الذي يعدّه كل مؤشر إداري للمدفوعات فعليًا؟",
-        "prohibited_inference_ar": "البطاقات والحسابات والمشتركون والمعاملات والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة المدفوعات للربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين.",
-        "alt_text_ar": "يعدّ تقرير المدفوعات للنصف الأول من 2025 الصادر عن البنك المركزي اليمني – عدن البطاقات وأجهزة الصراف الآلي وأجهزة نقاط البيع ومعاملات نقاط البيع والمحافظ الإلكترونية ومشتركيها والحسابات. ولكلٍّ منها وحدته: فالحسابات والمشتركون ليسوا بالضرورة أشخاصًا فريدين، والمعاملات أحداث، والأجهزة معدات. ولا يمكن دمجها في نسبة شمول على مستوى الأشخاص، لعدم وجود طريقة موثقة للمطابقة وإزالة التكرار. لا يثبت: البطاقات والحسابات والمشتركون والمعاملات والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة المدفوعات للربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين.",
-        "period_ar": "النصف الأول من 2025",
-        "universe_ar": "البطاقات وأجهزة الصراف الآلي ونقاط البيع والمعاملات والمحافظ والمشتركون والحسابات ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن في النصف الأول من 2025، كلٌّ بوحدته وقاعدة قياسه.",
+        "prohibited_inference_ar": "البطاقات والحسابات والمشتركون والمعاملات والمبالغ المسحوبة والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة الربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين؛ وتقتصر شيكات النشرة على المركز الرئيسي للبنك المركزي وثلاثة من فروعه، ولا تعريف منشورًا لعدد الحسابات في 2025.",
+        "alt_text_ar": "يعدّ تقرير المدفوعات للنصف الأول من 2025 الصادر عن البنك المركزي اليمني – عدن البطاقات وأجهزة الصراف الآلي وأجهزة نقاط البيع ومعاملات نقاط البيع والمحافظ الإلكترونية ومشتركيها والحسابات؛ أما نشرة المدفوعات للربع الثالث من 2024، وهي إصدار منفصل يُعرض في لوحة مستقلة، فتعدّ أجهزة نقاط البيع ومعاملاتها، وأجهزة الصراف الآلي والمبالغ المسحوبة منها، والشيكات في المركز الرئيسي للبنك المركزي وثلاثة من فروعه، والتحويلات المحلية عبر SWIFT. ولكلٍّ منها وحدته: فالحسابات والمشتركون ليسوا بالضرورة أشخاصًا فريدين، والمعاملات أحداث، والمبالغ اسمية، والأجهزة معدات. ولا يمكن دمجها في نسبة شمول على مستوى الأشخاص، لعدم وجود طريقة موثقة للمطابقة وإزالة التكرار، ولا يُقارن الإصداران، لأن نطاق الإبلاغ والتعريفات فيهما لم يُطابَقا. لا يثبت: البطاقات والحسابات والمشتركون والمعاملات والمبالغ المسحوبة والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة الربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين؛ وتقتصر شيكات النشرة على المركز الرئيسي للبنك المركزي وثلاثة من فروعه، ولا تعريف منشورًا لعدد الحسابات في 2025.",
+        "period_ar": "النصف الأول من 2025؛ والربع الثالث من 2024 (إصدار منفصل)",
+        "universe_ar": "عناصر نظام المدفوعات ضمن نطاق الإبلاغ لدى البنك المركزي اليمني – عدن في كل إصدار، كلٌّ بوحدته؛ وتقتصر شيكات 2024 على المركز الرئيسي للبنك المركزي وفروعه في المكلا وسيئون وتعز، والتحويلات المحلية عبر SWIFT تحويلات بين البنوك المحلية والجهات الحكومية.",
         "canonical_route": "/evidence/VIS-PAYMENT-ANATOMY/",
         "public_routes": [
           "/payments"
         ]
       },
       "contract": {
-        "form": "One card per measurement object, each with its 'is not' line; no totals row, no population denominator.",
-        "ordering": "Series order: cards, ATMs, e-wallets, e-wallet subscribers, POS terminals, POS transactions, accounts.",
-        "transformation": "None. No card is summed with another or divided by population.",
-        "missing": "Values whose governed caveat requires a methodology note before public use are withheld (UI-VIS-WITHHELD): the object card shows what it counts, not the number.",
-        "breaks": "Flagged objects carry NOT_COMPARABLE and the card note UI-VIS-NOTE-NOT-COMPARABLE-2024Q3: no comparison with the 2024 Q3 bulletin is drawn. Cards have no line, so no line-break marker is printed.",
-        "annotation": "Each card prints its governed object label (x_label) and its governed 'is not' line (is_not_label). The caveat field is an internal comparability note and is not printed; the frame prints the governed marker labels instead.",
-        "mobile": "Cards stack.",
-        "rtl": "Card order mirrors.",
-        "fallback": "Table: object, value or withheld state, what it is not.",
+        "form": "Two panels, one per publication: the first-half 2025 payment report and the third-quarter 2024 payments bulletin. One card per measurement object, each with its 'is not' line; no totals row, no population denominator and no comparison across the panels.",
+        "ordering": "Panel 1 (2025 H1): cards, ATMs, e-wallets, e-wallet subscribers, POS terminals, POS transactions, accounts. Panel 2 (2024 Q3): POS terminals, POS transactions, ATMs, ATM withdrawals in rials, US dollars and Saudi riyals, cheques and their value, local SWIFT transfers and their value.",
+        "transformation": "None. No card is summed with another, divided by population or set against a card in the other panel.",
+        "missing": "Values whose governed caveat requires a methodology note before public use are withheld (UI-VIS-WITHHELD): the object card shows what it counts, not the number. Rows of the 2024 bulletin that are not drawn carry their reason in their caveat (19_PAYMENTS_DATA).",
+        "breaks": "Flagged objects carry NOT_COMPARABLE and the frame note UI-VIS-NOTE-NOT-COMPARABLE-2024Q3. The two panels are separate publications whose reporting scope and definitions have not been reconciled, so no comparison is drawn between them. Cards have no line, so no line-break marker is printed.",
+        "annotation": "Each panel is headed by its governed panel label (UI-VIS-PANEL-PAY-2025H1, UI-VIS-PANEL-PAY-2024Q3). Each card prints its governed object label (x_label) and its governed 'is not' line (is_not_label). The caveat field is an internal comparability note and is not printed; the frame prints the governed marker labels instead.",
+        "mobile": "Panels and cards stack.",
+        "rtl": "Card order mirrors; the 2025 panel stays first.",
+        "fallback": "One table per panel: object, value or withheld state, what it is not.",
         "credit": {
           "rule": {
             "passport_id": "EP-CBY-PAY-H1-2025"
@@ -3722,6 +3722,14 @@
           "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3": {
             "en": "Not comparable with the 2024 Q3 bulletin",
             "ar": "غير قابل للمقارنة مع نشرة الربع الثالث 2024"
+          },
+          "UI-VIS-PANEL-PAY-2025H1": {
+            "en": "First half of 2025: payment report (infographic)",
+            "ar": "النصف الأول من 2025: تقرير المدفوعات (إنفوغرافيك)"
+          },
+          "UI-VIS-PANEL-PAY-2024Q3": {
+            "en": "Third quarter of 2024: payments bulletin, a separate publication, not compared",
+            "ar": "الربع الثالث من 2024: نشرة المدفوعات، وهي إصدار منفصل لا يُقارَن بالإصدار الآخر"
           }
         },
         "series": [
@@ -3876,7 +3884,7 @@
                 "unit": "count",
                 "flag": "UNKNOWN",
                 "source": "SRC-CBY-PAYREPORT-H1-2025",
-                "caveat": "Source aggregate; definition/period semantics require methodology note before public use.",
+                "caveat": "Source aggregate; definition/period semantics require methodology note before public use. Kept held (close-out CR-06, 10 October 2026): no January or February 2025 monthly POS release exists (the first is March 2025), so 58,512 cannot be confirmed as a January–June total, and the report's first-half POS value tile does not equal the sum of the March–June monthly POS values.",
                 "y": null,
                 "grammar_state": "ADMINISTRATIVE",
                 "withheld": true,
@@ -3905,13 +3913,10 @@
                 "unit": "count",
                 "flag": "UNKNOWN",
                 "source": "SRC-CBY-PAYREPORT-H1-2025",
-                "caveat": "Source aggregate; definition/period semantics require methodology note before public use.",
-                "y": null,
+                "caveat": "Accounts as published in the first-half 2025 infographic (Accounts panel, NO. of Accounts), under no published definition: a count of accounts within the reporting scope of the Central Bank of Yemen – Aden, not of people or of active accounts (the caveat CLM-010 carries). Shown in VIS-PAYMENT-ANATOMY from close-out CR-06, 10 October 2026.",
+                "y": 5202019,
                 "grammar_state": "ADMINISTRATIVE",
-                "withheld": true,
-                "markers": [
-                  "WITHHELD"
-                ],
+                "markers": [],
                 "unit_label": {
                   "en": "Number",
                   "ar": "العدد",
@@ -3936,14 +3941,288 @@
             "encoding_only_fields": [
               "caveat"
             ]
+          },
+          {
+            "id": "q3_2024_channels",
+            "state": "ADMINISTRATIVE",
+            "markers": [],
+            "values": [
+              {
+                "id": "OBS-00009",
+                "x": "IND-0002",
+                "unit": "count",
+                "flag": "COMPARABLE_WITH_QUALIFICATION",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Label and value checked against the page image on 10 October 2026 (close-out U6): PDF p.4 (printed p.1) prints 151 under «عدد أجهزة نقاط الدفع في الربع الثالث» (POS terminals in the third quarter). POS terminals reported in the quarter. Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 151,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "Number",
+                  "ar": "العدد",
+                  "ui_id": "UI-VIS-UNIT-COUNT"
+                },
+                "x_label": {
+                  "en": "POS terminals",
+                  "ar": "أجهزة نقاط البيع",
+                  "ui_id": "UI-VIS-CAT-PAY-POS-TERMINALS"
+                },
+                "is_not_label": {
+                  "en": "Infrastructure, not use",
+                  "ar": "بنية تحتية، لا استخدام",
+                  "ui_id": "UI-VIS-NOT-PAY-POS-TERMINALS"
+                }
+              },
+              {
+                "id": "OBS-00005",
+                "x": "IND-0003",
+                "unit": "count",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "POS transactions in the quarter (a flow). Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 31890,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "Number",
+                  "ar": "العدد",
+                  "ui_id": "UI-VIS-UNIT-COUNT"
+                },
+                "x_label": {
+                  "en": "POS transactions",
+                  "ar": "معاملات نقاط البيع",
+                  "ui_id": "UI-VIS-CAT-PAY-POS-TRANSACTIONS"
+                },
+                "is_not_label": {
+                  "en": "Transactions, not people",
+                  "ar": "معاملات، لا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-POS-TRANSACTIONS"
+                }
+              },
+              {
+                "id": "OBS-00010",
+                "x": "IND-0006",
+                "unit": "count",
+                "flag": "COMPARABLE_WITH_QUALIFICATION",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "ATMs reported in the quarter. Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 1100,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "Number",
+                  "ar": "العدد",
+                  "ui_id": "UI-VIS-UNIT-COUNT"
+                },
+                "x_label": {
+                  "en": "ATMs",
+                  "ar": "أجهزة الصراف الآلي",
+                  "ui_id": "UI-VIS-CAT-PAY-ATMS"
+                },
+                "is_not_label": {
+                  "en": "Infrastructure, not use",
+                  "ar": "بنية تحتية، لا استخدام",
+                  "ui_id": "UI-VIS-NOT-PAY-ATMS"
+                }
+              },
+              {
+                "id": "OBS-00011",
+                "x": "IND-0007",
+                "unit": "YER_billion",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Amount withdrawn from ATMs in rials during the quarter: an amount, not a number of withdrawals. Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 92.462,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "YER billion (nominal)",
+                  "ar": "مليار ريال يمني (بالقيمة الاسمية)",
+                  "ui_id": "UI-VIS-UNIT-YER-BILLION"
+                },
+                "x_label": {
+                  "en": "ATM withdrawals in rials",
+                  "ar": "سحوبات الصراف الآلي بالريال اليمني",
+                  "ui_id": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-YER"
+                },
+                "is_not_label": {
+                  "en": "An amount withdrawn in the quarter, not a number of withdrawals or people",
+                  "ar": "مبلغ سُحب خلال الربع، لا عدد عمليات سحب ولا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-ATM-WITHDRAWALS"
+                }
+              },
+              {
+                "id": "OBS-00012",
+                "x": "IND-0008",
+                "unit": "USD_million",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Amount withdrawn from ATMs in US dollars during the quarter: an amount, not a number of withdrawals. Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 25.626,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "USD million",
+                  "ar": "مليون دولار أمريكي",
+                  "ui_id": "UI-VIS-UNIT-USD-MILLION"
+                },
+                "x_label": {
+                  "en": "ATM withdrawals in US dollars",
+                  "ar": "سحوبات الصراف الآلي بالدولار الأمريكي",
+                  "ui_id": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-USD"
+                },
+                "is_not_label": {
+                  "en": "An amount withdrawn in the quarter, not a number of withdrawals or people",
+                  "ar": "مبلغ سُحب خلال الربع، لا عدد عمليات سحب ولا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-ATM-WITHDRAWALS"
+                }
+              },
+              {
+                "id": "OBS-00013",
+                "x": "IND-0009",
+                "unit": "SAR_million",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Amount withdrawn from ATMs in Saudi riyals during the quarter: an amount, not a number of withdrawals. Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 14.679,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "SAR million",
+                  "ar": "مليون ريال سعودي",
+                  "ui_id": "UI-VIS-UNIT-SAR-MILLION"
+                },
+                "x_label": {
+                  "en": "ATM withdrawals in Saudi riyals",
+                  "ar": "سحوبات الصراف الآلي بالريال السعودي",
+                  "ui_id": "UI-VIS-CAT-PAY-ATM-WITHDRAWALS-SAR"
+                },
+                "is_not_label": {
+                  "en": "An amount withdrawn in the quarter, not a number of withdrawals or people",
+                  "ar": "مبلغ سُحب خلال الربع، لا عدد عمليات سحب ولا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-ATM-WITHDRAWALS"
+                }
+              },
+              {
+                "id": "OBS-00024",
+                "x": "IND-0013",
+                "unit": "count",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Cheques at the CBY main centre and its Mukalla, Seiyun and Taiz branches only (the bulletin's perimeter). Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 3092,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "Number",
+                  "ar": "العدد",
+                  "ui_id": "UI-VIS-UNIT-COUNT"
+                },
+                "x_label": {
+                  "en": "Cheques",
+                  "ar": "الشيكات",
+                  "ui_id": "UI-VIS-CAT-PAY-CHEQUES"
+                },
+                "is_not_label": {
+                  "en": "The CBY main centre and its Mukalla, Seiyun and Taiz branches only; not people",
+                  "ar": "المركز الرئيسي للبنك المركزي وفروعه في المكلا وسيئون وتعز فقط؛ لا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-CHEQUES"
+                }
+              },
+              {
+                "id": "OBS-00023",
+                "x": "IND-0014",
+                "unit": "YER_billion",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Value of cheques at the CBY main centre and its Mukalla, Seiyun and Taiz branches only (the bulletin's perimeter). Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 53.539,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "YER billion (nominal)",
+                  "ar": "مليار ريال يمني (بالقيمة الاسمية)",
+                  "ui_id": "UI-VIS-UNIT-YER-BILLION"
+                },
+                "x_label": {
+                  "en": "Value of cheques",
+                  "ar": "قيمة الشيكات",
+                  "ui_id": "UI-VIS-CAT-PAY-CHEQUE-VALUE"
+                },
+                "is_not_label": {
+                  "en": "The CBY main centre and its Mukalla, Seiyun and Taiz branches only; not people",
+                  "ar": "المركز الرئيسي للبنك المركزي وفروعه في المكلا وسيئون وتعز فقط؛ لا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-CHEQUES"
+                }
+              },
+              {
+                "id": "OBS-00029",
+                "x": "IND-0015",
+                "unit": "count",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Local transfers through SWIFT between local banks and government institutions, as the bulletin counts them. Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 356,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "Number",
+                  "ar": "العدد",
+                  "ui_id": "UI-VIS-UNIT-COUNT"
+                },
+                "x_label": {
+                  "en": "Local SWIFT transfers",
+                  "ar": "التحويلات المحلية عبر SWIFT",
+                  "ui_id": "UI-VIS-CAT-PAY-SWIFT-LOCAL"
+                },
+                "is_not_label": {
+                  "en": "Transfers between local banks and government institutions; not people",
+                  "ar": "تحويلات بين البنوك المحلية والجهات الحكومية؛ لا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-SWIFT-LOCAL"
+                }
+              },
+              {
+                "id": "OBS-00030",
+                "x": "IND-0016",
+                "unit": "YER_billion",
+                "flag": "DIRECTLY_COMPARABLE",
+                "source": "SRC-CBY-PAYREPORT-Q3-2024",
+                "caveat": "Value, in rials, of the local transfers through SWIFT between local banks and government institutions. Shown in the third-quarter 2024 panel of VIS-PAYMENT-ANATOMY (close-out U6, 10 October 2026), apart from the first-half 2025 counts and not compared with them; values are not people.",
+                "y": 30.557,
+                "grammar_state": "ADMINISTRATIVE",
+                "markers": [],
+                "unit_label": {
+                  "en": "YER billion (nominal)",
+                  "ar": "مليار ريال يمني (بالقيمة الاسمية)",
+                  "ui_id": "UI-VIS-UNIT-YER-BILLION"
+                },
+                "x_label": {
+                  "en": "Value of local SWIFT transfers",
+                  "ar": "قيمة التحويلات المحلية عبر SWIFT",
+                  "ui_id": "UI-VIS-CAT-PAY-SWIFT-LOCAL-VALUE"
+                },
+                "is_not_label": {
+                  "en": "Transfers between local banks and government institutions; not people",
+                  "ar": "تحويلات بين البنوك المحلية والجهات الحكومية؛ لا أشخاص",
+                  "ui_id": "UI-VIS-NOT-PAY-SWIFT-LOCAL"
+                }
+              }
+            ],
+            "label_fields": {
+              "x": "payment_object",
+              "unit": "unit"
+            },
+            "encoding_only_fields": [
+              "caveat"
+            ]
           }
         ],
         "objects": [],
         "derived": [],
         "blockers": []
       },
-      "detached_caption_en": "What does the payment system actually count? · 2025 H1 · Cards, ATMs, POS terminals, transactions, e-wallets, subscribers and accounts within the payment-system reporting scope of the Central Bank of Yemen – Aden (CBY-Aden), first half of 2025; each has its own unit. · Source: Central Bank of Yemen — Aden · Does not establish: Cards, accounts, subscribers, transactions and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not comparable with the third-quarter 2024 payments bulletin until the reporting scope and definitions of the two publications are reconciled. · Full record: /en/evidence/VIS-PAYMENT-ANATOMY/",
-      "detached_caption_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟ · النصف الأول من 2025 · البطاقات وأجهزة الصراف الآلي ونقاط البيع والمعاملات والمحافظ والمشتركون والحسابات ضمن نطاق الإبلاغ عن نظام المدفوعات لدى البنك المركزي اليمني – عدن في النصف الأول من 2025، كلٌّ بوحدته وقاعدة قياسه. · المصدر: البنك المركزي اليمني – عدن · لا يثبت: البطاقات والحسابات والمشتركون والمعاملات والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة المدفوعات للربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين. · السجل الكامل: /ar/evidence/VIS-PAYMENT-ANATOMY/"
+      "detached_caption_en": "What does the payment system actually count? · 2025 H1; 2024 Q3 (a separate publication) · Payment-system items within the reporting scope of the Central Bank of Yemen – Aden (CBY-Aden) in each publication, each in its own unit; the 2024 cheques cover the CBY main centre and its Mukalla, Seiyun and Taiz branches only, and the local SWIFT transfers are transfers between local banks and government institutions. · Source: Central Bank of Yemen — Aden · Does not establish: Cards, accounts, subscribers, transactions, amounts withdrawn and terminals are not people, and they cannot be combined into a single digital-inclusion score. The first-half 2025 counts are not compared with the third-quarter 2024 bulletin until the reporting scope and definitions of the two publications are reconciled; the bulletin's cheques cover the CBY main centre and three of its branches only, and the 2025 accounts count has no published definition. · Full record: /en/evidence/VIS-PAYMENT-ANATOMY/",
+      "detached_caption_ar": "ما الذي يقيسه نظام المدفوعات فعلًا؟ · النصف الأول من 2025؛ والربع الثالث من 2024 (إصدار منفصل) · عناصر نظام المدفوعات ضمن نطاق الإبلاغ لدى البنك المركزي اليمني – عدن في كل إصدار، كلٌّ بوحدته؛ وتقتصر شيكات 2024 على المركز الرئيسي للبنك المركزي وفروعه في المكلا وسيئون وتعز، والتحويلات المحلية عبر SWIFT تحويلات بين البنوك المحلية والجهات الحكومية. · المصدر: البنك المركزي اليمني – عدن · لا يثبت: البطاقات والحسابات والمشتركون والمعاملات والمبالغ المسحوبة والأجهزة ليست أشخاصًا، ولا يمكن دمجها في درجة واحدة للشمول الرقمي. ولا تُقارن أعداد النصف الأول من 2025 بنشرة الربع الثالث من 2024 إلى أن يُطابَق نطاق الإبلاغ والتعريفات بين الإصدارين؛ وتقتصر شيكات النشرة على المركز الرئيسي للبنك المركزي وثلاثة من فروعه، ولا تعريف منشورًا لعدد الحسابات في 2025. · السجل الكامل: /ar/evidence/VIS-PAYMENT-ANATOMY/"
     },
     {
       "visual_id": "VIS-REMITTANCE-COST",

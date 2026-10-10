@@ -694,18 +694,18 @@
       },
       {
         "source_id": "SRC-CCY-SAM-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-CCY-CASH-DURATION-2026",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-CCY-AMAL-2025",
@@ -735,17 +735,24 @@
     "object_type": "evidence_object",
     "object_id": "CLM-016",
     "public_routes": [
+      "/evidence/compare/",
       "/providers/"
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-CBY-EXCH-LIST-2025-001"
+      "SRC-CBY-EXCH-LIST-2025-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "direct_source_ids": [
-      "SRC-CBY-EXCH-LIST-2025-001"
+      "SRC-CBY-EXCH-LIST-2025-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-EXCH-LIST-2025-001"
+      "SRC-CBY-EXCH-LIST-2025-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -754,6 +761,16 @@
       {
         "source_id": "SRC-CBY-EXCH-LIST-2025-001",
         "primary_url": "https://cby-ye.com/files/69561aafe8942.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "primary_url": "https://www.theigc.org/publications/cash-capital-leveraging-remittances-yemens-economic-future",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -1931,19 +1948,34 @@
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -1967,6 +1999,31 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FSD-2024-001",
+        "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-PAYREPORT-H1-2025",
+        "primary_url": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YMN-IMPACT-2021-001",
+        "primary_url": "https://yemennetwork.org/wp-content/uploads/2022/11/YMN_Impact-Assessment_Final_Arabic_Final_V2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-SMEPS-AR2024-2025",
+        "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-ACAPS-MAHRAM-2023-001",
+        "primary_url": "https://www.acaps.org/fileadmin/Data_Product/Main_media/20231214_ACAPS_Yemen_Analysis_Hub_Dynamics_and_effects_of_the_Mahram_practice_in_Yemen_01.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -2390,13 +2447,19 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-CBY-BANKLIST-AR-2026-001"
+      "SRC-CBY-BANKLIST-AR-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "direct_source_ids": [
-      "SRC-CBY-BANKLIST-AR-2026-001"
+      "SRC-CBY-BANKLIST-AR-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-BANKLIST-AR-2026-001"
+      "SRC-CBY-BANKLIST-AR-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -2405,6 +2468,16 @@
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
         "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "primary_url": "https://www.theigc.org/publications/cash-capital-leveraging-remittances-yemens-economic-future",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -3782,15 +3855,18 @@
     "dependency_ids": [
       "SRC-CBY-AR2025-BOP",
       "EP-YEM-BOP-RESIDUAL-K04",
-      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001"
     ],
     "direct_source_ids": [
       "SRC-CBY-AR2025-BOP",
-      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-AR2025-BOP",
-      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -3806,6 +3882,11 @@
       {
         "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
         "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099822505292530706",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -3858,19 +3939,28 @@
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
       "SRC-CCY-ISP-2024",
-      "EP-YEM-CASH-FIN-TRANSMISSION-K04"
+      "EP-YEM-CASH-FIN-TRANSMISSION-K04",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024"
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024"
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -3890,13 +3980,28 @@
       },
       {
         "source_id": "SRC-CCY-SAM-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099063026134041997/pdf/P173582-a6512878-8a11-454d-98f2-213c6f4df820.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-CNL-2026-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -4858,13 +4963,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "direct_source_ids": [
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4873,6 +4981,11 @@
       {
         "source_id": "SRC-WB-FSD-2024-001",
         "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5265,10 +5378,14 @@
       "CLM-008"
     ],
     "direct_source_ids": [
-      "SRC-CBY-BANKLIST-AR-2026-001"
+      "SRC-CBY-BANKLIST-AR-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-BANKLIST-AR-2026-001"
+      "SRC-CBY-BANKLIST-AR-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5277,6 +5394,16 @@
       {
         "source_id": "SRC-CBY-BANKLIST-AR-2026-001",
         "primary_url": "https://cby-ye.com/files/6a665add29feb.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "primary_url": "https://www.theigc.org/publications/cash-capital-leveraging-remittances-yemens-economic-future",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5599,6 +5726,7 @@
     "object_type": "public_claim",
     "object_id": "CLM-016",
     "public_routes": [
+      "/evidence/compare/",
       "/providers/"
     ],
     "lineage_state": "BOUND_EXACT",
@@ -5608,10 +5736,14 @@
       "CLM-016"
     ],
     "direct_source_ids": [
-      "SRC-CBY-EXCH-LIST-2025-001"
+      "SRC-CBY-EXCH-LIST-2025-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-EXCH-LIST-2025-001"
+      "SRC-CBY-EXCH-LIST-2025-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5620,6 +5752,16 @@
       {
         "source_id": "SRC-CBY-EXCH-LIST-2025-001",
         "primary_url": "https://cby-ye.com/files/69561aafe8942.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "primary_url": "https://www.theigc.org/publications/cash-capital-leveraging-remittances-yemens-economic-future",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -6286,13 +6428,23 @@
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -6316,6 +6468,31 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FSD-2024-001",
+        "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-PAYREPORT-H1-2025",
+        "primary_url": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YMN-IMPACT-2021-001",
+        "primary_url": "https://yemennetwork.org/wp-content/uploads/2022/11/YMN_Impact-Assessment_Final_Arabic_Final_V2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-SMEPS-AR2024-2025",
+        "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-ACAPS-MAHRAM-2023-001",
+        "primary_url": "https://www.acaps.org/fileadmin/Data_Product/Main_media/20231214_ACAPS_Yemen_Analysis_Hub_Dynamics_and_effects_of_the_Mahram_practice_in_Yemen_01.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -6953,11 +7130,13 @@
     ],
     "direct_source_ids": [
       "SRC-CBY-AR2025-BOP",
-      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-AR2025-BOP",
-      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -6973,6 +7152,11 @@
       {
         "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
         "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099822505292530706",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -6997,13 +7181,19 @@
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024"
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024"
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -7023,13 +7213,28 @@
       },
       {
         "source_id": "SRC-CCY-SAM-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099063026134041997/pdf/P173582-a6512878-8a11-454d-98f2-213c6f4df820.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-CNL-2026-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -7675,10 +7880,12 @@
       "CLM-062"
     ],
     "direct_source_ids": [
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_source_ids": [
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -7687,6 +7894,11 @@
       {
         "source_id": "SRC-WB-FSD-2024-001",
         "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7728,6 +7940,7 @@
       "SRC-IMF-D4D-YEM-ESS-2025",
       "SRC-IMF-YEM-AIV-2025-2026",
       "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
       "SRC-CCY-REMIT-ESTIMATE-2025"
     ],
     "resolved_via_object_ids": [
@@ -7780,6 +7993,11 @@
       {
         "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
         "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099822505292530706",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8293,7 +8511,12 @@
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-2025-EDITION",
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "resolved_via_object_ids": [
       "CLM-002",
@@ -8332,6 +8555,31 @@
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FSD-2024-001",
+        "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-PAYREPORT-H1-2025",
+        "primary_url": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YMN-IMPACT-2021-001",
+        "primary_url": "https://yemennetwork.org/wp-content/uploads/2022/11/YMN_Impact-Assessment_Final_Arabic_Final_V2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-SMEPS-AR2024-2025",
+        "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-ACAPS-MAHRAM-2023-001",
+        "primary_url": "https://www.acaps.org/fileadmin/Data_Product/Main_media/20231214_ACAPS_Yemen_Analysis_Hub_Dynamics_and_effects_of_the_Mahram_practice_in_Yemen_01.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -8359,7 +8607,8 @@
     "direct_source_ids": [],
     "resolved_source_ids": [
       "SRC-WB-FSD-2024-001",
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [
       "CLM-005",
@@ -8385,6 +8634,11 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8542,7 +8796,10 @@
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024"
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "resolved_via_object_ids": [
       "CLM-045"
@@ -8564,13 +8821,28 @@
       },
       {
         "source_id": "SRC-CCY-SAM-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099063026134041997/pdf/P173582-a6512878-8a11-454d-98f2-213c6f4df820.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-CNL-2026-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -9888,6 +10160,7 @@
       "SRC-IMF-D4D-YEM-ESS-2025",
       "SRC-IMF-YEM-AIV-2025-2026",
       "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
       "SRC-CCY-REMIT-ESTIMATE-2025"
     ],
     "resolved_via_object_ids": [
@@ -9940,6 +10213,11 @@
       {
         "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
         "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099822505292530706",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -10442,7 +10720,12 @@
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-2025-EDITION",
       "SRC-WB-FINDEX-LDB-2015-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-YMN-IMPACT-2021-001",
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-ACAPS-MAHRAM-2023-001"
     ],
     "resolved_via_object_ids": [
       "CLM-002",
@@ -10481,6 +10764,31 @@
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FSD-2024-001",
+        "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-PAYREPORT-H1-2025",
+        "primary_url": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YMN-IMPACT-2021-001",
+        "primary_url": "https://yemennetwork.org/wp-content/uploads/2022/11/YMN_Impact-Assessment_Final_Arabic_Final_V2.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-SMEPS-AR2024-2025",
+        "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-ACAPS-MAHRAM-2023-001",
+        "primary_url": "https://www.acaps.org/fileadmin/Data_Product/Main_media/20231214_ACAPS_Yemen_Analysis_Hub_Dynamics_and_effects_of_the_Mahram_practice_in_Yemen_01.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -10505,7 +10813,8 @@
     "direct_source_ids": [],
     "resolved_source_ids": [
       "SRC-WB-FSD-2024-001",
-      "SRC-SMEPS-AR2024-2025"
+      "SRC-SMEPS-AR2024-2025",
+      "SRC-WB-FMIIP-P180708"
     ],
     "resolved_via_object_ids": [
       "CLM-005",
@@ -10531,6 +10840,11 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -10688,7 +11002,10 @@
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024"
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001"
     ],
     "resolved_via_object_ids": [
       "CLM-045"
@@ -10710,13 +11027,28 @@
       },
       {
         "source_id": "SRC-CCY-SAM-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099063026134041997/pdf/P173582-a6512878-8a11-454d-98f2-213c6f4df820.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-CNL-2026-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
