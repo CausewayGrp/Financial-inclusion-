@@ -1,0 +1,1999 @@
+{
+ "transaction": "CLOSE-2B",
+ "summary": "CR-05 (IMF 2018-2024 remittances are model-based estimates for IRG areas), CR-07 (SMP approved by IMF Management, 7 Oct 2026), CR-08 (IMF FSI table described; zeros read as not reported), CR-09 (three internal dataset inputs supply no printed figure), CR-11 (CCY report: public locator), CR-13 (H1-2025 shares re-attached to their panels), CR-15 (WB 'discontinued' wording beside the AR2025 line), CR-16 (INFE scores are printed labels), CR-19 (provider described, not named), CR-20 (Law No. 21 of 2008); register rows AR-022, ED-035, ED-036",
+ "self_counts": {
+  "site_pages": 144,
+  "bilingual_sections": 237,
+  "questions": 11,
+  "evidence_objects": 110,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 36,
+  "relationships": 26,
+  "dated_events": 23,
+  "sources": 168,
+  "datasets": 211,
+  "indicators": 216,
+  "cby_monetary": 686,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 23
+ },
+ "input_master_sha256": "eaa603586d7600e639f569b85cf72a535598bc6062148c9a03bb3c43cee39150",
+ "output_master_sha256": "7c70b5f766b8ebb0e2a075b64137586cc95623c3c072e38f48a2a036d8e511c9",
+ "cells_written": 219,
+ "changes": [
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 5,
+   "col": 7,
+   "field": "RMO-IMF-2018-HIST.period_state",
+   "old": "HISTORICAL_REPORTED",
+   "new": "MODEL_ESTIMATE"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 5,
+   "col": 19,
+   "field": "RMO-IMF-2018-HIST.calculation_state",
+   "old": "SOURCE_REPORTED__IMF_STAFF_CALCULATIONS",
+   "new": "SOURCE_PUBLISHED_ESTIMATE__DEMOGRAPHIC_BEHAVIOURAL_MODEL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 5,
+   "col": 18,
+   "field": "RMO-IMF-2018-HIST.source_table_or_section",
+   "old": "Table 4 / external sector",
+   "new": "Table 4 / external sector (values, printed p.31); Annex IV para 2 (method, printed p.41)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 5,
+   "col": 21,
+   "field": "RMO-IMF-2018-HIST.caveat_en",
+   "old": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume.",
+   "new": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume. Not an observed or reported flow: estimated with a demographic and behavioural model (number of Yemenis abroad, family size, average transfer amounts); the value for areas under the internationally recognized government is 33% of the modelled total of personal transfers, by population ratio, as proposed by the authorities (IMF Country Report No. 26/80, Annex IV para 2, printed p.41; close-out CR-05, 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 5,
+   "col": 22,
+   "field": "RMO-IMF-2018-HIST.caveat_ar",
+   "old": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية.",
+   "new": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية. وليست تدفقًا مرصودًا أو مُبلَّغًا عنه: قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)؛ وتمثل القيمة الخاصة بالمناطق الخاضعة للحكومة المعترف بها دوليًا 33% من إجمالي التحويلات الشخصية المقدَّرة، وفق نسبة السكان، كما اقترحت السلطات (تقرير صندوق النقد الدولي القُطري رقم 26/80، المرفق الرابع، الفقرة 2، ص 41؛ مراجعة الإغلاق CR-05، 10 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 6,
+   "col": 7,
+   "field": "RMO-IMF-2019-HIST.period_state",
+   "old": "HISTORICAL_REPORTED",
+   "new": "MODEL_ESTIMATE"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 6,
+   "col": 19,
+   "field": "RMO-IMF-2019-HIST.calculation_state",
+   "old": "SOURCE_REPORTED__IMF_STAFF_CALCULATIONS",
+   "new": "SOURCE_PUBLISHED_ESTIMATE__DEMOGRAPHIC_BEHAVIOURAL_MODEL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 6,
+   "col": 18,
+   "field": "RMO-IMF-2019-HIST.source_table_or_section",
+   "old": "Table 4 / external sector",
+   "new": "Table 4 / external sector (values, printed p.31); Annex IV para 2 (method, printed p.41)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 6,
+   "col": 21,
+   "field": "RMO-IMF-2019-HIST.caveat_en",
+   "old": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume.",
+   "new": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume. Not an observed or reported flow: estimated with a demographic and behavioural model (number of Yemenis abroad, family size, average transfer amounts); the value for areas under the internationally recognized government is 33% of the modelled total of personal transfers, by population ratio, as proposed by the authorities (IMF Country Report No. 26/80, Annex IV para 2, printed p.41; close-out CR-05, 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 6,
+   "col": 22,
+   "field": "RMO-IMF-2019-HIST.caveat_ar",
+   "old": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية.",
+   "new": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية. وليست تدفقًا مرصودًا أو مُبلَّغًا عنه: قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)؛ وتمثل القيمة الخاصة بالمناطق الخاضعة للحكومة المعترف بها دوليًا 33% من إجمالي التحويلات الشخصية المقدَّرة، وفق نسبة السكان، كما اقترحت السلطات (تقرير صندوق النقد الدولي القُطري رقم 26/80، المرفق الرابع، الفقرة 2، ص 41؛ مراجعة الإغلاق CR-05، 10 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 7,
+   "col": 7,
+   "field": "RMO-IMF-2020-HIST.period_state",
+   "old": "HISTORICAL_REPORTED",
+   "new": "MODEL_ESTIMATE"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 7,
+   "col": 19,
+   "field": "RMO-IMF-2020-HIST.calculation_state",
+   "old": "SOURCE_REPORTED__IMF_STAFF_CALCULATIONS",
+   "new": "SOURCE_PUBLISHED_ESTIMATE__DEMOGRAPHIC_BEHAVIOURAL_MODEL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 7,
+   "col": 18,
+   "field": "RMO-IMF-2020-HIST.source_table_or_section",
+   "old": "Table 4 / external sector",
+   "new": "Table 4 / external sector (values, printed p.31); Annex IV para 2 (method, printed p.41)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 7,
+   "col": 21,
+   "field": "RMO-IMF-2020-HIST.caveat_en",
+   "old": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume.",
+   "new": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume. Not an observed or reported flow: estimated with a demographic and behavioural model (number of Yemenis abroad, family size, average transfer amounts); the value for areas under the internationally recognized government is 33% of the modelled total of personal transfers, by population ratio, as proposed by the authorities (IMF Country Report No. 26/80, Annex IV para 2, printed p.41; close-out CR-05, 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 7,
+   "col": 22,
+   "field": "RMO-IMF-2020-HIST.caveat_ar",
+   "old": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية.",
+   "new": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية. وليست تدفقًا مرصودًا أو مُبلَّغًا عنه: قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)؛ وتمثل القيمة الخاصة بالمناطق الخاضعة للحكومة المعترف بها دوليًا 33% من إجمالي التحويلات الشخصية المقدَّرة، وفق نسبة السكان، كما اقترحت السلطات (تقرير صندوق النقد الدولي القُطري رقم 26/80، المرفق الرابع، الفقرة 2، ص 41؛ مراجعة الإغلاق CR-05، 10 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 8,
+   "col": 7,
+   "field": "RMO-IMF-2021-HIST.period_state",
+   "old": "HISTORICAL_REPORTED",
+   "new": "MODEL_ESTIMATE"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 8,
+   "col": 19,
+   "field": "RMO-IMF-2021-HIST.calculation_state",
+   "old": "SOURCE_REPORTED__IMF_STAFF_CALCULATIONS",
+   "new": "SOURCE_PUBLISHED_ESTIMATE__DEMOGRAPHIC_BEHAVIOURAL_MODEL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 8,
+   "col": 18,
+   "field": "RMO-IMF-2021-HIST.source_table_or_section",
+   "old": "Table 4 / external sector",
+   "new": "Table 4 / external sector (values, printed p.31); Annex IV para 2 (method, printed p.41)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 8,
+   "col": 21,
+   "field": "RMO-IMF-2021-HIST.caveat_en",
+   "old": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume.",
+   "new": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume. Not an observed or reported flow: estimated with a demographic and behavioural model (number of Yemenis abroad, family size, average transfer amounts); the value for areas under the internationally recognized government is 33% of the modelled total of personal transfers, by population ratio, as proposed by the authorities (IMF Country Report No. 26/80, Annex IV para 2, printed p.41; close-out CR-05, 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 8,
+   "col": 22,
+   "field": "RMO-IMF-2021-HIST.caveat_ar",
+   "old": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية.",
+   "new": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية. وليست تدفقًا مرصودًا أو مُبلَّغًا عنه: قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)؛ وتمثل القيمة الخاصة بالمناطق الخاضعة للحكومة المعترف بها دوليًا 33% من إجمالي التحويلات الشخصية المقدَّرة، وفق نسبة السكان، كما اقترحت السلطات (تقرير صندوق النقد الدولي القُطري رقم 26/80، المرفق الرابع، الفقرة 2، ص 41؛ مراجعة الإغلاق CR-05، 10 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 9,
+   "col": 7,
+   "field": "RMO-IMF-2022-HIST.period_state",
+   "old": "HISTORICAL_REPORTED",
+   "new": "MODEL_ESTIMATE"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 9,
+   "col": 19,
+   "field": "RMO-IMF-2022-HIST.calculation_state",
+   "old": "SOURCE_REPORTED__IMF_STAFF_CALCULATIONS",
+   "new": "SOURCE_PUBLISHED_ESTIMATE__DEMOGRAPHIC_BEHAVIOURAL_MODEL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 9,
+   "col": 18,
+   "field": "RMO-IMF-2022-HIST.source_table_or_section",
+   "old": "Table 4 / external sector",
+   "new": "Table 4 / external sector (values, printed p.31); Annex IV para 2 (method, printed p.41)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 9,
+   "col": 21,
+   "field": "RMO-IMF-2022-HIST.caveat_en",
+   "old": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume.",
+   "new": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume. Not an observed or reported flow: estimated with a demographic and behavioural model (number of Yemenis abroad, family size, average transfer amounts); the value for areas under the internationally recognized government is 33% of the modelled total of personal transfers, by population ratio, as proposed by the authorities (IMF Country Report No. 26/80, Annex IV para 2, printed p.41; close-out CR-05, 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 9,
+   "col": 22,
+   "field": "RMO-IMF-2022-HIST.caveat_ar",
+   "old": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية.",
+   "new": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية. وليست تدفقًا مرصودًا أو مُبلَّغًا عنه: قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)؛ وتمثل القيمة الخاصة بالمناطق الخاضعة للحكومة المعترف بها دوليًا 33% من إجمالي التحويلات الشخصية المقدَّرة، وفق نسبة السكان، كما اقترحت السلطات (تقرير صندوق النقد الدولي القُطري رقم 26/80، المرفق الرابع، الفقرة 2، ص 41؛ مراجعة الإغلاق CR-05، 10 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 10,
+   "col": 7,
+   "field": "RMO-IMF-2023-HIST.period_state",
+   "old": "HISTORICAL_REPORTED",
+   "new": "MODEL_ESTIMATE"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 10,
+   "col": 19,
+   "field": "RMO-IMF-2023-HIST.calculation_state",
+   "old": "SOURCE_REPORTED__IMF_STAFF_CALCULATIONS",
+   "new": "SOURCE_PUBLISHED_ESTIMATE__DEMOGRAPHIC_BEHAVIOURAL_MODEL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 10,
+   "col": 18,
+   "field": "RMO-IMF-2023-HIST.source_table_or_section",
+   "old": "Table 4 / external sector",
+   "new": "Table 4 / external sector (values, printed p.31); Annex IV para 2 (method, printed p.41)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 10,
+   "col": 21,
+   "field": "RMO-IMF-2023-HIST.caveat_en",
+   "old": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume.",
+   "new": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume. Not an observed or reported flow: estimated with a demographic and behavioural model (number of Yemenis abroad, family size, average transfer amounts); the value for areas under the internationally recognized government is 33% of the modelled total of personal transfers, by population ratio, as proposed by the authorities (IMF Country Report No. 26/80, Annex IV para 2, printed p.41; close-out CR-05, 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 10,
+   "col": 22,
+   "field": "RMO-IMF-2023-HIST.caveat_ar",
+   "old": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية.",
+   "new": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية. وليست تدفقًا مرصودًا أو مُبلَّغًا عنه: قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)؛ وتمثل القيمة الخاصة بالمناطق الخاضعة للحكومة المعترف بها دوليًا 33% من إجمالي التحويلات الشخصية المقدَّرة، وفق نسبة السكان، كما اقترحت السلطات (تقرير صندوق النقد الدولي القُطري رقم 26/80، المرفق الرابع، الفقرة 2، ص 41؛ مراجعة الإغلاق CR-05، 10 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 11,
+   "col": 7,
+   "field": "RMO-IMF-2024-HIST.period_state",
+   "old": "HISTORICAL_REPORTED",
+   "new": "MODEL_ESTIMATE"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 11,
+   "col": 19,
+   "field": "RMO-IMF-2024-HIST.calculation_state",
+   "old": "SOURCE_REPORTED__IMF_STAFF_CALCULATIONS",
+   "new": "SOURCE_PUBLISHED_ESTIMATE__DEMOGRAPHIC_BEHAVIOURAL_MODEL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 11,
+   "col": 18,
+   "field": "RMO-IMF-2024-HIST.source_table_or_section",
+   "old": "Table 4 / external sector",
+   "new": "Table 4 / external sector (values, printed p.31); Annex IV para 2 (method, printed p.41)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 11,
+   "col": 21,
+   "field": "RMO-IMF-2024-HIST.caveat_en",
+   "old": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume.",
+   "new": "Macro external-sector remittance series; not payment-system settlement throughput and not a directly measured hawala volume. Not an observed or reported flow: estimated with a demographic and behavioural model (number of Yemenis abroad, family size, average transfer amounts); the value for areas under the internationally recognized government is 33% of the modelled total of personal transfers, by population ratio, as proposed by the authorities (IMF Country Report No. 26/80, Annex IV para 2, printed p.41; close-out CR-05, 10 October 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 11,
+   "col": 22,
+   "field": "RMO-IMF-2024-HIST.caveat_ar",
+   "old": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية.",
+   "new": "سلسلة كلية ضمن القطاع الخارجي؛ ولا تمثل حجم التسويات عبر أنظمة الدفع ولا قياساً مباشراً لحجم الحوالات غير الرسمية. وليست تدفقًا مرصودًا أو مُبلَّغًا عنه: قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)؛ وتمثل القيمة الخاصة بالمناطق الخاضعة للحكومة المعترف بها دوليًا 33% من إجمالي التحويلات الشخصية المقدَّرة، وفق نسبة السكان، كما اقترحت السلطات (تقرير صندوق النقد الدولي القُطري رقم 26/80، المرفق الرابع، الفقرة 2، ص 41؛ مراجعة الإغلاق CR-05، 10 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 5,
+   "col": 5,
+   "field": "RMO-IMF-2018-HIST.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 6,
+   "col": 5,
+   "field": "RMO-IMF-2019-HIST.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 7,
+   "col": 5,
+   "field": "RMO-IMF-2020-HIST.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 8,
+   "col": 5,
+   "field": "RMO-IMF-2021-HIST.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 9,
+   "col": 5,
+   "field": "RMO-IMF-2022-HIST.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 10,
+   "col": 5,
+   "field": "RMO-IMF-2023-HIST.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 11,
+   "col": 5,
+   "field": "RMO-IMF-2024-HIST.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 12,
+   "col": 5,
+   "field": "RMO-IMF-2025-REV.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 13,
+   "col": 5,
+   "field": "RMO-IMF-2026-REV.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 14,
+   "col": 5,
+   "field": "RMO-IMF-2027-REV.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 15,
+   "col": 5,
+   "field": "RMO-IMF-2028-REV.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 16,
+   "col": 5,
+   "field": "RMO-IMF-2029-REV.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "23_REMITTANCES",
+   "row": 17,
+   "col": 5,
+   "field": "RMO-IMF-2030-REV.geography",
+   "old": "Yemen",
+   "new": "Areas under the internationally recognized government (IMF allocation)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 4,
+   "field": "CLM-007.title_en",
+   "old": "IMF remittance series: reported history, estimates and projections kept separate",
+   "new": "IMF remittance series: model-based estimates, a later estimate and projections kept separate"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 5,
+   "field": "CLM-007.title_ar",
+   "old": "سلسلة الحوالات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة",
+   "new": "سلسلة الحوالات لدى صندوق النقد الدولي: التقديرات القائمة على نموذج والتقدير اللاحق والتوقعات منفصلة"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 6,
+   "field": "CLM-007.summary_en",
+   "old": "The history in the IMF 2025 Article IV staff report gives a higher value for remittance inflows in 2024 than in 2018 (both values from the same document); the 2025 estimate and the 2026–2030 projections come from a later supplement and are estimates and projections, not reported values. The IMF series covers the IMF's analytical scope for areas under the internationally recognized government, so its level is not a whole-of-Yemen figure and is not comparable in level with the annual-report values of the Central Bank of Yemen – Aden (CBY-Aden).",
+   "new": "In the IMF 2025 Article IV staff report, remittance inflows for 2018–2024 are estimates, not reported or observed flows: the report's statistical annex says personal transfers were estimated with a demographic and behavioural model (the number of Yemenis abroad, family size and average transfer amounts), with 33% allocated to areas under the internationally recognized government by population ratio. The 2024 estimate is higher than the 2018 estimate (both from the same document). The 2025 estimate and the 2026–2030 projections come from a later supplement. The IMF series covers areas under the internationally recognized government, so its level is not a whole-of-Yemen figure and is not comparable in level with the annual-report values of the Central Bank of Yemen – Aden (CBY-Aden)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 7,
+   "field": "CLM-007.summary_ar",
+   "old": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للحوالات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي تقدير وتوقعات، لا قيم مُبلَّغ عنها. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن.",
+   "new": "في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025، قيم الحوالات الواردة للفترة 2018–2024 تقديرات، لا تدفقات مُبلَّغ عنها أو مرصودة: إذ يذكر المرفق الإحصائي للتقرير أن التحويلات الشخصية قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)، وأن 33% منها نُسبت إلى المناطق الخاضعة للحكومة المعترف بها دوليًا وفق نسبة السكان. وتقدير 2024 أعلى من تقدير 2018 (والقيمتان من الوثيقة نفسها). أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق. وتغطي سلسلة الصندوق المناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 8,
+   "field": "CLM-007.definition_en",
+   "old": "Annual external-sector remittances, in US$ million, in the IMF series: reported history for 2018–2024, an estimate for 2025 and projections for 2026–2030.",
+   "new": "Annual external-sector remittances, in US$ million, in the IMF series: model-based estimates for 2018–2024, an estimate for 2025 and projections for 2026–2030."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 9,
+   "field": "CLM-007.definition_ar",
+   "old": "الحوالات السنوية في الحساب الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي: قيم تاريخية للفترة 2018–2024، وتقدير لعام 2025، وتوقعات للفترة 2026–2030.",
+   "new": "الحوالات السنوية في الحساب الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي: تقديرات قائمة على نموذج للفترة 2018–2024، وتقدير لعام 2025، وتوقعات للفترة 2026–2030."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 10,
+   "field": "CLM-007.period_en",
+   "old": "Reported history 2018–2024 (staff calculations); estimate 2025; projection 2026–2030",
+   "new": "Model-based estimates 2018–2024 (staff report); estimate 2025; projection 2026–2030"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 11,
+   "field": "CLM-007.period_ar",
+   "old": "قيم تاريخية للفترة 2018–2024 (حسابات الخبراء)؛ تقدير 2025؛ توقعات 2026–2030",
+   "new": "تقديرات قائمة على نموذج للفترة 2018–2024 (تقرير الخبراء)؛ تقدير 2025؛ توقعات 2026–2030"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 14,
+   "field": "CLM-007.method_en",
+   "old": "Values as published by the IMF: 2018–2024 in the 2025 Article IV staff report, based on staff calculations (Table 4, external sector), and 2025–2030 in a later supplement to the same consultation (Supplementary Table 2).",
+   "new": "Values as published by the IMF: 2018–2024 in the 2025 Article IV staff report (Table 4, external sector; sources given as the Yemeni authorities and IMF staff calculations), estimated with the demographic and behavioural model that the report's statistical annex (Annex IV) describes, and 2025–2030 in a later supplement to the same consultation (Supplementary Table 2)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 15,
+   "field": "CLM-007.method_ar",
+   "old": "قيم كما نشرها صندوق النقد الدولي: 2018–2024 في تقرير الخبراء لمشاورات المادة الرابعة لعام 2025، استنادًا إلى حسابات الخبراء (الجدول 4، القطاع الخارجي)، و2025–2030 في ملحق لاحق للمشاورات نفسها (الجدول التكميلي 2).",
+   "new": "قيم كما نشرها صندوق النقد الدولي: 2018–2024 في تقرير الخبراء لمشاورات المادة الرابعة لعام 2025 (الجدول 4، القطاع الخارجي؛ والمصدر المذكور فيه: السلطات اليمنية وحسابات خبراء الصندوق)، وهي مقدَّرة بالنموذج الديمغرافي والسلوكي الذي يصفه المرفق الإحصائي للتقرير (المرفق الرابع)؛ و2025–2030 في ملحق لاحق للمشاورات نفسها (الجدول التكميلي 2)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 18,
+   "field": "CLM-007.currentness_en",
+   "old": "The latest reported value is for 2024 (staff calculations). The 2025 value is an estimate and the 2026–2030 values are projections; none of them is a later observation. The 2024 value should not be read as a current level unless a newer comparable observation is published.",
+   "new": "The latest value in the staff-report series is the 2024 estimate. The 2025 value is an estimate and the 2026–2030 values are projections; none of them is an observation. The 2024 value should not be read as a current level unless a newer comparable value is published."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 19,
+   "field": "CLM-007.currentness_ar",
+   "old": "آخر قيمة تاريخية واردة في المصدر هي لعام 2024 (حسابات الخبراء). أما قيمة 2025 فتقدير، وقيم 2026–2030 توقعات، وليست أي منها مشاهدة لاحقة. ولا تُقرأ قيمة 2024 على أنها مستوى حالي ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+   "new": "آخر قيمة في سلسلة تقرير الخبراء هي تقدير 2024. أما قيمة 2025 فتقدير، وقيم 2026–2030 توقعات، وليس أيٌّ منها مشاهدة. ولا تُقرأ قيمة 2024 على أنها مستوى حالي ما لم تُنشر قيمة أحدث قابلة للمقارنة."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 4,
+   "field": "VIS-REMITTANCE-MACRO.title_en",
+   "old": "Remittances — IMF-reported history, estimate and projections",
+   "new": "Remittances — IMF estimates and projections, by source document"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 5,
+   "field": "VIS-REMITTANCE-MACRO.title_ar",
+   "old": "الحوالات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+   "new": "الحوالات: تقديرات صندوق النقد الدولي وتوقعاته بحسب الوثيقة المصدر"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 6,
+   "field": "VIS-REMITTANCE-MACRO.summary_en",
+   "old": "For external-sector remittances, the IMF's 2025 Article IV staff report gives 2018–2024 as reported history based on staff calculations, including US$1,861.7 million in 2024. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 million in 2026 to US$3,110 million in 2030. The two documents were published at different times, so the two parts are not joined into one continuous series. The series covers the IMF's analytical scope for areas under the internationally recognized government, not the whole of Yemen.",
+   "new": "For external-sector remittances, the IMF's 2025 Article IV staff report gives model-based estimates for 2018–2024, including US$1,861.7 million in 2024; the report's statistical annex says personal transfers were estimated with a demographic and behavioural model, with 33% allocated to areas under the internationally recognized government. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 million in 2026 to US$3,110 million in 2030. The two documents were published at different times, so the two parts are not joined into one continuous series. The series covers the IMF's analytical scope for areas under the internationally recognized government, not the whole of Yemen."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 7,
+   "field": "VIS-REMITTANCE-MACRO.summary_ar",
+   "old": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+   "new": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 تقديرات قائمة على نموذج للفترة 2018–2024، منها 1,861.7 مليون دولار في 2024؛ ويذكر المرفق الإحصائي للتقرير أن التحويلات الشخصية قُدِّرت بنموذج ديمغرافي وسلوكي، وأن 33% منها نُسبت إلى المناطق الخاضعة للحكومة المعترف بها دوليًا. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 8,
+   "field": "VIS-REMITTANCE-MACRO.definition_en",
+   "old": "Annual external-sector remittances, in US$ million, in the IMF series for 2018–2030, with each year labelled as reported history (2018–2024), estimate (2025) or projection (2026–2030).",
+   "new": "Annual external-sector remittances, in US$ million, in the IMF series for 2018–2030, with each year labelled as a model-based estimate (2018–2024), an estimate (2025) or a projection (2026–2030)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 9,
+   "field": "VIS-REMITTANCE-MACRO.definition_ar",
+   "old": "الحوالات السنوية في القطاع الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي للفترة 2018–2030، مع وسم كل سنة بوصفها قيمة تاريخية (2018–2024) أو تقديرًا (2025) أو توقعًا (2026–2030).",
+   "new": "الحوالات السنوية في القطاع الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي للفترة 2018–2030، مع وسم كل سنة بوصفها تقديرًا قائمًا على نموذج (2018–2024) أو تقديرًا (2025) أو توقعًا (2026–2030)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 12,
+   "field": "VIS-REMITTANCE-MACRO.universe_en",
+   "old": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; each year labelled as reported history, estimate or projection, with its source document",
+   "new": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; each year labelled as an estimate or a projection, with its source document"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 14,
+   "field": "VIS-REMITTANCE-MACRO.method_en",
+   "old": "Values as published by the IMF: 2018–2024 in the 2025 Article IV staff report, based on staff calculations (Table 4, external sector), and 2025–2030 in a later supplement to the same consultation (Supplementary Table 2).",
+   "new": "Values as published by the IMF: 2018–2024 in the 2025 Article IV staff report (Table 4, external sector; sources given as the Yemeni authorities and IMF staff calculations), estimated with the demographic and behavioural model that the report's statistical annex (Annex IV) describes, and 2025–2030 in a later supplement to the same consultation (Supplementary Table 2)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 15,
+   "field": "VIS-REMITTANCE-MACRO.method_ar",
+   "old": "قيم كما نشرها صندوق النقد الدولي: 2018–2024 في تقرير الخبراء لمشاورات المادة الرابعة لعام 2025، استنادًا إلى حسابات الخبراء (الجدول 4، القطاع الخارجي)، و2025–2030 في ملحق لاحق للمشاورات نفسها (الجدول التكميلي 2).",
+   "new": "قيم كما نشرها صندوق النقد الدولي: 2018–2024 في تقرير الخبراء لمشاورات المادة الرابعة لعام 2025 (الجدول 4، القطاع الخارجي؛ والمصدر المذكور فيه: السلطات اليمنية وحسابات خبراء الصندوق)، وهي مقدَّرة بالنموذج الديمغرافي والسلوكي الذي يصفه المرفق الإحصائي للتقرير (المرفق الرابع)؛ و2025–2030 في ملحق لاحق للمشاورات نفسها (الجدول التكميلي 2)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 18,
+   "field": "VIS-REMITTANCE-MACRO.currentness_en",
+   "old": "Reported history runs to 2024 (IMF staff report, staff calculations); 2025 is an estimate and 2026–2030 are projections from a later supplement. Estimates and projections are not observations, so the 2025–2030 values are not current evidence, and the 2024 value should not be read as a current level unless a newer comparable observation is published.",
+   "new": "The staff report's model-based estimates run to 2024; 2025 is an estimate and 2026–2030 are projections from a later supplement. None of these values is an observation: the 2025–2030 values are not current evidence, and the 2024 value should not be read as a current level unless a newer comparable value is published."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 19,
+   "field": "VIS-REMITTANCE-MACRO.currentness_ar",
+   "old": "تمتد القيم التاريخية الواردة في المصدر حتى 2024 (تقرير خبراء صندوق النقد الدولي، وفق حسابات الخبراء)؛ أما 2025 فتقدير، و2026–2030 توقعات من ملحق لاحق. والتقديرات والتوقعات ليست مشاهدات، لذلك ليست قيم 2025–2030 أدلة حالية، ولا تُقرأ قيمة 2024 على أنها مستوى حالي ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+   "new": "تمتد التقديرات القائمة على نموذج في تقرير الخبراء حتى 2024؛ أما 2025 فتقدير، و2026–2030 توقعات من ملحق لاحق. وليس أيٌّ من هذه القيم مشاهدة: فقيم 2025–2030 ليست أدلة حالية، ولا تُقرأ قيمة 2024 على أنها مستوى حالي ما لم تُنشر قيمة أحدث قابلة للمقارنة."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 2,
+   "field": "VIS-REMITTANCE-MACRO.title_en",
+   "old": "Remittances — IMF-reported history, estimate and projections",
+   "new": "Remittances — IMF estimates and projections, by source document"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 3,
+   "field": "VIS-REMITTANCE-MACRO.title_ar",
+   "old": "الحوالات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+   "new": "الحوالات: تقديرات صندوق النقد الدولي وتوقعاته بحسب الوثيقة المصدر"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 4,
+   "field": "VIS-REMITTANCE-MACRO.visual_form",
+   "old": "TWO_SERIES_LINE__REPORTED_HISTORY_VS_ESTIMATE_PROJECTION__VINTAGE_BREAK",
+   "new": "TWO_SERIES_LINE__MODEL_ESTIMATE_VS_ESTIMATE_PROJECTION__VINTAGE_BREAK"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 5,
+   "field": "VIS-REMITTANCE-MACRO.question_en",
+   "old": "What does the IMF report for past remittance inflows, and what is only estimated or projected?",
+   "new": "What does the IMF estimate for past remittance inflows, and what does it project?"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 6,
+   "field": "VIS-REMITTANCE-MACRO.question_ar",
+   "old": "ما الذي يورده صندوق النقد الدولي عن تدفقات الحوالات السابقة، وما الذي يظل تقديرًا أو توقعًا؟",
+   "new": "ما الذي يقدّره صندوق النقد الدولي لتدفقات الحوالات السابقة، وما الذي يتوقعه؟"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 7,
+   "field": "VIS-REMITTANCE-MACRO.what_it_shows_en",
+   "old": "IMF-reported 2018–24 history is visually separate from the 2025 estimate and 2026–30 projections, with a break where the source document changes.",
+   "new": "The IMF's model-based estimates for 2018–2024 are drawn apart from the 2025 estimate and the 2026–2030 projections, with a break where the source document changes."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 8,
+   "field": "VIS-REMITTANCE-MACRO.what_it_shows_ar",
+   "old": "يفصل بصريًا بين القيم الواردة في تقارير الصندوق للفترة 2018–2024، وتقدير 2025، وتوقعات 2026–2030، مع انقطاع عند تغير الوثيقة المصدر.",
+   "new": "يفصل بصريًا بين تقديرات الصندوق القائمة على نموذج للفترة 2018–2024، وتقدير 2025، وتوقعات 2026–2030، مع انقطاع عند تغير الوثيقة المصدر."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 9,
+   "field": "VIS-REMITTANCE-MACRO.decision_value_en",
+   "old": "Separates IMF-reported 2018–2024 values from the 2025 estimate and 2026–2030 projections, and keeps the two IMF documents apart, so forecast changes are not mistaken for economic change.",
+   "new": "Separates the IMF's model-based estimates for 2018–2024 from the 2025 estimate and 2026–2030 projections, and keeps the two IMF documents apart, so that neither a model estimate nor a forecast change is mistaken for an observed economic change."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 10,
+   "field": "VIS-REMITTANCE-MACRO.decision_value_ar",
+   "old": "يفصل القيم التي يوردها صندوق النقد الدولي للفترة 2018–2024 عن تقدير 2025 وتوقعات 2026–2030، ويُبقي وثيقتي الصندوق منفصلتين، حتى لا تُقرأ تغيرات التوقع تغيرًا اقتصاديًا.",
+   "new": "يفصل تقديرات صندوق النقد الدولي القائمة على نموذج للفترة 2018–2024 عن تقدير 2025 وتوقعات 2026–2030، ويُبقي وثيقتي الصندوق منفصلتين، حتى لا يُقرأ تقديرٌ قائم على نموذج أو تغيرٌ في التوقع على أنه تغير اقتصادي مرصود."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 13,
+   "field": "VIS-REMITTANCE-MACRO.freshness_profile",
+   "old": "2018–2030: reported history (staff report) / estimate and projections (supplement)",
+   "new": "2018–2030: model-based estimates (staff report) / estimate and projections (supplement)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 16,
+   "field": "VIS-REMITTANCE-MACRO.denominator_universe",
+   "old": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; each year labelled as reported history, estimate or projection, with its source document",
+   "new": "IMF external-sector remittance series on the IMF’s analytical scope for areas under the internationally recognized government; each year labelled as an estimate or a projection, with its source document"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 18,
+   "field": "VIS-REMITTANCE-MACRO.encoding_contract",
+   "old": "Line with reported-history, estimate and projection states visibly distinct by label and line treatment; the line breaks at the 2024→2025 change of source document and both documents are labelled.",
+   "new": "Line with estimate and projection states visibly distinct by label and line treatment; the line breaks at the 2024→2025 change of source document and both documents are labelled."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 21,
+   "field": "VIS-REMITTANCE-MACRO.accessible_summary_en",
+   "old": "For external-sector remittances, the IMF's 2025 Article IV staff report gives 2018–2024 as reported history based on staff calculations, including US$1,861.7 million in 2024. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 million in 2026 to US$3,110 million in 2030. The two documents were published at different times, so the two parts are not joined into one continuous series. The series covers the IMF's analytical scope for areas under the internationally recognized government, not the whole of Yemen.",
+   "new": "For external-sector remittances, the IMF's 2025 Article IV staff report gives model-based estimates for 2018–2024, including US$1,861.7 million in 2024; the report's statistical annex says personal transfers were estimated with a demographic and behavioural model, with 33% allocated to areas under the internationally recognized government. A later supplement to the same consultation gives US$1,977 million as the 2025 estimate and projections rising from US$2,159 million in 2026 to US$3,110 million in 2030. The two documents were published at different times, so the two parts are not joined into one continuous series. The series covers the IMF's analytical scope for areas under the internationally recognized government, not the whole of Yemen."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 22,
+   "field": "VIS-REMITTANCE-MACRO.accessible_summary_ar",
+   "old": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+   "new": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 تقديرات قائمة على نموذج للفترة 2018–2024، منها 1,861.7 مليون دولار في 2024؛ ويذكر المرفق الإحصائي للتقرير أن التحويلات الشخصية قُدِّرت بنموذج ديمغرافي وسلوكي، وأن 33% منها نُسبت إلى المناطق الخاضعة للحكومة المعترف بها دوليًا. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 29,
+   "field": "CLM-007.value_states",
+   "old": "[{\"t\":\"2\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4,\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]",
+   "new": "[{\"t\":\"2\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4,\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"33%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF Country Report No. 26/80 (2025 Article IV consultation), Annex IV 'Statistical Enhancements with the Resumption of the 2025 Article IV Consultation with Yemen', para 2 'External Sector': population ratio allocating 33 percent to the IRG controlled areas (footnote 2: 'As proposed by the authorities'), and bullet 'Personal transfers': demographic and behavioral model (number of Yemenis abroad, family size, average transfer amounts) with the ratio of 33 percent to the IRG controlled areas; printed p.41 (PDF p.46); read 10 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 29,
+   "field": "VIS-REMITTANCE-MACRO.value_states",
+   "old": "[{\"t\":\"1,861.7\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 staff report, Table 4 \\\"Yemen: External Sector, 2018-2030\\\" (In millions of U.S. dollars), row \\\"Remittances\\\", printed p.31 / PDF p.36 of the CR 26/80 package; also elibrary article-A001 HTML\"},{\"t\":\"1,861.7 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 staff report, Table 4 \\\"Yemen: External Sector, 2018-2030\\\" (In millions of U.S. dollars), row \\\"Remittances\\\", printed p.31 / PDF p.36 of the CR 26/80 package; also elibrary article-A001 HTML\"},{\"t\":\"1,977\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"1,977 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"2,159\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"2,159 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"3,110\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"3,110 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"2\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"24\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"30\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4,\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]",
+   "new": "[{\"t\":\"1,861.7\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 staff report, Table 4 \\\"Yemen: External Sector, 2018-2030\\\" (In millions of U.S. dollars), row \\\"Remittances\\\", printed p.31 / PDF p.36 of the CR 26/80 package; also elibrary article-A001 HTML\"},{\"t\":\"1,861.7 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 staff report, Table 4 \\\"Yemen: External Sector, 2018-2030\\\" (In millions of U.S. dollars), row \\\"Remittances\\\", printed p.31 / PDF p.36 of the CR 26/80 package; also elibrary article-A001 HTML\"},{\"t\":\"1,977\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"1,977 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"2,159\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"2,159 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"3,110\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"3,110 million\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-SUPP-001\",\"loc\":\"IMF CR 26/80 Staff Supplement (dated March 18, 2026), Table 2 \\\"Yemen: Selected Economic Indicators, 2018-2030\\\", External sector block, row \\\"Remittances\\\", printed p.8 / PDF p.86; also elibrary article-A004 HTML\"},{\"t\":\"2\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"24\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"30\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"4,\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"33%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF Country Report No. 26/80 (2025 Article IV consultation), Annex IV 'Statistical Enhancements with the Resumption of the 2025 Article IV Consultation with Yemen', para 2 'External Sector': population ratio allocating 33 percent to the IRG controlled areas (footnote 2: 'As proposed by the authorities'), and bullet 'Personal transfers': demographic and behavioral model (number of Yemenis abroad, family size, average transfer amounts) with the ratio of 33 percent to the IRG controlled areas; printed p.41 (PDF p.46); read 10 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "02_SITE_MAP",
+   "row": 17,
+   "col": 7,
+   "field": "/evidence/CLM-007/.meta_description_en",
+   "old": "IMF figures for remittance inflows keep reported history, the 2025 estimate and 2026–2030 projections separate; they are not a whole-of-Yemen figure.",
+   "new": "IMF figures for remittance inflows keep the model-based estimates for 2018–2024, the 2025 estimate and the 2026–2030 projections separate; they are not a whole-of-Yemen figure."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "02_SITE_MAP",
+   "row": 17,
+   "col": 8,
+   "field": "/evidence/CLM-007/.meta_description_ar",
+   "old": "تفصل أرقام صندوق النقد الدولي للحوالات الواردة بين القيم التاريخية المنشورة وتقدير 2025 وتوقعات 2026–2030؛ ولا تمثل رقمًا لليمن كله.",
+   "new": "تفصل أرقام صندوق النقد الدولي للحوالات الواردة بين التقديرات القائمة على نموذج للفترة 2018–2024 وتقدير 2025 وتوقعات 2026–2030؛ ولا تمثل رقمًا لليمن كله."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "02_SITE_MAP",
+   "row": 114,
+   "col": 7,
+   "field": "/evidence/VIS-REMITTANCE-MACRO/.meta_description_en",
+   "old": "IMF remittance figures for Yemen's external sector keep reported history for 2018–2024, a 2025 estimate and 2026–2030 projections apart.",
+   "new": "IMF remittance figures for areas under Yemen's internationally recognized government keep model-based estimates for 2018–2024, a 2025 estimate and 2026–2030 projections apart."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "02_SITE_MAP",
+   "row": 114,
+   "col": 8,
+   "field": "/evidence/VIS-REMITTANCE-MACRO/.meta_description_ar",
+   "old": "تفصل أرقام صندوق النقد الدولي للحوالات في القطاع الخارجي لليمن بين القيم التاريخية للفترة 2018–2024 وتقدير 2025 وتوقعات 2026–2030.",
+   "new": "تفصل أرقام صندوق النقد الدولي للحوالات في المناطق الخاضعة للحكومة اليمنية المعترف بها دوليًا بين التقديرات القائمة على نموذج للفترة 2018–2024 وتقدير 2025 وتوقعات 2026–2030."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 314,
+   "col": 4,
+   "field": "/remittances/#s2.heading_en",
+   "old": "Reported history, estimates and projections are different kinds of evidence",
+   "new": "The IMF's past values are model-based estimates, not reported history"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 314,
+   "col": 5,
+   "field": "/remittances/#s2.body_en",
+   "old": "The IMF staff report gives 2018–2024 as reported history based on staff calculations; a later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The series is kept apart where the source document changes: reported history is never extended through the forecast as if all years had the same status. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume.",
+   "new": "The IMF staff report gives 2018–2024 as estimates, not reported values: its statistical annex says personal transfers were estimated with a demographic and behavioural model (the number of Yemenis abroad, family size and average transfer amounts), with 33% allocated to areas under the internationally recognized government. A later supplement to the same consultation gives 2025 as an estimate and 2026–2030 as projections. The series is kept apart where the source document changes, and none of its years is an observation. A forecast revision is not an observed economic change, and the macro series is not a measure of informal hawala volume."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 315,
+   "col": 6,
+   "field": "/remittances/#s2.heading_ar",
+   "old": "القيم التاريخية المنشورة والتقديرات والتوقعات أنواع مختلفة من الأدلة",
+   "new": "القيم السابقة لدى صندوق النقد الدولي تقديرات قائمة على نموذج، لا قيم تاريخية مُبلَّغ عنها"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 315,
+   "col": 7,
+   "field": "/remittances/#s2.body_ar",
+   "old": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، فلا تُمد القيم التاريخية عبر التوقعات كما لو كانت السنوات كلها من النوع نفسه. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي.",
+   "new": "يورد تقرير خبراء صندوق النقد قيم 2018–2024 بوصفها تقديرات، لا قيمًا مُبلَّغًا عنها: إذ يذكر مرفقه الإحصائي أن التحويلات الشخصية قُدِّرت بنموذج ديمغرافي وسلوكي (عدد اليمنيين في الخارج وحجم الأسرة ومتوسط مبالغ التحويل)، وأن 33% منها نُسبت إلى المناطق الخاضعة للحكومة المعترف بها دوليًا. ويورد ملحق لاحق للمشاورات نفسها قيمة 2025 كتقدير وقيم 2026–2030 كتوقعات. وتُفصل السلسلة عند تغير الوثيقة المصدر، وليس أيٌّ من سنواتها مشاهدة. مراجعة التوقع ليست تغيرًا اقتصاديًا مرصودًا، كما أن سلسلة الحوالات الكلية لا تقيس حجم التحويلات عبر نظام الحوالة غير الرسمي."
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "07_PUBLIC_CLAIMS",
+   "row": 11,
+   "col": 3,
+   "field": "CLM-007.claim_type",
+   "old": "REPORTED_HISTORY_VS_OUTLOOK",
+   "new": "MODEL_ESTIMATE_VS_OUTLOOK"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 8,
+   "col": 6,
+   "field": "EP-REMITTANCE-MACRO.reference_period",
+   "old": "Reported history 2018–2024 (staff calculations); estimate 2025; projection 2026–2030",
+   "new": "Model-based estimates 2018–2024 (staff report); estimate 2025; projection 2026–2030"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 8,
+   "col": 8,
+   "field": "EP-REMITTANCE-MACRO.method",
+   "old": "Source-reported/staff calculations",
+   "new": "Source-published estimates: a demographic and behavioural model with a 33% allocation to areas under the internationally recognized government (IMF CR 26/80, Annex IV); supplement estimate and projections"
+  },
+  {
+   "finding": "CLOSE-2B:CR-05",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 8,
+   "col": 12,
+   "field": "EP-REMITTANCE-MACRO.display_requirements",
+   "old": "Reported-history, estimate and projection states must be visually separate, and the line breaks where the source document changes.",
+   "new": "Estimate and projection states must be visually distinct, and the line breaks where the source document changes."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 1,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.source_id",
+   "old": null,
+   "new": "SRC-IMF-YEM-SMP-2026-APPROVAL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 2,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.primary_url",
+   "old": null,
+   "new": "https://www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 4,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.datasets_or_use",
+   "old": null,
+   "new": "DS-V4R3-SYSTEM-CHRONOLOGY"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 5,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.row_count",
+   "old": null,
+   "new": 1
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 6,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.display_title",
+   "old": null,
+   "new": "Yemen: IMF Management approves a Staff-Monitored Program (7 October 2026)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 12,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.display_title_ar",
+   "old": null,
+   "new": "اليمن: إدارة صندوق النقد الدولي توافق على برنامج يراقبه خبراء الصندوق (7 أكتوبر 2026)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 7,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.publisher",
+   "old": null,
+   "new": "International Monetary Fund"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 25,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.publisher_ar",
+   "old": null,
+   "new": "صندوق النقد الدولي"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 11,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 19,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 22,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 26,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 27,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 172,
+   "col": 28,
+   "field": "SRC-IMF-YEM-SMP-2026-APPROVAL.document_date",
+   "old": null,
+   "new": "2026-10-07"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 117,
+   "col": 22,
+   "field": "SRC-IMF-YEM-SMP-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 4,
+   "field": "CLM-049.title_en",
+   "old": "IMF Staff-Monitored Program (SMP) for Yemen: staff-level agreement of July 2026, subject to Management approval",
+   "new": "IMF Staff-Monitored Program (SMP) for Yemen: approved by IMF Management on 7 October 2026, with no IMF financing"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 5,
+   "field": "CLM-049.title_ar",
+   "old": "برنامج يراقبه خبراء صندوق النقد الدولي (SMP) لليمن: اتفاق على مستوى الخبراء في يوليو 2026، مشروط بموافقة الإدارة",
+   "new": "البرنامج الذي يراقبه خبراء صندوق النقد الدولي (SMP) لليمن: وافقت عليه إدارة الصندوق في 7 أكتوبر 2026، من دون تمويل من الصندوق"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 6,
+   "field": "CLM-049.summary_en",
+   "old": "On 16 July 2026, staff of the International Monetary Fund (IMF) and the Yemeni authorities announced staff-level agreement on key policies and reforms that could underpin a proposed 18-month Staff-Monitored Program (SMP). The IMF stated that the agreement was subject to Management approval and would not result in Board discussion. It is not an IMF financing arrangement. The IMF press release could not be re-opened from this resource on 4 October 2026 (the IMF website refuses automated requests), so the date, the 18-month length and the status above have not been re-read in the original for this edition.",
+   "new": "On 7 October 2026, the International Monetary Fund (IMF) announced that IMF Management had approved an 18-month non-financing Staff-Monitored Program (SMP) with Yemen. This follows the staff-level agreement that IMF staff and the Yemeni authorities announced on 16 July 2026, which was then subject to Management approval. The IMF describes SMPs as informal agreements between national authorities and IMF staff that do not entail endorsement by the IMF Executive Board; the programme provides no IMF financing."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 7,
+   "field": "CLM-049.summary_ar",
+   "old": "في 16 يوليو 2026 أعلن خبراء صندوق النقد الدولي والسلطات اليمنية التوصل إلى اتفاق على مستوى الخبراء بشأن سياسات وإصلاحات رئيسية يمكن أن يستند إليها برنامج مقترح مدته 18 شهرًا يراقبه خبراء صندوق النقد الدولي (SMP). وأوضح الصندوق أن الاتفاق يخضع لموافقة الإدارة ولن يترتب عليه نقاش في المجلس التنفيذي. وليس هذا ترتيب تمويل من الصندوق. وتعذّر على هذا المورد إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم تُعَد في هذا الإصدار قراءةُ التاريخ ومدة الـ18 شهرًا ووضعِ الاتفاق المذكورة أعلاه في الأصل.",
+   "new": "في 7 أكتوبر 2026 أعلن صندوق النقد الدولي أن إدارة الصندوق وافقت على برنامج يراقبه خبراء الصندوق (SMP) مع اليمن، مدته 18 شهرًا ولا يتضمن تمويلًا. ويأتي ذلك بعد الاتفاق على مستوى الخبراء الذي أعلنه خبراء الصندوق والسلطات اليمنية في 16 يوليو 2026، والذي كان حينها خاضعًا لموافقة الإدارة. ويصف الصندوق هذه البرامج بأنها اتفاقات غير رسمية بين السلطات الوطنية وخبراء الصندوق لا تتضمن تأييدًا من المجلس التنفيذي للصندوق؛ ولا يقدم البرنامج تمويلًا من الصندوق."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 8,
+   "field": "CLM-049.definition_en",
+   "old": "The approval status of a proposed 18-month Staff-Monitored Program (SMP) of the International Monetary Fund (IMF) for Yemen, as announced by the IMF on 16 July 2026.",
+   "new": "The approval status of the 18-month Staff-Monitored Program (SMP) of the International Monetary Fund (IMF) with Yemen, as announced by the IMF on 16 July 2026 (staff-level agreement) and on 7 October 2026 (Management approval)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 9,
+   "field": "CLM-049.definition_ar",
+   "old": "وضع الموافقة على برنامج مقترح مدته 18 شهرًا يراقبه خبراء صندوق النقد الدولي (SMP) لليمن، كما أعلنه الصندوق في 16 يوليو 2026.",
+   "new": "وضع الموافقة على البرنامج الذي يراقبه خبراء صندوق النقد الدولي (SMP) مع اليمن ومدته 18 شهرًا، كما أعلنه الصندوق في 16 يوليو 2026 (اتفاق على مستوى الخبراء) وفي 7 أكتوبر 2026 (موافقة الإدارة)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 10,
+   "field": "CLM-049.period_en",
+   "old": "16 July 2026; proposed 18-month IMF Staff-Monitored Program at staff-level agreement stage.",
+   "new": "16 July 2026 (staff-level agreement); 7 October 2026 (approval by IMF Management); an 18-month programme."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 11,
+   "field": "CLM-049.period_ar",
+   "old": "16 يوليو 2026؛ برنامج مقترح مدته 18 شهرًا يراقبه خبراء صندوق النقد الدولي (SMP)، في مرحلة الاتفاق على مستوى الخبراء.",
+   "new": "16 يوليو 2026 (اتفاق على مستوى الخبراء)؛ 7 أكتوبر 2026 (موافقة إدارة صندوق النقد الدولي)؛ برنامج مدته 18 شهرًا."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 12,
+   "field": "CLM-049.universe_en",
+   "old": "The staff-level policy agreement between IMF staff and the Yemeni authorities, and the status of the proposed Staff-Monitored Program (SMP); not an Executive Board-approved financing arrangement.",
+   "new": "The Staff-Monitored Program (SMP) agreed between IMF staff and the Yemeni authorities and approved by IMF Management; not an Executive Board-approved financing arrangement."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 13,
+   "field": "CLM-049.universe_ar",
+   "old": "الاتفاق على مستوى الخبراء بين فريق خبراء صندوق النقد الدولي والسلطات اليمنية، ووضع البرنامج المقترح الذي يراقبه خبراء الصندوق (SMP)؛ وليس ترتيب تمويل معتمدًا من المجلس التنفيذي.",
+   "new": "البرنامج الذي يراقبه خبراء صندوق النقد الدولي (SMP) المتفق عليه بين خبراء الصندوق والسلطات اليمنية، والذي وافقت عليه إدارة الصندوق؛ وليس ترتيب تمويل معتمدًا من المجلس التنفيذي."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 14,
+   "field": "CLM-049.method_en",
+   "old": "The status is taken from the wording of the press release of the International Monetary Fund (IMF) of 16 July 2026: staff-level agreement, subject to IMF Management approval, with no Executive Board discussion and no IMF financing.",
+   "new": "The status is taken from the wording of two press releases of the International Monetary Fund (IMF), read in the original on 10 October 2026: 16 July 2026 (staff-level agreement, subject to IMF Management approval, with no Board discussion) and 7 October 2026 (IMF Management approval of an 18-month non-financing SMP)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 15,
+   "field": "CLM-049.method_ar",
+   "old": "يؤخذ وضع البرنامج من نص البيان الصحفي لصندوق النقد الدولي المؤرخ في 16 يوليو 2026: اتفاق على مستوى الخبراء، يخضع لموافقة إدارة الصندوق، من دون نقاش في المجلس التنفيذي ومن دون تمويل من الصندوق.",
+   "new": "يؤخذ وضع البرنامج من نص بيانين صحفيين لصندوق النقد الدولي قُرئا في الأصل في 10 أكتوبر 2026: بيان 16 يوليو 2026 (اتفاق على مستوى الخبراء، يخضع لموافقة إدارة الصندوق، من دون نقاش في المجلس التنفيذي)، وبيان 7 أكتوبر 2026 (موافقة إدارة الصندوق على برنامج مدته 18 شهرًا لا يتضمن تمويلًا)."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 16,
+   "field": "CLM-049.limitations_en",
+   "old": "The proposed Staff-Monitored Program (SMP) is not an arrangement approved or endorsed by the Executive Board of the International Monetary Fund (IMF) and does not involve IMF financing; the agreement is also not evidence that external-sector statistics have been reconciled.",
+   "new": "The Staff-Monitored Program (SMP) is not an arrangement approved or endorsed by the Executive Board of the International Monetary Fund (IMF) and does not involve IMF financing. Its approval does not show that the reforms have been implemented or that they have changed financial inclusion, and it is not evidence that external-sector statistics have been reconciled."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 17,
+   "field": "CLM-049.limitations_ar",
+   "old": "ليس البرنامج المقترح الذي يراقبه خبراء صندوق النقد الدولي (SMP) ترتيبًا معتمدًا أو مؤيدًا من المجلس التنفيذي للصندوق، ولا ينطوي على تمويل من الصندوق؛ كما أن الاتفاق ليس دليلًا على اكتمال مطابقة إحصاءات القطاع الخارجي.",
+   "new": "ليس البرنامج الذي يراقبه خبراء صندوق النقد الدولي (SMP) ترتيبًا معتمدًا أو مؤيدًا من المجلس التنفيذي للصندوق، ولا ينطوي على تمويل من الصندوق. ولا تثبت الموافقة عليه أن الإصلاحات نُفذت أو أنها غيّرت الشمول المالي، كما أنها ليست دليلًا على اكتمال مطابقة إحصاءات القطاع الخارجي."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 18,
+   "field": "CLM-049.currentness_en",
+   "old": "The latest information in this record is the announcement of the International Monetary Fund (IMF) of 16 July 2026, when the agreement was at staff level and subject to IMF Management approval. It should not be read as the programme's status at a later date unless a newer IMF notice is published.",
+   "new": "The latest information in this record is the IMF announcement of 7 October 2026 that IMF Management approved the programme. It should not be read as describing the programme's progress or reviews at a later date unless a newer IMF notice is published."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 19,
+   "field": "CLM-049.currentness_ar",
+   "old": "أحدث معلومة في هذا السجل هي إعلان صندوق النقد الدولي في 16 يوليو 2026، حين كان الاتفاق على مستوى الخبراء وخاضعًا لموافقة إدارة الصندوق. ولا يُقرأ على أنه يصف وضع البرنامج في تاريخ لاحق ما لم يُنشر إشعار أحدث من الصندوق.",
+   "new": "أحدث معلومة في هذا السجل هي إعلان صندوق النقد الدولي في 7 أكتوبر 2026 أن إدارة الصندوق وافقت على البرنامج. ولا يُقرأ على أنه يصف تقدم البرنامج أو مراجعاته في تاريخ لاحق ما لم يُنشر إشعار أحدث من الصندوق."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 24,
+   "field": "CLM-049.source_dependencies",
+   "old": "SRC-IMF-YEM-SMP-2026",
+   "new": "SRC-IMF-YEM-SMP-2026; SRC-IMF-YEM-SMP-2026-APPROVAL"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 25,
+   "field": "CLM-049.source_links",
+   "old": "[{\"source_id\":\"SRC-IMF-YEM-SMP-2026\",\"url\":\"https://www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]",
+   "new": "[{\"source_id\":\"SRC-IMF-YEM-SMP-2026\",\"url\":\"https://www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"},{\"source_id\":\"SRC-IMF-YEM-SMP-2026-APPROVAL\",\"url\":\"https://www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 92,
+   "col": 29,
+   "field": "CLM-049.value_states",
+   "old": "[{\"t\":\"16\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"\",\"why\":\"www.imf.org returned HTTP 403 to curl (Chrome/Safari/curl UAs) and to WebFetch; no Wayback snapshot listed by archive.org availability API, web.archive.org blocked by egress policy; archive.ph connect\"},{\"t\":\"18\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"\",\"why\":\"www.imf.org returned HTTP 403 to curl (Chrome/Safari/curl UAs) and to WebFetch; no Wayback snapshot listed by archive.org availability API, web.archive.org blocked by egress policy; archive.ph connect\"},{\"t\":\"16 July 2026\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"\",\"why\":\"www.imf.org returned HTTP 403 to curl (Chrome/Safari/curl UAs) and to WebFetch; no Wayback snapshot listed by archive.org availability API, web.archive.org blocked by egress policy; archive.ph connect\"},{\"t\":\"July 2026\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"\",\"why\":\"www.imf.org returned HTTP 403 to curl (Chrome/Safari/curl UAs) and to WebFetch; no Wayback snapshot listed by archive.org availability API, web.archive.org blocked by egress policy; archive.ph connect\"},{\"t\":\"4 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"16 July 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"16\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"July 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"7 October 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026-APPROVAL\",\"loc\":\"IMF press release 'IMF Management Approves a Staff-Monitored Program with Yemen', published 7 October 2026 (www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen): 'IMF Management approved an 18-month non-financing Staff-Monitored Program (SMP) with Yemen'; SMPs 'are informal agreements between national authorities and IMF staff and do not entail endorsement by the IMF Executive Board'; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"October 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026-APPROVAL\",\"loc\":\"IMF press release 'IMF Management Approves a Staff-Monitored Program with Yemen', published 7 October 2026 (www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen): 'IMF Management approved an 18-month non-financing Staff-Monitored Program (SMP) with Yemen'; SMPs 'are informal agreements between national authorities and IMF staff and do not entail endorsement by the IMF Executive Board'; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026-APPROVAL\",\"loc\":\"IMF press release 'IMF Management Approves a Staff-Monitored Program with Yemen', published 7 October 2026 (www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen): 'IMF Management approved an 18-month non-financing Staff-Monitored Program (SMP) with Yemen'; SMPs 'are informal agreements between national authorities and IMF staff and do not entail endorsement by the IMF Executive Board'; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"18\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026-APPROVAL\",\"loc\":\"IMF press release 'IMF Management Approves a Staff-Monitored Program with Yemen', published 7 October 2026 (www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen): 'IMF Management approved an 18-month non-financing Staff-Monitored Program (SMP) with Yemen'; SMPs 'are informal agreements between national authorities and IMF staff and do not entail endorsement by the IMF Executive Board'; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"18-month\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026-APPROVAL\",\"loc\":\"IMF press release 'IMF Management Approves a Staff-Monitored Program with Yemen', published 7 October 2026 (www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen): 'IMF Management approved an 18-month non-financing Staff-Monitored Program (SMP) with Yemen'; SMPs 'are informal agreements between national authorities and IMF staff and do not entail endorsement by the IMF Executive Board'; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"10 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 303,
+   "col": 4,
+   "field": "/reforms/#s7.heading_en",
+   "old": "The July 2026 SMP agreement is staff-level and conditional",
+   "new": "IMF Management approved an 18-month Staff-Monitored Program in October 2026; it is not IMF financing"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 303,
+   "col": 5,
+   "field": "/reforms/#s7.body_en",
+   "old": "On 16 July 2026, IMF staff and Yemeni authorities announced staff-level agreement on policies and reforms that could underpin a proposed 18-month Staff-Monitored Program. The IMF stated that the agreement was subject to Management approval and would not result in Board discussion. It is not an IMF financing arrangement and should not be presented as Executive Board approval. The IMF release could not be re-opened on 4 October 2026; these details have not been re-read in the original for this edition.",
+   "new": "On 16 July 2026, IMF staff and the Yemeni authorities announced staff-level agreement on policies and reforms that could underpin a proposed 18-month Staff-Monitored Program (SMP), subject to IMF Management approval. On 7 October 2026, the IMF announced that IMF Management had approved an 18-month non-financing SMP with Yemen. The IMF describes SMPs as informal agreements between national authorities and IMF staff that do not entail endorsement by its Executive Board. The programme is not an IMF financing arrangement, and its approval does not show that reforms have been implemented or that financial inclusion has changed."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 304,
+   "col": 6,
+   "field": "/reforms/#s7.heading_ar",
+   "old": "وضع البرنامج الذي يراقبه خبراء صندوق النقد الدولي (SMP) في يوليو 2026: اتفاق على مستوى الخبراء، ومشروط بموافقة الإدارة",
+   "new": "وافقت إدارة صندوق النقد الدولي في أكتوبر 2026 على برنامج يراقبه خبراء الصندوق مدته 18 شهرًا، ولا يتضمن تمويلًا من الصندوق"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 304,
+   "col": 7,
+   "field": "/reforms/#s7.body_ar",
+   "old": "في 16 يوليو 2026 أعلن خبراء صندوق النقد والسلطات اليمنية اتفاقًا على مستوى الخبراء بشأن سياسات وإصلاحات يمكن أن يستند إليها برنامج مقترح يراقبه خبراء صندوق النقد الدولي (SMP) مدته 18 شهرًا. وأوضح الصندوق أن الاتفاق يخضع لموافقة الإدارة ولن يترتب عليه نقاش في المجلس التنفيذي. وليس هذا ترتيب تمويل من الصندوق ولا يجوز تقديمه كموافقة من المجلس التنفيذي. وتعذّرت إعادة فتح بيان الصندوق في 4 أكتوبر 2026، فلم تُعَد في هذا الإصدار قراءةُ هذه التفاصيل في الأصل.",
+   "new": "في 16 يوليو 2026 أعلن خبراء صندوق النقد والسلطات اليمنية اتفاقًا على مستوى الخبراء بشأن سياسات وإصلاحات يمكن أن يستند إليها برنامج مقترح يراقبه خبراء صندوق النقد الدولي (SMP) مدته 18 شهرًا، رهنًا بموافقة إدارة الصندوق. وفي 7 أكتوبر 2026 أعلن الصندوق أن إدارته وافقت على برنامج يراقبه خبراء الصندوق مع اليمن، مدته 18 شهرًا ولا يتضمن تمويلًا. ويصف الصندوق هذه البرامج بأنها اتفاقات غير رسمية بين السلطات الوطنية وخبراء الصندوق لا تتضمن تأييدًا من مجلسه التنفيذي. وليس البرنامج ترتيب تمويل من الصندوق، ولا تثبت الموافقة عليه أن الإصلاحات نُفذت أو أن الشمول المالي تغيّر."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "02_SITE_MAP",
+   "row": 59,
+   "col": 7,
+   "field": "/evidence/CLM-049/.meta_description_en",
+   "old": "On 16 July 2026 IMF staff and the Yemeni authorities announced staff-level agreement on a proposed Staff-Monitored Program, subject to Management approval.",
+   "new": "On 7 October 2026 IMF Management approved an 18-month Staff-Monitored Program with Yemen; it provides no IMF financing and is not Executive Board approval."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "02_SITE_MAP",
+   "row": 59,
+   "col": 8,
+   "field": "/evidence/CLM-049/.meta_description_ar",
+   "old": "في 16 يوليو 2026 أعلن خبراء صندوق النقد الدولي والسلطات اليمنية اتفاقًا على مستوى الخبراء بشأن برنامج مقترح يراقبه الخبراء، رهنًا بموافقة الإدارة.",
+   "new": "في 7 أكتوبر 2026 وافقت إدارة صندوق النقد الدولي على برنامج يراقبه خبراء الصندوق مع اليمن مدته 18 شهرًا؛ ولا يقدم تمويلًا من الصندوق، وليس موافقة من المجلس التنفيذي."
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 20,
+   "field": "YSC-023.value_states",
+   "old": "[{\"t\":\"16 July 2026\",\"k\":\"d\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"},{\"t\":\"18-month\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"},{\"t\":\"subject to IMF Management approval\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"},{\"t\":\"will not result in an Executive Board discussion\",\"k\":\"v\",\"s\":\"UNREACHABLE\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no\",\"why\":\"imf.org refuses automated requests (HTTP 403); no archive copy reachable\"}]",
+   "new": "[{\"t\":\"16 July 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"18-month\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"subject to IMF Management approval\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)\"},{\"t\":\"will not result in an Executive Board discussion\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-IMF-YEM-SMP-2026\",\"loc\":\"IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 18,
+   "field": "YSC-023.verification_note_en",
+   "old": "The IMF press release could not be re-opened on 4 October 2026 (the IMF website refuses automated requests); this entry has not been re-read in the original for this edition.",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 19,
+   "field": "YSC-023.verification_note_ar",
+   "old": "تعذّرت إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم تُعَد في هذا الإصدار قراءةُ هذا المدخل في الأصل.",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2B:CR-07",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 21,
+   "col": 5,
+   "field": "REF-IMF-001.normalized_description",
+   "old": "IMF reports staff-level agreement on a proposed 18-month SMP focused on stabilization, implementation and reform track record.",
+   "new": "IMF reports staff-level agreement on a proposed 18-month SMP focused on stabilization, implementation and reform track record. IMF Management approved the 18-month non-financing SMP on 7 October 2026 (IMF press release of that date)."
+  },
+  {
+   "finding": "CLOSE-2B:E2-LABEL",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 97,
+   "col": 5,
+   "field": "/finance/#s2.body_en",
+   "old": "The historical record contains exact quarterly and year-end observations, years for which only references are available, and years with no usable observation. In 2015, primary SFD evidence shows active borrowers declining from 124,917 at end-March to 106,825 at end-September and 93,118 at end-December, alongside a declining reported portfolio. This resource keeps those observed points and gaps as they are; it does not interpolate the missing months or estimate a causal conflict effect.",
+   "new": "The historical record contains exact quarterly and year-end observations, years for which only references are available, and years with no usable observation. In 2015, primary SFD evidence shows active borrowers declining from 124,917 at end-March to 106,825 at end-September and 93,118 at end-December, alongside a declining reported portfolio. This resource keeps those observed points and gaps as they are; it does not interpolate the missing months or estimate a causal conflict effect. Its starting point is dated in two ways: 1997, when the Social Fund for Development (SFD) was established, and 1998, when SFD began operations and became active in microfinance. The SFD terms of reference that date the start of microfinance to 1997 could not be re-opened (on 4 October 2026, and again on 10 October 2026), so that dating has not been re-read in the original for this edition."
+  },
+  {
+   "finding": "CLOSE-2B:E2-LABEL",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 98,
+   "col": 7,
+   "field": "/finance/#s2.body_ar",
+   "old": "يحتوي السجل التاريخي على مشاهدات محددة ربع سنوية وفي نهاية العام، وسنوات لا تتوفر عنها إلا إحالات، وسنوات بلا مشاهدة قابلة للاستخدام. وفي 2015 تُظهر أدلة صادرة مباشرة عن الصندوق الاجتماعي للتنمية انخفاض المقترضين النشطين من 124,917 في نهاية مارس إلى 106,825 في نهاية سبتمبر و93,118 في نهاية ديسمبر، بالتوازي مع انخفاض محفظة القروض كما وردت في المصدر. يحافظ هذا المورد على هذه النقاط والفجوات كما وردت، ولا يستكمل الأشهر المفقودة بالاستيفاء ولا يقدّر أثرًا سببيًا للنزاع.",
+   "new": "يحتوي السجل التاريخي على مشاهدات محددة ربع سنوية وفي نهاية العام، وسنوات لا تتوفر عنها إلا إحالات، وسنوات بلا مشاهدة قابلة للاستخدام. وفي 2015 تُظهر أدلة صادرة مباشرة عن الصندوق الاجتماعي للتنمية انخفاض المقترضين النشطين من 124,917 في نهاية مارس إلى 106,825 في نهاية سبتمبر و93,118 في نهاية ديسمبر، بالتوازي مع انخفاض محفظة القروض كما وردت في المصدر. يحافظ هذا المورد على هذه النقاط والفجوات كما وردت، ولا يستكمل الأشهر المفقودة بالاستيفاء ولا يقدّر أثرًا سببيًا للنزاع. ويؤرَّخ منطلقه بطريقتين: عام 1997، حين أُنشئ الصندوق الاجتماعي للتنمية، وعام 1998، حين بدأ الصندوق عملياته وأصبح ناشطًا في التمويل الأصغر. أما الشروط المرجعية للصندوق التي تؤرخ بداية التمويل الأصغر بعام 1997 فتعذّرت إعادة فتحها (في 4 أكتوبر 2026، ثم في 10 أكتوبر 2026)، فلم تُعَد في هذا الإصدار قراءةُ هذا التأريخ في الأصل."
+  },
+  {
+   "finding": "CLOSE-2B:CR-08",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 103,
+   "col": 5,
+   "field": "/finance/#s6.body_en",
+   "old": "The compiled monetary series provide balance-sheet context on bank deposits, credit to the private sector, bank reserves, capital and reserves, loans and advances, and foreign-currency deposits across their available reporting periods. These measures help describe intermediation capacity and structure, but they are not a complete current financial-soundness assessment: solvency, asset quality or current system-wide soundness cannot be inferred from balance-sheet aggregates alone. The current evidence base does not yet contain a harmonized, publication-ready set of non-performing-loan, capital-adequacy and liquidity ratios with common definitions and vintages.",
+   "new": "The compiled monetary series provide balance-sheet context on bank deposits, credit to the private sector, bank reserves, capital and reserves, loans and advances, and foreign-currency deposits across their available reporting periods. These measures help describe intermediation capacity and structure, but they are not a complete current financial-soundness assessment: solvency, asset quality or current system-wide soundness cannot be inferred from balance-sheet aggregates alone. The IMF's 2025 Article IV staff report does publish one set of financial soundness indicators for Yemen, sourced to the Yemeni authorities and IMF staff calculations, including the ratio of non-performing loans to total gross loans at each year-end from 2014 to 2024 and at one date in 2025. For each year-end from 2014 to 2019 that ratio is printed as zero, which this resource reads as not reported, not as zero. The table does not state which banks or areas it covers; the report says that the central bank began reporting a set of these indicators in 2025 and that comprehensive data are still being compiled, and its own text gives values for two other ratios that differ from the table. One published vintage of unstated coverage is not yet a harmonized series with common definitions, so this resource does not present these ratios as a series."
+  },
+  {
+   "finding": "CLOSE-2B:CR-08",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 104,
+   "col": 7,
+   "field": "/finance/#s6.body_ar",
+   "old": "تتيح السلاسل النقدية المعتمدة هنا قراءةً لسياق الميزانيات والوساطة، بما يشمل الودائع والائتمان المقدم للقطاع الخاص واحتياطيات البنوك ورأس المال والاحتياطيات والقروض والسلف والودائع بالعملات الأجنبية، كلٌّ ضمن فترته المتاحة. وتفيد هذه المؤشرات في فهم قدرة النظام على الوساطة وهيكله، لكنها لا تشكل تشخيصًا مكتملًا وحديثًا للمتانة المالية؛ فلا يُستنتج من مجاميع الميزانيات وحدها مستوى الملاءة أو جودة الأصول أو المتانة المالية الحالية للنظام ككل. ولا تتضمن قاعدة الأدلة بعدُ مجموعة منسجمة وجاهزة للنشر لمؤشرات القروض المتعثرة وكفاية رأس المال والسيولة بتعريفات ونسخ زمنية قابلة للمقارنة.",
+   "new": "تتيح السلاسل النقدية المعتمدة هنا قراءةً لسياق الميزانيات والوساطة، بما يشمل الودائع والائتمان المقدم للقطاع الخاص واحتياطيات البنوك ورأس المال والاحتياطيات والقروض والسلف والودائع بالعملات الأجنبية، كلٌّ ضمن فترته المتاحة. وتفيد هذه المؤشرات في فهم قدرة النظام على الوساطة وهيكله، لكنها لا تشكل تشخيصًا مكتملًا وحديثًا للمتانة المالية؛ فلا يُستنتج من مجاميع الميزانيات وحدها مستوى الملاءة أو جودة الأصول أو المتانة المالية الحالية للنظام ككل. ويَنشر تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 مجموعةً واحدة من مؤشرات السلامة المالية لليمن، مصدرها السلطات اليمنية وحسابات خبراء الصندوق، ومنها نسبة القروض المتعثرة إلى إجمالي القروض في نهاية كل سنة من 2014 إلى 2024 وفي تاريخ واحد من 2025. وتَرِد هذه النسبة صفرًا في نهاية كل سنة من 2014 إلى 2019، ويقرأ هذا المورد تلك القيم على أنها غير مُبلَّغ عنها، لا على أنها صفر. ولا يحدد الجدول البنوك أو المناطق التي يغطيها؛ ويذكر التقرير أن البنك المركزي بدأ الإبلاغ عن مجموعة من هذه المؤشرات في 2025 وأن البيانات الشاملة ما تزال قيد التجميع، كما يورد متنُه لنسبتين أخريين قيمًا تختلف عما في الجدول. ولا تشكّل نسخةٌ منشورة واحدة غير محددة النطاق سلسلةً منسجمة بتعريفات موحدة بعد، لذلك لا يعرض هذا المورد هذه النسب في صورة سلسلة."
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 70,
+   "col": 3,
+   "field": "IND-0018.label",
+   "old": "E-wallet subscribers — male share",
+   "new": "Accounts — male share"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 71,
+   "col": 3,
+   "field": "IND-0019.label",
+   "old": "E-wallet subscribers — female share",
+   "new": "Accounts — female share"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 72,
+   "col": 3,
+   "field": "IND-0020.label",
+   "old": "E-wallet subscribers — company share",
+   "new": "Accounts — company share"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 73,
+   "col": 3,
+   "field": "IND-0021.label",
+   "old": "Bank accounts — male share",
+   "new": "E-wallet subscribers — male share"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "17_INDICATOR_LIBRARY",
+   "row": 74,
+   "col": 3,
+   "field": "IND-0022.label",
+   "old": "Bank accounts — female share",
+   "new": "E-wallet subscribers — female share"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 42,
+   "col": 11,
+   "field": "OBS-00038.source_locator",
+   "old": "page 1; lines 32-83",
+   "new": "page 1, «الحسابات» (Accounts) panel, bottom left (NO. of Accounts 5,202,019): bars ذكر 81% / أنثى 18% / شركات 1%, caption «نسبة عدد المواطنين الذين يمتلكون حسابات بنكية وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 43,
+   "col": 11,
+   "field": "OBS-00039.source_locator",
+   "old": "page 1; lines 32-83",
+   "new": "page 1, «الحسابات» (Accounts) panel, bottom left (NO. of Accounts 5,202,019): bars ذكر 81% / أنثى 18% / شركات 1%, caption «نسبة عدد المواطنين الذين يمتلكون حسابات بنكية وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 44,
+   "col": 11,
+   "field": "OBS-00040.source_locator",
+   "old": "page 1; lines 32-83",
+   "new": "page 1, «الحسابات» (Accounts) panel, bottom left (NO. of Accounts 5,202,019): bars ذكر 81% / أنثى 18% / شركات 1%, caption «نسبة عدد المواطنين الذين يمتلكون حسابات بنكية وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 45,
+   "col": 11,
+   "field": "OBS-00041.source_locator",
+   "old": "page 1; lines 32-83",
+   "new": "page 1, «المحافظ الإلكترونية» (E-wallets) panel, bottom right (NO. of Subscribers 2,102,484): donut 84% male / 16% female, caption «نسبة عدد المشتركين وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-13",
+   "sheet": "19_PAYMENTS_DATA",
+   "row": 46,
+   "col": 11,
+   "field": "OBS-00042.source_locator",
+   "old": "page 1; lines 32-83",
+   "new": "page 1, «المحافظ الإلكترونية» (E-wallets) panel, bottom right (NO. of Subscribers 2,102,484): donut 84% male / 16% female, caption «نسبة عدد المشتركين وفق النوع»; re-read 10 October 2026 (close-out CR-13)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-15",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 18,
+   "field": "CLM-043.currentness_en",
+   "old": "The latest year in this record is 2025, from the CBY-Aden Annual Report 2025. It should not be read as describing a later year unless a newer comparable observation is published.",
+   "new": "The latest year in this record is 2025, from the CBY-Aden Annual Report 2025. It should not be read as describing a later year unless a newer comparable observation is published. The World Bank's Yemen Economic Monitor, Spring 2026, states that “the CBY has discontinued remittance data production”, without saying which series or publication it means; the CBY-Aden Annual Report 2025 used here still prints a remittance line for 2025, and whether that line will continue is not established."
+  },
+  {
+   "finding": "CLOSE-2B:CR-15",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 19,
+   "field": "CLM-043.currentness_ar",
+   "old": "آخر سنة في هذا السجل هي 2025، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن، ولا تُقرأ على أنها تصف سنة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة.",
+   "new": "آخر سنة في هذا السجل هي 2025، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن، ولا تُقرأ على أنها تصف سنة لاحقة ما لم تُنشر مشاهدة أحدث قابلة للمقارنة. ويذكر المرصد الاقتصادي لليمن الصادر عن البنك الدولي (ربيع 2026) أن البنك المركزي اليمني توقف عن إنتاج بيانات الحوالات، من دون أن يحدد السلسلة أو المنشور المقصود؛ ولا يزال التقرير السنوي 2025 للبنك المركزي اليمني – عدن المستخدم هنا يورد بند الحوالات لعام 2025، ولم يثبت ما إذا كان هذا البند سيستمر."
+  },
+  {
+   "finding": "CLOSE-2B:CR-15",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 24,
+   "field": "CLM-043.source_dependencies",
+   "old": "SRC-CBY-AR2025-BOP; EP-YEM-BOP-RESIDUAL-K04",
+   "new": "SRC-CBY-AR2025-BOP; EP-YEM-BOP-RESIDUAL-K04; SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
+  },
+  {
+   "finding": "CLOSE-2B:CR-15",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 164,
+   "col": 3,
+   "field": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001.additional_urls",
+   "old": "[\"https://www.worldbank.org/en/programs/the-yemen-fund\"]",
+   "new": "[\"https://www.worldbank.org/en/programs/the-yemen-fund\", \"https://documents1.worldbank.org/curated/en/099630405192627146/pdf/IDU-915b334e-33e9-407b-b634-2ee6167b4790.pdf\"]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-16",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 36,
+   "col": 29,
+   "field": "CLM-013.value_states",
+   "old": "[{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"OECD/INFE 2023 report, Annex A data-collection table, p. 65 (PDF p. 65), row Yemen: sample size 1000\"},{\"t\":\"11 M\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen: \\\"11 March – 1 April 2023\\\"\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel (oecd.org .../financial literacy survey adults_annex d.xlsx), Table 4.1, row Yemen, \\\"Financial Well-Being Scores (out of 100)\\\"\"},{\"t\":\"42\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel, Table 2.1, row Yemen, \\\"Financial Literacy Score (out of 100)\\\"\"},{\"t\":\"100\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Table 2.1 / Table 4.1 headers \\\"(out of 100)\\\"\"},{\"t\":\"1\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"1 April 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen\"},{\"t\":\"March 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2023-001\",\"loc\":\"cby-ye.com/news/481, dated 2023-03-20: \\\"تستمر من تاريخ 20 الى 26 مارس 2023م\\\"\"},{\"t\":\"March 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2025-001\",\"loc\":\"cby-ye.com/news/790, dated 2025-03-16: \\\"خلال الفترة من 16 إلى 22 مارس\\\"\"}]",
+   "new": "[{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"OECD/INFE 2023 report, Annex A data-collection table, p. 65 (PDF p. 65), row Yemen: sample size 1000\"},{\"t\":\"11 M\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen: \\\"11 March – 1 April 2023\\\"\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel (oecd.org .../financial literacy survey adults_annex d.xlsx), Table 4.1, row Yemen, \\\"Financial Well-Being Scores (out of 100)\\\"; the same value is printed as Yemen's data label in Figure 4.1 'Financial well-being' of the report (p. 49) — a printed label, not read from the bar; re-read 10 October 2026 (close-out CR-16)\"},{\"t\":\"42\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel, Table 2.1, row Yemen, \\\"Financial Literacy Score (out of 100)\\\"; the same value is printed as Yemen's data label in Figure 2.1 'Overall financial literacy, average scores (out of 100)' of the report (p. 14) — a printed label, not read from the bar; re-read 10 October 2026 (close-out CR-16)\"},{\"t\":\"100\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Table 2.1 / Table 4.1 headers \\\"(out of 100)\\\"\"},{\"t\":\"1\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"1 April 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen\"},{\"t\":\"March 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2023-001\",\"loc\":\"cby-ye.com/news/481, dated 2023-03-20: \\\"تستمر من تاريخ 20 الى 26 مارس 2023م\\\"\"},{\"t\":\"March 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2025-001\",\"loc\":\"cby-ye.com/news/790, dated 2025-03-16: \\\"خلال الفترة من 16 إلى 22 مارس\\\"\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-16",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 80,
+   "col": 29,
+   "field": "VIS-FL-EVIDENCE-LADDER.value_states",
+   "old": "[{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"OECD/INFE 2023 report, Annex A data-collection table, p. 65 (PDF p. 65), row Yemen: sample size 1000\"},{\"t\":\"11 M\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen: \\\"11 March – 1 April 2023\\\"\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel (oecd.org .../financial literacy survey adults_annex d.xlsx), Table 4.1, row Yemen, \\\"Financial Well-Being Scores (out of 100)\\\"\"},{\"t\":\"42\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel, Table 2.1, row Yemen, \\\"Financial Literacy Score (out of 100)\\\"\"},{\"t\":\"100\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Table 2.1 / Table 4.1 headers \\\"(out of 100)\\\"\"},{\"t\":\"1\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"1 April 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen\"},{\"t\":\"March 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2023-001\",\"loc\":\"cby-ye.com/news/481, dated 2023-03-20: \\\"تستمر من تاريخ 20 الى 26 مارس 2023م\\\"\"},{\"t\":\"March 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2025-001\",\"loc\":\"cby-ye.com/news/790, dated 2025-03-16: \\\"خلال الفترة من 16 إلى 22 مارس\\\"\"}]",
+   "new": "[{\"t\":\"1,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"OECD/INFE 2023 report, Annex A data-collection table, p. 65 (PDF p. 65), row Yemen: sample size 1000\"},{\"t\":\"11 M\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen: \\\"11 March – 1 April 2023\\\"\"},{\"t\":\"15\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel (oecd.org .../financial literacy survey adults_annex d.xlsx), Table 4.1, row Yemen, \\\"Financial Well-Being Scores (out of 100)\\\"; the same value is printed as Yemen's data label in Figure 4.1 'Financial well-being' of the report (p. 49) — a printed label, not read from the bar; re-read 10 October 2026 (close-out CR-16)\"},{\"t\":\"42\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Excel, Table 2.1, row Yemen, \\\"Financial Literacy Score (out of 100)\\\"; the same value is printed as Yemen's data label in Figure 2.1 'Overall financial literacy, average scores (out of 100)' of the report (p. 14) — a printed label, not read from the bar; re-read 10 October 2026 (close-out CR-16)\"},{\"t\":\"100\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex D Table 2.1 / Table 4.1 headers \\\"(out of 100)\\\"\"},{\"t\":\"1\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"1 April 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-OECD-INFE-2023\",\"loc\":\"Annex A table p. 65, row Yemen\"},{\"t\":\"March 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2023-001\",\"loc\":\"cby-ye.com/news/481, dated 2023-03-20: \\\"تستمر من تاريخ 20 الى 26 مارس 2023م\\\"\"},{\"t\":\"March 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-GMW-2025-001\",\"loc\":\"cby-ye.com/news/790, dated 2025-03-16: \\\"خلال الفترة من 16 إلى 22 مارس\\\"\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-20",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 128,
+   "col": 4,
+   "field": "CON-038.c4",
+   "old": "CBY lists/hosts the law; Ministry of Justice public registry identifies Law No. 21/2008 while another government legal library identifies Law No. 40/2008.",
+   "new": "Law No. (21) of 2008 on the Bank Deposit Guarantee Institution: certified copy (Ministry of Legal Affairs) hosted by CBY-Aden, https://cby-ye.com/files/62c2edbaad8eb.pdf, p.1 title, p.12 signature (Sana'a, 23 April 2008). Governor's Decision No. (6) of 2025 (relocating the Institution's head office to Aden; signed 20 July 2025; https://cby-ye.com/files/687c9970b82d9.pdf, p.1) cites 'Law No. (40) of 2008' in its recital. Earlier registers: Ministry of Justice registry No. 21/2008; another government legal library No. 40/2008."
+  },
+  {
+   "finding": "CLOSE-2B:CR-20",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 128,
+   "col": 5,
+   "field": "CON-038.c5",
+   "old": "CROSS_GOVERNMENT_LEGAL_IDENTITY_CONFLICT",
+   "new": "RESOLVED__LAW_NO_21_OF_2008__RECITAL_DISCREPANCY_RECORDED"
+  },
+  {
+   "finding": "CLOSE-2B:CR-20",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 128,
+   "col": 6,
+   "field": "CON-038.c6",
+   "old": "HOLD_DEFINITIVE_LAW_NUMBER__VERIFY_GAZETTE_OR_AUTHORITATIVE_SCAN",
+   "new": "CLOSED__READ_IN_ORIGINAL_2026-10-10 (close-out CR-20)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-20",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 128,
+   "col": 7,
+   "field": "CON-038.c7",
+   "old": "Existence may be stated; definitive number and operative clauses remain held until source identity is resolved.",
+   "new": "The law may be cited as Law No. 21 of 2008, with the certified copy as locator. Decision No. 6 of 2025 relocates the Institution's head office to Aden; it does not establish the Institution. The recital's 'No. 40' is a discrepancy in that decision, not a second law."
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 24,
+   "field": "CLM-039.source_dependencies",
+   "old": "SRC-WB-WDI-REMIT-YEM-CURRENT; EP-WB-WDI-REMITTANCE-VINTAGE-K04; CON-045; DS-K04-REMIT-SOURCE-LENSES",
+   "new": "SRC-WB-WDI-REMIT-YEM-CURRENT; EP-WB-WDI-REMITTANCE-VINTAGE-K04; CON-045"
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 26,
+   "field": "CLM-039.lineage_state",
+   "old": "BOUND_PARTIAL",
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 22,
+   "field": "CLM-039.verification_en",
+   "old": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 23,
+   "field": "CLM-039.verification_ar",
+   "old": "تستند بعض أرقام هذا السجل إلى المصادر المدرجة في الصفحة، بينما لم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. وقبل إعادة استخدام رقم، راجع المصدر المرتبط به وتحقق من مطابقته. وإذا تعذرت مطابقته بمصدر أصلي، فلا تتعامل معه بوصفه رقمًا متحققًا منه.",
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 24,
+   "field": "CLM-046.source_dependencies",
+   "old": "SRC-AIDDATA-SAUDI-YEM-2015; EP-SAUDI-SUPPORT-FLOWSTATE-K04; DS-K04-SAUDI-SUPPORT-TRANSMISSION; SRC-SPA-SAU-CBY-DEPOSIT-2018-001; SRC-SPA-SAU-CBY-DEPOSIT-2023-001; SRC-SPA-SAU-BUDGET-2026-001",
+   "new": "SRC-AIDDATA-SAUDI-YEM-2015; EP-SAUDI-SUPPORT-FLOWSTATE-K04; SRC-SPA-SAU-CBY-DEPOSIT-2018-001; SRC-SPA-SAU-CBY-DEPOSIT-2023-001; SRC-SPA-SAU-BUDGET-2026-001"
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 26,
+   "field": "CLM-046.lineage_state",
+   "old": "BOUND_PARTIAL",
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 22,
+   "field": "CLM-046.verification_en",
+   "old": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 89,
+   "col": 23,
+   "field": "CLM-046.verification_ar",
+   "old": "تستند بعض أرقام هذا السجل إلى المصادر المدرجة في الصفحة، بينما لم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. وقبل إعادة استخدام رقم، راجع المصدر المرتبط به وتحقق من مطابقته. وإذا تعذرت مطابقته بمصدر أصلي، فلا تتعامل معه بوصفه رقمًا متحققًا منه.",
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 24,
+   "field": "CLM-056.source_dependencies",
+   "old": "SRC-SANAA-MFB-2024; SRC-SANAA-YR-2025-Q2-MFB; CON-057; DS-V041-STRICT-COUNSEL",
+   "new": "SRC-SANAA-MFB-2024; SRC-SANAA-YR-2025-Q2-MFB; CON-057"
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 26,
+   "field": "CLM-056.lineage_state",
+   "old": "BOUND_PARTIAL",
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 22,
+   "field": "CLM-056.verification_en",
+   "old": "Some figures in this record are drawn from the source(s) listed on this page; other inputs have not yet been linked to a specific original source. Check each figure against a listed source before reuse, and treat any figure you cannot match as unverified.",
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "CLOSE-2B:CR-09",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 23,
+   "field": "CLM-056.verification_ar",
+   "old": "تستند بعض أرقام هذا السجل إلى المصادر المدرجة في الصفحة، بينما لم تُربط مدخلات أخرى بعدُ بمصدر أصلي محدد. وقبل إعادة استخدام رقم، راجع المصدر المرتبط به وتحقق من مطابقته. وإذا تعذرت مطابقته بمصدر أصلي، فلا تتعامل معه بوصفه رقمًا متحققًا منه.",
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 6,
+   "field": "CLM-056.summary_en",
+   "old": "The 2024 Sana’a Center paper on microfinance banks attributes 91% to Al-Kuraimi's share of saver growth; the 2023 provider-level numerator, denominator and calculation have not been reproduced. A 2025 Yemen Review restates 91% as a share of active microfinance depositors. A share of growth and a share of the stock are different measures, so the 2025 stock-share wording is not supported by the evidence available here; it remains a secondary restatement pending primary 2023 provider data or an explicit source correction.",
+   "new": "The 2024 Sana’a Center paper on microfinance banks attributes 91% of saver growth to one microfinance bank; the 2023 provider-level numerator, denominator and calculation have not been reproduced, and a search on 10 October 2026 found no publication of the regulator or of the bank that states the figure. A 2025 Yemen Review restates 91% as a share of active microfinance depositors. A share of growth and a share of the stock are different measures, so the 2025 stock-share wording is not supported by the evidence available here; it remains a secondary restatement pending primary 2023 provider data or an explicit source correction. Because no primary public source states the figure, this resource does not name the bank."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 7,
+   "field": "CLM-056.summary_ar",
+   "old": "تنسب ورقة مركز صنعاء لعام 2024 عن بنوك التمويل الأصغر إلى الكريمي 91% من نمو المدخرين، ولم يُعَد إنتاج البسط وقاعدة الاحتساب والحساب على مستوى مقدمي الخدمة لعام 2023. وفي 2025 أعاد تقرير «Yemen Review» عرض نسبة 91% بوصفها حصة من المودعين النشطين في التمويل الأصغر. وحصة النمو وحصة الرصيد مقياسان مختلفان، لذلك لا تسند الأدلة المتاحة هنا صياغة 2025 بوصفها حصة من الرصيد، وتظل إعادة عرض ثانوية إلى أن تتاح بيانات أصلية لعام 2023 على مستوى مقدمي الخدمة أو يصدر تصحيح صريح من المصدر.",
+   "new": "تنسب ورقة مركز صنعاء لعام 2024 عن بنوك التمويل الأصغر إلى بنك واحد للتمويل الأصغر 91% من نمو المدخرين، ولم يُعَد إنتاج البسط وقاعدة الاحتساب والحساب على مستوى مقدمي الخدمة لعام 2023، ولم يعثر بحثٌ أُجري في 10 أكتوبر 2026 على منشور للجهة الرقابية أو للبنك نفسه يورد هذه النسبة. وفي 2025 أعاد تقرير «Yemen Review» عرض نسبة 91% بوصفها حصة من المودعين النشطين في التمويل الأصغر. وحصة النمو وحصة الرصيد مقياسان مختلفان، لذلك لا تسند الأدلة المتاحة هنا صياغة 2025 بوصفها حصة من الرصيد، وتظل إعادة عرض ثانوية إلى أن تتاح بيانات أصلية لعام 2023 على مستوى مقدمي الخدمة أو يصدر تصحيح صريح من المصدر. ولأن النسبة لا ترد في مصدر عام أصلي، لا يسمّي هذا المورد البنك."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 8,
+   "field": "CLM-056.definition_en",
+   "old": "The 91% share of growth in microfinance savers that a 2024 policy paper attributes to Al-Kuraimi; the 2023 provider-level numerator, denominator and calculation behind it have not been reproduced.",
+   "new": "The 91% share of growth in microfinance savers that a 2024 policy paper attributes to one microfinance bank; the 2023 provider-level numerator, denominator and calculation behind it have not been reproduced."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 9,
+   "field": "CLM-056.definition_ar",
+   "old": "نسبة 91% من نمو المدخرين في التمويل الأصغر التي تنسبها ورقة سياسات منشورة في 2024 إلى الكريمي؛ ولم يُعَد إنتاج البسط وقاعدة الاحتساب والحساب على مستوى مقدمي الخدمة لعام 2023 الذي تستند إليه.",
+   "new": "نسبة 91% من نمو المدخرين في التمويل الأصغر التي تنسبها ورقة سياسات منشورة في 2024 إلى بنك واحد للتمويل الأصغر؛ ولم يُعَد إنتاج البسط وقاعدة الاحتساب والحساب على مستوى مقدمي الخدمة لعام 2023 الذي تستند إليه."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 99,
+   "col": 29,
+   "field": "CLM-056.value_states",
+   "old": "[{\"t\":\"91%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-SANAA-MFB-2024\",\"loc\":\"Sana'a Center 2024 paper, paragraph beginning \\\"While the conflict has negatively impacted microfinance lending...\\\" (fn [9])\"}]",
+   "new": "[{\"t\":\"91%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-SANAA-MFB-2024\",\"loc\":\"Sana'a Center 2024 paper, paragraph beginning \\\"While the conflict has negatively impacted microfinance lending...\\\" (fn [9])\"},{\"t\":\"10 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "02_SITE_MAP",
+   "row": 66,
+   "col": 7,
+   "field": "/evidence/CLM-056/.meta_description_en",
+   "old": "A 2024 Sana’a Center paper attributes 91% of saver growth to Al-Kuraimi; the figure is not a verified 2023 depositor stock share.",
+   "new": "A 2024 Sana’a Center paper attributes 91% of saver growth to one microfinance bank; the figure is not a verified 2023 depositor stock share."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "02_SITE_MAP",
+   "row": 66,
+   "col": 8,
+   "field": "/evidence/CLM-056/.meta_description_ar",
+   "old": "تنسب ورقة مركز صنعاء لعام 2024 إلى الكريمي 91% من نمو المدخرين؛ وليست هذه حصة محققة من رصيد المودعين في 2023.",
+   "new": "تنسب ورقة مركز صنعاء لعام 2024 إلى بنك واحد للتمويل الأصغر 91% من نمو المدخرين؛ وليست هذه حصة محققة من رصيد المودعين في 2023."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 279,
+   "col": 5,
+   "field": "/readings/microfinance-structural-divergence/#s7.body_en",
+   "old": "A 2024 Sana’a Center paper attributes about 91% of saver growth over the period it analyses to Al-Kuraimi. That is a statement about the source of an increase. It is not, in this evidence base, a verified 2023 share of the total saver stock, and a later restatement that treats it as one is not used here. The case shows why the unit and the calculation base must travel with the number.",
+   "new": "A 2024 Sana’a Center paper attributes about 91% of saver growth over the period it analyses to one microfinance bank. That is a statement about the source of an increase. It is not, in this evidence base, a verified 2023 share of the total saver stock, and a later restatement that treats it as one is not used here. The case shows why the unit and the calculation base must travel with the number."
+  },
+  {
+   "finding": "CLOSE-2B:CR-19",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 279,
+   "col": 7,
+   "field": "/readings/microfinance-structural-divergence/#s7.body_ar",
+   "old": "تنسب ورقة لمركز صنعاء للدراسات الاستراتيجية صدرت في 2024 نحو 91% من نمو المدخرين خلال الفترة التي تحللها إلى بنك الكريمي. وهذا توصيف لمصدر الزيادة، وليس، في قاعدة الأدلة الحالية، حصة محققة من العدد الإجمالي للمدخرين في 2023؛ ولذلك لا تستخدم هذه القراءة إعادة عرض لاحقة تعاملها بوصفها حصة من الرصيد. والحالة مثال مباشر على ضرورة أن تبقى الوحدة وقاعدة الاحتساب ملازمتين للرقم.",
+   "new": "تنسب ورقة لمركز صنعاء للدراسات الاستراتيجية صدرت في 2024 نحو 91% من نمو المدخرين خلال الفترة التي تحللها إلى بنك واحد للتمويل الأصغر. وهذا توصيف لمصدر الزيادة، وليس، في قاعدة الأدلة الحالية، حصة محققة من العدد الإجمالي للمدخرين في 2023؛ ولذلك لا تستخدم هذه القراءة إعادة عرض لاحقة تعاملها بوصفها حصة من الرصيد. والحالة مثال مباشر على ضرورة أن تبقى الوحدة وقاعدة الاحتساب ملازمتين للرقم."
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 2,
+   "field": "SRC-CCY-PRESSURE-2026.primary_url",
+   "old": null,
+   "new": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 3,
+   "field": "SRC-CCY-PRESSURE-2026.additional_urls",
+   "old": null,
+   "new": "[\"https://reliefweb.int/attachments/329ba888-6c77-46c3-b920-e0ca0d5ab982/Economic%20Impact%20of%20Iran-US%20War%20on%20Yemen_May%202026.pdf\"]"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 6,
+   "field": "SRC-CCY-PRESSURE-2026.display_title",
+   "old": null,
+   "new": "Yemen Under Pressure: How the Iran-US Conflict Is Disrupting Trade, Prices, and Cash Access (May 2026)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 12,
+   "field": "SRC-CCY-PRESSURE-2026.display_title_ar",
+   "old": null,
+   "new": "اليمن تحت الضغط: كيف يُخلّ الصراع بين إيران والولايات المتحدة بالتجارة والأسعار والوصول إلى النقد (مايو 2026)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 7,
+   "field": "SRC-CCY-PRESSURE-2026.publisher",
+   "old": null,
+   "new": "Cash Consortium of Yemen (CCY)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 25,
+   "field": "SRC-CCY-PRESSURE-2026.publisher_ar",
+   "old": null,
+   "new": "Cash Consortium of Yemen (CCY)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 17,
+   "field": "SRC-CCY-PRESSURE-2026.issuer",
+   "old": null,
+   "new": "Cash Consortium of Yemen, with Crisis Analysis MENA/Europe (cover)"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 18,
+   "field": "SRC-CCY-PRESSURE-2026.hosting_platform",
+   "old": null,
+   "new": "ReliefWeb"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 11,
+   "field": "SRC-CCY-PRESSURE-2026.public_card_state",
+   "old": "LOCATOR_ONLY",
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 16,
+   "field": "SRC-CCY-PRESSURE-2026.non_public_locator_note",
+   "old": "USER_PROVIDED_FILE: Economic Impact of Iran-US War on Yemen_May 2026.pdf",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 22,
+   "field": "SRC-CCY-PRESSURE-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 26,
+   "field": "SRC-CCY-PRESSURE-2026.document_label",
+   "old": null,
+   "new": "Research or policy paper"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 27,
+   "field": "SRC-CCY-PRESSURE-2026.document_label_ar",
+   "old": null,
+   "new": "ورقة بحثية أو سياساتية"
+  },
+  {
+   "finding": "CLOSE-2B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 28,
+   "field": "SRC-CCY-PRESSURE-2026.document_date",
+   "old": null,
+   "new": "2026-05"
+  },
+  {
+   "finding": "CLOSE-2B:ED-035",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 216,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R216C7",
+   "old": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا، وتضم قائمته لعام 2026 لشركات الصرافة والحوالات 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتبين هذه المصادر من يحمل أي صفة رسمية لدى تلك السلطة في تاريخ محدد. أما التشغيل والنشاط والوصول وجودة الخدمة فتحتاج إلى أدلة إضافية.",
+   "new": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا، وتضم قائمته لعام 2026 لشركات الصرافة والحوالات 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وتبيّن هذه القوائم الأسماء والصفات الرسمية كما نشرتها تلك الجهة وفي حدود نطاقها؛ ولا يثبت تاريخ الاطلاع عليها وحده أن هذه الصفات كانت سارية في ذلك اليوم. أما التشغيل والنشاط والوصول وجودة الخدمة فتحتاج إلى أدلة إضافية."
+  },
+  {
+   "finding": "CLOSE-2B:ED-035",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 216,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R216C5",
+   "old": "The list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks, and its 2026 exchange and remittance roster lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These sources show who holds which formal status under that authority on a stated date. Operation, activity, reach and service quality require additional evidence.",
+   "new": "The list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks, and its 2026 exchange and remittance roster lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These lists show names and formal descriptions as that authority published them, within its scope; the date on which a list was checked does not, by itself, show that those descriptions were in force on that day. Operation, activity, reach and service quality need further evidence."
+  },
+  {
+   "finding": "CLOSE-2B:R33:AR-022",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 218,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R218C7",
+   "old": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا، منها 12 بنكًا مصنفة بنوكَ تمويل أصغر استنادًا إلى تسمياتها في المصدر. هذه أوضاع رسمية للإدراج والتصنيف؛ ولا تثبت أن كل مؤسسة تعمل حاليًا، أو أي الفروع نشطة، أو المنتجات المتاحة، أو الحصة السوقية، أو المشاركة في أنظمة الدفع، أو الوصول إلى الفئات الأقل خدمة.",
+   "new": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا. ويصف هذا المورد 12 منها بأنها بنوك تمويل أصغر استنادًا إلى أسمائها الواردة في القائمة، لا إلى تصنيف تنظيمي مستقل. والورود في القائمة إدراج رسمي لدى تلك الجهة؛ ولا يثبت أن كل بنك يعمل حاليًا، أو أي فروعه نشطة، أو المنتجات المتاحة، أو الحصة السوقية، أو المشاركة في أنظمة الدفع، أو الوصول إلى الفئات الأقل حصولًا على الخدمات."
+  },
+  {
+   "finding": "CLOSE-2B:R33:AR-022",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 217,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R217C5",
+   "old": "The list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks; 12 of them are classified as microfinance banks on the basis of their names in the source. These are facts about formal listing and classification. They do not establish whether every institution is operating, which branches are active, what products are available, market share, participation in payment systems or underserved-client reach.",
+   "new": "The list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks. This resource describes 12 of them as microfinance banks on the basis of their names in the list, not an independent regulatory classification. Appearing on the list is a formal listing by that authority; it does not establish whether every bank is operating, which branches are active, what products are available, market share, participation in payment systems or reach to underserved clients."
+  },
+  {
+   "finding": "CLOSE-2B:ED-036",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 346,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R346C7",
+   "old": "يحدد وصف المصدر 12 من البنوك الـ26 الواردة في قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، بوصفها بنوك تمويل أصغر، والورود في القائمة يثبت الإدراج لا التشغيل ولا مدى الانتشار. أما الأرقام التاريخية للتمويل الأصغر فمصدرها مجموعات من الجهات المُبلِّغة يتغير أعضاؤها — فمجموعة 2014 مثلًا تضم تسعة مقدمي خدمة — ولذلك لا تشكل أعداد مقدمي الخدمة وإجمالياتهم في فترات مختلفة سلسلة متصلة واحدة.",
+   "new": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا، يصف هذا المورد 12 منها بأنها بنوك تمويل أصغر استنادًا إلى أسمائها في القائمة؛ ولا يثبت هذا الوصف تصنيفًا تنظيميًا مستقلًا، ولا يثبت الورود في القائمة التشغيلَ ولا مدى الانتشار. أما الأرقام التاريخية للتمويل الأصغر فمصدرها مجموعات من الجهات المُبلِّغة يتغير أعضاؤها — فمجموعة 2014 مثلًا تضم تسعة مقدمي خدمة — ولذلك لا تشكل أعداد مقدمي الخدمة وإجمالياتهم في فترات مختلفة سلسلة متصلة واحدة."
+  },
+  {
+   "finding": "CLOSE-2B:ED-036",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 345,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R345C5",
+   "old": "Of the 26 banks on the list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, 12 are identified by the source label as microfinance banks; appearing on the list establishes listing, not operation or outreach. Historical microfinance figures come from provider reporting panels whose membership changes — the 2014 panel, for example, covers nine providers — so provider counts and totals from different periods are not one continuous series.",
+   "new": "Of the 26 banks on the list of licensed banks issued by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, this resource describes 12 as microfinance banks on the basis of their names in the list; that description is not an independent regulatory classification, and appearing on the list establishes listing, not operation or outreach. Historical microfinance figures come from provider reporting panels whose membership changes — the 2014 panel, for example, covers nine providers — so provider counts and totals from different periods are not one continuous series."
+  },
+  {
+   "finding": "CLOSE-2B:AR-022",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 6,
+   "field": "CLM-055.summary_en",
+   "old": "The list of licensed banks of the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks; 12 of them are classified as microfinance banks on the basis of their names in the source. This establishes a dated listing and classification only: being listed or licensed does not mean operating, active or reaching underserved clients.",
+   "new": "The list of licensed banks of the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, names 26 banks. This resource describes 12 of them as microfinance banks on the basis of their names in the list, not an independent regulatory classification. Appearing on the list is a formal listing by that authority: it does not mean operating, active or reaching underserved clients."
+  },
+  {
+   "finding": "CLOSE-2B:AR-022",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 7,
+   "field": "CLM-055.summary_ar",
+   "old": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا، منها 12 بنكًا مصنفة بنوكَ تمويل أصغر استنادًا إلى تسمياتها في المصدر. ويثبت ذلك الإدراج والتصنيف في تاريخ محدد فقط؛ فالإدراج أو الترخيص لا يعني التشغيل أو النشاط أو الوصول إلى الفئات الأقل حصولًا على الخدمات.",
+   "new": "تضم قائمة البنوك المرخصة الصادرة عن البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، 26 بنكًا. ويصف هذا المورد 12 منها بأنها بنوك تمويل أصغر استنادًا إلى أسمائها الواردة في القائمة، لا إلى تصنيف تنظيمي مستقل. والورود في القائمة إدراج رسمي لدى تلك الجهة، ولا يعني التشغيل أو النشاط أو الوصول إلى الفئات الأقل حصولًا على الخدمات."
+  },
+  {
+   "finding": "CLOSE-2B:AR-022",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 8,
+   "field": "CLM-055.definition_en",
+   "old": "The number of banks on the licensed-bank list of the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, that are classified as microfinance banks on the basis of their names in the list.",
+   "new": "The number of banks on the licensed-bank list of the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026, that this resource describes as microfinance banks on the basis of their names in the list."
+  },
+  {
+   "finding": "CLOSE-2B:AR-022",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 9,
+   "field": "CLM-055.definition_ar",
+   "old": "عدد البنوك الواردة في قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، والمصنفة بنوكَ تمويل أصغر استنادًا إلى تسمياتها في القائمة.",
+   "new": "عدد البنوك الواردة في قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، التي يصفها هذا المورد بأنها بنوك تمويل أصغر استنادًا إلى أسمائها في القائمة."
+  },
+  {
+   "finding": "CLOSE-2B:AR-022",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 14,
+   "field": "CLM-055.method_en",
+   "old": "A count of the banks named on the licensed-bank list published by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026; 12 of them are classified as microfinance banks on the basis of their names in the list. The list establishes listing or licensing by CBY-Aden; it does not by itself establish current operation, service availability or geographic reach.",
+   "new": "A count of the banks named on the licensed-bank list published by the Central Bank of Yemen – Aden (CBY-Aden), as checked on 3 October 2026. The list has no column that classifies banks by type; this resource counts as microfinance banks the 12 whose names include “microfinance” («للتمويل الأصغر»). The list establishes listing or licensing by CBY-Aden; it does not by itself establish current operation, service availability or geographic reach."
+  },
+  {
+   "finding": "CLOSE-2B:AR-022",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 15,
+   "field": "CLM-055.method_ar",
+   "old": "عدّ البنوك الواردة في قائمة البنوك المرخصة التي ينشرها البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026؛ ومنها 12 بنكًا مصنفة بنوكَ تمويل أصغر استنادًا إلى تسمياتها في القائمة. وتثبت القائمة الإدراج أو الترخيص لدى البنك المركزي في عدن، ولا تثبت بذاتها التشغيل الحالي أو توفر الخدمة أو الانتشار الجغرافي.",
+   "new": "عدّ البنوك الواردة في قائمة البنوك المرخصة التي ينشرها البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026. ولا تتضمن القائمة عمودًا يصنّف البنوك بحسب نوعها؛ ويعدّ هذا المورد البنوكَ الـ12 التي تتضمن أسماؤها عبارة «للتمويل الأصغر» بنوكَ تمويل أصغر. وتثبت القائمة الإدراج أو الترخيص لدى البنك المركزي في عدن، ولا تثبت بذاتها التشغيل الحالي أو توفر الخدمة أو الانتشار الجغرافي."
+  },
+  {
+   "finding": "CLOSE-2B:AR-022",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 98,
+   "col": 29,
+   "field": "CLM-055.value_states",
+   "old": "[{\"t\":\"12\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-BANKLIST-AR-2026-001\",\"loc\":\"https://cby-ye.com/files/6a665add29feb.pdf, single-page scan «كشف بالبنوك المرخصة بالجمهورية اليمنية», rows 1–26 (read by eye; no text layer)\"},{\"t\":\"26\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-BANKLIST-AR-2026-001\",\"loc\":\"https://cby-ye.com/files/6a665add29feb.pdf, single-page scan «كشف بالبنوك المرخصة بالجمهورية اليمنية», rows 1–26 (read by eye; no text layer)\"},{\"t\":\"3\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"3 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]",
+   "new": "[{\"t\":\"12\",\"k\":\"v\",\"s\":\"DERIVED\",\"src\":\"SRC-CBY-BANKLIST-AR-2026-001\",\"loc\":\"https://cby-ye.com/files/6a665add29feb.pdf, single-page scan «كشف بالبنوك المرخصة بالجمهورية اليمنية»: the list has no type column; count of the names containing «للتمويل الأصغر» / 'Microfinance' (rows 10, 11, 15, 17, 18, 19, 20, 22, 23, 24, 25, 26); computed by CauseWay; re-read 10 October 2026\"},{\"t\":\"26\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-BANKLIST-AR-2026-001\",\"loc\":\"https://cby-ye.com/files/6a665add29feb.pdf, single-page scan «كشف بالبنوك المرخصة بالجمهورية اليمنية», rows 1–26 (read by eye; no text layer)\"},{\"t\":\"3\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"3 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]"
+  },
+  {
+   "finding": "CLOSE-2B:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 2,
+   "field": "00_MASTER!r24c2",
+   "old": "167",
+   "new": 168
+  },
+  {
+   "finding": "CLOSE-2B:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 3,
+   "field": "00_MASTER!r24c3",
+   "old": "167",
+   "new": 168
+  },
+  {
+   "finding": "CLOSE-2B:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r15c4",
+   "old": "167",
+   "new": 168
+  },
+  {
+   "finding": "CLOSE-2B:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r15c3",
+   "old": "167",
+   "new": 168
+  }
+ ]
+}

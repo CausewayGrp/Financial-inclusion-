@@ -242,8 +242,9 @@ CONTROLS = [
      replace("1,329.2", "1,329", 0),
      "does not print its governed row value"),
     ("a drawn label shows a number the contract does not govern", "en/remittances/index.html",
-     replace('<text class="val" x="15.20%" y="150.5" text-anchor="start">1,329.2</text>',
-             '<text class="val" x="15.20%" y="150.5" text-anchor="start">1,329</text>'),
+     # the label's coordinates move with the layout (CLOSE-2B: two evidence states, not three), so the label is found by
+     # its governed value, not by its position
+     sub_once(r'(<text class="val" [^>]*>)1,329\.2(</text>)', r'\g<1>1,329\g<2>'),
      "draws a value label that is not a governed value"),
     # The figure declares the fallback on its own element and again on the block that carries it; the gate must read
     # the figure's own attribute, so the control breaks exactly that one.
@@ -559,9 +560,11 @@ CONTROLS = [
     ("a read value loses its locator", "site-src/content/evidence/evidence_objects.json",
      edit_states("CLM-001", lambda vs: [dict(e, loc="") if e["t"] == "11.9%" else e for e in vs]),
      "E2-READ CLM-001 value '11.9%' is READ without a source and locator"),
-    ("a value whose original was not opened loses its label", "en/evidence/CLM-049/index.html",
+    # CLOSE-2B re-read the July 2026 IMF release, so CLM-049 no longer carries an unreachable value; MF-ORIG-001+002 does
+    # (its SFD terms of reference stay unreachable)
+    ("a value whose original was not opened loses its label", "en/evidence/MF-ORIG-001+002/index.html",
      replace("not been re-read in the original", "been checked", 0),
-     "E2-READ en/evidence/CLM-049/ prints"),
+     "E2-READ en/evidence/MF-ORIG-001+002/ prints"),
     # RC-NOINDEX (owner decision B3): until release every page carries the pre-release noindex meta.
     ("a page loses its pre-release noindex", "en/people/index.html",
      replace('<meta name="robots" content="noindex, nofollow">', ""),
@@ -607,7 +610,8 @@ CONTROLS = [
      sub_once(r'<a class="tbtn lang" href="[^"]*" hreflang="en"', '<button type="button" class="tbtn lang"'),
      "RC-19 ar/payments/index.html the language switch or the menu is not a working link"),
     ("RC-19: the coverage figure is emphasised like the finding", "en/index.html",
-     replace("Areas holding about 23%", 'Areas holding about <b class="fnum">23%</b>'),
+     # AR-001 (CLOSE-2A) moved the coverage clause into the fieldwork sentence: "... and areas holding about 23% ..."
+     replace("areas holding about 23%", 'areas holding about <b class="fnum">23%</b>'),
      "RC-19 /en/ Home: a figure after the first sentence is emphasised like the finding"),
     ("RC-19: a social image stands for the retired address", "assets/social/evidence_NEG-EW-011__en.png",
      lambda t: t + "an image",

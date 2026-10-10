@@ -1090,40 +1090,36 @@
     "linked_routes": "/finance | /providers | /reforms | /payments",
     "interpretation_note": "Preserve the distinction between staff-level agreement, Management approval, policy implementation and observed outcome.",
     "period_ar": "16 يوليو 2026",
-    "verification_note_en": "The IMF press release could not be re-opened on 4 October 2026 (the IMF website refuses automated requests); this entry has not been re-read in the original for this edition.",
-    "verification_note_ar": "تعذّرت إعادة فتح البيان الصحفي لصندوق النقد الدولي في 4 أكتوبر 2026 (يرفض موقع الصندوق الطلبات الآلية)، فلم تُعَد في هذا الإصدار قراءةُ هذا المدخل في الأصل.",
+    "verification_note_en": null,
+    "verification_note_ar": null,
     "value_states": [
       {
         "t": "16 July 2026",
         "k": "d",
-        "s": "UNREACHABLE",
+        "s": "READ",
         "src": "SRC-IMF-YEM-SMP-2026",
-        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
-        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+        "loc": "IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)"
       },
       {
         "t": "18-month",
         "k": "v",
-        "s": "UNREACHABLE",
+        "s": "READ",
         "src": "SRC-IMF-YEM-SMP-2026",
-        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
-        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+        "loc": "IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)"
       },
       {
         "t": "subject to IMF Management approval",
         "k": "v",
-        "s": "UNREACHABLE",
+        "s": "READ",
         "src": "SRC-IMF-YEM-SMP-2026",
-        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
-        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+        "loc": "IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)"
       },
       {
         "t": "will not result in an Executive Board discussion",
         "k": "v",
-        "s": "UNREACHABLE",
+        "s": "READ",
         "src": "SRC-IMF-YEM-SMP-2026",
-        "loc": "imf.org/en/news/articles/2026/07/16/pr26249-... : curl 403 (also /en/News/ casing), WebFetch 403, Wayback reset, archive.org availability API: no snapshot. Only a third-party mirror (Mirage News, src/mirage_imf_yemen_smp.html) was seen - no",
-        "why": "imf.org refuses automated requests (HTTP 403); no archive copy reachable"
+        "loc": "IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)"
       }
     ]
   },

@@ -62,13 +62,13 @@
     "object": "External-sector remittances",
     "publisher": "IMF / Yemeni authorities",
     "metric_or_scope": "RMT-001",
-    "reference_period": "Reported history 2018–2024 (staff calculations); estimate 2025; projection 2026–2030",
+    "reference_period": "Model-based estimates 2018–2024 (staff report); estimate 2025; projection 2026–2030",
     "universe": "External-sector macro concept; IMF analytical scope for areas under the internationally recognized government",
-    "method": "Source-reported/staff calculations",
+    "method": "Source-published estimates: a demographic and behavioural model with a 33% allocation to areas under the internationally recognized government (IMF CR 26/80, Annex IV); supplement estimate and projections",
     "critical_limit": "Not payment-system settlement throughput and not directly measured hawala volume",
     "authority_class": "PRIMARY_OFFICIAL_MACRO",
     "route": "/remittances/",
-    "display_requirements": "Reported-history, estimate and projection states must be visually separate, and the line breaks where the source document changes.",
+    "display_requirements": "Estimate and projection states must be visually distinct, and the line breaks where the source document changes.",
     "publisher_ar": "صندوق النقد الدولي / السلطات اليمنية",
     "route_list": [
       "/remittances/"

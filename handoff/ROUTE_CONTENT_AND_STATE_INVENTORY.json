@@ -2,23 +2,23 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "eaa603586d7600e639f569b85cf72a535598bc6062148c9a03bb3c43cee39150",
-  "page_specs_sha256": "55d5d0903d8862c223d16901db6f91f2c2b5350bbb5924fbe24fdc4fa3f44b2a",
+  "production_master_sha256": "7c70b5f766b8ebb0e2a075b64137586cc95623c3c072e38f48a2a036d8e511c9",
+  "page_specs_sha256": "36fd79caab231cd22ce85ed470ab074931aa3697dadd391cca884ff0f1c2aa04",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
   "evidence_records": 110,
   "public_claims": 60,
   "chronology_events": 23,
-  "sources": 167,
-  "public_locators": 156,
+  "sources": 168,
+  "public_locators": 158,
   "curated_resources": 28,
   "readings": 11,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 36,
   "evidence_passports": 55,
-  "search_records": 465,
+  "search_records": 467,
   "page_specs": 144
  },
  "projection_roles": {
@@ -506,6 +506,7 @@
      "SRC-IMF-BPM6-COMP-GUIDE",
      "SRC-IMF-BPM7-IMPLEMENTATION",
      "SRC-IMF-YEM-SMP-2026",
+     "SRC-CCY-PRESSURE-2026",
      "SRC-AIDDATA-SAUDI-YEM-2015",
      "SRC-LIT-INVEST-ISLAMIC-FI-2024",
      "SRC-LIT-OEB-FX-PRICES-2025",
@@ -549,7 +550,8 @@
      "SRC-CBY-DEC-23-2024-001",
      "SRC-AMB-MFB-SUPERVISION-2026",
      "SRC-SANAA-CTR-EMONEY-2022",
-     "SRC-SANAA-CTR-MFB-2024"
+     "SRC-SANAA-CTR-MFB-2024",
+     "SRC-IMF-YEM-SMP-2026-APPROVAL"
     ],
     "displayed_sources_without_document_type": [
      "SRC-SFD-MF-HISTORY-TOR-2012-001",
@@ -668,7 +670,7 @@
     "MA-006"
    ],
    "source_ids": [],
-   "source_references": 37,
+   "source_references": 38,
    "next_actions": [
     "/evidence/compare/",
     "/data/",
@@ -1022,8 +1024,8 @@
     "en": "dist/en/evidence/CLM-007/index.html",
     "ar": "dist/ar/evidence/CLM-007/index.html"
    },
-   "title_en": "IMF remittance series: reported history, estimates and projections kept separate",
-   "title_ar": "سلسلة الحوالات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة",
+   "title_en": "IMF remittance series: model-based estimates, a later estimate and projections kept separate",
+   "title_ar": "سلسلة الحوالات لدى صندوق النقد الدولي: التقديرات القائمة على نموذج والتقدير اللاحق والتوقعات منفصلة",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2028,8 +2030,8 @@
    "source_references": 1,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "BOUND_PARTIAL",
-   "verification_state": "PARTIALLY_RESOLVED",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
    "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
@@ -2149,12 +2151,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2245,8 +2247,8 @@
    "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "BOUND_PARTIAL",
-   "verification_state": "PARTIALLY_RESOLVED",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
    "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
@@ -2324,8 +2326,8 @@
     "en": "dist/en/evidence/CLM-049/index.html",
     "ar": "dist/ar/evidence/CLM-049/index.html"
    },
-   "title_en": "IMF Staff-Monitored Program (SMP) for Yemen: staff-level agreement of July 2026, subject to Management approval",
-   "title_ar": "برنامج يراقبه خبراء صندوق النقد الدولي (SMP) لليمن: اتفاق على مستوى الخبراء في يوليو 2026، مشروط بموافقة الإدارة",
+   "title_en": "IMF Staff-Monitored Program (SMP) for Yemen: approved by IMF Management on 7 October 2026, with no IMF financing",
+   "title_ar": "البرنامج الذي يراقبه خبراء صندوق النقد الدولي (SMP) لليمن: وافقت عليه إدارة الصندوق في 7 أكتوبر 2026، من دون تمويل من الصندوق",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -2335,12 +2337,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2555,8 +2557,8 @@
    "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "BOUND_PARTIAL",
-   "verification_state": "PARTIALLY_RESOLVED",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
    "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
@@ -2867,7 +2869,7 @@
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED_SOME_WITHOUT_PUBLIC_LOCATOR",
-   "public_sources_listed": 4,
+   "public_sources_listed": 5,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4133,8 +4135,8 @@
     "en": "dist/en/evidence/VIS-REMITTANCE-MACRO/index.html",
     "ar": "dist/ar/evidence/VIS-REMITTANCE-MACRO/index.html"
    },
-   "title_en": "Remittances — IMF-reported history, estimate and projections",
-   "title_ar": "الحوالات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+   "title_en": "Remittances — IMF estimates and projections, by source document",
+   "title_ar": "الحوالات: تقديرات صندوق النقد الدولي وتوقعاته بحسب الوثيقة المصدر",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -4864,7 +4866,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 43,
+   "source_references": 44,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -5300,7 +5302,7 @@
     "SRC-CBY-AR2024-BOP",
     "SRC-CBY-AR2025-BOP"
    ],
-   "source_references": 7,
+   "source_references": 8,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5395,7 +5397,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 40,
+   "source_references": 41,
    "next_actions": [
     "/evidence/CLM-011/"
    ],
@@ -5452,7 +5454,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 17,
+   "source_references": 18,
    "next_actions": [
     "/evidence/CLM-007/"
    ],
@@ -5735,8 +5737,7 @@
    }
   ],
   "evidence_lineage_states": {
-   "BOUND_EXACT": 93,
-   "BOUND_PARTIAL": 3,
+   "BOUND_EXACT": 96,
    "COMPOSITE_OF_OBJECTS": 13,
    "FRAMING_NO_FACT": 1
   },
@@ -5784,10 +5785,12 @@
      "CLM-036",
      "CLM-037",
      "CLM-038",
+     "CLM-039",
      "CLM-040",
      "CLM-041",
      "CLM-042",
      "CLM-043",
+     "CLM-046",
      "CLM-047",
      "CLM-048",
      "CLM-049",
@@ -5797,6 +5800,7 @@
      "CLM-053",
      "CLM-054",
      "CLM-055",
+     "CLM-056",
      "CLM-057",
      "CLM-058",
      "CLM-059",
@@ -5855,11 +5859,7 @@
     "ui_ids": [
      "UI-VERIFY-PARTIAL"
     ],
-    "records": [
-     "CLM-039",
-     "CLM-046",
-     "CLM-056"
-    ]
+    "records": []
    },
    "COMPOSITE_OF_OBJECTS": {
     "meaning": "Member Evidence Records listed instead of sources, with the composite statement",

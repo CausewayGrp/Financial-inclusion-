@@ -1,1808 +1,1808 @@
 {
- "schema_version": "1.0",
- "contract_id": "VISUAL-DESIGN-CONTRACT",
- "decided_in": "Pre-Tranche-C P3 (audit/P3_VISUAL_DESIGN_READINESS.md) | Tranche C TC-E (VIS-01..VIS-21)",
- "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
- "tiers": {
-  "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
-  "CORE_ANALYTICAL": "A standard chart form carrying governed values a reader needs. Gets a full data contract.",
-  "SUPPORTING": "Secondary diagram or state figure; may be drawn once signature and core visuals are done. Its governed text alternative is the complete content until then.",
-  "TABLE_TEXT_FIRST": "Rendered as the governed ordered text or a table. A drawn chart would add no truth or would need data the Master does not hold; the promotion condition is stated.",
-  "RETIRE_FROM_DESIGN": "Not drawn. The Evidence Record and its text stay; Design does not build a chart for it."
- },
- "grammar": {
-  "rule": "Colour is never the only carrier. Every state below is carried by at least two of: mark shape or fill, line style, a direct text label from the governed UI-VIS copy, and position. States never fade with age (age is not invalidity) and never use red/amber/green.",
-  "evidence_states": [
-   {
-    "token": "MEASURED",
-    "ui_id": "UI-VIS-STATE-MEASURED",
-    "mark": "filled mark",
-    "line": "solid",
-    "label": "direct label on first use"
-   },
-   {
-    "token": "REPORTED",
-    "ui_id": "UI-VIS-STATE-REPORTED",
-    "mark": "filled mark",
-    "line": "solid",
-    "label": "direct label on first use"
-   },
-   {
-    "token": "ADMINISTRATIVE",
-    "ui_id": "UI-VIS-STATE-ADMINISTRATIVE",
-    "mark": "filled square mark",
-    "line": "solid",
-    "label": "direct label on first use"
-   },
-   {
-    "token": "DERIVED",
-    "ui_id": "UI-VIS-STATE-DERIVED",
-    "mark": "bracket or difference annotation, never a bar of its own",
-    "line": "none",
-    "label": "value and the word 'calculated'"
-   },
-   {
-    "token": "HISTORICAL",
-    "ui_id": "UI-VIS-STATE-HISTORICAL",
-    "mark": "as its evidence state",
-    "line": "as its evidence state",
-    "label": "period printed on the mark; no fading"
-   },
-   {
-    "token": "PROGRAMME",
-    "ui_id": "UI-VIS-STATE-PROGRAMME",
-    "mark": "outlined mark inside a labelled programme frame",
-    "line": "none",
-    "label": "programme universe printed"
-   },
-   {
-    "token": "ESTIMATED",
-    "ui_id": "UI-VIS-STATE-ESTIMATED",
-    "mark": "hollow mark",
-    "line": "none or dotted",
-    "label": "direct label"
-   },
-   {
-    "token": "PROJECTED",
-    "ui_id": "UI-VIS-STATE-PROJECTED",
-    "mark": "hollow mark",
-    "line": "dashed",
-    "label": "direct label"
-   },
-   {
-    "token": "PARTIAL",
-    "ui_id": "UI-VIS-STATE-PARTIAL",
-    "mark": "half-filled mark",
-    "line": "as its evidence state",
-    "label": "universe printed beside the mark"
-   },
-   {
-    "token": "UNKNOWN",
-    "ui_id": "UI-VIS-STATE-UNKNOWN",
-    "mark": "empty cell with the word, never a zero-height bar or blank",
-    "line": "none",
-    "label": "always printed"
-   }
-  ],
-  "structure_markers": [
-   {
-    "token": "BREAK_VINTAGE",
-    "ui_id": "UI-VIS-BREAK-VINTAGE",
-    "draw": "line stops; labelled gap on the time axis; the two documents are named on either side"
-   },
-   {
-    "token": "BREAK_UNIVERSE",
-    "ui_id": "UI-VIS-BREAK-UNIVERSE",
-    "draw": "line stops; labelled vertical rule; no connecting segment"
-   },
-   {
-    "token": "SAME_YEAR_REVISION",
-    "ui_id": "UI-VIS-SAME-YEAR-REVISION",
-    "draw": "both values at the same position on the time axis, keyed by publication, never as consecutive points"
-   },
-   {
-    "token": "MISSING",
-    "ui_id": "UI-VIS-MISSING",
-    "draw": "gap in the line with a labelled empty slot; never interpolated, never zero"
-   },
-   {
-    "token": "DISAGREEMENT",
-    "ui_id": "UI-VIS-DISAGREEMENT",
-    "draw": "neutral note mark (†) on every affected period, with both figures in the note; applied to every flagged row, not only the largest"
-   },
-   {
-    "token": "TARGET",
-    "ui_id": "UI-VIS-TARGET",
-    "draw": "outlined marker at the target date; never a progress bar unless the comparator's compatibility is governed as direct"
-   },
-   {
-    "token": "RESULT",
-    "ui_id": "UI-VIS-RESULT",
-    "draw": "filled marker; when no result is governed, an UNKNOWN cell"
-   },
-   {
-    "token": "NOT_COMPARABLE",
-    "ui_id": "UI-VIS-NOT-COMPARABLE",
-    "draw": "values in separate panels or axes with the label between them"
-   },
-   {
-    "token": "NOMINAL",
-    "ui_id": "UI-VIS-NOMINAL",
-    "draw": "label on the value axis title, always visible"
-   },
-   {
-    "token": "WITHHELD",
-    "ui_id": "UI-VIS-WITHHELD",
-    "draw": "no value mark and no number: the slot keeps its position and carries the governed label in place of the value; never a zero, an empty bar, an estimate or a faded mark"
-   }
-  ],
-  "chain": {
-   "rule": "Rule-to-outcome chains run top to bottom in both languages. A step is EVIDENCED only when a governed row supports it; otherwise it is OPEN. OPEN is not failure and carries no colour of warning. Activity counts (transactions, values) evidence OPERATION, not USE: use needs a person- or firm-level measure.",
-   "steps": [
-    "UI-VIS-CHAIN-RULE",
-    "UI-VIS-CHAIN-IMPLEMENTATION",
-    "UI-VIS-CHAIN-OPERATION",
-    "UI-VIS-CHAIN-ACCESS",
-    "UI-VIS-CHAIN-USE",
-    "UI-VIS-CHAIN-QUALITY",
-    "UI-VIS-CHAIN-OUTCOME"
-   ],
-   "states": {
-    "EVIDENCED": "UI-VIS-CHAIN-EVIDENCED",
-    "OPEN": "UI-VIS-CHAIN-OPEN"
-   }
-  }
- },
- "display_labels": {
-  "decided_in": "Pre-Tranche-C P4 (independent verification V-D5)",
-  "rule": "Every category, series, lane, unit, event and state value that a SIGNATURE or CORE_ANALYTICAL chart prints is mapped here to governed interface copy (04 UI-VIS-CAT-*, UI-VIS-UNIT-*). The generator adds <field>_label {en, ar, ui_id} to the value or record and stops if a printed value has no label. Temporal values (years, ISO months and dates) are formatted by locale and are not labelled; fields listed as encoding_only select a mark or a chain step and are never printed. A spec may also derive a second label from a field (derived_labels, e.g. the 'is not' line of a payment object) and name governed in-frame sentences (frame_labels); both are resolved from 04 in both languages.",
-  "printed_fields": [
-   "x",
-   "series_label",
-   "lane",
-   "unit",
-   "label",
-   "group",
-   "class",
-   "state",
-   "authority",
-   "count_state",
-   "named",
-   "events",
-   "limit"
-  ],
-  "namespaces": {
-   "findex_group": {
-    "total": "UI-VIS-CAT-FINDEX-TOTAL",
-    "female": "UI-VIS-CAT-FINDEX-FEMALE",
-    "male": "UI-VIS-CAT-FINDEX-MALE",
-    "poorest 40%": "UI-VIS-CAT-FINDEX-POOREST40",
-    "richest 60%": "UI-VIS-CAT-FINDEX-RICHEST60",
-    "primary education or less": "UI-VIS-CAT-FINDEX-PRIMARY-EDU",
-    "secondary education or more": "UI-VIS-CAT-FINDEX-SECONDARY-EDU",
-    "ages 15-24": "UI-VIS-CAT-FINDEX-AGE-15-24",
-    "ages 25+": "UI-VIS-CAT-FINDEX-AGE-25-PLUS"
-   },
-   "series": {
-    "CBY_ANNUAL_REPORT_2024": "UI-VIS-CAT-SERIES-CBY-AR2024",
-    "CBY_ANNUAL_REPORT_2025": "UI-VIS-CAT-SERIES-CBY-AR2025",
-    "2025_ARTICLE_IV_STAFF_REPORT": "UI-VIS-CAT-SERIES-IMF-AIV2025",
-    "2025_ARTICLE_IV_SUPPLEMENTARY_REVISION": "UI-VIS-CAT-SERIES-IMF-AIV2025-SUPP"
-   },
-   "unit": {
-    "USD million": "UI-VIS-UNIT-USD-MILLION",
-    "count": "UI-VIS-UNIT-COUNT",
-    "percent of population ages 15+": "UI-VIS-UNIT-PCT-ADULTS",
-    "percent of send amount": "UI-VIS-UNIT-PCT-SEND",
-    "percent": "UI-VIS-UNIT-PCT",
-    "percentage points": "UI-VIS-UNIT-PP",
-    "source-listed rows": "UI-VIS-UNIT-SOURCE-ROWS",
-    "e-wallets": "UI-VIS-UNIT-EWALLETS",
-    "licensed e-wallets": "UI-VIS-UNIT-LICENSED-EWALLETS",
-    "event participants": "UI-VIS-UNIT-EVENT-PARTICIPANTS",
-    "project-defined access points": "UI-VIS-UNIT-PROJECT-ACCESS-POINTS",
-    "borrowers": "UI-VIS-UNIT-BORROWERS",
-    "savers": "UI-VIS-UNIT-SAVERS",
-    "YER million": "UI-VIS-UNIT-YER-MILLION",
-    "YER_million": "UI-VIS-UNIT-YER-MILLION",
-    "index, 2021 = 100": "UI-VIS-UNIT-INDEX-2021",
-    "percent of population ages 15-24": "UI-VIS-UNIT-PCT-AGES-15-24",
-    "percent of population ages 25+": "UI-VIS-UNIT-PCT-AGES-25-PLUS"
-   },
-   "corridor": {
-    "Saudi Arabia": "UI-VIS-CAT-CORRIDOR-SA",
-    "United Arab Emirates": "UI-VIS-CAT-CORRIDOR-AE"
-   },
-   "amount_sent": {
-    "200": "UI-VIS-CAT-AMOUNT-200",
-    "500": "UI-VIS-CAT-AMOUNT-500"
-   },
-   "payment_object": {
-    "IND-0001": "UI-VIS-CAT-PAY-CARDS",
-    "IND-0002": "UI-VIS-CAT-PAY-POS-TERMINALS",
-    "IND-0003": "UI-VIS-CAT-PAY-POS-TRANSACTIONS",
-    "IND-0006": "UI-VIS-CAT-PAY-ATMS",
-    "IND-0010": "UI-VIS-CAT-PAY-EWALLETS",
-    "IND-0011": "UI-VIS-CAT-PAY-EWALLET-SUBSCRIBERS",
-    "IND-0017": "UI-VIS-CAT-PAY-ACCOUNTS"
-   },
-   "firm_finance": {
-    "Formal establishments reporting a line of credit": "UI-VIS-CAT-FIRM-CREDIT-LINE",
-    "Private commercial banks": "UI-VIS-CAT-FIRM-LOAN-PRIVATE-BANKS",
-    "State-owned bank/government agency": "UI-VIS-CAT-FIRM-LOAN-STATE",
-    "Non-bank financial institution / microfinance": "UI-VIS-CAT-FIRM-LOAN-NONBANK",
-    "Other non-financial institution": "UI-VIS-CAT-FIRM-LOAN-OTHER"
-   },
-   "firm_challenge": {
-    "Business challenge: Electricity": "UI-VIS-CAT-FIRM-CH-ELECTRICITY",
-    "Business challenge: Fuel shortages": "UI-VIS-CAT-FIRM-CH-FUEL",
-    "Business challenge: Transport/road blockade": "UI-VIS-CAT-FIRM-CH-TRANSPORT",
-    "Business challenge: Tax administration/rates": "UI-VIS-CAT-FIRM-CH-TAX",
-    "Business challenge: Political instability": "UI-VIS-CAT-FIRM-CH-POLITICAL",
-    "Business challenge: Access to finance": "UI-VIS-CAT-FIRM-CH-FINANCE",
-    "Business challenge: Siege": "UI-VIS-CAT-FIRM-CH-SIEGE",
-    "Business challenge: Informal competitor practices": "UI-VIS-CAT-FIRM-CH-INFORMAL",
-    "Business challenge: Labor regulations": "UI-VIS-CAT-FIRM-CH-LABOUR",
-    "Business challenge: Customs/trade regulation": "UI-VIS-CAT-FIRM-CH-CUSTOMS",
-    "Business challenge: Corruption": "UI-VIS-CAT-FIRM-CH-CORRUPTION",
-    "Business challenge: Land": "UI-VIS-CAT-FIRM-CH-LAND",
-    "Business challenge: Business licensing": "UI-VIS-CAT-FIRM-CH-LICENSING",
-    "Business challenge: Inadequately educated workforce": "UI-VIS-CAT-FIRM-CH-WORKFORCE",
-    "Business challenge: Courts": "UI-VIS-CAT-FIRM-CH-COURTS",
-    "Business challenge: Crime/theft/disorder": "UI-VIS-CAT-FIRM-CH-CRIME"
-   },
-   "mfi_lane": {
-    "borrowers": "UI-VIS-CAT-MFI-BORROWERS",
-    "savers": "UI-VIS-CAT-MFI-SAVERS",
-    "portfolio": "UI-VIS-CAT-MFI-PORTFOLIO"
-   },
-   "event": {
-    "Unified domestic transfer network": "UI-VIS-CAT-EVT-UNIFIED-NETWORK",
-    "FMIIP effective": "UI-VIS-CAT-EVT-FMIIP-START",
-    "FMIIP approved": "UI-VIS-CAT-EVT-FMIIP-APPROVAL",
-    "Fast Payment System": "UI-VIS-CAT-EVT-FPS",
-    "RTGS + CBY core banking": "UI-VIS-CAT-EVT-RTGS-CORE",
-    "Access-point database and usage support": "UI-VIS-CAT-EVT-ACCESS-DB",
-    "Unified network as main transfer channel": "UI-VIS-CAT-EVT-NETWORK-MAIN",
-    "National QR + e-wallet interconnection + FPS operator participation": "UI-VIS-CAT-EVT-QR-INTEROP",
-    "Digital-payment exhibition and unified-network activity signal": "UI-VIS-CAT-EVT-EXHIBITION",
-    "Restructuring, capital increase and broader bank shareholder base": "UI-VIS-CAT-EVT-NETWORK-COMPANY",
-    "Founding assembly of Yemen Payments and Clearing Company": "UI-VIS-CAT-EVT-YPCC-FOUNDING",
-    "First YPCC board meeting": "UI-VIS-CAT-EVT-YPCC-BOARD"
-   },
-   "authority": {
-    "Central Bank of Yemen — Aden": "UI-VIS-CAT-AUTH-CBY-ADEN"
-   },
-   "provider_class": {
-    "BANKS_ALL_TYPES": "UI-VIS-CAT-PRV-CLASS-BANKS",
-    "EXCHANGE_COMPANIES_ESTABLISHMENTS_AND_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-CLASS-EXCHANGE",
-    "E_WALLETS_OR_E_MONEY_SERVICES_AS_CBY_REPORTED": "UI-VIS-CAT-PRV-CLASS-EWALLETS",
-    "NON_BANK_MICROFINANCE_INSTITUTIONS_AND_PROGRAMMES": "UI-VIS-CAT-PRV-CLASS-MFI"
-   },
-   "provider_count_state": {
-    "PRIMARY_CURRENT_LIST_VERIFIED": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST",
-    "SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
-    "MULTIPLE_PRIMARY_DATED_COUNTS_WITH_DIFFERENT_WORDING": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
-    "MEMBERSHIP_PAGES_ONLY": "UI-VIS-CAT-PRV-COUNT-MEMBERSHIP"
-   },
-   "provider_named_state": {
-    "COMPLETE_FOR_SOURCE_LIST": "UI-VIS-CAT-PRV-NAMED-COMPLETE",
-    "COMPLETE_CATEGORY_COUNTS__ROW_LEVEL_NAMES_NOT_YET_NORMALIZED_IN_PROVIDER_MASTER": "UI-VIS-CAT-PRV-NAMED-COUNTS-ONLY",
-    "POSITIVE_NAMES_NOT_CONTROLLED": "UI-VIS-CAT-PRV-NAMED-NONE",
-    "PARTIAL_NETWORK_MEMBERSHIP_NOT_REGULATORY_UNIVERSE": "UI-VIS-CAT-PRV-NAMED-PARTIAL"
-   },
-   "provider_event_overlay": {
-    "NO_BANK_STATUS_EVENT_OVERLAY_APPLIED_IN_THIS_UNIT": "UI-VIS-CAT-PRV-EVENTS-NONE-APPLIED",
-    "SELECTED_2026_STATUS_OVERLAY__LATER_SUSPENSION_CLOSURE_EVENTS_MUST_NOT_BE_SUBTRACTED_MECHANICALLY": "UI-VIS-CAT-PRV-EVENTS-SELECTED-2026",
-    "2024_NEGATIVE_AUTHORITY + 72_WALLET_COUNT_RECON__NO_POSITIVE_CURRENT_STATUS_LEDGER": "UI-VIS-CAT-PRV-EVENTS-WALLETS",
-    "NONE": "UI-VIS-CAT-PRV-EVENTS-NONE"
-   },
-   "provider_limit": {
-    "List presence proves licensing/listing only; operation is not inferred.": "UI-VIS-CAT-PRV-LIMIT-BANKS",
-    "442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
-    "Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
-    "YMN membership presence is not licence or operation verification and is not a complete national universe.": "UI-VIS-CAT-PRV-LIMIT-MFI"
-   },
-   "provider_event_class": {
-    "E_WALLET_OR_ELECTRONIC_PAYMENT_SERVICE": "UI-VIS-CAT-PRV-EVCLASS-EWALLET",
-    "EXCHANGE_COMPANY_OR_ESTABLISHMENT": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-OR-EST",
-    "EXCHANGE_ESTABLISHMENT_AND_REMITTANCE_AGENT": "UI-VIS-CAT-PRV-EVCLASS-EST-AGENT",
-    "EXCHANGE_COMPANY_ESTABLISHMENT_AND_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-EST-AGENTS",
-    "EXCHANGE_BRANCH": "UI-VIS-CAT-PRV-EVCLASS-BRANCH",
-    "EXCHANGE_ESTABLISHMENT": "UI-VIS-CAT-PRV-EVCLASS-ESTABLISHMENT",
-    "REMITTANCE_AGENT": "UI-VIS-CAT-PRV-EVCLASS-AGENT",
-    "EXCHANGE_COMPANY": "UI-VIS-CAT-PRV-EVCLASS-COMPANY",
-    "EXCHANGE_COMPANY_ESTABLISHMENTS_AND_REMITTANCE_AGENT": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-ESTS-AGENT"
-   },
-   "provider_status": {
-    "PROHIBITED_DEALING__UNLICENSED_AS_SOURCE_DATED": "UI-VIS-CAT-PRV-STATUS-PROHIBITED",
-    "LICENCE_SUSPENSION_AND_CLOSURE_EVENT": "UI-VIS-CAT-PRV-STATUS-SUSPENDED",
-    "LICENCE_WITHDRAWAL_EVENT": "UI-VIS-CAT-PRV-STATUS-WITHDRAWN",
-    "UNLICENSED_AS_NAMED_IN_SOURCE_ON_SOURCE_DATE": "UI-VIS-CAT-PRV-STATUS-NAMED-UNLICENSED",
-    "PRIMARY_ADMINISTRATIVE_COUNT": "UI-VIS-CAT-PRV-STATUS-ADMIN-COUNT",
-    "PRIMARY_OFFICIAL_DATED_LICENSING_STATEMENT": "UI-VIS-CAT-PRV-STATUS-LICENSING-STATEMENT",
-    "PRIMARY_OFFICIAL_EVENT_PARTICIPATION": "UI-VIS-CAT-PRV-STATUS-EVENT-PARTICIPATION"
-   },
-   "payment_object_not": {
-    "IND-0001": "UI-VIS-NOT-PAY-CARDS",
-    "IND-0017": "UI-VIS-NOT-PAY-ACCOUNTS",
-    "IND-0010": "UI-VIS-NOT-PAY-EWALLETS",
-    "IND-0011": "UI-VIS-NOT-PAY-EWALLET-SUBSCRIBERS",
-    "IND-0006": "UI-VIS-NOT-PAY-ATMS",
-    "IND-0002": "UI-VIS-NOT-PAY-POS-TERMINALS",
-    "IND-0003": "UI-VIS-NOT-PAY-POS-TRANSACTIONS"
-   },
-   "findex_metric": {
-    "Account ownership at a financial institution or with a mobile-money-service provider": "UI-VIS-CAT-METRIC-ACCOUNT-OWNERSHIP",
-    "Account ownership": "UI-VIS-CAT-METRIC-ACCOUNT-OWNERSHIP"
-   }
-  }
- },
- "global_rules": {
-  "detached_frame": "Inside the image frame of every SIGNATURE and CORE_ANALYTICAL chart: the governed title; period and universe (from the Evidence Record when one exists); the credit line (UI-VIS-SOURCE + governed publisher); the governed prohibited inference (UI-VIS-DOES-NOT-ESTABLISH); any break, missing or disagreement marker present in the data; the canonical link (UI-VIS-FULL-RECORD). A crop that removes any of these is not a supported export.",
-  "rtl": "Numeric time axes run left to right in both languages (bilingual crops circulate side by side; a mirrored rising line reads as a fall). Text, legends, captions, panel order and categorical bar labels follow the reading direction. Chains and ladders run top to bottom. Digits are Western; IDs, currency codes, signed percentages and index-base or equation expressions (such as 2021 = 100) are isolated as left-to-right runs. Horizontal numeric value axes run left to right in both languages. No arrow glyph between numbers in Arabic text.",
-  "mobile": "At 320 and 390 CSS px (the tested narrow widths) every chart has a defined small-screen form (stated per contract). Matrices become one card per row; multi-panel figures stack; no horizontal scrolling of the plot area.",
-  "text_alternative": "Every chart ships with its analytical text alternative (the governed accessible summary plus the prohibited inference) and a table or ordered-text fallback with caption, scoped headers, unit, universe and period. The alternative must stay true if the chart fails to load.",
-  "no_decoration": "No decorative SVG, illustration, icon field or gradient carries or implies data. The static baseline draws no charts.",
-  "axes": "Bar and dot value axes start at zero. A line chart may use a non-zero value axis only with the axis origin labelled. Never draw two value axes on one plot. Never encode a value as area, bubble or icon size."
- },
- "visuals": [
-  {
-   "visual_id": "RV-CWR-001",
-   "tier": "SIGNATURE",
-   "rationale": "Stops the likeliest false headline in the product (a same-year restatement read as a collapse). Panel 1 draws two governed values at the same reference year, keyed by publication; panel 2 compares the CBY AR2025 path and the IMF staff-report path, each indexed to its own 2021 value, as separate lanes.",
-   "contract": {
-    "form": "Panel 1: two markers at reference year 2024, keyed by publication vintage (SAME_YEAR_REVISION). Panel 2: the CBY AR2025 vintage and the IMF 2025 Article IV staff report, each indexed to its own 2021 value (2021 = 100), drawn as two side-by-side small panels with their own indexed axes, one per source; the paths are never drawn on one axis, merged, joined or shown as one harmonised series. The in-frame note states that their near-identity is not independent confirmation.",
-    "series": [
-     {
-      "id": "cby_vintages",
-      "rows": {
-       "file": "data/remittances.json",
-       "header_key": "observation_id",
-       "ids": [
-        "RMO-CBY-2024-AR2024",
-        "RMO-CBY-2024-AR2025"
-       ]
+  "schema_version": "1.0",
+  "contract_id": "VISUAL-DESIGN-CONTRACT",
+  "decided_in": "Pre-Tranche-C P3 (audit/P3_VISUAL_DESIGN_READINESS.md) | Tranche C TC-E (VIS-01..VIS-21)",
+  "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
+  "tiers": {
+    "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
+    "CORE_ANALYTICAL": "A standard chart form carrying governed values a reader needs. Gets a full data contract.",
+    "SUPPORTING": "Secondary diagram or state figure; may be drawn once signature and core visuals are done. Its governed text alternative is the complete content until then.",
+    "TABLE_TEXT_FIRST": "Rendered as the governed ordered text or a table. A drawn chart would add no truth or would need data the Master does not hold; the promotion condition is stated.",
+    "RETIRE_FROM_DESIGN": "Not drawn. The Evidence Record and its text stay; Design does not build a chart for it."
+  },
+  "grammar": {
+    "rule": "Colour is never the only carrier. Every state below is carried by at least two of: mark shape or fill, line style, a direct text label from the governed UI-VIS copy, and position. States never fade with age (age is not invalidity) and never use red/amber/green.",
+    "evidence_states": [
+      {
+        "token": "MEASURED",
+        "ui_id": "UI-VIS-STATE-MEASURED",
+        "mark": "filled mark",
+        "line": "solid",
+        "label": "direct label on first use"
       },
-      "fields": {
-       "x": "period",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id",
-       "series_label": "series_vintage",
-       "metric_label_en": "metric_label_en",
-       "metric_label_ar": "metric_label_ar"
+      {
+        "token": "REPORTED",
+        "ui_id": "UI-VIS-STATE-REPORTED",
+        "mark": "filled mark",
+        "line": "solid",
+        "label": "direct label on first use"
       },
-      "state": "REPORTED",
-      "markers": [
-       "SAME_YEAR_REVISION"
-      ],
-      "must_equal": {
-       "RMO-CBY-2024-AR2024": 6245,
-       "RMO-CBY-2024-AR2025": 3422.16
+      {
+        "token": "ADMINISTRATIVE",
+        "ui_id": "UI-VIS-STATE-ADMINISTRATIVE",
+        "mark": "filled square mark",
+        "line": "solid",
+        "label": "direct label on first use"
       },
-      "label_fields": {
-       "series_label": "series",
-       "unit": "unit"
+      {
+        "token": "DERIVED",
+        "ui_id": "UI-VIS-STATE-DERIVED",
+        "mark": "bracket or difference annotation, never a bar of its own",
+        "line": "none",
+        "label": "value and the word 'calculated'"
+      },
+      {
+        "token": "HISTORICAL",
+        "ui_id": "UI-VIS-STATE-HISTORICAL",
+        "mark": "as its evidence state",
+        "line": "as its evidence state",
+        "label": "period printed on the mark; no fading"
+      },
+      {
+        "token": "PROGRAMME",
+        "ui_id": "UI-VIS-STATE-PROGRAMME",
+        "mark": "outlined mark inside a labelled programme frame",
+        "line": "none",
+        "label": "programme universe printed"
+      },
+      {
+        "token": "ESTIMATED",
+        "ui_id": "UI-VIS-STATE-ESTIMATED",
+        "mark": "hollow mark",
+        "line": "none or dotted",
+        "label": "direct label"
+      },
+      {
+        "token": "PROJECTED",
+        "ui_id": "UI-VIS-STATE-PROJECTED",
+        "mark": "hollow mark",
+        "line": "dashed",
+        "label": "direct label"
+      },
+      {
+        "token": "PARTIAL",
+        "ui_id": "UI-VIS-STATE-PARTIAL",
+        "mark": "half-filled mark",
+        "line": "as its evidence state",
+        "label": "universe printed beside the mark"
+      },
+      {
+        "token": "UNKNOWN",
+        "ui_id": "UI-VIS-STATE-UNKNOWN",
+        "mark": "empty cell with the word, never a zero-height bar or blank",
+        "line": "none",
+        "label": "always printed"
       }
-     },
-     {
-      "id": "cby_ar2025_path",
-      "rows": {
-       "file": "data/remittances.json",
-       "header_key": "observation_id",
-       "ids": [
-        "RMO-CBY-2021-AR2025",
-        "RMO-CBY-2022-AR2025",
-        "RMO-CBY-2023-AR2025",
-        "RMO-CBY-2024-AR2025"
-       ]
-      },
-      "fields": {
-       "x": "period",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id",
-       "series_label": "series_vintage",
-       "metric_label_en": "metric_label_en",
-       "metric_label_ar": "metric_label_ar"
-      },
-      "state": "REPORTED",
-      "markers": [
-       "NOT_COMPARABLE"
-      ],
-      "must_equal": {
-       "RMO-CBY-2021-AR2025": 2900.22,
-       "RMO-CBY-2022-AR2025": 3066.58,
-       "RMO-CBY-2023-AR2025": 3240.46,
-       "RMO-CBY-2024-AR2025": 3422.16
-      },
-      "label_fields": {
-       "series_label": "series",
-       "unit": "unit"
-      }
-     },
-     {
-      "id": "imf_staff_path",
-      "rows": {
-       "file": "data/remittances.json",
-       "header_key": "observation_id",
-       "ids": [
-        "RMO-IMF-2021-HIST",
-        "RMO-IMF-2022-HIST",
-        "RMO-IMF-2023-HIST",
-        "RMO-IMF-2024-HIST"
-       ]
-      },
-      "fields": {
-       "x": "period",
-       "y": "value",
-       "unit": "unit",
-       "flag": "period_state",
-       "source": "source_id",
-       "series_label": "series_vintage",
-       "metric_label_en": "metric_label_en",
-       "metric_label_ar": "metric_label_ar"
-      },
-      "state": "REPORTED",
-      "markers": [
-       "NOT_COMPARABLE"
-      ],
-      "must_equal": {
-       "RMO-IMF-2021-HIST": 1577.7,
-       "RMO-IMF-2022-HIST": 1668.2,
-       "RMO-IMF-2023-HIST": 1762.8,
-       "RMO-IMF-2024-HIST": 1861.7
-      },
-      "label_fields": {
-       "series_label": "series",
-       "unit": "unit"
-      }
-     }
     ],
-    "panels": [
-     {
-      "id": "same-year-two-values",
-      "state": "READY",
-      "series": [
-       "cby_vintages"
-      ]
-     },
-     {
-      "id": "indexed-paths-2021-100",
-      "state": "READY",
-      "series": [
-       "cby_ar2025_path",
-       "imf_staff_path"
-      ],
-      "derived": [
-       "cby_ar2025_index",
-       "imf_staff_index"
-      ],
-      "closed_in": "Pre-Tranche-C P5.3: CBY AR2025 2021-2023 values governed in 23_REMITTANCES (primary read of SRC-CBY-AR2025-BOP)."
-     }
+    "structure_markers": [
+      {
+        "token": "BREAK_VINTAGE",
+        "ui_id": "UI-VIS-BREAK-VINTAGE",
+        "draw": "line stops; labelled gap on the time axis; the two documents are named on either side"
+      },
+      {
+        "token": "BREAK_UNIVERSE",
+        "ui_id": "UI-VIS-BREAK-UNIVERSE",
+        "draw": "line stops; labelled vertical rule; no connecting segment"
+      },
+      {
+        "token": "SAME_YEAR_REVISION",
+        "ui_id": "UI-VIS-SAME-YEAR-REVISION",
+        "draw": "both values at the same position on the time axis, keyed by publication, never as consecutive points"
+      },
+      {
+        "token": "MISSING",
+        "ui_id": "UI-VIS-MISSING",
+        "draw": "gap in the line with a labelled empty slot; never interpolated, never zero"
+      },
+      {
+        "token": "DISAGREEMENT",
+        "ui_id": "UI-VIS-DISAGREEMENT",
+        "draw": "neutral note mark (†) on every affected period, with both figures in the note; applied to every flagged row, not only the largest"
+      },
+      {
+        "token": "TARGET",
+        "ui_id": "UI-VIS-TARGET",
+        "draw": "outlined marker at the target date; never a progress bar unless the comparator's compatibility is governed as direct"
+      },
+      {
+        "token": "RESULT",
+        "ui_id": "UI-VIS-RESULT",
+        "draw": "filled marker; when no result is governed, an UNKNOWN cell"
+      },
+      {
+        "token": "NOT_COMPARABLE",
+        "ui_id": "UI-VIS-NOT-COMPARABLE",
+        "draw": "values in separate panels or axes with the label between them"
+      },
+      {
+        "token": "NOMINAL",
+        "ui_id": "UI-VIS-NOMINAL",
+        "draw": "label on the value axis title, always visible"
+      },
+      {
+        "token": "WITHHELD",
+        "ui_id": "UI-VIS-WITHHELD",
+        "draw": "no value mark and no number: the slot keeps its position and carries the governed label in place of the value; never a zero, an empty bar, an estimate or a faded mark"
+      }
     ],
-    "ordering": "Panel 1: publication order (AR2024 value, then AR2025 restatement). Panel 2: chronological, 2021 to 2024, one lane per source.",
-    "transformation": "Panel 1: none; values as published (USD million), no percentage change between the two markers. Panel 2: each series is divided by its own 2021 value and multiplied by 100 (derived, DERIVED state); the indexed axis compares paths, not levels, and raw levels are shown only in the fallback table beside their own source. The growth-gap guard checks the governed claim CLM-037.",
-    "missing": "None in either panel.",
-    "breaks": "Panel 1: SAME_YEAR_REVISION marker between the two values; no connecting line. Panel 2: NOT_COMPARABLE on the levels of the two lanes; no line joins one lane to the other, and neither lane is joined to the AR2024 vintage.",
-    "annotation": "UI-VIS-SAME-YEAR-REVISION on the panel-1 pair; UI-VIS-NOT-COMPARABLE and the unit label UI-VIS-UNIT-INDEX-2021 on panel 2; the governed prohibited inference in frame.",
-    "credit": {
-     "source_ids": [
-      "SRC-CBY-AR2024-BOP",
-      "SRC-CBY-AR2025-BOP",
-      "SRC-IMF-AIV-2025-STAFF-001"
-     ],
-     "passport_ids": [
-      "EP-REMITTANCE-MACRO",
-      "EP-CBY-REMITTANCE-VINTAGE-K04"
-     ]
+    "chain": {
+      "rule": "Rule-to-outcome chains run top to bottom in both languages. A step is EVIDENCED only when a governed row supports it; otherwise it is OPEN. OPEN is not failure and carries no colour of warning. Activity counts (transactions, values) evidence OPERATION, not USE: use needs a person- or firm-level measure.",
+      "steps": [
+        "UI-VIS-CHAIN-RULE",
+        "UI-VIS-CHAIN-IMPLEMENTATION",
+        "UI-VIS-CHAIN-OPERATION",
+        "UI-VIS-CHAIN-ACCESS",
+        "UI-VIS-CHAIN-USE",
+        "UI-VIS-CHAIN-QUALITY",
+        "UI-VIS-CHAIN-OUTCOME"
+      ],
+      "states": {
+        "EVIDENCED": "UI-VIS-CHAIN-EVIDENCED",
+        "OPEN": "UI-VIS-CHAIN-OPEN"
+      }
+    }
+  },
+  "display_labels": {
+    "decided_in": "Pre-Tranche-C P4 (independent verification V-D5)",
+    "rule": "Every category, series, lane, unit, event and state value that a SIGNATURE or CORE_ANALYTICAL chart prints is mapped here to governed interface copy (04 UI-VIS-CAT-*, UI-VIS-UNIT-*). The generator adds <field>_label {en, ar, ui_id} to the value or record and stops if a printed value has no label. Temporal values (years, ISO months and dates) are formatted by locale and are not labelled; fields listed as encoding_only select a mark or a chain step and are never printed. A spec may also derive a second label from a field (derived_labels, e.g. the 'is not' line of a payment object) and name governed in-frame sentences (frame_labels); both are resolved from 04 in both languages.",
+    "printed_fields": [
+      "x",
+      "series_label",
+      "lane",
+      "unit",
+      "label",
+      "group",
+      "class",
+      "state",
+      "authority",
+      "count_state",
+      "named",
+      "events",
+      "limit"
+    ],
+    "namespaces": {
+      "findex_group": {
+        "total": "UI-VIS-CAT-FINDEX-TOTAL",
+        "female": "UI-VIS-CAT-FINDEX-FEMALE",
+        "male": "UI-VIS-CAT-FINDEX-MALE",
+        "poorest 40%": "UI-VIS-CAT-FINDEX-POOREST40",
+        "richest 60%": "UI-VIS-CAT-FINDEX-RICHEST60",
+        "primary education or less": "UI-VIS-CAT-FINDEX-PRIMARY-EDU",
+        "secondary education or more": "UI-VIS-CAT-FINDEX-SECONDARY-EDU",
+        "ages 15-24": "UI-VIS-CAT-FINDEX-AGE-15-24",
+        "ages 25+": "UI-VIS-CAT-FINDEX-AGE-25-PLUS"
+      },
+      "series": {
+        "CBY_ANNUAL_REPORT_2024": "UI-VIS-CAT-SERIES-CBY-AR2024",
+        "CBY_ANNUAL_REPORT_2025": "UI-VIS-CAT-SERIES-CBY-AR2025",
+        "2025_ARTICLE_IV_STAFF_REPORT": "UI-VIS-CAT-SERIES-IMF-AIV2025",
+        "2025_ARTICLE_IV_SUPPLEMENTARY_REVISION": "UI-VIS-CAT-SERIES-IMF-AIV2025-SUPP"
+      },
+      "unit": {
+        "USD million": "UI-VIS-UNIT-USD-MILLION",
+        "count": "UI-VIS-UNIT-COUNT",
+        "percent of population ages 15+": "UI-VIS-UNIT-PCT-ADULTS",
+        "percent of send amount": "UI-VIS-UNIT-PCT-SEND",
+        "percent": "UI-VIS-UNIT-PCT",
+        "percentage points": "UI-VIS-UNIT-PP",
+        "source-listed rows": "UI-VIS-UNIT-SOURCE-ROWS",
+        "e-wallets": "UI-VIS-UNIT-EWALLETS",
+        "licensed e-wallets": "UI-VIS-UNIT-LICENSED-EWALLETS",
+        "event participants": "UI-VIS-UNIT-EVENT-PARTICIPANTS",
+        "project-defined access points": "UI-VIS-UNIT-PROJECT-ACCESS-POINTS",
+        "borrowers": "UI-VIS-UNIT-BORROWERS",
+        "savers": "UI-VIS-UNIT-SAVERS",
+        "YER million": "UI-VIS-UNIT-YER-MILLION",
+        "YER_million": "UI-VIS-UNIT-YER-MILLION",
+        "index, 2021 = 100": "UI-VIS-UNIT-INDEX-2021",
+        "percent of population ages 15-24": "UI-VIS-UNIT-PCT-AGES-15-24",
+        "percent of population ages 25+": "UI-VIS-UNIT-PCT-AGES-25-PLUS"
+      },
+      "corridor": {
+        "Saudi Arabia": "UI-VIS-CAT-CORRIDOR-SA",
+        "United Arab Emirates": "UI-VIS-CAT-CORRIDOR-AE"
+      },
+      "amount_sent": {
+        "200": "UI-VIS-CAT-AMOUNT-200",
+        "500": "UI-VIS-CAT-AMOUNT-500"
+      },
+      "payment_object": {
+        "IND-0001": "UI-VIS-CAT-PAY-CARDS",
+        "IND-0002": "UI-VIS-CAT-PAY-POS-TERMINALS",
+        "IND-0003": "UI-VIS-CAT-PAY-POS-TRANSACTIONS",
+        "IND-0006": "UI-VIS-CAT-PAY-ATMS",
+        "IND-0010": "UI-VIS-CAT-PAY-EWALLETS",
+        "IND-0011": "UI-VIS-CAT-PAY-EWALLET-SUBSCRIBERS",
+        "IND-0017": "UI-VIS-CAT-PAY-ACCOUNTS"
+      },
+      "firm_finance": {
+        "Formal establishments reporting a line of credit": "UI-VIS-CAT-FIRM-CREDIT-LINE",
+        "Private commercial banks": "UI-VIS-CAT-FIRM-LOAN-PRIVATE-BANKS",
+        "State-owned bank/government agency": "UI-VIS-CAT-FIRM-LOAN-STATE",
+        "Non-bank financial institution / microfinance": "UI-VIS-CAT-FIRM-LOAN-NONBANK",
+        "Other non-financial institution": "UI-VIS-CAT-FIRM-LOAN-OTHER"
+      },
+      "firm_challenge": {
+        "Business challenge: Electricity": "UI-VIS-CAT-FIRM-CH-ELECTRICITY",
+        "Business challenge: Fuel shortages": "UI-VIS-CAT-FIRM-CH-FUEL",
+        "Business challenge: Transport/road blockade": "UI-VIS-CAT-FIRM-CH-TRANSPORT",
+        "Business challenge: Tax administration/rates": "UI-VIS-CAT-FIRM-CH-TAX",
+        "Business challenge: Political instability": "UI-VIS-CAT-FIRM-CH-POLITICAL",
+        "Business challenge: Access to finance": "UI-VIS-CAT-FIRM-CH-FINANCE",
+        "Business challenge: Siege": "UI-VIS-CAT-FIRM-CH-SIEGE",
+        "Business challenge: Informal competitor practices": "UI-VIS-CAT-FIRM-CH-INFORMAL",
+        "Business challenge: Labor regulations": "UI-VIS-CAT-FIRM-CH-LABOUR",
+        "Business challenge: Customs/trade regulation": "UI-VIS-CAT-FIRM-CH-CUSTOMS",
+        "Business challenge: Corruption": "UI-VIS-CAT-FIRM-CH-CORRUPTION",
+        "Business challenge: Land": "UI-VIS-CAT-FIRM-CH-LAND",
+        "Business challenge: Business licensing": "UI-VIS-CAT-FIRM-CH-LICENSING",
+        "Business challenge: Inadequately educated workforce": "UI-VIS-CAT-FIRM-CH-WORKFORCE",
+        "Business challenge: Courts": "UI-VIS-CAT-FIRM-CH-COURTS",
+        "Business challenge: Crime/theft/disorder": "UI-VIS-CAT-FIRM-CH-CRIME"
+      },
+      "mfi_lane": {
+        "borrowers": "UI-VIS-CAT-MFI-BORROWERS",
+        "savers": "UI-VIS-CAT-MFI-SAVERS",
+        "portfolio": "UI-VIS-CAT-MFI-PORTFOLIO"
+      },
+      "event": {
+        "Unified domestic transfer network": "UI-VIS-CAT-EVT-UNIFIED-NETWORK",
+        "FMIIP effective": "UI-VIS-CAT-EVT-FMIIP-START",
+        "FMIIP approved": "UI-VIS-CAT-EVT-FMIIP-APPROVAL",
+        "Fast Payment System": "UI-VIS-CAT-EVT-FPS",
+        "RTGS + CBY core banking": "UI-VIS-CAT-EVT-RTGS-CORE",
+        "Access-point database and usage support": "UI-VIS-CAT-EVT-ACCESS-DB",
+        "Unified network as main transfer channel": "UI-VIS-CAT-EVT-NETWORK-MAIN",
+        "National QR + e-wallet interconnection + FPS operator participation": "UI-VIS-CAT-EVT-QR-INTEROP",
+        "Digital-payment exhibition and unified-network activity signal": "UI-VIS-CAT-EVT-EXHIBITION",
+        "Restructuring, capital increase and broader bank shareholder base": "UI-VIS-CAT-EVT-NETWORK-COMPANY",
+        "Founding assembly of Yemen Payments and Clearing Company": "UI-VIS-CAT-EVT-YPCC-FOUNDING",
+        "First YPCC board meeting": "UI-VIS-CAT-EVT-YPCC-BOARD"
+      },
+      "authority": {
+        "Central Bank of Yemen — Aden": "UI-VIS-CAT-AUTH-CBY-ADEN"
+      },
+      "provider_class": {
+        "BANKS_ALL_TYPES": "UI-VIS-CAT-PRV-CLASS-BANKS",
+        "EXCHANGE_COMPANIES_ESTABLISHMENTS_AND_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-CLASS-EXCHANGE",
+        "E_WALLETS_OR_E_MONEY_SERVICES_AS_CBY_REPORTED": "UI-VIS-CAT-PRV-CLASS-EWALLETS",
+        "NON_BANK_MICROFINANCE_INSTITUTIONS_AND_PROGRAMMES": "UI-VIS-CAT-PRV-CLASS-MFI"
+      },
+      "provider_count_state": {
+        "PRIMARY_CURRENT_LIST_VERIFIED": "UI-VIS-CAT-PRV-COUNT-CURRENT-LIST",
+        "SOURCE_LISTED_ROWS__100_COMPANIES__231_ESTABLISHMENTS__111_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-COUNT-LISTED-ROWS",
+        "MULTIPLE_PRIMARY_DATED_COUNTS_WITH_DIFFERENT_WORDING": "UI-VIS-CAT-PRV-COUNT-SEVERAL",
+        "MEMBERSHIP_PAGES_ONLY": "UI-VIS-CAT-PRV-COUNT-MEMBERSHIP"
+      },
+      "provider_named_state": {
+        "COMPLETE_FOR_SOURCE_LIST": "UI-VIS-CAT-PRV-NAMED-COMPLETE",
+        "COMPLETE_CATEGORY_COUNTS__ROW_LEVEL_NAMES_NOT_YET_NORMALIZED_IN_PROVIDER_MASTER": "UI-VIS-CAT-PRV-NAMED-COUNTS-ONLY",
+        "POSITIVE_NAMES_NOT_CONTROLLED": "UI-VIS-CAT-PRV-NAMED-NONE",
+        "PARTIAL_NETWORK_MEMBERSHIP_NOT_REGULATORY_UNIVERSE": "UI-VIS-CAT-PRV-NAMED-PARTIAL"
+      },
+      "provider_event_overlay": {
+        "NO_BANK_STATUS_EVENT_OVERLAY_APPLIED_IN_THIS_UNIT": "UI-VIS-CAT-PRV-EVENTS-NONE-APPLIED",
+        "SELECTED_2026_STATUS_OVERLAY__LATER_SUSPENSION_CLOSURE_EVENTS_MUST_NOT_BE_SUBTRACTED_MECHANICALLY": "UI-VIS-CAT-PRV-EVENTS-SELECTED-2026",
+        "2024_NEGATIVE_AUTHORITY + 72_WALLET_COUNT_RECON__NO_POSITIVE_CURRENT_STATUS_LEDGER": "UI-VIS-CAT-PRV-EVENTS-WALLETS",
+        "NONE": "UI-VIS-CAT-PRV-EVENTS-NONE"
+      },
+      "provider_limit": {
+        "List presence proves licensing/listing only; operation is not inferred.": "UI-VIS-CAT-PRV-LIMIT-BANKS",
+        "442 is the arithmetic sum of source-listed rows across three classes, not a deduplicated unique-provider or currently operating-provider count.": "UI-VIS-CAT-PRV-LIMIT-EXCHANGE",
+        "Official objects report 7 e-wallets (2024 Q3), 9 e-wallets (2025 H1), 8 licensed e-wallets (2025-09-10), and >9 event participants (2026-01-22). Preserve separately; named positive current wallet/PSP universe remains open.": "UI-VIS-CAT-PRV-LIMIT-EWALLETS",
+        "YMN membership presence is not licence or operation verification and is not a complete national universe.": "UI-VIS-CAT-PRV-LIMIT-MFI"
+      },
+      "provider_event_class": {
+        "E_WALLET_OR_ELECTRONIC_PAYMENT_SERVICE": "UI-VIS-CAT-PRV-EVCLASS-EWALLET",
+        "EXCHANGE_COMPANY_OR_ESTABLISHMENT": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-OR-EST",
+        "EXCHANGE_ESTABLISHMENT_AND_REMITTANCE_AGENT": "UI-VIS-CAT-PRV-EVCLASS-EST-AGENT",
+        "EXCHANGE_COMPANY_ESTABLISHMENT_AND_REMITTANCE_AGENTS": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-EST-AGENTS",
+        "EXCHANGE_BRANCH": "UI-VIS-CAT-PRV-EVCLASS-BRANCH",
+        "EXCHANGE_ESTABLISHMENT": "UI-VIS-CAT-PRV-EVCLASS-ESTABLISHMENT",
+        "REMITTANCE_AGENT": "UI-VIS-CAT-PRV-EVCLASS-AGENT",
+        "EXCHANGE_COMPANY": "UI-VIS-CAT-PRV-EVCLASS-COMPANY",
+        "EXCHANGE_COMPANY_ESTABLISHMENTS_AND_REMITTANCE_AGENT": "UI-VIS-CAT-PRV-EVCLASS-COMPANY-ESTS-AGENT"
+      },
+      "provider_status": {
+        "PROHIBITED_DEALING__UNLICENSED_AS_SOURCE_DATED": "UI-VIS-CAT-PRV-STATUS-PROHIBITED",
+        "LICENCE_SUSPENSION_AND_CLOSURE_EVENT": "UI-VIS-CAT-PRV-STATUS-SUSPENDED",
+        "LICENCE_WITHDRAWAL_EVENT": "UI-VIS-CAT-PRV-STATUS-WITHDRAWN",
+        "UNLICENSED_AS_NAMED_IN_SOURCE_ON_SOURCE_DATE": "UI-VIS-CAT-PRV-STATUS-NAMED-UNLICENSED",
+        "PRIMARY_ADMINISTRATIVE_COUNT": "UI-VIS-CAT-PRV-STATUS-ADMIN-COUNT",
+        "PRIMARY_OFFICIAL_DATED_LICENSING_STATEMENT": "UI-VIS-CAT-PRV-STATUS-LICENSING-STATEMENT",
+        "PRIMARY_OFFICIAL_EVENT_PARTICIPATION": "UI-VIS-CAT-PRV-STATUS-EVENT-PARTICIPATION"
+      },
+      "payment_object_not": {
+        "IND-0001": "UI-VIS-NOT-PAY-CARDS",
+        "IND-0017": "UI-VIS-NOT-PAY-ACCOUNTS",
+        "IND-0010": "UI-VIS-NOT-PAY-EWALLETS",
+        "IND-0011": "UI-VIS-NOT-PAY-EWALLET-SUBSCRIBERS",
+        "IND-0006": "UI-VIS-NOT-PAY-ATMS",
+        "IND-0002": "UI-VIS-NOT-PAY-POS-TERMINALS",
+        "IND-0003": "UI-VIS-NOT-PAY-POS-TRANSACTIONS"
+      },
+      "findex_metric": {
+        "Account ownership at a financial institution or with a mobile-money-service provider": "UI-VIS-CAT-METRIC-ACCOUNT-OWNERSHIP",
+        "Account ownership": "UI-VIS-CAT-METRIC-ACCOUNT-OWNERSHIP"
+      }
+    }
+  },
+  "global_rules": {
+    "detached_frame": "Inside the image frame of every SIGNATURE and CORE_ANALYTICAL chart: the governed title; period and universe (from the Evidence Record when one exists); the credit line (UI-VIS-SOURCE + governed publisher); the governed prohibited inference (UI-VIS-DOES-NOT-ESTABLISH); any break, missing or disagreement marker present in the data; the canonical link (UI-VIS-FULL-RECORD). A crop that removes any of these is not a supported export.",
+    "rtl": "Numeric time axes run left to right in both languages (bilingual crops circulate side by side; a mirrored rising line reads as a fall). Text, legends, captions, panel order and categorical bar labels follow the reading direction. Chains and ladders run top to bottom. Digits are Western; IDs, currency codes, signed percentages and index-base or equation expressions (such as 2021 = 100) are isolated as left-to-right runs. Horizontal numeric value axes run left to right in both languages. No arrow glyph between numbers in Arabic text.",
+    "mobile": "At 320 and 390 CSS px (the tested narrow widths) every chart has a defined small-screen form (stated per contract). Matrices become one card per row; multi-panel figures stack; no horizontal scrolling of the plot area.",
+    "text_alternative": "Every chart ships with its analytical text alternative (the governed accessible summary plus the prohibited inference) and a table or ordered-text fallback with caption, scoped headers, unit, universe and period. The alternative must stay true if the chart fails to load.",
+    "no_decoration": "No decorative SVG, illustration, icon field or gradient carries or implies data. The static baseline draws no charts.",
+    "axes": "Bar and dot value axes start at zero. A line chart may use a non-zero value axis only with the axis origin labelled. Never draw two value axes on one plot. Never encode a value as area, bubble or icon size."
+  },
+  "visuals": [
+    {
+      "visual_id": "RV-CWR-001",
+      "tier": "SIGNATURE",
+      "rationale": "Stops the likeliest false headline in the product (a same-year restatement read as a collapse). Panel 1 draws two governed values at the same reference year, keyed by publication; panel 2 compares the CBY AR2025 path and the IMF staff-report path, each indexed to its own 2021 value, as separate lanes.",
+      "contract": {
+        "form": "Panel 1: two markers at reference year 2024, keyed by publication vintage (SAME_YEAR_REVISION). Panel 2: the CBY AR2025 vintage and the IMF 2025 Article IV staff report, each indexed to its own 2021 value (2021 = 100), drawn as two side-by-side small panels with their own indexed axes, one per source; the paths are never drawn on one axis, merged, joined or shown as one harmonised series. The in-frame note states that their near-identity is not independent confirmation.",
+        "series": [
+          {
+            "id": "cby_vintages",
+            "rows": {
+              "file": "data/remittances.json",
+              "header_key": "observation_id",
+              "ids": [
+                "RMO-CBY-2024-AR2024",
+                "RMO-CBY-2024-AR2025"
+              ]
+            },
+            "fields": {
+              "x": "period",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id",
+              "series_label": "series_vintage",
+              "metric_label_en": "metric_label_en",
+              "metric_label_ar": "metric_label_ar"
+            },
+            "state": "REPORTED",
+            "markers": [
+              "SAME_YEAR_REVISION"
+            ],
+            "must_equal": {
+              "RMO-CBY-2024-AR2024": 6245,
+              "RMO-CBY-2024-AR2025": 3422.16
+            },
+            "label_fields": {
+              "series_label": "series",
+              "unit": "unit"
+            }
+          },
+          {
+            "id": "cby_ar2025_path",
+            "rows": {
+              "file": "data/remittances.json",
+              "header_key": "observation_id",
+              "ids": [
+                "RMO-CBY-2021-AR2025",
+                "RMO-CBY-2022-AR2025",
+                "RMO-CBY-2023-AR2025",
+                "RMO-CBY-2024-AR2025"
+              ]
+            },
+            "fields": {
+              "x": "period",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id",
+              "series_label": "series_vintage",
+              "metric_label_en": "metric_label_en",
+              "metric_label_ar": "metric_label_ar"
+            },
+            "state": "REPORTED",
+            "markers": [
+              "NOT_COMPARABLE"
+            ],
+            "must_equal": {
+              "RMO-CBY-2021-AR2025": 2900.22,
+              "RMO-CBY-2022-AR2025": 3066.58,
+              "RMO-CBY-2023-AR2025": 3240.46,
+              "RMO-CBY-2024-AR2025": 3422.16
+            },
+            "label_fields": {
+              "series_label": "series",
+              "unit": "unit"
+            }
+          },
+          {
+            "id": "imf_staff_path",
+            "rows": {
+              "file": "data/remittances.json",
+              "header_key": "observation_id",
+              "ids": [
+                "RMO-IMF-2021-HIST",
+                "RMO-IMF-2022-HIST",
+                "RMO-IMF-2023-HIST",
+                "RMO-IMF-2024-HIST"
+              ]
+            },
+            "fields": {
+              "x": "period",
+              "y": "value",
+              "unit": "unit",
+              "flag": "period_state",
+              "source": "source_id",
+              "series_label": "series_vintage",
+              "metric_label_en": "metric_label_en",
+              "metric_label_ar": "metric_label_ar"
+            },
+            "state": "REPORTED",
+            "markers": [
+              "NOT_COMPARABLE"
+            ],
+            "must_equal": {
+              "RMO-IMF-2021-HIST": 1577.7,
+              "RMO-IMF-2022-HIST": 1668.2,
+              "RMO-IMF-2023-HIST": 1762.8,
+              "RMO-IMF-2024-HIST": 1861.7
+            },
+            "label_fields": {
+              "series_label": "series",
+              "unit": "unit"
+            }
+          }
+        ],
+        "panels": [
+          {
+            "id": "same-year-two-values",
+            "state": "READY",
+            "series": [
+              "cby_vintages"
+            ]
+          },
+          {
+            "id": "indexed-paths-2021-100",
+            "state": "READY",
+            "series": [
+              "cby_ar2025_path",
+              "imf_staff_path"
+            ],
+            "derived": [
+              "cby_ar2025_index",
+              "imf_staff_index"
+            ],
+            "closed_in": "Pre-Tranche-C P5.3: CBY AR2025 2021-2023 values governed in 23_REMITTANCES (primary read of SRC-CBY-AR2025-BOP)."
+          }
+        ],
+        "ordering": "Panel 1: publication order (AR2024 value, then AR2025 restatement). Panel 2: chronological, 2021 to 2024, one lane per source.",
+        "transformation": "Panel 1: none; values as published (USD million), no percentage change between the two markers. Panel 2: each series is divided by its own 2021 value and multiplied by 100 (derived, DERIVED state); the indexed axis compares paths, not levels, and raw levels are shown only in the fallback table beside their own source. The growth-gap guard checks the governed claim CLM-037.",
+        "missing": "None in either panel.",
+        "breaks": "Panel 1: SAME_YEAR_REVISION marker between the two values; no connecting line. Panel 2: NOT_COMPARABLE on the levels of the two lanes; no line joins one lane to the other, and neither lane is joined to the AR2024 vintage.",
+        "annotation": "UI-VIS-SAME-YEAR-REVISION on the panel-1 pair; UI-VIS-NOT-COMPARABLE and the unit label UI-VIS-UNIT-INDEX-2021 on panel 2; the governed prohibited inference in frame.",
+        "credit": {
+          "source_ids": [
+            "SRC-CBY-AR2024-BOP",
+            "SRC-CBY-AR2025-BOP",
+            "SRC-IMF-AIV-2025-STAFF-001"
+          ],
+          "passport_ids": [
+            "EP-REMITTANCE-MACRO",
+            "EP-CBY-REMITTANCE-VINTAGE-K04"
+          ]
+        },
+        "mobile": "Panel 1: two stacked labelled dots with the vintage label beside each value. Panel 2 below it: the two small panels stacked, each with its own indexed axis and source label.",
+        "rtl": "Vintage and lane labels mirror; numeric time and value axes stay left to right.",
+        "fallback": "Panel 1: two-row table (publication, reference year, value in USD million, source). Panel 2: table of year, CBY AR2025 value and index, IMF value and index, each column group with its own source.",
+        "derived": [
+          {
+            "id": "cby_ar2025_index",
+            "index": {
+              "series": "cby_ar2025_path",
+              "base_x": "2021",
+              "scale": 100
+            },
+            "unit": "index, 2021 = 100",
+            "state": "DERIVED"
+          },
+          {
+            "id": "imf_staff_index",
+            "index": {
+              "series": "imf_staff_path",
+              "base_x": "2021",
+              "scale": 100
+            },
+            "unit": "index, 2021 = 100",
+            "state": "DERIVED"
+          },
+          {
+            "id": "annual_growth_gap_pp",
+            "growth_gap": {
+              "a": "cby_ar2025_path",
+              "b": "imf_staff_path",
+              "from_x": "2022",
+              "to_x": "2024"
+            },
+            "must_equal": 0.0032,
+            "tolerance": 5e-05,
+            "unit": "percentage points",
+            "state": "DERIVED",
+            "guard_of": "CLM-037: maximum annual-growth difference 2022-2024 of about 0.0032 percentage points"
+          }
+        ],
+        "frame_labels": [
+          "UI-VIS-NOTE-INDEX-CONCORDANCE"
+        ]
+      }
     },
-    "mobile": "Panel 1: two stacked labelled dots with the vintage label beside each value. Panel 2 below it: the two small panels stacked, each with its own indexed axis and source label.",
-    "rtl": "Vintage and lane labels mirror; numeric time and value axes stay left to right.",
-    "fallback": "Panel 1: two-row table (publication, reference year, value in USD million, source). Panel 2: table of year, CBY AR2025 value and index, IMF value and index, each column group with its own source.",
-    "derived": [
-     {
-      "id": "cby_ar2025_index",
-      "index": {
-       "series": "cby_ar2025_path",
-       "base_x": "2021",
-       "scale": 100
-      },
-      "unit": "index, 2021 = 100",
-      "state": "DERIVED"
-     },
-     {
-      "id": "imf_staff_index",
-      "index": {
-       "series": "imf_staff_path",
-       "base_x": "2021",
-       "scale": 100
-      },
-      "unit": "index, 2021 = 100",
-      "state": "DERIVED"
-     },
-     {
-      "id": "annual_growth_gap_pp",
-      "growth_gap": {
-       "a": "cby_ar2025_path",
-       "b": "imf_staff_path",
-       "from_x": "2022",
-       "to_x": "2024"
-      },
-      "must_equal": 0.0032,
-      "tolerance": 5e-05,
-      "unit": "percentage points",
-      "state": "DERIVED",
-      "guard_of": "CLM-037: maximum annual-growth difference 2022-2024 of about 0.0032 percentage points"
-     }
-    ],
-    "frame_labels": [
-     "UI-VIS-NOTE-INDEX-CONCORDANCE"
-    ]
-   }
-  },
-  {
-   "visual_id": "RV-CWR-009",
-   "tier": "SIGNATURE",
-   "rationale": "The product's rule-to-result argument as a drawable state chain: evidence reaches rules, implementation and recorded activity; access, use, quality and outcome stay open. Vertical and mobile-native.",
-   "contract": {
-    "form": "Chain, top to bottom, for the payment-architecture reform as a whole; each step EVIDENCED or OPEN (grammar chain). Events are placed by chain step, not by rail: the governed event rows carry no rail field.",
-    "objects": [
-     {
-      "id": "reform_events",
-      "rows": {
-       "file": "data/reforms_regulation.json",
-       "header_key": "event_id",
-       "ids": [
-        "REF-PAY-001",
-        "REF-PAY-002",
-        "REF-PAY-003",
-        "REF-PAY-004",
-        "REF-PAY-005",
-        "REF-PAY-006",
-        "REF-PAY-008",
-        "REF-PAY-009",
-        "REF-PAY-011",
-        "REF-PAY-012",
-        "REF-PAY-013"
-       ]
-      },
-      "fields": {
-       "date": "date",
-       "label": "event",
-       "class": "event_class",
-       "source": "source_url"
-      },
-      "label_fields": {
-       "label": "event"
-      },
-      "encoding_only_fields": [
-       "class"
-      ]
-     },
-     {
-      "id": "pos_activity",
-      "rows": {
-       "file": "data/payments_data.json",
-       "header_key": "observation_id",
-       "ids": [
-        "OBS-00095",
-        "OBS-00096"
-       ]
-      },
-      "fields": {
-       "x": "period_label",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id",
-       "label": "indicator_id"
-      },
-      "label_fields": {
-       "label": "payment_object",
-       "unit": "unit"
+    {
+      "visual_id": "RV-CWR-009",
+      "tier": "SIGNATURE",
+      "rationale": "The product's rule-to-result argument as a drawable state chain: evidence reaches rules, implementation and recorded activity; access, use, quality and outcome stay open. Vertical and mobile-native.",
+      "contract": {
+        "form": "Chain, top to bottom, for the payment-architecture reform as a whole; each step EVIDENCED or OPEN (grammar chain). Events are placed by chain step, not by rail: the governed event rows carry no rail field.",
+        "objects": [
+          {
+            "id": "reform_events",
+            "rows": {
+              "file": "data/reforms_regulation.json",
+              "header_key": "event_id",
+              "ids": [
+                "REF-PAY-001",
+                "REF-PAY-002",
+                "REF-PAY-003",
+                "REF-PAY-004",
+                "REF-PAY-005",
+                "REF-PAY-006",
+                "REF-PAY-008",
+                "REF-PAY-009",
+                "REF-PAY-011",
+                "REF-PAY-012",
+                "REF-PAY-013"
+              ]
+            },
+            "fields": {
+              "date": "date",
+              "label": "event",
+              "class": "event_class",
+              "source": "source_url"
+            },
+            "label_fields": {
+              "label": "event"
+            },
+            "encoding_only_fields": [
+              "class"
+            ]
+          },
+          {
+            "id": "pos_activity",
+            "rows": {
+              "file": "data/payments_data.json",
+              "header_key": "observation_id",
+              "ids": [
+                "OBS-00095",
+                "OBS-00096"
+              ]
+            },
+            "fields": {
+              "x": "period_label",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id",
+              "label": "indicator_id"
+            },
+            "label_fields": {
+              "label": "payment_object",
+              "unit": "unit"
+            }
+          }
+        ],
+        "step_mapping": {
+          "UI-VIS-CHAIN-RULE": "NETWORK_RULE and PAYMENTS_ARCHITECTURE_DECISION events, and the funded project steps PROJECT_START, PAYMENT_RAIL_COMPONENT and ACCESS_USAGE_COMPONENT (a project component is a programme, not implementation)",
+          "UI-VIS-CHAIN-IMPLEMENTATION": "NETWORK_INTEGRATION, UNIFIED_NETWORK_COMPANY and YPCC events, and the POS terminal stock (OBS-00095, June 2026)",
+          "UI-VIS-CHAIN-OPERATION": "POS transactions (OBS-00096, June 2026) and NETWORK_ACTIVITY_SIGNAL; activity counts evidence operation, not use",
+          "UI-VIS-CHAIN-ACCESS": "OPEN (the FMIIP access-point baseline is a project metric, not access by people)",
+          "UI-VIS-CHAIN-USE": "OPEN",
+          "UI-VIS-CHAIN-QUALITY": "OPEN",
+          "UI-VIS-CHAIN-OUTCOME": "OPEN"
+        },
+        "ordering": "Steps in chain order; events within a step by date.",
+        "transformation": "Only the listed event IDs are drawn (the same-date, same-source duplicates REF-PAY-010 and REF-PAY-007 were merged into REF-PAY-006 and REF-PAY-013 in the Master, transaction R85-B).",
+        "missing": "OPEN steps are drawn as open with UI-VIS-CHAIN-OPEN; never as failure, never as a percentage.",
+        "breaks": "None.",
+        "annotation": "Each EVIDENCED step shows its dated event(s); the POS values print their governed object label (POS terminals, POS transactions) and unit for the latest month.",
+        "credit": {
+          "source_urls_from_object": {
+            "object": "reform_events",
+            "field": "source"
+          }
+        },
+        "mobile": "Native vertical list; one card per step.",
+        "rtl": "Top to bottom in both languages; no horizontal arrows.",
+        "fallback": "Ordered list of steps with state, dated events and links.",
+        "frame_labels": [
+          "UI-VIS-NOTE-POS-SCOPE"
+        ]
       }
-     }
-    ],
-    "step_mapping": {
-     "UI-VIS-CHAIN-RULE": "NETWORK_RULE and PAYMENTS_ARCHITECTURE_DECISION events, and the funded project steps PROJECT_START, PAYMENT_RAIL_COMPONENT and ACCESS_USAGE_COMPONENT (a project component is a programme, not implementation)",
-     "UI-VIS-CHAIN-IMPLEMENTATION": "NETWORK_INTEGRATION, UNIFIED_NETWORK_COMPANY and YPCC events, and the POS terminal stock (OBS-00095, June 2026)",
-     "UI-VIS-CHAIN-OPERATION": "POS transactions (OBS-00096, June 2026) and NETWORK_ACTIVITY_SIGNAL; activity counts evidence operation, not use",
-     "UI-VIS-CHAIN-ACCESS": "OPEN (the FMIIP access-point baseline is a project metric, not access by people)",
-     "UI-VIS-CHAIN-USE": "OPEN",
-     "UI-VIS-CHAIN-QUALITY": "OPEN",
-     "UI-VIS-CHAIN-OUTCOME": "OPEN"
     },
-    "ordering": "Steps in chain order; events within a step by date.",
-    "transformation": "Only the listed event IDs are drawn (the same-date, same-source duplicates REF-PAY-010 and REF-PAY-007 were merged into REF-PAY-006 and REF-PAY-013 in the Master, transaction R85-B).",
-    "missing": "OPEN steps are drawn as open with UI-VIS-CHAIN-OPEN; never as failure, never as a percentage.",
-    "breaks": "None.",
-    "annotation": "Each EVIDENCED step shows its dated event(s); the POS values print their governed object label (POS terminals, POS transactions) and unit for the latest month.",
-    "credit": {
-     "source_urls_from_object": {
-      "object": "reform_events",
-      "field": "source"
-     }
+    {
+      "visual_id": "VIS-PROVIDER-OBSERVABILITY",
+      "tier": "SIGNATURE",
+      "rationale": "Whose list, on what date, and what it proves, for each provider class, with no score. Distinctive, and it answers the regulator's and journalist's first question about providers.",
+      "contract": {
+        "form": "Matrix: one row per provider class; columns = authority source, dated named universe or count, status events, negative authority, operation evidence. Cells hold words and dates, never filled dots.",
+        "objects": [
+          {
+            "id": "universe",
+            "rows": {
+              "file": "data/providers_data.json",
+              "header_key": "universe_id",
+              "ids": [
+                "PUC-BANK-2026-01",
+                "PUC-EXCH-2026-01",
+                "PUC-WALLET-2025-01",
+                "PUC-MFI-2026-01"
+              ]
+            },
+            "fields": {
+              "class": "provider_class",
+              "date": "reference_state",
+              "date_ar": "reference_state_ar",
+              "source": "authoritative_source_id",
+              "count": "universe_count",
+              "count_state": "count_state",
+              "named": "named_universe_state",
+              "events": "event_overlay_state",
+              "limit": "critical_limit"
+            },
+            "label_fields": {
+              "class": "provider_class",
+              "count_state": "provider_count_state",
+              "named": "provider_named_state",
+              "events": "provider_event_overlay",
+              "limit": "provider_limit"
+            }
+          },
+          {
+            "id": "roster_counts",
+            "rows": {
+              "file": "data/providers_data.json",
+              "header_key": "roster_metric_id",
+              "ids": [
+                "CBY-ROSTER-2026-COMP",
+                "CBY-ROSTER-2026-EST",
+                "CBY-ROSTER-2026-AGT"
+              ]
+            },
+            "fields": {
+              "label_en": "provider_class_en",
+              "label_ar": "provider_class_ar",
+              "count": "count",
+              "unit": "unit",
+              "date": "period",
+              "source": "source_id"
+            },
+            "must_equal": {
+              "CBY-ROSTER-2026-COMP": 100,
+              "CBY-ROSTER-2026-EST": 231,
+              "CBY-ROSTER-2026-AGT": 111
+            },
+            "label_fields": {
+              "unit": "unit"
+            }
+          },
+          {
+            "id": "status_events",
+            "rows": {
+              "file": "data/providers_data.json",
+              "header_key": "status_event_id",
+              "where": {
+                "status_event_id": "^PSE-"
+              }
+            },
+            "fields": {
+              "date": "event_date",
+              "authority": "authority",
+              "class": "affected_class",
+              "state": "event_state",
+              "source": "source_id"
+            },
+            "label_fields": {
+              "authority": "authority",
+              "class": "provider_event_class",
+              "state": "provider_status"
+            }
+          },
+          {
+            "id": "negative_authority",
+            "rows": {
+              "file": "data/providers_data.json",
+              "header_key": "negative_authority_id",
+              "where": {
+                "negative_authority_id": "^NEG-"
+              }
+            },
+            "fields": {
+              "date": "source_date",
+              "authority": "authority",
+              "state": "authority_state",
+              "source": "source_id"
+            },
+            "label_fields": {
+              "authority": "authority",
+              "state": "provider_status"
+            }
+          },
+          {
+            "id": "wallet_counts",
+            "rows": {
+              "file": "data/providers_data.json",
+              "header_key": "wallet_count_object_id",
+              "ids": [
+                "WCR-001",
+                "WCR-002",
+                "WCR-003",
+                "WCR-004"
+              ]
+            },
+            "fields": {
+              "date": "reference_period",
+              "date_ar": "reference_period_ar",
+              "count": "reported_value",
+              "unit": "unit",
+              "state": "semantic_state",
+              "source": "source_id"
+            },
+            "label_fields": {
+              "unit": "unit",
+              "state": "provider_status"
+            }
+          }
+        ],
+        "ordering": "Rows: banks, exchange and remittance actors, wallets and e-money, microfinance (non-bank), payment-system operators (UNKNOWN). Columns in the order above.",
+        "transformation": "Counts only as governed; the 442 roster total is not shown as a number of providers. Wallet counts appear as 'counts differ by source and date' with the dated values listed, never one number.",
+        "missing": "A dimension with no governed row is UNKNOWN (UI-VIS-STATE-UNKNOWN), e.g. negative authority for classes other than wallets ('none held', not 'none exist'); operation evidence for every class.",
+        "breaks": "None.",
+        "annotation": "UI-VIS-ISSUER-SCOPE in frame for the rows whose authority is Central Bank of Yemen — Aden (authority field of the status and negative-authority rows); the microfinance row's source is the Yemen Microfinance Network's membership pages.",
+        "credit": {
+          "authority_field": "authority",
+          "from_object": "status_events",
+          "source_ids": [
+            "SRC-YMN-MEMBERS-2026-001"
+          ]
+        },
+        "known_gap": "The contract text names payment-system operators; no PUC row exists for them. The row is drawn as UNKNOWN with the institution events of 31 (REF-PAY-011..013) listed as context, not as a named universe.",
+        "mobile": "One card per provider class with the five dimensions as a definition list.",
+        "rtl": "Column order mirrors with the reading direction; dates and IDs isolated left to right.",
+        "fallback": "Table with caption, one row per class, scoped headers."
+      }
     },
-    "mobile": "Native vertical list; one card per step.",
-    "rtl": "Top to bottom in both languages; no horizontal arrows.",
-    "fallback": "Ordered list of steps with state, dated events and links.",
-    "frame_labels": [
-     "UI-VIS-NOTE-POS-SCOPE"
-    ]
-   }
-  },
-  {
-   "visual_id": "VIS-PROVIDER-OBSERVABILITY",
-   "tier": "SIGNATURE",
-   "rationale": "Whose list, on what date, and what it proves, for each provider class, with no score. Distinctive, and it answers the regulator's and journalist's first question about providers.",
-   "contract": {
-    "form": "Matrix: one row per provider class; columns = authority source, dated named universe or count, status events, negative authority, operation evidence. Cells hold words and dates, never filled dots.",
-    "objects": [
-     {
-      "id": "universe",
-      "rows": {
-       "file": "data/providers_data.json",
-       "header_key": "universe_id",
-       "ids": [
-        "PUC-BANK-2026-01",
-        "PUC-EXCH-2026-01",
-        "PUC-WALLET-2025-01",
-        "PUC-MFI-2026-01"
-       ]
-      },
-      "fields": {
-       "class": "provider_class",
-       "date": "reference_state",
-       "date_ar": "reference_state_ar",
-       "source": "authoritative_source_id",
-       "count": "universe_count",
-       "count_state": "count_state",
-       "named": "named_universe_state",
-       "events": "event_overlay_state",
-       "limit": "critical_limit"
-      },
-      "label_fields": {
-       "class": "provider_class",
-       "count_state": "provider_count_state",
-       "named": "provider_named_state",
-       "events": "provider_event_overlay",
-       "limit": "provider_limit"
+    {
+      "visual_id": "VIS-FINDEX-GAPS",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "The latest representative people-side measure and its four same-wave gaps. Standard bars; the value is in the discipline of the frame (wave, fieldwork, coverage exclusion).",
+      "contract": {
+        "form": "Horizontal bars of levels; bracket annotations for the four same-wave gaps (women/men; poorest 40%/richest 60%; primary education or less/secondary education or more; ages 15–24/ages 25 and over).",
+        "series": [
+          {
+            "id": "levels",
+            "rows": {
+              "file": "data/findex_baseline.json",
+              "header_key": "observation_id",
+              "ids": [
+                "WB-FINDEX-OBS-2022-001",
+                "WB-FINDEX-OBS-2022-002",
+                "WB-FINDEX-OBS-2022-003",
+                "WB-FINDEX-OBS-2022-004",
+                "WB-FINDEX-OBS-2022-005",
+                "WB-FINDEX-OBS-2022-006",
+                "WB-FINDEX-OBS-2022-007",
+                "WB-FINDEX-OBS-2022-008",
+                "WB-FINDEX-OBS-2022-009"
+              ]
+            },
+            "fields": {
+              "x": "group",
+              "y": "value",
+              "unit": "unit",
+              "flag": "evidence_state",
+              "source": "source_url"
+            },
+            "state": "MEASURED",
+            "must_equal": {
+              "WB-FINDEX-OBS-2022-001": 11.9,
+              "WB-FINDEX-OBS-2022-002": 5.4,
+              "WB-FINDEX-OBS-2022-003": 18.3,
+              "WB-FINDEX-OBS-2022-007": 19.5,
+              "WB-FINDEX-OBS-2022-008": 5.0,
+              "WB-FINDEX-OBS-2022-009": 16.1
+            },
+            "label_fields": {
+              "x": "findex_group",
+              "unit": "unit"
+            }
+          }
+        ],
+        "derived": [
+          {
+            "id": "gender_gap_pp",
+            "minus": [
+              "WB-FINDEX-OBS-2022-003",
+              "WB-FINDEX-OBS-2022-002"
+            ],
+            "must_equal": 12.9,
+            "unit": "percentage points",
+            "state": "DERIVED"
+          },
+          {
+            "id": "income_gap_pp",
+            "minus": [
+              "WB-FINDEX-OBS-2022-005",
+              "WB-FINDEX-OBS-2022-004"
+            ],
+            "must_equal": 9.0,
+            "unit": "percentage points",
+            "state": "DERIVED"
+          },
+          {
+            "id": "education_gap_pp",
+            "minus": [
+              "WB-FINDEX-OBS-2022-007",
+              "WB-FINDEX-OBS-2022-006"
+            ],
+            "must_equal": 12.5,
+            "unit": "percentage points",
+            "state": "DERIVED"
+          },
+          {
+            "id": "age_gap_pp",
+            "minus": [
+              "WB-FINDEX-OBS-2022-009",
+              "WB-FINDEX-OBS-2022-008"
+            ],
+            "must_equal": 11.1,
+            "unit": "percentage points",
+            "state": "DERIVED"
+          }
+        ],
+        "ordering": "Total first, then women and men, then poorest 40% and richest 60%, then primary education or less and secondary education or more, then ages 15–24 and ages 25 and over.",
+        "transformation": "Gaps are differences of governed values in percentage points, printed as brackets, never as bars. Each gap compares two groups of the same dimension in the same wave; groups of different dimensions are never compared.",
+        "missing": "No intervals are drawn (none governed). The age bars use their own population bases (ages 15–24; ages 25 and over), shown in the unit label.",
+        "breaks": "None. No other wave is joined to this one.",
+        "annotation": "Fieldwork dates and the approximately 23% population coverage exclusion in frame. The governed sampling note (frame_labels) is printed in frame.",
+        "credit": {
+          "passport_id": "EP-FINDEX-2022-ACCOUNT"
+        },
+        "mobile": "Bars stack full width; brackets become text lines under each pair.",
+        "rtl": "Bars grow from the reading start; group labels mirror; values stay Western digits.",
+        "fallback": "Table: group, value (%), note.",
+        "frame_labels": [
+          "UI-VIS-NOTE-FINDEX-SAMPLE"
+        ]
       }
-     },
-     {
-      "id": "roster_counts",
-      "rows": {
-       "file": "data/providers_data.json",
-       "header_key": "roster_metric_id",
-       "ids": [
-        "CBY-ROSTER-2026-COMP",
-        "CBY-ROSTER-2026-EST",
-        "CBY-ROSTER-2026-AGT"
-       ]
-      },
-      "fields": {
-       "label_en": "provider_class_en",
-       "label_ar": "provider_class_ar",
-       "count": "count",
-       "unit": "unit",
-       "date": "period",
-       "source": "source_id"
-      },
-      "must_equal": {
-       "CBY-ROSTER-2026-COMP": 100,
-       "CBY-ROSTER-2026-EST": 231,
-       "CBY-ROSTER-2026-AGT": 111
-      },
-      "label_fields": {
-       "unit": "unit"
-      }
-     },
-     {
-      "id": "status_events",
-      "rows": {
-       "file": "data/providers_data.json",
-       "header_key": "status_event_id",
-       "where": {
-        "status_event_id": "^PSE-"
-       }
-      },
-      "fields": {
-       "date": "event_date",
-       "authority": "authority",
-       "class": "affected_class",
-       "state": "event_state",
-       "source": "source_id"
-      },
-      "label_fields": {
-       "authority": "authority",
-       "class": "provider_event_class",
-       "state": "provider_status"
-      }
-     },
-     {
-      "id": "negative_authority",
-      "rows": {
-       "file": "data/providers_data.json",
-       "header_key": "negative_authority_id",
-       "where": {
-        "negative_authority_id": "^NEG-"
-       }
-      },
-      "fields": {
-       "date": "source_date",
-       "authority": "authority",
-       "state": "authority_state",
-       "source": "source_id"
-      },
-      "label_fields": {
-       "authority": "authority",
-       "state": "provider_status"
-      }
-     },
-     {
-      "id": "wallet_counts",
-      "rows": {
-       "file": "data/providers_data.json",
-       "header_key": "wallet_count_object_id",
-       "ids": [
-        "WCR-001",
-        "WCR-002",
-        "WCR-003",
-        "WCR-004"
-       ]
-      },
-      "fields": {
-       "date": "reference_period",
-       "date_ar": "reference_period_ar",
-       "count": "reported_value",
-       "unit": "unit",
-       "state": "semantic_state",
-       "source": "source_id"
-      },
-      "label_fields": {
-       "unit": "unit",
-       "state": "provider_status"
-      }
-     }
-    ],
-    "ordering": "Rows: banks, exchange and remittance actors, wallets and e-money, microfinance (non-bank), payment-system operators (UNKNOWN). Columns in the order above.",
-    "transformation": "Counts only as governed; the 442 roster total is not shown as a number of providers. Wallet counts appear as 'counts differ by source and date' with the dated values listed, never one number.",
-    "missing": "A dimension with no governed row is UNKNOWN (UI-VIS-STATE-UNKNOWN), e.g. negative authority for classes other than wallets ('none held', not 'none exist'); operation evidence for every class.",
-    "breaks": "None.",
-    "annotation": "UI-VIS-ISSUER-SCOPE in frame for the rows whose authority is Central Bank of Yemen — Aden (authority field of the status and negative-authority rows); the microfinance row's source is the Yemen Microfinance Network's membership pages.",
-    "credit": {
-     "authority_field": "authority",
-     "from_object": "status_events",
-     "source_ids": [
-      "SRC-YMN-MEMBERS-2026-001"
-     ]
     },
-    "known_gap": "The contract text names payment-system operators; no PUC row exists for them. The row is drawn as UNKNOWN with the institution events of 31 (REF-PAY-011..013) listed as context, not as a named universe.",
-    "mobile": "One card per provider class with the five dimensions as a definition list.",
-    "rtl": "Column order mirrors with the reading direction; dates and IDs isolated left to right.",
-    "fallback": "Table with caption, one row per class, scoped headers."
-   }
-  },
-  {
-   "visual_id": "VIS-FINDEX-GAPS",
-   "tier": "CORE_ANALYTICAL",
-   "rationale": "The latest representative people-side measure and its four same-wave gaps. Standard bars; the value is in the discipline of the frame (wave, fieldwork, coverage exclusion).",
-   "contract": {
-    "form": "Horizontal bars of levels; bracket annotations for the four same-wave gaps (women/men; poorest 40%/richest 60%; primary education or less/secondary education or more; ages 15–24/ages 25 and over).",
-    "series": [
-     {
-      "id": "levels",
-      "rows": {
-       "file": "data/findex_baseline.json",
-       "header_key": "observation_id",
-       "ids": [
-        "WB-FINDEX-OBS-2022-001",
-        "WB-FINDEX-OBS-2022-002",
-        "WB-FINDEX-OBS-2022-003",
-        "WB-FINDEX-OBS-2022-004",
-        "WB-FINDEX-OBS-2022-005",
-        "WB-FINDEX-OBS-2022-006",
-        "WB-FINDEX-OBS-2022-007",
-        "WB-FINDEX-OBS-2022-008",
-        "WB-FINDEX-OBS-2022-009"
-       ]
-      },
-      "fields": {
-       "x": "group",
-       "y": "value",
-       "unit": "unit",
-       "flag": "evidence_state",
-       "source": "source_url"
-      },
-      "state": "MEASURED",
-      "must_equal": {
-       "WB-FINDEX-OBS-2022-001": 11.9,
-       "WB-FINDEX-OBS-2022-002": 5.4,
-       "WB-FINDEX-OBS-2022-003": 18.3,
-       "WB-FINDEX-OBS-2022-007": 19.5,
-       "WB-FINDEX-OBS-2022-008": 5.0,
-       "WB-FINDEX-OBS-2022-009": 16.1
-      },
-      "label_fields": {
-       "x": "findex_group",
-       "unit": "unit"
+    {
+      "visual_id": "VIS-REMITTANCE-MACRO",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "The IMF series with its estimate and projection states and the document break, so that neither a model estimate nor a forecast revision is read as an observed economic change.",
+      "contract": {
+        "form": "Line with model-based estimates (2018–2024) and the 2025 estimate (hollow marks) and projections (dashed, hollow marks); BREAK_VINTAGE between 2024 and 2025.",
+        "series": [
+          {
+            "id": "imf",
+            "rows": {
+              "file": "data/remittances.json",
+              "header_key": "observation_id",
+              "where": {
+                "observation_id": "^RMO-IMF-"
+              }
+            },
+            "fields": {
+              "x": "period",
+              "y": "value",
+              "unit": "unit",
+              "flag": "period_state",
+              "source": "source_id",
+              "series_label": "series_vintage",
+              "metric_label_en": "metric_label_en",
+              "metric_label_ar": "metric_label_ar"
+            },
+            "state_map": {
+              "MODEL_ESTIMATE": "ESTIMATED",
+              "ESTIMATE": "ESTIMATED",
+              "PROJECTION": "PROJECTED"
+            },
+            "break_between_sources": "BREAK_VINTAGE",
+            "must_equal": {
+              "RMO-IMF-2024-HIST": 1861.7,
+              "RMO-IMF-2025-REV": 1977,
+              "RMO-IMF-2030-REV": 3110
+            },
+            "label_fields": {
+              "series_label": "series",
+              "unit": "unit"
+            }
+          }
+        ],
+        "ordering": "Chronological.",
+        "transformation": "None. USD million as published.",
+        "missing": "The earlier staff-report forecast vintage is not held; only the supplement's estimate and projections are drawn.",
+        "breaks": "BREAK_VINTAGE where source_id changes (staff report to supplement); the line is not joined.",
+        "annotation": "Scope in frame: IMF analytical scope for areas under the internationally recognized government (Evidence Record universe).",
+        "credit": {
+          "passport_id": "EP-REMITTANCE-MACRO"
+        },
+        "mobile": "Full-width line; state labels placed directly on the three segments.",
+        "rtl": "Time axis left to right; labels mirror.",
+        "fallback": "Table: year, value, state, source document."
       }
-     }
-    ],
-    "derived": [
-     {
-      "id": "gender_gap_pp",
-      "minus": [
-       "WB-FINDEX-OBS-2022-003",
-       "WB-FINDEX-OBS-2022-002"
-      ],
-      "must_equal": 12.9,
-      "unit": "percentage points",
-      "state": "DERIVED"
-     },
-     {
-      "id": "income_gap_pp",
-      "minus": [
-       "WB-FINDEX-OBS-2022-005",
-       "WB-FINDEX-OBS-2022-004"
-      ],
-      "must_equal": 9.0,
-      "unit": "percentage points",
-      "state": "DERIVED"
-     },
-     {
-      "id": "education_gap_pp",
-      "minus": [
-       "WB-FINDEX-OBS-2022-007",
-       "WB-FINDEX-OBS-2022-006"
-      ],
-      "must_equal": 12.5,
-      "unit": "percentage points",
-      "state": "DERIVED"
-     },
-     {
-      "id": "age_gap_pp",
-      "minus": [
-       "WB-FINDEX-OBS-2022-009",
-       "WB-FINDEX-OBS-2022-008"
-      ],
-      "must_equal": 11.1,
-      "unit": "percentage points",
-      "state": "DERIVED"
-     }
-    ],
-    "ordering": "Total first, then women and men, then poorest 40% and richest 60%, then primary education or less and secondary education or more, then ages 15–24 and ages 25 and over.",
-    "transformation": "Gaps are differences of governed values in percentage points, printed as brackets, never as bars. Each gap compares two groups of the same dimension in the same wave; groups of different dimensions are never compared.",
-    "missing": "No intervals are drawn (none governed). The age bars use their own population bases (ages 15–24; ages 25 and over), shown in the unit label.",
-    "breaks": "None. No other wave is joined to this one.",
-    "annotation": "Fieldwork dates and the approximately 23% population coverage exclusion in frame. The governed sampling note (frame_labels) is printed in frame.",
-    "credit": {
-     "passport_id": "EP-FINDEX-2022-ACCOUNT"
     },
-    "mobile": "Bars stack full width; brackets become text lines under each pair.",
-    "rtl": "Bars grow from the reading start; group labels mirror; values stay Western digits.",
-    "fallback": "Table: group, value (%), note.",
-    "frame_labels": [
-     "UI-VIS-NOTE-FINDEX-SAMPLE"
-    ]
-   }
-  },
-  {
-   "visual_id": "VIS-REMITTANCE-MACRO",
-   "tier": "CORE_ANALYTICAL",
-   "rationale": "The IMF series with its three evidence states and the document break, so forecast revisions are not read as economic change.",
-   "contract": {
-    "form": "Line with reported history (solid, filled marks), estimate (hollow mark) and projections (dashed, hollow marks); BREAK_VINTAGE between 2024 and 2025.",
-    "series": [
-     {
-      "id": "imf",
-      "rows": {
-       "file": "data/remittances.json",
-       "header_key": "observation_id",
-       "where": {
-        "observation_id": "^RMO-IMF-"
-       }
-      },
-      "fields": {
-       "x": "period",
-       "y": "value",
-       "unit": "unit",
-       "flag": "period_state",
-       "source": "source_id",
-       "series_label": "series_vintage",
-       "metric_label_en": "metric_label_en",
-       "metric_label_ar": "metric_label_ar"
-      },
-      "state_map": {
-       "HISTORICAL_REPORTED": "REPORTED",
-       "ESTIMATE": "ESTIMATED",
-       "PROJECTION": "PROJECTED"
-      },
-      "break_between_sources": "BREAK_VINTAGE",
-      "must_equal": {
-       "RMO-IMF-2024-HIST": 1861.7,
-       "RMO-IMF-2025-REV": 1977,
-       "RMO-IMF-2030-REV": 3110
-      },
-      "label_fields": {
-       "series_label": "series",
-       "unit": "unit"
+    {
+      "visual_id": "VIS-POS-TERMINALS",
+      "tier": "CORE_ANALYTICAL",
+      "family": "POS_MONTHLY_SMALL_MULTIPLE",
+      "rationale": "Monthly administrative counts with every source-internal disagreement marked the same way. Drawn as panel 1 of the POS small multiple.",
+      "contract": {
+        "form": "Line of monthly counts; panel 1 of a three-panel small multiple with VIS-POS-TRANSACTIONS and VIS-POS-VALUE (separate value axes, never one axis).",
+        "series": [
+          {
+            "id": "terminals",
+            "rows": {
+              "file": "data/payments_data.json",
+              "header_key": "observation_id",
+              "where": {
+                "indicator_id": "^IND-0002$",
+                "source_id": "^SRC-CBY-POS-"
+              }
+            },
+            "fields": {
+              "x": "period_label",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id"
+            },
+            "state": "ADMINISTRATIVE",
+            "flag_markers": {
+              "PERCENT_DISCREPANCY": "DISAGREEMENT",
+              "PERCENT_CONTRADICTION": "DISAGREEMENT"
+            },
+            "expected_x": [
+              "2025-03",
+              "2025-04",
+              "2025-05",
+              "2025-06",
+              "2025-07",
+              "2025-08",
+              "2025-09",
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06"
+            ],
+            "must_equal": {
+              "OBS-00051": 561,
+              "OBS-00077": 1357,
+              "OBS-00080": 1473,
+              "OBS-00092": 1636,
+              "OBS-00095": 1651
+            },
+            "label_fields": {
+              "unit": "unit"
+            }
+          }
+        ],
+        "ordering": "Chronological.",
+        "transformation": "None; raw monthly totals.",
+        "missing": "Any expected month without a row is MISSING.",
+        "breaks": "None governed.",
+        "annotation": "DISAGREEMENT note mark on every flagged month; the note text is the Evidence Record VIS-POS-TERMINALS method_en / method_ar, which gives both figures (the change derived from the published totals and the percentage the release displays).",
+        "credit": {
+          "passport_id": "EP-CBY-POS-MONTHLY"
+        },
+        "mobile": "Panels stack vertically; each keeps its own axis and title.",
+        "rtl": "Time axis left to right; titles mirror.",
+        "fallback": "Table: month, value, note."
       }
-     }
-    ],
-    "ordering": "Chronological.",
-    "transformation": "None. USD million as published.",
-    "missing": "The earlier staff-report forecast vintage is not held; only the supplement's estimate and projections are drawn.",
-    "breaks": "BREAK_VINTAGE where source_id changes (staff report to supplement); the line is not joined.",
-    "annotation": "Scope in frame: IMF analytical scope for areas under the internationally recognized government (Evidence Record universe).",
-    "credit": {
-     "passport_id": "EP-REMITTANCE-MACRO"
     },
-    "mobile": "Full-width line; state labels placed directly on the three segments.",
-    "rtl": "Time axis left to right; labels mirror.",
-    "fallback": "Table: year, value, state, source document."
-   }
-  },
-  {
-   "visual_id": "VIS-POS-TERMINALS",
-   "tier": "CORE_ANALYTICAL",
-   "family": "POS_MONTHLY_SMALL_MULTIPLE",
-   "rationale": "Monthly administrative counts with every source-internal disagreement marked the same way. Drawn as panel 1 of the POS small multiple.",
-   "contract": {
-    "form": "Line of monthly counts; panel 1 of a three-panel small multiple with VIS-POS-TRANSACTIONS and VIS-POS-VALUE (separate value axes, never one axis).",
-    "series": [
-     {
-      "id": "terminals",
-      "rows": {
-       "file": "data/payments_data.json",
-       "header_key": "observation_id",
-       "where": {
-        "indicator_id": "^IND-0002$",
-        "source_id": "^SRC-CBY-POS-"
-       }
-      },
-      "fields": {
-       "x": "period_label",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id"
-      },
-      "state": "ADMINISTRATIVE",
-      "flag_markers": {
-       "PERCENT_DISCREPANCY": "DISAGREEMENT",
-       "PERCENT_CONTRADICTION": "DISAGREEMENT"
-      },
-      "expected_x": [
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06"
-      ],
-      "must_equal": {
-       "OBS-00051": 561,
-       "OBS-00077": 1357,
-       "OBS-00080": 1473,
-       "OBS-00092": 1636,
-       "OBS-00095": 1651
-      },
-      "label_fields": {
-       "unit": "unit"
+    {
+      "visual_id": "VIS-POS-TRANSACTIONS",
+      "tier": "CORE_ANALYTICAL",
+      "family": "POS_MONTHLY_SMALL_MULTIPLE",
+      "rationale": "Panel 2 of the POS small multiple. The path is not steady (May 2026 high), which endpoint framing hid.",
+      "contract": {
+        "form": "Line of monthly transaction counts; panel 2 of the POS small multiple.",
+        "series": [
+          {
+            "id": "transactions",
+            "rows": {
+              "file": "data/payments_data.json",
+              "header_key": "observation_id",
+              "where": {
+                "indicator_id": "^IND-0003$",
+                "source_id": "^SRC-CBY-POS-"
+              }
+            },
+            "fields": {
+              "x": "period_label",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id"
+            },
+            "state": "ADMINISTRATIVE",
+            "flag_markers": {
+              "PERCENT_DISCREPANCY": "DISAGREEMENT",
+              "PERCENT_CONTRADICTION": "DISAGREEMENT"
+            },
+            "expected_x": [
+              "2025-03",
+              "2025-04",
+              "2025-05",
+              "2025-06",
+              "2025-07",
+              "2025-08",
+              "2025-09",
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06"
+            ],
+            "must_equal": {
+              "OBS-00052": 8015,
+              "OBS-00064": 27187,
+              "OBS-00081": 24026,
+              "OBS-00093": 36201,
+              "OBS-00096": 27504
+            },
+            "label_fields": {
+              "unit": "unit"
+            }
+          }
+        ],
+        "ordering": "Chronological.",
+        "transformation": "None; raw monthly totals. Transactions per terminal is not drawn (not a governed object).",
+        "missing": "Any expected month without a row is MISSING.",
+        "breaks": "None governed.",
+        "annotation": "DISAGREEMENT note mark on every flagged month; the note text is the Evidence Record VIS-POS-TRANSACTIONS method_en / method_ar, which gives both figures; the monthly high is labelled directly.",
+        "credit": {
+          "passport_id": "EP-CBY-POS-MONTHLY"
+        },
+        "mobile": "Stacked panel.",
+        "rtl": "Time axis left to right.",
+        "fallback": "Table: month, value, note.",
+        "frame_labels": [
+          "UI-VIS-NOTE-POS-H1-WITHHELD"
+        ]
       }
-     }
-    ],
-    "ordering": "Chronological.",
-    "transformation": "None; raw monthly totals.",
-    "missing": "Any expected month without a row is MISSING.",
-    "breaks": "None governed.",
-    "annotation": "DISAGREEMENT note mark on every flagged month; the note text is the Evidence Record VIS-POS-TERMINALS method_en / method_ar, which gives both figures (the change derived from the published totals and the percentage the release displays).",
-    "credit": {
-     "passport_id": "EP-CBY-POS-MONTHLY"
     },
-    "mobile": "Panels stack vertically; each keeps its own axis and title.",
-    "rtl": "Time axis left to right; titles mirror.",
-    "fallback": "Table: month, value, note."
-   }
-  },
-  {
-   "visual_id": "VIS-POS-TRANSACTIONS",
-   "tier": "CORE_ANALYTICAL",
-   "family": "POS_MONTHLY_SMALL_MULTIPLE",
-   "rationale": "Panel 2 of the POS small multiple. The path is not steady (May 2026 high), which endpoint framing hid.",
-   "contract": {
-    "form": "Line of monthly transaction counts; panel 2 of the POS small multiple.",
-    "series": [
-     {
-      "id": "transactions",
-      "rows": {
-       "file": "data/payments_data.json",
-       "header_key": "observation_id",
-       "where": {
-        "indicator_id": "^IND-0003$",
-        "source_id": "^SRC-CBY-POS-"
-       }
-      },
-      "fields": {
-       "x": "period_label",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id"
-      },
-      "state": "ADMINISTRATIVE",
-      "flag_markers": {
-       "PERCENT_DISCREPANCY": "DISAGREEMENT",
-       "PERCENT_CONTRADICTION": "DISAGREEMENT"
-      },
-      "expected_x": [
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06"
-      ],
-      "must_equal": {
-       "OBS-00052": 8015,
-       "OBS-00064": 27187,
-       "OBS-00081": 24026,
-       "OBS-00093": 36201,
-       "OBS-00096": 27504
-      },
-      "label_fields": {
-       "unit": "unit"
+    {
+      "visual_id": "VIS-POS-VALUE",
+      "tier": "CORE_ANALYTICAL",
+      "family": "POS_MONTHLY_SMALL_MULTIPLE",
+      "rationale": "Panel 3 of the POS small multiple: nominal value with the missing month kept missing.",
+      "contract": {
+        "form": "Line of nominal monthly value; panel 3 of the POS small multiple; NOMINAL on the axis title.",
+        "series": [
+          {
+            "id": "value",
+            "rows": {
+              "file": "data/payments_data.json",
+              "header_key": "observation_id",
+              "where": {
+                "indicator_id": "^IND-0004$",
+                "source_id": "^SRC-CBY-POS-"
+              }
+            },
+            "fields": {
+              "x": "period_label",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id"
+            },
+            "state": "ADMINISTRATIVE",
+            "markers": [
+              "NOMINAL"
+            ],
+            "flag_markers": {
+              "PERCENT_DISCREPANCY": "DISAGREEMENT",
+              "PERCENT_CONTRADICTION": "DISAGREEMENT"
+            },
+            "expected_x": [
+              "2025-03",
+              "2025-04",
+              "2025-05",
+              "2025-06",
+              "2025-07",
+              "2025-08",
+              "2025-09",
+              "2025-10",
+              "2025-11",
+              "2025-12",
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06"
+            ],
+            "must_equal": {
+              "OBS-00053": 320,
+              "OBS-00082": 1262,
+              "OBS-00094": 1579,
+              "OBS-00097": 1045
+            },
+            "must_be_missing": [
+              "2025-09"
+            ],
+            "label_fields": {
+              "unit": "unit"
+            }
+          }
+        ],
+        "ordering": "Chronological.",
+        "transformation": "None; nominal YER million. No price or exchange-rate adjustment and no exchange-rate annotation (it would invite a causal reading).",
+        "missing": "September 2025 is MISSING: gap in the line, labelled.",
+        "breaks": "None governed.",
+        "annotation": "UI-VIS-NOMINAL on the axis; MISSING label on September 2025.",
+        "credit": {
+          "passport_id": "EP-CBY-POS-MONTHLY"
+        },
+        "mobile": "Stacked panel.",
+        "rtl": "Time axis left to right.",
+        "fallback": "Table: month, value (YER million) or 'no verified value'."
       }
-     }
-    ],
-    "ordering": "Chronological.",
-    "transformation": "None; raw monthly totals. Transactions per terminal is not drawn (not a governed object).",
-    "missing": "Any expected month without a row is MISSING.",
-    "breaks": "None governed.",
-    "annotation": "DISAGREEMENT note mark on every flagged month; the note text is the Evidence Record VIS-POS-TRANSACTIONS method_en / method_ar, which gives both figures; the monthly high is labelled directly.",
-    "credit": {
-     "passport_id": "EP-CBY-POS-MONTHLY"
     },
-    "mobile": "Stacked panel.",
-    "rtl": "Time axis left to right.",
-    "fallback": "Table: month, value, note.",
-    "frame_labels": [
-     "UI-VIS-NOTE-POS-H1-WITHHELD"
-    ]
-   }
-  },
-  {
-   "visual_id": "VIS-POS-VALUE",
-   "tier": "CORE_ANALYTICAL",
-   "family": "POS_MONTHLY_SMALL_MULTIPLE",
-   "rationale": "Panel 3 of the POS small multiple: nominal value with the missing month kept missing.",
-   "contract": {
-    "form": "Line of nominal monthly value; panel 3 of the POS small multiple; NOMINAL on the axis title.",
-    "series": [
-     {
-      "id": "value",
-      "rows": {
-       "file": "data/payments_data.json",
-       "header_key": "observation_id",
-       "where": {
-        "indicator_id": "^IND-0004$",
-        "source_id": "^SRC-CBY-POS-"
-       }
-      },
-      "fields": {
-       "x": "period_label",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id"
-      },
-      "state": "ADMINISTRATIVE",
-      "markers": [
-       "NOMINAL"
-      ],
-      "flag_markers": {
-       "PERCENT_DISCREPANCY": "DISAGREEMENT",
-       "PERCENT_CONTRADICTION": "DISAGREEMENT"
-      },
-      "expected_x": [
-       "2025-03",
-       "2025-04",
-       "2025-05",
-       "2025-06",
-       "2025-07",
-       "2025-08",
-       "2025-09",
-       "2025-10",
-       "2025-11",
-       "2025-12",
-       "2026-01",
-       "2026-02",
-       "2026-03",
-       "2026-04",
-       "2026-05",
-       "2026-06"
-      ],
-      "must_equal": {
-       "OBS-00053": 320,
-       "OBS-00082": 1262,
-       "OBS-00094": 1579,
-       "OBS-00097": 1045
-      },
-      "must_be_missing": [
-       "2025-09"
-      ],
-      "label_fields": {
-       "unit": "unit"
+    {
+      "visual_id": "VIS-PAYMENT-ANATOMY",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "Keeps cards, accounts, subscribers, terminals and transactions as different objects before any comparison. Card-first; no totals.",
+      "contract": {
+        "form": "One card per measurement object, each with its 'is not' line; no totals row, no population denominator.",
+        "series": [
+          {
+            "id": "h1_objects",
+            "rows": {
+              "file": "data/payments_data.json",
+              "header_key": "observation_id",
+              "ids": [
+                "OBS-00031",
+                "OBS-00032",
+                "OBS-00033",
+                "OBS-00034",
+                "OBS-00035",
+                "OBS-00036",
+                "OBS-00037"
+              ]
+            },
+            "fields": {
+              "x": "indicator_id",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id",
+              "caveat": "caveats"
+            },
+            "state": "ADMINISTRATIVE",
+            "flag_markers": {
+              "BREAK_IN_SERIES": "NOT_COMPARABLE"
+            },
+            "withhold_when_caveat_matches": "require methodology note before public use",
+            "label_fields": {
+              "x": "payment_object",
+              "unit": "unit"
+            },
+            "derived_labels": {
+              "is_not": {
+                "field": "x",
+                "namespace": "payment_object_not"
+              }
+            },
+            "encoding_only_fields": [
+              "caveat"
+            ]
+          }
+        ],
+        "ordering": "Series order: cards, ATMs, e-wallets, e-wallet subscribers, POS terminals, POS transactions, accounts.",
+        "transformation": "None. No card is summed with another or divided by population.",
+        "missing": "Values whose governed caveat requires a methodology note before public use are withheld (UI-VIS-WITHHELD): the object card shows what it counts, not the number.",
+        "breaks": "Flagged objects carry NOT_COMPARABLE and the card note UI-VIS-NOTE-NOT-COMPARABLE-2024Q3: no comparison with the 2024 Q3 bulletin is drawn. Cards have no line, so no line-break marker is printed.",
+        "annotation": "Each card prints its governed object label (x_label) and its governed 'is not' line (is_not_label). The caveat field is an internal comparability note and is not printed; the frame prints the governed marker labels instead.",
+        "credit": {
+          "passport_id": "EP-CBY-PAY-H1-2025"
+        },
+        "mobile": "Cards stack.",
+        "rtl": "Card order mirrors.",
+        "fallback": "Table: object, value or withheld state, what it is not.",
+        "frame_labels": [
+          "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3"
+        ]
       }
-     }
-    ],
-    "ordering": "Chronological.",
-    "transformation": "None; nominal YER million. No price or exchange-rate adjustment and no exchange-rate annotation (it would invite a causal reading).",
-    "missing": "September 2025 is MISSING: gap in the line, labelled.",
-    "breaks": "None governed.",
-    "annotation": "UI-VIS-NOMINAL on the axis; MISSING label on September 2025.",
-    "credit": {
-     "passport_id": "EP-CBY-POS-MONTHLY"
     },
-    "mobile": "Stacked panel.",
-    "rtl": "Time axis left to right.",
-    "fallback": "Table: month, value (YER million) or 'no verified value'."
-   }
-  },
-  {
-   "visual_id": "VIS-PAYMENT-ANATOMY",
-   "tier": "CORE_ANALYTICAL",
-   "rationale": "Keeps cards, accounts, subscribers, terminals and transactions as different objects before any comparison. Card-first; no totals.",
-   "contract": {
-    "form": "One card per measurement object, each with its 'is not' line; no totals row, no population denominator.",
-    "series": [
-     {
-      "id": "h1_objects",
-      "rows": {
-       "file": "data/payments_data.json",
-       "header_key": "observation_id",
-       "ids": [
-        "OBS-00031",
-        "OBS-00032",
-        "OBS-00033",
-        "OBS-00034",
-        "OBS-00035",
-        "OBS-00036",
-        "OBS-00037"
-       ]
-      },
-      "fields": {
-       "x": "indicator_id",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id",
-       "caveat": "caveats"
-      },
-      "state": "ADMINISTRATIVE",
-      "flag_markers": {
-       "BREAK_IN_SERIES": "NOT_COMPARABLE"
-      },
-      "withhold_when_caveat_matches": "require methodology note before public use",
-      "label_fields": {
-       "x": "payment_object",
-       "unit": "unit"
-      },
-      "derived_labels": {
-       "is_not": {
-        "field": "x",
-        "namespace": "payment_object_not"
-       }
-      },
-      "encoding_only_fields": [
-       "caveat"
-      ]
-     }
-    ],
-    "ordering": "Series order: cards, ATMs, e-wallets, e-wallet subscribers, POS terminals, POS transactions, accounts.",
-    "transformation": "None. No card is summed with another or divided by population.",
-    "missing": "Values whose governed caveat requires a methodology note before public use are withheld (UI-VIS-WITHHELD): the object card shows what it counts, not the number.",
-    "breaks": "Flagged objects carry NOT_COMPARABLE and the card note UI-VIS-NOTE-NOT-COMPARABLE-2024Q3: no comparison with the 2024 Q3 bulletin is drawn. Cards have no line, so no line-break marker is printed.",
-    "annotation": "Each card prints its governed object label (x_label) and its governed 'is not' line (is_not_label). The caveat field is an internal comparability note and is not printed; the frame prints the governed marker labels instead.",
-    "credit": {
-     "passport_id": "EP-CBY-PAY-H1-2025"
+    {
+      "visual_id": "VIS-REMITTANCE-COST",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "Quoted costs by corridor and send amount: a small, decision-useful comparison with the scale effect visible.",
+      "contract": {
+        "form": "Dot plot: two corridors × two send amounts; the amount is an explicit axis, never pooled.",
+        "series": [
+          {
+            "id": "rpw",
+            "rows": {
+              "file": "data/remittances.json",
+              "header_key": "observation_id",
+              "where": {
+                "observation_id": "^RMO-RPW-"
+              }
+            },
+            "fields": {
+              "x": "corridor_origin",
+              "group": "transaction_amount_usd",
+              "y": "value",
+              "unit": "unit",
+              "flag": "comparability_state",
+              "source": "source_id",
+              "metric_label_en": "metric_label_en",
+              "metric_label_ar": "metric_label_ar"
+            },
+            "state": "REPORTED",
+            "must_equal": {
+              "RMO-RPW-SA-2025Q3-200": 2.7,
+              "RMO-RPW-UAE-2025Q3-200": 7.53
+            },
+            "label_fields": {
+              "x": "corridor",
+              "group": "amount_sent",
+              "unit": "unit"
+            }
+          }
+        ],
+        "ordering": "Corridor, then send amount ascending.",
+        "transformation": "None.",
+        "missing": "Provider and quote counts are not held; not drawn.",
+        "breaks": "None.",
+        "annotation": "Quarter and the governed note UI-VIS-RPW-AVERAGE-NOTE (frame_labels) in frame.",
+        "credit": {
+          "passport_ids": [
+            "EP-WB-RPW-KSA-YEM-K04"
+          ],
+          "source_ids": [
+            "SRC-WB-RPW-SA-YEM-2025Q3-001",
+            "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+          ]
+        },
+        "mobile": "Two rows of paired dots.",
+        "rtl": "Value axis left to right; labels mirror.",
+        "fallback": "Table: corridor, amount, cost (%).",
+        "frame_labels": [
+          "UI-VIS-RPW-AVERAGE-NOTE"
+        ]
+      }
     },
-    "mobile": "Cards stack.",
-    "rtl": "Card order mirrors.",
-    "fallback": "Table: object, value or withheld state, what it is not.",
-    "frame_labels": [
-     "UI-VIS-NOTE-NOT-COMPARABLE-2024Q3"
-    ]
-   }
-  },
-  {
-   "visual_id": "VIS-REMITTANCE-COST",
-   "tier": "CORE_ANALYTICAL",
-   "rationale": "Quoted costs by corridor and send amount: a small, decision-useful comparison with the scale effect visible.",
-   "contract": {
-    "form": "Dot plot: two corridors × two send amounts; the amount is an explicit axis, never pooled.",
-    "series": [
-     {
-      "id": "rpw",
-      "rows": {
-       "file": "data/remittances.json",
-       "header_key": "observation_id",
-       "where": {
-        "observation_id": "^RMO-RPW-"
-       }
-      },
-      "fields": {
-       "x": "corridor_origin",
-       "group": "transaction_amount_usd",
-       "y": "value",
-       "unit": "unit",
-       "flag": "comparability_state",
-       "source": "source_id",
-       "metric_label_en": "metric_label_en",
-       "metric_label_ar": "metric_label_ar"
-      },
-      "state": "REPORTED",
-      "must_equal": {
-       "RMO-RPW-SA-2025Q3-200": 2.7,
-       "RMO-RPW-UAE-2025Q3-200": 7.53
-      },
-      "label_fields": {
-       "x": "corridor",
-       "group": "amount_sent",
-       "unit": "unit"
+    {
+      "visual_id": "VIS-FIRM-FINANCE-PATH",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The 31 firms with a line of credit out of 328 (FFO-2022-004) and the 18 valid loan-source responses (FFO-2022-LS-01..04) are rendered as a table (stage, count, base). Two stages drawn in sequence would read as a funnel, which requires the 18 responses to come from the 31 firms; the Master does not establish that.",
+      "promotion_requires": "The Master states whether the 18 loan-source responses are a subset of the 31 firms with a line of credit.",
+      "table": {
+        "form": "Item and number under each base (a row group opened by \"Out of\" and the base), in the source's order. A governed marker separates the establishments with a line of credit from the loan-source responses: the Master does not establish that the 18 come from the 31, so nothing is drawn or read as a funnel.",
+        "objects": [
+          {
+            "id": "firm",
+            "rows": {
+              "file": "data/firm_finance.json",
+              "header_key": "observation_id",
+              "ids": [
+                "FFO-2022-004",
+                "FFO-2022-LS-01",
+                "FFO-2022-LS-02",
+                "FFO-2022-LS-03",
+                "FFO-2022-LS-04"
+              ]
+            },
+            "fields": {
+              "metric_label": "metric_label",
+              "breakdown_value": "breakdown_value",
+              "value": "value",
+              "denominator_n": "denominator_n",
+              "source": "source_id"
+            },
+            "must_equal": {
+              "FFO-2022-004": {
+                "value": 31,
+                "denominator_n": 328
+              },
+              "FFO-2022-LS-01": {
+                "value": 10,
+                "denominator_n": 18
+              },
+              "FFO-2022-LS-02": {
+                "value": 1,
+                "denominator_n": 18
+              },
+              "FFO-2022-LS-03": {
+                "value": 5,
+                "denominator_n": 18
+              },
+              "FFO-2022-LS-04": {
+                "value": 2,
+                "denominator_n": 18
+              }
+            }
+          }
+        ],
+        "head": [
+          "UI-VIS-TH-ITEM",
+          "UI-VIS-UNIT-COUNT"
+        ],
+        "caption": [],
+        "rows": [
+          {
+            "group": {
+              "lead": "UI-VIS-TH-BASE",
+              "ref": "firm.FFO-2022-004.denominator_n",
+              "unit": "UI-VIS-UNIT-FIRMS-SURVEYED"
+            }
+          },
+          {
+            "head": {
+              "ref": "firm.FFO-2022-004.metric_label",
+              "ns": "firm_finance"
+            },
+            "cells": [
+              {
+                "ref": "firm.FFO-2022-004.value"
+              }
+            ]
+          },
+          {
+            "marker": "UI-VIS-NOTE-FIRM-LOAN-SUBSET"
+          },
+          {
+            "group": {
+              "lead": "UI-VIS-TH-BASE",
+              "ref": "firm.FFO-2022-LS-01.denominator_n",
+              "unit": "UI-VIS-UNIT-VALID-RESPONSES"
+            }
+          },
+          {
+            "head": {
+              "ref": "firm.FFO-2022-LS-01.breakdown_value",
+              "ns": "firm_finance"
+            },
+            "cells": [
+              {
+                "ref": "firm.FFO-2022-LS-01.value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "ref": "firm.FFO-2022-LS-02.breakdown_value",
+              "ns": "firm_finance"
+            },
+            "cells": [
+              {
+                "ref": "firm.FFO-2022-LS-02.value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "ref": "firm.FFO-2022-LS-03.breakdown_value",
+              "ns": "firm_finance"
+            },
+            "cells": [
+              {
+                "ref": "firm.FFO-2022-LS-03.value"
+              }
+            ]
+          },
+          {
+            "head": {
+              "ref": "firm.FFO-2022-LS-04.breakdown_value",
+              "ns": "firm_finance"
+            },
+            "cells": [
+              {
+                "ref": "firm.FFO-2022-LS-04.value"
+              }
+            ]
+          }
+        ]
       }
-     }
-    ],
-    "ordering": "Corridor, then send amount ascending.",
-    "transformation": "None.",
-    "missing": "Provider and quote counts are not held; not drawn.",
-    "breaks": "None.",
-    "annotation": "Quarter and the governed note UI-VIS-RPW-AVERAGE-NOTE (frame_labels) in frame.",
-    "credit": {
-     "passport_ids": [
-      "EP-WB-RPW-KSA-YEM-K04"
-     ],
-     "source_ids": [
-      "SRC-WB-RPW-SA-YEM-2025Q3-001",
-      "SRC-WB-RPW-UAE-YEM-2025Q3-001"
-     ]
     },
-    "mobile": "Two rows of paired dots.",
-    "rtl": "Value axis left to right; labels mirror.",
-    "fallback": "Table: corridor, amount, cost (%).",
-    "frame_labels": [
-     "UI-VIS-RPW-AVERAGE-NOTE"
-    ]
-   }
-  },
-  {
-   "visual_id": "VIS-FIRM-FINANCE-PATH",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "The 31 firms with a line of credit out of 328 (FFO-2022-004) and the 18 valid loan-source responses (FFO-2022-LS-01..04) are rendered as a table (stage, count, base). Two stages drawn in sequence would read as a funnel, which requires the 18 responses to come from the 31 firms; the Master does not establish that.",
-   "promotion_requires": "The Master states whether the 18 loan-source responses are a subset of the 31 firms with a line of credit.",
-   "table": {
-    "form": "Item and number under each base (a row group opened by \"Out of\" and the base), in the source's order. A governed marker separates the establishments with a line of credit from the loan-source responses: the Master does not establish that the 18 come from the 31, so nothing is drawn or read as a funnel.",
-    "objects": [
-     {
-      "id": "firm",
-      "rows": {
-       "file": "data/firm_finance.json",
-       "header_key": "observation_id",
-       "ids": [
-        "FFO-2022-004",
-        "FFO-2022-LS-01",
-        "FFO-2022-LS-02",
-        "FFO-2022-LS-03",
-        "FFO-2022-LS-04"
-       ]
-      },
-      "fields": {
-       "metric_label": "metric_label",
-       "breakdown_value": "breakdown_value",
-       "value": "value",
-       "denominator_n": "denominator_n",
-       "source": "source_id"
-      },
-      "must_equal": {
-       "FFO-2022-004": {
-        "value": 31,
-        "denominator_n": 328
-       },
-       "FFO-2022-LS-01": {
-        "value": 10,
-        "denominator_n": 18
-       },
-       "FFO-2022-LS-02": {
-        "value": 1,
-        "denominator_n": 18
-       },
-       "FFO-2022-LS-03": {
-        "value": 5,
-        "denominator_n": 18
-       },
-       "FFO-2022-LS-04": {
-        "value": 2,
-        "denominator_n": 18
-       }
+    {
+      "visual_id": "VIS-FIRM-CONSTRAINTS",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "Places access to finance among the constraints firms named, without a rank or a national claim.",
+      "contract": {
+        "form": "Horizontal bars sorted by share, no rank numbers; multi-response note in frame.",
+        "series": [
+          {
+            "id": "challenges",
+            "rows": {
+              "file": "data/firm_finance.json",
+              "header_key": "observation_id",
+              "ids": [
+                "FFO-2022-CH-01",
+                "FFO-2022-CH-02",
+                "FFO-2022-CH-03",
+                "FFO-2022-CH-04",
+                "FFO-2022-CH-05",
+                "FFO-2022-CH-06",
+                "FFO-2022-CH-07",
+                "FFO-2022-CH-08",
+                "FFO-2022-CH-09",
+                "FFO-2022-CH-10",
+                "FFO-2022-CH-11",
+                "FFO-2022-CH-12",
+                "FFO-2022-CH-13",
+                "FFO-2022-CH-14",
+                "FFO-2022-CH-15",
+                "FFO-2022-CH-16"
+              ]
+            },
+            "fields": {
+              "x": "metric_label",
+              "y": "value",
+              "unit": "unit",
+              "source": "source_id"
+            },
+            "state": "MEASURED",
+            "must_equal": {
+              "FFO-2022-CH-01": 50,
+              "FFO-2022-CH-06": 22,
+              "FFO-2022-CH-08": 17
+            },
+            "label_fields": {
+              "x": "firm_challenge",
+              "unit": "unit"
+            }
+          }
+        ],
+        "ordering": "By share, descending, without rank numbers.",
+        "transformation": "None. All sixteen items of the source's Table 8 (Annex III, p. 146) are drawn and listed (FFO-2022-CH-01..16), each checked against the original on 3 October 2026 (RC-7).",
+        "missing": "The base for this question is not held; stated in frame.",
+        "breaks": "None.",
+        "annotation": "Firms could name more than one challenge (shares add to more than 100%); seven-governorate survey; not a national ranking.",
+        "credit": {
+          "passport_id": "EP-FIRM-2022"
+        },
+        "mobile": "Full-width bars.",
+        "rtl": "Bars from the reading start.",
+        "fallback": "Table of all 16 governed items."
       }
-     }
-    ],
-    "head": [
-     "UI-VIS-TH-ITEM",
-     "UI-VIS-UNIT-COUNT"
-    ],
-    "caption": [],
-    "rows": [
-     {
-      "group": {
-       "lead": "UI-VIS-TH-BASE",
-       "ref": "firm.FFO-2022-004.denominator_n",
-       "unit": "UI-VIS-UNIT-FIRMS-SURVEYED"
-      }
-     },
-     {
-      "head": {
-       "ref": "firm.FFO-2022-004.metric_label",
-       "ns": "firm_finance"
-      },
-      "cells": [
-       {
-        "ref": "firm.FFO-2022-004.value"
-       }
-      ]
-     },
-     {
-      "marker": "UI-VIS-NOTE-FIRM-LOAN-SUBSET"
-     },
-     {
-      "group": {
-       "lead": "UI-VIS-TH-BASE",
-       "ref": "firm.FFO-2022-LS-01.denominator_n",
-       "unit": "UI-VIS-UNIT-VALID-RESPONSES"
-      }
-     },
-     {
-      "head": {
-       "ref": "firm.FFO-2022-LS-01.breakdown_value",
-       "ns": "firm_finance"
-      },
-      "cells": [
-       {
-        "ref": "firm.FFO-2022-LS-01.value"
-       }
-      ]
-     },
-     {
-      "head": {
-       "ref": "firm.FFO-2022-LS-02.breakdown_value",
-       "ns": "firm_finance"
-      },
-      "cells": [
-       {
-        "ref": "firm.FFO-2022-LS-02.value"
-       }
-      ]
-     },
-     {
-      "head": {
-       "ref": "firm.FFO-2022-LS-03.breakdown_value",
-       "ns": "firm_finance"
-      },
-      "cells": [
-       {
-        "ref": "firm.FFO-2022-LS-03.value"
-       }
-      ]
-     },
-     {
-      "head": {
-       "ref": "firm.FFO-2022-LS-04.breakdown_value",
-       "ns": "firm_finance"
-      },
-      "cells": [
-       {
-        "ref": "firm.FFO-2022-LS-04.value"
-       }
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "visual_id": "VIS-FIRM-CONSTRAINTS",
-   "tier": "CORE_ANALYTICAL",
-   "rationale": "Places access to finance among the constraints firms named, without a rank or a national claim.",
-   "contract": {
-    "form": "Horizontal bars sorted by share, no rank numbers; multi-response note in frame.",
-    "series": [
-     {
-      "id": "challenges",
-      "rows": {
-       "file": "data/firm_finance.json",
-       "header_key": "observation_id",
-       "ids": [
-        "FFO-2022-CH-01",
-        "FFO-2022-CH-02",
-        "FFO-2022-CH-03",
-        "FFO-2022-CH-04",
-        "FFO-2022-CH-05",
-        "FFO-2022-CH-06",
-        "FFO-2022-CH-07",
-        "FFO-2022-CH-08",
-        "FFO-2022-CH-09",
-        "FFO-2022-CH-10",
-        "FFO-2022-CH-11",
-        "FFO-2022-CH-12",
-        "FFO-2022-CH-13",
-        "FFO-2022-CH-14",
-        "FFO-2022-CH-15",
-        "FFO-2022-CH-16"
-       ]
-      },
-      "fields": {
-       "x": "metric_label",
-       "y": "value",
-       "unit": "unit",
-       "source": "source_id"
-      },
-      "state": "MEASURED",
-      "must_equal": {
-       "FFO-2022-CH-01": 50,
-       "FFO-2022-CH-06": 22,
-       "FFO-2022-CH-08": 17
-      },
-      "label_fields": {
-       "x": "firm_challenge",
-       "unit": "unit"
-      }
-     }
-    ],
-    "ordering": "By share, descending, without rank numbers.",
-    "transformation": "None. All sixteen items of the source's Table 8 (Annex III, p. 146) are drawn and listed (FFO-2022-CH-01..16), each checked against the original on 3 October 2026 (RC-7).",
-    "missing": "The base for this question is not held; stated in frame.",
-    "breaks": "None.",
-    "annotation": "Firms could name more than one challenge (shares add to more than 100%); seven-governorate survey; not a national ranking.",
-    "credit": {
-     "passport_id": "EP-FIRM-2022"
     },
-    "mobile": "Full-width bars.",
-    "rtl": "Bars from the reading start.",
-    "fallback": "Table of all 16 governed items."
-   }
-  },
-  {
-   "visual_id": "VIS-MFI-DIVERGENCE",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "Borrowers, savers and nominal portfolio at three dated anchors (21_MFI_DATA spine rows SRC-SFD-Q4-2015-001, SRC-SFD-Q4-2020-001, SRC-SANAA-MFB-2024) are not comparable enough to draw: saver definitions differ, the rial valuation of the portfolio figures is not recorded, and the 2023 anchor is a secondary sector figure whose provider set is not verified (UI-VIS-NOTE-MFI-2023-SECONDARY). Rendered as a table: date, borrowers, savers, portfolio (YER million) and the evidence state of each value. RV-CWR-006 uses the same table.",
-   "promotion_requires": "A governed saver-definition crosswalk and a governed rial-valuation field on each portfolio anchor (Master-first)."
-  },
-  {
-   "visual_id": "VIS-TARGET-RESULT-STATE",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "The FMIIP access-point baseline and target (FMIIP-RF-004) and the result, which is not held, are rendered as a three-row table (state, date, value). Two markers on a dated axis would invite a trajectory that no observation supports.",
-   "promotion_requires": "An observed result for the same indicator under the project's own definition (FMIIP-RF-004), Master-first.",
-   "table": {
-    "form": "Three rows (state, date, value): the project's baseline, its target, and the result, which the evidence base does not hold. No dated axis, no percentage of the target, no comparison with administrative counts.",
-    "objects": [
-     {
-      "id": "fmiip",
-      "rows": {
-       "file": "data/reforms_regulation.json",
-       "header_key": "metric_id",
-       "ids": [
-        "FMIIP-RF-004"
-       ]
-      },
-      "fields": {
-       "baseline_period": "baseline_period",
-       "baseline_value": "baseline_value",
-       "target_period": "target_period",
-       "target_value": "target_value",
-       "source": "source_id"
-      },
-      "month_year_fields": [
-       "baseline_period",
-       "target_period"
-      ],
-      "must_equal": {
-       "FMIIP-RF-004": {
-        "baseline_value": 817,
-        "target_value": 1021
-       }
-      }
-     }
-    ],
-    "head": [
-     "UI-VIS-TH-ITEM",
-     "UI-VIS-TH-DATE",
-     "UI-VIS-UNIT-PROJECT-ACCESS-POINTS"
-    ],
-    "caption": [
-     "UI-VIS-STATE-PROGRAMME"
-    ],
-    "rows": [
-     {
-      "head": "UI-VIS-BASELINE",
-      "cells": [
-       {
-        "ref": "fmiip.FMIIP-RF-004.baseline_period_iso",
-        "as": "month"
-       },
-       {
-        "ref": "fmiip.FMIIP-RF-004.baseline_value"
-       }
-      ]
-     },
-     {
-      "head": "UI-VIS-TARGET",
-      "cells": [
-       {
-        "ref": "fmiip.FMIIP-RF-004.target_period_iso",
-        "as": "month"
-       },
-       {
-        "ref": "fmiip.FMIIP-RF-004.target_value"
-       }
-      ]
-     },
-     {
-      "head": "UI-VIS-RESULT",
-      "cells": [
-       {
-        "ui": "UI-VIS-RESULT-NOT-HELD",
-        "span": 2
-       }
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "visual_id": "RV-CWR-004",
-   "tier": "CORE_ANALYTICAL",
-   "rationale": "Parallel dated lanes show that people-side evidence (2022–23 fieldwork) and system evidence (2025–26) are asynchronous, ending in an open population-outcome node. The drawable instance of the evidence-clock idea.",
-   "contract": {
-    "form": "Three dated lanes on one time axis (people, infrastructure, institutions/reform) ending in an OPEN outcome node.",
-    "series": [
-     {
-      "id": "people",
-      "rows": {
-       "file": "data/findex_baseline.json",
-       "header_key": "observation_id",
-       "ids": [
-        "WB-FINDEX-OBS-2022-001"
-       ]
-      },
-      "fields": {
-       "x": "year",
-       "y": "value",
-       "unit": "unit",
-       "source": "source_url",
-       "group": "group",
-       "series_label": "indicator"
-      },
-      "state": "MEASURED",
-      "must_equal": {
-       "WB-FINDEX-OBS-2022-001": 11.9
-      },
-      "label_fields": {
-       "group": "findex_group",
-       "series_label": "findex_metric",
-       "unit": "unit"
-      }
-     },
-     {
-      "id": "infrastructure",
-      "rows": {
-       "file": "data/payments_data.json",
-       "header_key": "observation_id",
-       "where": {
-        "indicator_id": "^IND-0002$",
-        "source_id": "^SRC-CBY-POS-"
-       }
-      },
-      "fields": {
-       "x": "period_label",
-       "y": "value",
-       "unit": "unit",
-       "source": "source_id",
-       "label": "indicator_id"
-      },
-      "state": "ADMINISTRATIVE",
-      "label_fields": {
-       "label": "payment_object",
-       "unit": "unit"
-      }
-     }
-    ],
-    "objects": [
-     {
-      "id": "institutions",
-      "rows": {
-       "file": "data/reforms_regulation.json",
-       "header_key": "event_id",
-       "ids": [
-        "REF-FMIIP-APPROVAL-2025",
-        "REF-PAY-008",
-        "REF-PAY-006",
-        "REF-PAY-011",
-        "REF-PAY-012",
-        "REF-PAY-013"
-       ]
-      },
-      "fields": {
-       "date": "date",
-       "label": "event",
-       "class": "event_class",
-       "source": "source_url"
-      },
-      "label_fields": {
-       "label": "event"
-      },
-      "encoding_only_fields": [
-       "class"
-      ]
-     }
-    ],
-    "ordering": "Chronological on a shared axis; the people lane shows the fieldwork span (7 Nov 2022 – 9 Jan 2023, from CLM-001), not a single year.",
-    "transformation": "Lanes never share a value axis. Every lane, including infrastructure, is plotted as dated presence (monthly ticks for the infrastructure lane), not magnitude; only the first and the latest infrastructure values are labelled, with their governed object label. No lane has a value axis.",
-    "missing": "No people-side observation after the fieldwork span: the lane ends and the outcome node is OPEN.",
-    "breaks": "UI-VIS-NOT-COMPARABLE between lanes.",
-    "annotation": "UI-VIS-CHAIN-OPEN on the final node. The people lane is drawn as the fieldwork span stated in the governed period of evidence record CLM-001, not as a point at the data year of the Findex row; the span ends the lane. Lane titles are the three governed frame labels, in lane order (people, infrastructure, institutions and reforms).",
-    "credit": {
-     "passport_ids": [
-      "EP-FINDEX-2022-ACCOUNT",
-      "EP-CBY-POS-MONTHLY"
-     ],
-     "source_ids": [
-      "SRC-WB-FMIIP-P180708"
-     ]
+    {
+      "visual_id": "VIS-MFI-DIVERGENCE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "Borrowers, savers and nominal portfolio at three dated anchors (21_MFI_DATA spine rows SRC-SFD-Q4-2015-001, SRC-SFD-Q4-2020-001, SRC-SANAA-MFB-2024) are not comparable enough to draw: saver definitions differ, the rial valuation of the portfolio figures is not recorded, and the 2023 anchor is a secondary sector figure whose provider set is not verified (UI-VIS-NOTE-MFI-2023-SECONDARY). Rendered as a table: date, borrowers, savers, portfolio (YER million) and the evidence state of each value. RV-CWR-006 uses the same table.",
+      "promotion_requires": "A governed saver-definition crosswalk and a governed rial-valuation field on each portfolio anchor (Master-first)."
     },
-    "mobile": "Lanes become a dated vertical list.",
-    "rtl": "Time axis left to right; lane labels mirror.",
-    "fallback": "Table: lane, date, what is recorded.",
-    "frame_labels": [
-     "UI-VIS-CAT-LANE-PEOPLE-SURVEY",
-     "UI-VIS-CAT-LANE-PAYMENT-INFRA-ADMIN",
-     "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS",
-     "UI-VIS-NOTE-POS-SCOPE"
-    ]
-   }
-  },
-  {
-   "visual_id": "VIS-E-MONEY-RULE-STACK",
-   "tier": "SUPPORTING",
-   "rationale": "Regulatory stack as cards; state-only and drawable from 31 e-money rows, but the text already carries it and ceilings pack several values per cell (EMR-007..009)."
-  },
-  {
-   "visual_id": "VIS-FCP-REDRESS-PATH",
-   "tier": "SUPPORTING",
-   "rationale": "An ordered path of rule-stated time limits with an open performance node; clear as a short ordered list, and a drawn path adds little."
-  },
-  {
-   "visual_id": "VIS-FL-EVIDENCE-LADDER",
-   "tier": "SUPPORTING",
-   "rationale": "Four-rung ladder whose population-capability rung has no Yemen value; a state ladder, secondary to the people-side core visual."
-  },
-  {
-   "visual_id": "VIS-EVIDENCE-CLASS-LADDER",
-   "tier": "SUPPORTING",
-   "rationale": "Method explainer on /evidence/; categorical and state-only. Drawn, if at all, as unordered category cards: the classes are not a ranking."
-  },
-  {
-   "visual_id": "VIS-PAYMENT-RAILS",
-   "tier": "SUPPORTING",
-   "rationale": "State timeline of payment reforms; overlaps the RV-CWR-009 signature chain, whose deduplicated event set it should reuse. Its lineage is BOUND_EXACT: REF-PAY-001 was closed to SRC-CBY-DEC-23-2024-001 in P5."
-  },
-  {
-   "visual_id": "RV-CWR-002",
-   "tier": "SUPPORTING",
-   "rationale": "Same-period banking positions across a method break: the values are not held as rows (PARTIAL), so the Reading's text carries it until they are promoted Master-first."
-  },
-  {
-   "visual_id": "RV-CWR-003",
-   "tier": "SUPPORTING",
-   "rationale": "Measurement lanes for people, accounts, activity and infrastructure; VIS-PAYMENT-ANATOMY carries the core of it."
-  },
-  {
-   "visual_id": "RV-CWR-005",
-   "tier": "SUPPORTING",
-   "rationale": "Historical five-provider e-money figures; PARTIAL (transaction-value mix held only as text)."
-  },
-  {
-   "visual_id": "RV-CWR-006",
-   "tier": "SUPPORTING",
-   "rationale": "Uses the VIS-MFI-DIVERGENCE table of dated anchors (TABLE_TEXT_FIRST); draws no separate chart."
-  },
-  {
-   "visual_id": "RV-CWR-007",
-   "tier": "SUPPORTING",
-   "rationale": "Levels are those of VIS-FINDEX-GAPS; the hypotheses layer is a text list, not arrows."
-  },
-  {
-   "visual_id": "RV-CWR-008",
-   "tier": "SUPPORTING",
-   "rationale": "Three bases in three panels; reuses the firm core visuals plus the SMEPS KPI (CLM-060). PARTIAL until the SMEPS values are rows."
-  },
-  {
-   "visual_id": "RV-CWR-010",
-   "tier": "SUPPORTING",
-   "rationale": "Transfer-to-persistence ladder; state-only, the persistence link is open."
-  },
-  {
-   "visual_id": "VIS-INCLUSION-TRANSMISSION",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "13_SYSTEM_RELATIONSHIPS holds relationship statements, not evidenced links: 21 of 26 carry no reference and none carries an evidence strength. Design renders it as the ordered list of documented relationships (SL-001..010, SL-022..026) with what each does not establish; SL-011..021 are measurement, placement and navigation links, not system relationships. The current static baseline shows the governed text alternative only.",
-   "promotion_requires": "An evidence reference and a governed evidence state on each system relationship (13), Master-first."
-  },
-  {
-   "visual_id": "VIS-EVIDENCE-FRESHNESS",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "The right idea, not drawable: periods exist only as free text (97 distinct strings), with no separate observation, fieldwork, publication or retrieval dates, and retrieval dates are held for 1 of 159 sources. RV-CWR-004 is the drawable instance meanwhile.",
-   "promotion_requires": "Structured observation_start, observation_end, fieldwork_start/end, publication_date and evidence_class on each public Evidence Record (06), Master-first; then SIGNATURE."
-  },
-  {
-   "visual_id": "VIS-EVIDENCE-GAPS",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "Gap types are not a governed field; the Measurement Agenda already renders each blocked evidence item as text.",
-   "promotion_requires": "A typed gap field on 10_MEASUREMENT_AGENDA rows."
-  },
-  {
-   "visual_id": "VIS-SOURCE-COMPARISON",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "Implemented as the Compare tool (governed comparison fields, text-labelled states); a table by nature."
-  },
-  {
-   "visual_id": "VIS-FIRM-FINANCE-SEVERITY",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "Two percentages inside a filtered base; a sentence carries them better than a stacked bar, which invites a prevalence reading."
-  },
-  {
-   "visual_id": "VIS-OECD-FCP-TIMELINE",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "State list of consumer-protection steps; overlaps VIS-FCP-REDRESS-PATH on the same page."
-  },
-  {
-   "visual_id": "VIS-MECHANISM-METRIC-BRIDGE",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "The Master uses 16 relationship types where the contract names 4; rendered as a per-record list of documented links until the taxonomy is reconciled.",
-   "promotion_requires": "Contract edge types reconciled with the governed relationship taxonomy (Master)."
-  },
-  {
-   "visual_id": "VIS-ACCESS-EVIDENCE-LAYER",
-   "tier": "TABLE_TEXT_FIRST",
-   "rationale": "Method contract: no operating-provider map may be drawn from lists until the access-point register (MA-005) exists.",
-   "promotion_requires": "Verified, dated operating locations (MA-005)."
-  },
-  {
-   "visual_id": "VIS-CAPITAL-CONTEXT",
-   "tier": "RETIRE_FROM_DESIGN",
-   "rationale": "Its data (35 OCHA FTS flows) are governed HUMANITARIAN_CONTEXT_ONLY and 'backend/context only'; a public relationship graph would present context-only data as a public analytical object. The Evidence Record text stays."
-  }
- ]
+    {
+      "visual_id": "VIS-TARGET-RESULT-STATE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The FMIIP access-point baseline and target (FMIIP-RF-004) and the result, which is not held, are rendered as a three-row table (state, date, value). Two markers on a dated axis would invite a trajectory that no observation supports.",
+      "promotion_requires": "An observed result for the same indicator under the project's own definition (FMIIP-RF-004), Master-first.",
+      "table": {
+        "form": "Three rows (state, date, value): the project's baseline, its target, and the result, which the evidence base does not hold. No dated axis, no percentage of the target, no comparison with administrative counts.",
+        "objects": [
+          {
+            "id": "fmiip",
+            "rows": {
+              "file": "data/reforms_regulation.json",
+              "header_key": "metric_id",
+              "ids": [
+                "FMIIP-RF-004"
+              ]
+            },
+            "fields": {
+              "baseline_period": "baseline_period",
+              "baseline_value": "baseline_value",
+              "target_period": "target_period",
+              "target_value": "target_value",
+              "source": "source_id"
+            },
+            "month_year_fields": [
+              "baseline_period",
+              "target_period"
+            ],
+            "must_equal": {
+              "FMIIP-RF-004": {
+                "baseline_value": 817,
+                "target_value": 1021
+              }
+            }
+          }
+        ],
+        "head": [
+          "UI-VIS-TH-ITEM",
+          "UI-VIS-TH-DATE",
+          "UI-VIS-UNIT-PROJECT-ACCESS-POINTS"
+        ],
+        "caption": [
+          "UI-VIS-STATE-PROGRAMME"
+        ],
+        "rows": [
+          {
+            "head": "UI-VIS-BASELINE",
+            "cells": [
+              {
+                "ref": "fmiip.FMIIP-RF-004.baseline_period_iso",
+                "as": "month"
+              },
+              {
+                "ref": "fmiip.FMIIP-RF-004.baseline_value"
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-TARGET",
+            "cells": [
+              {
+                "ref": "fmiip.FMIIP-RF-004.target_period_iso",
+                "as": "month"
+              },
+              {
+                "ref": "fmiip.FMIIP-RF-004.target_value"
+              }
+            ]
+          },
+          {
+            "head": "UI-VIS-RESULT",
+            "cells": [
+              {
+                "ui": "UI-VIS-RESULT-NOT-HELD",
+                "span": 2
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "visual_id": "RV-CWR-004",
+      "tier": "CORE_ANALYTICAL",
+      "rationale": "Parallel dated lanes show that people-side evidence (2022–23 fieldwork) and system evidence (2025–26) are asynchronous, ending in an open population-outcome node. The drawable instance of the evidence-clock idea.",
+      "contract": {
+        "form": "Three dated lanes on one time axis (people, infrastructure, institutions/reform) ending in an OPEN outcome node.",
+        "series": [
+          {
+            "id": "people",
+            "rows": {
+              "file": "data/findex_baseline.json",
+              "header_key": "observation_id",
+              "ids": [
+                "WB-FINDEX-OBS-2022-001"
+              ]
+            },
+            "fields": {
+              "x": "year",
+              "y": "value",
+              "unit": "unit",
+              "source": "source_url",
+              "group": "group",
+              "series_label": "indicator"
+            },
+            "state": "MEASURED",
+            "must_equal": {
+              "WB-FINDEX-OBS-2022-001": 11.9
+            },
+            "label_fields": {
+              "group": "findex_group",
+              "series_label": "findex_metric",
+              "unit": "unit"
+            }
+          },
+          {
+            "id": "infrastructure",
+            "rows": {
+              "file": "data/payments_data.json",
+              "header_key": "observation_id",
+              "where": {
+                "indicator_id": "^IND-0002$",
+                "source_id": "^SRC-CBY-POS-"
+              }
+            },
+            "fields": {
+              "x": "period_label",
+              "y": "value",
+              "unit": "unit",
+              "source": "source_id",
+              "label": "indicator_id"
+            },
+            "state": "ADMINISTRATIVE",
+            "label_fields": {
+              "label": "payment_object",
+              "unit": "unit"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "institutions",
+            "rows": {
+              "file": "data/reforms_regulation.json",
+              "header_key": "event_id",
+              "ids": [
+                "REF-FMIIP-APPROVAL-2025",
+                "REF-PAY-008",
+                "REF-PAY-006",
+                "REF-PAY-011",
+                "REF-PAY-012",
+                "REF-PAY-013"
+              ]
+            },
+            "fields": {
+              "date": "date",
+              "label": "event",
+              "class": "event_class",
+              "source": "source_url"
+            },
+            "label_fields": {
+              "label": "event"
+            },
+            "encoding_only_fields": [
+              "class"
+            ]
+          }
+        ],
+        "ordering": "Chronological on a shared axis; the people lane shows the fieldwork span (7 Nov 2022 – 9 Jan 2023, from CLM-001), not a single year.",
+        "transformation": "Lanes never share a value axis. Every lane, including infrastructure, is plotted as dated presence (monthly ticks for the infrastructure lane), not magnitude; only the first and the latest infrastructure values are labelled, with their governed object label. No lane has a value axis.",
+        "missing": "No people-side observation after the fieldwork span: the lane ends and the outcome node is OPEN.",
+        "breaks": "UI-VIS-NOT-COMPARABLE between lanes.",
+        "annotation": "UI-VIS-CHAIN-OPEN on the final node. The people lane is drawn as the fieldwork span stated in the governed period of evidence record CLM-001, not as a point at the data year of the Findex row; the span ends the lane. Lane titles are the three governed frame labels, in lane order (people, infrastructure, institutions and reforms).",
+        "credit": {
+          "passport_ids": [
+            "EP-FINDEX-2022-ACCOUNT",
+            "EP-CBY-POS-MONTHLY"
+          ],
+          "source_ids": [
+            "SRC-WB-FMIIP-P180708"
+          ]
+        },
+        "mobile": "Lanes become a dated vertical list.",
+        "rtl": "Time axis left to right; lane labels mirror.",
+        "fallback": "Table: lane, date, what is recorded.",
+        "frame_labels": [
+          "UI-VIS-CAT-LANE-PEOPLE-SURVEY",
+          "UI-VIS-CAT-LANE-PAYMENT-INFRA-ADMIN",
+          "UI-VIS-CAT-LANE-INSTITUTIONS-REFORMS",
+          "UI-VIS-NOTE-POS-SCOPE"
+        ]
+      }
+    },
+    {
+      "visual_id": "VIS-E-MONEY-RULE-STACK",
+      "tier": "SUPPORTING",
+      "rationale": "Regulatory stack as cards; state-only and drawable from 31 e-money rows, but the text already carries it and ceilings pack several values per cell (EMR-007..009)."
+    },
+    {
+      "visual_id": "VIS-FCP-REDRESS-PATH",
+      "tier": "SUPPORTING",
+      "rationale": "An ordered path of rule-stated time limits with an open performance node; clear as a short ordered list, and a drawn path adds little."
+    },
+    {
+      "visual_id": "VIS-FL-EVIDENCE-LADDER",
+      "tier": "SUPPORTING",
+      "rationale": "Four-rung ladder whose population-capability rung has no Yemen value; a state ladder, secondary to the people-side core visual."
+    },
+    {
+      "visual_id": "VIS-EVIDENCE-CLASS-LADDER",
+      "tier": "SUPPORTING",
+      "rationale": "Method explainer on /evidence/; categorical and state-only. Drawn, if at all, as unordered category cards: the classes are not a ranking."
+    },
+    {
+      "visual_id": "VIS-PAYMENT-RAILS",
+      "tier": "SUPPORTING",
+      "rationale": "State timeline of payment reforms; overlaps the RV-CWR-009 signature chain, whose deduplicated event set it should reuse. Its lineage is BOUND_EXACT: REF-PAY-001 was closed to SRC-CBY-DEC-23-2024-001 in P5."
+    },
+    {
+      "visual_id": "RV-CWR-002",
+      "tier": "SUPPORTING",
+      "rationale": "Same-period banking positions across a method break: the values are not held as rows (PARTIAL), so the Reading's text carries it until they are promoted Master-first."
+    },
+    {
+      "visual_id": "RV-CWR-003",
+      "tier": "SUPPORTING",
+      "rationale": "Measurement lanes for people, accounts, activity and infrastructure; VIS-PAYMENT-ANATOMY carries the core of it."
+    },
+    {
+      "visual_id": "RV-CWR-005",
+      "tier": "SUPPORTING",
+      "rationale": "Historical five-provider e-money figures; PARTIAL (transaction-value mix held only as text)."
+    },
+    {
+      "visual_id": "RV-CWR-006",
+      "tier": "SUPPORTING",
+      "rationale": "Uses the VIS-MFI-DIVERGENCE table of dated anchors (TABLE_TEXT_FIRST); draws no separate chart."
+    },
+    {
+      "visual_id": "RV-CWR-007",
+      "tier": "SUPPORTING",
+      "rationale": "Levels are those of VIS-FINDEX-GAPS; the hypotheses layer is a text list, not arrows."
+    },
+    {
+      "visual_id": "RV-CWR-008",
+      "tier": "SUPPORTING",
+      "rationale": "Three bases in three panels; reuses the firm core visuals plus the SMEPS KPI (CLM-060). PARTIAL until the SMEPS values are rows."
+    },
+    {
+      "visual_id": "RV-CWR-010",
+      "tier": "SUPPORTING",
+      "rationale": "Transfer-to-persistence ladder; state-only, the persistence link is open."
+    },
+    {
+      "visual_id": "VIS-INCLUSION-TRANSMISSION",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "13_SYSTEM_RELATIONSHIPS holds relationship statements, not evidenced links: 21 of 26 carry no reference and none carries an evidence strength. Design renders it as the ordered list of documented relationships (SL-001..010, SL-022..026) with what each does not establish; SL-011..021 are measurement, placement and navigation links, not system relationships. The current static baseline shows the governed text alternative only.",
+      "promotion_requires": "An evidence reference and a governed evidence state on each system relationship (13), Master-first."
+    },
+    {
+      "visual_id": "VIS-EVIDENCE-FRESHNESS",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The right idea, not drawable: periods exist only as free text (97 distinct strings), with no separate observation, fieldwork, publication or retrieval dates, and retrieval dates are held for 1 of 159 sources. RV-CWR-004 is the drawable instance meanwhile.",
+      "promotion_requires": "Structured observation_start, observation_end, fieldwork_start/end, publication_date and evidence_class on each public Evidence Record (06), Master-first; then SIGNATURE."
+    },
+    {
+      "visual_id": "VIS-EVIDENCE-GAPS",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "Gap types are not a governed field; the Measurement Agenda already renders each blocked evidence item as text.",
+      "promotion_requires": "A typed gap field on 10_MEASUREMENT_AGENDA rows."
+    },
+    {
+      "visual_id": "VIS-SOURCE-COMPARISON",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "Implemented as the Compare tool (governed comparison fields, text-labelled states); a table by nature."
+    },
+    {
+      "visual_id": "VIS-FIRM-FINANCE-SEVERITY",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "Two percentages inside a filtered base; a sentence carries them better than a stacked bar, which invites a prevalence reading."
+    },
+    {
+      "visual_id": "VIS-OECD-FCP-TIMELINE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "State list of consumer-protection steps; overlaps VIS-FCP-REDRESS-PATH on the same page."
+    },
+    {
+      "visual_id": "VIS-MECHANISM-METRIC-BRIDGE",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "The Master uses 16 relationship types where the contract names 4; rendered as a per-record list of documented links until the taxonomy is reconciled.",
+      "promotion_requires": "Contract edge types reconciled with the governed relationship taxonomy (Master)."
+    },
+    {
+      "visual_id": "VIS-ACCESS-EVIDENCE-LAYER",
+      "tier": "TABLE_TEXT_FIRST",
+      "rationale": "Method contract: no operating-provider map may be drawn from lists until the access-point register (MA-005) exists.",
+      "promotion_requires": "Verified, dated operating locations (MA-005)."
+    },
+    {
+      "visual_id": "VIS-CAPITAL-CONTEXT",
+      "tier": "RETIRE_FROM_DESIGN",
+      "rationale": "Its data (35 OCHA FTS flows) are governed HUMANITARIAN_CONTEXT_ONLY and 'backend/context only'; a public relationship graph would present context-only data as a public analytical object. The Evidence Record text stays."
+    }
+  ]
 }
