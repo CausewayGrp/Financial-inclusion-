@@ -1240,7 +1240,10 @@ class Content:
         return {"family": "Data & Source", "route": "/data/", "regulatory": regulatory, "regulatory_also": regulatory_also, "lang": lang, "title": self.loc(spec, "title", lang), "meta_description": self.loc(spec, "meta_description", lang),
                 "lead": secs[0]["body"] if secs and not secs[0]["heading"] else "", "sections": [s for s in secs if s["heading"]],
                 "curated": list(curated_groups.values()), "supporting": supporting, "reference": reference,
-                "curated_count": sum(len(v["items"]) for v in curated_groups.values()), "chronology": self.chronology(lang), "blocks": self.governed_blocks(spec, lang, "/data"),
+                "curated_count": sum(len(v["items"]) for v in curated_groups.values()),
+                # close-out W3d: the dated chronology is kept once, on /finance/ (folded); /data/ points to it
+                "chronology_pointer": {"label": L("UI-DATA-CHRONOLOGY-OPEN"), "href": self.href("/finance/", lang) + "#chronology"},
+                "blocks": self.governed_blocks(spec, lang, "/data"),
                 # the group counts the page prints are handed over with the groups (the page prints no number the loader does not)
                 "regulatory_count": len(regulatory) + len(regulatory_also), "supporting_count": len(supporting), "reference_count": len(reference),
                 "next": self.journey_next("/data/", lang),
