@@ -3082,5 +3082,95 @@
     "label_en": "This address now leads to the record of the Central Bank of Yemen – Aden (CBY-Aden) circular of 26 June 2024. Names from the regulator's lists are not reproduced here.",
     "label_ar": "يُحيل هذا الرابط الآن إلى سجل التعميم المؤرخ في 26 يونيو 2024 والصادر عن البنك المركزي اليمني – عدن. ولا تُذكر هنا الأسماء الواردة في قوائم الجهة الرقابية.",
     "use_rule": "RC-19 (owner decision of 3 October 2026, 23:54 Aden). Body of the page at a retired record address; the link that follows is the target record's governed title."
+  },
+  {
+    "ui_id": "UI-CHRONOLOGY-LIST-SUMMARY",
+    "label_en": "List of dated events",
+    "label_ar": "قائمة الأحداث المؤرخة",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. /finance/: the summary of the disclosure that holds the chronology list, followed by the count of events; distinct from UI-CHRONOLOGY-H, which is the section's heading there. The intro stays outside the disclosure."
+  },
+  {
+    "ui_id": "UI-DATA-ABOUT-THIS-SOURCE",
+    "label_en": "About this source",
+    "label_ar": "عن هذا المصدر",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. /data/ source register: the summary of a source row's description. The row's 'Does not establish' line, its reference, its locator path and its cite controls stay outside the disclosure."
+  },
+  {
+    "ui_id": "UI-EDITION-CHECKED-DATE",
+    "label_en": "3 October 2026",
+    "label_ar": "3 أكتوبر 2026",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. The date up to which this edition's sources were checked, as stated in /corrections/ section 3 and in UI-CONTENT-VERSION; gate CS-01 holds the three equal. Changes only with a governed release."
+  },
+  {
+    "ui_id": "UI-CURRENTNESS-STRIP",
+    "label_en": "Sources checked up to {date}",
+    "label_ar": "رُوجعت المصادر حتى {date}",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Currentness strip on every page; {date} is UI-EDITION-CHECKED-DATE. Printed beside UI-CONTENT-VERSION and linked to /corrections/ section 3, which says what an edition is."
+  },
+  {
+    "ui_id": "UI-COLOPHON-H",
+    "label_en": "Evidence colophon",
+    "label_ar": "بيان الأدلة",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Heading of the Evidence Colophon in the footer of every page."
+  },
+  {
+    "ui_id": "UI-COLOPHON-SINGLE-MASTER",
+    "label_en": "This edition is generated from a single governed evidence base, the one authority for every figure and source it shows.",
+    "label_ar": "يُولَّد هذا الإصدار من قاعدة أدلة واحدة خاضعة للحوكمة، هي المرجع الوحيد لكل رقم ومصدر يعرضه.",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Evidence Colophon: the single-Master statement."
+  },
+  {
+    "ui_id": "UI-COLOPHON-EDITION",
+    "label_en": "Edition",
+    "label_ar": "الإصدار",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Evidence Colophon: label of UI-CONTENT-VERSION."
+  },
+  {
+    "ui_id": "UI-COLOPHON-CHECKED",
+    "label_en": "Sources checked up to",
+    "label_ar": "رُوجعت المصادر حتى",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Evidence Colophon: label of UI-EDITION-CHECKED-DATE."
+  },
+  {
+    "ui_id": "UI-COLOPHON-FINGERPRINT",
+    "label_en": "Evidence-base fingerprint (SHA-256, abridged)",
+    "label_ar": "بصمة قاعدة الأدلة (SHA-256، مختصرة)",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Evidence Colophon: label of the first twelve hexadecimal characters of the SHA-256 of the Production Master the page was built from (authority/AUTHORITY.json production_master.sha256); an identifier, not a quantity."
+  },
+  {
+    "ui_id": "UI-COLOPHON-CITATION",
+    "label_en": "Cite this page",
+    "label_ar": "الاستشهاد بهذه الصفحة",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Evidence Colophon: a link to the page's own citation preview and copy control (section.util), which stays the one place a citation is copied."
+  },
+  {
+    "ui_id": "UI-NAV-HUB-01",
+    "label_en": "01",
+    "label_ar": "01",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /explore/ (Explore), bound by navigation_interaction.json."
+  },
+  {
+    "ui_id": "UI-NAV-HUB-02",
+    "label_en": "02",
+    "label_ar": "02",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /evidence/ (Evidence), bound by navigation_interaction.json."
+  },
+  {
+    "ui_id": "UI-NAV-HUB-03",
+    "label_en": "03",
+    "label_ar": "03",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /readings/ (Evidence Readings), bound by navigation_interaction.json."
+  },
+  {
+    "ui_id": "UI-NAV-HUB-04",
+    "label_en": "04",
+    "label_ar": "04",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /data/ (Data & sources), bound by navigation_interaction.json."
+  },
+  {
+    "ui_id": "UI-NAV-HUB-05",
+    "label_en": "05",
+    "label_ar": "05",
+    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub Method & Measurement (/methodology/, /measurement/), bound by navigation_interaction.json."
   }
 ]

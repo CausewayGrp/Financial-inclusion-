@@ -1325,3 +1325,5 @@ not public release (REL-01…04 remain).
   Its decisions (DL-V1-001…012), what it does not build and why, and its evidence are in
   [`DESIGN_INTEGRATION_V1.md`](DESIGN_INTEGRATION_V1.md); its escalations under "Raised at V1" in `ESCALATIONS.md`.
 - The status line above stays true: D7 is the accepted design. V1 is accepted only when the owner records it.
+- Phase B (owner decisions of 9 October 2026; DL-V1-013…018): the steward changes B-a, B-b (V1B-1) and B-c and what
+  they unlock, recorded in §6 of the same file.

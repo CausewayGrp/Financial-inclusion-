@@ -1,0 +1,147 @@
+{
+ "transaction": "V1B-1",
+ "summary": "Interface labels for design integration V1 Phase B (owner decisions of 9 October 2026, B-b)",
+ "items": {
+  "interface_rows": 15
+ },
+ "input_master_sha256": "fdb24bdfeae5c2604e326dd19effb4d79a783d44272f4dc08da2373979893999",
+ "output_master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+ "cells_written": 15,
+ "changes": [
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CHRONOLOGY-LIST-SUMMARY",
+   "old": null,
+   "new": "List of dated events || قائمة الأحداث المؤرخة"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-ABOUT-THIS-SOURCE",
+   "old": null,
+   "new": "About this source || عن هذا المصدر"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-EDITION-CHECKED-DATE",
+   "old": null,
+   "new": "3 October 2026 || 3 أكتوبر 2026"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CURRENTNESS-STRIP",
+   "old": null,
+   "new": "Sources checked up to {date} || رُوجعت المصادر حتى {date}"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COLOPHON-H",
+   "old": null,
+   "new": "Evidence colophon || بيان الأدلة"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COLOPHON-SINGLE-MASTER",
+   "old": null,
+   "new": "This edition is generated from a single governed evidence base, the one authority for every figure and source it shows. || يُولَّد هذا الإصدار من قاعدة أدلة واحدة خاضعة للحوكمة، هي المرجع الوحيد لكل رقم ومصدر يعرضه."
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COLOPHON-EDITION",
+   "old": null,
+   "new": "Edition || الإصدار"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COLOPHON-CHECKED",
+   "old": null,
+   "new": "Sources checked up to || رُوجعت المصادر حتى"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COLOPHON-FINGERPRINT",
+   "old": null,
+   "new": "Evidence-base fingerprint (SHA-256, abridged) || بصمة قاعدة الأدلة (SHA-256، مختصرة)"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COLOPHON-CITATION",
+   "old": null,
+   "new": "Cite this page || الاستشهاد بهذه الصفحة"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NAV-HUB-01",
+   "old": null,
+   "new": "01 || 01"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NAV-HUB-02",
+   "old": null,
+   "new": "02 || 02"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NAV-HUB-03",
+   "old": null,
+   "new": "03 || 03"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NAV-HUB-04",
+   "old": null,
+   "new": "04 || 04"
+  },
+  {
+   "finding": "V1B-1:B-b",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-NAV-HUB-05",
+   "old": null,
+   "new": "05 || 05"
+  }
+ ]
+}

@@ -980,7 +980,86 @@
       "measurement_limit": 2
     }
   ],
+  "orientation_routes": [
+    {
+      "route": "/",
+      "page_family": "Orientation",
+      "decided_by": "Owner decisions of 9 October 2026, B-a (audit/OWNER_DECISIONS_2026-10-09.md): the entry proposed in design/ESCALATIONS.md, \"Raised at V1 phase 2\"; section 4 stays always visible. Section 2 has no Arabic text and is not printed on Home (it reads on /explore/); this entry covers the sections Home prints.",
+      "primary": [
+        {
+          "kind": "section",
+          "section_order": 3
+        },
+        {
+          "kind": "section",
+          "section_order": 9
+        }
+      ],
+      "supporting": [
+        {
+          "kind": "section",
+          "section_order": 4
+        }
+      ],
+      "always_visible_boundaries": [
+        {
+          "kind": "section",
+          "section_order": 4
+        }
+      ],
+      "progressive": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "first_load_exclusions": [
+        {
+          "kind": "section",
+          "section_order": 5
+        },
+        {
+          "kind": "section",
+          "section_order": 6
+        },
+        {
+          "kind": "section",
+          "section_order": 7
+        },
+        {
+          "kind": "section",
+          "section_order": 8
+        }
+      ],
+      "mobile_priority": [
+        {
+          "kind": "lead"
+        },
+        {
+          "kind": "primary",
+          "position": 1
+        },
+        {
+          "kind": "supporting",
+          "position": 1
+        }
+      ]
+    }
+  ],
   "populated_families": [
+    "Orientation",
     "Domain Answer",
     "Evidence Record",
     "Comparison"

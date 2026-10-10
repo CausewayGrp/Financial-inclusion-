@@ -27,6 +27,44 @@ certification is claimed.
 `AGENTS.md`, the Master, content, the site or any gate.
 
 
+## 2026-10-09 — Phase B build: currentness strip, Evidence Colophon, two disclosures, better search and filters
+
+What V1B-1 and B-c unlock, in the renderer, stylesheet and runtime (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-013…018).
+A currentness strip under the product bar on every page ("Sources checked up to 3 October 2026 · Edition of 3 October
+2026", the edition linking to `/corrections/` §3). An Evidence Colophon in the footer: the single-Master statement, the
+edition, the check date, the abridged SHA-256 of the Production Master the page was built from, and a link to the page's
+citation tools. `/finance/`: the 24 dated events behind one disclosure named "List of dated events", heading and intro
+first-load. `/data/`: a curated source's description under "About this source" on phones (open on wide screens where
+supported); its "Does not establish" line, reference and cite controls stay outside. Search marks the query's words in
+each result (words only, so dates and references keep their isolation), keeps the query field in view while results
+scroll, and a filter that is set looks set. A link to a target inside a closed disclosure opens it. Gates CS-01 (pages)
+and CS-02 added, with four negative controls, all caught. No governed text removed; no hook renamed.
+
+
+## 2026-10-09 — B-c: page tools under the title, the full phone menu, the hub numerals (owner decision B-c)
+
+Navigation contract (`navigation_interaction.json`: new keys `hub_numerals` and `page_tools`, `mobile_menu` rewritten,
+`utilities` placed), changed by the steward under the owner's decision B-c, and the renderer that reads it; the generator
+validates that each hub has exactly one governed numeral. Cite and Report leave the header for one page-tools row directly under each page's title, at
+every width; on an Evidence Record the report link now carries the record (`/contact/?record=<ID>`). The header keeps
+search, the language switch and the menu. Below 900 px the menu opens the full map: the five hubs with their governed
+numerals 01–05 (V1B-1), the eight domain answers under Explore by their governed names, the trust links, the language
+switch and the cite control. The numerals also mark the hubs on wide screens and the parent hub in breadcrumbs; they are
+printed from a `data-hub-num` attribute with empty alternative text, so every link keeps its navigation label as its
+accessible name. Gate RC-NAV reads the new contract keys (six negative controls added, with CS-01's). No text, link,
+ID or hook is lost: `data-cite`, `a.report` and `data-menu-cite` remain on every page.
+
+
+## 2026-10-09 — V1B-1: interface labels for design integration Phase B (owner decision B-b)
+
+One Master transaction, labels only, English and Arabic together (`audit/design_integration/`): the summary label of
+the `/finance/` chronology list, "About this source" for a `/data/` source row, the currentness strip ("Sources checked
+up to {date}") with the edition's check date, the Evidence Colophon labels and the hub numerals 01–05. No figure, unit,
+period, universe, source or record changed; no page changes until the renderer uses them. Gate CS-01 holds the check
+date equal to the date `/corrections/` section 3 states and to the edition label, in both languages. Master
+`fdb24bdfeae5` → `cf5254825da8`.
+
+
 ## 2026-10-09 — V1 design integration, phase 2 (disclosure and density; not accepted)
 
 Renderer and stylesheet, no governed text or contract changed (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-009…012): the

@@ -4,8 +4,8 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "fdb24bdfeae5c2604e326dd19effb4d79a783d44272f4dc08da2373979893999",
-    "page_specs_sha256": "6c1d39df01cc31240f14ddab51f7cd761536a700f0328f7972fcaaee8b51be7b",
+    "master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+    "page_specs_sha256": "f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd",
     "page_spec_count": 142
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
@@ -47,16 +47,55 @@
       ]
     }
   ],
+  "hub_numerals": {
+    "decided_by": "Owner decisions of 9 October 2026, B-b and B-c (audit/OWNER_DECISIONS_2026-10-09.md): the numerals 01-05 bound to the five hubs; labels from the Master (transaction V1B-1)",
+    "rule": "each hub of global_navigation (generated from 04_NAV_UX) is matched by its route, or a grouping node by its children routes, to exactly one governed numeral; the generator validates the match",
+    "items": [
+      {
+        "routes": [
+          "/explore/"
+        ],
+        "numeral_ui_id": "UI-NAV-HUB-01"
+      },
+      {
+        "routes": [
+          "/evidence/"
+        ],
+        "numeral_ui_id": "UI-NAV-HUB-02"
+      },
+      {
+        "routes": [
+          "/readings/"
+        ],
+        "numeral_ui_id": "UI-NAV-HUB-03"
+      },
+      {
+        "routes": [
+          "/data/"
+        ],
+        "numeral_ui_id": "UI-NAV-HUB-04"
+      },
+      {
+        "routes": [
+          "/methodology/",
+          "/measurement/"
+        ],
+        "numeral_ui_id": "UI-NAV-HUB-05"
+      }
+    ]
+  },
   "utilities": [
     {
       "id": "search",
       "label_en": "Search",
-      "label_ar": "بحث"
+      "label_ar": "بحث",
+      "placement": "HEADER"
     },
     {
       "id": "cite",
       "label_en": "Cite this page",
-      "label_ar": "استشهد بهذه الصفحة"
+      "label_ar": "استشهد بهذه الصفحة",
+      "placement": "PAGE_TOOLS"
     },
     {
       "id": "report_issue",
@@ -64,13 +103,28 @@
       "record_context": "?record=<ID> from an Evidence Record; Contact links on to /corrections/, which accepts the same ?record=",
       "label_en": "Report an issue",
       "label_ar": "أبلغ عن مشكلة",
-      "label_ui_id": "UI-HEADER-REPORT-AN-ISSUE"
+      "label_ui_id": "UI-HEADER-REPORT-AN-ISSUE",
+      "placement": "PAGE_TOOLS"
     },
     {
       "id": "language",
-      "behavior": "PRESERVE_OBJECT_AND_ROUTE_WHEN_SWITCHING"
+      "behavior": "PRESERVE_OBJECT_AND_ROUTE_WHEN_SWITCHING",
+      "placement": "HEADER"
     }
   ],
+  "page_tools": {
+    "decided_by": "Owner decisions of 9 October 2026, B-c (audit/OWNER_DECISIONS_2026-10-09.md): closes the V1 escalation 'utilities: cite and report move from the header to a page-tools row under each H1; mobile_menu: the five hubs, the eight domain answers, Trust and the language switch' (design/ESCALATIONS.md)",
+    "position": "UNDER_H1",
+    "applies_to": "every page that has an h1, in both languages and at every width",
+    "items": [
+      "cite",
+      "report_issue"
+    ],
+    "labels": "existing governed labels only: the utilities cite label (UI-HEADER-CITE-THIS-PAGE) and report_issue label (UI-HEADER-REPORT-AN-ISSUE)",
+    "record_context": "report_issue keeps the record context the header link carried",
+    "header": "carries the search, the language switch and the menu only",
+    "foot": "the page's citation preview, copy and print controls and the report link stay in the page's foot tools (section.util), the one place a citation is previewed"
+  },
   "footer_groups": [
     {
       "id": "explore_verify",
@@ -3947,19 +4001,56 @@
     }
   ],
   "mobile_menu": {
-    "decided_by": "Owner decisions of 3 October 2026, 09:05 Cairo point 3 and 09:50 Cairo A.3 (findings A-12, C-6, C-8): the session designated programme steward for this one patch (audit/OWNER_DECISIONS_2026-10-02.md)",
+    "decided_by": "Owner decisions of 9 October 2026, B-c (audit/OWNER_DECISIONS_2026-10-09.md): closes the V1 escalation 'utilities: cite and report move from the header to a page-tools row under each H1; mobile_menu: the five hubs, the eight domain answers, Trust and the language switch' (design/ESCALATIONS.md); it keeps the trust links and the cite control of the owner decisions of 3 October 2026, 09:05 Cairo point 3 and 09:50 Cairo A.3 (findings A-12, C-6, C-8)",
     "applies_below_px": 900,
-    "after_global_navigation": [
+    "order": [
+      {
+        "source": "global_navigation",
+        "numerals": "hub_numerals"
+      },
+      {
+        "source": "domains",
+        "under": "/explore/"
+      },
       {
         "source": "trust_navigation",
         "order": "as listed, About first"
       },
       {
         "source": "utilities",
+        "id": "language"
+      },
+      {
+        "source": "utilities",
         "id": "cite"
       }
     ],
-    "labels": "existing governed labels only: each trust_navigation label, the footer group label that holds /about/, and the utilities 'cite' label",
-    "header": "unchanged: the cite control is added inside the opened menu, not to the header, so the 320 px header carries no extra load"
+    "domains": {
+      "under": "/explore/",
+      "rule": "the eight domain answers of presentation_priority.json routes, under the Explore hub, each named by its governed domain name",
+      "routes": [
+        "/people/",
+        "/access/",
+        "/payments/",
+        "/remittances/",
+        "/providers/",
+        "/finance/",
+        "/firms/",
+        "/reforms/"
+      ],
+      "label_ui_ids": [
+        "UI-LAND-DOM-PEOPLE",
+        "UI-LAND-DOM-ACCESS",
+        "UI-LAND-DOM-PAYMENTS",
+        "UI-LAND-DOM-REMITTANCES",
+        "UI-LAND-DOM-PROVIDERS",
+        "UI-LAND-DOM-FINANCE",
+        "UI-LAND-DOM-FIRMS",
+        "UI-LAND-DOM-REFORMS"
+      ],
+      "order": "as the evidence landscape lists them (content.py LANDSCAPE_DOMAINS)"
+    },
+    "labels": "existing governed labels only: the hub labels and numerals, the domain names, each trust_navigation label and the footer group label that holds /about/, the language switch name and action, and the utilities cite label",
+    "header": "the header keeps search, the language switch and the menu at every width; the menu opens the full map below 900 px"
   }
 }
