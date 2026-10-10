@@ -4,9 +4,9 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
-    "page_specs_sha256": "c76c7b0d7f097f131968b63d7d0a3a7fd005abebcac8c8625b7d1eb3f4289c51",
-    "page_spec_count": 142
+    "master_sha256": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
+    "page_specs_sha256": "2e88b24bf61fc44db0025c5aeab5c70878c2da89e34c865772070a0536b3a0df",
+    "page_spec_count": 144
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
   "global_navigation": [
@@ -322,7 +322,7 @@
     },
     {
       "page_family": "Evidence Record",
-      "route_count": 109,
+      "route_count": 110,
       "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
       "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
       "depth_role": "VERIFICATION",
@@ -346,7 +346,7 @@
     },
     {
       "page_family": "Reading",
-      "route_count": 10,
+      "route_count": 11,
       "unique_user_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
       "primary_next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
       "depth_role": "SYNTHESIS",
@@ -3275,6 +3275,46 @@
       "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
       "depth_role": "VERIFICATION",
       "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-011",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CBY-BANKS-2026-05",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
     }
   ],
   "journeys": [
@@ -3673,7 +3713,7 @@
       "No archive factual proposition changes current controlled evidence in R4."
     ]
   },
-  "public_search_record_count": 439,
+  "public_search_record_count": 443,
   "r6_information_design_contract": {
     "status": "R6_CLOSED",
     "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",

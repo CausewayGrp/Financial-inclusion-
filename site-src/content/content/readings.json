@@ -728,5 +728,60 @@
     "evidence_period_ar": "مواد البنك الدولي ومبادرة G2Px، مايو 2024 · الفترة المرجعية لعدد المستفيدين غير مسجلة",
     "last_reviewed": "2026-09-26",
     "featured": null
+  },
+  {
+    "reading_id": "CWR-011",
+    "slug": "where-bank-balance-sheets-sit",
+    "route": "/readings/where-bank-balance-sheets-sit/",
+    "title_en": "Where bank balance sheets sit",
+    "title_ar": "أين تتركز أصول البنوك",
+    "question_en": "Do Yemen’s banks lend to firms, or hold claims on the state and assets abroad?",
+    "question_ar": "هل تُقرض البنوك في اليمن المنشآت، أم تحتفظ بحقوق على الدولة وأصول في الخارج؟",
+    "thesis_en": "In May 2026 the banks’ consolidated balance sheet held more in claims on government, and far more in foreign assets, than in credit to the private sector. That is consistent with banks holding claims on the state and assets abroad rather than lending to firms, but it is a hypothesis: weak credit demand, frozen legacy treasury bills, exchange-rate valuation and an unstated reporting perimeter fit the same numbers.",
+    "thesis_ar": "في مايو 2026 كانت الميزانية المجمعة للبنوك تحمل من الحقوق على الحكومة أكثر، ومن الأصول الخارجية أكثر بكثير، مما تحمله من ائتمان للقطاع الخاص. ويتسق ذلك مع أن البنوك تحتفظ بحقوق على الدولة وأصول في الخارج بدل إقراض المنشآت، لكنه يبقى فرضية: فضعف الطلب على الائتمان، وإرث أذون الخزانة المجمدة، وتقييم البنود بسعر الصرف، ونطاق الإبلاغ غير المعلن، كلها تنسجم مع الأرقام نفسها.",
+    "claim_bindings": [
+      "CBY-BANKS-2026-05",
+      "CLM-033"
+    ],
+    "evidence_bindings": [
+      "CBY-BANKS-2026-05",
+      "CLM-033"
+    ],
+    "source_bindings": [
+      "SRC-CBY-001",
+      "SRC-WB-FMIIP-P180708"
+    ],
+    "visual_bindings": [],
+    "audiences": [
+      "CBY",
+      "banks/PSPs",
+      "Government",
+      "WB/UN"
+    ],
+    "prohibited_inference_en": "One month of one balance sheet does not show why banks hold these assets, does not show that firms are refused credit and is not a trend; a fall in the government's share across the 2022 revaluation is consistent with valuation, not new lending.",
+    "prohibited_inference_ar": "لا يُظهر شهر واحد من ميزانية واحدة لماذا تحتفظ البنوك بهذه الأصول، ولا يثبت أن المنشآت تُحرم من الائتمان، وليس اتجاهًا؛ وانخفاض حصة الحكومة عبر إعادة التقييم في 2022 يتسق مع أثر التقييم، لا مع إقراض جديد.",
+    "verification_bindings": {
+      "claim_ids": [
+        "CBY-BANKS-2026-05",
+        "CLM-033"
+      ],
+      "direct_source_ids": [
+        "SRC-CBY-001",
+        "SRC-WB-FMIIP-P180708"
+      ],
+      "dependency_ids": [],
+      "resolution_rule": "Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources."
+    },
+    "domain_surface_routes": [
+      "/firms/"
+    ],
+    "related_readings": [
+      "CWR-002"
+    ],
+    "measurement_bindings": [],
+    "evidence_period_en": "CBY-Aden monthly bulletin, end of May 2026 (Issue No. 54) · December 2022 for the revaluation comparison",
+    "evidence_period_ar": "النشرة الشهرية للبنك المركزي اليمني – عدن، نهاية مايو 2026 (العدد رقم 54) · ديسمبر 2022 لمقارنة إعادة التقييم",
+    "last_reviewed": "2026-10-10",
+    "featured": null
   }
 ]

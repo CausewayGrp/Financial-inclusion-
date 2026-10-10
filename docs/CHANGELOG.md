@@ -1,5 +1,22 @@
 # Repository Change Log
 
+## 2026-10-10 — LA-C: the May 2026 bank balance-sheet record and Reading CWR-011
+
+Transaction C of the same brief, included because its values bind to the original (owner correction OWN-2d). Master
+`ecb18e4f2bdf` → `90b66c04f23a`; 2 new public routes (4 HTML documents: 292 from 144 Page Specs).
+
+- **New Evidence Record CBY-BANKS-2026-05:** the consolidated balance sheet of commercial and Islamic banks at the end
+  of May 2026 from CBY-Aden "Monetary and Financial Developments" No. 54, Table 4, p. 15 (total assets 13,362.1, loans
+  and advances to government 2,145.0, claims on the private sector 1,350.4, foreign assets 4,448.0, reserves 2,538.8,
+  YER billion). The bulletin does not state the territory its figures cover, and the record says so.
+- **New Reading CWR-011 "Where bank balance sheets sit" / «أين تتركز أصول البنوك»:** a hypothesis, not a finding;
+  four other explanations that fit the same numbers; where the evidence stops; what would change the reading. The
+  government's share of loans and advances in December 2022 is given as 85.1% on the earlier basis and 59.5% at market
+  exchange rates; "76% → 61%" is not used.
+- **Steward edit to `navigation_interaction.json`** (finding LA-C:CWR-011): two route entries appended for the new
+  routes, copied from the existing Reading and Evidence Record entries. `page_spec_design_intent.json` gains the same
+  two routes; the build counts in the checkpoint and `handoff/README_FIRST.md` follow.
+
 ## 2026-10-10 — LA-B: legacy-audit follow-through, four Readings strengthened
 
 Transaction B of the same brief. Master `0087c312c061` → `ecb18e4f2bdf`, 33 cells, English and Arabic together. No new

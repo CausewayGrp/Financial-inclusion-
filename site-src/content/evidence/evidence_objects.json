@@ -11233,5 +11233,159 @@
     "does_not_establish_ar": "الحسابات ليست أشخاصًا فريدين، وحسابات المحافظ النشطة ليست مرادفة لعدد المشتركين ما لم يثبت التعريف ذلك. والحسابات المصنفة بحسب ملكيتها ليست عددًا للنساء. والتجار ليسوا أجهزة نقاط بيع، والوكلاء ليسوا عملاء. ولم تُطابَق خطوط الأساس هذه مع مجاميع تقارير المدفوعات لدى البنك المركزي اليمني – عدن ولا مع قياسات امتلاك الحساب في المسوح، ولا تعطي قسمتها على عدد السكان نسبةً من الأشخاص. لماذا تختلف الأرقام: يُبلغ البنك المركزي اليمني – عدن عن عدد أعلى بكثير من مشتركي المحافظ الإلكترونية للنصف الأول من 2025 (السجل CLM-010) مقارنةً بحسابات المحافظ النشطة هنا. ويعرّف المشروع حساب المحفظة الإلكترونية النشط بأنه حساب استُخدم في معاملة مالية واحدة على الأقل خلال آخر 90 يومًا، بينما لا يقدّم إنفوغرافيك المدفوعات للنصف الأول من 2025 الصادر عن البنك المركزي اليمني – عدن تعريفًا للمشترك. ولم يُطابَق بين الرقمين؛ لذلك لا يُقرأ الفرق بينهما نموًا ولا خمولًا ولا خطأً، ولا يمثل أيٌّ منهما عددًا من الأشخاص.",
     "measurement_limitation_en": null,
     "measurement_limitation_ar": null
+  },
+  {
+    "object_id": "CBY-BANKS-2026-05",
+    "object_class": "TEMPORAL_OBSERVATION",
+    "public_routes": [
+      "/finance/"
+    ],
+    "title_en": "Commercial and Islamic banks: consolidated assets at the end of May 2026",
+    "title_ar": "البنوك التجارية والإسلامية: الأصول المجمعة في نهاية مايو 2026",
+    "summary_en": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+    "summary_ar": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+    "definition_en": "Positions of the consolidated balance sheet of commercial and Islamic banks at the end of May 2026, in billion rials, as published in the monthly bulletin Monetary and Financial Developments (Issue No. 54, Table 4). Loans and advances to government are, in the bulletin's definition, treasury bills, treasury bonds and Islamic sukuk; the private-sector line covers households as well as firms.",
+    "definition_ar": "مراكز الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية مايو 2026، بمليارات الريالات، كما نُشرت في النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، الجدول 4). والقروض والسلفيات للحكومة هي، وفق تعريف النشرة، أذون الخزانة وسندات الخزانة والصكوك الإسلامية؛ ويشمل بند القطاع الخاص الأسر إلى جانب المنشآت.",
+    "period_en": "End of May 2026 (one monthly vintage)",
+    "period_ar": "نهاية مايو 2026 (إصدار شهري واحد)",
+    "universe_en": "The bulletin's own perimeter: all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. The bulletin does not state which parts of Yemen its figures cover.",
+    "universe_ar": "نطاق النشرة نفسها: جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. ولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+    "method_en": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+    "method_ar": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+    "limitations_en": "One month of one table is not a trend, and shares move with the exchange rate because foreign-currency items are valued at market rates. | The record does not show credit by currency or by sector, does not split claims on government between frozen and other holdings, and does not establish why banks hold these assets.",
+    "limitations_ar": "شهر واحد من جدول واحد ليس اتجاهًا، والحصص تتحرك مع سعر الصرف لأن البنود المقوّمة بالعملات الأجنبية تُقيَّم بأسعار السوق. | ولا يُظهر هذا السجل الائتمان بحسب العملة أو القطاع، ولا يفصل الحقوق على الحكومة بين الأرصدة المجمدة وغيرها، ولا يثبت لماذا تحتفظ البنوك بهذه الأصول.",
+    "currentness_en": "The values refer to the end of May 2026, the latest month in the issue read. Later monthly issues may revise or extend them; this record keeps the May 2026 vintage.",
+    "currentness_ar": "تشير القيم إلى نهاية مايو 2026، وهو أحدث شهر في العدد المقروء. وقد تعدّلها الأعداد الشهرية اللاحقة أو تضيف إليها؛ ويثبّت هذا السجل قيم إصدار مايو 2026.",
+    "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
+    "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
+    "verification_en": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here.",
+    "verification_ar": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا.",
+    "source_dependencies": [
+      "SRC-CBY-001",
+      "SRC-WB-FMIIP-P180708"
+    ],
+    "source_links": [
+      {
+        "source_id": "SRC-CBY-001",
+        "url": "https://english.cby-ye.com/files/6a5a2e6bcc3cd.pdf",
+        "audit_state": "PASS_AUTHORITY_OR_PROVIDER_LOCATOR"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "audit_state": "PASS_AUTHORITY_OR_PROVIDER_LOCATOR"
+      }
+    ],
+    "lineage_state": "BOUND_EXACT",
+    "visual_contract_state": null,
+    "source_use_roles": null,
+    "value_states": [
+      {
+        "t": "13,362.1",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026, Total Assets, May 2026"
+      },
+      {
+        "t": "2,145.0",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026, Government, May 2026"
+      },
+      {
+        "t": "1,350.4",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026, Private Sector, May 2026"
+      },
+      {
+        "t": "4,448.0",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026, Foreign Assets, May 2026"
+      },
+      {
+        "t": "2,538.8",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026, Reserves, May 2026"
+      },
+      {
+        "t": "10.1%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026; computed 1,350.4 / 13,362.1 = 10.11%"
+      },
+      {
+        "t": "85.1%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026; Dec 2022 (earlier basis), Loans & Advances: Government / Loans & Advances = 1,926.8 / 2,264.8 = 85.08%"
+      },
+      {
+        "t": "59.5%",
+        "k": "v",
+        "s": "DERIVED",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026; Dec *2022 (*Based on market exchange rates): 1,913.2 / 3,214.8 = 59.51%"
+      },
+      {
+        "t": "45%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 7, printed p. 2: \"around 45 percent of assets invested in government treasury bills (T-bills)\"; read 10 October 2026"
+      },
+      {
+        "t": "54",
+        "k": "v",
+        "s": "TRIVIAL"
+      },
+      {
+        "t": "4",
+        "k": "v",
+        "s": "TRIVIAL"
+      },
+      {
+        "t": "May 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026"
+      },
+      {
+        "t": "December 2022",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-001",
+        "loc": "CBY-Aden, Monetary and Financial Developments, Issue No. 54 (May 2026), Table 4 \"Consolidated Balance Sheet of Commercial & Islamic Banks - Assets\", printed p. 15 (PDF p. 16), YER billion; read 10 October 2026"
+      },
+      {
+        "t": "May 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396), dated 22 May 2025"
+      },
+      {
+        "t": "10 October 2026",
+        "k": "d",
+        "s": "SITE"
+      }
+    ],
+    "public_route_list": [
+      "/finance/"
+    ],
+    "does_not_establish_en": "One month of one table is not a trend, and shares move with the exchange rate because foreign-currency items are valued at market rates.",
+    "does_not_establish_ar": "شهر واحد من جدول واحد ليس اتجاهًا، والحصص تتحرك مع سعر الصرف لأن البنود المقوّمة بالعملات الأجنبية تُقيَّم بأسعار السوق.",
+    "measurement_limitation_en": "The record does not show credit by currency or by sector, does not split claims on government between frozen and other holdings, and does not establish why banks hold these assets.",
+    "measurement_limitation_ar": "ولا يُظهر هذا السجل الائتمان بحسب العملة أو القطاع، ولا يفصل الحقوق على الحكومة بين الأرصدة المجمدة وغيرها، ولا يثبت لماذا تحتفظ البنوك بهذه الأصول."
   }
 ]

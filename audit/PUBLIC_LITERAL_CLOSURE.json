@@ -1,22 +1,22 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/2.0",
   "audit_version": "2.0 — token-bounded, token-level classification (Pre-Tranche-C P1-D); v1 substring and paragraph-keyword rules removed",
-  "authority_master_sha256": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
-  "page_specs_sha256": "c76c7b0d7f097f131968b63d7d0a3a7fd005abebcac8c8625b7d1eb3f4289c51",
+  "authority_master_sha256": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
+  "page_specs_sha256": "2e88b24bf61fc44db0025c5aeab5c70878c2da89e34c865772070a0536b3a0df",
   "scope": "Reader-facing Page Spec titles/sections plus governed-copy numeric inventory. Every substantive public numeral must resolve to a governed source-closed object or be explicitly classified as date/period, stable technical identifier, or non-observation system/method metadata.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure. Route/source presence without an object-level source-closed trace is not sufficient.",
-  "record_count": 14857,
+  "record_count": 14983,
   "summary": {
-    "STABLE_ID_OR_TECHNICAL_STANDARD": 25,
-    "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 1080,
-    "DATE_OR_PERIOD": 1798,
-    "GOVERNED_OBJECT_SOURCE_CLOSED": 11639,
-    "INVENTORY_COUNT_FROM_CONTRACT": 14,
+    "STABLE_ID_OR_TECHNICAL_STANDARD": 27,
+    "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE": 1092,
+    "DATE_OR_PERIOD": 1808,
+    "GOVERNED_OBJECT_SOURCE_CLOSED": 11721,
+    "INVENTORY_COUNT_FROM_CONTRACT": 16,
     "CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA": 159,
     "ROUTE_PARTIAL_TRACE__PARTIAL_STATE_SHOWN": 10,
     "ROUTE_COMPOSITE_TRACE__MEMBERS_LISTED": 18,
     "ALLOWED_METHOD_OR_TOOL_CONSTANT": 10,
-    "READING_BOUND_RECORD_TRACE": 104
+    "READING_BOUND_RECORD_TRACE": 122
   },
   "unresolved_substantive_count": 0,
   "unresolved": [],
@@ -2918,9 +2918,9 @@
       "route": "/data/",
       "surface": "section",
       "field": "body_en",
-      "token": "109",
+      "token": "110",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 109\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 10\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -2928,7 +2928,7 @@
       "field": "body_en",
       "token": "23",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 109\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 10\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -2936,7 +2936,7 @@
       "field": "body_en",
       "token": "60",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 109\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 10\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -2944,7 +2944,7 @@
       "field": "body_en",
       "token": "167",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 109\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 10\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -2952,7 +2952,7 @@
       "field": "body_en",
       "token": "157",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 109\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 10\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -2960,7 +2960,15 @@
       "field": "body_en",
       "token": "28",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 109\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 10\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
+    },
+    {
+      "route": "/data/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "11",
+      "category": "INVENTORY_COUNT_FROM_CONTRACT",
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
@@ -2968,15 +2976,15 @@
       "field": "body_en",
       "token": "10",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "Public Evidence Records: 109\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 10\nMeasurement priorities: 10"
+      "context": "Public Evidence Records: 110\nDocumented chronology events: 23\nPublic claims (each is also an Evidence Record): 60\nRegistered source records: 167\nSource records with a public link to the original: 157\nCurated source and report cards: 28\nReadings: 11\nMeasurement priorities: 10"
     },
     {
       "route": "/data/",
       "surface": "section",
       "field": "body_ar",
-      "token": "109",
+      "token": "110",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 109\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -2984,7 +2992,7 @@
       "field": "body_ar",
       "token": "23",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 109\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -2992,7 +3000,7 @@
       "field": "body_ar",
       "token": "60",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 109\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3000,7 +3008,7 @@
       "field": "body_ar",
       "token": "167",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 109\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3008,7 +3016,7 @@
       "field": "body_ar",
       "token": "157",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 109\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3016,7 +3024,15 @@
       "field": "body_ar",
       "token": "28",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 109\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
+    },
+    {
+      "route": "/data/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "11",
+      "category": "INVENTORY_COUNT_FROM_CONTRACT",
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/data/",
@@ -3024,7 +3040,7 @@
       "field": "body_ar",
       "token": "10",
       "category": "INVENTORY_COUNT_FROM_CONTRACT",
-      "context": "سجلات الأدلة العامة: 109\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 10\nأولويات القياس: 10"
+      "context": "سجلات الأدلة العامة: 110\nأحداث السلسلة الزمنية الموثقة: 23\nالخلاصات العامة (وكل منها سجل دليل أيضًا): 60\nسجلات المصادر المسجلة: 167\nسجلات المصادر التي لها رابط أصلي عام: 157\nبطاقات المصادر والتقارير المنتقاة: 28\nالقراءات التحليلية: 11\nأولويات القياس: 10"
     },
     {
       "route": "/evidence/CLM-001/",
@@ -68580,6 +68596,375 @@
     {
       "route": "/finance/",
       "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Commercial and Islamic banks: consolidated assets at the end of May 2026",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "البنوك التجارية والإسلامية: الأصول المجمعة في نهاية مايو 2026",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "13,362.1 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "2,145.0 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "1,350.4 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "4,448.0 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "2,538.8 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "13,362.1",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "2,145.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "1,350.4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "4,448.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "2,538.8",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_en",
+      "token": "2026,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Positions of the consolidated balance sheet of commercial and Islamic banks at the end of May 2026, in billion rials, as published in the monthly bulletin Monetary and Financial Developments (Issue No. 54, Table 4). Loans and advances to government are, in the bulletin's definition, treasury bills, treasury bonds and Islamic sukuk; the private-sector line covers households as well as firms.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_en",
+      "token": "54,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Positions of the consolidated balance sheet of commercial and Islamic banks at the end of May 2026, in billion rials, as published in the monthly bulletin Monetary and Financial Developments (Issue No. 54, Table 4). Loans and advances to government are, in the bulletin's definition, treasury bills, treasury bonds and Islamic sukuk; the private-sector line covers households as well as firms.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_en",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Positions of the consolidated balance sheet of commercial and Islamic banks at the end of May 2026, in billion rials, as published in the monthly bulletin Monetary and Financial Developments (Issue No. 54, Table 4). Loans and advances to government are, in the bulletin's definition, treasury bills, treasury bonds and Islamic sukuk; the private-sector line covers households as well as firms.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مراكز الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية مايو 2026، بمليارات الريالات، كما نُشرت في النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، الجدول 4). والقروض والسلفيات للحكومة هي، وفق تعريف النشرة، أذون الخزانة وسندات الخزانة والصكوك الإسلامية؛ ويشمل بند القطاع الخاص الأسر إلى جانب المنشآت.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_ar",
+      "token": "54",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مراكز الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية مايو 2026، بمليارات الريالات، كما نُشرت في النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، الجدول 4). والقروض والسلفيات للحكومة هي، وفق تعريف النشرة، أذون الخزانة وسندات الخزانة والصكوك الإسلامية؛ ويشمل بند القطاع الخاص الأسر إلى جانب المنشآت.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_ar",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مراكز الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية مايو 2026، بمليارات الريالات، كما نُشرت في النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، الجدول 4). والقروض والسلفيات للحكومة هي، وفق تعريف النشرة، أذون الخزانة وسندات الخزانة والصكوك الإسلامية؛ ويشمل بند القطاع الخاص الأسر إلى جانب المنشآت.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "period_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "End of May 2026 (one monthly vintage)",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "period_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "نهاية مايو 2026 (إصدار شهري واحد)",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "2022,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "85.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "59.5%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "45%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "2022",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "85.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "5%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "45%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "currentness_en",
+      "token": "2026,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The values refer to the end of May 2026, the latest month in the issue read. Later monthly issues may revise or extend them; this record keeps the May 2026 vintage.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "currentness_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The values refer to the end of May 2026, the latest month in the issue read. Later monthly issues may revise or extend them; this record keeps the May 2026 vintage.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
+      "field": "currentness_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تشير القيم إلى نهاية مايو 2026، وهو أحدث شهر في العدد المقروء. وقد تعدّلها الأعداد الشهرية اللاحقة أو تضيف إليها؛ ويثبّت هذا السجل قيم إصدار مايو 2026.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/finance/",
+      "surface": "governed_numeric_inventory",
       "field": "what_it_shows_en",
       "token": "2015,",
       "category": "DATE_OR_PERIOD",
@@ -132651,6 +133036,741 @@
       "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
       "context": "تعود خطوط الأساس إلى يناير 2025، نقطة الانطلاق المرجعية للمشروع، ولا تُقرأ على أنها تصف تاريخًا لاحقًا؛ ولا يتضمن هذا السجل أي نتيجة لاحقة للمشروع.",
       "source_object": "FMIIP-BASELINE-2025-01"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2026",
+      "category": "DATE_OR_PERIOD",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "54",
+      "category": "STABLE_ID_OR_TECHNICAL_STANDARD",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "13,362.1",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2,145.0",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "1,350.4",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "4,448.0",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2,538.8",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "10.1%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2026",
+      "category": "DATE_OR_PERIOD",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "54",
+      "category": "STABLE_ID_OR_TECHNICAL_STANDARD",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "13,362.1",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2,145.0",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "1,350.4",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "4,448.0",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2,538.8",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "10.1%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "45%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2025",
+      "category": "DATE_OR_PERIOD",
+      "context": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "85.1%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "59.5%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "45%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2025",
+      "category": "DATE_OR_PERIOD",
+      "context": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2022",
+      "category": "DATE_OR_PERIOD",
+      "context": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد."
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "85.1%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/readings/where-bank-balance-sheets-sit/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "59.5%",
+      "category": "READING_BOUND_RECORD_TRACE",
+      "context": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "title",
+      "field": "title_en",
+      "token": "2026",
+      "category": "DATE_OR_PERIOD",
+      "context": "Commercial and Islamic banks: consolidated assets at the end of May 2026"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "title",
+      "field": "title_ar",
+      "token": "2026",
+      "category": "DATE_OR_PERIOD",
+      "context": "البنوك التجارية والإسلامية: الأصول المجمعة في نهاية مايو 2026"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2026",
+      "category": "DATE_OR_PERIOD",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets."
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "13,362.1",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2,145.0",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "1,350.4",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "4,448.0",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "2,538.8",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_en",
+      "token": "10.1%",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "13,362.1",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2026",
+      "category": "DATE_OR_PERIOD",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية."
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2,145.0",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "1,350.4",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "4,448.0",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "2,538.8",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "section",
+      "field": "body_ar",
+      "token": "10.1%",
+      "category": "ROUTE_SOURCE_CLOSED__OBJECT_TRACE_AVAILABLE",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Commercial and Islamic banks: consolidated assets at the end of May 2026",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "title_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "البنوك التجارية والإسلامية: الأصول المجمعة في نهاية مايو 2026",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "13,362.1 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "2,145.0 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "1,350.4 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "4,448.0 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "2,538.8 billion",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_en",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "At the end of May 2026 the consolidated balance sheet of commercial and Islamic banks published by the Central Bank of Yemen – Aden (CBY-Aden) shows total assets of 13,362.1 billion rials, loans and advances to government of 2,145.0 billion, loans and advances to the private sector of 1,350.4 billion, foreign assets of 4,448.0 billion and reserves of 2,538.8 billion; credit to the private sector is 10.1% of total assets.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "13,362.1",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "2,145.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "1,350.4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "4,448.0",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "2,538.8",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "summary_ar",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تُظهر الميزانية المجمعة للبنوك التجارية والإسلامية التي ينشرها البنك المركزي اليمني – عدن أصولًا إجمالية قدرها 13,362.1 مليار ريال في نهاية مايو 2026، منها قروض وسلفيات للحكومة قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار؛ ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_en",
+      "token": "2026,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Positions of the consolidated balance sheet of commercial and Islamic banks at the end of May 2026, in billion rials, as published in the monthly bulletin Monetary and Financial Developments (Issue No. 54, Table 4). Loans and advances to government are, in the bulletin's definition, treasury bills, treasury bonds and Islamic sukuk; the private-sector line covers households as well as firms.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_en",
+      "token": "54,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Positions of the consolidated balance sheet of commercial and Islamic banks at the end of May 2026, in billion rials, as published in the monthly bulletin Monetary and Financial Developments (Issue No. 54, Table 4). Loans and advances to government are, in the bulletin's definition, treasury bills, treasury bonds and Islamic sukuk; the private-sector line covers households as well as firms.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_en",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Positions of the consolidated balance sheet of commercial and Islamic banks at the end of May 2026, in billion rials, as published in the monthly bulletin Monetary and Financial Developments (Issue No. 54, Table 4). Loans and advances to government are, in the bulletin's definition, treasury bills, treasury bonds and Islamic sukuk; the private-sector line covers households as well as firms.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مراكز الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية مايو 2026، بمليارات الريالات، كما نُشرت في النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، الجدول 4). والقروض والسلفيات للحكومة هي، وفق تعريف النشرة، أذون الخزانة وسندات الخزانة والصكوك الإسلامية؛ ويشمل بند القطاع الخاص الأسر إلى جانب المنشآت.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_ar",
+      "token": "54",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مراكز الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية مايو 2026، بمليارات الريالات، كما نُشرت في النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، الجدول 4). والقروض والسلفيات للحكومة هي، وفق تعريف النشرة، أذون الخزانة وسندات الخزانة والصكوك الإسلامية؛ ويشمل بند القطاع الخاص الأسر إلى جانب المنشآت.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "definition_ar",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "مراكز الميزانية المجمعة للبنوك التجارية والإسلامية في نهاية مايو 2026، بمليارات الريالات، كما نُشرت في النشرة الشهرية «التطورات النقدية والمالية» (العدد رقم 54، الجدول 4). والقروض والسلفيات للحكومة هي، وفق تعريف النشرة، أذون الخزانة وسندات الخزانة والصكوك الإسلامية؛ ويشمل بند القطاع الخاص الأسر إلى جانب المنشآت.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "period_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "End of May 2026 (one monthly vintage)",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "period_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "نهاية مايو 2026 (إصدار شهري واحد)",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "2022,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "85.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "59.5%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_en",
+      "token": "45%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "Values read from Table 4 of the bulletin. Computed by this resource from the same table: private-sector credit as a share of total assets (10.1%), and the government's share of loans and advances in December 2022, 85.1% on the earlier basis and 59.5% at market exchange rates. The World Bank's appraisal document for FMIIP (May 2025) reports that before the conflict about 45% of bank assets were held in government treasury bills, which the Central Bank of Yemen later froze.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "4",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "10.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "2022",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "85.1%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "5%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "2025",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "method_ar",
+      "token": "45%",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "قيم مقروءة من الجدول 4 في النشرة. واحتسب هذا المورد من الجدول نفسه: حصة الائتمان الممنوح للقطاع الخاص من الأصول الإجمالية (10.1%)، وحصة الحكومة من إجمالي القروض والسلفيات في ديسمبر 2022، وهي 85.1% على الأساس السابق و59.5% بسعر الصرف السوقي. وتذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن نحو 45% من أصول البنوك كان مستثمرًا قبل النزاع في أذون الخزانة الحكومية، التي جمّدها البنك المركزي اليمني لاحقًا.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "currentness_en",
+      "token": "2026,",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The values refer to the end of May 2026, the latest month in the issue read. Later monthly issues may revise or extend them; this record keeps the May 2026 vintage.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "currentness_en",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "The values refer to the end of May 2026, the latest month in the issue read. Later monthly issues may revise or extend them; this record keeps the May 2026 vintage.",
+      "source_object": "CBY-BANKS-2026-05"
+    },
+    {
+      "route": "/evidence/CBY-BANKS-2026-05/",
+      "surface": "governed_numeric_inventory",
+      "field": "currentness_ar",
+      "token": "2026",
+      "category": "GOVERNED_OBJECT_SOURCE_CLOSED",
+      "context": "تشير القيم إلى نهاية مايو 2026، وهو أحدث شهر في العدد المقروء. وقد تعدّلها الأعداد الشهرية اللاحقة أو تضيف إليها؛ ويثبّت هذا السجل قيم إصدار مايو 2026.",
+      "source_object": "CBY-BANKS-2026-05"
     }
   ]
 }

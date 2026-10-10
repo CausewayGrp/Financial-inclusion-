@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-10T13:00:46Z",
+  "generated_at": "2026-10-10T13:05:40Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -45,7 +45,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
+    "sha256": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -59,27 +59,27 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "c76c7b0d7f097f131968b63d7d0a3a7fd005abebcac8c8625b7d1eb3f4289c51",
-    "page_specs": 142,
+    "page_specs_sha256": "2e88b24bf61fc44db0025c5aeab5c70878c2da89e34c865772070a0536b3a0df",
+    "page_specs": 144,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
   },
   "controlled_scale": {
-    "page_specs": 142,
-    "page_sections": 573,
+    "page_specs": 144,
+    "page_sections": 580,
     "entry_questions": 11,
-    "evidence_objects": 109,
+    "evidence_objects": 110,
     "public_claims": 60,
     "evidence_passports": 55,
-    "readings": 10,
+    "readings": 11,
     "measurement_priorities": 10,
     "visual_contracts": 36,
-    "search_records": 439,
+    "search_records": 443,
     "sources": 167,
     "publicly_addressable_sources": 157,
     "curated_source_report_cards": 28,
     "chronology_events": 23,
-    "reading_sections": 68
+    "reading_sections": 74
   },
   "public_navigation": {
     "rule": "Derived from site-src/content/content/navigation_interaction.json by scripts/rebind_authority.py.",
@@ -216,7 +216,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "ecb18e4f2bdf5163f10d1d76f5f64ba318216845085c165cfe3f9713c9dadb07",
+    "master_sha256_recorded": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",
