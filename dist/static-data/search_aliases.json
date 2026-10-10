@@ -253,13 +253,109 @@
     "terms_ar": "تحويل للخارج; تحويل إلى الخارج; تحويل خارجي; تحويلات خارجية; حوالة خارجية; حوالات خارجية; حوالة من الخارج; تحويل من الخارج; حوالات المغتربين; تحويلات المغتربين; تحويل دولي; حوالة دولية",
     "targets": "route:/remittances/",
     "boundary_note_en": "Discovery aid only: the remittance evidence here is about money sent to Yemen and transfers within Yemen. It does not cover money sent from Yemen to other countries.",
-    "boundary_note_ar": "أداة اكتشاف فقط: تتناول أدلة التحويلات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
+    "boundary_note_ar": "أداة اكتشاف فقط: تتناول أدلة الحوالات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
   },
   {
     "alias_id": "SEARCH-ALIAS-033",
     "terms_en": "cash-out; cash out; cashout; cash withdrawal",
     "terms_ar": "كاش; كاش آوت; سحب كاش; سحب نقدي",
     "targets": "route:/payments/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-034",
+    "terms_en": "explore; explore questions",
+    "terms_ar": "استكشف; استكشف الأسئلة",
+    "targets": "route:/explore/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-035",
+    "terms_en": "evidence readings; evidence reading; readings; reading; analysis",
+    "terms_ar": "قراءات الأدلة; قراءة أدلة; القراءات; قراءة تحليلية; التحليلات",
+    "targets": "route:/readings/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-036",
+    "terms_en": "data; data and sources; data & sources; dataset; datasets; download",
+    "terms_ar": "البيانات; البيانات والمصادر; بيانات; مجموعة بيانات; تنزيل",
+    "targets": "route:/data/",
+    "boundary_note_en": "Discovery aid only: this resource is a directory of sources that links to their publishers; it offers no dataset for download.",
+    "boundary_note_ar": "أداة اكتشاف فقط: هذا المورد فهرس للمصادر يحيل إلى ناشريها، ولا يتيح أي مجموعة بيانات للتنزيل."
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-037",
+    "terms_en": "method and measurement; method & measurement",
+    "terms_ar": "المنهج والقياس",
+    "targets": "route:/methodology/ | route:/measurement/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-038",
+    "terms_en": "report an issue; report an error; error",
+    "terms_ar": "أبلغ عن مشكلة; أبلغ عن خطأ; خطأ",
+    "targets": "route:/contact/ | route:/corrections/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-039",
+    "terms_en": "trust; about this resource",
+    "terms_ar": "الثقة; عن الموقع; عن المورد; التعريف بالمورد",
+    "targets": "route:/about/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-040",
+    "terms_en": "finance; banks; banking",
+    "terms_ar": "التمويل; البنوك; المصارف",
+    "targets": "route:/finance/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-041",
+    "terms_en": "accessibility; accessibility statement",
+    "terms_ar": "إتاحة الوصول; إمكانية الوصول; بيان إمكانية الوصول",
+    "targets": "route:/accessibility/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-042",
+    "terms_en": "access; access to services; access points",
+    "terms_ar": "الوصول; الوصول إلى الخدمات; نقاط الوصول",
+    "targets": "route:/access/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-043",
+    "terms_en": "providers; service providers; financial service providers",
+    "terms_ar": "مقدمو الخدمات; مقدمي الخدمات; مقدمو الخدمات المالية",
+    "targets": "route:/providers/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-044",
+    "terms_en": "personal remittances; workers' remittances; migrant remittances",
+    "terms_ar": "الحوالات; التحويلات الشخصية; تحويلات العاملين; رسوم الحوالات",
+    "targets": "route:/remittances/",
+    "boundary_note_en": null,
+    "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-045",
+    "terms_en": "licensed; unlicensed; licence withdrawal",
+    "terms_ar": "مرخص; غير مرخص; سحب الترخيص",
+    "targets": "route:/providers/ | document_type:decision/enforcement",
     "boundary_note_en": null,
     "boundary_note_ar": null
   }

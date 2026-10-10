@@ -225,7 +225,26 @@ class Content:
         dom = mm.get("domains") or {}
         domains = [{"label": self.t(u, lang), "href": self.href(rt, lang), "active": self._active(rt, route)}
                    for rt, u in zip(dom.get("routes") or [], dom.get("label_ui_ids") or [])]
+        # NB-1 (owner brief of 10 October 2026, Part B, B3.10): a hub's or a domain answer's <title> and og:title carry its
+        # stable governed name (the navigation label; the domain's UI-LAND-DOM-* name), so tabs, search results and shares
+        # do not go stale; the dated thesis stays the page's h1. Readings, records and policy pages keep their own titles.
+        slash = lambda r: "/" + str(r).strip("/") + "/" if str(r).strip("/") else "/"   # noqa: E731
+        stable = {}
+        for item in self.nav.get("global_navigation", []):
+            for x in [item] + list(item.get("children") or []):
+                if x.get("route"):
+                    stable[slash(x["route"])] = x.get(f"label_{lang}")
+        for rt in self.LANDSCAPE_DOMAINS:
+            stable[rt] = self.t("UI-LAND-DOM-" + rt.strip("/").upper(), lang)
+        lic_text = self.t("UI-FOOTER-LICENCE", lang)
+        if lic_text.count("{licence}") != 1:
+            raise ValueError(f"UI-FOOTER-LICENCE ({lang}) must carry {{licence}} exactly once")
         return {
+            "head_title": stable.get(slash(route)),
+            # NB-1 (B4): the licence line of every page's footer and the machine-readable licence link in its head
+            "licence": {"before": lic_text.split("{licence}")[0], "after": lic_text.split("{licence}")[1],
+                        "name": self.t("UI-LICENCE-NAME", lang), "url": self.t("UI-LICENCE-DEED-URL", lang),
+                        "rights_href": self.href("/rights/", lang)},
             "lang": lang, "dir": "rtl" if lang == "ar" else "ltr", "other_lang": other,
             "other_href": self.href(route, other),   # R-05: the language switch is a link to the same route in the other edition
             "product": self.t("UI-PRODUCT-NAME", lang), "edition": self.t("UI-CONTENT-VERSION", lang),

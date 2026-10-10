@@ -4,16 +4,16 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
-    "page_specs_sha256": "f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd",
+    "master_sha256": "e444320569aed354d3903e30081cfb0b7eea9544110463eb72d43d3f2a3702d9",
+    "page_specs_sha256": "14601150e4e360900c985a2d6f95d8409272c4e9e870f6ef68348311c1a86c91",
     "page_spec_count": 142
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
   "global_navigation": [
     {
       "route": "/explore/",
-      "label_en": "Explore",
-      "label_ar": "استكشف"
+      "label_en": "Questions",
+      "label_ar": "الأسئلة"
     },
     {
       "route": "/evidence/",
@@ -22,16 +22,16 @@
     },
     {
       "route": "/readings/",
-      "label_en": "Evidence Readings",
-      "label_ar": "قراءات الأدلة"
+      "label_en": "Readings",
+      "label_ar": "القراءات التحليلية"
     },
     {
       "route": "/data/",
-      "label_en": "Data & sources",
-      "label_ar": "البيانات والمصادر"
+      "label_en": "Sources",
+      "label_ar": "المصادر"
     },
     {
-      "label_en": "Method & Measurement",
+      "label_en": "Method and measurement",
       "label_ar": "المنهج والقياس",
       "children": [
         {
@@ -41,7 +41,7 @@
         },
         {
           "route": "/measurement/",
-          "label_en": "Measurement Agenda",
+          "label_en": "Measurement priorities",
           "label_ar": "أولويات القياس"
         }
       ]
@@ -101,8 +101,8 @@
       "id": "report_issue",
       "route": "/contact/",
       "record_context": "?record=<ID> from an Evidence Record; Contact links on to /corrections/, which accepts the same ?record=",
-      "label_en": "Report an issue",
-      "label_ar": "أبلغ عن مشكلة",
+      "label_en": "Report an error",
+      "label_ar": "أبلغ عن خطأ",
       "label_ui_id": "UI-HEADER-REPORT-AN-ISSUE",
       "placement": "PAGE_TOOLS"
     },
@@ -128,13 +128,13 @@
   "footer_groups": [
     {
       "id": "explore_verify",
-      "label_en": "Explore and verify",
-      "label_ar": "الاستكشاف والتحقق",
+      "label_en": "Main sections",
+      "label_ar": "الأقسام الرئيسية",
       "links": [
         {
           "route": "/explore/",
-          "label_en": "Explore",
-          "label_ar": "استكشف"
+          "label_en": "Questions",
+          "label_ar": "الأسئلة"
         },
         {
           "route": "/evidence/",
@@ -143,19 +143,19 @@
         },
         {
           "route": "/readings/",
-          "label_en": "Evidence Readings",
-          "label_ar": "قراءات الأدلة"
+          "label_en": "Readings",
+          "label_ar": "القراءات التحليلية"
         },
         {
           "route": "/data/",
-          "label_en": "Data & sources",
-          "label_ar": "البيانات والمصادر"
+          "label_en": "Sources",
+          "label_ar": "المصادر"
         }
       ]
     },
     {
       "id": "method_measure",
-      "label_en": "Method & Measurement",
+      "label_en": "Method and measurement",
       "label_ar": "المنهج والقياس",
       "links": [
         {
@@ -165,25 +165,25 @@
         },
         {
           "route": "/measurement/",
-          "label_en": "Measurement Agenda",
+          "label_en": "Measurement priorities",
           "label_ar": "أولويات القياس"
         }
       ]
     },
     {
       "id": "trust_use",
-      "label_en": "Trust and responsible use",
-      "label_ar": "الثقة والاستخدام المسؤول",
+      "label_en": "About and policies",
+      "label_ar": "عن هذا المورد وسياساته",
       "links": [
         {
           "route": "/about/",
           "label_en": "About",
-          "label_ar": "عن الموقع"
+          "label_ar": "التعريف بهذا المورد"
         },
         {
           "route": "/accessibility/",
           "label_en": "Accessibility",
-          "label_ar": "إتاحة الوصول"
+          "label_ar": "إمكانية الوصول"
         },
         {
           "route": "/corrections/",
@@ -197,12 +197,12 @@
         },
         {
           "route": "/rights/",
-          "label_en": "Rights & reuse",
-          "label_ar": "الحقوق وإعادة الاستخدام"
+          "label_en": "Rights and reuse",
+          "label_ar": "حقوق إعادة الاستخدام"
         },
         {
           "route": "/terms/",
-          "label_en": "Terms",
+          "label_en": "Terms of use",
           "label_ar": "شروط الاستخدام"
         },
         {
@@ -222,8 +222,8 @@
     },
     "Reading": {
       "parent_route": "/readings/",
-      "parent_label_en": "Evidence Readings",
-      "parent_label_ar": "قراءات الأدلة",
+      "parent_label_en": "Readings",
+      "parent_label_ar": "القراءات التحليلية",
       "current_label_mode": "GOVERNED_TITLE"
     }
   },
@@ -3967,7 +3967,7 @@
     {
       "route": "/about/",
       "label_en": "About",
-      "label_ar": "عن الموقع"
+      "label_ar": "التعريف بهذا المورد"
     },
     {
       "route": "/corrections/",
@@ -3976,13 +3976,13 @@
     },
     {
       "route": "/rights/",
-      "label_en": "Rights & reuse",
-      "label_ar": "الحقوق وإعادة الاستخدام"
+      "label_en": "Rights and reuse",
+      "label_ar": "حقوق إعادة الاستخدام"
     },
     {
       "route": "/accessibility/",
       "label_en": "Accessibility",
-      "label_ar": "إتاحة الوصول"
+      "label_ar": "إمكانية الوصول"
     },
     {
       "route": "/privacy/",
@@ -3991,7 +3991,7 @@
     },
     {
       "route": "/terms/",
-      "label_en": "Terms",
+      "label_en": "Terms of use",
       "label_ar": "شروط الاستخدام"
     },
     {

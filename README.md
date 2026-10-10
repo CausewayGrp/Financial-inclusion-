@@ -63,9 +63,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a`
+Master SHA-256: `e444320569aed354d3903e30081cfb0b7eea9544110463eb72d43d3f2a3702d9`
 
-Page Specs SHA-256: `f0816b90ec014dc255b5f58a580c0445844ad10b1337a6c9331c56fda5e242dd`
+Page Specs SHA-256: `14601150e4e360900c985a2d6f95d8409272c4e9e870f6ef68348311c1a86c91`
 
 | Layer | Role |
 |---|---|
@@ -95,7 +95,7 @@ If the Master changes, subordinate projections are regenerated. There is no para
 
 ## Public path
 
-Home asks the question. Explore reads people, firms, finance, providers, payments and reforms. Evidence, Evidence Readings, and Data & sources carry the record and the publisher. Methodology and the Measurement Agenda hold method and what should be measured next. Search returns evidence, measurement and source records. Compare tests comparability before it shows values. About, Corrections, and Rights & reuse hold accountability.
+Home asks the question. Questions leads to people, firms, banks and microfinance, providers, payments and reforms. Evidence, Readings and Sources carry the record and the publisher. Methodology and Measurement priorities hold method and what should be measured next. Search returns evidence, measurement and source records. Compare tests comparability before it shows values. About, Corrections, and Rights and reuse hold accountability.
 
 ![Public path](docs/diagrams/public-path.svg)
 

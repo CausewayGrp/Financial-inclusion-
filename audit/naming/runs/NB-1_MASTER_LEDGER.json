@@ -1,0 +1,2459 @@
+{
+ "transaction": "NB-1",
+ "summary": "Public naming and terminology (owner brief of 10 October 2026, Part B): labels, governed term substitutions, rights presentation, search aliases and a terminology register; no figure, unit, period, universe, source, route or identifier changed",
+ "items": {
+  "interface_labels": 37,
+  "interface_substrings": 7,
+  "navigation_cells": 42,
+  "copy_cells": 26,
+  "licensing_cells": 4,
+  "remittance_cells": 102,
+  "new_interface_rows": 3,
+  "search_aliases": 12,
+  "register_terms": 21
+ },
+ "input_master_sha256": "cf5254825da8b06e8812ee0c033382270b731e1001c40bf6ad929f843f27278a",
+ "output_master_sha256": "e444320569aed354d3903e30081cfb0b7eea9544110463eb72d43d3f2a3702d9",
+ "cells_written": 271,
+ "changes": [
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 356,
+   "col": 2,
+   "field": "UI-HEADER-REPORT-AN-ISSUE.label_en",
+   "old": "Report an issue",
+   "new": "Report an error"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 356,
+   "col": 3,
+   "field": "UI-HEADER-REPORT-AN-ISSUE.label_ar",
+   "old": "أبلغ عن مشكلة",
+   "new": "أبلغ عن خطأ"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 335,
+   "col": 2,
+   "field": "UI-EVID-REPORT-AN-ISSUE.label_en",
+   "old": "Report an issue",
+   "new": "Report an error"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 335,
+   "col": 3,
+   "field": "UI-EVID-REPORT-AN-ISSUE.label_ar",
+   "old": "أبلغ عن مشكلة",
+   "new": "أبلغ عن خطأ"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 582,
+   "col": 2,
+   "field": "UI-JS-COPY-LONG-CITATION.label_en",
+   "old": "Copy long form",
+   "new": "Copy long citation"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 280,
+   "col": 3,
+   "field": "UI-READING-RETURN.label_ar",
+   "old": "عد إلى السؤال",
+   "new": "ارجع إلى السؤال"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 325,
+   "col": 3,
+   "field": "UI-EVID-RETURN-TO-INTERPRETATION.label_ar",
+   "old": "عد إلى التفسير",
+   "new": "ارجع إلى التفسير"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 599,
+   "col": 3,
+   "field": "UI-COLOPHON-CITATION.label_ar",
+   "old": "الاستشهاد بهذه الصفحة",
+   "new": "استشهد بهذه الصفحة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 281,
+   "col": 2,
+   "field": "UI-READING-EYEBROW.label_en",
+   "old": "Evidence Reading",
+   "new": "Reading"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 281,
+   "col": 3,
+   "field": "UI-READING-EYEBROW.label_ar",
+   "old": "قراءة أدلة",
+   "new": "قراءة تحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 287,
+   "col": 2,
+   "field": "UI-READING-FEATURED.label_en",
+   "old": "Featured Reading",
+   "new": "Featured reading"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 287,
+   "col": 3,
+   "field": "UI-READING-FEATURED.label_ar",
+   "old": "قراءة مختارة",
+   "new": "قراءة تحليلية مختارة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 289,
+   "col": 2,
+   "field": "UI-READING-ALL-H.label_en",
+   "old": "All Evidence Readings",
+   "new": "All readings"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 289,
+   "col": 3,
+   "field": "UI-READING-ALL-H.label_ar",
+   "old": "كل قراءات الأدلة",
+   "new": "كل القراءات التحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 291,
+   "col": 2,
+   "field": "UI-EVIDENCE-USED-IN-READINGS.label_en",
+   "old": "Used in these Evidence Readings",
+   "new": "Used in these readings"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 291,
+   "col": 3,
+   "field": "UI-EVIDENCE-USED-IN-READINGS.label_ar",
+   "old": "يُستخدم هذا الدليل في قراءات الأدلة الآتية",
+   "new": "يُستخدم هذا الدليل في القراءات التحليلية الآتية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 367,
+   "col": 2,
+   "field": "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION.label_en",
+   "old": "Evidence Readings on this question",
+   "new": "Readings on this question"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 367,
+   "col": 3,
+   "field": "UI-DOM-EVIDENCE-READINGS-ON-THIS-QUESTION.label_ar",
+   "old": "قراءات الأدلة المتعلقة بهذا السؤال",
+   "new": "القراءات التحليلية المتعلقة بهذا السؤال"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 576,
+   "col": 2,
+   "field": "UI-DATA-READINGS-USING-SOURCE.label_en",
+   "old": "Evidence Readings using this source",
+   "new": "Readings using this source"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 576,
+   "col": 3,
+   "field": "UI-DATA-READINGS-USING-SOURCE.label_ar",
+   "old": "قراءات الأدلة التي تستخدم هذا المصدر",
+   "new": "القراءات التحليلية التي تستخدم هذا المصدر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 438,
+   "col": 3,
+   "field": "UI-JS-TYPE-READING.label_ar",
+   "old": "قراءة",
+   "new": "قراءة تحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 284,
+   "col": 3,
+   "field": "UI-READING-DO-NOT-INFER.label_ar",
+   "old": "ما لا يُستنتج",
+   "new": "ما لا ينبغي استنتاجه"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 294,
+   "col": 3,
+   "field": "UI-DOM-WHAT-NOT-TO-CONCLUDE.label_ar",
+   "old": "ما لا يُستنتج",
+   "new": "ما لا ينبغي استنتاجه"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 448,
+   "col": 3,
+   "field": "UI-JS-COMPARE-BOUNDARY.label_ar",
+   "old": "ما لا يُستنتج",
+   "new": "ما لا ينبغي استنتاجه"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 99,
+   "col": 3,
+   "field": "UI-VIS-STATE-UNKNOWN.label_ar",
+   "old": "غير معروف — ليس صفرًا",
+   "new": "غير معروف — لا يعني صفرًا"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 103,
+   "col": 3,
+   "field": "UI-VIS-MISSING.label_ar",
+   "old": "لا قيمة موثَّقة لهذه الفترة — ليست صفرًا",
+   "new": "لا قيمة متحقَّق منها لهذه الفترة — وهذا لا يعني صفرًا"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 117,
+   "col": 3,
+   "field": "UI-VIS-CHAIN-OPEN.label_ar",
+   "old": "لم تُقس بعد — ليس إخفاقًا",
+   "new": "لم تُقس بعد — وهذا لا يعني إخفاقًا"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 561,
+   "col": 3,
+   "field": "UI-VIS-RESULT-NOT-HELD.label_ar",
+   "old": "لا تتضمن قاعدة الأدلة نتيجة مرصودة — ليست صفرًا",
+   "new": "لا تتضمن قاعدة الأدلة نتيجة مرصودة — وهذا لا يعني صفرًا"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 543,
+   "col": 2,
+   "field": "UI-LAND-COV-SUFFICIENT_FOR_QUESTION.label_en",
+   "old": "Sufficient for its question",
+   "new": "Sufficient for the question"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 543,
+   "col": 3,
+   "field": "UI-LAND-COV-SUFFICIENT_FOR_QUESTION.label_ar",
+   "old": "كافٍ لسؤاله",
+   "new": "كافٍ للإجابة عن السؤال"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 538,
+   "col": 3,
+   "field": "UI-LAND-CLASS-REGULATORY.label_ar",
+   "old": "مادة تنظيمية",
+   "new": "نص تنظيمي"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 541,
+   "col": 2,
+   "field": "UI-LAND-CLASS-CONTEXT.label_en",
+   "old": "Context source",
+   "new": "Contextual source"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 569,
+   "col": 3,
+   "field": "UI-DATA-FILTER-DOMAIN.label_ar",
+   "old": "مستخدم في",
+   "new": "يُستخدم في"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 572,
+   "col": 3,
+   "field": "UI-DATA-FILTER-CLEAR.label_ar",
+   "old": "مسح عوامل التصفية",
+   "new": "إلغاء التصفية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 573,
+   "col": 2,
+   "field": "UI-DATA-SORT.label_en",
+   "old": "Order",
+   "new": "Sort by"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 594,
+   "col": 2,
+   "field": "UI-COLOPHON-H.label_en",
+   "old": "Evidence colophon",
+   "new": "About this edition"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 594,
+   "col": 3,
+   "field": "UI-COLOPHON-H.label_ar",
+   "old": "بيان الأدلة",
+   "new": "معلومات الإصدار"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 351,
+   "col": 2,
+   "field": "UI-HEADER-TRUST-LINKS.label_en",
+   "old": "Trust links",
+   "new": "About and policies"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 351,
+   "col": 3,
+   "field": "UI-HEADER-TRUST-LINKS.label_ar",
+   "old": "روابط الثقة",
+   "new": "عن هذا المورد وسياساته"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 359,
+   "col": 2,
+   "field": "UI-FOOTER-PRODUCT-AND-TRUST-LINKS.label_en",
+   "old": "Product and trust links",
+   "new": "Site sections"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 359,
+   "col": 3,
+   "field": "UI-FOOTER-PRODUCT-AND-TRUST-LINKS.label_ar",
+   "old": "روابط المنتج والثقة",
+   "new": "أقسام المورد"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 363,
+   "col": 3,
+   "field": "UI-CRUMB-BREADCRUMB.label_ar",
+   "old": "مسار الصفحة",
+   "new": "مسار التنقل"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 485,
+   "col": 2,
+   "field": "UI-404-EXPLORE.label_en",
+   "old": "Explore",
+   "new": "Questions"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 485,
+   "col": 3,
+   "field": "UI-404-EXPLORE.label_ar",
+   "old": "استكشف",
+   "new": "الأسئلة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 327,
+   "col": 2,
+   "field": "UI-EVID-DATA-SOURCES.label_en",
+   "old": "Data & sources",
+   "new": "Sources"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 327,
+   "col": 3,
+   "field": "UI-EVID-DATA-SOURCES.label_ar",
+   "old": "البيانات والمصادر",
+   "new": "المصادر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 343,
+   "col": 2,
+   "field": "UI-EVID-CORRECTIONS-RELEASE-HISTORY.label_en",
+   "old": "Corrections & release history",
+   "new": "Corrections and release history"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 533,
+   "col": 2,
+   "field": "UI-LAND-DOM-FINANCE.label_en",
+   "old": "Finance",
+   "new": "Banks and microfinance"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 533,
+   "col": 3,
+   "field": "UI-LAND-DOM-FINANCE.label_ar",
+   "old": "التمويل",
+   "new": "البنوك والتمويل الأصغر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 531,
+   "col": 3,
+   "field": "UI-LAND-DOM-REMITTANCES.label_ar",
+   "old": "التحويلات",
+   "new": "الحوالات"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 532,
+   "col": 3,
+   "field": "UI-LAND-DOM-PROVIDERS.label_ar",
+   "old": "مقدمو الخدمات",
+   "new": "مقدمو الخدمات المالية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 529,
+   "col": 3,
+   "field": "UI-LAND-DOM-ACCESS.label_ar",
+   "old": "الوصول",
+   "new": "الوصول إلى الخدمات"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 579,
+   "col": 2,
+   "field": "UI-EXPLORE-MA-BASIS.c2",
+   "old": "These are the priorities the Measurement Agenda marks P0. The full agenda, including its P1 items, is on the Measurement Agenda page.",
+   "new": "These are the measurement priorities marked P0. The full list, including its P1 items, is on the Measurement priorities page."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 584,
+   "col": 2,
+   "field": "UI-JS-SEARCH-NAMES-NOTE.c2",
+   "old": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Data & sources.",
+   "new": "Names of entities from the regulator's lists and enforcement decisions are not reproduced here; the original documents are linked from Sources."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 584,
+   "col": 3,
+   "field": "UI-JS-SEARCH-NAMES-NOTE.c3",
+   "old": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة البيانات والمصادر.",
+   "new": "لا تُذكر هنا أسماء الجهات الواردة في قوائم الجهة الرقابية وقرارات الإنفاذ؛ ويمكن الوصول إلى الوثائق الأصلية من صفحة المصادر."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 602,
+   "col": 4,
+   "field": "UI-NAV-HUB-03.c4",
+   "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /readings/ (Evidence Readings), bound by navigation_interaction.json.",
+   "new": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /readings/ (Readings), bound by navigation_interaction.json."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 603,
+   "col": 4,
+   "field": "UI-NAV-HUB-04.c4",
+   "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /data/ (Data & sources), bound by navigation_interaction.json.",
+   "new": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /data/ (Sources), bound by navigation_interaction.json."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 604,
+   "col": 4,
+   "field": "UI-NAV-HUB-05.c4",
+   "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub Method & Measurement (/methodology/, /measurement/), bound by navigation_interaction.json.",
+   "new": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub Method and measurement (/methodology/, /measurement/), bound by navigation_interaction.json."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 600,
+   "col": 4,
+   "field": "UI-NAV-HUB-01.c4",
+   "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /explore/ (Explore), bound by navigation_interaction.json.",
+   "new": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /explore/ (Questions), bound by navigation_interaction.json."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 6,
+   "col": 2,
+   "field": "04!r6c2",
+   "old": "Explore",
+   "new": "Questions"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 6,
+   "col": 3,
+   "field": "04!r6c3",
+   "old": "استكشف",
+   "new": "الأسئلة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 6,
+   "col": 4,
+   "field": "04!r6c4",
+   "old": "{\"id\":\"NAV-EXPLORE\",\"label\":{\"en\":\"Explore\",\"ar\":\"استكشف\"},\"route\":\"/explore\",\"kind\":\"DIRECT\"}",
+   "new": "{\"id\":\"NAV-EXPLORE\",\"label\":{\"en\":\"Questions\",\"ar\":\"الأسئلة\"},\"route\":\"/explore\",\"kind\":\"DIRECT\"}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 8,
+   "col": 2,
+   "field": "04!r8c2",
+   "old": "Evidence Readings",
+   "new": "Readings"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 8,
+   "col": 3,
+   "field": "04!r8c3",
+   "old": "قراءات الأدلة",
+   "new": "القراءات التحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 8,
+   "col": 4,
+   "field": "04!r8c4",
+   "old": "{\"id\":\"NAV-READINGS\",\"label\":{\"en\":\"Evidence Readings\",\"ar\":\"قراءات الأدلة\"},\"route\":\"/readings\",\"kind\":\"DIRECT\"}",
+   "new": "{\"id\":\"NAV-READINGS\",\"label\":{\"en\":\"Readings\",\"ar\":\"القراءات التحليلية\"},\"route\":\"/readings\",\"kind\":\"DIRECT\"}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 9,
+   "col": 2,
+   "field": "04!r9c2",
+   "old": "Data & sources",
+   "new": "Sources"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 9,
+   "col": 3,
+   "field": "04!r9c3",
+   "old": "البيانات والمصادر",
+   "new": "المصادر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 9,
+   "col": 4,
+   "field": "04!r9c4",
+   "old": "{\"id\":\"NAV-DATA\",\"label\":{\"en\":\"Data & sources\",\"ar\":\"البيانات والمصادر\"},\"route\":\"/data\",\"kind\":\"DIRECT\"}",
+   "new": "{\"id\":\"NAV-DATA\",\"label\":{\"en\":\"Sources\",\"ar\":\"المصادر\"},\"route\":\"/data\",\"kind\":\"DIRECT\"}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 10,
+   "col": 2,
+   "field": "04!r10c2",
+   "old": "Method & Measurement",
+   "new": "Method and measurement"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 10,
+   "col": 4,
+   "field": "04!r10c4",
+   "old": "{\"id\":\"NAV-METHOD-MEASUREMENT\",\"label\":{\"en\":\"Method & Measurement\",\"ar\":\"المنهج والقياس\"},\"kind\":\"GROUP\",\"children\":[{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\"},{\"id\":\"NAV-MEASUREMENT\",\"label\":{\"en\":\"Measurement Agenda\",\"ar\":\"أولويات القياس\"},\"route\":\"/measurement\"}]}",
+   "new": "{\"id\":\"NAV-METHOD-MEASUREMENT\",\"label\":{\"en\":\"Method and measurement\",\"ar\":\"المنهج والقياس\"},\"kind\":\"GROUP\",\"children\":[{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\"},{\"id\":\"NAV-MEASUREMENT\",\"label\":{\"en\":\"Measurement Agenda\",\"ar\":\"أولويات القياس\"},\"route\":\"/measurement\"}]}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 10,
+   "col": 4,
+   "field": "04!r10c4",
+   "old": "{\"id\":\"NAV-METHOD-MEASUREMENT\",\"label\":{\"en\":\"Method and measurement\",\"ar\":\"المنهج والقياس\"},\"kind\":\"GROUP\",\"children\":[{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\"},{\"id\":\"NAV-MEASUREMENT\",\"label\":{\"en\":\"Measurement Agenda\",\"ar\":\"أولويات القياس\"},\"route\":\"/measurement\"}]}",
+   "new": "{\"id\":\"NAV-METHOD-MEASUREMENT\",\"label\":{\"en\":\"Method and measurement\",\"ar\":\"المنهج والقياس\"},\"kind\":\"GROUP\",\"children\":[{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\"},{\"id\":\"NAV-MEASUREMENT\",\"label\":{\"en\":\"Measurement priorities\",\"ar\":\"أولويات القياس\"},\"route\":\"/measurement\"}]}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 16,
+   "col": 3,
+   "field": "04!r16c3",
+   "old": "Explore",
+   "new": "Questions"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 16,
+   "col": 4,
+   "field": "04!r16c4",
+   "old": "استكشف",
+   "new": "الأسئلة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 17,
+   "col": 3,
+   "field": "04!r17c3",
+   "old": "People & Needs",
+   "new": "People"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 17,
+   "col": 4,
+   "field": "04!r17c4",
+   "old": "الناس والاحتياجات",
+   "new": "الأفراد"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 18,
+   "col": 3,
+   "field": "04!r18c3",
+   "old": "Firms & Finance",
+   "new": "Firms"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 18,
+   "col": 4,
+   "field": "04!r18c4",
+   "old": "المنشآت والتمويل",
+   "new": "المنشآت"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 19,
+   "col": 3,
+   "field": "04!r19c3",
+   "old": "Finance & Institutions",
+   "new": "Banks and microfinance"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 19,
+   "col": 4,
+   "field": "04!r19c4",
+   "old": "التمويل والمؤسسات",
+   "new": "البنوك والتمويل الأصغر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 20,
+   "col": 4,
+   "field": "04!r20c4",
+   "old": "مقدمو الخدمات",
+   "new": "مقدمو الخدمات المالية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 21,
+   "col": 3,
+   "field": "04!r21c3",
+   "old": "Payments & Flows",
+   "new": "Payments"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 21,
+   "col": 4,
+   "field": "04!r21c4",
+   "old": "المدفوعات والتدفقات",
+   "new": "المدفوعات"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 23,
+   "col": 3,
+   "field": "04!r23c3",
+   "old": "Access & Infrastructure",
+   "new": "Access"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 23,
+   "col": 4,
+   "field": "04!r23c4",
+   "old": "الوصول والبنية التحتية",
+   "new": "الوصول إلى الخدمات"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 24,
+   "col": 3,
+   "field": "04!r24c3",
+   "old": "Reforms & Programmes",
+   "new": "Reforms"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 24,
+   "col": 4,
+   "field": "04!r24c4",
+   "old": "الإصلاحات والبرامج",
+   "new": "الإصلاحات"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 27,
+   "col": 3,
+   "field": "04!r27c3",
+   "old": "Compare Evidence",
+   "new": "Compare evidence"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 28,
+   "col": 3,
+   "field": "04!r28c3",
+   "old": "Evidence Readings",
+   "new": "Readings"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 28,
+   "col": 4,
+   "field": "04!r28c4",
+   "old": "قراءات الأدلة",
+   "new": "القراءات التحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 29,
+   "col": 3,
+   "field": "04!r29c3",
+   "old": "Reading detail",
+   "new": "Reading"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 29,
+   "col": 4,
+   "field": "04!r29c4",
+   "old": "تفاصيل القراءة",
+   "new": "قراءة تحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 30,
+   "col": 3,
+   "field": "04!r30c3",
+   "old": "Measurement Agenda",
+   "new": "Measurement priorities"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 31,
+   "col": 3,
+   "field": "04!r31c3",
+   "old": "Data & sources",
+   "new": "Sources"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 31,
+   "col": 4,
+   "field": "04!r31c4",
+   "old": "البيانات والمصادر",
+   "new": "المصادر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 31,
+   "col": 8,
+   "field": "04!r31c8",
+   "old": "Approved reusable data, metadata, sources, versions, rights and citations.",
+   "new": "Source directory: metadata, original locators, rights state and citations; no dataset is offered for download. Named \"Sources\" while public_downloads is false, and \"Sources and data\" (المصادر والبيانات) on the day downloads go live."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 33,
+   "col": 4,
+   "field": "04!r33c4",
+   "old": "عن الموقع",
+   "new": "التعريف بهذا المورد"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 608,
+   "col": 3,
+   "field": "04!r608c3",
+   "old": "عن الموقع",
+   "new": "التعريف بهذا المورد"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 610,
+   "col": 2,
+   "field": "04!r610c2",
+   "old": "Rights & reuse",
+   "new": "Rights and reuse"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 610,
+   "col": 3,
+   "field": "04!r610c3",
+   "old": "الحقوق وإعادة الاستخدام",
+   "new": "حقوق إعادة الاستخدام"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 611,
+   "col": 3,
+   "field": "04!r611c3",
+   "old": "إتاحة الوصول",
+   "new": "إمكانية الوصول"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": 613,
+   "col": 2,
+   "field": "04!r613c2",
+   "old": "Terms",
+   "new": "Terms of use"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 137,
+   "col": 5,
+   "field": "02_SITE_MAP!r137c5",
+   "old": "Evidence Readings",
+   "new": "Readings"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 137,
+   "col": 6,
+   "field": "02_SITE_MAP!r137c6",
+   "old": "قراءات الأدلة",
+   "new": "القراءات التحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 121,
+   "col": 5,
+   "field": "02_SITE_MAP!r121c5",
+   "old": "Finance: borrower, saver and balance figures measure different things",
+   "new": "Banks and microfinance: borrower, saver and balance figures measure different things"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 121,
+   "col": 6,
+   "field": "02_SITE_MAP!r121c6",
+   "old": "التمويل: أرقام المقترضين والمدخرين والأرصدة تقيس أشياء مختلفة",
+   "new": "البنوك والتمويل الأصغر: أرقام المقترضين والمدخرين والأرصدة تقيس أشياء مختلفة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 129,
+   "col": 6,
+   "field": "02_SITE_MAP!r129c6",
+   "old": "قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+   "new": "مقدمو الخدمات المالية: قائمة مقدمي الخدمات تثبت وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 6,
+   "col": 6,
+   "field": "02_SITE_MAP!r6c6",
+   "old": "نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+   "new": "الوصول إلى الخدمات: نعرف أجزاءً من شبكة الوصول إلى الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 141,
+   "col": 5,
+   "field": "02_SITE_MAP!r141c5",
+   "old": "A reform can be real before its outcome is known.",
+   "new": "Reforms: a reform can be real before its outcome is known."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 141,
+   "col": 6,
+   "field": "02_SITE_MAP!r141c6",
+   "old": "قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة.",
+   "new": "الإصلاحات: قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 7,
+   "col": 6,
+   "field": "02_SITE_MAP!r7c6",
+   "old": "بيان إتاحة الوصول",
+   "new": "بيان إمكانية الوصول"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "02_SITE_MAP",
+   "row": 8,
+   "col": 8,
+   "field": "02_SITE_MAP!r8c8",
+   "old": "لتصحيح الأدلة أو الاستفسار عن البيانات أو الإبلاغ عن مشكلات إتاحة الوصول أو الخصوصية أو المشكلات التقنية، راسل office@causewaygrp.com.",
+   "new": "لتصحيح الأدلة أو الاستفسار عن البيانات أو الإبلاغ عن مشكلات إمكانية الوصول أو الخصوصية أو المشكلات التقنية، راسل office@causewaygrp.com."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 54,
+   "col": 6,
+   "field": "03_PAGE_SECTIONS!r54c6",
+   "old": "الإبلاغ عن مشكلة في إتاحة الوصول",
+   "new": "الإبلاغ عن مشكلة في إمكانية الوصول"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 54,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r54c7",
+   "old": "يمكن الإبلاغ عن مشكلات إتاحة الوصول عبر office@causewaygrp.com. اذكر الصفحة والمكوّن واللغة المعنية، وإن كان ذلك مفيدًا فاذكر المتصفح أو التقنية المساعدة المستخدمة. ولم تُنشر مدة استجابة لهذه القناة.",
+   "new": "يمكن الإبلاغ عن مشكلات إمكانية الوصول عبر office@causewaygrp.com. اذكر الصفحة والمكوّن واللغة المعنية، وإن كان ذلك مفيدًا فاذكر المتصفح أو التقنية المساعدة المستخدمة. ولم تُنشر مدة استجابة لهذه القناة."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 55,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r55c7",
+   "old": "يحدد هذا البيان هدفًا لإتاحة الوصول، ولا يدّعي التوافق مع WCAG قبل استكمال تلك الاختبارات.",
+   "new": "يحدد هذا البيان هدفًا لإمكانية الوصول، ولا يدّعي التوافق مع WCAG قبل استكمال تلك الاختبارات."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 56,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r56c7",
+   "old": "لتصحيح الأدلة أو الاستفسار عن البيانات أو الإبلاغ عن مشكلات إتاحة الوصول أو الخصوصية أو المشكلات التقنية، راسل office@causewaygrp.com. استخدم «أدلة الشمول المالي في اليمن» أو «Yemen Financial Inclusion Evidence» في عنوان الرسالة وأضف نوع المسألة عند الحاجة.",
+   "new": "لتصحيح الأدلة أو الاستفسار عن البيانات أو الإبلاغ عن مشكلات إمكانية الوصول أو الخصوصية أو المشكلات التقنية، راسل office@causewaygrp.com. استخدم «أدلة الشمول المالي في اليمن» أو «Yemen Financial Inclusion Evidence» في عنوان الرسالة وأضف نوع المسألة عند الحاجة."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 58,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r58c7",
+   "old": "تصحيح الأدلة أو المصادر؛ روابط المصادر المعطلة؛ أسئلة إعادة الاستخدام والحقوق؛ مشكلات إتاحة الوصول؛ أسئلة الخصوصية؛ والمشكلات التقنية التي تعيق فحص الأدلة أو استخدامها.",
+   "new": "تصحيح الأدلة أو المصادر؛ روابط المصادر المعطلة؛ أسئلة إعادة الاستخدام والحقوق؛ مشكلات إمكانية الوصول؛ أسئلة الخصوصية؛ والمشكلات التقنية التي تعيق فحص الأدلة أو استخدامها."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 79,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r79c5",
+   "old": "Public Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public link to the original: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nEvidence Readings: {{n:readings}}\nMeasurement Agenda priorities: {{n:measurement_priorities}}",
+   "new": "Public Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public link to the original: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nReadings: {{n:readings}}\nMeasurement Agenda priorities: {{n:measurement_priorities}}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 79,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r79c5",
+   "old": "Public Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public link to the original: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nReadings: {{n:readings}}\nMeasurement Agenda priorities: {{n:measurement_priorities}}",
+   "new": "Public Evidence Records: {{n:evidence_records}}\nDocumented chronology events: {{n:chronology_events}}\nPublic claims (each is also an Evidence Record): {{n:public_claims}}\nRegistered source records: {{n:sources}}\nSource records with a public link to the original: {{n:public_locators}}\nCurated source and report cards: {{n:curated_resources}}\nReadings: {{n:readings}}\nMeasurement priorities: {{n:measurement_priorities}}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 80,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r80c7",
+   "old": "سجلات الأدلة العامة: {{n:evidence_records}}\nأحداث السلسلة الزمنية الموثقة: {{n:chronology_events}}\nالخلاصات العامة (وكل منها سجل دليل أيضًا): {{n:public_claims}}\nسجلات المصادر المسجلة: {{n:sources}}\nسجلات المصادر التي لها رابط أصلي عام: {{n:public_locators}}\nبطاقات المصادر والتقارير المنتقاة: {{n:curated_resources}}\nقراءات الأدلة: {{n:readings}}\nأولويات القياس: {{n:measurement_priorities}}",
+   "new": "سجلات الأدلة العامة: {{n:evidence_records}}\nأحداث السلسلة الزمنية الموثقة: {{n:chronology_events}}\nالخلاصات العامة (وكل منها سجل دليل أيضًا): {{n:public_claims}}\nسجلات المصادر المسجلة: {{n:sources}}\nسجلات المصادر التي لها رابط أصلي عام: {{n:public_locators}}\nبطاقات المصادر والتقارير المنتقاة: {{n:curated_resources}}\nالقراءات التحليلية: {{n:readings}}\nأولويات القياس: {{n:measurement_priorities}}"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 337,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r337c5",
+   "old": "This resource contains CauseWay-authored summaries and derived outputs alongside third-party source material. Reuse of source material depends on the original publisher’s terms; this resource does not yet record item-level reuse terms. Where permission to redistribute or adapt source material is not stated, do not assume that permission exists. Source-specific restrictions continue to apply to underlying data, tables, figures and text. CauseWay's own content is licensed under CC BY 4.0; see Rights & reuse.",
+   "new": "This resource contains CauseWay-authored summaries and derived outputs alongside third-party source material. Reuse of source material depends on the original publisher’s terms; this resource does not yet record item-level reuse terms. Where permission to redistribute or adapt source material is not stated, do not assume that permission exists. Source-specific restrictions continue to apply to underlying data, tables, figures and text. CauseWay's own content is licensed under CC BY 4.0; see Rights and reuse."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 339,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r339c5",
+   "old": "Cite the original source. When you take a figure or a finding from this resource, also cite the evidence record, in the two-line form shown on Rights & reuse.",
+   "new": "Cite the original source. When you take a figure or a finding from this resource, also cite the evidence record, in the two-line form shown on Rights and reuse."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 339,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!r339c7",
+   "old": "استشهد بالمصدر الأصلي. وعندما تأخذ رقمًا أو نتيجة من هذا المورد، استشهد أيضًا بسجل الدليل بصيغة السطرين المبيّنة في صفحة «الحقوق وإعادة الاستخدام».",
+   "new": "استشهد بالمصدر الأصلي. وعندما تأخذ رقمًا أو نتيجة من هذا المورد، استشهد أيضًا بسجل الدليل بصيغة السطرين المبيّنة في صفحة «حقوق إعادة الاستخدام»."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 136,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r136c5",
+   "old": "This agenda links evidence gaps to specific decision questions. It does not rank national priorities or use a hidden score. Each item states the decision affected, what evidence is missing, the feasibility and sensitivity constraints, and what would become knowable if that evidence existed. Priority labels describe sequencing within this resource; they are not government, funding or policy rankings.",
+   "new": "These measurement priorities link evidence gaps to specific decision questions. It does not rank national priorities or use a hidden score. Each item states the decision affected, what evidence is missing, the feasibility and sensitivity constraints, and what would become knowable if that evidence existed. Priority labels describe sequencing within this resource; they are not government, funding or policy rankings."
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 137,
+   "col": 4,
+   "field": "03_PAGE_SECTIONS!r137c4",
+   "old": "How to read the agenda",
+   "new": "How to read the priorities"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 147,
+   "col": 4,
+   "field": "03_PAGE_SECTIONS!r147c4",
+   "old": "What remains uncertain about the agenda itself",
+   "new": "What remains uncertain about the priorities themselves"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 149,
+   "col": 4,
+   "field": "03_PAGE_SECTIONS!r149c4",
+   "old": "How the agenda changes",
+   "new": "How the priorities change"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 153,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!r153c5",
+   "old": "Each agenda priority sets out the current evidence, the missing evidence, what the decision would gain, the proposed method, feasibility, sensitivity or data-responsibility constraints, the priority rationale and what would change if the evidence became available.",
+   "new": "Each measurement priority sets out the current evidence, the missing evidence, what the decision would gain, the proposed method, feasibility, sensitivity or data-responsibility constraints, the priority rationale and what would change if the evidence became available."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 18,
+   "col": 7,
+   "field": "06_EVIDENCE_OBJECTS!r18c7",
+   "old": "تفصل الأدلة لكل فئة من مقدمي الخدمات بين الجهة المصدرة والقائمة أو العدد المؤرخ وقرارات الوضع المؤرخة وأدلة التشغيل. البنوك: تسمّي قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، البنوكَ المرخصة، ومنها بنوك مصنفة بنوكَ تمويل أصغر بحسب تسمياتها؛ ولم تُراجَع هنا قرارات تخص وضع البنوك. الصرافة والحوالات: تسرد القائمة الرسمية لعام 2026 شركات الصرافة ومنشآت الصرافة الفردية ووكلاء الحوالات، وتعلّق قرارات مختارة للبنك المركزي في عدن صدرت في 2026 تراخيص جهات مسماة أو تغلق مقارها. المحافظ الإلكترونية: تورد إصدارات البنك المركزي في عدن أعدادًا للمحافظ الإلكترونية في 2024 و2025 لم تُطابَق تعريفاتها، ويسمّي تعميم صدر في يونيو 2024 محافظ أو جهات أو خدمات بوصفها غير مرخصة؛ ولا تتوفر قائمة حالية بأسماء المحافظ المرخصة. مؤسسات التمويل الأصغر غير المصرفية: لا تتوفر سوى صفحات العضوية في شبكة مهنية، لا قائمة ترخيص. مشغلو أنظمة الدفع: لا تتوفر قائمة بأسمائهم. وفي كل فئة تثبت القائمة أو الرخصة وضعًا رسميًا في تاريخ محدد، لا أن كل جهة أو موقع مدرج يعمل فعلًا.",
+   "new": "تفصل الأدلة لكل فئة من مقدمي الخدمات بين الجهة المصدرة والقائمة أو العدد المؤرخ وقرارات الوضع المؤرخة وأدلة التشغيل. البنوك: تسمّي قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، البنوكَ المرخصة، ومنها بنوك مصنفة بنوكَ تمويل أصغر بحسب تسمياتها؛ ولم تُراجَع هنا قرارات تخص وضع البنوك. الصرافة والحوالات: تسرد القائمة الرسمية لعام 2026 شركات الصرافة ومنشآت الصرافة الفردية ووكلاء الحوالات، وتعلّق قرارات مختارة للبنك المركزي في عدن صدرت في 2026 تراخيص جهات مسماة أو تغلق مقارها. المحافظ الإلكترونية: تورد إصدارات البنك المركزي في عدن أعدادًا للمحافظ الإلكترونية في 2024 و2025 لم تُطابَق تعريفاتها، ويسمّي تعميم صدر في يونيو 2024 محافظ أو جهات أو خدمات بوصفها غير مرخصة؛ ولا تتوفر قائمة حالية بأسماء المحافظ المرخصة. مؤسسات التمويل الأصغر غير المصرفية: لا تتوفر سوى صفحات العضوية في شبكة مهنية، لا قائمة ترخيص. مشغلو أنظمة الدفع: لا تتوفر قائمة بأسمائهم. وفي كل فئة تثبت القائمة أو الترخيص وضعًا رسميًا في تاريخ محدد، لا أن كل جهة أو موقع مدرج يعمل فعلًا."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 18,
+   "col": 17,
+   "field": "06_EVIDENCE_OBJECTS!r18c17",
+   "old": "لا تثبت القائمة أو الرخصة أن مقدم الخدمة يعمل أو يصل إلى العملاء؛ وقائمة الأسماء غير المرخصة ليست سجلًا بالمرخصين؛ والقرار الخاص بجهات مسماة لا يكوّن قائمة مكتملة بمقدمي الخدمات؛ ولا تُختزل الأبعاد في درجة ثقة إجمالية.",
+   "new": "لا تثبت القائمة أو الترخيص أن مقدم الخدمة يعمل أو يصل إلى العملاء؛ وقائمة الأسماء غير المرخصة ليست سجلًا بالمرخصين؛ والقرار الخاص بجهات مسماة لا يكوّن قائمة مكتملة بمقدمي الخدمات؛ ولا تُختزل الأبعاد في درجة ثقة إجمالية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 19,
+   "col": 20,
+   "field": "11_VISUAL_LIBRARY!r19c20",
+   "old": "لا تثبت القائمة أو الرخصة أن مقدم الخدمة يعمل أو يصل إلى العملاء؛ وقائمة الأسماء غير المرخصة ليست سجلًا بالمرخصين؛ والقرار الخاص بجهات مسماة لا يكوّن قائمة مكتملة بمقدمي الخدمات؛ ولا تُختزل الأبعاد في درجة ثقة إجمالية.",
+   "new": "لا تثبت القائمة أو الترخيص أن مقدم الخدمة يعمل أو يصل إلى العملاء؛ وقائمة الأسماء غير المرخصة ليست سجلًا بالمرخصين؛ والقرار الخاص بجهات مسماة لا يكوّن قائمة مكتملة بمقدمي الخدمات؛ ولا تُختزل الأبعاد في درجة ثقة إجمالية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 19,
+   "col": 22,
+   "field": "11_VISUAL_LIBRARY!r19c22",
+   "old": "تفصل الأدلة لكل فئة من مقدمي الخدمات بين الجهة المصدرة والقائمة أو العدد المؤرخ وقرارات الوضع المؤرخة وأدلة التشغيل. البنوك: تسمّي قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، البنوكَ المرخصة، ومنها بنوك مصنفة بنوكَ تمويل أصغر بحسب تسمياتها؛ ولم تُراجَع هنا قرارات تخص وضع البنوك. الصرافة والحوالات: تسرد القائمة الرسمية لعام 2026 شركات الصرافة ومنشآت الصرافة الفردية ووكلاء الحوالات، وتعلّق قرارات مختارة للبنك المركزي في عدن صدرت في 2026 تراخيص جهات مسماة أو تغلق مقارها. المحافظ الإلكترونية: تورد إصدارات البنك المركزي في عدن أعدادًا للمحافظ الإلكترونية في 2024 و2025 لم تُطابَق تعريفاتها، ويسمّي تعميم صدر في يونيو 2024 محافظ أو جهات أو خدمات بوصفها غير مرخصة؛ ولا تتوفر قائمة حالية بأسماء المحافظ المرخصة. مؤسسات التمويل الأصغر غير المصرفية: لا تتوفر سوى صفحات العضوية في شبكة مهنية، لا قائمة ترخيص. مشغلو أنظمة الدفع: لا تتوفر قائمة بأسمائهم. وفي كل فئة تثبت القائمة أو الرخصة وضعًا رسميًا في تاريخ محدد، لا أن كل جهة أو موقع مدرج يعمل فعلًا.",
+   "new": "تفصل الأدلة لكل فئة من مقدمي الخدمات بين الجهة المصدرة والقائمة أو العدد المؤرخ وقرارات الوضع المؤرخة وأدلة التشغيل. البنوك: تسمّي قائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، البنوكَ المرخصة، ومنها بنوك مصنفة بنوكَ تمويل أصغر بحسب تسمياتها؛ ولم تُراجَع هنا قرارات تخص وضع البنوك. الصرافة والحوالات: تسرد القائمة الرسمية لعام 2026 شركات الصرافة ومنشآت الصرافة الفردية ووكلاء الحوالات، وتعلّق قرارات مختارة للبنك المركزي في عدن صدرت في 2026 تراخيص جهات مسماة أو تغلق مقارها. المحافظ الإلكترونية: تورد إصدارات البنك المركزي في عدن أعدادًا للمحافظ الإلكترونية في 2024 و2025 لم تُطابَق تعريفاتها، ويسمّي تعميم صدر في يونيو 2024 محافظ أو جهات أو خدمات بوصفها غير مرخصة؛ ولا تتوفر قائمة حالية بأسماء المحافظ المرخصة. مؤسسات التمويل الأصغر غير المصرفية: لا تتوفر سوى صفحات العضوية في شبكة مهنية، لا قائمة ترخيص. مشغلو أنظمة الدفع: لا تتوفر قائمة بأسمائهم. وفي كل فئة تثبت القائمة أو الترخيص وضعًا رسميًا في تاريخ محدد، لا أن كل جهة أو موقع مدرج يعمل فعلًا."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "00_MASTER",
+   "row": 73,
+   "col": 4,
+   "field": "dimension_ar (remittances = الحوالات)",
+   "old": "التحويلات التي يتلقاها الأفراد",
+   "new": "الحوالات التي يتلقاها الأفراد"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "00_MASTER",
+   "row": 74,
+   "col": 4,
+   "field": "dimension_ar (remittances = الحوالات)",
+   "old": "تدفقات التحويلات إلى البلد",
+   "new": "تدفقات الحوالات إلى البلد"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "00_MASTER",
+   "row": 75,
+   "col": 4,
+   "field": "dimension_ar (remittances = الحوالات)",
+   "old": "كلفة التحويلات",
+   "new": "كلفة الحوالات"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 17,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "تفصل أرقام صندوق النقد الدولي للتحويلات الواردة بين القيم التاريخية المنشورة وتقدير 2025 وتوقعات 2026–2030؛ ولا تمثل رقمًا لليمن كله.",
+   "new": "تفصل أرقام صندوق النقد الدولي للحوالات الواردة بين القيم التاريخية المنشورة وتقدير 2025 وتوقعات 2026–2030؛ ولا تمثل رقمًا لليمن كله."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 42,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها.",
+   "new": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للحوالات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 44,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "تُظهر سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن نموًا سنويًا متقاربًا على نحو لافت؛ وهذا سؤال منهجي لا يثبت التنعيم.",
+   "new": "تُظهر سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن نموًا سنويًا متقاربًا على نحو لافت؛ وهذا سؤال منهجي لا يثبت التنعيم."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 45,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "تتغير نسبة التحويلات إلى تمويل المانحين عن عام 2024، في بنود ميزان المدفوعات لدى البنك المركزي اليمني – عدن، بين إصدارات التقرير السنوي.",
+   "new": "تتغير نسبة الحوالات إلى تمويل المانحين عن عام 2024، في بنود ميزان المدفوعات لدى البنك المركزي اليمني – عدن، بين إصدارات التقرير السنوي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 46,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "يوثق صندوق النقد الدولي إعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن؛ أما صيغة البنك الدقيقة للتحويلات فغير موثقة.",
+   "new": "يوثق صندوق النقد الدولي إعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن؛ أما صيغة البنك الدقيقة للحوالات فغير موثقة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 47,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "عند تحويلهما إلى رقم قياسي (2021 = 100) تتطابق سلسلتا التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي تقريبًا حتى 2024، لكن مستوياتهما مختلفة.",
+   "new": "عند تحويلهما إلى رقم قياسي (2021 = 100) تتطابق سلسلتا الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي تقريبًا حتى 2024، لكن مستوياتهما مختلفة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 52,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "خلال 2021–2024 تحافظ سلسلتا التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي على نسبة مستقرة؛ ومعناها غير موثق، وليست قاعدة تحويل.",
+   "new": "خلال 2021–2024 تحافظ سلسلتا الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي على نسبة مستقرة؛ ومعناها غير موثق، وليست قاعدة تحويل."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 53,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند التحويلات المنشور في كل سنة من 2021 إلى 2025.",
+   "new": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند الحوالات المنشور في كل سنة من 2021 إلى 2025."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 54,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "يقدّر نموذج قائم على متبقي ميزان المدفوعات التحويلات بإسناد فرق متبقٍّ مفترض إليها؛ وهو نموذج بديل، لا خط الأساس المعتمد للتحويلات.",
+   "new": "يقدّر نموذج قائم على متبقي ميزان المدفوعات الحوالات بإسناد فرق متبقٍّ مفترض إليها؛ وهو نموذج بديل، لا خط الأساس المعتمد للحوالات."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 114,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "تفصل أرقام صندوق النقد الدولي للتحويلات في القطاع الخارجي لليمن بين القيم التاريخية للفترة 2018–2024 وتقدير 2025 وتوقعات 2026–2030.",
+   "new": "تفصل أرقام صندوق النقد الدولي للحوالات في القطاع الخارجي لليمن بين القيم التاريخية للفترة 2018–2024 وتقدير 2025 وتوقعات 2026–2030."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 140,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للتحويلات في السنة المرجعية نفسها.",
+   "new": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للحوالات في السنة المرجعية نفسها."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 142,
+   "col": 6,
+   "field": "title_ar (remittances = الحوالات)",
+   "old": "التحويلات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
+   "new": "الحوالات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "02_SITE_MAP",
+   "row": 142,
+   "col": 8,
+   "field": "meta_description_ar (remittances = الحوالات)",
+   "old": "يتوقف رقم التحويلات على مصدره ومفهومه وإصداره: فقد راجع التقرير السنوي 2025 للبنك المركزي اليمني – عدن قيمة عام 2024، وهذه مراجعة لا هبوط.",
+   "new": "يتوقف رقم الحوالات على مصدره ومفهومه وإصداره: فقد راجع التقرير السنوي 2025 للبنك المركزي اليمني – عدن قيمة عام 2024، وهذه مراجعة لا هبوط."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 15,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة التنظيمية أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم إتاحة الوصول (أن تكون الخدمة في متناول الناس)، ثم الاستخدام الفعلي، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم وحماية المستهلك، والعوامل الممكِّنة والقيود، لكن أحدها لا يحل محل الآخر. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض بوصفها علاقات سببية أو مؤشرًا مركبًا.",
+   "new": "قد يسهم الإصلاح أو نظام الدفع أو البرنامج في الشمول عبر سلسلة تبدأ بالقاعدة التنظيمية أو الاستثمار، ثم التنفيذ، ثم التشغيل، ثم إتاحة الوصول (أن تكون الخدمة في متناول الناس)، ثم الاستخدام الفعلي، ثم جودة الخدمة والحماية، ثم النتيجة. تتوقف الأدلة عند أبعد مرحلة تسندها فعلًا، ولا تتجاوز حلقة لم تُقَس. وفي الصورة الأوسع يرتبط الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم وحماية المستهلك، والعوامل الممكِّنة والقيود، لكن أحدها لا يحل محل الآخر. وتوضح الروابط السياق أو الاعتماد أو آليات محتملة عندما تسندها الأدلة؛ ولا تُعرض بوصفها علاقات سببية أو مؤشرًا مركبًا."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 108,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "تتبع السلسلة الزمنية المعتمدة تحولات مختلفة لا يجوز دمجها في اتجاه واحد: ضغوط الاحتياطيات وتمويل الواردات بحلول 2015–2016؛ وانقسام البنك المركزي في 2016؛ والارتفاع السريع للنقد خارج البنوك بحلول 2017؛ ودعم الاحتياطيات السعودي في 2018 و2023؛ وانقسام دورة النقد والمدفوعات في 2019؛ وصدمة توقف صادرات النفط بعد 2022؛ ومزادات النقد الأجنبي والدعم الخارجي في 2023–2024؛ وضغوط السيولة المصرفية وتدابير النقد الأجنبي وتمويل الواردات في 2025؛ ثم الاستثمار اللاحق في بنية المدفوعات. ويحتفظ كل حدث بنطاقه الجغرافي والمؤسسي؛ وحين يتعلق الحدث بتمويل، تبقى مراحل الاتفاق والإيداع والإتاحة والصرف والاستخدام اللاحق منفصلة ولا تُجمع مبالغها؛ كما تُفصل مراجعات أرقام التحويلات للسنة نفسها عن التغير الاقتصادي الفعلي. تساعد هذه الأحداث على تفسير البيئة التي تعمل فيها الوساطة المالية، لكن تعاقبها لا يثبت أن حدثًا بعينه تسبب في نتيجة للشمول المالي.",
+   "new": "تتبع السلسلة الزمنية المعتمدة تحولات مختلفة لا يجوز دمجها في اتجاه واحد: ضغوط الاحتياطيات وتمويل الواردات بحلول 2015–2016؛ وانقسام البنك المركزي في 2016؛ والارتفاع السريع للنقد خارج البنوك بحلول 2017؛ ودعم الاحتياطيات السعودي في 2018 و2023؛ وانقسام دورة النقد والمدفوعات في 2019؛ وصدمة توقف صادرات النفط بعد 2022؛ ومزادات النقد الأجنبي والدعم الخارجي في 2023–2024؛ وضغوط السيولة المصرفية وتدابير النقد الأجنبي وتمويل الواردات في 2025؛ ثم الاستثمار اللاحق في بنية المدفوعات. ويحتفظ كل حدث بنطاقه الجغرافي والمؤسسي؛ وحين يتعلق الحدث بتمويل، تبقى مراحل الاتفاق والإيداع والإتاحة والصرف والاستخدام اللاحق منفصلة ولا تُجمع مبالغها؛ كما تُفصل مراجعات أرقام الحوالات للسنة نفسها عن التغير الاقتصادي الفعلي. تساعد هذه الأحداث على تفسير البيئة التي تعمل فيها الوساطة المالية، لكن تعاقبها لا يثبت أن حدثًا بعينه تسبب في نتيجة للشمول المالي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 284,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "قياس جديد ممثل للسكان يحافظ على قابلية المقارنة في امتلاك الحساب، ويضيف:\n- الاستخدام الرقمي النشط والمتكرر؛\n- الادخار والاقتراض؛\n- أغراض المدفوعات؛\n- عوائق فتح الحساب؛\n- القدرة على تحمل الكلفة وموثوقية الخدمة؛\n- الاحتيال والانتصاف؛\n- تلقي التحويلات واستخدامها؛\n- الفجوات بحسب الجنس والدخل؛\n- الجغرافيا والنزوح حيث يسمح الإحصاء بذلك؛\n- الاستمرار بعد المشاركة في برنامج أو تلقي تحويل.\nوإذا قُرئ إلى جانب بيانات إدارية أدق عن المستخدمين الفريدين والتكرار والموثوقية والكلفة والشكاوى، فلن يدمج بيانات المسح والبيانات الإدارية في رقم واحد، بل سيبني الجسر بين ما تغيّر في المنظومة وما تغيّر لدى الناس.",
+   "new": "قياس جديد ممثل للسكان يحافظ على قابلية المقارنة في امتلاك الحساب، ويضيف:\n- الاستخدام الرقمي النشط والمتكرر؛\n- الادخار والاقتراض؛\n- أغراض المدفوعات؛\n- عوائق فتح الحساب؛\n- القدرة على تحمل الكلفة وموثوقية الخدمة؛\n- الاحتيال والانتصاف؛\n- تلقي الحوالات واستخدامها؛\n- الفجوات بحسب الجنس والدخل؛\n- الجغرافيا والنزوح حيث يسمح الإحصاء بذلك؛\n- الاستمرار بعد المشاركة في برنامج أو تلقي تحويل.\nوإذا قُرئ إلى جانب بيانات إدارية أدق عن المستخدمين الفريدين والتكرار والموثوقية والكلفة والشكاوى، فلن يدمج بيانات المسح والبيانات الإدارية في رقم واحد، بل سيبني الجسر بين ما تغيّر في المنظومة وما تغيّر لدى الناس."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للتحويلات في السنة المرجعية نفسها. فقد قدّر تقرير 2024 التحويلات في عام 2024 بمبلغ 6,245 مليون دولار، ثم أعاد تقرير 2025 عرض قيمة عام 2024 عند 3,422.16 مليون دولار.\nالفرق كبير، لكنه لا يثبت أن التحويلات انهارت؛ فالقيمتان تصفان عام 2024 نفسه. وقبل قراءة الفرق حركةً في الاقتصاد، ينبغي فهم ما تغيّر في نسخة النشر أو نطاق الإحصاء أو منهجه.",
+   "new": "يورد تقريران سنويان للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا واضحًا للحوالات في السنة المرجعية نفسها. فقد قدّر تقرير 2024 الحوالات في عام 2024 بمبلغ 6,245 مليون دولار، ثم أعاد تقرير 2025 عرض قيمة عام 2024 عند 3,422.16 مليون دولار.\nالفرق كبير، لكنه لا يثبت أن الحوالات انهارت؛ فالقيمتان تصفان عام 2024 نفسه. وقبل قراءة الفرق حركةً في الاقتصاد، ينبغي فهم ما تغيّر في نسخة النشر أو نطاق الإحصاء أو منهجه."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 286,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "المراجعات أمر معتاد في الإحصاءات الاقتصادية، لكنها تصبح ذات أثر حين تكون القيمة المعدلة كبيرة بما يكفي لتغيير خط الأساس الذي يقوم عليه التحليل، وهذه المراجعة من هذا النوع.\nلذلك لا تكفي عبارة «تحويلات 2024» وحدها عندما يعطي إصداران رسميان قيمتين مختلفتين جوهريًا للسنة نفسها؛ إذ ينبغي أن ترافق نسخةُ النشر السنةَ المرجعية أينما ذُكر الرقم.",
+   "new": "المراجعات أمر معتاد في الإحصاءات الاقتصادية، لكنها تصبح ذات أثر حين تكون القيمة المعدلة كبيرة بما يكفي لتغيير خط الأساس الذي يقوم عليه التحليل، وهذه المراجعة من هذا النوع.\nلذلك لا تكفي عبارة «حوالات 2024» وحدها عندما يعطي إصداران رسميان قيمتين مختلفتين جوهريًا للسنة نفسها؛ إذ ينبغي أن ترافق نسخةُ النشر السنةَ المرجعية أينما ذُكر الرقم."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 287,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "عند تحويل سلسلة التحويلات في تقرير البنك المركزي اليمني – عدن لعام 2025 وسلسلة صندوق النقد الدولي في مشاورات المادة الرابعة لعام 2025 إلى أرقام قياسية (2021 = 100)، يكاد مساراهما يتطابقان حتى عام 2024؛ إذ لا يتجاوز أكبر فرق في معدل النمو السنوي 0.0032 نقطة مئوية خلال 2022–2024. أما المستويات فلا تتطابق: ففي كل سنة من 2021 إلى 2024 تعادل قيمة البنك المركزي في عدن 1.838 ضعف قيمة الصندوق.\nهذا الانتظام مفيد، إذ يوحي بمسارين متقاربين جُمعا وفق نطاقين أو منهجين مختلفين. لكنه لا يقدم صيغة تحويل، ولا يوجد ما هو منشور يفسر ما تمثله هذه النسبة.\nوتصف وثائق صندوق النقد إعادة بناء إحصاءات القطاع الخارجي في اليمن في ظل قيود شديدة على البيانات، بما في ذلك نموذج لتقدير التحويلات الشخصية حيث كانت المعلومات عن القنوات غير الرسمية محدودة. هذا سياق منهجي، ولا يكشف الصيغة الدقيقة وراء كل قيمة في التقرير السنوي للبنك المركزي.\n> القرينة الإحصائية ليست بعدُ جدول مطابقة موثقًا.",
+   "new": "عند تحويل سلسلة الحوالات في تقرير البنك المركزي اليمني – عدن لعام 2025 وسلسلة صندوق النقد الدولي في مشاورات المادة الرابعة لعام 2025 إلى أرقام قياسية (2021 = 100)، يكاد مساراهما يتطابقان حتى عام 2024؛ إذ لا يتجاوز أكبر فرق في معدل النمو السنوي 0.0032 نقطة مئوية خلال 2022–2024. أما المستويات فلا تتطابق: ففي كل سنة من 2021 إلى 2024 تعادل قيمة البنك المركزي في عدن 1.838 ضعف قيمة الصندوق.\nهذا الانتظام مفيد، إذ يوحي بمسارين متقاربين جُمعا وفق نطاقين أو منهجين مختلفين. لكنه لا يقدم صيغة تحويل، ولا يوجد ما هو منشور يفسر ما تمثله هذه النسبة.\nوتصف وثائق صندوق النقد إعادة بناء إحصاءات القطاع الخارجي في اليمن في ظل قيود شديدة على البيانات، بما في ذلك نموذج لتقدير التحويلات الشخصية حيث كانت المعلومات عن القنوات غير الرسمية محدودة. هذا سياق منهجي، ولا يكشف الصيغة الدقيقة وراء كل قيمة في التقرير السنوي للبنك المركزي.\n> القرينة الإحصائية ليست بعدُ جدول مطابقة موثقًا."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 288,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "تمس التحويلات مستويات عدة في آن واحد: معيشة الأسر، والمعروض من النقد الأجنبي، وتحليل ميزان المدفوعات، والقنوات الرسمية وغير الرسمية التي تنتقل عبرها الأموال. لذلك قد تغيّر مراجعةٌ كبيرة للسلسلة الكلية أكثر من خط أساس تحليلي من دون أن يقع حدث جديد لدى أي أسرة.\nوإذا قُرئت المراجعة الإحصائية من دون السنة المرجعية ونسخة النشر معًا، فقد تُفهم خطأً على أنها نمو أو انهيار. أما حين يُقرأ الرقم بهما معًا، فيصبح السؤال المفيد: ما الذي تغيّر في القياس، وما الذي تغيّر في الاقتصاد، إن كان قد تغيّر شيء؟",
+   "new": "تمس الحوالات مستويات عدة في آن واحد: معيشة الأسر، والمعروض من النقد الأجنبي، وتحليل ميزان المدفوعات، والقنوات الرسمية وغير الرسمية التي تنتقل عبرها الأموال. لذلك قد تغيّر مراجعةٌ كبيرة للسلسلة الكلية أكثر من خط أساس تحليلي من دون أن يقع حدث جديد لدى أي أسرة.\nوإذا قُرئت المراجعة الإحصائية من دون السنة المرجعية ونسخة النشر معًا، فقد تُفهم خطأً على أنها نمو أو انهيار. أما حين يُقرأ الرقم بهما معًا، فيصبح السؤال المفيد: ما الذي تغيّر في القياس، وما الذي تغيّر في الاقتصاد، إن كان قد تغيّر شيء؟"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 289,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "لا تبين الأدلة أن إحدى السلسلتين صحيحة لكل غرض والأخرى خاطئة، ولا تقدم معامل تحويل عامًّا بين سلسلتي البنك المركزي في عدن وصندوق النقد. ولا تقول شيئًا عن توزيع التحويلات بين الأسر أو المحافظات أو القنوات. كما لا يجوز إعادة تسمية صافي السهو والخطأ في ميزان المدفوعات تحويلاتٍ غير مسجلة؛ فهو بند موازنة للحسابات، لا تدفق مرصود.",
+   "new": "لا تبين الأدلة أن إحدى السلسلتين صحيحة لكل غرض والأخرى خاطئة، ولا تقدم معامل تحويل عامًّا بين سلسلتي البنك المركزي في عدن وصندوق النقد. ولا تقول شيئًا عن توزيع الحوالات بين الأسر أو المحافظات أو القنوات. كما لا يجوز إعادة تسمية صافي السهو والخطأ في ميزان المدفوعات حوالاتٍ غير مسجلة؛ فهو بند موازنة للحسابات، لا تدفق مرصود."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 313,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "عن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن تحويلات قدرها 6,245 مليون دولار، ثم أعاد تقريره السنوي 2025 عرض السنة نفسها عند 3,422.16 مليون دولار: وهذه مراجعة للسنة نفسها، لا هبوط. وتجيب التدفقات الكلية وأسعار الممرات وقنوات استلام الأسر عن أسئلة مختلفة، ولذلك يُبقي هذا المورد سجلات الأدلة هذه منفصلة ويُظهر المراجعات.",
+   "new": "عن السنة المرجعية 2024، أورد التقرير السنوي 2024 للبنك المركزي اليمني – عدن حوالات قدرها 6,245 مليون دولار، ثم أعاد تقريره السنوي 2025 عرض السنة نفسها عند 3,422.16 مليون دولار: وهذه مراجعة للسنة نفسها، لا هبوط. وتجيب التدفقات الكلية وأسعار الممرات وقنوات استلام الأسر عن أسئلة مختلفة، ولذلك يُبقي هذا المورد سجلات الأدلة هذه منفصلة ويُظهر المراجعات."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 325,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن يفوق صافي السهو والخطأ بندَ التحويلات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي قرابة 1.97 مرة. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لتحويلات خفية.",
+   "new": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن يفوق صافي السهو والخطأ بندَ الحوالات المنشور في كل سنة من 2021 إلى 2025؛ وفي 2025 بلغ المتبقي نحو 7.117 مليار دولار مقابل 3.614 مليار دولار للحوالات، أي قرابة 1.97 مرة. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لحوالات خفية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 327,
+   "col": 6,
+   "field": "heading_ar (remittances = الحوالات)",
+   "old": "ما الذي لا تثبته أدلة التحويلات؟",
+   "new": "ما الذي لا تثبته أدلة الحوالات؟"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 327,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "لا تساوي سلسلة التحويلات الواردة في ميزان المدفوعات حجمَ الحوالة غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح.",
+   "new": "لا تساوي سلسلة الحوالات الواردة في ميزان المدفوعات حجمَ الحوالة غير الرسمية أو توزيعها على الأسر. ومراجعة المصدر ليست هبوطًا اقتصاديًا. كما أن تشابه المسارين بعد تحويل السلسلتين إلى رقم قياسي (2021 = 100) لا يثبت أن السلسلتين الخام تغطيان النطاق نفسه، ولا يكشف معامل تحويل بينهما. وأسعار الممرات ليست متوسطًا وطنيًا للتكلفة. كذلك فإن تغير رصيد خارجي لا يساوي تلقائيًا معاملة، ولا تعيد الطبعة السابعة من دليل ميزان المدفوعات (BPM7) كتابة سلاسل اليمن التاريخية بأثر رجعي من دون تحويل صريح."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 329,
+   "col": 7,
+   "field": "body_ar (remittances = الحوالات)",
+   "old": "ما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي غير محسومة. فعن عام 2024 يورد التقرير السنوي 2025 للبنك المركزي اليمني – عدن تحويلات قدرها 3,422.16 مليون دولار، بينما يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمة 1,861.7 مليون دولار ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا. وخلال 2021–2024 تختلف السلسلتان بنسبة شبه ثابتة قدرها 1.838، ويكاد مسارا نموهما بعد تحويلهما إلى رقم قياسي يتطابقان؛ ولم يثبت ما تمثله هذه النسبة، ولذلك لا يمكن تحويل أي من المستويين إلى الآخر. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات، وحجم القنوات غير الرسمية، لا تثبته أدلة الاقتصاد الكلي والممرات.",
+   "new": "ما تزال المطابقة العامة الدقيقة بين أهم سلاسل القطاع الخارجي لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي غير محسومة. فعن عام 2024 يورد التقرير السنوي 2025 للبنك المركزي اليمني – عدن حوالات قدرها 3,422.16 مليون دولار، بينما يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمة 1,861.7 مليون دولار ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا. وخلال 2021–2024 تختلف السلسلتان بنسبة شبه ثابتة قدرها 1.838، ويكاد مسارا نموهما بعد تحويلهما إلى رقم قياسي يتطابقان؛ ولم يثبت ما تمثله هذه النسبة، ولذلك لا يمكن تحويل أي من المستويين إلى الآخر. كما أن سلوك الأسر الحالي في استلام الحوالات واختيار القنوات، وحجم القنوات غير الرسمية، لا تثبته أدلة الاقتصاد الكلي والممرات."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "04_NAV_UX",
+   "row": 585,
+   "col": 3,
+   "field": "label_ar (remittances = الحوالات)",
+   "old": "قارن سجلات التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي جنبًا إلى جنب",
+   "new": "قارن سجلات الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي جنبًا إلى جنب"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "04_NAV_UX",
+   "row": 649,
+   "col": 6,
+   "field": "boundary_note_ar (remittances = الحوالات)",
+   "old": "أداة اكتشاف فقط: تتناول أدلة التحويلات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج.",
+   "new": "أداة اكتشاف فقط: تتناول أدلة الحوالات هنا الأموال المرسلة إلى اليمن والحوالات داخل اليمن، ولا تتناول الأموال المرسلة من اليمن إلى الخارج."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "05_QUESTIONS",
+   "row": 11,
+   "col": 3,
+   "field": "question_ar (remittances = الحوالات)",
+   "old": "ماذا تخبرنا التحويلات والتدفقات المالية الأخرى عن صلة الأسر بالنظام المالي؟",
+   "new": "ماذا تخبرنا الحوالات والتدفقات المالية الأخرى عن صلة الأسر بالنظام المالي؟"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 11,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر.",
+   "new": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 5,
+   "field": "title_ar (remittances = الحوالات)",
+   "old": "سلسلة التحويلات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة",
+   "new": "سلسلة الحوالات لدى صندوق النقد الدولي: القيم التاريخية المنشورة والتقديرات والتوقعات منفصلة"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للتحويلات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي تقدير وتوقعات، لا قيم مُبلَّغ عنها. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن.",
+   "new": "تورد السلسلة التاريخية في تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيمةً للحوالات الواردة في ميزان المدفوعات في 2024 أعلى منها في 2018 (والقيمتان من الوثيقة نفسها)، أما تقدير 2025 وتوقعات 2026–2030 فمصدرها ملحق لاحق، وهي تقدير وتوقعات، لا قيم مُبلَّغ عنها. وتغطي سلسلة الصندوق نطاقه التحليلي الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك لا يمثل مستواها رقمًا لليمن كله، ولا يُقارن مستواها بقيم التقارير السنوية للبنك المركزي اليمني – عدن."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 29,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "التحويلات السنوية في الحساب الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي: قيم تاريخية للفترة 2018–2024، وتقدير لعام 2025، وتوقعات للفترة 2026–2030.",
+   "new": "الحوالات السنوية في الحساب الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي: قيم تاريخية للفترة 2018–2024، وتقدير لعام 2025، وتوقعات للفترة 2026–2030."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 45,
+   "col": 17,
+   "field": "limitations_ar (remittances = الحوالات)",
+   "old": "حصص القنوات بين المتلقين ليست نسبًا من جميع البالغين، ولا تقيس نتائج البرامج ولا حجم التحويلات على المستوى الكلي.",
+   "new": "حصص القنوات بين المتلقين ليست نسبًا من جميع البالغين، ولا تقيس نتائج البرامج ولا حجم الحوالات على المستوى الكلي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 54,
+   "col": 17,
+   "field": "limitations_ar (remittances = الحوالات)",
+   "old": "تقوم نسب جميع البالغين ونسب القنوات بين المتلقين على قاعدتين مختلفتين، فلا تُقرأ على مقياس واحد. ولا تبين حجم الأموال التي مرت عبر كل قناة ولا تركيب التحويلات على المستوى الكلي.",
+   "new": "تقوم نسب جميع البالغين ونسب القنوات بين المتلقين على قاعدتين مختلفتين، فلا تُقرأ على مقياس واحد. ولا تبين حجم الأموال التي مرت عبر كل قناة ولا تركيب الحوالات على المستوى الكلي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 5,
+   "field": "title_ar (remittances = الحوالات)",
+   "old": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+   "new": "الحوالات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "في سلسلة التحويلات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+   "new": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "التحويلات السنوية في القطاع الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي للفترة 2018–2030، مع وسم كل سنة بوصفها قيمة تاريخية (2018–2024) أو تقديرًا (2025) أو توقعًا (2026–2030).",
+   "new": "الحوالات السنوية في القطاع الخارجي بملايين الدولارات الأمريكية في سلسلة صندوق النقد الدولي للفترة 2018–2030، مع وسم كل سنة بوصفها قيمة تاريخية (2018–2024) أو تقديرًا (2025) أو توقعًا (2026–2030)."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 70,
+   "col": 13,
+   "field": "universe_ar (remittances = الحوالات)",
+   "old": "سلسلة صندوق النقد الدولي للتحويلات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع نوع الدليل لكل سنة ووثيقة مصدرها.",
+   "new": "سلسلة صندوق النقد الدولي للحوالات في القطاع الخارجي ضمن النطاق التحليلي للصندوق الخاص بمناطق الحكومة المعترف بها دوليًا، مع نوع الدليل لكل سنة ووثيقة مصدرها."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 84,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "عبر مكونات ميزان المدفوعات المنشورة التي اختُبرت للفترة 2021–2024، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن ومن سلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا، لا تدعم الأدلة معامل تحويل واحدًا. فنسبة التحويلات شبه ثابتة، لكن نسب الواردات والمنح والحساب الجاري وصافي السهو والخطأ تختلف اختلافًا جوهريًا، كما يوثق الصندوق مصادر ومعالجات إحصائية خاصة بكل مكون. ولا يستبعد ذلك وجود جسور خاصة بمكونات بعينها أو مطابقة رسمية مستقبلًا.",
+   "new": "عبر مكونات ميزان المدفوعات المنشورة التي اختُبرت للفترة 2021–2024، من التقرير السنوي 2025 للبنك المركزي اليمني – عدن ومن سلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا، لا تدعم الأدلة معامل تحويل واحدًا. فنسبة الحوالات شبه ثابتة، لكن نسب الواردات والمنح والحساب الجاري وصافي السهو والخطأ تختلف اختلافًا جوهريًا، كما يوثق الصندوق مصادر ومعالجات إحصائية خاصة بكل مكون. ولا يستبعد ذلك وجود جسور خاصة بمكونات بعينها أو مطابقة رسمية مستقبلًا."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 84,
+   "col": 17,
+   "field": "limitations_ar (remittances = الحوالات)",
+   "old": "لا تنطبق النسبة الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي خلال 2021–2024، ولا حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق الخاضعة للحكومة المعترف بها دوليًا، على مكونات أخرى من ميزان المدفوعات. ولا يثبت الاختبار استحالة التحويل خارج المكونات المنشورة التي اختُبرت.",
+   "new": "لا تنطبق النسبة الثابتة البالغة 1.838 بين سلسلتي الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي خلال 2021–2024، ولا حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق الخاضعة للحكومة المعترف بها دوليًا، على مكونات أخرى من ميزان المدفوعات. ولا يثبت الاختبار استحالة التحويل خارج المكونات المنشورة التي اختُبرت."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 85,
+   "col": 5,
+   "field": "title_ar (remittances = الحوالات)",
+   "old": "توجد نسبة مستقرة بين سلسلتي التحويلات، لكن معناها ما يزال غير محسوم",
+   "new": "توجد نسبة مستقرة بين سلسلتي الحوالات، لكن معناها ما يزال غير محسوم"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 85,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "خلال 2021–2024 تبلغ نسبة سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن إلى سلسلة مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي 1.838 في كل سنة، ويكاد مسارا النمو يتطابقان بعد تحويلهما إلى رقم قياسي (2021 = 100). ولا تثبت الأدلة العامة ما تمثله هذه النسبة؛ فهي انتظام رقمي بلا تفسير موثق، وليست قاعدة تحويل.",
+   "new": "خلال 2021–2024 تبلغ نسبة سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن إلى سلسلة مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي 1.838 في كل سنة، ويكاد مسارا النمو يتطابقان بعد تحويلهما إلى رقم قياسي (2021 = 100). ولا تثبت الأدلة العامة ما تمثله هذه النسبة؛ فهي انتظام رقمي بلا تفسير موثق، وليست قاعدة تحويل."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 85,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "نسبة سلسلة التحويلات لدى البنك المركزي اليمني – عدن إلى سلسلة التحويلات لدى صندوق النقد الدولي في كل سنة من 2021 إلى 2024.",
+   "new": "نسبة سلسلة الحوالات لدى البنك المركزي اليمني – عدن إلى سلسلة الحوالات لدى صندوق النقد الدولي في كل سنة من 2021 إلى 2024."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 85,
+   "col": 13,
+   "field": "universe_ar (remittances = الحوالات)",
+   "old": "نطاق سلسلة التحويلات المنشورة لدى البنك المركزي اليمني – عدن مقابل النطاق التحليلي لصندوق النقد الدولي الخاص بمناطق الحكومة المعترف بها دوليًا.",
+   "new": "نطاق سلسلة الحوالات المنشورة لدى البنك المركزي اليمني – عدن مقابل النطاق التحليلي لصندوق النقد الدولي الخاص بمناطق الحكومة المعترف بها دوليًا."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 85,
+   "col": 15,
+   "field": "method_ar (remittances = الحوالات)",
+   "old": "احتسبها هذا المورد من قيم منشورة: سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة، فكانت النتيجة 1.838 في كل سنة. ويوثق الملحق الإحصائي لمشاورات المادة الرابعة لعام 2025 (الملحق الرابع) السياق المنهجي.",
+   "new": "احتسبها هذا المورد من قيم منشورة: سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة، فكانت النتيجة 1.838 في كل سنة. ويوثق الملحق الإحصائي لمشاورات المادة الرابعة لعام 2025 (الملحق الرابع) السياق المنهجي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند التحويلات المنشور في كل سنة من 2021 إلى 2025. ففي 2025 بلغ صافي السهو والخطأ 7.117 مليار دولار مقابل 3.614 مليار دولار للتحويلات، أي إن نسبته إلى بند التحويلات 1.97. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لتحويلات مخفية.",
+   "new": "في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، يفوق صافي السهو والخطأ بند الحوالات المنشور في كل سنة من 2021 إلى 2025. ففي 2025 بلغ صافي السهو والخطأ 7.117 مليار دولار مقابل 3.614 مليار دولار للحوالات، أي إن نسبته إلى بند الحوالات 1.97. وصافي السهو والخطأ بندٌ موازِن محاسبيًا، وليس تدفقًا مرصودًا ولا تقديرًا لحوالات مخفية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "صافي السهو والخطأ في ميزان المدفوعات لدى البنك المركزي اليمني – عدن للفترة 2021–2025، مقارنًا من حيث الحجم ببند التحويلات المنشور.",
+   "new": "صافي السهو والخطأ في ميزان المدفوعات لدى البنك المركزي اليمني – عدن للفترة 2021–2025، مقارنًا من حيث الحجم ببند الحوالات المنشور."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 15,
+   "field": "method_ar (remittances = الحوالات)",
+   "old": "قيم من جدول ميزان المدفوعات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن. واحتسب هذا المورد النسبة بقسمة صافي السهو والخطأ على بند التحويلات (2025: 7.117 مقسومًا على 3.614 يساوي 1.97). ويُقرأ صافي السهو والخطأ بوصفه البند الموازِن كما يعرّفه دليل ميزان المدفوعات الصادر عن صندوق النقد الدولي.",
+   "new": "قيم من جدول ميزان المدفوعات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن. واحتسب هذا المورد النسبة بقسمة صافي السهو والخطأ على بند الحوالات (2025: 7.117 مقسومًا على 3.614 يساوي 1.97). ويُقرأ صافي السهو والخطأ بوصفه البند الموازِن كما يعرّفه دليل ميزان المدفوعات الصادر عن صندوق النقد الدولي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 86,
+   "col": 17,
+   "field": "limitations_ar (remittances = الحوالات)",
+   "old": "ليس صافي السهو والخطأ تحويلات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل. | صافي السهو والخطأ بندٌ موازِن صافٍ، ولا يحدد مكونًا مفقودًا بعينه ولا الأخطاء الإجمالية المتقابلة.",
+   "new": "ليس صافي السهو والخطأ حوالات مخفية ولا تدفقًا مرصودًا، ولا يوجد تفكيك مثبت يبين أن المتبقي رأسُ مال غير مسجل. | صافي السهو والخطأ بندٌ موازِن صافٍ، ولا يحدد مكونًا مفقودًا بعينه ولا الأخطاء الإجمالية المتقابلة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 87,
+   "col": 5,
+   "field": "title_ar (remittances = الحوالات)",
+   "old": "نموذج بديل قائم على متبقي ميزان المدفوعات ليس خط الأساس المعتمد للتحويلات",
+   "new": "نموذج بديل قائم على متبقي ميزان المدفوعات ليس خط الأساس المعتمد للحوالات"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 87,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "يقدّر نموذج قائم على متبقي ميزان المدفوعات التحويلات بإسناد فرق متبقٍّ مفترض إليها. ومثل هذا التقدير نموذج بديل، لا مشاهدة مباشرة ولا خط الأساس المعتمد للتحويلات. ويستند التقدير المعني هنا إلى مادة لا يتوافر لها رابط أصلي عام، لذلك لا يعرض هذا المورد، وفق قاعدة النشر المعتمدة فيه، قيمته ولا الجهة التي أعدّته.",
+   "new": "يقدّر نموذج قائم على متبقي ميزان المدفوعات الحوالات بإسناد فرق متبقٍّ مفترض إليها. ومثل هذا التقدير نموذج بديل، لا مشاهدة مباشرة ولا خط الأساس المعتمد للحوالات. ويستند التقدير المعني هنا إلى مادة لا يتوافر لها رابط أصلي عام، لذلك لا يعرض هذا المورد، وفق قاعدة النشر المعتمدة فيه، قيمته ولا الجهة التي أعدّته."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 87,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "تقدير للتحويلات لعام 2024 ناتج عن نموذج متبقي ميزان المدفوعات، يبقى منفصلًا عن خط الأساس المعتمد للتحويلات.",
+   "new": "تقدير للحوالات لعام 2024 ناتج عن نموذج متبقي ميزان المدفوعات، يبقى منفصلًا عن خط الأساس المعتمد للحوالات."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 87,
+   "col": 17,
+   "field": "limitations_ar (remittances = الحوالات)",
+   "old": "ليس أي تقدير ناتج عن نموذج متبقي ميزان المدفوعات قيمة وطنية رسمية أو مرصودة، وليس المتبقي رصدًا مباشرًا للتحويلات عبر القنوات غير الرسمية. | تنتقل أخطاء مكونات ميزان المدفوعات الأخرى، والافتراض المعتمد لصافي السهو والخطأ، إلى متبقي التحويلات؛ والتحويلات عبر القنوات غير الرسمية ليست مرصودة مباشرة.",
+   "new": "ليس أي تقدير ناتج عن نموذج متبقي ميزان المدفوعات قيمة وطنية رسمية أو مرصودة، وليس المتبقي رصدًا مباشرًا للحوالات عبر القنوات غير الرسمية. | تنتقل أخطاء مكونات ميزان المدفوعات الأخرى، والافتراض المعتمد لصافي السهو والخطأ، إلى متبقي الحوالات؛ والحوالات عبر القنوات غير الرسمية ليست مرصودة مباشرة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للتحويلات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6,245 مليون دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين. ويصح ذلك على سنوات أسبق أيضًا: فلسنة 2021 المرجعية تورد إصدارات التقرير السنوي لأعوام 2022 و2023 و2024 و2025 القيم 4,043 و5,400.0 و5,625 و2,900.22 مليون دولار، ولسنة 2022 المرجعية القيم 4,454 و6,000 و6,000 و3,066.58 مليون دولار. وهذه قيم إصدارات متعاقبة لسنة واحدة، لا سلسلة زمنية.",
+   "new": "تنشر التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة بصورة جوهرية للحوالات الواردة في ميزان المدفوعات عن السنة المرجعية نفسها. فقد أورد التقرير السنوي 2024 قيمة عام 2024 عند 6,245 مليون دولار، بينما أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار. وهذه إعادة عرض للسنة نفسها، وليست دليلًا على حركة اقتصادية بين عامين. ويصح ذلك على سنوات أسبق أيضًا: فلسنة 2021 المرجعية تورد إصدارات التقرير السنوي لأعوام 2022 و2023 و2024 و2025 القيم 4,043 و5,400.0 و5,625 و2,900.22 مليون دولار، ولسنة 2022 المرجعية القيم 4,454 و6,000 و6,000 و3,066.58 مليون دولار. وهذه قيم إصدارات متعاقبة لسنة واحدة، لا سلسلة زمنية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 102,
+   "col": 13,
+   "field": "universe_ar (remittances = الحوالات)",
+   "old": "سلسلة التحويلات في منشورات ميزان المدفوعات للبنك المركزي اليمني – عدن؛ ولا تزال المطابقة الدقيقة من حيث الجغرافيا والمفهوم مع إعادة بناء صندوق النقد الدولي لمناطق الحكومة المعترف بها دوليًا غير محسومة.",
+   "new": "سلسلة الحوالات في منشورات ميزان المدفوعات للبنك المركزي اليمني – عدن؛ ولا تزال المطابقة الدقيقة من حيث الجغرافيا والمفهوم مع إعادة بناء صندوق النقد الدولي لمناطق الحكومة المعترف بها دوليًا غير محسومة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "تُظهر سلسلة التحويلات المنشورة في التقرير السنوي 2025 للبنك المركزي اليمني – عدن معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تنعيم أو استيفاء أو انخفاض في التقلب الفعلي للتحويلات.",
+   "new": "تُظهر سلسلة الحوالات المنشورة في التقرير السنوي 2025 للبنك المركزي اليمني – عدن معدلات نمو سنوية متقاربة على نحو لافت عبر السنوات المتداخلة. يفيد هذا النمط في فحص المنهج، لكنه لا يثبت وجود تنعيم أو استيفاء أو انخفاض في التقلب الفعلي للحوالات."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "معدلات النمو السنوية لسلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، مقارنةً عبر السنوات المتداخلة 2021–2025.",
+   "new": "معدلات النمو السنوية لسلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، مقارنةً عبر السنوات المتداخلة 2021–2025."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 11,
+   "field": "period_ar (remittances = الحوالات)",
+   "old": "سلسلة التحويلات للسنوات المتداخلة 2021–2025 كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن.",
+   "new": "سلسلة الحوالات للسنوات المتداخلة 2021–2025 كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 13,
+   "field": "universe_ar (remittances = الحوالات)",
+   "old": "سلسلة التحويلات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو تحويلات الأسر المستلمة.",
+   "new": "سلسلة الحوالات كما عرّفها ونشرها التقرير السنوي 2025 للبنك المركزي، وليست جميع قنوات التحويل أو حوالات الأسر المستلمة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 15,
+   "field": "method_ar (remittances = الحوالات)",
+   "old": "معدلات نمو سنوية احتسبها هذا المورد من قيم التحويلات في نسخة منشورة واحدة هي التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقورنت عبر السنوات بوصفها فحصًا منهجيًا.",
+   "new": "معدلات نمو سنوية احتسبها هذا المورد من قيم الحوالات في نسخة منشورة واحدة هي التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقورنت عبر السنوات بوصفها فحصًا منهجيًا."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 104,
+   "col": 19,
+   "field": "currentness_ar (remittances = الحوالات)",
+   "old": "يعود النمط إلى سلسلة التحويلات كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقد يتغير إذا راجع البنك المركزي في عدن السلسلة أو نشر تقريرًا سنويًا أحدث.",
+   "new": "يعود النمط إلى سلسلة الحوالات كما نُشرت في التقرير السنوي 2025 للبنك المركزي اليمني – عدن، وقد يتغير إذا راجع البنك المركزي في عدن السلسلة أو نشر تقريرًا سنويًا أحدث."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 106,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للتحويلات في تقرير البنك المركزي لعام 2025.",
+   "new": "يوثق صندوق النقد الدولي جهدًا لإعادة بناء إحصاءات القطاع الخارجي خلال 2024–2025 مع البنك المركزي اليمني – عدن، شمل نموذجًا ديمغرافيًا وسلوكيًا للتحويلات الشخصية في ظل محدودية بيانات القنوات غير الرسمية. يثبت ذلك سياقًا منهجيًا، لكنه لا يثبت الصيغة الدقيقة أو النطاق المستخدم في كل قيمة للحوالات في تقرير البنك المركزي لعام 2025."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 107,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "عند تحويل سلسلتي التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن وفي مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي إلى رقم قياسي (2021 = 100)، يتطابق المساران تقريبًا حتى 2024: إذ لا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 مقدار 0.0032 نقطة مئوية. وخلال 2021–2024 تبلغ نسبة مستوى سلسلة البنك المركزي في عدن إلى مستوى سلسلة الصندوق 1.838 في كل سنة. ويتحرك المساران بعد تحويلهما إلى رقم قياسي بصورة شبه متطابقة، لكن ذلك لا يثبت أن المستويات الخام تغطي النطاق نفسه.",
+   "new": "عند تحويل سلسلتي الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن وفي مشاورات المادة الرابعة لعام 2025 لصندوق النقد الدولي إلى رقم قياسي (2021 = 100)، يتطابق المساران تقريبًا حتى 2024: إذ لا يتجاوز أكبر فرق في معدل النمو السنوي خلال 2022–2024 مقدار 0.0032 نقطة مئوية. وخلال 2021–2024 تبلغ نسبة مستوى سلسلة البنك المركزي في عدن إلى مستوى سلسلة الصندوق 1.838 في كل سنة. ويتحرك المساران بعد تحويلهما إلى رقم قياسي بصورة شبه متطابقة، لكن ذلك لا يثبت أن المستويات الخام تغطي النطاق نفسه."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 107,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "مسارا النمو السنوي لسلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، بعد تحويل كل منهما إلى رقم قياسي (2021 = 100)، مقارنَين خلال 2021–2024.",
+   "new": "مسارا النمو السنوي لسلسلتي الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، بعد تحويل كل منهما إلى رقم قياسي (2021 = 100)، مقارنَين خلال 2021–2024."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 107,
+   "col": 13,
+   "field": "universe_ar (remittances = الحوالات)",
+   "old": "سلسلة التحويلات المنشورة لدى البنك المركزي اليمني – عدن، وسلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا؛ ولا تزال المطابقة الدقيقة بينهما من حيث الجغرافيا والمفهوم غير محسومة.",
+   "new": "سلسلة الحوالات المنشورة لدى البنك المركزي اليمني – عدن، وسلسلة صندوق النقد الدولي الخاصة بمناطق الحكومة المعترف بها دوليًا؛ ولا تزال المطابقة الدقيقة بينهما من حيث الجغرافيا والمفهوم غير محسومة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 107,
+   "col": 15,
+   "field": "method_ar (remittances = الحوالات)",
+   "old": "احتسبها هذا المورد من قيم منشورة: سلسلة التحويلات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت كل سلسلة على قيمتها في 2021 وضُربت في 100، ثم قورنت معدلات النمو السنوية للفترة 2022–2024، وحُسبت نسبة المستوى بقسمة قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة.",
+   "new": "احتسبها هذا المورد من قيم منشورة: سلسلة الحوالات في التقرير السنوي 2025 للبنك المركزي اليمني – عدن (2,900.22؛ 3,066.58؛ 3,240.46؛ 3,422.16 مليون دولار للأعوام 2021–2024)، وسلسلة تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (1,577.7؛ 1,668.2؛ 1,762.8؛ 1,861.7 مليون دولار). قُسمت كل سلسلة على قيمتها في 2021 وضُربت في 100، ثم قورنت معدلات النمو السنوية للفترة 2022–2024، وحُسبت نسبة المستوى بقسمة قيمة البنك المركزي في عدن على قيمة الصندوق لكل سنة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 7,
+   "field": "summary_ar (remittances = الحوالات)",
+   "old": "لا تعرض واجهات البنك الدولي العامة الخاصة بالتحويلات تاريخ اليمن بصورة موحدة. فقد أظهرت واجهةٌ اطُّلع عليها في 10 سبتمبر 2026 نطاقًا أقدم، بينما احتوت واجهات أخرى ونسخ سابقة موثقة جرى الاطلاع عليها على مشاهدات أحدث. هذا اختلاف في ما تعرضه الواجهات وفي تتبع المصدر، وليس دليلًا على غياب البيانات الأحدث من مجموعة البيانات الأساسية.",
+   "new": "لا تعرض واجهات البنك الدولي العامة الخاصة بالحوالات تاريخ اليمن بصورة موحدة. فقد أظهرت واجهةٌ اطُّلع عليها في 10 سبتمبر 2026 نطاقًا أقدم، بينما احتوت واجهات أخرى ونسخ سابقة موثقة جرى الاطلاع عليها على مشاهدات أحدث. هذا اختلاف في ما تعرضه الواجهات وفي تتبع المصدر، وليس دليلًا على غياب البيانات الأحدث من مجموعة البيانات الأساسية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 109,
+   "col": 9,
+   "field": "definition_ar (remittances = الحوالات)",
+   "old": "الفرق، كما اطُّلع عليه في 10 سبتمبر 2026، بين نطاق مشاهدات التحويلات لليمن في إحدى واجهات بيانات البنك الدولي العامة والمشاهدات الأحدث في واجهات أخرى للبنك الدولي وفي نسخ وصول سابقة موثقة.",
+   "new": "الفرق، كما اطُّلع عليه في 10 سبتمبر 2026، بين نطاق مشاهدات الحوالات لليمن في إحدى واجهات بيانات البنك الدولي العامة والمشاهدات الأحدث في واجهات أخرى للبنك الدولي وفي نسخ وصول سابقة موثقة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 7,
+   "field": "question_ar (remittances = الحوالات)",
+   "old": "عندما يعطي تقريران رسميان قيمتين مختلفتين للتحويلات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟",
+   "new": "عندما يعطي تقريران رسميان قيمتين مختلفتين للحوالات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 9,
+   "field": "thesis_ar (remittances = الحوالات)",
+   "old": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا كبيرًا للتحويلات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
+   "new": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا كبيرًا للحوالات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 16,
+   "field": "prohibited_inference_ar (remittances = الحوالات)",
+   "old": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ تحويلات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج متبقي ميزان المدفوعات خطَّ أساس.",
+   "new": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ حوالات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج متبقي ميزان المدفوعات خطَّ أساس."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 8,
+   "field": "what_it_shows_ar (remittances = الحوالات)",
+   "old": "يعرض العلاقات الموثقة بين الناس والقدرات، والمنشآت والدخل، ومقدمي الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم والحماية، والقيود المُمكِّنة أو المعطلة. وتذكر كل علاقة ما تسنده الأدلة وما لا تثبته؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا توجد درجة مركبة.",
+   "new": "يعرض العلاقات الموثقة بين الناس والقدرات، والمنشآت والدخل، ومقدمي الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والقيود المُمكِّنة أو المعطلة. وتذكر كل علاقة ما تسنده الأدلة وما لا تثبته؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا توجد درجة مركبة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 12,
+   "col": 22,
+   "field": "accessible_summary_ar (remittances = الحوالات)",
+   "old": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات التحويلات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر.",
+   "new": "يصف هذا المورد الشمول المالي في اليمن بوصفه أجزاء مترابطة: الناس والقدرات، والمنشآت والدخل، ومقدمو الخدمات، وبنية المدفوعات، وتدفقات الحوالات ورأس المال، والتنظيم والحماية، والعوامل المُمكِّنة والقيود. وتصف العلاقات الموثقة السياق أو الاعتماد أو آليات محتملة حين تسندها الأدلة؛ ولا تحمل أي علاقة تقديرًا لقوة الدليل، ولا تشكل الأجزاء درجة مركبة، ولا تُظهر أن جزءًا منها سبب لآخر."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 3,
+   "field": "title_ar (remittances = الحوالات)",
+   "old": "التحويلات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات",
+   "new": "الحوالات: القيم التاريخية الواردة في تقارير صندوق النقد الدولي والتقدير والتوقعات"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 6,
+   "field": "question_ar (remittances = الحوالات)",
+   "old": "ما الذي يورده صندوق النقد الدولي عن تدفقات التحويلات السابقة، وما الذي يظل تقديرًا أو توقعًا؟",
+   "new": "ما الذي يورده صندوق النقد الدولي عن تدفقات الحوالات السابقة، وما الذي يظل تقديرًا أو توقعًا؟"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 28,
+   "col": 22,
+   "field": "accessible_summary_ar (remittances = الحوالات)",
+   "old": "في سلسلة التحويلات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله.",
+   "new": "في سلسلة الحوالات الواردة في ميزان المدفوعات، يورد تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 قيم 2018–2024 بوصفها قيمًا تاريخية تستند إلى حسابات خبراء الصندوق، ومنها 1,861.7 مليون دولار في 2024. ويورد ملحق لاحق للمشاورات نفسها تقديرًا قدره 1,977 مليون دولار لعام 2025، وتوقعات ترتفع من 2,159 مليون دولار في 2026 إلى 3,110 مليون دولار في 2030. ولأن الوثيقتين صدرتا في وقتين مختلفين، لا يُوصل الجزءان في سلسلة واحدة متصلة. وتغطي السلسلة النطاق التحليلي للصندوق الخاص بالمناطق الخاضعة للحكومة المعترف بها دوليًا، لا اليمن كله."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 31,
+   "col": 8,
+   "field": "what_it_shows_ar (remittances = الحوالات)",
+   "old": "يضع قيمة التحويلات الواردة في ميزان المدفوعات لعام 2024 كما نشرها التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 إلى جانب القيمة المعاد عرضها للسنة نفسها في تقرير 2025، ثم يعرض على حدة مساري البنك المركزي في عدن وصندوق النقد الدولي بعد تحويل كلٍّ منهما إلى رقم قياسي (2021 = 100).",
+   "new": "يضع قيمة الحوالات الواردة في ميزان المدفوعات لعام 2024 كما نشرها التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 إلى جانب القيمة المعاد عرضها للسنة نفسها في تقرير 2025، ثم يعرض على حدة مساري البنك المركزي في عدن وصندوق النقد الدولي بعد تحويل كلٍّ منهما إلى رقم قياسي (2021 = 100)."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 31,
+   "col": 22,
+   "field": "accessible_summary_ar (remittances = الحوالات)",
+   "old": "نشر التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 قيمةً للتحويلات الواردة في ميزان المدفوعات لعام 2024 قدرها 6,245 مليون دولار أمريكي، ثم أعاد تقرير 2025 عرض عام 2024 نفسه بقيمة 3,422.16 مليون دولار؛ وهذه إعادة عرض لقيمة السنة نفسها، لا تراجع بين عامين. وعند تحويل مسار تقرير البنك المركزي في عدن لعام 2025 ومسار تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025 إلى رقم قياسي (2021 = 100)، يبلغ كلٌّ منهما نحو 118 في 2024. والمساران شبه متطابقين: لا يتجاوز الفرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية، ويعادل مستوى البنك المركزي في عدن نحو 1.838 مرة مستوى صندوق النقد طوال 2021–2024. لذلك لا يمكن قراءتهما تأكيدين مستقلين للاتجاه، ولا تتكافأ مستوياتهما الخام.",
+   "new": "نشر التقرير السنوي للبنك المركزي اليمني – عدن لعام 2024 قيمةً للحوالات الواردة في ميزان المدفوعات لعام 2024 قدرها 6,245 مليون دولار أمريكي، ثم أعاد تقرير 2025 عرض عام 2024 نفسه بقيمة 3,422.16 مليون دولار؛ وهذه إعادة عرض لقيمة السنة نفسها، لا تراجع بين عامين. وعند تحويل مسار تقرير البنك المركزي في عدن لعام 2025 ومسار تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025 إلى رقم قياسي (2021 = 100)، يبلغ كلٌّ منهما نحو 118 في 2024. والمساران شبه متطابقين: لا يتجاوز الفرق في معدل النمو السنوي خلال 2022–2024 نحو 0.0032 نقطة مئوية، ويعادل مستوى البنك المركزي في عدن نحو 1.838 مرة مستوى صندوق النقد طوال 2021–2024. لذلك لا يمكن قراءتهما تأكيدين مستقلين للاتجاه، ولا تتكافأ مستوياتهما الخام."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 31,
+   "col": 25,
+   "field": "universe_ar (remittances = الحوالات)",
+   "old": "التحويلات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا",
+   "new": "الحوالات وفق تعريف كل مصدر: التقريران السنويان للبنك المركزي اليمني – عدن لعامي 2024 و2025؛ وتقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة 2025، ضمن النطاق التحليلي للصندوق لمناطق الحكومة المعترف بها دوليًا"
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 11,
+   "col": 5,
+   "field": "fact_ar (remittances = الحوالات)",
+   "old": "أفادت متابعة البنك الدولي بأن الجزء الأكبر من الوديعة السعودية البالغة ملياري دولار لعام 2018 كان قد استُنفد بحلول نهاية يناير 2020، وأبرزت تعدد نظم أسعار الصرف ومخاطر صدمة كوفيد-19 على التحويلات.",
+   "new": "أفادت متابعة البنك الدولي بأن الجزء الأكبر من الوديعة السعودية البالغة ملياري دولار لعام 2018 كان قد استُنفد بحلول نهاية يناير 2020، وأبرزت تعدد نظم أسعار الصرف ومخاطر صدمة كوفيد-19 على الحوالات."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 11,
+   "col": 9,
+   "field": "system_implication_ar (remittances = الحوالات)",
+   "old": "ازدادت درجة الترابط بين دعم النقد الأجنبي والتحويلات وقدرة الاستيراد في ظل نظم صرف مجزأة.",
+   "new": "ازدادت درجة الترابط بين دعم النقد الأجنبي والحوالات وقدرة الاستيراد في ظل نظم صرف مجزأة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 11,
+   "col": 11,
+   "field": "fi_relevance_ar (remittances = الحوالات)",
+   "old": "تكتسب التحويلات أهميتها بوصفها تدفقًا يصل إلى الأسر وجزءًا من ظروف النقد الأجنبي والمدفوعات الأوسع.",
+   "new": "تكتسب الحوالات أهميتها بوصفها تدفقًا يصل إلى الأسر وجزءًا من ظروف النقد الأجنبي والمدفوعات الأوسع."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 11,
+   "col": 13,
+   "field": "does_not_establish_ar (remittances = الحوالات)",
+   "old": "مخاطر تراجع التحويلات لا تعني حدوث انخفاض فعلي ما لم يُقَس بصورة مستقلة.",
+   "new": "مخاطر تراجع الحوالات لا تعني حدوث انخفاض فعلي ما لم يُقَس بصورة مستقلة."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 15,
+   "col": 5,
+   "field": "fact_ar (remittances = الحوالات)",
+   "old": "ضمن إطار الاقتصاد الكلي الذي يعده صندوق النقد الدولي للمناطق الخاضعة للحكومة المعترف بها دوليًا، تحسن عجز الحساب الجاري من نحو 40.5% من الناتج المحلي الإجمالي في 2022 إلى متوسط يقارب 14.5% في 2023–2024، بما يعكس ضغط الواردات وقوة التحويلات والمنح الثنائية رغم توقف صادرات النفط.",
+   "new": "ضمن إطار الاقتصاد الكلي الذي يعده صندوق النقد الدولي للمناطق الخاضعة للحكومة المعترف بها دوليًا، تحسن عجز الحساب الجاري من نحو 40.5% من الناتج المحلي الإجمالي في 2022 إلى متوسط يقارب 14.5% في 2023–2024، بما يعكس ضغط الواردات وقوة الحوالات والمنح الثنائية رغم توقف صادرات النفط."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 15,
+   "col": 11,
+   "field": "fi_relevance_ar (remittances = الحوالات)",
+   "old": "تتفاعل التحويلات والواردات وأوضاع النقد الأجنبي، لكن الرصيد الكلي لا يبين من استخدم الخدمات الرسمية.",
+   "new": "تتفاعل الحوالات والواردات وأوضاع النقد الأجنبي، لكن الرصيد الكلي لا يبين من استخدم الخدمات الرسمية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 18,
+   "col": 5,
+   "field": "fact_ar (remittances = الحوالات)",
+   "old": "تُظهر مقارنة نسختي التقرير السنوي للبنك المركزي اليمني – عدن أن قيمة التحويلات للسنة نفسها 2024 وردت عند 6,245 مليون دولار في نسخة التقرير السنوي لعام 2024 مقابل 3,422.16 مليون دولار في نسخة 2025، أي مراجعة هبوطية بنحو 45.2%.",
+   "new": "تُظهر مقارنة نسختي التقرير السنوي للبنك المركزي اليمني – عدن أن قيمة الحوالات للسنة نفسها 2024 وردت عند 6,245 مليون دولار في نسخة التقرير السنوي لعام 2024 مقابل 3,422.16 مليون دولار في نسخة 2025، أي مراجعة هبوطية بنحو 45.2%."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 18,
+   "col": 11,
+   "field": "fi_relevance_ar (remittances = الحوالات)",
+   "old": "يجب أن تعرض قراءات التحويلات تغير النسخة والمنهج قبل استخلاص استنتاجات سلوكية.",
+   "new": "يجب أن تعرض قراءات الحوالات تغير النسخة والمنهج قبل استخلاص استنتاجات سلوكية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 18,
+   "col": 13,
+   "field": "does_not_establish_ar (remittances = الحوالات)",
+   "old": "تعديل مستوى 2024 لا يثبت أن التحويلات انهارت بنسبة 45.2% خلال 2024.",
+   "new": "تعديل مستوى 2024 لا يثبت أن الحوالات انهارت بنسبة 45.2% خلال 2024."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 22,
+   "col": 11,
+   "field": "fi_relevance_ar (remittances = الحوالات)",
+   "old": "تؤثر أوضاع سعر الصرف في الأسعار وقيمة التحويلات عند صرفها بالعملة المحلية وتكاليف المنشآت وحوافز القنوات المالية.",
+   "new": "تؤثر أوضاع سعر الصرف في الأسعار وقيمة الحوالات عند صرفها بالعملة المحلية وتكاليف المنشآت وحوافز القنوات المالية."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 28,
+   "col": 5,
+   "field": "fact_ar (remittances = الحوالات)",
+   "old": "تعامل السلسلة الزمنية التحويلات والدعم الدولي ومزادات النقد الأجنبي وضغط الواردات وتغير الاحتياطيات وسيولة البنوك والإجراءات التنظيمية وبنية المدفوعات بوصفها أدلة مترابطة لا يحل بعضها محل بعض.",
+   "new": "تعامل السلسلة الزمنية الحوالات والدعم الدولي ومزادات النقد الأجنبي وضغط الواردات وتغير الاحتياطيات وسيولة البنوك والإجراءات التنظيمية وبنية المدفوعات بوصفها أدلة مترابطة لا يحل بعضها محل بعض."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 104,
+   "col": 14,
+   "field": "why_it_matters_ar (remittances = الحوالات)",
+   "old": "يوفر الإطار الاقتصادي والمالي الأحدث لصندوق النقد في مشاورات المادة الرابعة، وسياق القطاع الخارجي والمصارف، والمعلومات المنهجية المستخدمة لتفسير التحويلات والاحتياطيات وأوضاع القطاع المصرفي وسياق الإصلاح.",
+   "new": "يوفر الإطار الاقتصادي والمالي الأحدث لصندوق النقد في مشاورات المادة الرابعة، وسياق القطاع الخارجي والمصارف، والمعلومات المنهجية المستخدمة لتفسير الحوالات والاحتياطيات وأوضاع القطاع المصرفي وسياق الإصلاح."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 112,
+   "col": 14,
+   "field": "why_it_matters_ar (remittances = الحوالات)",
+   "old": "يوفر إصدار عام 2025 من التقرير السنوي، المستخدم لفحص التعديلات على قيم التحويلات في ميزان المدفوعات وعلى السلاسل ذات الصلة بالقطاع الخارجي.",
+   "new": "يوفر إصدار عام 2025 من التقرير السنوي، المستخدم لفحص التعديلات على قيم الحوالات في ميزان المدفوعات وعلى السلاسل ذات الصلة بالقطاع الخارجي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 113,
+   "col": 14,
+   "field": "why_it_matters_ar (remittances = الحوالات)",
+   "old": "يوفر إصدار عام 2024 من التقرير السنوي، المستخدم لمقارنة قيم التحويلات وبنود ميزان المدفوعات للسنة المرجعية نفسها عبر الإصدارات المتعاقبة للتقرير السنوي.",
+   "new": "يوفر إصدار عام 2024 من التقرير السنوي، المستخدم لمقارنة قيم الحوالات وبنود ميزان المدفوعات للسنة المرجعية نفسها عبر الإصدارات المتعاقبة للتقرير السنوي."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "23_REMITTANCES",
+   "row": 18,
+   "col": 22,
+   "field": "caveat_ar (remittances = الحوالات)",
+   "old": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+   "new": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "23_REMITTANCES",
+   "row": 19,
+   "col": 22,
+   "field": "caveat_ar (remittances = الحوالات)",
+   "old": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+   "new": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "23_REMITTANCES",
+   "row": 20,
+   "col": 22,
+   "field": "caveat_ar (remittances = الحوالات)",
+   "old": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+   "new": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "23_REMITTANCES",
+   "row": 21,
+   "col": 22,
+   "field": "caveat_ar (remittances = الحوالات)",
+   "old": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع التحويلات الواردة إلى اليمن.",
+   "new": "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن."
+  },
+  {
+   "finding": "NB-1:GLOSSARY",
+   "sheet": "33_ANALYTICS_MASTER",
+   "row": 13,
+   "col": 9,
+   "field": "interpretation_ar (remittances = الحوالات)",
+   "old": "نمو سلسلة التحويلات في القطاع الخارجي من 2018 إلى 2024 وفق نفس نسخة المصدر.",
+   "new": "نمو سلسلة الحوالات في القطاع الخارجي من 2018 إلى 2024 وفق نفس نسخة المصدر."
+  },
+  {
+   "finding": "NB-1:RIGHTS",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 5,
+   "field": "/rights/#s6.body_en",
+   "old": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0, https://creativecommons.org/licenses/by/4.0): its text, analysis and visual designs, the compiled evidence records, and the structure and annotations of the data exports when they are published. The CauseWay logo is not part of the licensed content. You may share and adapt that content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes. The licence does not cover third-party material: documents, data, tables, figures and text published by others remain under their publishers' terms, including where this resource reports them, and this resource does not host copies of their files. CauseWay asks that a reused figure be credited in two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared.",
+   "new": "CauseWay licenses the content it owns in this resource under the Creative Commons Attribution 4.0 International licence (CC BY 4.0; deed https://creativecommons.org/licenses/by/4.0/, legal code https://creativecommons.org/licenses/by/4.0/legalcode.en). Covered: CauseWay's text and analysis in English and Arabic, its visual designs, the compiled evidence records and the figures CauseWay calculates, and the structure and annotations of the data exports when they are published. Not covered: material published by others — documents, data, tables, figures and text remain under their publishers' terms, including where this resource reports, quotes or translates them, and this resource does not host copies of their files; the CauseWay name, logo and marks; and the software code of the repository that builds this resource, which is outside this licence. Figures derived from survey microdata: the confidence intervals this resource derives from the Global Findex respondent file for Yemen (evidence record CLM-026) are computed under the World Bank Microdata Research License, which permits publishing aggregate statistics with the data cited. Cite the data as that licence requires: Demirgüç-Kunt, Klapper, Singer and Ansar, The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19, World Bank. CC BY 4.0 does not extend to the underlying microdata, which this resource does not host or redistribute. You may share and adapt CauseWay's content for any purpose, provided you credit CauseWay, link to the licence and indicate whether you made changes: give the title, the author (CauseWay), the source (this resource and the page address), the licence (CC BY 4.0) and the changes made. For a reused figure, use two lines: first this resource (Yemen Financial Inclusion Evidence, the record, CauseWay, the edition and the page address), then the original source that the record names (publisher, title, year and link). This page states the licence CauseWay applies to its own content; it does not state that any third-party rights have been cleared."
+  },
+  {
+   "finding": "NB-1:RIGHTS",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 363,
+   "col": 7,
+   "field": "/rights/#s6.body_ar",
+   "old": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0، https://creativecommons.org/licenses/by/4.0): نصوصه وتحليلاته وتصاميمه المرئية، وسجلات الأدلة المجمَّعة، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا يدخل شعار CauseWay في المحتوى المرخَّص. ويجوز لك مشاركة هذا المحتوى وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات. ولا تشمل الرخصة مواد الجهات الأخرى: فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد، ولا يستضيف هذا المورد نسخًا من ملفاتها. وتطلب CauseWay أن يُنسب الرقم المُعاد استخدامه في سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت.",
+   "new": "تتيح CauseWay المحتوى الذي تملكه في هذا المورد بموجب رخصة المشاع الإبداعي «نَسب المُصنَّف 4.0 دولي» (CC BY 4.0؛ صك الرخصة https://creativecommons.org/licenses/by/4.0/deed.ar، والنص القانوني https://creativecommons.org/licenses/by/4.0/legalcode.ar). تشمل الرخصة: نصوص CauseWay وتحليلاتها بالعربية والإنجليزية، وتصاميمها المرئية، وسجلات الأدلة المجمَّعة والأرقام التي تحتسبها CauseWay، وبنية ملفات البيانات المُصدَّرة وشروحها عند نشرها. ولا تشمل الرخصة: مواد الجهات الأخرى، فالوثائق والبيانات والجداول والرسوم والنصوص التي تنشرها جهات أخرى تبقى خاضعة لشروط ناشريها، بما في ذلك حين يوردها هذا المورد أو يقتبسها أو يترجمها، ولا يستضيف هذا المورد نسخًا من ملفاتها؛ واسم CauseWay وشعارها وعلاماتها؛ والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة. الأرقام المشتقة من البيانات الجزئية للمسوح: تُحتسب فترات الثقة التي يستخرجها هذا المورد من ملف المستجيبين في مسح Global Findex لليمن (سجل الدليل CLM-026) بموجب رخصة البحث للبيانات الجزئية لدى البنك الدولي، التي تجيز نشر الإحصاءات التجميعية مع الاستشهاد بالبيانات. استشهد بالبيانات كما تشترط تلك الرخصة: Demirgüç-Kunt وKlapper وSinger وAnsar، The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19، البنك الدولي. ولا تمتد رخصة CC BY 4.0 إلى البيانات الجزئية الأصلية، التي لا يستضيفها هذا المورد ولا يعيد توزيعها. ويجوز لك مشاركة محتوى CauseWay وتعديله لأي غرض، بشرط أن تنسبه إلى CauseWay، وأن تضع رابطًا إلى الرخصة، وأن تبيّن ما إذا كنت قد أجريت تغييرات: اذكر العنوان، والمؤلف (CauseWay)، والمصدر (هذا المورد ورابط الصفحة)، والرخصة (CC BY 4.0)، والتغييرات التي أجريتها. وعند إعادة استخدام رقم، استعمل سطرين: أولًا هذا المورد (أدلة الشمول المالي في اليمن، والسجل، وCauseWay، والإصدار، ورابط الصفحة)، ثم المصدر الأصلي الذي يسمّيه السجل (الناشر، والعنوان، والسنة، والرابط). وتذكر هذه الصفحة الرخصة التي تطبقها CauseWay على محتواها الخاص، ولا تفيد بأن أي حقوق لجهات أخرى قد سُوّيت."
+  },
+  {
+   "finding": "NB-1:RIGHTS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-FOOTER-LICENCE",
+   "old": null,
+   "new": "CauseWay's own text, analysis and visual designs are licensed under {licence} unless otherwise noted; third-party material remains under its owners' terms. || يُتاح نص CauseWay الخاص وتحليلاته وتصاميمه المرئية بموجب رخصة {licence} ما لم يُذكر خلاف ذلك، وتبقى مواد الجهات الأخرى خاضعة لشروط أصحابها."
+  },
+  {
+   "finding": "NB-1:RIGHTS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LICENCE-NAME",
+   "old": null,
+   "new": "CC BY 4.0 || CC BY 4.0"
+  },
+  {
+   "finding": "NB-1:RIGHTS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-LICENCE-DEED-URL",
+   "old": null,
+   "new": "https://creativecommons.org/licenses/by/4.0/ || https://creativecommons.org/licenses/by/4.0/deed.ar"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-034",
+   "old": null,
+   "new": "explore; explore questions || استكشف; استكشف الأسئلة -> route:/explore/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-035",
+   "old": null,
+   "new": "evidence readings; evidence reading; readings; reading; analysis || قراءات الأدلة; قراءة أدلة; القراءات; قراءة تحليلية; التحليلات -> route:/readings/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-036",
+   "old": null,
+   "new": "data; data and sources; data & sources; dataset; datasets; download || البيانات; البيانات والمصادر; بيانات; مجموعة بيانات; تنزيل -> route:/data/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-037",
+   "old": null,
+   "new": "method and measurement; method & measurement || المنهج والقياس -> route:/methodology/ | route:/measurement/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-038",
+   "old": null,
+   "new": "report an issue; report an error; error || أبلغ عن مشكلة; أبلغ عن خطأ; خطأ -> route:/contact/ | route:/corrections/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-039",
+   "old": null,
+   "new": "trust; about this resource || الثقة; عن الموقع; عن المورد; التعريف بالمورد -> route:/about/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-040",
+   "old": null,
+   "new": "finance; banks; banking || التمويل; البنوك; المصارف -> route:/finance/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-041",
+   "old": null,
+   "new": "accessibility; accessibility statement || إتاحة الوصول; إمكانية الوصول; بيان إمكانية الوصول -> route:/accessibility/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-042",
+   "old": null,
+   "new": "access; access to services; access points || الوصول; الوصول إلى الخدمات; نقاط الوصول -> route:/access/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-043",
+   "old": null,
+   "new": "providers; service providers; financial service providers || مقدمو الخدمات; مقدمي الخدمات; مقدمو الخدمات المالية -> route:/providers/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-044",
+   "old": null,
+   "new": "personal remittances; workers' remittances; migrant remittances || الحوالات; التحويلات الشخصية; تحويلات العاملين; رسوم الحوالات -> route:/remittances/"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "SEARCH-ALIAS-045",
+   "old": null,
+   "new": "licensed; unlicensed; licence withdrawal || مرخص; غير مرخص; سحب الترخيص -> route:/providers/ | document_type:decision/enforcement"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-001",
+   "old": null,
+   "new": "remittances || الحوالات"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-002",
+   "old": null,
+   "new": "cash transfers || التحويلات النقدية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-003",
+   "old": null,
+   "new": "funds transfer || التحويل / تحويل الأموال"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-004",
+   "old": null,
+   "new": "reuse licence (CC BY 4.0) || الرخصة (رخصة CC BY 4.0)"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-005",
+   "old": null,
+   "new": "regulatory licensing || الترخيص"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-006",
+   "old": null,
+   "new": "licensed (regulatory) || مرخَّص"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-007",
+   "old": null,
+   "new": "listing || الإدراج في قائمة / مُدرَج"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-008",
+   "old": null,
+   "new": "account || الحساب"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-009",
+   "old": null,
+   "new": "active (account, wallet, user) || نشط / نشطة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-010",
+   "old": null,
+   "new": "subscriber || المشترك"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-011",
+   "old": null,
+   "new": "evidence record || سجل الدليل / سجلات الأدلة"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-012",
+   "old": null,
+   "new": "reading || قراءة تحليلية / القراءات التحليلية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-013",
+   "old": null,
+   "new": "measurement priority || أولوية القياس / أولويات القياس"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-014",
+   "old": null,
+   "new": "source record || سجل المصدر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-015",
+   "old": null,
+   "new": "this resource || هذا المورد"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-016",
+   "old": null,
+   "new": "people (domain) || الأفراد"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-017",
+   "old": null,
+   "new": "providers || مقدمو الخدمات المالية"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-018",
+   "old": null,
+   "new": "access point || نقطة الوصول المالي"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-019",
+   "old": null,
+   "new": "web accessibility || إمكانية الوصول"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-020",
+   "old": null,
+   "new": "sources (section) || المصادر"
+  },
+  {
+   "finding": "NB-1:NAMING",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "TERM-021",
+   "old": null,
+   "new": "missing value || غير معروف — لا يعني صفرًا"
+  }
+ ]
+}

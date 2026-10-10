@@ -6,9 +6,9 @@
     "title_en": "Same year, different number",
     "title_ar": "العام نفسه، رقم مختلف",
     "question_en": "When two official reports give different remittance values for the same year, what changed: the economy or the measurement?",
-    "question_ar": "عندما يعطي تقريران رسميان قيمتين مختلفتين للتحويلات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟",
+    "question_ar": "عندما يعطي تقريران رسميان قيمتين مختلفتين للحوالات في السنة نفسها، ما الذي تغيّر: الاقتصاد أم القياس؟",
     "thesis_en": "Successive annual reports of the Central Bank of Yemen – Aden give very different remittance values for 2024. A revision of this size is a measurement event to be explained before it can be read as an economic story.",
-    "thesis_ar": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا كبيرًا للتحويلات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
+    "thesis_ar": "تعطي التقارير السنوية المتتالية للبنك المركزي اليمني – عدن قيمتين متباينتين تباينًا كبيرًا للحوالات في عام 2024. ومراجعة بهذا الحجم حدثٌ في القياس ينبغي تفسيره قبل أن يُقرأ قصةً اقتصادية.",
     "claim_bindings": [
       "CLM-032",
       "CLM-036",
@@ -45,7 +45,7 @@
       "researchers"
     ],
     "prohibited_inference_en": "No single series is the correct level; no single scale factor — such as the roughly constant ratio of 1.838 between the CBY-Aden and IMF remittance series, or the 33% population share the IMF used for areas administered from Aden — is a universal conversion; net errors and omissions are not hidden remittances; and a residual-model estimate is not a baseline.",
-    "prohibited_inference_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي التحويلات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ تحويلات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج متبقي ميزان المدفوعات خطَّ أساس.",
+    "prohibited_inference_ar": "لا توجد سلسلة تمثل وحدها المستوى الصحيح؛ ولا يصلح معامل واحد — مثل النسبة شبه الثابتة البالغة 1.838 بين سلسلتي الحوالات لدى البنك المركزي اليمني – عدن وصندوق النقد الدولي، أو حصة السكان البالغة 33% التي استخدمها الصندوق للمناطق التي تُدار من عدن — معاملَ تحويل موحّدًا ينطبق على كل السلاسل؛ ولا يمثل صافي السهو والخطأ حوالات مخفية؛ ولا يُعتمد تقدير ناتج عن نموذج متبقي ميزان المدفوعات خطَّ أساس.",
     "verification_bindings": {
       "claim_ids": [
         "CLM-032",

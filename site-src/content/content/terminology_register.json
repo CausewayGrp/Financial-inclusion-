@@ -1,0 +1,212 @@
+[
+  {
+    "term_id": "TERM-001",
+    "term_en": "remittances",
+    "term_ar": "الحوالات",
+    "definition_en": "Money sent by a person or household to a person or household, from abroad or within Yemen, and aggregates of such flows.",
+    "definition_ar": "أموال يرسلها فرد أو أسرة إلى فرد أو أسرة، من الخارج أو داخل اليمن، ومجاميع هذه التدفقات.",
+    "do_not_use": "bare «التحويلات» for remittances",
+    "rule_en": "In balance-of-payments text keep the source's own concept (personal remittances, workers' remittances) and present it as the source's label.",
+    "rule_ar": "في نصوص ميزان المدفوعات يُحتفظ بمفهوم المصدر نفسه (التحويلات الشخصية، تحويلات العاملين، تحويلات المغتربين) ويُقدَّم بوصفه تسمية المصدر."
+  },
+  {
+    "term_id": "TERM-002",
+    "term_en": "cash transfers",
+    "term_ar": "التحويلات النقدية",
+    "definition_en": "Payments to people from a government, programme, donor or humanitarian agency.",
+    "definition_ar": "مدفوعات للأفراد من حكومة أو برنامج أو جهة مانحة أو إنسانية.",
+    "do_not_use": "«الحوالات النقدية»; 'remittances' for programme payments",
+    "rule_en": "Always qualified; a cash transfer is not a remittance.",
+    "rule_ar": "تُقيَّد دائمًا بالوصف؛ والتحويل النقدي ليس حوالة."
+  },
+  {
+    "term_id": "TERM-003",
+    "term_en": "funds transfer",
+    "term_ar": "التحويل / تحويل الأموال",
+    "definition_en": "The act or regulated activity of moving funds between accounts or providers.",
+    "definition_ar": "عملية نقل الأموال بين الحسابات أو مقدمي الخدمات، أو النشاط المنظَّم الذي يؤديها.",
+    "do_not_use": "«حوالة» for the act of transfer",
+    "rule_en": "Quote the names of regulated activities and decisions as published.",
+    "rule_ar": "تُنقل أسماء الأنشطة المنظمة والقرارات كما نُشرت."
+  },
+  {
+    "term_id": "TERM-004",
+    "term_en": "reuse licence (CC BY 4.0)",
+    "term_ar": "الرخصة (رخصة CC BY 4.0)",
+    "definition_en": "The copyright licence under which CauseWay publishes its own content.",
+    "definition_ar": "رخصة حق المؤلف التي تتيح CauseWay بموجبها محتواها الخاص.",
+    "do_not_use": "«الترخيص» for the reuse licence; 'license' as a noun",
+    "rule_en": "'licence' is the noun and 'license' the verb; write 'licensed under CC BY 4.0'.",
+    "rule_ar": "تُكتب «متاح بموجب رخصة CC BY 4.0»."
+  },
+  {
+    "term_id": "TERM-005",
+    "term_en": "regulatory licensing",
+    "term_ar": "الترخيص",
+    "definition_en": "Authorisation by a regulator for an institution to carry out an activity.",
+    "definition_ar": "إذن تمنحه جهة رقابية لمؤسسة كي تزاول نشاطًا.",
+    "do_not_use": "«الرخصة» in the regulatory sense",
+    "rule_en": "Name the issuer and the date. A licence is not operation. CauseWay holds no regulatory licence and claims none.",
+    "rule_ar": "يُذكر مُصدر الترخيص وتاريخه. والترخيص لا يعني التشغيل. ولا تملك CauseWay ترخيصًا رقابيًا ولا تدّعيه."
+  },
+  {
+    "term_id": "TERM-006",
+    "term_en": "licensed (regulatory)",
+    "term_ar": "مرخَّص",
+    "definition_en": "Holding a regulatory licence on a stated date.",
+    "definition_ar": "حاصل على ترخيص رقابي في تاريخ محدد.",
+    "do_not_use": "«معتمد»; «مسجَّل»",
+    "rule_en": "Unlicensed = غير مرخَّص.",
+    "rule_ar": "غير الحاصل على ترخيص = غير مرخَّص."
+  },
+  {
+    "term_id": "TERM-007",
+    "term_en": "listing",
+    "term_ar": "الإدراج في قائمة / مُدرَج",
+    "definition_en": "Appearance on an official list on a date.",
+    "definition_ar": "الظهور في قائمة رسمية في تاريخ محدد.",
+    "do_not_use": "«التسجيل»; 'listing or licensing' as one concept",
+    "rule_en": "Listing is not licensing, and neither is operation.",
+    "rule_ar": "الإدراج ليس ترخيصًا، ولا أيٌّ منهما يعني التشغيل."
+  },
+  {
+    "term_id": "TERM-008",
+    "term_en": "account",
+    "term_ar": "الحساب",
+    "definition_en": "An account held at a bank or another provider.",
+    "definition_ar": "حساب لدى بنك أو مقدم خدمة آخر.",
+    "do_not_use": "'people' or «الأشخاص» for accounts",
+    "rule_en": "Accounts are not people.",
+    "rule_ar": "الحسابات ليست أشخاصًا."
+  },
+  {
+    "term_id": "TERM-009",
+    "term_en": "active (account, wallet, user)",
+    "term_ar": "نشط / نشطة",
+    "definition_en": "Used within the activity window the source defines.",
+    "definition_ar": "مستخدَم خلال نافذة النشاط التي يحددها المصدر.",
+    "do_not_use": "«فعّال»; «مفعَّل»; «قائم»",
+    "rule_en": "State the source's activity window once. Inactive = غير نشط; dormant = خامل. A branch or point is 'operating' (عامل) only when operation is evidenced.",
+    "rule_ar": "تُذكر نافذة النشاط التي يحددها المصدر مرة واحدة. غير النشط = غير نشط؛ والخامل = خامل. ولا يوصف الفرع أو النقطة بأنه عامل إلا إذا ثبت التشغيل."
+  },
+  {
+    "term_id": "TERM-010",
+    "term_en": "subscriber",
+    "term_ar": "المشترك",
+    "definition_en": "A count as labelled by its publisher.",
+    "definition_ar": "عدد كما يسميه ناشره.",
+    "do_not_use": "«المستخدم»; «العميل» for subscribers",
+    "rule_en": "Subscribers are not users, accounts or people, and are never summed with them.",
+    "rule_ar": "المشتركون ليسوا مستخدمين ولا حسابات ولا أشخاصًا، ولا يُجمعون معها."
+  },
+  {
+    "term_id": "TERM-011",
+    "term_en": "evidence record",
+    "term_ar": "سجل الدليل / سجلات الأدلة",
+    "definition_en": "The governed public record of one piece of evidence.",
+    "definition_ar": "السجل العام الخاضع للحوكمة لدليل واحد.",
+    "do_not_use": "'Evidence Record' in running text; «السجل الدليلي»",
+    "rule_en": "Capital only at the start of a label.",
+    "rule_ar": "تبدأ التسمية بها دون تغيير."
+  },
+  {
+    "term_id": "TERM-012",
+    "term_en": "reading",
+    "term_ar": "قراءة تحليلية / القراءات التحليلية",
+    "definition_en": "A bounded argument built across several evidence records.",
+    "definition_ar": "حجة محددة النطاق مبنية على عدة سجلات أدلة.",
+    "do_not_use": "'Evidence Reading'; «قراءة أدلة»; «التحليلات»",
+    "rule_en": "The section is 'Readings' (القراءات التحليلية); each item is 'Reading' (قراءة تحليلية).",
+    "rule_ar": "القسم «القراءات التحليلية»، وكل بند «قراءة تحليلية»."
+  },
+  {
+    "term_id": "TERM-013",
+    "term_en": "measurement priority",
+    "term_ar": "أولوية القياس / أولويات القياس",
+    "definition_en": "A decision-valued unknown with the evidence needed to resolve it.",
+    "definition_ar": "مجهول مؤثر في القرار مع الدليل اللازم لحسمه.",
+    "do_not_use": "'Measurement Agenda'; «أجندة القياس» (search alias only)",
+    "rule_en": "The section is 'Measurement priorities'.",
+    "rule_ar": "القسم «أولويات القياس»."
+  },
+  {
+    "term_id": "TERM-014",
+    "term_en": "source record",
+    "term_ar": "سجل المصدر",
+    "definition_en": "The directory entry for one source.",
+    "definition_ar": "مُدخل الفهرس لمصدر واحد.",
+    "do_not_use": null,
+    "rule_en": "The copyable identifier is the source reference (مرجع المصدر).",
+    "rule_ar": "المعرّف القابل للنسخ هو «مرجع المصدر»."
+  },
+  {
+    "term_id": "TERM-015",
+    "term_en": "this resource",
+    "term_ar": "هذا المورد",
+    "definition_en": "The product's self-reference.",
+    "definition_ar": "الإشارة التي يستعملها المنتج إلى نفسه.",
+    "do_not_use": "'this site'; «هذا الموقع»; «المنصة»",
+    "rule_en": "'Evidence base' (قاعدة الأدلة) is the governed evidence, written in full.",
+    "rule_ar": "«قاعدة الأدلة» هي الأدلة الخاضعة للحوكمة، وتُكتب كاملة."
+  },
+  {
+    "term_id": "TERM-016",
+    "term_en": "people (domain)",
+    "term_ar": "الأفراد",
+    "definition_en": "The people-side domain.",
+    "definition_ar": "مجال جانب الأفراد.",
+    "do_not_use": "«الناس» in labels",
+    "rule_en": "Use 'adults' (البالغون) when the source counts adults; 'population' (السكان) for the whole population.",
+    "rule_ar": "تُستعمل «البالغون» حين يعدّ المصدر البالغين، و«السكان» لمجموع السكان."
+  },
+  {
+    "term_id": "TERM-017",
+    "term_en": "providers",
+    "term_ar": "مقدمو الخدمات المالية",
+    "definition_en": "Institutions that provide financial services.",
+    "definition_ar": "المؤسسات التي تقدم الخدمات المالية.",
+    "do_not_use": "«مزودو» / «مزودي» (except in quoted regulatory names)",
+    "rule_en": "Case forms (مقدمو / مقدمي) follow grammar.",
+    "rule_ar": "تتبع صيغتا «مقدمو» و«مقدمي» قواعد الإعراب."
+  },
+  {
+    "term_id": "TERM-018",
+    "term_en": "access point",
+    "term_ar": "نقطة الوصول المالي",
+    "definition_en": "A location or device where a financial service can be reached.",
+    "definition_ar": "موقع أو جهاز يمكن الوصول منه إلى خدمة مالية.",
+    "do_not_use": "«نقطة خدمة»; «منفذ»",
+    "rule_en": "A count of access points is not use.",
+    "rule_ar": "عدد نقاط الوصول لا يعني الاستخدام."
+  },
+  {
+    "term_id": "TERM-019",
+    "term_en": "web accessibility",
+    "term_ar": "إمكانية الوصول",
+    "definition_en": "Whether people with disabilities can use the pages.",
+    "definition_ar": "قدرة الأشخاص ذوي الإعاقة على استخدام الصفحات.",
+    "do_not_use": "«إتاحة الوصول» for accessibility",
+    "rule_en": "Keeps accessibility apart from the Access domain (الوصول إلى الخدمات).",
+    "rule_ar": "يفصل بين إمكانية الوصول ومجال «الوصول إلى الخدمات»."
+  },
+  {
+    "term_id": "TERM-020",
+    "term_en": "sources (section)",
+    "term_ar": "المصادر",
+    "definition_en": "The directory of sources and their original locators.",
+    "definition_ar": "فهرس المصادر وروابطها الأصلية.",
+    "do_not_use": "'Data & sources' while nothing is downloadable",
+    "rule_en": "Becomes 'Sources and data' (المصادر والبيانات) on the day public_downloads is true.",
+    "rule_ar": "تصبح «المصادر والبيانات» يوم يصبح public_downloads صحيحًا."
+  },
+  {
+    "term_id": "TERM-021",
+    "term_en": "missing value",
+    "term_ar": "غير معروف — لا يعني صفرًا",
+    "definition_en": "A value the evidence base does not hold.",
+    "definition_ar": "قيمة لا تتضمنها قاعدة الأدلة.",
+    "do_not_use": "«ليس صفرًا» (reads as a stated value)",
+    "rule_en": "Missing is not zero.",
+    "rule_ar": "المفقود لا يعني صفرًا."
+  }
+]

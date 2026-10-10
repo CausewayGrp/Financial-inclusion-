@@ -740,3 +740,7 @@ Pull request #13 is untouched. Acceptance is the owner's.
 Cross-reference (2026-10-10): the Rights line above (**OPEN** at Phase B) is superseded by the owner's decision of
 10 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md`, OWN-04-R): CC BY 4.0 for CauseWay's own content stands and the
 rights escalation is **CLOSED** (see its closure line under "Raised at V1"). The line above is kept as raised.
+
+Cross-reference (2026-10-10, NB-1): the label half of C-10 ("'Data & sources' holds no data", raised at D6 above) is
+closed by the naming transaction NB-1 — the hub is "Sources / المصادر" while nothing is downloadable
+(`audit/naming/NAMING_DECISIONS_2026-10-10.md`). The domain-strip half stays as raised. The entries above are kept as raised.

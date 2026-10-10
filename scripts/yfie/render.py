@@ -52,11 +52,24 @@ def assets(out: Path, variant: str = "") -> None:
 def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str = "") -> str:
     lang = shell["lang"]
     origin = DISC.origin()
+    title = shell.get("head_title") or page["title"]   # NB-1: a hub's or domain's stable governed name; the h1 keeps the thesis
+    lic = shell.get("licence") or {}
+    lic_link = f'<link rel="license" href="{esc(lic["url"])}">' if lic.get("url") else ""   # NB-1 (B4): machine-readable licence
     return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
-            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(page["title"])} — {esc(shell["product"])}</title>'
-            f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
-            f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(page["title"], page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(title)} — {esc(shell["product"])}</title>'
+            f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}{lic_link}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
+            f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(title, page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
             f"{structured_data(page, shell, route)}</head><body>")
+
+
+def licence_line(shell: dict) -> str:
+    """NB-1 (owner brief of 10 October 2026, B4): the footer licence line — governed text (UI-FOOTER-LICENCE) with the
+    licence name linked to the official deed in the page's language; text only, no badge."""
+    lic = shell.get("licence") or {}
+    if not lic.get("url"):
+        return ""
+    return (f'<p class="fine lic">{esc(lic["before"])}<a href="{esc(lic["url"])}" rel="license">{esc(lic["name"])}</a>'
+            f'{esc(lic["after"])}</p>')
 
 
 def font_preloads(lang: str) -> str:
@@ -187,7 +200,7 @@ def footer(shell: dict, tail: str = "") -> str:
                      for g in shell["footer"] if not any(l["href"].endswith("/about/") for l in g["links"]))
     return (f'</div></main><footer id="site-footer" class="inst"><div class="inst-in"><div class="trust"><h3>{esc(trust_label)}</h3><nav aria-label="{esc(L["trust_nav"])}">{trust}</nav></div>'
             f'<div class="id">{logo(40)}<p>{esc(L["footer_strapline"])}</p></div><nav class="groups" aria-label="{esc(L["footer_nav"])}">{groups}</nav>'
-            f'{colophon(shell, cite=bool(tail))}<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
+            f'{colophon(shell, cite=bool(tail))}{licence_line(shell)}<div class="fine">© 2026 CauseWay · {esc(L["footer_rights"])} · {esc(shell["edition"])}</div></div>{tail}</footer>'
             f'{json_block("yfie-ui", shell["ui_json"])}<script src="/assets/app.js" defer></script></body></html>')
 
 
