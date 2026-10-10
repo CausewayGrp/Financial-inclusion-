@@ -32,6 +32,7 @@ No Master transaction and no public page changed. `dist/` is unchanged.
   This session's git access refused their deletion (HTTP 403). The list and the command are in the handover §9.
   Pull requests #21 (another session's alternative naming Part B) and #23 (an earlier draft of this step) were closed
   without merge; none is open.
+- **Incident (rule 9):** pushing RIGHTS-FINAL to `claude/new-session-s346lg` was a lease-protected force update that replaced the closed #23's head `b76c7255` (this session's own commit, still reachable through #23). The owner noted it; no further force-push on any branch.
 ## 2026-10-10 — RIGHTS-FINAL: the CC BY 4.0 text endorsed with two corrections; the owner confirms it
 
 The owner's decision of 10 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §4); the rights question is closed
