@@ -1,0 +1,1103 @@
+{
+ "retrieved": "2026-10-10",
+ "note": "World Bank open data API (api.worldbank.org/v2), World Development Indicators series SI.RMT.COST.IB.ZS for Yemen, as fetched on 10 October 2026 for close-out CLOSE-3D (brief v5 U7). A dated snapshot: the transaction reads it, never the live API.",
+ "requests": {
+  "data": "https://api.worldbank.org/v2/country/YEM/indicator/SI.RMT.COST.IB.ZS?format=json&per_page=100",
+  "indicator": "https://api.worldbank.org/v2/indicator/SI.RMT.COST.IB.ZS?format=json"
+ },
+ "data": [
+  {
+   "page": 1,
+   "pages": 1,
+   "per_page": 100,
+   "total": 66,
+   "sourceid": "2",
+   "lastupdated": "2026-10-08"
+  },
+  [
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2025",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2024",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2023",
+    "value": 2.805,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2022",
+    "value": 3.455,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2021",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2020",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2019",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2018",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2017",
+    "value": 5.70931333333333,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2016",
+    "value": 4.68109333333333,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2015",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2014",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2013",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2012",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2011",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2010",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2009",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2008",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2007",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2006",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2005",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2004",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2003",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2002",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2001",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "2000",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1999",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1998",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1997",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1996",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1995",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1994",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1993",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1992",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1991",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1990",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1989",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1988",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1987",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1986",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1985",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1984",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1983",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1982",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1981",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1980",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1979",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1978",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1977",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1976",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1975",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1974",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1973",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1972",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1971",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1970",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1969",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1968",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1967",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1966",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1965",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1964",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1963",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1962",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1961",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   },
+   {
+    "indicator": {
+     "id": "SI.RMT.COST.IB.ZS",
+     "value": "Average transaction cost of sending remittances to a specific country (%)"
+    },
+    "country": {
+     "id": "YE",
+     "value": "Yemen, Rep."
+    },
+    "countryiso3code": "YEM",
+    "date": "1960",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 2
+   }
+  ]
+ ],
+ "indicator": [
+  {
+   "page": 1,
+   "pages": 1,
+   "per_page": "50",
+   "total": 1
+  },
+  [
+   {
+    "id": "SI.RMT.COST.IB.ZS",
+    "name": "Average transaction cost of sending remittances to a specific country (%)",
+    "unit": "",
+    "source": {
+     "id": "2",
+     "value": "World Development Indicators"
+    },
+    "sourceNote": "Average transaction cost of sending remittance to a specific country is the average of the total transaction cost in percentage of the amount sent for sending USD 200 charged by each single remittance service provider (RSP) included in the Remittance Prices Worldwide (RPW) database to a specific country.",
+    "sourceOrganization": "Remittance Prices Worldwide, World Bank (WB), uri: http://remittanceprices.worldbank.org",
+    "topics": [
+     {
+      "id": "7",
+      "value": "Financial Sector "
+     }
+    ]
+   }
+  ]
+ ]
+}

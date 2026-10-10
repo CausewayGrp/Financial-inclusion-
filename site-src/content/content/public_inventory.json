@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "PUBLIC-INVENTORY-COUNTS",
-  "authority_master_sha256": "49de81b3bc533aa839cce880109d83b2b06f2b9a8f849842ae13a721b35ce482",
+  "authority_master_sha256": "c447171006a8d1be4e684c36e90f29ea5db9295c649bf747083ec81914d0ae13",
   "rule": "A repository inventory count is never typed into public copy. Master copy may carry a token {{n:<key>}}; the generator replaces it with the count derived from the named projection, and raises an error for an unknown key, a key not cleared for public display, or any template token left unresolved. Arabic copy uses label-value form ('label: N') so that no counted-noun agreement depends on the number.",
   "token_pattern": "\\{\\{n:([a-z_]+)\\}\\}",
   "unresolved_token_pattern": "\\{\\{[^{}]*\\}\\}|\\{[A-Z][A-Z0-9_]{1,40}\\}",
@@ -33,7 +33,7 @@
     },
     {
       "key": "sources",
-      "value": 174,
+      "value": 176,
       "projection": "sources/source_library.json",
       "rule": "count_records",
       "public_token": true,
@@ -41,7 +41,7 @@
     },
     {
       "key": "public_locators",
-      "value": 167,
+      "value": 169,
       "projection": "sources/source_reference_map.json",
       "rule": "count_where_http_primary_url",
       "public_token": true,
@@ -97,7 +97,7 @@
     },
     {
       "key": "search_records",
-      "value": 476,
+      "value": 478,
       "projection": "content/search_index.json",
       "rule": "count_records",
       "public_token": false,

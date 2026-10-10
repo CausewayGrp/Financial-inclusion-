@@ -6868,5 +6868,79 @@
     "linked_visual_ids": [],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-WB-WDI-RMT-COST-YEM",
+    "primary_url": "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE",
+    "additional_urls": "[\"https://api.worldbank.org/v2/country/YEM/indicator/SI.RMT.COST.IB.ZS?format=json&per_page=100\"]",
+    "datasets_or_use": "DS-REMITTANCES",
+    "row_count": 4,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "World Development Indicators: average transaction cost of sending remittances to Yemen (SI.RMT.COST.IB.ZS)",
+    "display_title_ar": "مؤشرات التنمية العالمية: متوسط تكلفة معاملة إرسال الحوالات إلى اليمن (SI.RMT.COST.IB.ZS)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Survey dataset or indicator",
+    "document_label_ar": "مسح أو مؤشر",
+    "document_date": "2026-10-08",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "VIS-REMITTANCE-COST"
+    ],
+    "linked_claim_ids": [],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [
+      "VIS-REMITTANCE-COST"
+    ],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-UN-SDG-10C1-METADATA",
+    "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0c-01.pdf",
+    "additional_urls": null,
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__REFERENCE_TARGET",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "SDG indicator metadata 10.c.1: remittance costs as a proportion of the amount remitted (last updated 27 March 2026)",
+    "display_title_ar": "البيانات الوصفية لمؤشر أهداف التنمية المستدامة 10.c.1: تكاليف التحويلات المالية نسبةً من المبلغ المحوَّل (آخر تحديث في 27 مارس 2026)",
+    "publisher": "United Nations Statistics Division",
+    "publisher_ar": "الشعبة الإحصائية للأمم المتحدة",
+    "document_label": "Method or standard",
+    "document_label_ar": "منهج أو معيار",
+    "document_date": "2026-03-27",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "VIS-REMITTANCE-COST"
+    ],
+    "linked_claim_ids": [],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [
+      "VIS-REMITTANCE-COST"
+    ],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   }
 ]

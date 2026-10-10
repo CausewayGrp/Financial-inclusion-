@@ -43,7 +43,7 @@
     "dataset_id": "LOCAL-REMITTANCES",
     "file": "data/remittances.json",
     "domain": "Remittances",
-    "record_rows": 26,
+    "record_rows": 30,
     "runtime_role": "LOCAL_STATIC_INPUT",
     "future_adapter_rule": "Future APIs/connectors must emit the same semantic fields and stable IDs; UI meaning and evidence state may not change silently."
   },

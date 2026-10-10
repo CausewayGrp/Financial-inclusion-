@@ -3256,15 +3256,21 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
-      "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+      "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-UN-SDG-10C1-METADATA"
     ],
     "direct_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
-      "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+      "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-UN-SDG-10C1-METADATA"
     ],
     "resolved_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
-      "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+      "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-UN-SDG-10C1-METADATA"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -3278,6 +3284,16 @@
       {
         "source_id": "SRC-WB-RPW-UAE-YEM-2025Q3-001",
         "primary_url": "https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/Yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-WDI-RMT-COST-YEM",
+        "primary_url": "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-10C1-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0c-01.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -10020,16 +10036,19 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "17_REMITTANCES",
-      "DA-010..013"
+      "23_REMITTANCES"
     ],
     "direct_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
-      "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+      "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-UN-SDG-10C1-METADATA"
     ],
     "resolved_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
-      "SRC-WB-RPW-UAE-YEM-2025Q3-001"
+      "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-UN-SDG-10C1-METADATA"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -10043,6 +10062,16 @@
       {
         "source_id": "SRC-WB-RPW-UAE-YEM-2025Q3-001",
         "primary_url": "https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/Yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-WDI-RMT-COST-YEM",
+        "primary_url": "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-10C1-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0c-01.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],

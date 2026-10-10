@@ -1,5 +1,32 @@
 # Repository Change Log
 
+## 2026-10-10 — CLOSE-3D: the cost of sending money to Yemen (Stage A, W3c, U7; closes FRN-09)
+
+Master `49de81b3bc53` → `c447171006a8`, 180 cells (`audit/close_out/close_3d.py`; ledger and run report in
+`audit/close_out/runs/`), plus the controlled visual contract (VIS-REMITTANCE-COST gains a second series). The values
+come from the World Bank's open API, read on 10 October 2026 and kept as a dated snapshot
+(`audit/close_out/fixtures/wdi_rmt_cost_2026-10-10.json`); the transaction never calls the live API. The SDG reference
+was read in the UN metadata for indicator 10.c.1. An independent red-team (2 blockers, 7 should-fix, 7 nits) and an
+Arabic editor (2 must-fix, 9 should-fix; second read 3 should-fix) read the text before the run; applied.
+
+- **U7, the yearly average.** VIS-REMITTANCE-COST keeps its contract and gains a second panel: the World Bank's yearly
+  average cost of sending US$200 to Yemen (World Development Indicators SI.RMT.COST.IB.ZS), a simple average across the
+  services Remittance Prices Worldwide includes. Values: 4.68% (2016), 5.71% (2017), 3.46% (2022) and 2.81% (2023),
+  rounded half up to the two decimals the API states (the API carries 4.68109…, 5.70931…, 3.455 and 2.805). There is
+  no value for 2018 to 2021 or after 2023; a year without a value does not mean zero. The samples can differ between
+  years, and the panel is not one series with the 2025 Q3 corridor averages.
+- **U7, the frame.** Both panels measure the price of sending (fees and the exchange-rate margin), not the cost of
+  collecting the money in Yemen or a household's cost. SDG target 10.c is stated in words as a reference, not a pass
+  mark: the 3% applies to the global average, and the 5% applies, in each corridor, to the average of the three
+  cheapest qualifying services (SmaRT). Neither panel shows either measure. Nothing is coloured as meeting or missing
+  the target.
+- **RPW.** The corridor values stay at the third quarter of 2025: on 10 October 2026 the corridor pages refused
+  automated requests, and the World Bank's data catalogue still ended with that quarter.
+- **Sources.** Two new (the WDI series; the UN metadata for SDG 10.c.1); 176 source records, 169 with a public
+  locator. 23_REMITTANCES gains four rows and 17_INDICATOR_LIBRARY one (RMT-003).
+- **Renderer.** `remittance_cost` draws each contract series as its own headed panel on one value axis, with its own
+  table; a yearly series is one lane with a row per year. With one series the figure is unchanged.
+
 ## 2026-10-10 — CLOSE-3C: the monetary context of CBY-Aden and the bank-composition table of CWR-011 (Stage A, W3c, U4, U5)
 
 Master `d2cd2ad16bd8` → `fb065fa69583`, 242 cells (`audit/close_out/close_3c.py`; ledger and run report in
