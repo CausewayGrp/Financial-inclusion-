@@ -743,26 +743,50 @@ def pos_panel(v: dict, cite_label: str, origin: str | None, heading: str = "h2")
 
 
 # ------------------------------------------------------------------------------------------------ dot rows (VIS-REMITTANCE-COST)
+# Close-out U7: the World Bank's yearly average for Yemen is a second panel under its own governed heading (a frame label
+# of the contract), apart from the corridor quotes and never compared with them: both panels share one value axis (one
+# unit), a yearly series is one lane with a row per year that has a value, and each panel has its own table. With one
+# series the figure is drawn as before.
+RMT_PANEL_LABELS = {"rpw": "UI-VIS-PANEL-RMT-RPW", "wdi": "UI-VIS-PANEL-RMT-WDI"}
+
+
 def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:
-    vals = v["series"][0]["values"]
-    vmax, step = axis_scale([r["y"] for r in vals])
-    corridors = list(dict.fromkeys(r["x_text"] for r in vals))
-    shapes = {}
-    head_state = uniform(vals, lambda r: r["state"]) or vals[0]["state"]
-    html_ = [f'<div class="panel bars"><p class="ph">{esc(vals[0]["unit"])} · {esc(state_label(v, head_state))}</p>']
-    for c in corridors:
-        rows = []
-        for r in [x for x in vals if x["x_text"] == c]:
-            shape = shapes.setdefault(r.get("group"), ["circle", "square", "diamond"][len(shapes) % 3])
-            x = _pct(r["y"], vmax=vmax)
-            rows.append(f'<div class="row"><div class="rl">{esc(r["group_text"])}</div><svg class="trk" width="100%" height="34" aria-hidden="true" focusable="false" direction="ltr">'
-                        f'<line class="stem" x1="1%" y1="22" x2="{x:.2f}%" y2="22"/>{svg_mark(shape, f"{x:.2f}%", 22, 6)}<text class="val" x="{x:.2f}%" y="9" text-anchor="middle">{plain_num(r["y"])}</text></svg></div>')
-        html_.append(f'<div class="lane"><h3>{esc(c)}</h3><div class="p1">{"".join(rows)}</div></div>')
-    html_.append('<div class="p1">' + axis_row(vmax, step) + "</div></div>")
-    state = uniform(vals, lambda r: r["state"])
-    rows = [[f'{esc(r["x_text"])} — {esc(r["group_text"])}', qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
-    tbl = table(caption_of(v, qual(esc(vals[0]["unit"]), esc(state_label(v, state)) if state else "")), [esc(th(v, "corridor")), esc(vals[0]["unit"])], rows)
-    return frame_open(v, heading) + f'<div class="panels">{"".join(html_)}</div>' + frame_close(v, cite_label, origin, tbl, heading=heading)
+    FLD = v.get("frame_labels") or {}
+    many = len(v["series"]) > 1
+    sub = sub_heading(heading)
+    vmax, step = axis_scale([r["y"] for s in v["series"] for r in s["values"]])
+    panels, tables = [], []
+    for s in v["series"]:
+        vals = s["values"]
+        ph = FLD.get(RMT_PANEL_LABELS.get(s["id"], ""), "") if many else ""
+        yearly = all(str(r["x"]).isdigit() and len(str(r["x"])) == 4 for r in vals)
+        amount = uniform(vals, lambda r: r.get("group_text")) if yearly else None
+        shapes = {}
+        head_state = uniform(vals, lambda r: r["state"]) or vals[0]["state"]
+        html_ = ['<div class="panel bars">' + (f'<{sub} class="ph">{esc(ph)}</{sub}>' if ph else "")
+                 + f'<p class="ph">{qual(esc(vals[0]["unit"]), esc(amount or ""), esc(state_label(v, head_state)))}</p>']
+        lanes = [("", vals)] if yearly else [(c, [x for x in vals if x["x_text"] == c]) for c in dict.fromkeys(r["x_text"] for r in vals)]
+        for c, lane in lanes:
+            rows = []
+            for r in lane:
+                shape = shapes.setdefault(r.get("group"), ["circle", "square", "diamond"][len(shapes) % 3])
+                x = _pct(r["y"], vmax=vmax)
+                label = bdi(str(r["x"])) if yearly else esc(r["group_text"])
+                rows.append(f'<div class="row"><div class="rl">{label}</div><svg class="trk" width="100%" height="34" aria-hidden="true" focusable="false" direction="ltr">'
+                            f'<line class="stem" x1="1%" y1="22" x2="{x:.2f}%" y2="22"/>{svg_mark(shape, f"{x:.2f}%", 22, 6)}<text class="val" x="{x:.2f}%" y="9" text-anchor="middle">{plain_num(r["y"])}</text></svg></div>')
+            html_.append('<div class="lane">' + (f'<h3>{esc(c)}</h3>' if c else "") + f'<div class="p1">{"".join(rows)}</div></div>')
+        html_.append('<div class="p1">' + axis_row(vmax, step) + "</div></div>")
+        panels.append("".join(html_))
+        state = uniform(vals, lambda r: r["state"])
+        if yearly:
+            rows = [[bdi(str(r["x"])), qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
+            head = [esc(th(v, "period")), esc(vals[0]["unit"])]
+        else:
+            rows = [[f'{esc(r["x_text"])} — {esc(r["group_text"])}', qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
+            head = [esc(th(v, "corridor")), esc(vals[0]["unit"])]
+        tables.append(table(caption_of(v, qual(esc(ph), esc(vals[0]["unit"]), esc(amount or ""), esc(state_label(v, state)) if state else "")), head, rows))
+    v = {**v, "frame_labels": {k: t for k, t in FLD.items() if k not in RMT_PANEL_LABELS.values()}}   # printed as panel headings, not again as notes
+    return frame_open(v, heading) + f'<div class="panels">{"".join(panels)}</div>' + frame_close(v, cite_label, origin, "".join(tables), heading=heading)
 
 
 # ------------------------------------------------------------------------------------------------ objects (VIS-PAYMENT-ANATOMY)

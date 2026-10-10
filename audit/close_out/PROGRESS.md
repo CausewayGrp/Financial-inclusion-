@@ -113,3 +113,5 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   name CBY-BANKS-2026-05 and CLM-033 (both closed to SRC-CBY-001); lineage: COMPOSITE_OF_OBJECTS 2 → 4,
   SOURCE_NOT_YET_BOUND back to 0. A corrective transaction, not a re-run: the working-tree reset was refused, and the
   audit trail stays append-only.
+- 2026-10-10 · A · W3c · PR #33 merged at `cf37e210` (9/9 CI; negative controls 6/6 shards). Closed: U4, U5.
+  Owner question recorded: /finance/ is not on CWR-011's domain surfaces (rule F2 caps an answer page at two Readings).
