@@ -3543,8 +3543,15 @@ try:
         _h = (DIST / _lang / "index.html").read_text(encoding="utf-8")
         _s3 = _h.split('id="s3"', 1)[1].split("</section>", 1)[0] if 'id="s3"' in _h else ""
         _first = re.search(r'<p class="sent">(.*?)</p>', _s3, re.S)
-        _d1 = re.search(r'(?:^|>)[^<]*?\d', _first.group(1)) if _first else None   # the sentence's first figure
-        if not _d1 or not _first.group(1)[:_d1.start() + 1].endswith('<b class="fnum">'):
+        # the group's first figure, as the renderer defines one (scripts/yfie/render.py _FIG: a year such as 2021 is
+        # not a figure); close-out CR-01: the adjudicated Home text (AR-001) names "Global Findex 2021" before 11.9%
+        _fh = _first.group(1) if _first else ""
+        _d1 = None
+        for _seg in re.finditer(r'(?:^|>)([^<]*)', _fh):
+            _fm = re.search(r'(?<![\d.,/:\-])(\d{1,3}(?:,\d{3})+(?:\.\d+)?%?|\d+\.\d+%?|\d+%|(?!(?:19|20)\d\d(?!\d))\d{3,})(?![\d/:\-]|[.,]\d)', _seg.group(1))
+            if _fm:
+                _d1 = _seg.start(1) + _fm.start(); break
+        if _d1 is None or not _fh[:_d1].endswith('<b class="fnum">'):
             errors.append(f"RC-1115 /{_lang}/ Home's first figure group does not carry an emphasised figure")
         _s6 = _h.split('id="s6"', 1)[1].split("</section>", 1)[0] if 'id="s6"' in _h else ""
         if f'href="/{_lang}/evidence/VIS-PAYMENT-RAILS/"' not in _s6:
@@ -3745,79 +3752,97 @@ try:
 except Exception as _x:
     errors.append("E2-PREC unreadable " + repr(_x))
 
-# FC-MOE (final content pass, FC-1; owner message of 4 October 2026, block A): the uncertainty of every published
-# Global Findex figure is quantified, printed at the same one-decimal precision as the figure itself, and never
-# presented as the publisher's own. This is the precision gate extended to the intervals, asserted on what a reader
-# sees and on the derivation rows the Master holds:
-# (1) edition 2's "not quantified here" is gone from every built page, in both languages;
-# (2) the two records that carried it print their derived interval, and say in their own language that this resource
-#     derived it and that clustering is not captured (an interval presented as the World Bank's would misattribute it);
-# (3) every CW-FINDEX-MOE-2022-* row carries a margin of error in percentage points, at one decimal place, with a
-#     point estimate, an interval that brackets that point estimate, and a base; and
-# (4) no interval bound a reader sees is printed to two or more decimal places.
-_FC_GONE = ("not quantified here", "\u0644\u0627 \u064a\u064f\u0642\u062f\u064e\u0631 \u0643\u0645\u064a\u064b\u0627 \u0647\u0646\u0627")
-_FC_SHOW = {"en": ("this resource derives them", "clustering is not captured"),
-            "ar": ("\u064a\u0633\u062a\u062e\u0631\u062c\u0647\u0627 \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0631\u062f", "\u0644\u0627 \u062a\u064f\u062d\u062a\u0633\u0628 \u0622\u062b\u0627\u0631 \u0627\u0644\u062a\u062c\u0645\u0651\u0639 \u0627\u0644\u0639\u0646\u0642\u0648\u062f\u064a")}
-# the bounds each record must print, as the derivation computed them (one decimal place)
-_FC_BOUNDS = {"CLM-002": ("3.2", "7.7", "14.6", "22.1", "8.5", "17.3"),
-              "VIS-FINDEX-GAPS": ("2.2", "3.9", "4.0", "4.6")}
+# CO-G03 (close-out CR-02, 10 October 2026) replaces FC-MOE. FC-MOE asserted the intervals that the final content pass
+# (FC-1) derived from the Global Findex respondent file. The World Bank publishes, for Yemen's survey, a design effect
+# (1.9) and a maximum margin of error (4.3 points) on 1,000 interviews (Findex 2021 Appendix A, Table A.1), and brief v5
+# forbids computing any figure from respondent-level data. So the rule changed: national shares carry a 95% interval
+# computed by CauseWay from the published value with the World Bank's formula and design effect; group shares and the
+# differences between groups carry none. Asserted on what a reader sees and on the rows the Master holds:
+# (1) no built page says the Findex uncertainty is "not quantified here", or carries a retired claim of the FC-1
+#     derivation ("clustering is not captured", "never narrower", "the World Bank publishes none" and their Arabic);
+# (2) no built page prints a withdrawn interval (the FC-1 bounds for groups, gaps and the old national bounds);
+# (3) the records that print the national intervals print the new bounds and say, in their own language, that
+#     CauseWay computed them and from the World Bank's design effect;
+# (4) the 17 CW-FINDEX-MOE-2022-* rows: the 5 national rows carry the margin the formula gives for their point estimate
+#     (to 0.1), the published design effect 1.9 and base 1,000, and an interval that brackets the estimate; the 12 group
+#     rows are WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN with no value.
+_CO3_GONE = ("not quantified here", "لا يُقدَر كميًا هنا",
+             "clustering is not captured", "never narrower", "the World Bank publishes none",
+             "publishes no standard error or confidence interval",
+             "لا تُحتسب آثار التجمّع العنقودي",
+             "أوسع لا أضيق",
+             "ولا ينشر البنك الدولي أي منها")
+_CO3_WITHDRAWN = ("3.2% to 7.7%", "14.6% to 22.1%", "8.5 to 17.3", "18.4% to 24.9%", "47.1% to 55.5%", "7.4% to 11.3%", "9.7% to 14.1%",
+                  "من 3.2% إلى 7.7%", "من 14.6% إلى 22.1%", "من 8.5 إلى 17.3",
+                  "من 18.4% إلى 24.9%", "من 47.1% إلى 55.5%", "من 7.4% إلى 11.3%")
+_CO3_SHOW = {"CLM-026": ("18.1", "25.2", "47.0", "55.6", "6.8", "11.8"), "VIS-FINDEX-ACCESS-USE": ("6.8", "11.8"),
+             "VIS-FINDEX-GAPS": ("2.8",)}
+# who computed it and from what, in the record's own words (the colophon names CauseWay on every page, so the attribution
+# is matched as a phrase, not as the name alone)
+_CO3_SAY = {"en": (r"computed by CauseWay", r"design effect"),
+            "ar": (r"(?:احتساب|تحتسب\w*) CauseWay", r"أثر التصميم")}
 try:
+    _co3_n = 0
     for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
         _rel = _f.relative_to(DIST).as_posix()
         if not _rel.startswith(("en/", "ar/")):
             continue
-        _txt = _visible(_f)
-        for _g in _FC_GONE:
+        _co3_n += 1
+        _txt = _visible(_f).replace("⁦", "").replace("⁩", "")
+        for _g in _CO3_GONE:
             if _g in _txt:
-                errors.append(f"FC-MOE {_rel} still says the Findex uncertainty is not quantified: {_g!r}")
-    _nfc = 0
-    for _rid, _bounds in _FC_BOUNDS.items():
+                errors.append(f"CO-G03 {_rel} carries a retired Findex-uncertainty claim: {_g!r}")
+        for _w in _CO3_WITHDRAWN:
+            if _w in _txt:
+                errors.append(f"CO-G03 {_rel} prints a withdrawn Findex interval: {_w!r}")
+    if _co3_n < 280:
+        errors.append(f"CO-G03 read only {_co3_n} pages")
+    for _rid, _bounds in _CO3_SHOW.items():
         for _lang in ("en", "ar"):
             _f = DIST / _lang / "evidence" / _rid / "index.html"
             if not _f.exists():
-                errors.append(f"FC-MOE {_lang}/evidence/{_rid}/ is not built")
+                errors.append(f"CO-G03 {_lang}/evidence/{_rid}/ is not built")
                 continue
-            _nfc += 1
-            _txt = _visible(_f).replace("\u2066", "").replace("\u2069", "")
+            _txt = _visible(_f).replace("⁦", "").replace("⁩", "")
             for _b in _bounds:
                 if not re.search(r"(?<![\d,.])" + re.escape(_b) + r"(?![\d,])", _txt):
-                    errors.append(f"FC-MOE {_lang}/evidence/{_rid}/ does not print the derived bound {_b}")
-            for _s in _FC_SHOW[_lang]:
-                if _s not in _txt:
-                    errors.append(f"FC-MOE {_lang}/evidence/{_rid}/ prints a derived interval without saying {_s!r}")
-    if _nfc != 4:
-        errors.append(f"FC-MOE read only {_nfc} of the 4 record pages that carry a derived interval")
+                    errors.append(f"CO-G03 {_lang}/evidence/{_rid}/ does not print the computed bound {_b}")
+            for _s in _CO3_SAY[_lang]:
+                if not re.search(_s, _txt):
+                    errors.append(f"CO-G03 {_lang}/evidence/{_rid}/ prints a computed interval without saying {_s!r}")
     _fbr = json.load(open(ROOT / "site-src/content/data/findex_baseline.json", encoding="utf-8"))["rows"]
     _fhi = next(i for i, r in enumerate(_fbr) if r and r[0] == "observation_id")
-    _moe = [dict(zip(_fbr[_fhi], r)) for r in _fbr[_fhi + 1:]
-            if r and str(r[0]).startswith("CW-FINDEX-MOE-2022-")]
+    _moe = [dict(zip(_fbr[_fhi], r)) for r in _fbr[_fhi + 1:] if r and str(r[0]).startswith("CW-FINDEX-MOE-2022-")]
     if len(_moe) != 17:
-        errors.append(f"FC-MOE the Master holds {len(_moe)} derivation rows, expected 17")
+        errors.append(f"CO-G03 the Master holds {len(_moe)} derivation rows, expected 17")
+    _co3_nat = {"CW-FINDEX-MOE-2022-001", "CW-FINDEX-MOE-2022-014", "CW-FINDEX-MOE-2022-015", "CW-FINDEX-MOE-2022-016", "CW-FINDEX-MOE-2022-017"}
     for _r in _moe:
         _id = _r["observation_id"]
-        if "percentage points" not in str(_r.get("unit") or ""):
-            errors.append(f"FC-MOE {_id} does not state its unit as percentage points")
-        if "CauseWay" not in str(_r.get("publisher") or ""):
-            errors.append(f"FC-MOE {_id} does not name CauseWay as the publisher of the derivation")
-        if not re.fullmatch(r"\d+\.\d", str(_r.get("value"))):
-            errors.append(f"FC-MOE {_id} margin of error {_r.get('value')!r} is not one decimal place")
         _cv = str(_r.get("caveat") or "")
-        _pt = re.search(r"(?:Point estimate|Difference of the two printed shares) (\d+\.\d)", _cv)
-        _ci = re.search(r"95% confidence interval (\d+\.\d)%? to (\d+\.\d)%?", _cv)
-        if not _pt or not _ci:
-            errors.append(f"FC-MOE {_id} does not record a point estimate and a 95% interval")
-            continue
-        _p, _lo, _hi = float(_pt.group(1)), float(_ci.group(1)), float(_ci.group(2))
-        if not _lo < _p < _hi:
-            errors.append(f"FC-MOE {_id} interval {_lo}-{_hi} does not bracket its point estimate {_p}")
-        if abs((_hi - _lo) / 2 - float(_r["value"])) > 0.1:
-            errors.append(f"FC-MOE {_id} margin of error {_r['value']} does not match its interval {_lo}-{_hi}")
-        if "base" not in _cv and "respondents" not in _cv:
-            errors.append(f"FC-MOE {_id} does not state the base the interval was computed on")
-        if "clustering is not captured" not in _cv:
-            errors.append(f"FC-MOE {_id} does not state that clustering is not captured")
+        if _id in _co3_nat:
+            _pt = re.search(r"Point estimate (\d+\.\d)%", _cv)
+            _ci = re.search(r"95% confidence interval (\d+\.\d)% to (\d+\.\d)%", _cv)
+            _pu = re.search(r"published unrounded value p \((\d+\.\d+)\)", _cv)
+            if not (_pt and _ci and _pu):
+                errors.append(f"CO-G03 {_id} does not record its estimate, interval and published value")
+                continue
+            _p = float(_pu.group(1))
+            _m = 1.96 * (1.9 ** 0.5) * ((_p / 100 * (1 - _p / 100) / 1000) ** 0.5) * 100
+            if abs(float(_r.get("value") or 0) - round(_m, 1)) > 0.05:
+                errors.append(f"CO-G03 {_id} margin {_r.get('value')!r} is not the World Bank formula's {round(_m, 1)}")
+            _lo, _hi = float(_ci.group(1)), float(_ci.group(2))
+            if not (_lo < float(_pt.group(1)) < _hi) or abs(_lo - round(_p - _m, 1)) > 0.05 or abs(_hi - round(_p + _m, 1)) > 0.05:
+                errors.append(f"CO-G03 {_id} interval {_lo}-{_hi} is not the computed interval")
+            for _need in ("design effect 1.9", "1,000", "CauseWay computation", "No respondent-level data are used"):
+                if _need not in _cv:
+                    errors.append(f"CO-G03 {_id} caveat does not say {_need!r}")
+            if "CauseWay" not in str(_r.get("publisher") or ""):
+                errors.append(f"CO-G03 {_id} does not name CauseWay as the publisher of the computation")
+        else:
+            if _r.get("evidence_state") != "WITHDRAWN__NO_PUBLISHED_GROUP_DESIGN" or _r.get("value") not in (None, ""):
+                errors.append(f"CO-G03 {_id} is a group interval that is not withdrawn")
 except Exception as _x:
-    errors.append("FC-MOE unreadable " + repr(_x))
+    errors.append("CO-G03 unreadable " + repr(_x))
 
 # E2-CTX (edition 2, candidate c; REOPEN-INTL): the one same-source context figure beside Yemen's account ownership,
 # the World Bank's low-income aggregate for the same Findex wave (35.2%), is never shown bare. Asserted on what a reader

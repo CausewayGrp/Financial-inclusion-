@@ -1239,6 +1239,8 @@ class Content:
                 "lead": secs[0]["body"] if secs and not secs[0]["heading"] else "", "sections": [s for s in secs if s["heading"]],
                 "curated": list(curated_groups.values()), "supporting": supporting, "reference": reference,
                 "curated_count": sum(len(v["items"]) for v in curated_groups.values()), "chronology": self.chronology(lang), "blocks": self.governed_blocks(spec, lang, "/data"),
+                # the group counts the page prints are handed over with the groups (the page prints no number the loader does not)
+                "regulatory_count": len(regulatory) + len(regulatory_also), "supporting_count": len(supporting), "reference_count": len(reference),
                 "next": self.journey_next("/data/", lang),
                 "labels": {**self.common_labels(lang), "directory": L("UI-DATA-SOURCE-DIRECTORY-AND-VERIFICATION"), "intro": L("UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY"),
                            "curated": L("UI-DATA-CURATED-REPORTS-AND-REFERENCES"), "supporting": L("UI-DATA-SOURCES-SUPPORTING-CURRENT-PUBLIC-EVIDENCE"),

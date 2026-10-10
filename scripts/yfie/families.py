@@ -408,7 +408,7 @@ def data_sources(page: dict, shell: dict) -> str:
     also = "".join(f'<p class="src-also" data-source-also data-source-search="{esc(c["search"])}"{facet_attrs(c)}><a href="#source-{esc(c["id"])}" dir="auto">{esc(c["title"])}</a>'
                    f' <span class="kind" dir="auto">{esc(c["kind_line"])} · {esc(L["curated"])}</span></p>' for c in page.get("regulatory_also") or [])
     regulatory = "".join(source_row(c, L) for c in page.get("regulatory") or [])
-    reg_n = len(page.get("regulatory") or []) + len(page.get("regulatory_also") or [])
+    reg_n = page["regulatory_count"]
     reference = "".join(source_row(c, L) for c in page["reference"])
     tool = (f'<section class="qa first" id="directory"><div>{rubric(L["directory"], tag="h2")}</div><div><p class="small">{esc(L["intro"])}</p><p class="small">{esc(L["rights_note"])}</p>'
             f'<div class="search-inline"><input data-source-filter class="search-input" type="search" placeholder="{esc(L["filter_placeholder"])}" aria-label="{esc(L["filter"])}">'
@@ -423,8 +423,8 @@ def data_sources(page: dict, shell: dict) -> str:
             # `scripts/tests/test_public_tools.py` drives that source's cite control on this page. Closing it by
             # default shortened the page by 44 % but put that governed path behind a disclosure, and Design does not
             # weaken a repository test to let its own change pass — DEBT-011 stays open (DL-D7-013).
-            f'<details class="source-locator-details source-supporting-details grp" open><summary>{esc(L["supporting"])} <span class="count">({bdi(len(page["supporting"]))})</span></summary><p class="small">{esc(L["supporting_intro"])}</p><div class="objs">{supporting}</div></details>'
-            f'<details class="source-locator-details source-reference-details grp"><summary>{esc(L["reference_group"])} <span class="count">({bdi(len(page["reference"]))})</span></summary><p class="small">{esc(L["reference_intro"])}</p><div class="objs">{reference}</div></details>'
+            f'<details class="source-locator-details source-supporting-details grp" open><summary>{esc(L["supporting"])} <span class="count">({bdi(page["supporting_count"])})</span></summary><p class="small">{esc(L["supporting_intro"])}</p><div class="objs">{supporting}</div></details>'
+            f'<details class="source-locator-details source-reference-details grp"><summary>{esc(L["reference_group"])} <span class="count">({bdi(page["reference_count"])})</span></summary><p class="small">{esc(L["reference_intro"])}</p><div class="objs">{reference}</div></details>'
             f'<div class="empty small" data-source-no-results hidden>{esc(L["no_results"])}</div></div></section>')
     parts.append(tool)
     index = [("directory", L["directory"])] + [(f"shelf-{g['key']}", g["category"]) for g in page["curated"] if g["key"] == METHODS_SHELF]

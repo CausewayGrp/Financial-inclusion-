@@ -714,8 +714,8 @@
       },
       {
         "source_id": "SRC-CCY-PRESSURE-2026",
-        "primary_url": null,
-        "metadata_state": "LOCATOR_ONLY"
+        "primary_url": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026",
+        "metadata_state": "DISPLAY_READY"
       },
       {
         "source_id": "SRC-AIDDATA-SAUDI-YEM-2015",
@@ -3761,13 +3761,16 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-CBY-AR2025-BOP",
-      "EP-YEM-BOP-RESIDUAL-K04"
+      "EP-YEM-BOP-RESIDUAL-K04",
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
     ],
     "direct_source_ids": [
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -3778,6 +3781,11 @@
       {
         "source_id": "SRC-CBY-AR2025-BOP",
         "primary_url": "https://english.cby-ye.com/files/6a54b8fcd8b68.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -3881,11 +3889,10 @@
       "/reforms/",
       "/finance/"
     ],
-    "lineage_state": "BOUND_PARTIAL",
+    "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-AIDDATA-SAUDI-YEM-2015",
       "EP-SAUDI-SUPPORT-FLOWSTATE-K04",
-      "DS-K04-SAUDI-SUPPORT-TRANSMISSION",
       "SRC-SPA-SAU-CBY-DEPOSIT-2018-001",
       "SRC-SPA-SAU-CBY-DEPOSIT-2023-001",
       "SRC-SPA-SAU-BUDGET-2026-001"
@@ -3906,9 +3913,7 @@
     "context_reference_ids": [
       "EP-SAUDI-SUPPORT-FLOWSTATE-K04"
     ],
-    "unresolved_dependency_ids": [
-      "DS-K04-SAUDI-SUPPORT-TRANSMISSION"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-AIDDATA-SAUDI-YEM-2015",
@@ -3931,7 +3936,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
   },
   {
@@ -4030,13 +4035,16 @@
     ],
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
-      "SRC-IMF-YEM-SMP-2026"
+      "SRC-IMF-YEM-SMP-2026",
+      "SRC-IMF-YEM-SMP-2026-APPROVAL"
     ],
     "direct_source_ids": [
-      "SRC-IMF-YEM-SMP-2026"
+      "SRC-IMF-YEM-SMP-2026",
+      "SRC-IMF-YEM-SMP-2026-APPROVAL"
     ],
     "resolved_source_ids": [
-      "SRC-IMF-YEM-SMP-2026"
+      "SRC-IMF-YEM-SMP-2026",
+      "SRC-IMF-YEM-SMP-2026-APPROVAL"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -4045,6 +4053,11 @@
       {
         "source_id": "SRC-IMF-YEM-SMP-2026",
         "primary_url": "https://www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IMF-YEM-SMP-2026-APPROVAL",
+        "primary_url": "https://www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -4289,12 +4302,11 @@
       "/finance/",
       "/evidence/compare/"
     ],
-    "lineage_state": "BOUND_PARTIAL",
+    "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-SANAA-MFB-2024",
       "SRC-SANAA-YR-2025-Q2-MFB",
-      "CON-057",
-      "DS-V041-STRICT-COUNSEL"
+      "CON-057"
     ],
     "direct_source_ids": [
       "SRC-SANAA-MFB-2024",
@@ -4308,9 +4320,7 @@
     "context_reference_ids": [
       "CON-057"
     ],
-    "unresolved_dependency_ids": [
-      "DS-V041-STRICT-COUNSEL"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-SANAA-MFB-2024",
@@ -4323,7 +4333,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
   },
   {
@@ -4724,12 +4734,11 @@
       "/evidence/",
       "/methodology/"
     ],
-    "lineage_state": "BOUND_PARTIAL",
+    "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-WB-WDI-REMIT-YEM-CURRENT",
       "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
-      "CON-045",
-      "DS-K04-REMIT-SOURCE-LENSES"
+      "CON-045"
     ],
     "direct_source_ids": [
       "SRC-WB-WDI-REMIT-YEM-CURRENT"
@@ -4742,9 +4751,7 @@
       "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
       "CON-045"
     ],
-    "unresolved_dependency_ids": [
-      "DS-K04-REMIT-SOURCE-LENSES"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-WB-WDI-REMIT-YEM-CURRENT",
@@ -4752,7 +4759,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
   },
   {
@@ -6761,7 +6768,7 @@
       "/evidence/",
       "/methodology/"
     ],
-    "lineage_state": "BOUND_PARTIAL",
+    "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "182_REMITTANCE_SOURCE_LENSES",
       "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
@@ -6779,9 +6786,7 @@
       "EP-WB-WDI-REMITTANCE-VINTAGE-K04",
       "CON-045"
     ],
-    "unresolved_dependency_ids": [
-      "DS-K04-REMIT-SOURCE-LENSES"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-WB-WDI-REMIT-YEM-CURRENT",
@@ -6789,7 +6794,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
     "lineage_from": "CLM-039"
   },
@@ -6926,10 +6931,12 @@
       "CLM-043"
     ],
     "direct_source_ids": [
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
     ],
     "resolved_source_ids": [
-      "SRC-CBY-AR2025-BOP"
+      "SRC-CBY-AR2025-BOP",
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -6940,6 +6947,11 @@
       {
         "source_id": "SRC-CBY-AR2025-BOP",
         "primary_url": "https://english.cby-ye.com/files/6a54b8fcd8b68.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7010,7 +7022,7 @@
       "/reforms/",
       "/finance/"
     ],
-    "lineage_state": "BOUND_PARTIAL",
+    "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "190",
       "EP-SAUDI-SUPPORT-FLOWSTATE-K04",
@@ -7032,9 +7044,7 @@
     "context_reference_ids": [
       "EP-SAUDI-SUPPORT-FLOWSTATE-K04"
     ],
-    "unresolved_dependency_ids": [
-      "DS-K04-SAUDI-SUPPORT-TRANSMISSION"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-AIDDATA-SAUDI-YEM-2015",
@@ -7057,7 +7067,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
     "lineage_from": "CLM-046"
   },
@@ -7164,10 +7174,12 @@
       "CLM-049"
     ],
     "direct_source_ids": [
-      "SRC-IMF-YEM-SMP-2026"
+      "SRC-IMF-YEM-SMP-2026",
+      "SRC-IMF-YEM-SMP-2026-APPROVAL"
     ],
     "resolved_source_ids": [
-      "SRC-IMF-YEM-SMP-2026"
+      "SRC-IMF-YEM-SMP-2026",
+      "SRC-IMF-YEM-SMP-2026-APPROVAL"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -7176,6 +7188,11 @@
       {
         "source_id": "SRC-IMF-YEM-SMP-2026",
         "primary_url": "https://www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IMF-YEM-SMP-2026-APPROVAL",
+        "primary_url": "https://www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7435,7 +7452,7 @@
       "/finance/",
       "/evidence/compare/"
     ],
-    "lineage_state": "BOUND_PARTIAL",
+    "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "201",
       "CON-057",
@@ -7454,9 +7471,7 @@
     "context_reference_ids": [
       "CON-057"
     ],
-    "unresolved_dependency_ids": [
-      "DS-V041-STRICT-COUNSEL"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-SANAA-MFB-2024",
@@ -7469,7 +7484,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
     "lineage_from": "CLM-056"
   },
@@ -7691,6 +7706,7 @@
       "SRC-CBY-AR2023-001",
       "SRC-IMF-D4D-YEM-ESS-2025",
       "SRC-IMF-YEM-AIV-2025-2026",
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
       "SRC-CCY-REMIT-ESTIMATE-2025"
     ],
     "resolved_via_object_ids": [
@@ -7738,6 +7754,11 @@
       {
         "source_id": "SRC-IMF-YEM-AIV-2025-2026",
         "primary_url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1yemea2026001-source-pdf.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8178,9 +8199,7 @@
       "CON-057",
       "CON-058"
     ],
-    "unresolved_dependency_ids": [
-      "CLM-056"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-SANAA-MF-2020",
@@ -8228,7 +8247,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
   },
   {
@@ -9847,6 +9866,7 @@
       "SRC-CBY-AR2023-001",
       "SRC-IMF-D4D-YEM-ESS-2025",
       "SRC-IMF-YEM-AIV-2025-2026",
+      "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
       "SRC-CCY-REMIT-ESTIMATE-2025"
     ],
     "resolved_via_object_ids": [
@@ -9894,6 +9914,11 @@
       {
         "source_id": "SRC-IMF-YEM-AIV-2025-2026",
         "primary_url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1yemea2026001-source-pdf.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -10325,9 +10350,7 @@
       "CON-057",
       "CON-058"
     ],
-    "unresolved_dependency_ids": [
-      "CLM-056"
-    ],
+    "unresolved_dependency_ids": [],
     "source_locators": [
       {
         "source_id": "SRC-SANAA-MF-2020",
@@ -10375,7 +10398,7 @@
         "metadata_state": "DISPLAY_READY"
       }
     ],
-    "closure_state": "PARTIALLY_RESOLVED",
+    "closure_state": "CLOSED_TO_SOURCE_ID",
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
     "lineage_from": "CWR-006"
   },

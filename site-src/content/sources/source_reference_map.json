@@ -1852,7 +1852,7 @@
   {
     "source_id": "SRC-WB-FINDEX-001",
     "primary_url": "https://microdata.worldbank.org/catalog/5862",
-    "additional_urls": null,
+    "additional_urls": "[\"https://thedocs.worldbank.org/en/doc/fe026d04da1eb78f5ce8bb5e1529d60b-0430062023/original/Findex2021-22-Methodology.pdf\"]",
     "datasets_or_use": "DS-FINDEX-META, DS-FINDEX-VARS, DS-FINDEX-WAVES, DS-FINDEX-RULES, DS-FINDEX-PANEL-CATALOG, DS-FINDEX-SUBGROUP-MATRIX, DS-FINDEX-DENOMINATOR-STRESS, DS-FINDEX-MICRODATA-GATE",
     "row_count": 401,
     "metadata_state": "DISPLAY_READY",
@@ -4739,19 +4739,19 @@
   },
   {
     "source_id": "SRC-CCY-PRESSURE-2026",
-    "primary_url": null,
-    "additional_urls": null,
+    "primary_url": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026",
+    "additional_urls": "[\"https://reliefweb.int/attachments/329ba888-6c77-46c3-b920-e0ca0d5ab982/Economic%20Impact%20of%20Iran-US%20War%20on%20Yemen_May%202026.pdf\"]",
     "datasets_or_use": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-CASH-FIN-TRANSMISSION",
     "row_count": 2,
-    "metadata_state": "LOCATOR_ONLY",
+    "metadata_state": "DISPLAY_READY",
     "standalone_resource_card_eligible": false,
-    "display_title": null,
-    "display_title_ar": null,
-    "publisher": null,
-    "publisher_ar": null,
-    "document_label": null,
-    "document_label_ar": null,
-    "document_date": null,
+    "display_title": "Yemen Under Pressure: How the Iran-US Conflict Is Disrupting Trade, Prices, and Cash Access (May 2026)",
+    "display_title_ar": "اليمن تحت الضغط: كيف يُخلّ الصراع بين إيران والولايات المتحدة بالتجارة والأسعار والوصول إلى النقد (مايو 2026)",
+    "publisher": "Cash Consortium of Yemen (CCY)",
+    "publisher_ar": "Cash Consortium of Yemen (CCY)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2026-05",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -6261,7 +6261,7 @@
   {
     "source_id": "SRC-WB-YEM-ECON-MONITOR-2026-SPRING-001",
     "primary_url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
-    "additional_urls": "[\"https://www.worldbank.org/en/programs/the-yemen-fund\"]",
+    "additional_urls": "[\"https://www.worldbank.org/en/programs/the-yemen-fund\", \"https://documents1.worldbank.org/curated/en/099630405192627146/pdf/IDU-915b334e-33e9-407b-b634-2ee6167b4790.pdf\"]",
     "datasets_or_use": "RESOURCE_LIBRARY_ONLY__CURRENT_YEMEN_MACRO_CONTEXT",
     "row_count": 0,
     "metadata_state": "DISPLAY_READY",
@@ -6284,10 +6284,18 @@
     "evidence_roles": null,
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
-    "linked_evidence_object_ids": [],
-    "linked_claim_ids": [],
-    "linked_reading_ids": [],
-    "linked_visual_ids": [],
+    "linked_evidence_object_ids": [
+      "CLM-043"
+    ],
+    "linked_claim_ids": [
+      "CLM-043"
+    ],
+    "linked_reading_ids": [
+      "CWR-001"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-001"
+    ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
@@ -6538,6 +6546,43 @@
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [],
     "linked_claim_ids": [],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-IMF-YEM-SMP-2026-APPROVAL",
+    "primary_url": "https://www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen",
+    "additional_urls": null,
+    "datasets_or_use": "DS-V4R3-SYSTEM-CHRONOLOGY",
+    "row_count": 1,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Yemen: IMF Management approves a Staff-Monitored Program (7 October 2026)",
+    "display_title_ar": "اليمن: إدارة صندوق النقد الدولي توافق على برنامج يراقبه خبراء الصندوق (7 أكتوبر 2026)",
+    "publisher": "International Monetary Fund",
+    "publisher_ar": "صندوق النقد الدولي",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": "2026-10-07",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "CLM-049"
+    ],
+    "linked_claim_ids": [
+      "CLM-049"
+    ],
     "linked_reading_ids": [],
     "linked_visual_ids": [],
     "linked_measurement_ids": [],

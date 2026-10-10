@@ -26,8 +26,13 @@ from .visuals import figure, num  # noqa: E402
 
 CUR = ' aria-current="page"'
 SENT = re.compile(r"(?<=[.؟?!])\s+(?=[A-Z«؀-ۿ])")
-GROUP_STARTS = ("In the same survey", "Separately,", "These are different measures", "وفي المسح نفسه", "وبصورة منفصلة", "هذه مقاييس مختلفة")
-RESOLUTION = ("These are different measures", "هذه مقاييس مختلفة")
+GROUP_STARTS = ("In the same survey", "Separately,", "These are different measures", "وفي المسح نفسه", "وبصورة منفصلة", "هذه مقاييس مختلفة",
+                # close-out CR-01 (register row AR-001, adjudicated wording of Home section 3, 10 October 2026)
+                "In separate administrative data", "The first measure concerns", "وفي بيانات إدارية منفصلة", "المقياس الأول يخص")
+RESOLUTION = ("These are different measures", "هذه مقاييس مختلفة", "The first measure concerns", "المقياس الأول يخص")
+# A framing sentence that opens the paragraph and carries no figure of its own (AR-001: "No single figure is enough …")
+# is printed as its own lead line, so the first figure group still opens with the finding.
+LEAD = ("No single figure is enough", "لا تكفي نسبة واحدة")
 
 
 from .text import ID_RUN, bdi, esc, isolate_document, isolate_iso as iso, isolate_plain  # noqa: E402  (one text layer for every renderer, D6; `iso` takes escaped text)
@@ -319,6 +324,9 @@ def paced_groups(text: str) -> list[tuple[bool, str]]:
     measure; the last group is the resolution). Words and order intact. Falls back to the whole paragraph when no
     connective is found (DEBT-008)."""
     sents = [x.strip() for x in SENT.split(text) if x.strip()]
+    lead = []
+    if sents and sents[0].startswith(LEAD):
+        lead = [(True, f'<p class="sent lead">{esc(sents.pop(0))}</p>')]   # no record follows a lead line
     groups, cur = [], []
     for s in sents:
         if cur and s.startswith(GROUP_STARTS):
@@ -328,7 +336,7 @@ def paced_groups(text: str) -> list[tuple[bool, str]]:
         groups.append(cur)
     if len(groups) < 2:
         return [(False, f"<p>{esc(text)}</p>")]
-    return [(g[0].startswith(RESOLUTION), f'<p class="{"sent res" if g[0].startswith(RESOLUTION) else "sent"}">{" ".join(esc(x) for x in g)}</p>') for g in groups]
+    return lead + [(g[0].startswith(RESOLUTION), f'<p class="{"sent res" if g[0].startswith(RESOLUTION) else "sent"}">{" ".join(esc(x) for x in g)}</p>') for g in groups]
 
 
 # ------------------------------------------------------------------------------------------------ pages

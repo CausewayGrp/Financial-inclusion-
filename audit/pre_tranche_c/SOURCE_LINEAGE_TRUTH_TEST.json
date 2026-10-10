@@ -2,35 +2,30 @@
  "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
  "as_of": "Pre-Tranche-C P5",
  "evidence_record_lineage_state_counts": {
-  "BOUND_EXACT": 93,
+  "BOUND_EXACT": 96,
   "COMPOSITE_OF_OBJECTS": 13,
-  "FRAMING_NO_FACT": 1,
-  "BOUND_PARTIAL": 3
+  "FRAMING_NO_FACT": 1
  },
  "closure_state_counts_by_object_type": {
   "evidence_object": {
-   "CLOSED_TO_SOURCE_ID": 93,
+   "CLOSED_TO_SOURCE_ID": 96,
    "COMPOSITE_MEMBERS_NOT_LISTED": 8,
    "COMPOSITE_OF_OBJECTS": 5,
-   "FRAMING_NO_FACT": 1,
-   "PARTIALLY_RESOLVED": 3
+   "FRAMING_NO_FACT": 1
   },
   "public_claim": {
-   "CLOSED_TO_SOURCE_ID": 54,
+   "CLOSED_TO_SOURCE_ID": 57,
    "FRAMING_NO_FACT": 1,
    "COMPOSITE_MEMBERS_NOT_LISTED": 1,
-   "COMPOSITE_OF_OBJECTS": 1,
-   "PARTIALLY_RESOLVED": 3
+   "COMPOSITE_OF_OBJECTS": 1
   },
   "reading": {
-   "CLOSED_TO_SOURCE_ID": 10,
-   "PARTIALLY_RESOLVED": 1
+   "CLOSED_TO_SOURCE_ID": 11
   },
   "visual": {
-   "CLOSED_TO_SOURCE_ID": 26,
+   "CLOSED_TO_SOURCE_ID": 27,
    "COMPOSITE_MEMBERS_NOT_LISTED": 7,
-   "COMPOSITE_OF_OBJECTS": 2,
-   "PARTIALLY_RESOLVED": 1
+   "COMPOSITE_OF_OBJECTS": 2
   },
   "measurement": {
    "NO_DIRECT_SOURCE_BINDING": 10
@@ -164,27 +159,6 @@
    "state": "COMPOSITE_MEMBERS_NOT_LISTED",
    "open_inputs": [],
    "members": []
-  },
-  "CLM-046": {
-   "state": "PARTIALLY_RESOLVED",
-   "open_inputs": [
-    "DS-K04-SAUDI-SUPPORT-TRANSMISSION"
-   ],
-   "members": []
-  },
-  "CLM-056": {
-   "state": "PARTIALLY_RESOLVED",
-   "open_inputs": [
-    "DS-V041-STRICT-COUNSEL"
-   ],
-   "members": []
-  },
-  "CLM-039": {
-   "state": "PARTIALLY_RESOLVED",
-   "open_inputs": [
-    "DS-K04-REMIT-SOURCE-LENSES"
-   ],
-   "members": []
   }
  },
  "assertions": [
@@ -206,10 +180,7 @@
    "detail": {
     "dataset_tokens_on_records": [
      "DS-FCP-ARCH",
-     "DS-FINDEX-PUBLIC-HISTORY",
-     "DS-K04-REMIT-SOURCE-LENSES",
-     "DS-K04-SAUDI-SUPPORT-TRANSMISSION",
-     "DS-V041-STRICT-COUNSEL"
+     "DS-FINDEX-PUBLIC-HISTORY"
     ],
     "member_record_references": [
      "DS-FINDEX-HISTORY-CROSSWALK -> DS-FINDEX-PUBLIC-HISTORY",

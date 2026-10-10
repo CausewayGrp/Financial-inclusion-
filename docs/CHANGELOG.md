@@ -1,5 +1,68 @@
 # Repository Change Log
 
+## 2026-10-10 — CLOSE-2B: the rest of Appendix A read in the originals (Stage A, W3b)
+
+Master `eaa603586d76` → `7c70b5f766b8`, 219 cells (`audit/close_out/close_2b.py`; ledger and run report in
+`audit/close_out/runs/`), plus the controlled visual contract (one new state). English and Arabic change together; the
+new Arabic was read by an independent Arabic editor before the run (9 findings, all applied).
+
+- **CR-05, IMF remittances (MATERIAL).** IMF Country Report No. 26/80, Annex IV (printed p.41): the 2018–2024
+  personal transfers are estimates from a demographic and behavioural model, with 33% of the modelled total allocated
+  to areas under the internationally recognized government by population ratio. They were labelled "reported
+  history" with geography "Yemen". Relabelled as model-based estimates for IRG areas everywhere (23_REMITTANCES
+  state `MODEL_ESTIMATE`, geography and caveats; CLM-007; VIS-REMITTANCE-MACRO in 06 and 11; /remittances/ §2; the
+  evidence passport; the visual contract maps the new state to "Estimate — not an observation"). Values unchanged.
+- **CR-07, SMP status.** IMF Management approved an 18-month non-financing Staff-Monitored Program with Yemen on
+  7 October 2026 (new source SRC-IMF-YEM-SMP-2026-APPROVAL). CLM-049 and /reforms/ §7 now say so; the 16 July 2026
+  release was re-read (its values move from unreachable to read, in CLM-049 and in chronology event YSC-023).
+- **CR-08, NPL statement.** /finance/ §6 now says what the IMF publishes (CR 26/80 Table 5) and its limits: the
+  zeros for 2014–2019 are read as not reported, coverage is not stated, no bank is named, no ratio is charted.
+- **CR-09, untraced inputs.** CLM-039, CLM-046 and CLM-056 print no figure from their internal dataset input; the
+  dataset tokens leave their dependencies and the three records are bound exactly to their listed sources.
+- **CR-11.** The Cash Consortium of Yemen report of May 2026 gets its ReliefWeb locator and a citation card.
+- **CR-13.** The H1-2025 sex-composition shares are re-attached to their panels (81/18/1 accounts; 84/16 e-wallet
+  subscribers) in 17_INDICATOR_LIBRARY and 19_PAYMENTS_DATA (not yet public; U6 in CLOSE-3).
+- **CR-15.** CLM-043 sets the World Bank's "the CBY has discontinued remittance data production" (Yemen Economic
+  Monitor, Spring 2026, p.7) beside the CBY-Aden Annual Report 2025 line it uses.
+- **CR-16.** The OECD/INFE scores 15 and 42 are printed labels in Figures 4.1 and 2.1, recorded in the value states.
+- **CR-19 (D10).** The 91% share of saver growth is in a secondary source only: CLM-056, its page description and
+  the microfinance Reading describe one microfinance bank and no longer name it.
+- **CR-20.** Deposit-insurance law: the certified copy is Law No. 21 of 2008; Decision 6 of 2025 (a head-office
+  relocation) cites No. 40 in its recital. Hold CON-038 closed with both recorded.
+- **Register.** AR-022, ED-035 and ED-036 applied as written (the bank list has no type column and no printed date);
+  CLM-055 says the same, and its count of 12 is recorded as derived by name.
+- **E2 label.** /finance/ §2 now states itself that the SFD terms of reference dating microfinance to 1997 could not
+  be re-opened (4 and 10 October 2026); the July SMP note had been the page's only such label.
+
+## 2026-10-10 — CLOSE-2A: Global Findex corrections read in the originals (Stage A, W3b)
+
+Master `250586ce71ee` → `eaa603586d76`, 121 cells (`audit/close_out/close_2a.py`; ledger and run report in
+`audit/close_out/runs/`). English and Arabic change together; the new Arabic was read by an independent Arabic editor
+before the run (11 fixes and 2 optional changes applied).
+
+- **CR-01, mobile money (MATERIAL).** In Yemen's Global Findex 2021 study the mobile-money questions were not asked:
+  the World Bank's open series give fiaccount.t.d = account.t.d = 11.9 and an empty mobileaccount.t.d, and the public
+  DDI pages of the study show no valid case for any mobile-money item. The 11.9% is therefore no longer described as
+  including mobile-money providers (Home, CLM-001, VIS-FINDEX-GAPS, CLM-027); CLM-001's method records the evidence and
+  its change trigger, and MA-001's guardrail, warn that a later survey asking those questions may show a rise caused by
+  the questionnaire. Register rows **AR-001** (Home §3) and **AR-042** (CLM-001) applied with their confirmed wording.
+- **CR-02, uncertainty (MATERIAL).** The World Bank does publish, for the survey (Findex 2021 Appendix A, Table A.1), a
+  design effect of 1.9 and a maximum margin of error of 4.3 points on 1,000 interviews. Under brief v5 the intervals
+  are re-stated only from published values: national shares carry a 95% interval computed by CauseWay with the World
+  Bank's own formula and design effect (account 9.1–14.7%, saved 18.1–25.2%, borrowed 47.0–55.6%, digital payment
+  6.8–11.8%); the intervals for groups and for the differences between them are withdrawn (12 rows), because the design
+  effect is published for the whole sample only. /methodology/ §7 (**ED-034**, written to the v5 rule) and /rights/ §6
+  (**AR-NEW-001**, merged with CLOSE-1's D3 change of the same cell) say so. No figure is computed from respondent-level
+  data.
+- **CR-14, low-income comparator: verified, no change.** 35.2% is the World Bank's own aggregate (open API, LIC, 2021;
+  and the database row the record already cites, with its 19 economies). The brief's "31% / 33%" was not found.
+- **Gates.** FC-MOE, which asserted the respondent-file intervals, is replaced by **CO-G03** for the new rule (retired
+  claims gone; withdrawn intervals never printed; computed intervals printed and attributed; the five national rows
+  equal the World Bank formula; the twelve group rows withdrawn), with four new negative controls replacing FC-MOE's.
+  **RC-1115** now finds Home's first figure as the renderer defines one (a year such as 2021 is not a figure).
+- **Renderer.** Home §3 pacing knows the adjudicated connectives of AR-001 and prints its framing sentence ("No single
+  figure is enough …") as a lead line, so the first figure group still opens with 11.9%.
+
 ## 2026-10-10 — W2: the design handoff is retired (Stage A)
 
 No Master transaction and no public page changed. `dist/` is unchanged. Owner decision D7: design is executed in this
