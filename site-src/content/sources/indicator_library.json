@@ -1177,6 +1177,17 @@
     "use_rule": "Use only within the dataset's comparability/publication rules."
   },
   {
+    "dataset_id": "DS-REMITTANCES",
+    "indicator_or_metric_id": "RMT-003",
+    "label": "Average cost of sending US$200 to Yemen (World Bank yearly average)",
+    "domain": "Remittances & exchange",
+    "units": "percent of send amount",
+    "rows": 4,
+    "period_min": 2016,
+    "period_max": 2023,
+    "use_rule": "Use only within the dataset's comparability/publication rules."
+  },
+  {
     "dataset_id": "DS-FINDEX-WB-OBS",
     "indicator_or_metric_id": "FX.OWN.TOTL.ZS",
     "label": "Account ownership at a financial institution or with a mobile-money-service provider — total",

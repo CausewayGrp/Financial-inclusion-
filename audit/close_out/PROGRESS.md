@@ -115,3 +115,14 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   audit trail stays append-only.
 - 2026-10-10 · A · W3c · PR #33 merged at `cf37e210` (9/9 CI; negative controls 6/6 shards). Closed: U4, U5.
   Owner question recorded: /finance/ is not on CWR-011's domain surfaces (rule F2 caps an answer page at two Readings).
+- 2026-10-10 · A · W3c · CLOSE-3D run (runner COMMITTED; Master `49de81b3bc53` → `c447171006a8`, 180 cells; contract
+  installed): U7 CLOSED (VIS-REMITTANCE-COST second panel: WDI SI.RMT.COST.IB.ZS for Yemen, 4.68 / 5.71 / 3.46 / 2.81 for
+  2016 / 2017 / 2022 / 2023, rounded half up from the API's 4.68109…, 5.70931…, 3.455, 2.805 with decimal 2; dated
+  snapshot audit/close_out/fixtures/wdi_rmt_cost_2026-10-10.json, lastupdated 2026-10-08; price-of-sending and
+  simple-average notes; RPW stays 2025 Q3: corridor pages refused, the data catalogue ends at 2025 Q3), FRN-09 CLOSED
+  (SDG 10.c as a reference line in words: the 3% applies to the global average and the 5% to each corridor's SmaRT
+  average of the three cheapest qualifying services, neither shown; no pass/fail colouring). Red-team: 2 blockers
+  (the SmaRT definition of the 5% component; the method's wording of it), 7 should-fix and 7 nits applied, one kept
+  (the 26 September 2026 date state stays: other pages print that date). Arabic editor: 2 must-fix (TERM-021, «لا يعني
+  صفرًا») and 9 should-fix applied; second read 3 should-fix applied. Renderer: remittance_cost draws each series as a
+  headed panel on one axis (one series unchanged).

@@ -2,23 +2,23 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "49de81b3bc533aa839cce880109d83b2b06f2b9a8f849842ae13a721b35ce482",
-  "page_specs_sha256": "2e434e794b20c0027f7c8dcf567652aa2f92411f0db1fec1a6dc010a2995d883",
+  "production_master_sha256": "c447171006a8d1be4e684c36e90f29ea5db9295c649bf747083ec81914d0ae13",
+  "page_specs_sha256": "d5789ead5b70b7192df7b9564bf3aabb60e857ce4756ea7df29c9f252befd7c6",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
   "evidence_records": 110,
   "public_claims": 60,
   "chronology_events": 23,
-  "sources": 174,
-  "public_locators": 167,
+  "sources": 176,
+  "public_locators": 169,
   "curated_resources": 28,
   "readings": 11,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 42,
   "evidence_passports": 55,
-  "search_records": 476,
+  "search_records": 478,
   "page_specs": 144
  },
  "projection_roles": {
@@ -560,7 +560,9 @@
      "SRC-WB-YEM-ECON-MONITOR-2025-SPRING-001",
      "SRC-WB-ESPECRP-ISR10-2026-001",
      "SRC-UNICEF-MICS-YEM-2022-001",
-     "SRC-WB-YMPS-R1-2022-001"
+     "SRC-WB-YMPS-R1-2022-001",
+     "SRC-WB-WDI-RMT-COST-YEM",
+     "SRC-UN-SDG-10C1-METADATA"
     ],
     "displayed_sources_without_document_type": [
      "SRC-SFD-MF-HISTORY-TOR-2012-001",
@@ -4117,8 +4119,8 @@
     "en": "dist/en/evidence/VIS-REMITTANCE-COST/index.html",
     "ar": "dist/ar/evidence/VIS-REMITTANCE-COST/index.html"
    },
-   "title_en": "Quoted cost of sending US$200 and US$500 to Yemen from Saudi Arabia and the UAE, 2025 Q3",
-   "title_ar": "التكلفة المعلنة لإرسال 200 و500 دولار أمريكي إلى اليمن من السعودية والإمارات، الربع الثالث من 2025",
+   "title_en": "The cost of sending money to Yemen: two corridors in 2025 Q3 and the World Bank's yearly average",
+   "title_ar": "تكلفة إرسال الأموال إلى اليمن: ممران في الربع الثالث من 2025 والمتوسط السنوي للبنك الدولي",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -4130,12 +4132,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -5479,7 +5481,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 20,
+   "source_references": 22,
    "next_actions": [
     "/evidence/CLM-007/"
    ],

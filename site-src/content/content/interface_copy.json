@@ -961,8 +961,8 @@
   },
   {
     "ui_id": "UI-VIS-RPW-AVERAGE-NOTE",
-    "label_en": "Average of quotes for this amount — not the cost of all remittances",
-    "label_ar": "متوسط عروض الأسعار لهذا المبلغ — وليس تكلفة جميع الحوالات",
+    "label_en": "Corridor panel: each value is the average of quotes for its amount — not the cost of all remittances",
+    "label_ar": "لوحة الممرين: كل قيمة هي متوسط عروض الأسعار لمبلغها — وليست تكلفة جميع الحوالات",
     "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
   },
   {
@@ -3550,5 +3550,35 @@
     "label_en": "Rials per US dollar (monthly average)",
     "label_ar": "ريال لكل دولار أمريكي (متوسط شهري)",
     "use_rule": "Close-out U4. Unit 'YER per USD'."
+  },
+  {
+    "ui_id": "UI-VIS-PANEL-RMT-RPW",
+    "label_en": "Two of the corridors to Yemen, by amount sent: third quarter of 2025",
+    "label_ar": "ممران من الممرات إلى اليمن، بحسب المبلغ المرسل: الربع الثالث من 2025",
+    "use_rule": "Close-out U7. Panel heading of VIS-REMITTANCE-COST (corridor averages)."
+  },
+  {
+    "ui_id": "UI-VIS-PANEL-RMT-WDI",
+    "label_en": "Yemen, across the services the World Bank surveys: yearly average for sending US$200",
+    "label_ar": "اليمن، عبر الخدمات التي يرصد البنك الدولي أسعارها: المتوسط السنوي لإرسال 200 دولار أمريكي",
+    "use_rule": "Close-out U7. Panel heading of VIS-REMITTANCE-COST (World Development Indicators SI.RMT.COST.IB.ZS)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-RMT-WDI-YEARS",
+    "label_en": "World Development Indicators carries this yearly average for Yemen for 2016, 2017, 2022 and 2023 only; it holds no value for 2018 to 2021 or after 2023 (checked on 10 October 2026). A year without a value does not mean zero. The services and corridors sampled can differ between years, so a change between years is not by itself a change in what senders pay, and the two panels are not one series.",
+    "label_ar": "لا تتضمن مؤشرات التنمية العالمية هذا المتوسط السنوي لليمن إلا للسنوات 2016 و2017 و2022 و2023؛ ولا قيمة فيها للسنوات من 2018 إلى 2021 ولا لما بعد 2023 (جرى التحقق في 10 أكتوبر 2026). وغياب القيمة عن سنةٍ ما لا يعني صفرًا. وقد تختلف الخدمات والممرات المشمولة بالعيّنة بين سنة وأخرى، فلا يعني التغير بين السنوات بذاته تغيرًا فيما يدفعه المرسلون، واللوحتان ليستا سلسلة واحدة.",
+    "use_rule": "Close-out U7. Frame note of VIS-REMITTANCE-COST."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-RMT-PRICE",
+    "label_en": "Both panels measure the price of sending money through the services surveyed (fees and the exchange-rate margin), as simple averages of the prices quoted, not weighted by the amounts sent; not the cost of collecting the money in Yemen or the cost to a household.",
+    "label_ar": "تقيس اللوحتان كلتاهما سعر إرسال المال عبر الخدمات المرصودة (الرسوم وهامش سعر الصرف)، في صورة متوسطات بسيطة للأسعار المعروضة غير مرجّحة بالمبالغ المرسلة؛ لا تكلفة استلام المال في اليمن ولا التكلفة التي تتحملها الأسرة.",
+    "use_rule": "Close-out U7. Frame note of VIS-REMITTANCE-COST (price of sending, brief U7)."
+  },
+  {
+    "ui_id": "UI-VIS-NOTE-SDG-10C",
+    "label_en": "Reference, not a pass mark: SDG target 10.c aims, by 2030, to reduce the transaction costs of migrant remittances to less than 3% and to eliminate corridors with costs higher than 5% (UN metadata for indicator 10.c.1, last updated 27 March 2026). The 3% applies to the global average cost of sending US$200, not to one country; the 5% applies, in each corridor, to the average of the three cheapest qualifying services (the World Bank's SmaRT measure), not to the corridor averages shown here. Neither panel shows either measure, and no value here is marked as meeting or missing the target.",
+    "label_ar": "مرجع لا معيار نجاح: تهدف الغاية 10.c من أهداف التنمية المستدامة إلى خفض تكاليف معاملات تحويلات المهاجرين إلى أقل من 3% بحلول 2030، وإلغاء الممرات التي تزيد تكاليفها على 5% (البيانات الوصفية للمؤشر 10.c.1 الصادرة عن الأمم المتحدة، آخر تحديث في 27 مارس 2026). وتنطبق نسبة 3% على المتوسط العالمي لتكلفة إرسال 200 دولار أمريكي، لا على بلد بعينه؛ وتنطبق نسبة 5% في كل ممر على متوسط أرخص ثلاث خدمات مؤهلة (مقياس SmaRT لدى البنك الدولي)، لا على متوسطات الممرين المعروضة هنا. ولا تعرض أيّةُ لوحة من اللوحتين أيًّا من المقياسين، ولا تُوسَم أي قيمة هنا بأنها تحقق الغاية أو تقصر عنها.",
+    "use_rule": "Close-out U7. Frame note of VIS-REMITTANCE-COST (SDG 10.c as a reference line in words; FRN-09)."
   }
 ]
