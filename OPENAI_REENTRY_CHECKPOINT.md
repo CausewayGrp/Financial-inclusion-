@@ -2,6 +2,8 @@
 
 **Current state, 4 October 2026.** Non-design v1 product complete. Current phase: design / presentation integration. C1, C2 and C3 are post-v1 owner decisions, not release blockers. Public release is not declared. The active front door is `README.md`. The text below is the September checkpoint and is history.
 
+**Rights, 10 October 2026.** Reuse rights are decided and the question is closed: CC BY 4.0 covers the content CauseWay owns in this resource (adopted 3 October 2026, closed 10 October 2026 — `audit/OWNER_DECISIONS_2026-10-10.md`). The one remaining release step is CauseWay's counsel confirming the CC BY 4.0 text (`docs/RELEASE_RUNBOOK.md` step 7a); `licence_text_confirmed` and `public_downloads` stay `false` until then. A reuse licence is not regulatory licensing: CauseWay is not a licensed financial institution and claims no such status. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided. No rights clearance, legal review or certification is claimed.
+
 
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and

@@ -1,5 +1,32 @@
 # Repository Change Log
 
+## 2026-10-10 — Rights: the owner's decision recorded, and the rights escalation closed
+
+The owner's decision of 10 October 2026 is recorded in `audit/OWNER_DECISIONS_2026-10-10.md`: **CC BY 4.0 for
+CauseWay's own content stands**, as adopted on 3 October 2026, and the rights question is closed. The owner's message of
+9 October 2026 ("we have no licence / لا نملك ترخيص") was about **regulatory** licensing — CauseWay is not a licensed
+financial institution and claims no such status — and never referred to the reuse licence. The escalation
+`ESCALATE_TO_STEWARD (records disagree) — rights` in `design/ESCALATIONS.md` is closed by a dated line that cites the new
+record; the B16 disposition it questioned was right and stands, and the "Rights: Not decided" row of
+`audit/OWNER_DECISIONS_2026-10-09.md` (pull request #16) is superseded, not edited. The live statements of programme
+state now agree: `README.md`, `OPENAI_REENTRY_CHECKPOINT.md`, `authority/YFI_CURRENT_PROJECT_CONTEXT.json`
+(`reuse_licence_state`), `FINAL_OPEN_ITEMS_REGISTER.md` (dated lines under §2 and §5, no cell rewritten),
+`docs/RELEASE_RUNBOOK.md`, `site-src/deployment.json` and `handoff/SUPPORT_AND_PARTNERSHIP_READINESS.md`. "Owner decides
+the licence" appears nowhere as open. **Unchanged:** the release step "counsel confirms the CC BY 4.0 text";
+`licence_text_confirmed` and `public_downloads` stay `false`. The repository's software code stays outside the licence
+and nothing is decided about it. No Master transaction, no projection, no public page and no gate changed: `/rights/`
+and `/terms/` already print CC BY 4.0 in both languages, and no public copy claims a regulatory status CauseWay does not
+hold. The same record carries the owner's steward designation for the public naming and terminology change
+(`navigation_interaction.json` only; `presentation_priority.json` out of scope). No rights clearance, legal review or
+certification is claimed.
+
+
+## 2026-10-10 — CLAUDE.md: multi-agent skill for multi-step tasks
+
+`CLAUDE.md` now reads "For any multi-step task, load the multi-agent-m skill first." Claude-only; no change to
+`AGENTS.md`, the Master, content, the site or any gate.
+
+
 ## 2026-10-09 — Phase B build: currentness strip, Evidence Colophon, two disclosures, better search and filters
 
 What V1B-1 and B-c unlock, in the renderer, stylesheet and runtime (`design/DESIGN_INTEGRATION_V1.md`, DL-V1-013…018).

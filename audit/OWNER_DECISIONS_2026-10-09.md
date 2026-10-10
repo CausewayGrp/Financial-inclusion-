@@ -19,3 +19,7 @@
 | PR #13 | Pull request #13 stays untouched until Phase B merges. |
 | Gates | The same gates as before: CI 9/9; no text, link, ID or hook lost; no file deleted. |
 | Latitude | The owner asks the session to take the lead on further design elevation that makes the site clearer, with a focus on the quality of the filtering, source and search tools, inside the gates above and the repository's governance. |
+
+Cross-reference (appended 2026-10-10): the Rights row above ("Not decided") is kept as history; it is superseded by
+the owner's decision of 10 October 2026, `audit/OWNER_DECISIONS_2026-10-10.md` (OWN-04-R): CC BY 4.0 for CauseWay's own
+content stands, and the rights question is closed.

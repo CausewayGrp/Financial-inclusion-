@@ -2,8 +2,10 @@
 
 **Status, 4 October 2026 (after the independent review of 70398d1):** prepared, not started. Nothing here has been executed. The site is not released; this
 repository never declares PUBLIC RELEASE READY, and only the owner releases it (step 14). Each step names who does it.
-Every step except the account, the domain, the licence decision, the release acceptance and the tag is a Claude Code
-step; the route on `causewaygrp.com` is CauseWay's web administrator's ("Hosting").
+Every step except the account, the domain, counsel's confirmation of the CC BY 4.0 licence text, the release acceptance
+and the tag is a Claude Code step; the route on `causewaygrp.com` is CauseWay's web administrator's ("Hosting"). The
+reuse licence itself is not a step here: it is decided and closed — CC BY 4.0 for CauseWay's own content
+(`audit/OWNER_DECISIONS_2026-10-10.md`, OWN-04-R).
 
 ## Deploy and verify (one page)
 
@@ -321,7 +323,7 @@ Two more facts for the web administrator:
 | # | Step | Who | How | Done when |
 |---|---|---|---|---|
 | 1 | **Account and domain.** A DigitalOcean account (the decided host) with a Container Registry. The domain stays where it is (DigitalOcean DNS): route 1 needs no DNS change, route 3 one record that App Platform names ("Hosting"). | Owner | DigitalOcean control panel | The account and the registry exist |
-| 2 | **Licence and downloads.** The licence is decided: CC BY 4.0 for CauseWay's own content (owner instructions of 3 October 2026, 09:50, E). Nothing is decided here; what remains is counsel's confirmation of the text (step 7a). Once it is recorded, the owner may switch the downloads on. | Owner (the switch, after step 7a) | A dated line in `audit/OWNER_DECISIONS_*.md` | If the owner switches them on, Claude Code sets `public_downloads: true` in `site-src/deployment.json`, after the codebook's bilingual review; the exports carry the licence, and Dataset structured data may then be added (REJ-03 lifts) |
+| 2 | **Licence and downloads.** The licence is decided and the rights question is closed: CC BY 4.0 for CauseWay's own content (owner instructions of 3 October 2026, 09:50, E; closed by the owner on 10 October 2026, `audit/OWNER_DECISIONS_2026-10-10.md`, OWN-04-R — the owner's 9 October "no licence" message was about regulatory licensing, which CauseWay neither holds nor claims). Nothing is decided here; what remains is counsel's confirmation of the text (step 7a). Once it is recorded, the owner may switch the downloads on. The repository's software code is outside this licence and no code licence is decided. | Owner (the switch, after step 7a) | A dated line in `audit/OWNER_DECISIONS_*.md` | If the owner switches them on, Claude Code sets `public_downloads: true` in `site-src/deployment.json`, after the codebook's bilingual review; the exports carry the licence, and Dataset structured data may then be added (REJ-03 lifts) |
 | 3 | **Origin.** Set `public_origin` in `site-src/deployment.json` to `https://causewaygrp.com/financial-inclusion-evidence` (route 1, the decided address) or `https://evidence.causewaygrp.com` (route 3): no trailing slash. In the same commit, lift RC-B14's condition that `public_origin` is null (it holds owner decision B8 until then). `pre_release` stays true: the pages stay `noindex, nofollow` until step 13. Rebuild: `python3 scripts/social_images.py && python3 scripts/build.py && python3 scripts/audit_public_literals.py`. `dist/` keeps root-relative links for the gates; the published site, `scripts/build.py --out build/site`, carries the path. | Claude Code | One commit | The validator passes; canonical, hreflang, `og:url`, `og:image`, structured data and `sitemap.xml` are absolute and carry the path, and `robots.txt` allows crawling and names the sitemap (`scripts/discovery.py`, F6 gates); for route 1, `python3 scripts/tests/test_base_path.py` passes |
 | 4 | **Currentness at the release date.** `python3 scripts/currentness_rerun.py --append`. Anything newer is read in its original and enters the Master by transaction. The edition date (`UI-CONTENT-VERSION`) moves to the release date, Master-first. | Claude Code | `run_stage.py` | The appended result shows no unread NEWER item, and the "check by hand" points have been checked in a browser |
 | 5 | **Every gate.** Every step of `.github/workflows/verify.yml`, locally and in CI: checksums, projection check, validator, literal-audit determinism, lineage, diagrams, social images, logo derivatives, bilingual invariance, content parity, exports, public tools, viewport acceptance, security headers, base path, the DigitalOcean route and image, no JavaScript, negative controls. | Claude Code | CI on the release commit | CI is green on the commit that will be tagged |
@@ -347,7 +349,8 @@ rewritten.
 
 ## What this runbook does not do
 
-- It does not decide anything that belongs to the owner: the account, the domain, the licence, the acceptance and the tag.
+- It does not decide anything that belongs to the owner: the account, the domain, counsel's confirmation of the CC BY 4.0
+  licence text, the acceptance and the tag. The reuse licence itself is already decided and closed (step 2).
 - It changes nothing outside this repository. The corporate application, the DNS and the domain's `robots.txt` are
   changed by CauseWay's web administrator, in their own repository and accounts.
 - It does not claim WCAG conformance, legal review, rights clearance, native-language certification or a security

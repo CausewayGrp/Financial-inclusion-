@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 329,
+  "AUDIT_HISTORY": 330,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -221,6 +221,10 @@
   },
   {
    "path": "audit/OWNER_DECISIONS_2026-10-09.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/OWNER_DECISIONS_2026-10-10.md",
    "class": "AUDIT_HISTORY"
   },
   {
