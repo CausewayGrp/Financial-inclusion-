@@ -44,6 +44,8 @@ only the first two groups describe the current state. Every file in `audit/` is 
 | Legacy-audit follow-through (10 Oct) | [`legacy_followthrough/`](legacy_followthrough/) — the owner brief "Legacy-audit follow-through" with the owner's corrections: transactions LA-A (corrections to our own copy) LA-B (strengthening four Readings) and LA-C (the bank balance-sheet record CBY-BANKS-2026-05 and Reading CWR-011), the source verification record [`SOURCE_VERIFICATION_2026-10-10.md`](legacy_followthrough/SOURCE_VERIFICATION_2026-10-10.md), the English and Arabic before→after of every changed cell [`BEFORE_AFTER_2026-10-10.md`](legacy_followthrough/BEFORE_AFTER_2026-10-10.md), the Master ledgers and run reports in `runs/` |
 | Chronology in search (10 Oct) | [`chronology_search/`](chronology_search/) — the owner's decision on pull request #13 carried out: the dated events of the system chronology are indexed in search (re-implemented from FC-4, commit `6a2cfc4a`); transaction CS-1 (the governed label of the new result type), its Master ledger and run report in `runs/` |
 | Rights, final (10 Oct) | [`rights_final/`](rights_final/) — the owner's endorsement of the CC BY 4.0 text with two corrections (`OWNER_DECISIONS_2026-10-10.md` §4): transaction RIGHTS-FINAL on /rights/ section 6, its Master ledger and run report in `runs/`; the licence gates PN-G01 and PN-G02 land with it |
+| Close-out, everything but hosting (10 Oct →) | [`close_out/`](close_out/) — the final execution brief [`BRIEF.md`](close_out/BRIEF.md) (version 4, three sessions A–C), its append-only progress log [`PROGRESS.md`](close_out/PROGRESS.md), from which a later session resumes, and [`KEY_MIGRATION.csv`](close_out/KEY_MIGRATION.csv) (every section or UI string merged, split, renamed or removed); the transaction scripts, Master ledgers and run reports of CLOSE-1…CLOSE-5 and AR-1 live beside them |
+| Arabic editorial review (10 Oct) | [`arabic_review/`](arabic_review/) — the lead adjudication [`ARABIC_REVIEW_ADJUDICATION_2026-10-10.md`](arabic_review/ARABIC_REVIEW_ADJUDICATION_2026-10-10.md) and the accepted edit register [`YFIE_ARABIC_ACCEPTED_EDIT_REGISTER_2026-10-10.csv`](arabic_review/YFIE_ARABIC_ACCEPTED_EDIT_REGISTER_2026-10-10.csv) (owner decision D11: final; only it is applied); the OpenAI package in [`openai_2026-10-10/`](arabic_review/openai_2026-10-10/) is lineage, not instructions. None of it is projected to a public page |
 
 Records named above that do not exist yet are written by the session that owns them; until then the session is open.
 
@@ -56,6 +58,7 @@ Records named above that do not exist yet are written by the session that owns t
 | [`BENCHMARK_AND_COMPARATOR_POLICY.md`](BENCHMARK_AND_COMPARATOR_POLICY.md) | How external benchmarks and comparators may be used |
 | [`ECONOMIC_CONTEXT_USAGE_POLICY.md`](ECONOMIC_CONTEXT_USAGE_POLICY.md) | How economic and conflict context may be used |
 | [`tranche_c/DRAFTING_RULES.md`](tranche_c/DRAFTING_RULES.md) | Drafting rules for governed copy |
+| [`naming/ARABIC_HOUSE_STYLE.md`](naming/ARABIC_HOUSE_STYLE.md) | Arabic house style (OpenAI review, 10 October 2026), adopted as guidance under the Master terminology register (D11) |
 
 ## 3. History (lineage — accurate when written, not current)
 
