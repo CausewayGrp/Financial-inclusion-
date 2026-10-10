@@ -1,5 +1,21 @@
 # Repository Change Log
 
+## 2026-10-10 — CS-1: the dated events of the chronology are indexed in search
+
+The owner's decision on pull request #13 (orchestration step 6), re-implemented on the current main from FC-4 (commit
+`6a2cfc4a`). Master `90b66c04f23a` → `66d4ce356d47`, 1 cell.
+
+- **Search:** 443 → 466 records. The 23 dated events are indexed (record type "Dated event / حدث مؤرخ"). Each one
+  deep-links to its own anchor on /finance/ (`/finance/#YSC-0xx`), on the pattern the measurement priorities already
+  use. The record is named by controlled wording plus the event's governed period; its summary is the governed fact
+  verbatim. Its search text is the fact, the system implication, the relevance and the boundary. "banknotes", a word
+  printed on /finance/, now finds YSC-004 and YSC-006.
+- **The analytical rule (YSC-020, class SYSTEM_INTERPRETATION) is not indexed.** It is not a dated event, and the
+  public count of dated events already excludes it. FC-4 had indexed all 24.
+- **Governed label** `UI-JS-TYPE-CHRONOLOGY` gives the result-type filter an option for the new type.
+- **Validator P2-G02:** every indexed dated event must find its anchor in both languages, and the result-type filter
+  must offer every type the index carries. Two negative controls cover these checks.
+
 ## 2026-10-10 — LA-C: the May 2026 bank balance-sheet record and Reading CWR-011
 
 Transaction C of the same brief, included because its values bind to the original (owner correction OWN-2d). Master

@@ -51,7 +51,7 @@ External facts stay attributed to their original publishers. CauseWay attributio
 | Public release ready | No |
 | Open pull request | #11, draft, branch `code/final-content` |
 
-Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; chronology stays contextual and are not a Search family; the reuse licence for CauseWay's own content (CC BY 4.0, [`audit/OWNER_DECISIONS_2026-10-10.md`](audit/OWNER_DECISIONS_2026-10-10.md)) — a reuse licence is not regulatory licensing, and CauseWay neither holds nor claims the status of a licensed financial institution.
+Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; the 23 dated events of the system chronology are indexed in search, each deep-linking to its own anchor on /finance/ (the analytical rule is not a dated event and is not indexed); the reuse licence for CauseWay's own content (CC BY 4.0, [`audit/OWNER_DECISIONS_2026-10-10.md`](audit/OWNER_DECISIONS_2026-10-10.md)) — a reuse licence is not regulatory licensing, and CauseWay neither holds nor claims the status of a licensed financial institution.
 
 Not closed, and not claimed: design integration; integrated Arabic and English, RTL, mobile, accessibility and browser acceptance after that integration; release-time hosting, security headers, currentness, counsel's confirmation of the CC BY 4.0 licence text and live checks; final owner release approval. The repository's software code is outside the CC BY 4.0 licence and no code licence is decided.
 
@@ -63,9 +63,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d`
+Master SHA-256: `66d4ce356d4707e61880fb08ba5d6b1206008949d287ffa7311fd92cc4b59b06`
 
-Page Specs SHA-256: `2e88b24bf61fc44db0025c5aeab5c70878c2da89e34c865772070a0536b3a0df`
+Page Specs SHA-256: `3402a34e58b0388fd2ce51901fc78e3d1cd29ebdd97afe6fd1c8b4367efbb81c`
 
 | Layer | Role |
 |---|---|

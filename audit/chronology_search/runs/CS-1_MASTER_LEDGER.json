@@ -1,0 +1,18 @@
+{
+ "transaction": "CS-1",
+ "summary": "The governed label of the dated-event search-result type",
+ "input_master_sha256": "90b66c04f23aa75e8bb04dea044409b724dfb35eed717db4ed4a935d52af5e9d",
+ "output_master_sha256": "66d4ce356d4707e61880fb08ba5d6b1206008949d287ffa7311fd92cc4b59b06",
+ "cells_written": 1,
+ "changes": [
+  {
+   "finding": "CS-1:CHRONOLOGY-SEARCH",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-TYPE-CHRONOLOGY",
+   "old": null,
+   "new": "Dated event || حدث مؤرخ"
+  }
+ ]
+}

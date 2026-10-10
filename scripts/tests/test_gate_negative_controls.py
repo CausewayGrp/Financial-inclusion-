@@ -358,6 +358,14 @@ CONTROLS = [
     ("an Arabic page writes a different number in words", "ar/evidence/CLM-026/index.html",
      replace("ويحمل الثلاثة منها", "ويحمل الستة منها"),
      "NUMBER WORDS evidence/CLM-026/index.html", "bilingual"),
+    # CS-1 (owner decision of 10 October 2026): an indexed dated event must keep its anchor, and the result-type filter
+    # must offer every type the index carries.
+    ("an indexed dated event loses its anchor", "en/finance/index.html",
+     replace('id="YSC-005"', 'id="YSC-005-gone"'),
+     "P2-G02 Dated-event search record anchor missing en /finance/#YSC-005"),
+    ("the result-type filter stops offering the dated-event type", "assets/app.js",
+     replace(', "chronology": "UI-JS-TYPE-CHRONOLOGY"}', '}'),
+     "P2-G02 the result-type filter offers no option for the indexed type 'chronology'"),
     # RC-LATEST (Owner Addendum 2, lessons; RC-16): no title or description calls anything "latest" without its date.
     ("a page title calls a measure 'latest' without saying when", "en/people/index.html",
      sub_once(r'(<title>)', r'\1Latest '),

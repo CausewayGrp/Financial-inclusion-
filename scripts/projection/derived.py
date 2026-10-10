@@ -663,6 +663,28 @@ def search_index(ctx, e):
         for L in ("en", "ar"):
             rec["search_text_" + L] = _ws(" ".join(str(o.get(f + "_" + L) or "") for f in ma_fields))
         out.append(rec)
+    # CS-1 (owner decision of 10 October 2026; re-implemented from FC-4, commit 6a2cfc4a): the public dated events of the
+    # system chronology are indexed, on the same anchor-and-fragment pattern the measurement priorities use. Each event
+    # renders with its own anchor on /finance/ and /data/, its governed fact, relevance and boundary; before this a word
+    # a reader had just read on /finance/ ("banknotes") found nothing. An event carries no governed title of its own, so
+    # its record is named by controlled wording plus its governed period, and its summary is the governed fact verbatim.
+    # The chronology's analytical rule (event class SYSTEM_INTERPRETATION) is not a dated event and is not indexed as
+    # one, as the public count of dated events already excludes it (public_inventory_contract.json, chronology_events).
+    ch_fields = t["chronology_search_fields"]
+    ch_title = t["chronology"]
+    ch_skip = set(t["chronology_exclude_event_classes"])
+    for o in ctx.out["visuals/system_chronology.json"]:
+        if o.get("event_class") in ch_skip:
+            continue
+        rec = OrderedDict([("id", o["event_id"]), ("type", "chronology"),
+                           ("route", t["chronology_route"].format(id=o["event_id"]))])
+        for L in ("en", "ar"):
+            rec["title_" + L] = ch_title["title_" + L].format(period=o.get("period_" + L) or o.get("period_en") or "")
+        for L in ("en", "ar"):
+            rec["summary_" + L] = _ws(o.get("fact_" + L) or "")
+            rec["search_text_" + L] = _ws(" ".join(str(o.get(f + "_" + L) or "") for f in ch_fields))
+            rec["meta_" + L] = _ws(o.get("period_" + L) or "")
+        out.append(rec)
     for s in ctx.out["sources/source_reference_map.json"]:
         if not str(s.get("primary_url") or "").strip().lower().startswith(("http://", "https://")):
             continue                                    # only an http(s) URL is a public original locator
