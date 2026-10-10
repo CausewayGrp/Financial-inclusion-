@@ -9,15 +9,17 @@ D1  /about/ section 6: the owner's independence statement (OWN-01), verbatim in 
 D3  /rights/ section 6: the software code is not openly licensed; CauseWay reserves all rights in it.
 OWN-10  00_MASTER and 37_READINESS_CHECKLIST self-counts recomputed from the sheets (close_lib.refresh_self_counts);
     the validator gate CO-G01 keeps them from drifting again.
-CR-03  CLM-026 said that 29 of its 32 measures have "no published value for this wave". The World Bank's open Findex
-    series (source 28) publish a Yemen value for this wave for {CR03_PUBLISHED} of them; the sentence and the two others
-    that rest on it now say so. The values themselves are added by CLOSE-3 (U1).
 CR-04  WB-FINDEX-OBS-2022-010/011/012 pointed at the FX.OWN.TOTL.ZS page; each now points at its own series.
-CR-10  SRC-WB-NFID-RFX-2026-001 (a World Bank procurement page) feeds nothing public: set non-public, its address kept in
-    the non-public note (the LA-A DIV-03 pattern), so it leaves /data/ and search.
+CR-10  SRC-WB-NFID-RFX-2026-001 (a World Bank procurement page) feeds no public claim: set non-public, its address kept in
+    the non-public note (the LA-A DIV-03 pattern), so it leaves /data/ and search. 16_DATASET_CATALOG was checked: its
+    one binding (DS-NFID-PROCUREMENT-CONTROL) is internal lineage that no built page or search record shows, so it stays.
 CR-12  29_OECD_BENCHMARKS (25 rows) → REJECTED__UNTRACEABLE, and the illustrative legacy block of 24_FINDEX_CODEBOOK
     (42 rows) → NON_PUBLIC__ILLUSTRATIVE, each with its reason. Gate CO-G02 keeps both out of every public output.
-CR-18  The 32 rurality rows of 27_FINDEX_SUBGROUPS get their permanent reason.
+CR-18  The 32 rurality rows of 27_FINDEX_SUBGROUPS get their permanent reason, after the open API was read: every
+    rural/urban Findex series (source 28, codes *.9/*.10) is null for Yemen (audit/close_out/fixtures/
+    findex_rural_urban_2026-10-10.json). Their state is DECIDED, not pending.
+CR-03 (CLM-026) moves to CLOSE-3 with U1 (brief v5 W3c): corrected here, the sentence would point at values the page
+    does not show until U1 adds them.
 """
 import json, os, sys
 from collections import OrderedDict
@@ -46,9 +48,6 @@ D3_AR_OLD = "والشيفرة البرمجية للمستودع الذي يبن�
 D3_AR_NEW = ("والشيفرة البرمجية للمستودع الذي يبني هذا المورد، فهي خارج نطاق هذه الرخصة: إذ لا تُتاح الشيفرة بأي رخصة "
              "مفتوحة، وتحتفظ CauseWay بجميع الحقوق فيها.")
 
-# ---- CR-03 (filled from the World Bank open series, read 10 October 2026; see audit/close_out/W0_VERIFICATION.md) -----
-CR03 = json.load(open(os.path.join(HERE, "cr03_text.json"), encoding="utf-8"))
-
 # ---- CR-04 --------------------------------------------------------------------------------------
 API = "https://api.worldbank.org/v2/country/YEM/indicator/{code}?source=28"
 CR04 = [("WB-FINDEX-OBS-2022-010", "save.any.t.d"), ("WB-FINDEX-OBS-2022-011", "borrow.any.t.d"),
@@ -67,8 +66,8 @@ CODEBOOK_REASON = ("NON_PUBLIC__ILLUSTRATIVE (close-out CR-12, " + DATE + "): a 
                    "in the study. Lineage only; never projected to a public page.")
 
 # ---- CR-18 --------------------------------------------------------------------------------------
-CR18 = ("No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen; the survey's "
-        "rurality classification is under method review.")
+CR18 = ("No rural/urban comparison is published. The World Bank publishes no rural/urban split for Yemen for this "
+        "wave.")
 
 
 def main():
@@ -86,14 +85,6 @@ def main():
     # D3
     s.replace_section(F + ":D3", "/rights/", 6, "en", "body", D3_EN_OLD, D3_EN_NEW)
     s.replace_section(F + ":D3", "/rights/", 6, "ar", "body", D3_AR_OLD, D3_AR_NEW)
-
-    # CR-03: CLM-026 (06_EVIDENCE_OBJECTS) — each edit is an exact, single-occurrence substring replacement
-    t06 = Table(s, "06_EVIDENCE_OBJECTS")
-    for field, old, new in CR03["edits"]:
-        cur = t06.get("CLM-026", field)
-        if not isinstance(cur, str) or cur.count(old) != 1:
-            raise TxError(f"{F}:CR-03 CLM-026.{field}: substring occurs {0 if not isinstance(cur, str) else cur.count(old)} times")
-        t06.set(F + ":CR-03", "CLM-026", field, cur.replace(old, new), cur)
 
     # CR-04
     t25 = Table(s, "25_FINDEX_BASELINE")
@@ -154,6 +145,8 @@ def main():
     for key in list(t27.rows):
         if t27.get(key, "subgroup_dimension") == "RURALITY":
             t27.set(F + ":CR-18", key, "public_behavior", CR18, t27.get(key, "public_behavior"))
+            t27.set(F + ":CR-18", key, "current_state", "DECIDED__NO_PUBLISHED_RURAL_URBAN_SPLIT",
+                    "HOLD__MICRODATA_PLUS_RURALITY_METHOD_REVIEW")
             n18 += 1
     if n18 != 32:
         raise TxError(f"{F}:CR-18 {n18} rurality rows, expected 32")
@@ -162,7 +155,7 @@ def main():
     rep = s.save(out, ledger, OrderedDict([
         ("transaction", F),
         ("summary", "D1 independence statement and AR-035 on /about/; D3 code licence on /rights/; OWN-10 self-counts; "
-                    "CR-03 CLM-026; CR-04 locators; CR-10 NFID non-public; CR-12 quarantines; CR-18 rurality reason"),
+                    "CR-04 locators; CR-10 NFID non-public; CR-12 quarantines; CR-18 rurality reason"),
         ("self_counts", counts)]))
     print(json.dumps({k: rep[k] for k in ("input_master_sha256", "output_master_sha256", "cells_written")}))
 
