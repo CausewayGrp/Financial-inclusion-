@@ -1,4 +1,4 @@
-CLOSE EVERYTHING BUT HOSTING — FINAL EXECUTION BRIEF (Claude Code). Version 5, 10 October 2026, Aden.
+CLOSE EVERYTHING BUT HOSTING — FINAL EXECUTION BRIEF (Claude Code). Version 4, 10 October 2026, Aden.
 
 This brief supersedes every earlier version, YFIE_README_AND_HOUSEKEEPING_PROMPT_2026-10-10.md, the V2/V3 design
 prompts, the OpenAI "current-source design handoff" kit, and its Claude Code port mandate. Run this one only.
@@ -10,77 +10,43 @@ It rests on:
 
 Findings are leads to verify, not authority: the repository and the originals decide.
 
-═══ EXECUTION PLAN — one window, three stages, committed stage by stage ═══
-Run everything in ONE Claude Code window (Opus, maximum reasoning), as three stages in strict order. Nothing waits
-until the end: every workstream ends with a merged PR and a PROGRESS.md line.
+═══ SESSION PLAN — three sequential Claude Code sessions, one writer at a time ═══
+The work is too large for one context window, so it runs in three sessions, in order. Each later session starts only
+after the previous one has merged its last PR. Each session:
+- reads this brief from audit/close_out/BRIEF.md and resumes from audit/close_out/PROGRESS.md;
+- uses the strongest available model (Opus) at maximum reasoning, and the multi-agent-m skill.
 
-| Stage | Scope | Ends when |
-|---|---|---|
-| **A — Evidence and Arabic** | W0, W1, AR-1, W2, W3a–W3f | its last PR is merged |
-| **B — Structure, tools, design, visuals and footprint** | W4: G0 → S → T → G1 → G2 → W4F → G3 | its last PR is merged |
-| **C — Governance, SEO, documentation, editorial pass and acceptance** | W5, W6, W6S, W7, W8 | the final reply |
+| Session | Scope |
+|---|---|
+| **A — Evidence and Arabic** | W0, W1, AR-1, W2, W3a–W3f |
+| **B — Structure, design and footprint** | W4 (G0 → S → G1 → G2 → G3) and W4F |
+| **C — Governance, documentation, editorial pass and acceptance** | W5, W6, W7, W8 |
 
-Checkpoints:
-- After each stage, write a ≤15-line checkpoint in PROGRESS.md ("STAGE A COMPLETE at <sha>", with open issues).
-  Send the stage report (format below) and stop.
-- The owner forwards the report to the advisor for review. The next stage starts on the CONTINUE message. This is
-  the quality gate between stages.
-- If the context compacts, or the window ends, the next step is always: read audit/close_out/BRIEF.md (§0, §1, the
-  current stage and the appendices it cites) and PROGRESS.md, then continue. Never restart a finished workstream.
-- A new window resumes with the one-line resume message in 00_START_MESSAGES_FOR_CLAUDE_CODE.md.
-
-First commit (branch `close-out/a-inputs`, its own PR). Add, unchanged:
+Session A's first commit (branch `close-out/a-inputs`, its own PR) adds, unchanged:
 - this brief → audit/close_out/BRIEF.md;
 - the register and adjudication → audit/arabic_review/;
 - the OpenAI package → audit/arabic_review/openai_2026-10-10/, as lineage;
 - the house style → audit/naming/ARABIC_HOUSE_STYLE.md.
 Classify them in the manifest. None of these is ever projected to a public page.
 
-Stage report format, sent at the end of each stage (the owner forwards it to the advisor for review):
-```
-STAGE <A|B|C> REPORT — main <sha> — <date>
-1. Merged PRs: #<n> <title> <merge sha> (one line each)
-2. Findings closed: <IDs> | FRONTIER: <IDs + reason> | stopped: <IDs + reason>
-3. Arabic register: applied <n> / conditional resolved <n: outcome> / stopped <n: why>
-4. Numbers changed publicly: <record: old → new, locator>
-5. Gates: CI 9/9 <yes/no>; negative controls <n caught / n>; new gates added <list>
-6. Measurements (Stage B): page → phone screens before/after; G1 scores; DL-V2-001
-7. Open questions for the owner (maximum 3, each with your recommended default)
-8. Next stage: <ready / blocked by …>
-```
+Session endings:
+- Sessions A and B end with a ≤25-line report and the line "SESSION A COMPLETE — NEXT: SESSION B" (or "SESSION B
+  COMPLETE — NEXT: SESSION C").
+- Only Session C gives the FINAL REPLY in W8.
 
-Skills and plugins. Load each only when its workstream starts, and only if it is listed in your environment; never
-invent one.
-- **Always:** multi-agent-m.
-- **Design (W4):**
-  - frontend-design, webapp-testing;
-  - design:design-critique, design:design-system, design:accessibility-review, design:ux-copy;
-  - impeccable (if installed); dataviz (for any chart);
-  - web-excellence (if installed).
-- **SEO (W6S):** marketing:seo-audit.
-- **Before each PR in Stages B and C:** engineering:code-review and engineering:testing-strategy.
-- **Arabic and English editing:** writing-quality skills where listed.
-Skills advise; this brief and the gates decide.
-
-Efficiency rules (no loops, no wasted reads):
+Efficiency rules, which apply in every session:
 - Never load page_specs.json (20 MB), PUBLIC_LITERAL_CLOSURE.json or dist HTML whole. Query them with python or jq.
-- Do not re-read a file whose content is already summarised in PROGRESS.md or in a subagent's report.
-- Subagents get one bounded task each and return compact tables, never dumps.
-  - Never give two subagents the same scan.
-  - Use the cheapest capable model for extraction, a mid-tier model for checking originals, and keep judgement
-    (Master text, statistics, Arabic meaning, design choice) in the lead thread.
+- Subagents return compact tables, never file dumps. Use the cheapest capable model for extraction, a mid-tier model
+  for verification against originals, and keep judgement in the lead thread.
 - Open each original once, and check every dependent fact in that pass. Write a decision once and refer to it by ID.
-- During development run the targeted tests. Run the full CONTRIBUTING §5 gates once, before each push; CI repeats
-  them.
-- Failure rule (the only one): if a step fails twice, record it in PROGRESS.md, skip only the steps that depend on
-  it, and continue with independent steps. Halt the whole run only on a Master, authority or data-hygiene failure.
-  Never loop, and never weaken a gate.
+- Think hard where the risk is (Master transactions, statistics, Arabic meaning, design choice). Be brief everywhere
+  else.
 
 ═══ 0. WHO YOU ARE AND THE RULES ═══
 You are the programme's lead integrator and the ONLY session writing to CausewayGrp/Financial-inclusion-.
 - Base: the latest origin/main (2ddbfb61 or later). Record the SHA.
-- At the end exactly one thing may remain open: **hosting**. Everything else ends in exactly one state:
-  CLOSED, HOSTING, FRONTIER (a disclosed evidence limit with a verification card), OWNER-OPTIONAL or DECIDED.
+- At the end exactly one thing may remain open: **hosting**. Everything else is closed, decided, deferred by an
+  owner decision, or disclosed as a permanent evidence frontier with a verification card.
 - You never invent a fact to close an item. An original you cannot reach becomes a FRONTIER card; it is not guessed.
 
 Rules:
@@ -102,18 +68,14 @@ Rules:
   - Use the terminology register (audit/naming/) for every public name.
 - **History and pushing.**
   - Never force-push. Never rewrite main, a tag or an audit record (append only).
-  - Never delete a tracked file. Two exceptions:
-    - a cleanliness BLOCKER (W6) is untracked with `git rm --cached`, recorded;
-    - a credential found anywhere, history included, is reported for rotation.
-    Branches are removed only by the owner-run workflow (W5).
+  - Never delete a tracked file. Branches are removed only by the owner-run workflow (W5).
   - Before every push, confirm that every commit on the branch is from this session. A foreign commit means stop
     and report.
 - **Data hygiene.**
   - Never use, request or store a World Bank Microdata API key.
-  - Never download, commit or publish respondent microdata (*.dta, *.csv or any respondent file), and never compute
-    a figure from it. For Findex values use only the open api.worldbank.org/v2 series and public DDI metadata.
-    Published World Bank reports and methodology documents are allowed and required (CR-02, CR-14).
-- **Design is in scope (D7).** Page structure and visual design are both executed in this programme, in W4 (Stage
+  - Never download, commit or publish respondent microdata (*.dta or any respondent file). Use only open
+    api.worldbank.org/v2 series and public DDI metadata pages.
+- **Design is in scope (D7).** Page structure and visual design are both executed in this programme, in W4 (Session
   B), by Claude Code. Claude Design is not used.
 - **Content preservation (D13).** Never cut, shorten or paraphrase governed content to make a page shorter.
   - A block may move into a disclosure.
@@ -123,7 +85,7 @@ Rules:
   - Length is reduced by structure, rhythm and de-duplication, never by deleting meaning.
 - **Claims.** Never declare DESIGN HANDOFF READY or PUBLIC RELEASE READY. Claim no WCAG conformance, legal review,
   rights clearance or certification.
-- **Gates.** Never weaken a gate to pass it (failures follow the failure rule above). Where a gate
+- **Gates.** If a gate fails twice on the same step, stop and report. Never weaken a gate to pass it. Where a gate
   encodes a structure this brief deliberately changes (e.g. RC-1115 record-head order), replace it with a gate for
   the new rule, record why, and add a negative control.
 - **Progress and reporting.**
@@ -135,18 +97,15 @@ Rules:
   record it in audit/close_out/KEY_MIGRATION.csv: old_key, new_key, change, PR.
 
 ═══ 1. OWNER DECISIONS (record verbatim, append only, in audit/OWNER_DECISIONS_2026-10-10.md) ═══
-- **D1 About and funding (OWN-01).** /about/ §6 already says that CauseWay funded this edition from its own
-  resources, and that no donor, regulator, source institution or external commissioning party funded it. Keep that
-  text.
-  - Add one sentence after it, Master-first, in EN and AR: "It was not commissioned by, and is not reviewed or
-    endorsed by, any institution whose data it presents."
-  - Apply the register row AR-035 (the same page, §1) in the same transaction, CLOSE-1.
+- **D1 About and funding (OWN-01).** "CauseWay develops and publishes this resource independently. It was not
+  commissioned by, and is not reviewed or endorsed by, any institution whose data it presents." It goes on /about/,
+  Master-first, in EN and AR.
 - **D2 Contact (OWN-02).** office@causewaygrp.com is monitored. CLOSED.
 - **D3 Code licence.** The software code is not openly licensed: all rights reserved, deliberately.
   - State it in the README, on /rights/ (Master-first) and in a short LICENSE-CODE note.
   - CC BY 4.0 covers CauseWay's own content only.
 - **D4 Downloads.** public_downloads stays OFF in v1, deliberately: the reuse terms of third-party sources are not
-  assessed for most sources (166 of 167; ADJ-RG-01), and bulk export is redistribution. This is a decision, not a pending item.
+  assessed, and bulk export is redistribution. This is a decision, not a pending item.
 - **D5 Analytics.**
   - The build ships no analytics script, no cookie and no third-party tracker.
   - At hosting only, the owner may switch on host-side aggregate request counts (decision B14): server logs only, no
@@ -163,26 +122,18 @@ Rules:
     PR so the owner can veto, but approval does not block the work.
   - IBM Plex Sans and IBM Plex Sans Arabic remain the only families. Weights and sizes may change on measured
     evidence.
-- **D8 Navigation** (owner delegation of 10 October; it supersedes only the hub-numeral part of B-c).
-  - Remove the hub numerals (01–05): they imply a sequence the product does not have. Edit `hub_numerals` in
-    navigation_interaction.json under D14.
-  - "Method and measurement" becomes one link to /methodology/, so the desktop navigation is one row. /methodology/
-    carries a prominent first-screen link to /measurement/.
-  - This is a Master 04_NAV_UX transaction (run_stage.py), because global_navigation is regenerated from 04_NAV_UX
-    (scripts/projection/derived.py). Never hand-edit it.
-  - Keep each page's own label: the footer link and breadcrumbs for /methodology/ still say "Methodology", and
-    /measurement/ keeps "Measurement priorities". Adjust _align_navigation_contract and gate P4-G03 accordingly, with
-    reasons.
-  - Update the Context public_navigation and any manifest P4-G03 checks.
-  - The phone menu keeps the owner-decided items (A-12, C-6, C-8): hubs, domains, language switch, then the trust
-    links and Cite as a compact secondary group. Only presentation changes.
+- **D8 Navigation** (steward decision under owner delegation, 10 October; it supersedes the hub-numeral part of B-c).
+  Implement it in the controlled contract navigation_interaction.json, in a commit naming finding CR-S12.
+  - Remove the hub numerals (01–05): they imply a sequence the product does not have.
+  - "Method and measurement" becomes one link to /methodology/, so the desktop navigation is one row.
+    /methodology/ carries a prominent first-screen link to /measurement/.
+  - The phone menu holds the five hubs, the eight domains and the language switch. The seven trust links stay in
+    the footer; "Cite this page" stays under the H1.
   - Hub labels are unchanged. The Arabic review confirmed them:
     - EN: Questions / Evidence / Readings / Sources / Method and measurement;
     - AR: الأسئلة / الأدلة / القراءات التحليلية / المصادر / المنهج والقياس.
     CLOSED.
-- **D9 Scope boundaries.** No new page family, hub or tool route. New detail routes created Master-first are
-  allowed (a Reading such as CWR-012, or /evidence/<ID>/ for a new record or visual), with their
-  navigation-contract route entries.
+- **D9 Scope boundaries.** No new route.
   - At most one new Reading (CWR-012, conditional, W3e).
   - Home and /explore/ keep the R8.4A model: no new task taxonomy.
   - Python 3.11 is the minimum, with a fail-fast preflight and no 3.9 shims.
@@ -190,23 +141,12 @@ Rules:
   the provider itself) states it. Otherwise the provider is described, not named. Enforcement names stay
   non-public.
 - **D11 Arabic review.** The adjudicated register is final. Rows marked RETAIN are not applied. Conditional rows
-  follow their condition. The house style is adopted under the existing naming register
-  (audit/naming/NAMING_DECISIONS_2026-10-10.md and terminology_register.json).
+  follow their condition. The house style is adopted under the Master terminology register.
 - **D12 Environmental footprint (owner, 10 October).** Every page shows a measured, restrained footprint line, and
   /about/ carries one section on the site's footprint and CauseWay's operations (W4F, Appendix G).
   - No generic environmental claims ("green", "eco-friendly", "sustainable website", "carbon neutral", "net zero").
   - CauseWay's operational statements use the exact owner-confirmed wording in Appendix G.
 - **D13 Content preservation.** As in §0: nothing governed is cut or shortened for length.
-- **D14 Steward designation (owner, 10 October: "give Claude Code the freedom to handle things").** This
-  Claude Code run is designated programme steward for the two controlled contracts, for the scoped changes only:
-  - navigation_interaction.json: hub_numerals and the phone-menu presentation (D8, CR-S12), and new detail-route
-    entries (D9);
-  - presentation_priority.json: the measurement-link limit (RD9), and tier groupings if the TOC rule needs them
-    (S10).
-  Each edit is its own commit naming its finding. AGENTS.md rule 2 is amended in W2 to record this designation
-  and its scope.
-- **D15 Site-operation metrics.** The footprint values (Appendix G) are measurements of this website, not evidence.
-  They sit outside AGENTS rule 5, under their own gate. Amend rule 5 in the W4F PR to say so.
 
 ═══ 2. WORKSTREAMS (in this order; every one is in scope) ═══
 
@@ -216,27 +156,25 @@ W0 — Inventory (read-only, parallel; report in ≤15 lines)
   - EAD-03, EAD-06, EAD-07, EAD-11: done;
   - EXT-01, EXT-02, EXT-03: closed 3 October;
   - OWN-01, OWN-02, OWN-05: done; OWN-04: closed 10 October;
-  - REL-02: 166 of 167 sources not assessed; one carries a research licence (ADJ-RG-01).
+  - REL-02's count is 167.
 - Launch in parallel now (read-only): the W3a currentness sweep, and the original-reading for every finding in
   Appendix A.
 
-W1 — Master transaction CLOSE-1: decisions and truth fixes (each confirmed by the W0 original-reading first)
+W1 — Master transaction CLOSE-1: decisions and truth fixes that need no new reading
 - D1 and D3 copy.
 - OWN-10: fix the Master's stale self-counts (143 pages, 10 Readings, 165 sources) to the true values. Make them
   computed or gated so they cannot drift again.
+- CR-03: correct the false CLM-026 sentence "no published value for this wave" (see U1).
 - CR-04: fix the locators of WB-FINDEX-OBS-2022-010/011/012. They point at the FX.OWN.TOTL.ZS page; repoint each at
   save.any.t.d, borrow.any.t.d and g20.any respectively.
-- CR-10: set SRC-WB-NFID-RFX-2026-001 (World Bank procurement page) NON_PUBLIC. First confirm it feeds no public
-  claim; also unbind it from 16_DATASET_CATALOG if it is public there.
+- CR-10: set SRC-WB-NFID-RFX-2026-001 (World Bank procurement page) NON_PUBLIC. It feeds nothing public.
 - CR-12: quarantine two sets of rows, with a reason (append only), and add a gate so neither is ever projected:
-  - the 25 cross-country benchmark rows in 29_OECD_BENCHMARKS (not the OECD-YEM-* Yemen rows, which CR-16 keeps) →
-    REJECTED__UNTRACEABLE. They include non-participants (Egypt, Morocco,
+  - the 25 rows in 29_OECD_BENCHMARKS → REJECTED__UNTRACEABLE. They include non-participants (Egypt, Morocco,
     Austria) and averages the OECD never published.
   - the illustrative non-DDI rows in 24_FINDEX_CODEBOOK (invented question wording, `account_mob`) →
     NON_PUBLIC__ILLUSTRATIVE.
-- CR-18: after confirming with the open API that the rural/urban series are null for Yemen, the 32 rurality holds
-  get a permanent reason: "The World Bank publishes no rural/urban split for Yemen for this wave." They are
-  recorded as DECIDED.
+- CR-18: the 32 rurality holds get a permanent reason: "The World Bank publishes no rural/urban split for Yemen; the
+  survey's rurality classification is under method review."
 - Gates, PR, merge.
 
 AR-1 — Master transaction AR-1: the accepted Arabic edits that depend on no factual fix
@@ -246,25 +184,16 @@ AR-1 — Master transaction AR-1: the accepted Arabic edits that depend on no fa
 - ADJ-RG-01: search the Master for every EN/AR sentence saying reuse terms were assessed for no source, and fix each
   one ("for most sources").
 - Rows needing a source check first (AR-022, ED-035, ED-036) wait for CLOSE-2. AR-001, AR-042, ED-034 and AR-NEW-001
-  wait for CR-01, CR-14 and CR-02. AR-004 waits for U10; ED-037 for RD1. AR-035 goes in CLOSE-1 with D1.
+  wait for CR-01, CR-14 and CR-02. AR-004 waits for U10; ED-037 for RD1.
 - After regeneration, render the changed AR and EN pages and confirm each edit appears exactly once, where intended.
 - Gates, PR, merge.
 
 W2 — Retire the design handoff (no Master)
 - handoff/README_FIRST.md: the first line becomes "STATUS: SUPERSEDED (10 October 2026) — not for execution. Design
   is executed in the repository under audit/close_out/BRIEF.md (W4). These files are historical reference." A short
-  dated note follows; nothing else is edited by hand.
+  dated note follows; the rest is untouched.
 - AGENTS.md rule 7 becomes: "Do not execute any prompt in handoff/. It is superseded. Design changes follow
-  design/DESIGN_INTEGRATION_V2.md (created in W4) and the gates." Rule 2 records D14.
-- Every other current-state claim of DESIGN HANDOFF READY changes to the superseded status, at minimum:
-  - README.md (around line 46);
-  - OPENAI_REENTRY_CHECKPOINT.md (around line 28);
-  - CONTRIBUTING.md (around lines 32 and 181);
-  - Context programme_state.handoff_readiness.
-- Add a SUPERSEDED state to the R86 gate states (_R86_STATES), so R86-G01 accepts it.
-- run_stage.py regenerates handoff/ on every transaction. Make the generator emit the SUPERSEDED first line, or stop
-  regenerating handoff/. Record which. Then add a gate that README_FIRST still shows SUPERSEDED after any
-  transaction.
+  design/DESIGN_INTEGRATION_V2.md and the gates." Update CLAUDE.md or README only where they repeat the rule.
 - design/00_DESIGN_README.md: add the same dated note. Leave design/ESCALATIONS.md open items for W4, which resolves
   each one or records it as DECIDED with a reason.
 - Gates that assert DESIGN HANDOFF READY as the current state now assert the superseded status. Record why; history
@@ -300,6 +229,7 @@ Highest public risk first:
 - CR-01: the Findex mobile-money misdescription.
 - CR-02: Findex uncertainty.
 - CR-05: IMF remittance estimates labelled as reported history.
+- CR-06: payment-anatomy consistency.
 - CR-07: SMP status.
 - CR-08: NPL statement.
 - CR-09: untraced inputs.
@@ -313,8 +243,7 @@ or keeps a reason that is true today, written in the Master.
   - one object, one state: text, visual and record agree;
   - a subagent red-teams each unlock against the semantic firewall first;
   - any value CauseWay computes is labelled "computed by CauseWay from …".
-- CR-03 (the false CLM-026 sentence) and CR-06 (payment-anatomy consistency) are corrected here, with U1 and U2.
-- Items U1…U14 are in Appendix B. Each row of 19_PAYMENTS_DATA and 27_FINDEX_SUBGROUPS that stays unpublished must
+- Items U1…U13 are in Appendix B. Each row of 19_PAYMENTS_DATA and 27_FINDEX_SUBGROUPS that stays unpublished must
   carry an explicit reason. Nothing is unpublished by default.
 - Gates, PR, merge. Report: unlocked count by item; kept count, with reasons.
 
@@ -363,7 +292,7 @@ Fix stale rows by append-only correction; the older sections stay below as histo
 this list, and nothing "PENDING" unless its state is HOSTING. Refresh the open-items field in
 YFI_CURRENT_PROJECT_CONTEXT.json (via rebind_authority.py if it owns it). PR, merge.
 
-W4 — Structure and visual design (Stage B). Do it after W3, on the final content.
+W4 — Structure and visual design (Session B). Do it after W3, on the final content.
 Goal: a calm, formal, premium evidence site in both languages, measured against the best public data and evidence
 publishers. The benchmark is their provenance, hierarchy and verification, never their branding. A reader must reach
 a correct, bounded answer and its original source faster, with nothing governed lost (D13).
@@ -395,21 +324,6 @@ Challengers test and report. They never write files.
   For each, time and clicks to: the answer; its scope (universe, period, denominator); its limit; its original
   locator.
 - Write the top 10 frictions with evidence (route, screenshot, measurement) to design/DESIGN_INTEGRATION_V2.md §G0.
-- **Visual and diagram audit.** For every visual contract (36 today, plus the new ones from W3c: the rial line,
-  RV-CWR-011, and the extended VIS-REMITTANCE-COST), record:
-  - its state: values shown / withheld / "no values yet";
-  - the route where it must appear, and whether it does appear there;
-  - its text-description table;
-  - its "what not to conclude" line;
-  - how it renders in AR.
-  Every withheld or "no values yet" visual gets a reason that is true today, or it is filled. Specifically:
-  - VIS-FINDEX-RESILIENCE and VIS-FINDEX-FLOW-CHANNELS are table-only objects
-    (NO_GOVERNED_CONTRACT__TABLE_ONLY), not visual contracts. Fill their tables from the U1 values (emergency funds;
-    domestic remittances sent and received), mapping by label, never by code.
-  - VIS-FINDEX-BARRIERS: check the API for the barrier items (FDP-004…009). If they are null for Yemen, it stays
-    empty with that verified reason. If they are not null, fill it.
-  - VIS-PAYMENT-ANATOMY follows U2 and U6.
-  Fix any visual that must appear but does not.
 
 **S — Structure rules** S1–S13 (Appendix F) and the navigation (D8, CR-S12), within the D13 preservation rule.
 - Re-measure after S. Targets:
@@ -427,61 +341,6 @@ Challengers test and report. They never write files.
     checkpoint's run count.
   Nothing else from that branch.
 - Gates, PR, merge.
-
-**T — Tools: elevate search, Compare, the source directory and error reporting.** All of it is progressive
-enhancement, first-party JS, with no library or third-party service. Each tool works without JS at a basic level.
-Test every claim in a real browser.
-- **Search** (site-src/app.js, search_index.json, search_aliases.json).
-  - Arabic normalisation (alef and hamza forms, taa marbuta/haa, alif maqsura/yaa, tatweel, diacritics), and
-    Western/Arabic-Indic digit equivalence.
-  - Aliases and synonyms from search_aliases.json, both directions (e.g. حوالات ↔ تحويلات ↔ remittances,
-    CBY ↔ البنك المركزي).
-  - Ranking: exact ID, then title, then summary, then body.
-  - Every result shows its type, period and scope line, so a number is never shown bare.
-  - Typed groups (questions, evidence, Readings, sources, dated events, measurement priorities).
-  - Full keyboard use; ?q= state preserved across a language switch.
-  - Zero-result help: suggestions, plus "search the other language".
-  - Tests: an Arabic query set and an English query set, each with expected top results. Make them a gate.
-- **Compare** (/evidence/compare/).
-  - A shareable URL for any selection.
-  - The verdict (comparable / qualified / not comparable) is explained in one sentence naming the differing
-    dimension (unit, universe, period, geography, definition).
-  - A printable and copyable summary that carries the verdict.
-  - A mobile layout that keeps the verdict above the values.
-  - Selection limits and errors in plain words.
-- **Source directory** (/data/).
-  - Facets for publisher, source type, year and the governed question used on, with live counts.
-  - Sorting; state kept in the URL; ?source= and #source-ID open the right group (S1).
-  - "Clear all".
-  - A per-source "cited by" list linking to the records that use it.
-- **Report an error: a proper, structured form, not a bare email link.**
-  - Where: on the existing /contact/ page (no new route), as a section with id="report". Every record, figure and
-    Reading carries "Report an error", which opens it pre-filled.
-  - Fields:
-    - page URL, record ID, section anchor, language, edition (all auto-filled, editable);
-    - the value or sentence in question (pre-filled when launched from a figure);
-    - error type: number / date or period / source or link / scope or definition / translation / accessibility /
-      other;
-    - what it should say, and the evidence for that (a URL or citation);
-    - optional name and email for a reply;
-    - a consent line pointing to /privacy/.
-  - Accessible labels, inline validation and clear error messages. AR and EN copy goes Master-first (04_NAV_UX).
-  - Transport now (static site, no server): on submit, build a structured report with a reference code (e.g.
-    YFIE-ERR-<record>-<yyyymmdd-hhmm>) in a fixed "key: value" format. Then:
-    - (1) open the mail client to office@causewaygrp.com with that subject and body;
-    - (2) offer "Copy report" for webmail users.
-    No-JS: a plain mailto link with the same field list as instructions.
-  - Transport at hosting (prepared, off by default, a HOSTING item): an optional first-party POST endpoint on the
-    host, with spam control (honeypot plus rate limit; no third-party CAPTCHA). Retention is stated in /privacy/
-    Master-first on the day it is switched on.
-  - Process: write docs/CORRECTIONS_PROCESS.md, linked from /corrections/. It covers:
-    - triage (material or editorial) within a stated time;
-    - the Master-first fix;
-    - the public /corrections/ log entry, against the stable ID and edition;
-    - a reply to the reporter if they gave an email.
-  - Gates: every Report link carries its context parameters; the form pre-fills from them; the body format is stable
-    (test); no third-party request.
-- Gates for all the tools; PR, merge. Record the before/after behaviour in design/DESIGN_INTEGRATION_V2.md §T.
 
 **G1 — Direction challenge.** Build three genuinely different compositions as isolated candidate CSS layers, not
 recolours:
@@ -504,10 +363,8 @@ Same content, IDs and hooks.
   - calm and formal tone;
   - performance cost;
   - implementation risk.
-- You choose one and record it as DL-V2-001: scores, reasons, and what was rejected and why. Commit the three candidates'
-  screenshots under design/evidence/v2/ and link them from the PR, so the owner can veto later.
-- Build the candidate CSS layers outside the shipped stylesheet: in scratch, or under design/exploration/v2/ as
-  lineage that is never shipped.
+- You choose one and record it as DL-V2-001: scores, reasons, and what was rejected and why. Put the three candidates'
+  screenshots in the PR description so the owner can veto later.
 - Do not roll out more than one direction.
 
 **G2 — Implement the chosen direction** in the real renderer.
@@ -556,7 +413,7 @@ Same content, IDs and hooks.
   - Our World in Data's citation and reuse apparatus;
   - the GOV.UK Design System's typography, spacing and accessibility patterns.
 
-**G3 — Verify** (after W4F, so the footer line is included; actual runs only; PASS / FAIL / NOT RUN):
+**G3 — Verify** (actual runs only; PASS / FAIL / NOT RUN):
 - before/after screenshot sets;
 - the G0 metrics re-measured;
 - accessibility:
@@ -569,10 +426,7 @@ Same content, IDs and hooks.
   - claim no conformance;
 - RTL and bidi: dates, percentages, abbreviations, mixed-script source names;
 - print preview, and the copy-a-number test;
-- the performance budget: scripts/performance_budget.py only measures today. Add a threshold gate (/ar/data/
-  ≤350 KB cold, ≤4 font files) with a negative control;
-- the redundancy scan: list every passage of 40 words or more that repeats across pages. Each remaining repeat is
-  either a deliberate canonical projection (recorded) or becomes a link under D13;
+- the performance budget (existing scripts/performance_budget.py; /ar/data/ ≤350 KB cold) and font-file count;
 - all CONTRIBUTING §5 gates and negative controls.
 
 **Records.**
@@ -582,7 +436,7 @@ Same content, IDs and hooks.
 - Resolve or decide every open item in design/ESCALATIONS.md.
 - PR(s), merge.
 
-W4F — Environmental footprint (Stage B: order G2 → W4F → G3; specification in Appendix G). Gates, PR, merge.
+W4F — Environmental footprint (Session B, after G2; specification in Appendix G). Gates, PR, merge.
 
 W5 — Repository governance and housekeeping (no Master)
 - **`.github/workflows/housekeeping.yml`** (the owner runs it; you never run it):
@@ -591,17 +445,15 @@ W5 — Repository governance and housekeeping (no Master)
     - confirm, which must equal "I am the owner" for any real run;
     - checkpoint_sha (default 2ddbfb611bb139d9597aec9b6b79153699cc4d94);
     - checkpoint_tag (default checkpoint/2026-10-10-content-complete);
-    - hosting_ready_sha (required; the owner enters it, so there is no default).
-  - permissions: `contents: write` only.
+    - hosting_ready_sha (default: the final main SHA, set in W8).
   - steps:
     1. create the annotated checkpoint tag, and `checkpoint/<date>-hosting-ready` at hosting_ready_sha. Never move a
        tag; fail if a tag exists at another SHA.
     2. create annotated archive tags `archive/<branch>` at the head of each unmerged branch:
        - claude/public-naming-terminology-part-b;
        - code/final-content-chronology-and-gates;
-       - code/navbar-disclosures-integration.
-       safety/pr11-pre-b1b2-2026-10-04 is already an ancestor of main. Tag it `archive/` for lineage, then delete it
-       with the merged branches.
+       - code/navbar-disclosures-integration;
+       - safety/pr11-pre-b1b2-2026-10-04.
     3. delete every branch that is an ancestor of origin/main, plus each archived branch whose tag points at its head.
        Never main. Print each SHA first.
     4. write a job summary.
@@ -621,13 +473,10 @@ W5 — Repository governance and housekeeping (no Master)
   - read-only default workflow permissions.
 - **New files:** SECURITY.md (how to report; no security guarantees claimed), CITATION.cff (for the content) and
   LICENSE-CODE (D3).
-- **deploy.yml:** add a refusal step if the deploying SHA does not descend from the `*-hosting-ready` tag. Do not
-  refuse on pre_release: the runbook deploys while pre_release is true and clears it at step 13. Document it in the
-  runbook.
-- currentness.yml needs `issues: write`.
-- **Stale docs** (append or fix; delete nothing; never prepend to an audit record):
-  - append a dated HISTORICAL_LINEAGE closing note to these .md files. The .json files take no note: classify them
-    as lineage in the manifest and docs/REPOSITORY_MAP.md:
+- **deploy.yml:** add a refusal step if `pre_release` is true or the deploying SHA is not tagged hosting-ready.
+  Document it in the runbook.
+- **Stale docs** (banner or fix; delete nothing):
+  - HISTORICAL_LINEAGE banners on the 28 September docs/ island:
     - S0x closures, SESSION_*.md, REVIEW_LEDGER.json, S01_ARCHIVE_DISPOSITION_REGISTER.json;
     - POST_BUILD_REVIEW_PROGRAM.md (adjust validate.py:292 so it still reads it);
     - FINAL_RELEASE_VERIFICATION.md, S02_AUDIENCE_JOURNEYS_AND_IA.md;
@@ -643,12 +492,10 @@ W5 — Repository governance and housekeeping (no Master)
 W6 — README, README.ar.md, diagrams and cleanliness
 - **README.md** (GOV.UK plain style: sentence case, "and"; the terminology register for names). It describes the
   stable system and never tracks PRs or sessions. Sections:
-  1. identity and a status table: programme state, the checkpoint tag, the Master and Page Specs SHA-256 (validators
-     read them), "not deployed", licences per D3. Keep the phrases "single production repository" and "sole
-     semantic" (validate.py checks them). No main SHA: it changes on every merge;
+  1. identity and a status table: programme state, main SHA, checkpoint tag, "not deployed", licences per D3;
   2. **One number, traced**: a Mermaid trace of 11.9% (CLM-001). It runs governed question → domain answer →
      Evidence Record → Passport → original source with locator, and ends with what the page says it does not
-     establish. If CR-01 closed as confirmed, it includes that fact: in Yemen's study the mobile-money questions were not asked;
+     establish. It includes the CR-01 fact: in Yemen's study the mobile-money questions were not asked;
   3. the rules that make it trustworthy: the semantic firewall as a two-column table, one Master, Master-first
      corrections, bilingual co-authority;
   4. how a change reaches the public: a Mermaid flowchart naming every gate and the current negative-control count;
@@ -667,19 +514,6 @@ W6 — README, README.ar.md, diagrams and cleanliness
   11. what remains: hosting only, with links to the runbook and the live register.
   Design: describe the implemented design system in one short section, linking design/DESIGN_INTEGRATION_V2.md and
   the footprint method (Appendix G).
-- **Harvest from Mohammed Waleed's README draft** (branch code/navbar-disclosures-integration). Credit him in the
-  CHANGELOG. Take these elements, updated to current facts and names:
-  - the "What it is, and what it is not" paragraph (not a dashboard, regulator, statistical authority, provider
-    directory, reform tracker, research blog or marketing site);
-  - the ten-line distinctions list, including "the observation date is not the publication date", "disagreement is
-    not automatically an error" and "bounded evidence stays bounded";
-  - the "Production and release boundary" section;
-  - the authority-layers table (Layer → Role) and the repository map table ("why a recipient goes there");
-  - the engineering workflow block (pip install, playwright install chromium, npm ci, npm run verify, build, serve
-    on port 4173), plus what `npm run verify` checks;
-  - the "Engineering invariants" paragraph, and the Verify CI badge.
-  Drop its stale parts: DESIGN HANDOFF READY, old hashes, "licence text not yet confirmed", and old labels ("Evidence
-  Readings", "Data & sources", "Rights & reuse").
 - **README.ar.md:** the same content written as Arabic, with Arabic diagram labels. The two files link to each
   other. An independent Arabic-editor subagent judges it as Arabic.
 - **Diagrams and gates:**
@@ -687,10 +521,8 @@ W6 — README, README.ar.md, diagrams and cleanliness
     labels or counts and regenerate it.
   - Python 3.11 fail-fast preflight in scripts/build.py and scripts/validate.py: one clear line on how to install
     3.11.
-  - A README gate: every inventory count in both READMEs (pages, records, claims, passports, Readings, priorities,
-    visuals, sources, locators, search records) equals the inventory, and the stated hashes match. Mermaid blocks
-    pass a structural check (balanced fences, a known diagram type, no empty nodes), or @mermaid-js/mermaid-cli if
-    it installs. Add one negative control.
+  - A README gate: every number in both READMEs equals the inventory, and the stated SHA matches. Mermaid blocks must
+    parse. Add one negative control.
 - **Cleanliness sweep:**
   - caches, ZIPs, scratch files, screenshots outside design/evidence, credentials and tokens, *.dta or any respondent
     file. Any hit is a BLOCKER: run `git rm --cached` and add a .gitignore rule; do not rewrite history.
@@ -702,39 +534,6 @@ W6 — README, README.ar.md, diagrams and cleanliness
   - how to fix a wrong number;
   - what is not done.
   Repeat in Arabic with README.ar.md. All answers must be correct.
-- PR, merge.
-
-W6S — Search visibility and metadata (SEO), Stage C. Prepare everything; switch indexing on only at hosting.
-- **Per page, in EN and AR (Master-first where it is copy):**
-  - a unique `<title>`, targeting ≤60 characters. Drop the site suffix on long titles rather than rewriting governed
-    titles. The existing F6 gates (validate.py, F6-G01…G04) already cover titles, descriptions, canonical, hreflang
-    and the sitemap: extend them; do not duplicate them;
-  - a meta description of ≤155 characters stating the page's answer, with no number that lacks its scope;
-  - one H1;
-  - a logical heading order;
-  - `lang` and `dir` on `<html>`.
-- **Language and duplication:**
-  - reciprocal hreflang links for en and ar, plus x-default;
-  - a self-referencing canonical, emitted as absolute URLs once public_origin is set. Until then the build emits
-    them relative, or omits them by a single switch, and a test proves the switch.
-  - retired addresses (e.g. NEG-EW-011) keep noindex and point to their successor.
-- **Crawling:**
-  - sitemap.xml with both languages and lastmod from the edition date;
-  - robots.txt.
-  Both are generated now and gated behind public_origin; noindex stays until hosting, which is a HOSTING item.
-- **Structured data (JSON-LD), only what is true.** F6-G04 currently forbids Organization, author and date, and
-  allows BreadcrumbList only where a breadcrumb shows.
-  - Extending it is a deliberate gate change under §0, with reasons and a negative control.
-  - Proposed extension: WebSite with a SearchAction; Organization (CauseWay, as on /about/); BreadcrumbList where a
-    breadcrumb shows; Article for Readings, with author CauseWay and dates from the Master.
-  - If any of these cannot be made true from the Master, leave it out.
-  Do not mark evidence records as Dataset (no distribution is offered; D4).
-- **Social and performance:** Open Graph and Twitter cards on every page (the social images exist; check AR
-  rendering). Use Core Web Vitals proxies from the performance budget.
-- **Gates:** every page has a unique title and description; hreflang pairs are reciprocal; JSON-LD parses and
-  validates against schema.org types; no indexable page lacks a canonical once public_origin is set.
-- **At hosting (runbook):** verify Google Search Console and Bing Webmaster for the origin, submit the sitemap, and
-  remove noindex in the same deploy that sets public_origin.
 - PR, merge.
 
 W7 — Editorial and red-team pass on everything this brief changed
@@ -790,12 +589,9 @@ W8 — Acceptance package and final verification
   - bidi of dates and abbreviations;
   - keyboard focus order.
   Report actual results only.
-- **Final QA:** run Appendix I item by item. Record PASS / FAIL / NOT RUN with evidence (command, screenshot or
-  route) in audit/close_out/QA_CHECKLIST.md. Fix every FAIL that is in scope before the final reply.
 - Set the edition date to the final content edition, and "Sources checked up to" to the date of the last original
   actually re-read, Master-first in EN and AR (CR-17).
-- Report the final main SHA. The owner enters it as hosting_ready_sha when running Housekeeping. Name the
-  acceptance package after the commit it was built from. Commit docs/ACCEPTANCE_PACKAGE.md before building it.
+- In the last PR, set housekeeping.yml's hosting_ready_sha default to the final main SHA.
 - **Build `YFIE_ACCEPTANCE_PACKAGE_<sha>.zip` in scratch and give it to the owner. It contains:**
   - both READMEs;
   - the live register;
@@ -855,15 +651,9 @@ CR-02 MATERIAL. Findex uncertainty.
   margin of about 2.2 points that ignores clustering.
 - Finding: the Findex 2021 methodology appendix is reported to publish a Yemen margin of error, about 4.3 points,
   with a design effect.
-  - The World Bank's DDI entry for the Yemen study (YEM_2022_FINDEX_v01_M; Microdata Library) supports this. It
-    describes a clustered, stratified face-to-face design (primary sampling units, random route, gender-matched
-    interviewers, n = 1,000). It also says country-specific margins of error are in the Methodology table of the
-    Global Findex 2021 report.
 - Fix:
-  - read the appendix. If it is confirmed, cite the publisher's figure and correct the sentence. Then
-    either re-state the published derived intervals (CLM-002, CLM-026, /people/) by applying the publisher's design
-    effect to the already-published estimates, labelled "computed by CauseWay", or withdraw them. Never recompute
-    from microdata;
+  - read the appendix. If it is confirmed, cite the publisher's figure, correct the sentence, and re-state or
+    withdraw the derived intervals (CLM-002, CLM-026 and /people/) consistently;
   - if it is not confirmed, record the check.
 
 CR-03 MATERIAL. A false sentence in CLM-026.
@@ -971,9 +761,7 @@ U1. Findex 2021 published values (World Bank Global Findex source 28, open API).
 - Show the values in the existing /people/ subgroup table and the CLM-026 panel.
 - The 105 rows the World Bank does not publish stay "contract only", with the reason "requires computation from
   licensed microdata (OWN-09)".
-- Gate: commit a dated snapshot of the API responses (audit/close_out/fixtures/findex_api_<date>.json). The gate
-  compares the Master to the snapshot, never to the live API. currentness.yml refreshes the snapshot and flags any
-  drift.
+- Gate: every value equals the API value at the house rounding.
 
 U2. OBS-00037 in VIS-PAYMENT-ANATOMY (CR-06).
 
@@ -1026,16 +814,15 @@ U6. Held payment observations (19_PAYMENTS_DATA).
 - Every row that stays unpublished gets an explicit reason.
 
 U7. Remittance cost.
-- Extend the existing VIS-REMITTANCE-COST (no new contract) with the World Bank series SI.RMT.COST.IB.ZS, the
-  average cost of sending remittances to Yemen. Values read on 10 October: 2016 4.68, 2017 5.71, 2022 3.46,
-  2023 2.81. Re-fetch, and use the fetched values.
+- Add the World Bank series SI.RMT.COST.IB.ZS, the average cost of sending remittances to Yemen: 2016 4.68,
+  2017 5.71, 2022 3.46, 2023 2.81; recheck the latest.
 - Add the UN SDG 10.c.1 metadata (target 3%; corridors above 5% to be eliminated) as a reference line in the
   caption. No pass/fail colouring.
 - Say that this measures the price of sending, not last-mile or household cost.
 - Update RPW to the latest quarter.
 - This closes FRN-09.
 
-U8. IMF Financial Access Survey (via WDI; values read on 10 October; re-fetch). Last Yemen year 2015: ATMs 5.81 and branches 1.48 per 100,000 adults;
+U8. IMF Financial Access Survey (via WDI). Last Yemen year 2015: ATMs 5.81 and branches 1.48 per 100,000 adults;
 depositors 103.1 per 1,000 adults. Add these as dated historical context in MA-005's current evidence, noting that
 the series stopped in 2015 and the population denominators are the IMF's.
 
@@ -1062,10 +849,7 @@ U10. Women's evidence concordance (CWR-007).
 - ACAPS "Mahram practice" (14 December 2023) as support for a named hypothesis only.
 
 U11. CWR-001 compare case. Remittances as a share of output for 2024 are about 38.6% (YEM Spring 2025) and about
-25% (YEM Spring 2026): the same year, a different basis.
-- Read both editions in English.
-- The Arabic Spring 2025 edition is World Bank document IDU-7e9c81f8-af50-45f0-b454-e73ae077727e (June 2025).
-  Cite it only for Arabic wording.
+25% (YEM Spring 2026): the same year, a different basis. Read both editions.
 
 U12. UCT status (CWR-010, CLM-045):
 - no payment cycle since January 2025;
@@ -1075,15 +859,6 @@ Verify each in the ISR and the project page.
 
 U13. MICS 2022–23 (UNICEF/CSO): all governorates and no financial questions. Note it in MA-001 as the cheapest
 delivery vehicle for a finance module.
-
-U14 (conditional). The World Bank Yemen phone survey "Monitoring Food Insecurity and Employment", round 1
-(August–September 2022, adults 18+, about 1,297 respondents).
-- It records the area of control (IRG and DFA) and ranks household income sources, including international and
-  national remittances and humanitarian cash transfers.
-- If a public catalogue entry or published results exist, add it as a source card, and note it in MA-001 and MA-009
-  as an existing instrument that covers both areas.
-- Do not compute figures from its microdata.
-- If there is no public entry, record nothing public.
 
 ══════════════════════════════════════════════════════════════════════
 APPENDIX C — REGULATION AND CHRONOLOGY (W3d; read each in the original)
@@ -1171,8 +946,6 @@ RD9. Link fixes:
 RD10. Answer-first openings for all 11 (or 12) Readings, EN and AR.
 - The first paragraph states the Reading's finding and its main limit before the background.
 - Use only facts already in the Reading. Add no claim and no cause.
-- Where a register row already fixed the opening (AR-003, AR-004, AR-005, ED-037), keep the adjudicated wording
-  verbatim. Only reorder whole sentences. Any other change is new Arabic, listed in NEW_ARABIC_SINCE_2ddbfb61.csv.
 - Editor subagents propose; you approve; apply Master-first.
 - Keep each Reading analytical and engaging: a question, a tension, a bounded answer. No rhetoric that outruns the
   evidence.
@@ -1224,14 +997,6 @@ APPENDIX E — REJECTED, with reasons (recorded as DECIDED; nothing here is pend
   looking.
 - **CauseWay-internal inferences** (the "rate pin" test, the whole-of-Yemen IMF implied figure).
 - **Insurance, postal savings and capital markets.** Scope.
-- **Documents re-offered on 10 October:**
-  - WBG Country Survey FY14 (a client-perception questionnaire): not evidence on financial inclusion.
-  - "Impact of Yemeni crisis on efficiency of Yemeni banks" (SEBR 2025, DOI 10.48185/sebr.v6i1.1674): the venue is
-    not established, and bank-efficiency scores are outside the product's questions.
-  - The 2009/2010 Enterprise Survey questionnaires, screener, implementation note and indicator definitions: no
-    results in them. Their sampling frames differ from the 2022 survey, so no trend may be drawn. The 2013 profile is
-    already held as a citation card.
-  - The Findex respondent files (CSV, DTA): never used by this brief (data hygiene).
 
 ══════════════════════════════════════════════════════════════════════
 APPENDIX F — STRUCTURE RULES (W4). IDs and data-* hooks preserved; savings measured on the phone at 390 px.
@@ -1304,8 +1069,7 @@ S11. Domain H1 = short thesis.
 S12. Record head order.
 - New order: crumb → rubric → H1 → one record line "When · For whom" (human dates) → tools → q1.
 - Drop q3 where its body equals the For-whom line, and move id="q3" onto the record line.
-- Replace only part (2) of gate RC-1115 (the record-head order) and its control at
-  test_gate_negative_controls.py:582–584. Keep parts 1 and 3–6.
+- Replace gate RC-1115 with the new order, and update its negative control (test_gate_negative_controls.py:583).
 
 S13. Human dates in public text.
 - A display formatter turns YYYY-MM-DD into "7 November 2022" / «7 نوفمبر 2022», and "Mar-2025" into "March 2025".
@@ -1324,26 +1088,18 @@ Principle: measure what can be measured exactly (bytes transferred); estimate wh
 which. No third-party script or badge, no data sent anywhere, no cookies.
 
 G-1. Build-time measurement.
-- In Python (stdlib only; the gates job has no browser), compute for every page the cold-load bytes of its
-  first-party resources: HTML, CSS, JS, fonts and images, as referenced by the page.
-- Use gzip, as _headers and the nginx host serve them, and the same method as scripts/performance_budget.py, so one
-  page has one byte figure.
-- The footer digits change the page's own size: resolve this deterministically by fixed-width rounding or a second
-  pass, and test it.
-- Cross-check against Playwright in the browser job only.
+- For every page, load the built site in Playwright with a cold cache and sum every first-party resource the page
+  requests: HTML, CSS, JS, fonts, images.
+- Record bytes as served, compressed with Brotli at the level the deploy will use.
 - Re-measure on the real host at hosting; that is a HOSTING item.
 - Emit a generated per-page metric file.
 - Gate: the value shown on each page equals the measured value at the stated rounding.
 
 G-2. Estimate.
 - Convert bytes to an emissions estimate with the Sustainable Web Design Model, version 4, as implemented by CO2.js
-  (@tgwf/co2, pinned exact version). Inline the published SWD v4 coefficients in
-  Python (build) and JS (runtime), and test both against pinned CO2.js in the browser job only. Keep Node out of
-  build.py.
+  (@tgwf/co2, pinned exact version, as a dev dependency at build time).
 - Use the global average grid intensity and state it. Round to 2 significant figures.
-- Record the model version, constants and CO2.js version as a dated D12 section appended to the existing
-  docs/SUSTAINABILITY_METHOD.md. Do not create a parallel method file. Update its "no carbon figure until the release
-  host" line and the EAD-10 row accordingly: the build estimate now exists; host re-measurement remains HOSTING.
+- Record the model version, constants and CO2.js version in docs/FOOTPRINT_METHOD.md.
 - Show it as "≈ x g CO₂e (estimate)". Never present it as a measurement.
 
 G-3. Runtime, per visit (progressive enhancement in site-src/app.js).
@@ -1362,7 +1118,7 @@ G-4. Display.
 - With JS, a second clause: "This visit: 4 pages · 410 KB · ≈ 0.09 g CO₂e".
 - The link goes to /about/#footprint. The line never competes with evidence styling.
 - Public-literal closure: register these values as a generated SITE_OPERATION_METRIC class with its own gate (value
-  equals measurement). They are not evidence (D15), and the closure gate is not weakened.
+  equals measurement). They are not evidence, and the closure gate is not weakened.
 
 G-5. /about/ section "The footprint of this site" (Master-first, EN and AR, id="footprint"). It states:
 - What is measured and how (G-1 to G-3), and what is excluded or uncertain: device and network variation, grid mix,
@@ -1377,7 +1133,7 @@ G-5. /about/ section "The footprint of this site" (Master-first, EN and AR, id="
   - AR: «يعمل مكتبنا في عدن بالطاقة الشمسية، ولا نستخدم البلاستيك أحادي الاستخدام في المكتب، ونعمل على تحويل
     إجراءاتنا الداخلية إلى إجراءات بلا ورق.»
 - One sentence of references: the Sustainable Web Design Model v4 (sustainablewebdesign.org); CO2.js (Green Web
-  Foundation); the W3C Web Sustainability Guidelines (verify its current status and date before citing).
+  Foundation); the W3C Web Sustainability Guidelines (Draft Note, 2026).
 - Language rules:
   - specific and verifiable only;
   - never "green building", "eco-friendly", "sustainable website", "carbon neutral" or "net zero";
@@ -1401,8 +1157,7 @@ Carried over:
   - non-colour states;
   - 320/390/768/1440 px plus 200%/400% zoom, forced colours, no-JS and print;
   - "what became more true / easier / more complex / removed";
-  - no invented content. Design changes the Master only for the recorded structural copy in S9–S11, S13 and G-5,
-    through run_stage.py, and never for evidence meaning.
+  - no invented content; Master untouched by design.
 - **From V2/V3:** measurable craft checks, used as defaults the lead may override with a recorded reason:
   - targets ≥24 px; text contrast ≥4.5:1; ≤4 font files;
   - the licence line legible on every page;
@@ -1417,92 +1172,3 @@ Rejected:
 - page-length targets that would cut content (D13);
 - any font family beyond IBM Plex.
 
-
-══════════════════════════════════════════════════════════════════════
-APPENDIX I — FINAL QA CHECKLIST (W8; each item PASS / FAIL / NOT RUN, with evidence)
-══════════════════════════════════════════════════════════════════════
-
-I-1. Truth and evidence
-- Every Appendix A finding is CLOSED or FRONTIER, with its locator.
-- Bilingual numeric invariance is 0, number words included.
-- Public-literal closure regenerated; there is no public number without a bound record.
-- The source-reference closure passes, and every public source has a public locator (rule 5).
-- No held, internal or non-public text leaks (HOLD, CONTRACT, NON_PUBLIC values, names under D10, procurement
-  sources).
-- Spot-check the firewall on 20 random claims: people ≠ accounts; listed ≠ operating; target ≠ result;
-  observed ≠ estimated; missing ≠ zero; chronology ≠ causality.
-
-I-2. Arabic and English
-- Every register row is applied, stopped with a reason, or resolved by its condition.
-- The house-style lint is clean, and the mechanical rules are gated.
-- The EN editor and AR editor verdicts are recorded for every changed string.
-- No ISO date appears in prose or record headers.
-
-I-3. Every page family, AR and EN, at 320/390/768/1440 px:
-- Home; Explore;
-- the 8 domains;
-- the evidence index and 3 records (full, partial, held);
-- Compare;
-- the Readings index and all Readings;
-- /measurement/, /methodology/, /data/;
-- /about/ (funding, footprint), /rights/, /privacy/, /terms/, /accessibility/, /corrections/, /contact/;
-- 404; the retired address.
-On each: one H1; TOC within the rule; the answer, limit and source visible on the first screen of domain and record
-pages; no horizontal overflow; no clipped text; figures and their limits shown together.
-
-I-4. Functions
-- Search: typed results, dated events, ?q= state, empty and error states, keyboard use, and the AR and EN query
-  sets (gate).
-- Compare: preselect, a shareable URL, a one-sentence verdict reason, verdict words or shape, a printable summary,
-  and a mobile fallback.
-- /data/ filters and facets, and deep links (?source=, #source-ID) that open the right group.
-- Cite and copy.
-- The report-an-error form:
-  - pre-fills from every record, figure and Reading;
-  - validates its fields;
-  - produces the structured body and reference code;
-  - offers "Copy report", and the no-JS mailto fallback;
-  - docs/CORRECTIONS_PROCESS.md is linked from /corrections/.
-- Language switch keeps your place. The menu opens with Enter and Space and closes at ≥900 px. Disclosures work.
-- No-JS: all content reachable; the footprint shows the build-time value.
-- Print: limits, sources, URL and edition.
-
-I-5. Accessibility (claim no conformance)
-- Automated checks clean, or each issue recorded.
-- Keyboard paths and visible focus.
-- 200% and 400% zoom; forced colours; reduced motion.
-- Landmarks, headings, labels, and alt text or a table for every visual.
-- Targets ≥24 px; text contrast ≥4.5:1 and UI ≥3:1.
-
-I-6. Design and visuals
-- DL-V2-001 recorded, with G1 scores and screenshots.
-- G0 metrics re-measured against the S and G2 targets.
-- Every visual contract is in a recorded state, and no withheld visual lacks a true reason.
-- At most 4 font files per page; IBM Plex only.
-- The logo is canonical.
-- The redundancy scan is resolved.
-
-I-7. Performance and footprint
-- The performance budget passes (/ar/data/ ≤350 KB cold).
-- Footprint values equal the measurements.
-- The runtime meter matches CO2.js for the same bytes.
-- No third-party request.
-
-I-8. SEO
-- Unique titles and descriptions; reciprocal hreflang; the canonical switch tested.
-- JSON-LD validates; sitemap and robots are generated and gated.
-- Social cards render in AR and EN.
-
-I-9. Security and release boundary
-- Security headers prepared (_headers) and tested; CSP without unsafe inline (or the recorded exception).
-- deploy.yml refuses a SHA that does not descend from the hosting-ready tag; public_downloads is false; no analytics.
-- No secrets, *.dta or respondent files tracked.
-
-I-10. Repository
-- The register's live view shows only HOSTING items open.
-- Counts are consistent across README, README.ar, the checkpoint, Context, the manifest and the Master.
-- Every new file is classified; SHA256SUMS regenerated.
-- The housekeeping workflow and its tests are present; REPOSITORY_SETTINGS.md is present.
-- Lineage closing notes are appended to the historical .md docs, and the historical JSON is classified as lineage. There are no stale DESIGN HANDOFF READY claims.
-- Mohammed Waleed's three items are ported, with credit. His branch is listed for archive.
-- The cold-reader tests pass in EN and AR.

@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 43,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 172,
+  "CURRENT_PROGRAMME_RECORD": 173,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -461,6 +461,10 @@
   },
   {
    "path": "audit/close_out/BRIEF.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/BRIEF_v4.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
