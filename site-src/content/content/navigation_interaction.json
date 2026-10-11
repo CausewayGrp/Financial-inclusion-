@@ -3315,6 +3315,66 @@
       "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
       "depth_role": "VERIFICATION",
       "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/FAS-YEM-2015/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "FAS-YEM-2015",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/MICS-YEM-2022-23/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "MICS-YEM-2022-23",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/YMPS-YEM-2022-R1/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "YMPS-YEM-2022-R1",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
     }
   ],
   "journeys": [
@@ -3803,7 +3863,7 @@
       "No archive factual proposition changes current controlled evidence in R4."
     ]
   },
-  "public_search_record_count": 507,
+  "public_search_record_count": 513,
   "r6_information_design_contract": {
     "status": "R6_CLOSED",
     "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",
