@@ -151,3 +151,26 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   or files pages read); the February 2026 SAR repricing decision (nearest item news/918, the Board meeting of 12
   February 2026); the text of Decision No. 4 of 1991 (cited by publications/149, not published); a July 2024 licence
   revocation (the 2024 bank measure held is Decision No. 20 of 2024); news/709, /722 and /731 (HTTP 500).
+- 2026-10-11 · A · W3d · PR #35 merged at `da4ac79f` (9/9 CI; negative controls 6/6 shards). Closed: W3d (Appendix C);
+  FRONTIER items as listed in the CLOSE-4 line. CI: the shard timeout went from 20 to 35 minutes after three shards
+  caught every fault and were then cancelled at 20 minutes (run 38096726038).
+- 2026-10-11 · A · W3e · CLOSE-5 run (runner COMMITTED; Master `c24791d6fd22` → `d14b36c5c171`, 182 cells) and one
+  steward edit (D14, RD9): presentation_priority.json measurement_limit 2/1 → 10 on the eight domain routes, its own
+  commit. RD10: seven openings reordered (CWR-002, 003, 004, 005, 008, 009) or rewritten by ED-037 (CWR-011); CWR-001,
+  006, 007 and 010 already answer first; AR-003, AR-004 and AR-005 kept verbatim. RD2: nine "use" sections. RD1:
+  CWR-011 adds Issue No. 55 and end-2025 as an ordering (no new numbers in the text; the table prints them), five
+  alternatives (asset quality, no ratio), related to CWR-002 and back, bound to MA-008 and MA-004. RD3: CWR-005 bridge
+  (subscribers ≠ active accounts; no active or dormant share). RD4: CWR-008 PAD ¶10 (CLM-062 '141' LOCATOR → READ);
+  SMEPS 2025 not published, ESCWA unreachable. RD5: CWR-010 CNL approval date and cash-out plan. RD6, RD7: no change
+  (nothing newer; U11 already in CWR-001). RD9: /measurement/ links CWR-001 (MA-001), CWR-002 (MA-008) and CWR-011;
+  domain pages list every priority that names them; /methodology/ lists four evidence-method visuals as related
+  records; CWR-004 → CWR-007. M1: dimensions on MA-001, 003, 005, 008, 009; MA-008 says the resource holds no current
+  measure. M2: /methodology/ s4 gap paragraph (ICT/telecom, insolvency, digital literacy, Yemen Post). Reviews: Arabic
+  editor 1 must-fix, 10 should-fix, 13 nits; red-team 2 blockers (CWR-005 dormancy inference; CWR-011 "other
+  movements" dropped), 8 should-fix, 6 nits. Applied, except: N2 (the "18 valid responses" count is not held in a
+  record), N4 (the page shows the CNL approval date in the source title), and F9 kept CWR-002 → MA-008 (its "what
+  remains usable" names more borrowers and wider access, the gap MA-008 measures; owner may revisit).
+  RD8 (CWR-012, conditional): DROPPED per its own rule. A draft exists (audit/close_out/drafts/CWR-012_draft.json) with
+  every number bound, but the Arabic cannot be reviewed to a native economic editor's standard in this run (and no
+  such review is claimed), and the Cash Consortium reports' findings it should use are not held as records. Owner
+  question.

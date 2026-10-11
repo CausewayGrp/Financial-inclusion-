@@ -332,7 +332,8 @@
     "object_type": "evidence_object",
     "object_id": "VIS-EVIDENCE-FRESHNESS",
     "public_routes": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "lineage_state": "COMPOSITE_OF_OBJECTS",
     "dependency_ids": [
@@ -425,7 +426,8 @@
     "object_type": "evidence_object",
     "object_id": "VIS-SOURCE-COMPARISON",
     "public_routes": [
-      "/evidence/compare/"
+      "/evidence/compare/",
+      "/methodology/"
     ],
     "lineage_state": "COMPOSITE_OF_OBJECTS",
     "dependency_ids": [],
@@ -555,7 +557,8 @@
     "object_type": "evidence_object",
     "object_id": "VIS-MECHANISM-METRIC-BRIDGE",
     "public_routes": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "lineage_state": "COMPOSITE_OF_OBJECTS",
     "dependency_ids": [],
@@ -3599,7 +3602,8 @@
     "object_type": "evidence_object",
     "object_id": "VIS-EVIDENCE-CLASS-LADDER",
     "public_routes": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "lineage_state": "COMPOSITE_OF_OBJECTS",
     "dependency_ids": [],
@@ -8377,18 +8381,32 @@
       "EP-IBS-EMONEY-2019-K04",
       "EP-IBS-EMONEY-VALUE-K04",
       "EP-IBS-GEO-GENDER-K04",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-WB-FMIIP-P180708",
       "CLM-050",
       "CLM-051",
-      "CLM-052"
+      "CLM-052",
+      "CLM-010",
+      "FMIIP-BASELINE-2025-01"
     ],
-    "direct_source_ids": [],
+    "direct_source_ids": [
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-WB-FMIIP-P180708"
+    ],
     "resolved_source_ids": [
-      "SRC-IBS-EPAY-YEM-2020"
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IBS-EPAY-YEM-2020",
+      "SRC-CBY-PAYREPORT-Q3-2024",
+      "SRC-CBY-FMIIP-WORKSHOP-2025",
+      "SRC-CBY-DIGITAL-EXPO-2026-001"
     ],
     "resolved_via_object_ids": [
       "CLM-050",
       "CLM-051",
-      "CLM-052"
+      "CLM-052",
+      "CLM-010",
+      "FMIIP-BASELINE-2025-01"
     ],
     "context_reference_ids": [
       "EP-IBS-EMONEY-2019-K04",
@@ -8398,8 +8416,33 @@
     "unresolved_dependency_ids": [],
     "source_locators": [
       {
+        "source_id": "SRC-CBY-PAYREPORT-H1-2025",
+        "primary_url": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-IBS-EPAY-YEM-2020",
         "primary_url": "https://www.findevgateway.org/paper/2020/10/electronic-payment-services-yemen-challenges-and-opportunities-success",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-PAYREPORT-Q3-2024",
+        "primary_url": "https://www.cby-ye.com/files/677c2e75a4d8c.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-FMIIP-WORKSHOP-2025",
+        "primary_url": "https://cby-ye.com/news/876",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-DIGITAL-EXPO-2026-001",
+        "primary_url": "https://cby-ye.com/news/915",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8629,6 +8672,7 @@
       "EP-FIRM-2022",
       "DA-020",
       "EP-SMEPS-FINACCESS-KPI",
+      "SRC-WB-FMIIP-P180708",
       "CLM-005",
       "CLM-006",
       "CLM-060",
@@ -8636,11 +8680,13 @@
       "VIS-FIRM-CONSTRAINTS",
       "VIS-FIRM-FINANCE-PATH"
     ],
-    "direct_source_ids": [],
-    "resolved_source_ids": [
-      "SRC-WB-FSD-2024-001",
-      "SRC-SMEPS-AR2024-2025",
+    "direct_source_ids": [
       "SRC-WB-FMIIP-P180708"
+    ],
+    "resolved_source_ids": [
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-SMEPS-AR2024-2025"
     ],
     "resolved_via_object_ids": [
       "CLM-005",
@@ -8659,6 +8705,11 @@
     "unresolved_dependency_ids": [],
     "source_locators": [
       {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-WB-FSD-2024-001",
         "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
         "metadata_state": "DISPLAY_READY"
@@ -8666,11 +8717,6 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
-        "metadata_state": "DISPLAY_READY"
-      },
-      {
-        "source_id": "SRC-WB-FMIIP-P180708",
-        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8890,16 +8936,19 @@
     "dependency_ids": [
       "SRC-CBY-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-IMF-YEM-AIV-2025-2026",
       "CBY-BANKS-2026-05",
       "CLM-033"
     ],
     "direct_source_ids": [
       "SRC-CBY-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "resolved_source_ids": [
       "SRC-CBY-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-IMF-YEM-AIV-2025-2026",
       "SRC-CBY-AR2022-001",
       "SRC-CBY-AR2023-001"
     ],
@@ -8918,6 +8967,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IMF-YEM-AIV-2025-2026",
+        "primary_url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1yemea2026001-source-pdf.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -10624,14 +10678,24 @@
       "199",
       "196"
     ],
-    "direct_source_ids": [],
+    "direct_source_ids": [
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-WB-FMIIP-P180708"
+    ],
     "resolved_source_ids": [
-      "SRC-IBS-EPAY-YEM-2020"
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IBS-EPAY-YEM-2020",
+      "SRC-CBY-PAYREPORT-Q3-2024",
+      "SRC-CBY-FMIIP-WORKSHOP-2025",
+      "SRC-CBY-DIGITAL-EXPO-2026-001"
     ],
     "resolved_via_object_ids": [
       "CLM-050",
       "CLM-051",
-      "CLM-052"
+      "CLM-052",
+      "CLM-010",
+      "FMIIP-BASELINE-2025-01"
     ],
     "context_reference_ids": [
       "EP-IBS-EMONEY-2019-K04",
@@ -10641,8 +10705,33 @@
     "unresolved_dependency_ids": [],
     "source_locators": [
       {
+        "source_id": "SRC-CBY-PAYREPORT-H1-2025",
+        "primary_url": "https://www.cby-ye.com/files/693a7845e7f26.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-IBS-EPAY-YEM-2020",
         "primary_url": "https://www.findevgateway.org/paper/2020/10/electronic-payment-services-yemen-challenges-and-opportunities-success",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-PAYREPORT-Q3-2024",
+        "primary_url": "https://www.cby-ye.com/files/677c2e75a4d8c.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-FMIIP-WORKSHOP-2025",
+        "primary_url": "https://cby-ye.com/news/876",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-DIGITAL-EXPO-2026-001",
+        "primary_url": "https://cby-ye.com/news/915",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -10869,11 +10958,13 @@
       "219_SMEPS_PROGRAMME_EVIDENCE",
       "50_STRATEGIC_INSIGHTS"
     ],
-    "direct_source_ids": [],
-    "resolved_source_ids": [
-      "SRC-WB-FSD-2024-001",
-      "SRC-SMEPS-AR2024-2025",
+    "direct_source_ids": [
       "SRC-WB-FMIIP-P180708"
+    ],
+    "resolved_source_ids": [
+      "SRC-WB-FMIIP-P180708",
+      "SRC-WB-FSD-2024-001",
+      "SRC-SMEPS-AR2024-2025"
     ],
     "resolved_via_object_ids": [
       "CLM-005",
@@ -10892,6 +10983,11 @@
     "unresolved_dependency_ids": [],
     "source_locators": [
       {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
         "source_id": "SRC-WB-FSD-2024-001",
         "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
         "metadata_state": "DISPLAY_READY"
@@ -10899,11 +10995,6 @@
       {
         "source_id": "SRC-SMEPS-AR2024-2025",
         "primary_url": "https://smeps.org.ye/post/85",
-        "metadata_state": "DISPLAY_READY"
-      },
-      {
-        "source_id": "SRC-WB-FMIIP-P180708",
-        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -11282,11 +11373,13 @@
     ],
     "direct_source_ids": [
       "SRC-CBY-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "resolved_source_ids": [
       "SRC-CBY-001",
       "SRC-WB-FMIIP-P180708",
+      "SRC-IMF-YEM-AIV-2025-2026",
       "SRC-CBY-AR2022-001",
       "SRC-CBY-AR2023-001"
     ],
@@ -11305,6 +11398,11 @@
       {
         "source_id": "SRC-WB-FMIIP-P180708",
         "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IMF-YEM-AIV-2025-2026",
+        "primary_url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1yemea2026001-source-pdf.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {

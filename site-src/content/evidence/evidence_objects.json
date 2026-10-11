@@ -914,7 +914,8 @@
     "object_id": "VIS-EVIDENCE-FRESHNESS",
     "object_class": "VISUAL",
     "public_routes": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "title_en": "Where is the evidence current — and where is it old?",
     "title_ar": "حداثة الدليل بحسب المجال",
@@ -992,7 +993,8 @@
       }
     ],
     "public_route_list": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "does_not_establish_en": "Old evidence is not automatically invalid; recent administrative/regulatory evidence is not a current population outcome.",
     "does_not_establish_ar": "قدم الدليل لا يجعله باطلًا تلقائيًا، وحداثة الأدلة الإدارية أو التنظيمية لا تجعلها نتيجة سكانية راهنة.",
@@ -1003,7 +1005,8 @@
     "object_id": "VIS-SOURCE-COMPARISON",
     "object_class": "VISUAL",
     "public_routes": [
-      "/evidence/compare/"
+      "/evidence/compare/",
+      "/methodology/"
     ],
     "title_en": "Same word, different measure: comparing source definitions",
     "title_ar": "الكلمة نفسها والمقياس مختلف: مقارنة تعريفات المصادر",
@@ -1032,7 +1035,8 @@
     "source_use_roles": null,
     "value_states": [],
     "public_route_list": [
-      "/evidence/compare/"
+      "/evidence/compare/",
+      "/methodology/"
     ],
     "does_not_establish_en": "The same word does not mean the same measure. The comparison does not reconcile differing figures or prefer one number unless evidence on their definitions supports it.",
     "does_not_establish_ar": "الكلمة نفسها لا تعني المقياس نفسه. ولا توفّق المقارنة بين الأرقام المختلفة، ولا تفضّل رقمًا على آخر ما لم تسند ذلك أدلة على تعريفاتها.",
@@ -1414,7 +1418,8 @@
     "object_id": "VIS-MECHANISM-METRIC-BRIDGE",
     "object_class": "VISUAL",
     "public_routes": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "title_en": "What may explain the number — without pretending to prove it?",
     "title_ar": "ما الذي قد يفسر الرقم — من دون ادعاء إثباته؟",
@@ -1443,7 +1448,8 @@
     "source_use_roles": null,
     "value_states": [],
     "public_route_list": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "does_not_establish_en": "The links do not establish causation, prevalence or a sentiment score unless separate evidence does.",
     "does_not_establish_ar": "لا تثبت الروابط علاقة سببية أو انتشارًا أو درجة للمشاعر ما لم يثبت ذلك دليل مستقل.",
@@ -8760,7 +8766,8 @@
     "object_id": "VIS-EVIDENCE-CLASS-LADDER",
     "object_class": "VISUAL",
     "public_routes": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "title_en": "What kind of evidence is this?",
     "title_ar": "ما نوع هذا الدليل؟",
@@ -8800,7 +8807,8 @@
       }
     ],
     "public_route_list": [
-      "/evidence/"
+      "/evidence/",
+      "/methodology/"
     ],
     "does_not_establish_en": "One type of evidence does not stand in for another: a perception is not a population outcome, a recommendation is not implementation, a project milestone is not usage, and an account or transaction is not a unique person. An evidence type is not a probability or certainty score, and the order in which types are presented does not rank them.",
     "does_not_establish_ar": "لا يحل نوع من الأدلة محل نوع آخر: فالتصور ليس نتيجة سكانية، والتوصية ليست تنفيذًا، ومَعلم المشروع ليس استخدامًا، والحساب أو المعاملة ليس شخصًا فريدًا. ونوع الدليل ليس درجة احتمال أو يقين، وترتيب عرض الأنواع لا يعني المفاضلة بينها.",
@@ -11948,7 +11956,9 @@
       {
         "t": "141",
         "k": "v",
-        "s": "LOCATOR"
+        "s": "READ",
+        "src": "SRC-WB-FMIIP-P180708",
+        "loc": "PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\"; read 10 October 2026"
       },
       {
         "t": "less than 50%",

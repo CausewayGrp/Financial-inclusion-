@@ -2,8 +2,8 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "c24791d6fd22b127f9f5109f93a91b7d50b942303799993d0fb3ab5510100852",
-  "page_specs_sha256": "a7b7611be6590dad528d62702f22cf721340886830a78adf2953f08a88431eaf",
+  "production_master_sha256": "d14b36c5c1714cdc75dcc92bddac8777a301050ee6d147596e446978418ef360",
+  "page_specs_sha256": "8889e1ac2aabafeba3f74e01dcc128275bcdfe89f461b09729b960caa2f2a014",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
@@ -278,7 +278,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 2,
+    "measurement_limit": 10,
     "presentation_family": "sparse"
    },
    "structured_data": [],
@@ -4520,7 +4520,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 2,
+    "measurement_limit": 10,
     "presentation_family": "system-history"
    },
    "structured_data": [],
@@ -4565,13 +4565,13 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 8,
+   "source_references": 9,
    "next_actions": [
     "/evidence/CLM-005/"
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 2,
+    "measurement_limit": 10,
     "presentation_family": "bounded-survey-programme"
    },
    "structured_data": [],
@@ -4656,7 +4656,11 @@
     "CLM-047",
     "CLM-048",
     "DS-FINDEX-HISTORY-CROSSWALK",
-    "VIS-FINDEX-SAMPLE-SUPPORT"
+    "VIS-EVIDENCE-CLASS-LADDER",
+    "VIS-EVIDENCE-FRESHNESS",
+    "VIS-FINDEX-SAMPLE-SUPPORT",
+    "VIS-MECHANISM-METRIC-BRIDGE",
+    "VIS-SOURCE-COMPARISON"
    ],
    "visual_ids": [],
    "reading_ids": [],
@@ -4729,7 +4733,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 2,
+    "measurement_limit": 10,
     "presentation_family": "admin-infrastructure-use-boundary"
    },
    "structured_data": [],
@@ -4806,7 +4810,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 2,
+    "measurement_limit": 10,
     "presentation_family": "dense"
    },
    "structured_data": [],
@@ -4883,7 +4887,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 2,
+    "measurement_limit": 10,
     "presentation_family": "authority-status-operation"
    },
    "structured_data": [],
@@ -4919,7 +4923,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 52,
+   "source_references": 55,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -4954,7 +4958,7 @@
    },
    "title_en": "The payment arrived. What happened next?",
    "title_ar": "وصلت الدفعة. ماذا حدث بعدها؟",
-   "sections": 6,
+   "sections": 7,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-045"
@@ -5005,9 +5009,11 @@
    "reading_ids": [
     "CWR-001",
     "CWR-002",
-    "CWR-006"
+    "CWR-011"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-008"
+   ],
    "source_ids": [
     "SRC-CBY-AR2022-001",
     "SRC-CBY-AR2023-001",
@@ -5033,7 +5039,7 @@
    },
    "title_en": "When the unit changes, the story changes",
    "title_ar": "حين تتغير وحدة القياس، تتغير القصة",
-   "sections": 6,
+   "sections": 7,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-001",
@@ -5081,12 +5087,14 @@
    },
    "title_en": "When does digital growth become durable use?",
    "title_ar": "متى يتحول النمو الرقمي إلى استخدام مستمر؟",
-   "sections": 5,
+   "sections": 6,
    "section_rows_split_by_language": false,
    "evidence_ids": [
+    "CLM-010",
     "CLM-050",
     "CLM-051",
-    "CLM-052"
+    "CLM-052",
+    "FMIIP-BASELINE-2025-01"
    ],
    "visual_ids": [
     "RV-CWR-005"
@@ -5100,7 +5108,7 @@
     "MA-002"
    ],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 6,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5120,7 +5128,7 @@
    },
    "title_en": "How can 22% and 91.84% both be right?",
    "title_ar": "كيف تكون 22% و91.84% صحيحتين معًا؟",
-   "sections": 7,
+   "sections": 8,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-005",
@@ -5162,7 +5170,7 @@
    },
    "title_en": "When does a payment reform become financial inclusion?",
    "title_ar": "متى يصبح إصلاح المدفوعات تحسنًا في الشمول المالي؟",
-   "sections": 6,
+   "sections": 7,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-003",
@@ -5203,7 +5211,7 @@
    },
    "title_en": "The gender gap is measured. Its explanation is still open.",
    "title_ar": "الفجوة بين النساء والرجال مقاسة. أما تفسيرها فما يزال مفتوحًا.",
-   "sections": 4,
+   "sections": 5,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-001",
@@ -5245,7 +5253,7 @@
    },
    "title_en": "What exactly do we mean by microfinance growth?",
    "title_ar": "ماذا نعني تحديدًا بنمو التمويل الأصغر؟",
-   "sections": 7,
+   "sections": 8,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-054",
@@ -5289,7 +5297,7 @@
    },
    "title_en": "The system is changing. What has reached people?",
    "title_ar": "المنظومة المالية تتغير. فما الذي وصل إلى الناس؟",
-   "sections": 4,
+   "sections": 5,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CLM-001",
@@ -5301,8 +5309,8 @@
     "RV-CWR-004"
    ],
    "reading_ids": [
-    "CWR-003",
     "CWR-004",
+    "CWR-007",
     "CWR-009"
    ],
    "measurement_ids": [
@@ -5350,7 +5358,9 @@
     "CWR-002",
     "CWR-004"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-001"
+   ],
    "source_ids": [
     "SRC-CBY-AR2024-BOP",
     "SRC-CBY-AR2025-BOP"
@@ -5377,7 +5387,7 @@
    },
    "title_en": "Where bank balance sheets sit",
    "title_ar": "أين تتركز أصول البنوك",
-   "sections": 5,
+   "sections": 6,
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "CBY-BANKS-2026-05",
@@ -5390,12 +5400,15 @@
     "CWR-002",
     "CWR-011"
    ],
-   "measurement_ids": [],
+   "measurement_ids": [
+    "MA-004",
+    "MA-008"
+   ],
    "source_ids": [
     "SRC-CBY-001",
     "SRC-WB-FMIIP-P180708"
    ],
-   "source_references": 4,
+   "source_references": 5,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5458,7 +5471,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 2,
+    "measurement_limit": 10,
     "presentation_family": "transmission-state"
    },
    "structured_data": [],
@@ -5516,7 +5529,7 @@
    ],
    "next_action_policy": "VERIFY_PRIMARY_EVIDENCE",
    "presentation_contract": {
-    "measurement_limit": 1,
+    "measurement_limit": 10,
     "presentation_family": "macro-vintage-concept"
    },
    "structured_data": [],

@@ -1,0 +1,1666 @@
+{
+ "transaction": "CLOSE-5",
+ "summary": "W3e: answer-first openings (RD10, ED-037 with RD1), nine 'use' sections (RD2), CWR-011 completed (RD1), CWR-005, CWR-008 and CWR-010 updated (RD3–RD5), links (RD9), Measurement Agenda dimensions (M1) and the /methodology/ gap list (M2).",
+ "self_counts": {
+  "site_pages": 144,
+  "bilingual_sections": 246,
+  "questions": 11,
+  "evidence_objects": 110,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 29,
+  "sources": 199,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 27
+ },
+ "input_master_sha256": "c24791d6fd22b127f9f5109f93a91b7d50b942303799993d0fb3ab5510100852",
+ "output_master_sha256": "d14b36c5c1714cdc75dcc92bddac8777a301050ee6d147596e446978418ef360",
+ "cells_written": 182,
+ "changes": [
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 365,
+   "col": 5,
+   "field": "/readings/where-bank-balance-sheets-sit/#s3.body_en",
+   "old": "The balance sheet is consistent with banks holding claims on the state and assets abroad rather than lending to firms: claims on government and foreign assets together are several times the credit extended to the private sector. This Reading states that as a hypothesis. A balance sheet shows where assets sit on one date. It does not show why they sit there, and it does not show what firms asked for.",
+   "new": "The balance sheet is consistent with banks holding claims on the state and assets abroad rather than lending to firms: claims on government and foreign assets together are several times the credit extended to the private sector. This Reading states that as a hypothesis. A balance sheet shows where assets sit on one date. It does not show why they sit there, and it does not show what firms asked for.\nThe latest bulletin consulted, Issue No. 55 (June 2026), shows the same pattern a month later; the table on this page sets the end of 2025, May 2026 and June 2026 side by side, as the bulletin prints them. Of foreign assets, loans and advances to government and credit to the private sector, foreign assets were the largest and credit to the private sector the smallest at all three dates. Three dates are not a trend, and the same alternatives apply at each of them."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 365,
+   "col": 7,
+   "field": "/readings/where-bank-balance-sheets-sit/#s3.body_ar",
+   "old": "تتسق الميزانية مع أن البنوك تحتفظ بحقوق على الدولة وأصول في الخارج بدل إقراض المنشآت: فالحقوق على الحكومة والأصول الخارجية معًا تبلغ أضعاف الائتمان الممنوح للقطاع الخاص. وتطرح هذه القراءة ذلك فرضيةً. فالميزانية تُظهر أين تقع الأصول في تاريخ واحد، لكنها لا تُظهر لماذا تقع هناك، ولا ما طلبته المنشآت.",
+   "new": "تتسق الميزانية مع أن البنوك تحتفظ بحقوق على الدولة وأصول في الخارج بدل إقراض المنشآت: فالحقوق على الحكومة والأصول الخارجية معًا تبلغ أضعاف الائتمان الممنوح للقطاع الخاص. وتطرح هذه القراءة ذلك فرضيةً. فالميزانية تُظهر أين تقع الأصول في تاريخ واحد، لكنها لا تُظهر لماذا تقع هناك، ولا ما طلبته المنشآت.\nوتُظهر أحدث نشرة اطُّلع عليها، العدد رقم 55 (يونيو 2026)، النمط نفسه بعد شهر؛ ويعرض الجدول في هذه الصفحة نهاية 2025 ومايو 2026 ويونيو 2026 جنبًا إلى جنب كما ترد في النشرة. ومن بين الأصول الخارجية والقروض والسلفيات للحكومة والائتمان الممنوح للقطاع الخاص، كانت الأصول الخارجية أكبرها والائتمان الممنوح للقطاع الخاص أصغرها في التواريخ الثلاثة. وثلاثة تواريخ لا تصنع اتجاهًا، والتفسيرات البديلة نفسها قائمة في كل منها."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 366,
+   "col": 4,
+   "field": "/readings/where-bank-balance-sheets-sit/#s4.heading_en",
+   "old": "Four other explanations fit the same numbers",
+   "new": "Five other explanations fit the same numbers"
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 366,
+   "col": 5,
+   "field": "/readings/where-bank-balance-sheets-sit/#s4.body_en",
+   "old": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country.",
+   "new": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved. The same mechanism can run the other way: between the end of 2024 and the end of 2025 the banks’ total assets fell from 15,329.7 to 12,341.8 billion rials, while the average market rate that CBY-Aden publishes went from 2,059.2 to 1,624.45 rials per US dollar (December averages). Part of that fall is consistent with revaluation at a stronger rial, but the bulletin amended its monetary and banking data in line with the IMF’s Monetary and Financial Statistics Manual (2016) from December 2025 and publishes no line-by-line bridge, so valuation, the change of method and other movements cannot be separated.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country.\n- Asset quality. If many existing loans are not being repaid, banks may hold back new lending for that reason, and the private-sector line may include loans that are not performing. The consolidated balance sheet does not show asset quality. The IMF’s 2025 Article IV staff report prints one set of financial soundness indicators for Yemen, including the ratio of non-performing loans to total gross loans, but its table does not state which banks or areas it covers, and for its earliest years the ratio is printed as zero, which this resource reads as not reported, not as zero. One published vintage of unstated coverage is not yet a harmonized series with common definitions, so this Reading does not use the ratio."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 366,
+   "col": 6,
+   "field": "/readings/where-bank-balance-sheets-sit/#s4.heading_ar",
+   "old": "أربعة تفسيرات أخرى تنسجم مع الأرقام نفسها",
+   "new": "خمسة تفسيرات أخرى تنسجم مع الأرقام نفسها"
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 366,
+   "col": 7,
+   "field": "/readings/where-bank-balance-sheets-sit/#s4.body_ar",
+   "old": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد.",
+   "new": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن. ويمكن أن تعمل الآلية نفسها في الاتجاه المعاكس: فبين نهاية 2024 ونهاية 2025 انخفض إجمالي أصول البنوك من 15,329.7 إلى 12,341.8 مليار ريال، بينما انتقل متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن من 2,059.2 إلى 1,624.45 ريالًا للدولار الأمريكي (متوسط شهر ديسمبر في كل من العامين). ويتسق جزء من هذا الانخفاض مع إعادة التقييم بسعر ريال أقوى، غير أن النشرة عدّلت بياناتها النقدية والمصرفية وفق دليل الإحصاءات النقدية والمالية الصادر عن صندوق النقد الدولي (2016) ابتداءً من ديسمبر 2025، ولا تنشر جسرًا بندًا ببند، فلا يمكن الفصل بين أثر التقييم وأثر تغيير المنهجية والتحركات الأخرى.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد.\n- جودة الأصول: فإذا كان كثير من القروض القائمة لا يُسدَّد، فقد تُحجم البنوك لهذا السبب عن الإقراض الجديد، وقد يشمل بند القطاع الخاص قروضًا متعثرة. ولا تُظهر الميزانية المجمعة جودة الأصول. ويَنشر تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 مجموعةً واحدة من مؤشرات السلامة المالية لليمن، منها نسبة القروض المتعثرة إلى إجمالي القروض، لكن جدوله لا يحدد البنوك أو المناطق التي يغطيها، وتَرِد فيه هذه النسبة صفرًا في سنواته الأولى، ويقرأ هذا المورد تلك القيم على أنها غير مُبلَّغ عنها، لا على أنها صفر. ولا تشكّل نسخةٌ منشورة واحدة غير محددة النطاق سلسلةً منسجمة بتعريفات موحدة بعد، لذلك لا تستخدم هذه القراءة تلك النسبة."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 367,
+   "col": 5,
+   "field": "/readings/where-bank-balance-sheets-sit/#s5.body_en",
+   "old": "This is one month of one table. The balance sheet does not show credit by currency or by sector, does not split claims on government between frozen and other holdings, and does not state its territorial reach. It does not establish that banks prefer the state to firms, that firms are refused credit, or that any policy caused the pattern.",
+   "new": "These are three dates of one table. The balance sheet does not show credit by currency or by sector, does not split claims on government between frozen and other holdings, does not show asset quality, and does not state its territorial reach. It does not establish that banks prefer the state to firms, that firms are refused credit, or that any policy caused the pattern."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 367,
+   "col": 7,
+   "field": "/readings/where-bank-balance-sheets-sit/#s5.body_ar",
+   "old": "هذا شهر واحد من جدول واحد. فالميزانية لا تُظهر الائتمان بحسب العملة أو القطاع، ولا تفصل الحقوق على الحكومة بين الأرصدة المجمدة وغيرها، ولا تذكر نطاقها الجغرافي. ولا تثبت أن البنوك تفضّل الدولة على المنشآت، ولا أن المنشآت تُحرم من الائتمان، ولا أن سياسة بعينها أنتجت هذا النمط.",
+   "new": "هذه ثلاثة تواريخ من جدول واحد. فالميزانية لا تُظهر الائتمان بحسب العملة أو القطاع، ولا تفصل الحقوق على الحكومة بين الأرصدة المجمدة وغيرها، ولا تُظهر جودة الأصول، ولا تذكر نطاقها الجغرافي. ولا تثبت أن البنوك تفضّل الدولة على المنشآت، ولا أن المنشآت تُحرم من الائتمان، ولا أن سياسة بعينها أنتجت هذا النمط."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 368,
+   "col": 5,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.body_en",
+   "old": "Four disclosures would test the hypothesis against its alternatives:\n- credit to the private sector by currency and by sector;\n- loan applications and approvals, to separate weak demand from limited supply;\n- a split of claims on government between frozen legacy treasury bills and other holdings;\n- a stated reporting perimeter: which banks, and which areas, the consolidated balance sheet covers.\n> Until then, read the balance sheet as a picture of where assets sit, not as an account of why.",
+   "new": "Five disclosures would test the hypothesis against its alternatives:\n- credit to the private sector by currency and by sector;\n- loan applications and approvals, to separate weak demand from limited supply;\n- a split of claims on government between frozen legacy treasury bills and other holdings;\n- non-performing loans in a consistent series, on a stated perimeter, to test asset quality;\n- a stated reporting perimeter: which banks, and which areas, the consolidated balance sheet covers.\n> Until then, read the balance sheet as a picture of where assets sit, not as an account of why."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 368,
+   "col": 7,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.body_ar",
+   "old": "من شأن أربعة إفصاحات أن تختبر الفرضية في مقابل بدائلها:\n- الائتمان الممنوح للقطاع الخاص بحسب العملة وبحسب القطاع؛\n- طلبات القروض والموافقات عليها، للتمييز بين ضعف الطلب ومحدودية العرض؛\n- تقسيم الحقوق على الحكومة بين أذون الخزانة المجمدة الموروثة والأرصدة الأخرى؛\n- نطاق إبلاغ معلن: أي البنوك وأي المناطق تغطيها الميزانية المجمعة.\n> وإلى أن تتوافر، تُقرأ الميزانية صورةً لموضع الأصول، لا تفسيرًا لأسبابه.",
+   "new": "من شأن خمسة إفصاحات أن تختبر الفرضية في مقابل بدائلها:\n- الائتمان الممنوح للقطاع الخاص بحسب العملة وبحسب القطاع؛\n- طلبات القروض والموافقات عليها، للتمييز بين ضعف الطلب ومحدودية العرض؛\n- تقسيم الحقوق على الحكومة بين أذون الخزانة المجمدة الموروثة والأرصدة الأخرى؛\n- القروض المتعثرة في سلسلة متسقة وضمن نطاق معلن، لاختبار جودة الأصول؛\n- نطاق إبلاغ معلن: أي البنوك وأي المناطق تغطيها الميزانية المجمعة.\n> وإلى أن تتوافر، تُقرأ الميزانية صورةً لموضع الأصول، لا تفسيرًا لأسبابه."
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 255,
+   "col": 5,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s5.body_en",
+   "old": "The evidence supports neither extreme: that every new account proves inclusion, or that episodic use proves digital finance failed. A service can solve a real problem once and still not become a persistent financial relationship.\nThe historical provider evidence also reports strong urban concentration and a low share of women within its own universe. These are not 2026 national estimates. Their present value is to show what current measurement must test: who uses digital finance, not merely how many accounts exist.",
+   "new": "The evidence supports neither extreme: that every new account proves inclusion, or that episodic use proves digital finance failed. A service can solve a real problem once and still not become a persistent financial relationship.\nThe historical provider evidence also reports strong urban concentration and a low share of women within its own universe. These are not 2026 national estimates. Their present value is to show what current measurement must test: who uses digital finance, not merely how many accounts exist.\nLater counts exist, but they do not continue this series. For 2024 and 2025 the Central Bank of Yemen – Aden (CBY-Aden) publishes counts of e-wallet subscribers, most recently 2,102,484 for the first half of 2025, with no published definition of a subscriber. The World Bank-financed Yemen Financial Market Infrastructure and Inclusion Project (FMIIP) records a January 2025 baseline of 375,252 active e-wallet accounts, counting an account as active if it was used for at least one financial transaction in the last 90 days. Neither count has been reconciled with the other, or with the 807,919 e-money accounts that five providers held in December 2019. Subscribers are not active accounts, and neither count is a number of people. The historical and current figures therefore sit side by side: the difference between them is not growth, decline, inactivity or a return to use, and no share of active or dormant accounts can be drawn from it."
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 255,
+   "col": 7,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s5.body_ar",
+   "old": "لا تسند الأدلة أيًا من الطرفين: لا أن كل حساب جديد يثبت الشمول، ولا أن الاستخدام المتقطع يثبت فشل الخدمات المالية الرقمية. فقد تحل الخدمة مشكلة حقيقية مرة واحدة من دون أن تتحول إلى علاقة مالية مستمرة.\nوتشير أدلة مقدمي الخدمة التاريخية أيضًا إلى تركز قوي في المدن وحصة منخفضة للنساء داخل المجتمع الذي تغطيه. وهذه ليست تقديرات وطنية لعام 2026. قيمتها اليوم أنها تحدد ما ينبغي للقياس الحالي أن يختبره: من يستخدم الخدمات المالية الرقمية، لا عدد الحسابات الموجودة فحسب.",
+   "new": "لا تسند الأدلة أيًا من الطرفين: لا أن كل حساب جديد يثبت الشمول، ولا أن الاستخدام المتقطع يثبت فشل الخدمات المالية الرقمية. فقد تحل الخدمة مشكلة حقيقية مرة واحدة من دون أن تتحول إلى علاقة مالية مستمرة.\nوتشير أدلة مقدمي الخدمة التاريخية أيضًا إلى تركز قوي في المدن وحصة منخفضة للنساء داخل المجتمع الذي تغطيه. وهذه ليست تقديرات وطنية لعام 2026. قيمتها اليوم أنها تحدد ما ينبغي للقياس الحالي أن يختبره: من يستخدم الخدمات المالية الرقمية، لا عدد الحسابات الموجودة فحسب.\nوتوجد أعداد أحدث، لكنها لا تكمل هذه السلسلة. فالبنك المركزي اليمني – عدن ينشر لعامي 2024 و2025 أعدادًا لمشتركي المحافظ الإلكترونية، أحدثها 2,102,484 مشتركًا للنصف الأول من 2025، من دون تعريف منشور للمشترك. ويسجل مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي خط أساس في يناير 2025 قدره 375,252 حساب محفظة إلكترونية نشطًا، ويعدّ الحساب نشطًا إذا استُخدم في معاملة مالية واحدة على الأقل خلال آخر 90 يومًا. ولم يُطابَق أيٌّ من الرقمين مع الآخر، ولا مع حسابات النقود الإلكترونية البالغة 807,919 حسابًا لدى خمسة من مقدمي الخدمة في ديسمبر 2019. والمشتركون ليسوا حسابات نشطة، ولا يُعدّ أيٌّ من الرقمين عددًا للأشخاص. لذلك تُقرأ الأرقام التاريخية والحالية جنبًا إلى جنب: فالفرق بينها ليس نموًا ولا تراجعًا ولا خمولًا ولا عودة إلى الاستخدام، ولا تُستخرج منه نسبة للحسابات النشطة أو الخاملة."
+  },
+  {
+   "finding": "CLOSE-5:RD4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 262,
+   "col": 5,
+   "field": "/readings/finance-constraint-different-questions/#s7.body_en",
+   "old": "The survey covers formal firms in seven selected governorates, not all Yemeni firms. Its finance questions use different denominators, the loan-source table rests on 18 valid responses, and SMEPS reports on its own programme universe. None of this supports a current national rate of MSME access to finance, or a causal effect.",
+   "new": "The survey covers formal firms in seven selected governorates, not all Yemeni firms. Its finance questions use different denominators, the loan-source table rests on 18 valid responses, and SMEPS reports on its own programme universe. None of this supports a current national rate of MSME access to finance, or a causal effect.\nAn older figure answers yet another question. The appraisal document of the World Bank-financed Yemen Financial Market Infrastructure and Inclusion Project (FMIIP, May 2025) cites a 2018 World Bank Group survey of 141 firms in which less than 50% of large enterprises, 18.5% of medium-sized businesses and 6.1% of small firms reported access to a functioning bank branch, and 38.8% reported no access to any bank branch. The document does not name the survey further, and its question and sample differ from the 2022 survey’s. It is a dated limitation, not a baseline: it cannot be compared with the 2022 figures or read as a change since 2018."
+  },
+  {
+   "finding": "CLOSE-5:RD4",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 262,
+   "col": 7,
+   "field": "/readings/finance-constraint-different-questions/#s7.body_ar",
+   "old": "يغطي المسح المنشآت الرسمية في سبع محافظات مختارة، لا جميع منشآت اليمن. وتستخدم أسئلته عن التمويل قواعد احتساب مختلفة، ويقوم جدول مصادر القروض على 18 استجابة صالحة، وتُبلغ الوكالة عن مجتمع برنامجها. ولا يسند شيء من ذلك معدلًا وطنيًا حاليًا لوصول المنشآت الأصغر والصغيرة والمتوسطة إلى التمويل، ولا أثرًا سببيًا.",
+   "new": "يغطي المسح المنشآت الرسمية في سبع محافظات مختارة، لا جميع منشآت اليمن. وتستخدم أسئلته عن التمويل قواعد احتساب مختلفة، ويقوم جدول مصادر القروض على 18 استجابة صالحة، وتُبلغ الوكالة عن مجتمع برنامجها. ولا يسند شيء من ذلك معدلًا وطنيًا حاليًا لوصول المنشآت الأصغر والصغيرة والمتوسطة إلى التمويل، ولا أثرًا سببيًا.\nويجيب رقم أقدم عن سؤال آخر أيضًا. فوثيقة تقييم مشروع البنية التحتية للأسواق المالية والشمول المالي في اليمن (FMIIP) الممول من البنك الدولي (مايو 2025) تستشهد بمسح أجرته مجموعة البنك الدولي في 2018 وشمل 141 منشأة، أفاد فيه أقل من 50% من المنشآت الكبيرة و18.5% من المنشآت المتوسطة و6.1% من المنشآت الصغيرة بإمكانية الوصول إلى فرع بنك يعمل، وأفاد 38.8% بعدم الوصول إلى أي فرع بنك. ولا تذكر الوثيقة عن المسح أكثر من ذلك، ويختلف سؤاله وعينته عن سؤال مسح 2022 وعينته. فهو قيد مؤرخ لا خط أساس: لا يمكن مقارنته بأرقام 2022، ولا قراءته تغيرًا منذ 2018."
+  },
+  {
+   "finding": "CLOSE-5:RD5",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 238,
+   "col": 5,
+   "field": "/readings/after-transfer-persistence/#s6.body_en",
+   "old": "The current evidence does not establish that Yemen’s pilot produced persistent use. It does not establish that cashing out was irrational or undesirable, or that paying transfers digitally automatically improves household resilience, women’s agency or financial health. And it does not establish that the pilot failed simply because those later outcomes have not been measured. The 45,460 figure counts recipients reported by the programme, not people who kept using an account.\nThe appraisal document of the World Bank-financed FMIIP project (May 2025) reports a separate count from a pilot, without saying whether it is the pilot described above: by the end of payment cycle 18 (16 September–17 October 2024), 10,761 wallets had been opened with cash transfers paid into them, and take-up ranged from 40% to 70% across pilot districts. The two documents differ in date and unit, and may not describe the same pilot — recipients reported in May 2024, wallets opened by October 2024 — so no ratio between 10,761 and 45,460 is published or implied.\nThe programme has run no payment cycle since January 2025, for lack of funds, according to the World Bank's implementation report on ESPECRP, the emergency social protection project that finances it, archived on 30 June 2026; the project is due to close on 31 December 2026. The Cash for Nutrition and Livelihoods Project, whose financing agreement was signed on 2 September 2026, builds on ESPECRP's delivery systems but is designed to pay a different benefit, six months of cash for nutrition to pregnant women and mothers of children under two; it does not restore the unconditional transfers.\nTwo later findings mark where the evidence stops. A Cash Consortium of Yemen study (2026) compared three and six monthly transfers using programme data, with no randomised design and no group of households without assistance: the extra three transfers brought modest further gains in food security, and savings could not be compared, because only three households, all of them on six transfers, reported putting any money aside. And the appraisal document of the Cash for Nutrition and Livelihoods Project (June 2026) reports from the programme's monitoring that “high transaction costs and long distances to financial service points severely impeded e-wallet uptake”.\n> The pilot material provides evidence of movement toward digital delivery and describes recipients being given usable accounts. Whether that became a durable financial relationship is a separate empirical question.",
+   "new": "The current evidence does not establish that Yemen’s pilot produced persistent use. It does not establish that cashing out was irrational or undesirable, or that paying transfers digitally automatically improves household resilience, women’s agency or financial health. And it does not establish that the pilot failed simply because those later outcomes have not been measured. The 45,460 figure counts recipients reported by the programme, not people who kept using an account.\nThe appraisal document of the World Bank-financed FMIIP project (May 2025) reports a separate count from a pilot, without saying whether it is the pilot described above: by the end of payment cycle 18 (16 September–17 October 2024), 10,761 wallets had been opened with cash transfers paid into them, and take-up ranged from 40% to 70% across pilot districts. The two documents differ in date and unit, and may not describe the same pilot — recipients reported in May 2024, wallets opened by October 2024 — so no ratio between 10,761 and 45,460 is published or implied.\nThe programme has run no payment cycle since January 2025, for lack of funds, according to the World Bank's implementation report on ESPECRP, the emergency social protection project that finances it, archived on 30 June 2026; the project is due to close on 31 December 2026. The Cash for Nutrition and Livelihoods Project, approved on 30 June 2026 and with a financing agreement signed on 2 September 2026, builds on ESPECRP's delivery systems but is designed to pay a different benefit, six months of cash for nutrition to pregnant women and mothers of children under two; it does not restore the unconditional transfers.\nTwo later findings mark where the evidence stops. A Cash Consortium of Yemen study (2026) compared three and six monthly transfers using programme data, with no randomised design and no group of households without assistance: households on six transfers showed modest further gains in food security and less negative coping than those on three, and savings could not be compared, because only three households, all of them on six transfers, reported putting any money aside. And the appraisal document of the Cash for Nutrition and Livelihoods Project (June 2026) reports from the programme's monitoring that “high transaction costs and long distances to financial service points severely impeded e-wallet uptake”, and sets out a plan for recipients to cash out through agents hired by financial service providers, given the scarcity of bank branches and ATMs.\n> The pilot material provides evidence of movement toward digital delivery and describes recipients being given usable accounts. Whether that became a durable financial relationship is a separate empirical question."
+  },
+  {
+   "finding": "CLOSE-5:RD5",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 238,
+   "col": 7,
+   "field": "/readings/after-transfer-persistence/#s6.body_ar",
+   "old": "لا تثبت الأدلة الحالية أن تجربة اليمن أنتجت استخدامًا مستمرًا. ولا تثبت أن السحب النقدي كان سلوكًا غير رشيد أو غير مرغوب، ولا أن صرف التحويلات رقميًا يحسّن تلقائيًا قدرة الأسر على الصمود أو تمكين النساء أو الصحة المالية. كما لا تثبت أن التجربة فشلت لمجرد أن هذه النتائج اللاحقة لم تُقَس بعد. ورقم 45,460 يعدّ المستفيدين كما أبلغ عنهم البرنامج، لا الأشخاص الذين واصلوا استخدام حساب.\nوتورد وثيقة تقييم مشروع FMIIP الممول من البنك الدولي (مايو 2025) عدًّا منفصلًا من تجربة، من دون أن تذكر ما إذا كانت هي التجربة المذكورة أعلاه: فبنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024) كانت 10,761 محفظة إلكترونية قد فُتحت وأُودعت فيها تحويلات نقدية، وتراوحت نسبة الإقبال بين 40% و70% في مديريات التجربة. ويختلف المصدران في التاريخ والوحدة، وقد لا يتناولان التجربة نفسها — مستفيدون أُبلغ عنهم في مايو 2024، ومحافظ إلكترونية فُتحت بحلول أكتوبر 2024 — لذلك لا تُنشر أي نسبة بين 10,761 و45,460، صراحةً أو ضمنًا.\nولم يُجرِ البرنامج أي دورة دفع منذ يناير 2025 بسبب نقص التمويل، وفق تقرير التنفيذ الصادر عن البنك الدولي لمشروع الحماية الاجتماعية الطارئ (ESPECRP)، وهو المشروع الذي يموّل البرنامج، والمؤرشف في 30 يونيو 2026؛ ومن المقرر أن يُغلق المشروع في 31 ديسمبر 2026. أما مشروع النقد مقابل التغذية وسبل العيش، الذي وُقّعت اتفاقية تمويله في 2 سبتمبر 2026، فيبني على أنظمة الإيصال في مشروع الحماية الاجتماعية الطارئ لكنه مصمَّم لصرف منفعة مختلفة، هي نقد مقابل التغذية لمدة ستة أشهر للحوامل وأمهات الأطفال دون سن الثانية؛ ولا يعيد التحويلات غير المشروطة.\nوتحدّد خلاصتان لاحقتان موضع توقف الدليل. فقد قارنت دراسة لتحالف النقد في اليمن (Cash Consortium of Yemen) صدرت في 2026 بين ثلاثة تحويلات شهرية وستة باستخدام بيانات البرنامج، من دون تصميم قائم على التوزيع العشوائي ولا مجموعة من الأسر لم تتلقَّ أي مساعدة: فأتت التحويلات الثلاثة الإضافية بمكاسب أخرى محدودة في الأمن الغذائي، ولم يتسنَّ مقارنة الادخار، لأن ثلاث أسر فقط، كلها من متلقي التحويلات الستة، أفادت بادخار أي مبلغ. وتذكر وثيقة تقييم مشروع النقد مقابل التغذية وسبل العيش (يونيو 2026)، استنادًا إلى رصد البرنامج، أن «ارتفاع تكاليف المعاملات وبُعد المسافات عن نقاط الخدمات المالية أعاقا بشدة الإقبال على المحافظ الإلكترونية».\n> تقدم مواد التجربة دليلًا على التقدم نحو الصرف الرقمي، وتصف إتاحة حسابات قابلة للاستخدام للمستفيدين، أما تحوّل ذلك إلى علاقة مالية مستمرة فسؤال مستقل لا تحسمه إلا الأدلة الميدانية.",
+   "new": "لا تثبت الأدلة الحالية أن تجربة اليمن أنتجت استخدامًا مستمرًا. ولا تثبت أن السحب النقدي كان سلوكًا غير رشيد أو غير مرغوب، ولا أن صرف التحويلات رقميًا يحسّن تلقائيًا قدرة الأسر على الصمود أو تمكين النساء أو الصحة المالية. كما لا تثبت أن التجربة فشلت لمجرد أن هذه النتائج اللاحقة لم تُقَس بعد. ورقم 45,460 يعدّ المستفيدين كما أبلغ عنهم البرنامج، لا الأشخاص الذين واصلوا استخدام حساب.\nوتورد وثيقة تقييم مشروع FMIIP الممول من البنك الدولي (مايو 2025) عدًّا منفصلًا من تجربة، من دون أن تذكر ما إذا كانت هي التجربة المذكورة أعلاه: فبنهاية دورة الدفع 18 (16 سبتمبر–17 أكتوبر 2024) كانت 10,761 محفظة إلكترونية قد فُتحت وأُودعت فيها تحويلات نقدية، وتراوحت نسبة الإقبال بين 40% و70% في مديريات التجربة. ويختلف المصدران في التاريخ والوحدة، وقد لا يتناولان التجربة نفسها — مستفيدون أُبلغ عنهم في مايو 2024، ومحافظ إلكترونية فُتحت بحلول أكتوبر 2024 — لذلك لا تُنشر أي نسبة بين 10,761 و45,460، صراحةً أو ضمنًا.\nولم يُجرِ البرنامج أي دورة دفع منذ يناير 2025 بسبب نقص التمويل، وفق تقرير التنفيذ الصادر عن البنك الدولي لمشروع الحماية الاجتماعية الطارئ (ESPECRP)، وهو المشروع الذي يموّل البرنامج، والمؤرشف في 30 يونيو 2026؛ ومن المقرر أن يُغلق المشروع في 31 ديسمبر 2026. أما مشروع النقد مقابل التغذية وسبل العيش، الذي أُقرّ في 30 يونيو 2026 ووُقّعت اتفاقية تمويله في 2 سبتمبر 2026، فيبني على أنظمة الإيصال في مشروع الحماية الاجتماعية الطارئ لكنه مصمَّم لصرف منفعة مختلفة، هي نقد مقابل التغذية لمدة ستة أشهر للحوامل وأمهات الأطفال دون سن الثانية؛ ولا يعيد التحويلات غير المشروطة.\nوتحدّد خلاصتان لاحقتان موضع توقف الدليل. فقد قارنت دراسة لتحالف النقد في اليمن (Cash Consortium of Yemen) صدرت في 2026 بين ثلاثة تحويلات شهرية وستة باستخدام بيانات البرنامج، من دون تصميم قائم على التوزيع العشوائي ولا مجموعة من الأسر لم تتلقَّ أي مساعدة: فأظهرت الأسر التي تلقت ستة تحويلات مكاسب إضافية محدودة في الأمن الغذائي وتراجعًا في استراتيجيات التكيّف السلبية مقارنةً بالأسر التي تلقت ثلاثة، ولم يتسنَّ مقارنة الادخار، لأن ثلاث أسر فقط، كلها من متلقي التحويلات الستة، أفادت بادخار أي مبلغ. وتذكر وثيقة تقييم مشروع النقد مقابل التغذية وسبل العيش (يونيو 2026)، استنادًا إلى رصد البرنامج، أن «ارتفاع تكاليف المعاملات وبُعد المسافات عن نقاط الخدمات المالية أعاقا بشدة الإقبال على المحافظ الإلكترونية»، وتتضمن خطة لأن يسحب المستفيدون النقد عبر وكلاء يتعاقد معهم مقدمو الخدمات المالية، نظرًا إلى ندرة فروع البنوك وأجهزة الصراف الآلي.\n> تقدم مواد التجربة دليلًا على التقدم نحو الصرف الرقمي، وتصف إتاحة حسابات قابلة للاستخدام للمستفيدين، أما تحوّل ذلك إلى علاقة مالية مستمرة فسؤال مستقل لا تحسمه إلا الأدلة الميدانية."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 240,
+   "col": 5,
+   "field": "/readings/banking-jump-measurement-basis/#s2.body_en",
+   "old": "A number can rise because the economy changed. It can also rise because the way an existing position is valued, classified or reported changed. Yemen’s banking data require the two to be kept apart.\nThe same 2022 consolidated positions of commercial and Islamic banks are published at materially higher levels in the annual reports of the Central Bank of Yemen – Aden (CBY-Aden) from 2023 onward than in the 2022 report. The change comes alongside a documented January 2023 shift to valuing foreign-currency positions at the market exchange rate.\nThe point is not that the later values are wrong. It is that a comparison across the break does not start from a single, unchanged statistical base.\n> A growth rate calculated across a method break can partly measure the method.",
+   "new": "The 2022 consolidated positions of commercial and Islamic banks are published at materially higher levels in the annual reports of the Central Bank of Yemen – Aden (CBY-Aden) from 2023 onward than in the 2022 report. The change comes alongside a documented January 2023 shift to valuing foreign-currency positions at the market exchange rate. The point is not that the later values are wrong. It is that a comparison across the break does not start from a single, unchanged statistical base.\nA number can rise because the economy changed. It can also rise because the way an existing position is valued, classified or reported changed. Yemen’s banking data require the two to be kept apart.\n> A growth rate calculated across a method break can partly measure the method."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 240,
+   "col": 7,
+   "field": "/readings/banking-jump-measurement-basis/#s2.body_ar",
+   "old": "قد يرتفع الرقم لأن الاقتصاد تغيّر، وقد يرتفع لأن طريقة تقييم مركز قائم أو تصنيفه أو الإبلاغ عنه تغيّرت. وفي البيانات المصرفية اليمنية ينبغي إبقاء الاحتمالين منفصلين.\nتظهر المراكز المجمعة للبنوك التجارية والإسلامية في نهاية 2022 بمستويات أعلى جوهريًا في التقارير السنوية للبنك المركزي اليمني – عدن ابتداءً من تقرير 2023 مقارنةً بتقرير 2022، بالتزامن مع تحول موثق في يناير 2023 إلى تقييم المراكز بالعملات الأجنبية بسعر الصرف في السوق.\nولا يعني ذلك أن القيم اللاحقة خاطئة؛ فالمشكلة أن المقارنة عبر نقطة الانقطاع لا تنطلق من أساس إحصائي واحد لم يتغير.\n> قد يقيس معدل النمو المحسوب عبر انقطاع منهجي جزءًا من تغيّر المنهج نفسه.",
+   "new": "تظهر المراكز المجمعة للبنوك التجارية والإسلامية في نهاية 2022 بمستويات أعلى جوهريًا في التقارير السنوية للبنك المركزي اليمني – عدن ابتداءً من تقرير 2023 مقارنةً بتقرير 2022، بالتزامن مع تحول موثق في يناير 2023 إلى تقييم المراكز بالعملات الأجنبية بسعر الصرف في السوق. ولا يعني ذلك أن القيم اللاحقة خاطئة؛ فالمشكلة أن المقارنة عبر نقطة الانقطاع لا تنطلق من أساس إحصائي واحد لم يتغير.\nقد يرتفع الرقم لأن الاقتصاد تغيّر، وقد يرتفع لأن طريقة تقييم مركز قائم أو تصنيفه أو الإبلاغ عنه تغيّرت. وفي البيانات المصرفية اليمنية ينبغي إبقاء الاحتمالين منفصلين.\n> قد يقيس معدل النمو المحسوب عبر انقطاع منهجي جزءًا من تغيّر المنهج نفسه."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 246,
+   "col": 5,
+   "field": "/readings/define-what-you-count/#s2.body_en",
+   "old": "Financial-inclusion figures can all move in the same direction and still tell us different things. Adults with an account, accounts on a provider’s books, registered wallet subscribers, active accounts, transactions, POS terminals, programme beneficiaries: each can be useful. The problem begins when one quietly takes the place of another.\nYemen’s representative Findex evidence measures people. Administrative systems count accounts and other financial products, infrastructure and activity. Programmes count the firms or beneficiaries they support. These measures can describe one financial system without measuring one outcome.",
+   "new": "Financial-inclusion figures can all move in the same direction and still tell us different things. These measures can describe one financial system without measuring one outcome. The problem begins when one quietly takes the place of another.\nAdults with an account, accounts on a provider’s books, registered wallet subscribers, active accounts, transactions, POS terminals, programme beneficiaries: each can be useful. Yemen’s representative Findex evidence measures people. Administrative systems count accounts and other financial products, infrastructure and activity. Programmes count the firms or beneficiaries they support."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 246,
+   "col": 7,
+   "field": "/readings/define-what-you-count/#s2.body_ar",
+   "old": "قد تتحرك أرقام الشمول المالي كلها في الاتجاه نفسه، ومع ذلك لا تخبرنا بالشيء نفسه. البالغون الذين يملكون حسابًا، والحسابات المسجلة لدى مقدم الخدمة، والمشتركون في المحافظ الإلكترونية، والحسابات النشطة، والمعاملات، وأجهزة نقاط البيع، والمستفيدون من البرامج: لكل منها فائدته. وتبدأ المشكلة حين يحل أحدها بصمت محل الآخر.\nيقيس مسح Findex الممثل في اليمن أشخاصًا. أما الأنظمة الإدارية فتعد الحسابات وغيرها من المنتجات المالية، والبنية التحتية، والنشاط، وتعد البرامج المنشآت أو المستفيدين الذين تدعمهم. ويمكن لهذه المقاييس أن تصف منظومة مالية واحدة من دون أن تقيس نتيجة واحدة.",
+   "new": "قد تتحرك أرقام الشمول المالي كلها في الاتجاه نفسه، ومع ذلك لا تخبرنا بالشيء نفسه. ويمكن لهذه المقاييس أن تصف منظومة مالية واحدة من دون أن تقيس نتيجة واحدة. وتبدأ المشكلة حين يحل أحدها بصمت محل الآخر.\nالبالغون الذين يملكون حسابًا، والحسابات المسجلة لدى مقدم الخدمة، والمشتركون في المحافظ الإلكترونية، والحسابات النشطة، والمعاملات، وأجهزة نقاط البيع، والمستفيدون من البرامج: لكل منها فائدته. يقيس مسح Findex الممثل في اليمن أشخاصًا. أما الأنظمة الإدارية فتعد الحسابات وغيرها من المنتجات المالية، والبنية التحتية، والنشاط، وتعد البرامج المنشآت أو المستفيدين الذين تدعمهم."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 281,
+   "col": 5,
+   "field": "/readings/reforms-newer-than-people-evidence/#s2.body_en",
+   "old": "The latest representative observation of account ownership in Yemen remains 11.9% of adults aged 15 and over in the areas surveyed, from Global Findex fieldwork conducted from 7 November 2022 to 9 January 2023.\nThe financial system around that observation has kept moving. Rules changed, reported payment infrastructure expanded, institutional arrangements evolved and programmes advanced. All of that matters, and none of it, by itself, tells us Yemen’s current population-level inclusion rate.\n> The newest evidence is not always the evidence closest to the outcome.\nThe founding assembly of the Yemeni Payments and Clearing Company in August 2026 is current evidence of institution-building. A June 2026 count of POS terminals is current evidence of reported acceptance infrastructure. Neither is a 2026 population estimate.",
+   "new": "The latest representative observation of account ownership in Yemen remains 11.9% of adults aged 15 and over in the areas surveyed, from Global Findex fieldwork conducted from 7 November 2022 to 9 January 2023. The financial system around that observation has kept moving. Rules changed, reported payment infrastructure expanded, institutional arrangements evolved and programmes advanced. All of that matters, and none of it, by itself, tells us Yemen’s current population-level inclusion rate.\n> The newest evidence is not always the evidence closest to the outcome.\nThe founding assembly of the Yemeni Payments and Clearing Company in August 2026 is current evidence of institution-building. A June 2026 count of POS terminals is current evidence of reported acceptance infrastructure. Neither is a 2026 population estimate."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 281,
+   "col": 7,
+   "field": "/readings/reforms-newer-than-people-evidence/#s2.body_ar",
+   "old": "تبقى أحدث مشاهدة ممثلة لامتلاك الحساب في اليمن عند 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح، وفق العمل الميداني لمسح Findex العالمي الذي نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023.\nلكن المنظومة المالية المحيطة بهذه المشاهدة لم تتوقف: تغيرت قواعد، واتسعت البنية التحتية للمدفوعات المبلغ عنها، وتطورت ترتيبات مؤسسية، وتقدمت برامج. كل ذلك مهم، ولا شيء منه يخبرنا وحده بمعدل الشمول المالي الحالي لدى السكان.\n> الأحدث زمنًا ليس بالضرورة الأقرب إلى النتيجة التي نريد قياسها.\nفانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة في أغسطس 2026 دليل حديث على بناء المؤسسات، وعدد أجهزة نقاط البيع في يونيو 2026 دليل حديث على بنية قبول الدفع المبلغ عنها، لكن أيًا منهما ليس تقديرًا سكانيًا لعام 2026.",
+   "new": "تبقى أحدث مشاهدة ممثلة لامتلاك الحساب في اليمن عند 11.9% من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح، وفق العمل الميداني لمسح Findex العالمي الذي نُفذ من 7 نوفمبر 2022 إلى 9 يناير 2023. لكن المنظومة المالية المحيطة بهذه المشاهدة لم تتوقف: تغيرت قواعد، واتسعت البنية التحتية للمدفوعات المبلغ عنها، وتطورت ترتيبات مؤسسية، وتقدمت برامج. كل ذلك مهم، ولا شيء منه يخبرنا وحده بمعدل الشمول المالي الحالي لدى السكان.\n> الأحدث زمنًا ليس بالضرورة الأقرب إلى النتيجة التي نريد قياسها.\nفانعقاد الجمعية التأسيسية للشركة اليمنية للمدفوعات والمقاصة في أغسطس 2026 دليل حديث على بناء المؤسسات، وعدد أجهزة نقاط البيع في يونيو 2026 دليل حديث على بنية قبول الدفع المبلغ عنها، لكن أيًا منهما ليس تقديرًا سكانيًا لعام 2026."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 252,
+   "col": 5,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s2.body_en",
+   "old": "By December 2019, the five e-money providers covered by a study of the Institute of Banking Studies had 807,919 electronic-money accounts. The same study reports an average dormant or inactive share of 23%, and notes that some accounts were used only once, or because circumstances required it.\nThis is not a paradox. The number of accounts establishes scale within the source universe. Dormancy and one-off use show why scale alone does not establish durable financial use.",
+   "new": "By December 2019, the five e-money providers covered by a study of the Institute of Banking Studies had 807,919 electronic-money accounts. The same study reports an average dormant or inactive share of 23%, and notes that some accounts were used only once, or because circumstances required it. This is not a paradox. The number of accounts establishes scale within the source universe. Dormancy and one-off use show why scale alone does not establish durable financial use."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 252,
+   "col": 7,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s2.body_ar",
+   "old": "بحلول ديسمبر 2019، بلغ عدد حسابات النقود الإلكترونية لدى مقدمي الخدمة الخمسة الذين شملتهم دراسة معهد الدراسات المصرفية 807,919 حسابًا. وتذكر الدراسة نفسها أن متوسط نسبة الحسابات الخاملة أو غير النشطة بلغ 23%، وأن بعض الحسابات لم يُستخدم إلا مرة واحدة، أو استُخدم لأن الظروف فرضت ذلك.\nليس في ذلك تناقض. فعدد الحسابات يثبت أن القناة الرقمية بلغت نطاقًا مهمًا داخل المجتمع الذي يغطيه المصدر، أما الخمول والاستخدام العابر فيبينان لماذا لا يثبت الحجم وحده استخدامًا ماليًا مستمرًا.",
+   "new": "بحلول ديسمبر 2019، بلغ عدد حسابات النقود الإلكترونية لدى مقدمي الخدمة الخمسة الذين شملتهم دراسة معهد الدراسات المصرفية 807,919 حسابًا. وتذكر الدراسة نفسها أن متوسط نسبة الحسابات الخاملة أو غير النشطة بلغ 23%، وأن بعض الحسابات لم يُستخدم إلا مرة واحدة، أو استُخدم لأن الظروف فرضت ذلك. ليس في ذلك تناقض. فعدد الحسابات يثبت أن القناة الرقمية بلغت نطاقًا مهمًا داخل المجتمع الذي يغطيه المصدر، أما الخمول والاستخدام العابر فيبينان لماذا لا يثبت الحجم وحده استخدامًا ماليًا مستمرًا."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 5,
+   "field": "/readings/finance-constraint-different-questions/#s2.body_en",
+   "old": "Among formal firms in the 2022 Yemen Enterprise Survey, which covered seven selected governorates, 22% named access to finance as a business challenge. In the same question, 50% named electricity, 46% fuel shortages, 32% transport or road blockades, 30% tax administration or tax rates and 27% political instability. Firms could name more than one challenge. Read alone, 22% makes finance look secondary.\nA separate tabulation in the same survey report excludes firms that said they did not need a loan. Among the firms that remain, 68.71% rate access to finance a major obstacle and 23.13% a moderate one: 91.84% together.\nBoth figures can be right.\n> The denominator is not a footnote to the result. It is part of the result.",
+   "new": "Among formal firms in the 2022 Yemen Enterprise Survey, which covered seven selected governorates, 22% named access to finance as a business challenge. A separate tabulation in the same survey report excludes firms that said they did not need a loan. Among the firms that remain, 68.71% rate access to finance a major obstacle and 23.13% a moderate one: 91.84% together. Both figures can be right.\nThe question behind the 22% listed other challenges too: 50% named electricity, 46% fuel shortages, 32% transport or road blockades, 30% tax administration or tax rates and 27% political instability. Firms could name more than one challenge. Read alone, 22% makes finance look secondary.\n> The denominator is not a footnote to the result. It is part of the result."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 7,
+   "field": "/readings/finance-constraint-different-questions/#s2.body_ar",
+   "old": "بين المنشآت الرسمية في مسح المنشآت في اليمن لعام 2022، وهو مسح شمل سبع محافظات مختارة، أفادت 22% من المنشآت بأن الوصول إلى التمويل كان من بين التحديات التي تواجه أعمالها. وفي السؤال نفسه ذكرت 50% الكهرباء، و46% نقص الوقود، و32% النقل أو إغلاق الطرق، و30% إدارة الضرائب أو معدلاتها، و27% عدم الاستقرار السياسي. وكان بوسع المنشأة أن تذكر أكثر من تحدٍّ. وإذا قُرئت نسبة 22% وحدها، بدا التمويل مسألة ثانوية.\nلكن جدولًا آخر في تقرير المسح نفسه يستبعد المنشآت التي قالت إنها لا تحتاج إلى قرض. وبين المنشآت المتبقية، وصفت 68.71% الوصول إلى التمويل بأنه عائق كبير، و23.13% بأنه عائق متوسط، أي 91.84% مجتمعتين.\nيمكن أن يكون الرقمان صحيحين معًا.\n> قاعدة الاحتساب ليست حاشية على النتيجة؛ إنها جزء منها.",
+   "new": "بين المنشآت الرسمية في مسح المنشآت في اليمن لعام 2022، وهو مسح شمل سبع محافظات مختارة، أفادت 22% من المنشآت بأن الوصول إلى التمويل كان من بين التحديات التي تواجه أعمالها. لكن جدولًا آخر في تقرير المسح نفسه يستبعد المنشآت التي قالت إنها لا تحتاج إلى قرض. وبين المنشآت المتبقية، وصفت 68.71% الوصول إلى التمويل بأنه عائق كبير، و23.13% بأنه عائق متوسط، أي 91.84% مجتمعتين. يمكن أن يكون الرقمان صحيحين معًا.\nوفي السؤال الذي أُخذت منه نسبة 22%، ذكرت 50% الكهرباء، و46% نقص الوقود، و32% النقل أو إغلاق الطرق، و30% إدارة الضرائب أو معدلاتها، و27% عدم الاستقرار السياسي. وكان بوسع المنشأة أن تذكر أكثر من تحدٍّ. وإذا قُرئت نسبة 22% وحدها، بدا التمويل مسألة ثانوية.\n> قاعدة الاحتساب ليست حاشية على النتيجة؛ إنها جزء منها."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 264,
+   "col": 5,
+   "field": "/readings/from-rail-to-result-missing-middle/#s2.body_en",
+   "old": "Yemen’s payment system has changed. Official records document new rules, institutional steps, integration work, expanding reported infrastructure and transaction activity. POS terminals reported by the Central Bank of Yemen – Aden rose from 561 in March 2025 to 1,651 in June 2026 within its reporting scope. Between June and August 2026, its records also document further institution-building: integration work on the unified domestic money-transfer network, and the founding of the Yemeni Payments and Clearing Company.\nThese are material developments, and they do not all prove the same thing.\n> A completed milestone tells us where implementation has reached. It does not tell us what changed downstream.",
+   "new": "Yemen’s payment system has changed. Official records document new rules, institutional steps, integration work, expanding reported infrastructure and transaction activity. These are material developments, and they do not all prove the same thing.\nPOS terminals reported by the Central Bank of Yemen – Aden rose from 561 in March 2025 to 1,651 in June 2026 within its reporting scope. Between June and August 2026, its records also document further institution-building: integration work on the unified domestic money-transfer network, and the founding of the Yemeni Payments and Clearing Company.\n> A completed milestone tells us where implementation has reached. It does not tell us what changed downstream."
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 264,
+   "col": 7,
+   "field": "/readings/from-rail-to-result-missing-middle/#s2.body_ar",
+   "old": "تغيرت منظومة المدفوعات في اليمن. فالسجلات الرسمية توثق قواعد جديدة، وخطوات مؤسسية، وأعمال تكامل، وتوسعًا في البنية التحتية المبلغ عنها، ونشاطًا في المعاملات. وقد ارتفع عدد أجهزة نقاط البيع التي يبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,651 جهازًا في يونيو 2026 ضمن نطاق إبلاغه. وبين يونيو وأغسطس 2026 توثق سجلاته أيضًا خطوات إضافية في بناء المؤسسات: أعمال تكامل الشبكة الموحدة للحوالات المالية الداخلية، وتأسيس الشركة اليمنية للمدفوعات والمقاصة.\nهذه تطورات مهمة، لكنها لا تثبت كلها الشيء نفسه.\n> يخبرنا الإنجاز المكتمل إلى أين وصل التنفيذ، لكنه لا يخبرنا بما تغيّر في الحلقات اللاحقة.",
+   "new": "تغيرت منظومة المدفوعات في اليمن. فالسجلات الرسمية توثق قواعد جديدة، وخطوات مؤسسية، وأعمال تكامل، وتوسعًا في البنية التحتية المبلغ عنها، ونشاطًا في المعاملات. هذه تطورات مهمة، لكنها لا تثبت كلها الشيء نفسه.\nوقد ارتفع عدد أجهزة نقاط البيع التي يبلغ عنها البنك المركزي اليمني – عدن من 561 جهازًا في مارس 2025 إلى 1,651 جهازًا في يونيو 2026 ضمن نطاق إبلاغه. وبين يونيو وأغسطس 2026 توثق سجلاته أيضًا خطوات إضافية في بناء المؤسسات: أعمال تكامل الشبكة الموحدة للحوالات المالية الداخلية، وتأسيس الشركة اليمنية للمدفوعات والمقاصة.\n> يخبرنا الإنجاز المكتمل إلى أين وصل التنفيذ، لكنه لا يخبرنا بما تغيّر في الحلقات اللاحقة."
+  },
+  {
+   "finding": "CLOSE-5:RD10:ED-037",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 364,
+   "col": 5,
+   "field": "/readings/where-bank-balance-sheets-sit/#s2.body_en",
+   "old": "Where a banking system puts its assets says something about whom it serves. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover.",
+   "new": "Where a banking system puts its assets shows where its funds go — to government, to the private sector or abroad. It does not, by itself, show who is reached by financial services. The monthly bulletin of the Central Bank of Yemen – Aden (CBY-Aden) for May 2026 (Issue No. 54) consolidates the balance sheet of commercial and Islamic banks — in its own words, all commercial and Islamic financial institutions operating in the Republic of Yemen that accept deposits. At the end of May 2026 their total assets were 13,362.1 billion rials. Loans and advances to government — treasury bills, treasury bonds and Islamic sukuk, in the bulletin’s definition — stood at 2,145.0 billion, loans and advances to the private sector at 1,350.4 billion, foreign assets at 4,448.0 billion and reserves at 2,538.8 billion. Credit to the private sector was 10.1% of total assets, and that line covers households as well as firms.\nThe bulletin does not state which parts of Yemen its figures cover."
+  },
+  {
+   "finding": "CLOSE-5:RD10:ED-037",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 364,
+   "col": 7,
+   "field": "/readings/where-bank-balance-sheets-sit/#s2.body_ar",
+   "old": "يكشف موضع أصول المنظومة المصرفية شيئًا عمّن تخدمه. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها.",
+   "new": "يبيّن توزيع أصول البنوك أين تذهب أموالها: إلى الحكومة، أم إلى القطاع الخاص، أم إلى الخارج؛ لكنه لا يكشف وحده مَن تصل إليه الخدمات المالية. فالنشرة الشهرية للبنك المركزي اليمني – عدن لشهر مايو 2026 (العدد رقم 54) تعرض الميزانية المجمعة للبنوك التجارية والإسلامية، وهي بحسب تعريفها جميع المؤسسات المالية التجارية والإسلامية العاملة في الجمهورية اليمنية التي تقبل الودائع. وفي نهاية مايو 2026 بلغت أصولها الإجمالية 13,362.1 مليار ريال، منها قروض وسلفيات للحكومة — وهي وفق تعريف النشرة أذون الخزانة وسندات الخزانة والصكوك الإسلامية — قدرها 2,145.0 مليار، وقروض وسلفيات للقطاع الخاص قدرها 1,350.4 مليار، وأصول خارجية قدرها 4,448.0 مليار، واحتياطيات قدرها 2,538.8 مليار. ويعادل الائتمان الممنوح للقطاع الخاص 10.1% من الأصول الإجمالية، ويشمل هذا البند الأسر إلى جانب المنشآت.\nولا تذكر النشرة أيَّ أجزاء من اليمن تغطيها أرقامها."
+  },
+  {
+   "finding": "CLOSE-5:M2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 347,
+   "col": 5,
+   "field": "/methodology/#s4.body_en",
+   "old": "Coverage differs by topic. A few topics have current observations: the formal status of providers on the lists of the Central Bank of Yemen – Aden (CBY-Aden), bank credit and other monetary statistics, and remittance prices in two corridors. Most people-side topics rest on the latest representative survey wave (round; fieldwork 2022–23) or on 2014 values; several — frequency of use, digital capability and affordability — are defined in the 2021 survey but have no World Bank published value for Yemen, and financial resilience is published only for emergency funds within 30 days. Payments, regulation and consumer protection are evidenced mainly through administrative and regulatory records, which show systems and rules rather than use or outcomes. This resource has no current Yemen evidence on service reliability, the geography of operating access points, inclusion by displacement or disability status, digital fraud, insurance or pensions. Gaps are shown as gaps: they are not filled with other countries' figures, and each is linked to a measurement priority.",
+   "new": "Coverage differs by topic. A few topics have current observations: the formal status of providers on the lists of the Central Bank of Yemen – Aden (CBY-Aden), bank credit and other monetary statistics, and remittance prices in two corridors. Most people-side topics rest on the latest representative survey wave (round; fieldwork 2022–23) or on 2014 values; several — frequency of use, digital capability and affordability — are defined in the 2021 survey but have no World Bank published value for Yemen, and financial resilience is published only for emergency funds within 30 days. Payments, regulation and consumer protection are evidenced mainly through administrative and regulatory records, which show systems and rules rather than use or outcomes. This resource has no current Yemen evidence on service reliability, the geography of operating access points, inclusion by displacement or disability status, digital fraud, insurance or pensions. Gaps are shown as gaps: they are not filled with other countries' figures, and each is linked to a measurement priority.\nFour topics that financial-inclusion diagnostics commonly cover are not measured by this resource. The ICT and telecommunications layer (network coverage, mobile and internet connectivity, device ownership) is a condition for digital services, not a measure of financial inclusion; it would be measured through telecommunications-sector data and household connectivity surveys. Insolvency (how the debts of failing firms and individuals are resolved) belongs to the legal and court system, and this resource does not document how it operates; it would be measured through court and administrative records of insolvency cases, and it is listed as a dimension of the measurement priority on credit infrastructure. Digital literacy (whether people can use digital devices and services) is a skill, not the use of a financial service, and this resource holds no Yemen measure of it; it would be measured through a household survey module, and it is listed as a dimension of the measurement priority on population groups. Yemen Post is not covered by any evidence record in this resource; its network and any financial services it may offer would be measured through the postal operator's own records of offices, services and transactions."
+  },
+  {
+   "finding": "CLOSE-5:M2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 348,
+   "col": 7,
+   "field": "/methodology/#s4.body_ar",
+   "old": "تختلف تغطية الأدلة من موضوع إلى آخر. فبعض الموضوعات لها مشاهدات حديثة: الوضع الرسمي لمقدمي الخدمات وفق قوائم البنك المركزي اليمني – عدن، والائتمان المصرفي وغيره من الإحصاءات النقدية، وأسعار الحوالات في ممرين. أما معظم موضوعات الأفراد فتستند إلى أحدث موجة من مسح ممثل (أي أحدث جولة منه؛ نُفذ عملها الميداني خلال 2022–2023) أو إلى قيم 2014؛ كما أن عددًا منها — وهي تكرار الاستخدام والقدرات الرقمية والقدرة على تحمل التكلفة — معرَّف في مسح 2021 لكن البنك الدولي لا ينشر له قيمة لليمن، ولا تُنشر قيم الصمود المالي إلا لتدبير أموال الطوارئ خلال 30 يومًا. وتستند أدلة المدفوعات والتنظيم وحماية المستهلك أساسًا إلى سجلات إدارية وتنظيمية تبين الأنظمة والقواعد لا الاستخدام أو النتائج. ولا يملك هذا المورد أدلة يمنية حديثة عن موثوقية الخدمات، ولا عن التوزيع الجغرافي لنقاط الوصول العاملة، ولا عن الشمول المالي بحسب النزوح أو الإعاقة، ولا عن الاحتيال الرقمي أو التأمين أو المعاشات. وتُعرض الفجوات بوصفها فجوات: فلا تُملأ بأرقام بلدان أخرى، وترتبط كل منها بأولوية قياس.",
+   "new": "تختلف تغطية الأدلة من موضوع إلى آخر. فبعض الموضوعات لها مشاهدات حديثة: الوضع الرسمي لمقدمي الخدمات وفق قوائم البنك المركزي اليمني – عدن، والائتمان المصرفي وغيره من الإحصاءات النقدية، وأسعار الحوالات في ممرين. أما معظم موضوعات الأفراد فتستند إلى أحدث موجة من مسح ممثل (أي أحدث جولة منه؛ نُفذ عملها الميداني خلال 2022–2023) أو إلى قيم 2014؛ كما أن عددًا منها — وهي تكرار الاستخدام والقدرات الرقمية والقدرة على تحمل التكلفة — معرَّف في مسح 2021 لكن البنك الدولي لا ينشر له قيمة لليمن، ولا تُنشر قيم الصمود المالي إلا لتدبير أموال الطوارئ خلال 30 يومًا. وتستند أدلة المدفوعات والتنظيم وحماية المستهلك أساسًا إلى سجلات إدارية وتنظيمية تبين الأنظمة والقواعد لا الاستخدام أو النتائج. ولا يملك هذا المورد أدلة يمنية حديثة عن موثوقية الخدمات، ولا عن التوزيع الجغرافي لنقاط الوصول العاملة، ولا عن الشمول المالي بحسب النزوح أو الإعاقة، ولا عن الاحتيال الرقمي أو التأمين أو المعاشات. وتُعرض الفجوات بوصفها فجوات: فلا تُملأ بأرقام بلدان أخرى، وترتبط كل منها بأولوية قياس.\nوهناك أربعة موضوعات تتناولها تشخيصات الشمول المالي عادةً لكن هذا المورد لا يقيسها. فطبقة تقنية المعلومات والاتصالات (تغطية الشبكات، والاتصال بالهاتف المحمول والإنترنت، وحيازة الأجهزة) شرط لتقديم الخدمات الرقمية لا مقياس للشمول المالي، ويمكن قياسها من بيانات قطاع الاتصالات ومسوح الأسر عن الاتصال بالشبكات. والإعسار (أي طريقة تسوية ديون المنشآت والأفراد المتعثرين) شأن يخص المنظومة القانونية والقضائية، ولا يوثق هذا المورد طريقة عمله، ويمكن قياسه من السجلات القضائية والإدارية لقضايا الإعسار، وهو مدرج بُعدًا في أولوية القياس الخاصة بالبنية التحتية الائتمانية. والثقافة الرقمية (أي قدرة الأفراد على استخدام الأجهزة والخدمات الرقمية) مهارة لا استخدامٌ لخدمة مالية، ولا يملك هذا المورد مقياسًا يمنيًا لها، ويمكن قياسها بوحدة في مسح للأسر، وهي مدرجة بُعدًا في أولوية القياس الخاصة بالفئات السكانية. أما البريد اليمني فلا يغطيه أي سجل دليل في هذا المورد، ويمكن قياس شبكته وما قد يقدمه من خدمات مالية من سجلات مشغل البريد نفسه عن المكاتب والخدمات والمعاملات."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 251,
+   "col": 2,
+   "field": "/readings/define-what-you-count/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 251,
+   "col": 1,
+   "field": "/readings/define-what-you-count/#s7.route",
+   "old": null,
+   "new": "/readings/define-what-you-count/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 251,
+   "col": 2,
+   "field": "/readings/define-what-you-count/#s7.section_order",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 251,
+   "col": 4,
+   "field": "/readings/define-what-you-count/#s7.heading_en",
+   "old": null,
+   "new": "Before relying on a count"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 251,
+   "col": 5,
+   "field": "/readings/define-what-you-count/#s7.body_en",
+   "old": null,
+   "new": "Before relying on a figure in a monitoring report, a funding decision or a public statement, check what it counts and among whom. A count of accounts, wallets, terminals or transactions is not a count of people, and a programme count describes its own universe, not the country. Where a target and a result sit side by side, check that they share the five properties listed above. If they do not, the pair records two observations, not progress against the target."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 251,
+   "col": 6,
+   "field": "/readings/define-what-you-count/#s7.heading_ar",
+   "old": null,
+   "new": "قبل الاعتماد على أي عدد"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 251,
+   "col": 7,
+   "field": "/readings/define-what-you-count/#s7.body_ar",
+   "old": null,
+   "new": "قبل الاعتماد على رقم في تقرير متابعة أو قرار تمويل أو تصريح عام، تحقّق مما يعدّه وعلى من ينطبق. فعدد الحسابات أو المحافظ الإلكترونية أو الأجهزة الطرفية أو المعاملات ليس عددًا للأشخاص، وما يعدّه البرنامج يصف المجتمع الذي يغطيه البرنامج، لا البلد كله. وحين يوضع مستهدف ونتيجة جنبًا إلى جنب، تحقّق من أنهما يشتركان في الأمور الخمسة المذكورة أعلاه. فإن لم يشتركا فيها، فهما مشاهدتان منفصلتان، ولا تقيس النتيجة التقدم نحو المستهدف."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 26,
+   "col": 2,
+   "field": "CWR-003.what_would_change.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 26,
+   "col": 1,
+   "field": "CWR-003.use.reading_id",
+   "old": null,
+   "new": "CWR-003"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 26,
+   "col": 2,
+   "field": "CWR-003.use.section_order",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 26,
+   "col": 3,
+   "field": "CWR-003.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 2,
+   "field": "/readings/reforms-newer-than-people-evidence/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 1,
+   "field": "/readings/reforms-newer-than-people-evidence/#s5.route",
+   "old": null,
+   "new": "/readings/reforms-newer-than-people-evidence/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 2,
+   "field": "/readings/reforms-newer-than-people-evidence/#s5.section_order",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 4,
+   "field": "/readings/reforms-newer-than-people-evidence/#s5.heading_en",
+   "old": null,
+   "new": "Before citing the latest figure"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 5,
+   "field": "/readings/reforms-newer-than-people-evidence/#s5.body_en",
+   "old": null,
+   "new": "Before relying on the account-ownership figure, check that its universe and fieldwork period travel with it: adults in the areas surveyed, at the time of the survey, not the population today. Newer records, such as terminal counts or institutional steps, are evidence of what they record: rules, institutions or infrastructure. They are not measures of people’s access or use. Where survey and administrative figures appear together, keep each one’s date and question beside it."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 6,
+   "field": "/readings/reforms-newer-than-people-evidence/#s5.heading_ar",
+   "old": null,
+   "new": "قبل الاستشهاد بأحدث رقم"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 285,
+   "col": 7,
+   "field": "/readings/reforms-newer-than-people-evidence/#s5.body_ar",
+   "old": null,
+   "new": "قبل الاعتماد على رقم امتلاك الحساب، تحقّق من أن المجتمع الذي يغطيه المسح وفترة عمله الميداني يرافقانه: البالغون في المناطق التي شملها المسح وقت إجرائه، لا السكان اليوم. أما السجلات الأحدث، مثل أعداد الأجهزة أو الخطوات المؤسسية، فهي دليل على ما تسجله: القواعد أو المؤسسات أو البنية التحتية، وليست قياسًا لوصول الناس أو استخدامهم. وحين تُعرض أرقام المسح والأرقام الإدارية معًا، يبقى تاريخ كلٍّ منها والسؤال الذي يجيب عنه ملازمَين له."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 32,
+   "col": 2,
+   "field": "CWR-004.what_would_change.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 32,
+   "col": 1,
+   "field": "CWR-004.use.reading_id",
+   "old": null,
+   "new": "CWR-004"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 32,
+   "col": 2,
+   "field": "CWR-004.use.section_order",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 32,
+   "col": 3,
+   "field": "CWR-004.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 2,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 1,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s6.route",
+   "old": null,
+   "new": "/readings/digital-workaround-not-yet-durable-inclusion/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 2,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s6.section_order",
+   "old": null,
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 4,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s6.heading_en",
+   "old": null,
+   "new": "Before reading scale as use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 5,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s6.body_en",
+   "old": null,
+   "new": "Before reading an account count as evidence of use, check what the count includes: registered accounts or active ones, and under what definition of “active”. Check the provider universe and the period: the historical figures here describe the providers in one study, not the market today. A transaction-value mix describes value, not how many people used the service or how often they returned."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 6,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s6.heading_ar",
+   "old": null,
+   "new": "قبل قراءة الحجم استخدامًا"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 257,
+   "col": 7,
+   "field": "/readings/digital-workaround-not-yet-durable-inclusion/#s6.body_ar",
+   "old": null,
+   "new": "قبل قراءة عدد الحسابات دليلًا على الاستخدام، تحقّق مما يشمله العدد: أهي الحسابات المسجلة أم النشطة، ووفق أي تعريف للنشاط. وتحقّق من مجتمع مقدمي الخدمة ومن الفترة: فالأرقام التاريخية هنا تصف مقدمي الخدمة الذين شملتهم دراسة واحدة، لا السوق اليوم. أما تركيبة قيمة المعاملات فتصف القيمة، لا عدد من استخدموا الخدمة ولا عدد مرات عودتهم إليها."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 39,
+   "col": 2,
+   "field": "CWR-005.what_would_change.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 39,
+   "col": 1,
+   "field": "CWR-005.use.reading_id",
+   "old": null,
+   "new": "CWR-005"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 39,
+   "col": 2,
+   "field": "CWR-005.use.section_order",
+   "old": null,
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 39,
+   "col": 3,
+   "field": "CWR-005.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 282,
+   "col": 2,
+   "field": "/readings/microfinance-structural-divergence/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 282,
+   "col": 1,
+   "field": "/readings/microfinance-structural-divergence/#s8.route",
+   "old": null,
+   "new": "/readings/microfinance-structural-divergence/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 282,
+   "col": 2,
+   "field": "/readings/microfinance-structural-divergence/#s8.section_order",
+   "old": null,
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 282,
+   "col": 4,
+   "field": "/readings/microfinance-structural-divergence/#s8.heading_en",
+   "old": null,
+   "new": "Before citing a microfinance figure"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 282,
+   "col": 5,
+   "field": "/readings/microfinance-structural-divergence/#s8.body_en",
+   "old": null,
+   "new": "Before citing a microfinance figure, name the dimension it measures: borrowers, savers or depositors, nominal portfolio or institutional form. Check the provider universe and the definition behind each observation, and whether later points have been matched to the earlier series. Nominal rials are not real growth, a share of growth is not a share of the stock, and a licence does not show operation or reach."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 282,
+   "col": 6,
+   "field": "/readings/microfinance-structural-divergence/#s8.heading_ar",
+   "old": null,
+   "new": "قبل الاستشهاد برقم عن التمويل الأصغر"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 282,
+   "col": 7,
+   "field": "/readings/microfinance-structural-divergence/#s8.body_ar",
+   "old": null,
+   "new": "قبل الاستشهاد برقم عن التمويل الأصغر، حدّد البُعد الذي يقيسه: المقترضون، أم المدخرون أو المودعون، أم محفظة القروض الاسمية، أم الشكل المؤسسي. وتحقّق من مجتمع مقدمي الخدمة ومن التعريف الذي تستند إليه كل مشاهدة، ومما إذا كانت المشاهدات اللاحقة قد جرت مطابقتها مع السلسلة الأقدم. فالقيم الاسمية بالريال ليست نموًا حقيقيًا، والحصة من النمو ليست حصة من الرصيد، والترخيص لا يثبت التشغيل ولا الانتشار."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 48,
+   "col": 2,
+   "field": "CWR-006.what_would_change.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 48,
+   "col": 1,
+   "field": "CWR-006.use.reading_id",
+   "old": null,
+   "new": "CWR-006"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 48,
+   "col": 2,
+   "field": "CWR-006.use.section_order",
+   "old": null,
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 48,
+   "col": 3,
+   "field": "CWR-006.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 275,
+   "col": 2,
+   "field": "/readings/gender-gap-measured-causes-open/#s5.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 275,
+   "col": 1,
+   "field": "/readings/gender-gap-measured-causes-open/#s5.route",
+   "old": null,
+   "new": "/readings/gender-gap-measured-causes-open/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 275,
+   "col": 2,
+   "field": "/readings/gender-gap-measured-causes-open/#s5.section_order",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 275,
+   "col": 4,
+   "field": "/readings/gender-gap-measured-causes-open/#s5.heading_en",
+   "old": null,
+   "new": "How to use the measured gap"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 275,
+   "col": 5,
+   "field": "/readings/gender-gap-measured-causes-open/#s5.body_en",
+   "old": null,
+   "new": "Cite the gap with its survey wave, age group and universe: adults aged 15 and over in the areas surveyed, in one Findex wave. It is not a current figure, and the two Findex measurements of women’s ownership do not make a trend. Women’s shares in provider or programme records are shares within those records, not ownership rates. The measured gap shows where the disparity is; it does not show which barriers produce it."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 275,
+   "col": 6,
+   "field": "/readings/gender-gap-measured-causes-open/#s5.heading_ar",
+   "old": null,
+   "new": "كيف تُستخدم الفجوة المقاسة"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 275,
+   "col": 7,
+   "field": "/readings/gender-gap-measured-causes-open/#s5.body_ar",
+   "old": null,
+   "new": "يُستشهد بالفجوة مع موجة المسح والفئة العمرية والمجتمع الذي يغطيه: البالغون بعمر 15 سنة فأكثر في المناطق التي شملها المسح، في موجة واحدة من Findex. وهي ليست رقمًا حاليًا، ولا يشكّل القياسان المأخوذان من Findex لامتلاك النساء للحساب اتجاهًا زمنيًا. أما حصص النساء في سجلات مقدمي الخدمة أو البرامج فهي حصص داخل تلك السجلات، لا معدلات امتلاك. والفجوة المقاسة تبيّن أين يقع التفاوت، لكنها لا تبيّن أي العوائق تنتجه."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 54,
+   "col": 2,
+   "field": "CWR-007.what_would_change.section_order",
+   "old": "5",
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 54,
+   "col": 1,
+   "field": "CWR-007.use.reading_id",
+   "old": null,
+   "new": "CWR-007"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 54,
+   "col": 2,
+   "field": "CWR-007.use.section_order",
+   "old": null,
+   "new": 5
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 54,
+   "col": 3,
+   "field": "CWR-007.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 265,
+   "col": 2,
+   "field": "/readings/finance-constraint-different-questions/#s8.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 265,
+   "col": 1,
+   "field": "/readings/finance-constraint-different-questions/#s8.route",
+   "old": null,
+   "new": "/readings/finance-constraint-different-questions/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 265,
+   "col": 2,
+   "field": "/readings/finance-constraint-different-questions/#s8.section_order",
+   "old": null,
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 265,
+   "col": 4,
+   "field": "/readings/finance-constraint-different-questions/#s8.heading_en",
+   "old": null,
+   "new": "Before quoting either figure"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 265,
+   "col": 5,
+   "field": "/readings/finance-constraint-different-questions/#s8.body_en",
+   "old": null,
+   "new": "Before quoting either figure, attach its question and its denominator. The 22% comes from a question in which firms could name more than one challenge; the 91.84% is calculated on the firms left after those that did not need a loan were excluded. Both describe formal firms in seven selected governorates in 2022, not all Yemeni firms and not the present. Counts as small as the loan-source responses describe those responses only, and programme figures describe the programme’s own universe."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 265,
+   "col": 6,
+   "field": "/readings/finance-constraint-different-questions/#s8.heading_ar",
+   "old": null,
+   "new": "قبل الاستشهاد بأيٍّ من الرقمين"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 265,
+   "col": 7,
+   "field": "/readings/finance-constraint-different-questions/#s8.body_ar",
+   "old": null,
+   "new": "قبل الاستشهاد بأيٍّ من الرقمين، أرفِق به سؤاله وقاعدة احتسابه. فنسبة 22% مأخوذة من سؤال كان بوسع المنشأة فيه أن تذكر أكثر من تحدٍّ، ونسبة 91.84% محسوبة على المنشآت المتبقية بعد استبعاد المنشآت التي قالت إنها لا تحتاج إلى قرض. وكلتاهما تصف المنشآت الرسمية في سبع محافظات مختارة في عام 2022، لا جميع منشآت اليمن ولا الوضع الحالي. والأعداد الصغيرة بحجم استجابات سؤال مصادر القروض لا تصف إلا الاستجابات نفسها، وأرقام البرامج تصف مجتمع البرنامج نفسه."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 63,
+   "col": 2,
+   "field": "CWR-008.what_would_change.section_order",
+   "old": "8",
+   "new": 9
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 63,
+   "col": 1,
+   "field": "CWR-008.use.reading_id",
+   "old": null,
+   "new": "CWR-008"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 63,
+   "col": 2,
+   "field": "CWR-008.use.section_order",
+   "old": null,
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 63,
+   "col": 3,
+   "field": "CWR-008.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 272,
+   "col": 2,
+   "field": "/readings/from-rail-to-result-missing-middle/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 272,
+   "col": 1,
+   "field": "/readings/from-rail-to-result-missing-middle/#s7.route",
+   "old": null,
+   "new": "/readings/from-rail-to-result-missing-middle/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 272,
+   "col": 2,
+   "field": "/readings/from-rail-to-result-missing-middle/#s7.section_order",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 272,
+   "col": 4,
+   "field": "/readings/from-rail-to-result-missing-middle/#s7.heading_en",
+   "old": null,
+   "new": "Before reporting a reform as a result"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 272,
+   "col": 5,
+   "field": "/readings/from-rail-to-result-missing-middle/#s7.body_en",
+   "old": null,
+   "new": "Before reporting a reform as a result, place each figure on the chain: rule, institution, operation, access, use, quality or outcome. Check the reporting scope behind each administrative count, and whether something recorded as established is also recorded as operating. Where the next stage has not been measured, it is open: neither a success nor a failure."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 272,
+   "col": 6,
+   "field": "/readings/from-rail-to-result-missing-middle/#s7.heading_ar",
+   "old": null,
+   "new": "قبل عرض الإصلاح نتيجةً"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 272,
+   "col": 7,
+   "field": "/readings/from-rail-to-result-missing-middle/#s7.body_ar",
+   "old": null,
+   "new": "قبل عرض إصلاح بوصفه نتيجة، ضع كل رقم في موضعه من السلسلة: القاعدة، أو المؤسسة، أو التشغيل، أو الوصول، أو الاستخدام، أو الجودة، أو النتيجة. وتحقّق من نطاق الإبلاغ الذي يستند إليه كل عدد إداري، ومما إذا كان ما سُجّل إنشاؤه قد سُجّل تشغيله أيضًا. وحيث لم تُقَس المرحلة التالية بعد، فهي ما تزال مفتوحة للقياس: ليست نجاحًا ولا فشلًا."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 71,
+   "col": 2,
+   "field": "CWR-009.what_would_change.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 71,
+   "col": 1,
+   "field": "CWR-009.use.reading_id",
+   "old": null,
+   "new": "CWR-009"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 71,
+   "col": 2,
+   "field": "CWR-009.use.section_order",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 71,
+   "col": 3,
+   "field": "CWR-009.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 239,
+   "col": 2,
+   "field": "/readings/after-transfer-persistence/#s7.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 239,
+   "col": 1,
+   "field": "/readings/after-transfer-persistence/#s7.route",
+   "old": null,
+   "new": "/readings/after-transfer-persistence/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 239,
+   "col": 2,
+   "field": "/readings/after-transfer-persistence/#s7.section_order",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 239,
+   "col": 4,
+   "field": "/readings/after-transfer-persistence/#s7.heading_en",
+   "old": null,
+   "new": "Before counting a payment as inclusion"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 239,
+   "col": 5,
+   "field": "/readings/after-transfer-persistence/#s7.body_en",
+   "old": null,
+   "new": "Before counting a programme payment as financial inclusion, check which result the figure measures: delivery, access to a usable account, or persistent use. A recipient count, an opened wallet or a take-up rate is not continued use, and immediate cash-out is not, by itself, a failure. Check the date and unit of each pilot figure before setting two of them side by side, and whether the programme was still paying in the period described."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 239,
+   "col": 6,
+   "field": "/readings/after-transfer-persistence/#s7.heading_ar",
+   "old": null,
+   "new": "قبل عدّ الدفعة شمولًا ماليًا"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 239,
+   "col": 7,
+   "field": "/readings/after-transfer-persistence/#s7.body_ar",
+   "old": null,
+   "new": "قبل عدّ دفعة برنامجية شمولًا ماليًا، تحقّق من النتيجة التي يقيسها الرقم: إيصال الدفعة، أم إتاحة حساب قابل للاستخدام، أم الاستخدام المستمر. فعدد المستفيدين أو المحافظ الإلكترونية المفتوحة أو نسبة الإقبال ليس استخدامًا مستمرًا، والسحب النقدي الفوري ليس في حد ذاته فشلًا. وتحقّق من تاريخ كل رقم من أرقام التجربة ووحدته قبل وضع رقمين منها جنبًا إلى جنب، ومما إذا كان البرنامج لا يزال يصرف الدفعات في الفترة المعنية."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 79,
+   "col": 2,
+   "field": "CWR-010.what_would_change.section_order",
+   "old": "7",
+   "new": 8
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 79,
+   "col": 1,
+   "field": "CWR-010.use.reading_id",
+   "old": null,
+   "new": "CWR-010"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 79,
+   "col": 2,
+   "field": "CWR-010.use.section_order",
+   "old": null,
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 79,
+   "col": 3,
+   "field": "CWR-010.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 2,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 1,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.route",
+   "old": null,
+   "new": "/readings/where-bank-balance-sheets-sit/"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 2,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.section_order",
+   "old": null,
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 4,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.heading_en",
+   "old": null,
+   "new": "Before reading the balance sheet"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 5,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.body_en",
+   "old": null,
+   "new": "Read each figure as a position on its own date, as the bulletin prints it for the institutions it covers; the bulletin does not state which areas those are. Before comparing dates, check that foreign-currency items were valued on the same basis and that the data follow the same method: the bulletin's data follow a revised manual from December 2025. Private-sector credit here includes households, so it is not a measure of lending to firms alone, and the balance sheet does not show why assets sit where they do, or their quality."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 6,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.heading_ar",
+   "old": null,
+   "new": "قبل قراءة الميزانية"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 376,
+   "col": 7,
+   "field": "/readings/where-bank-balance-sheets-sit/#s6.body_ar",
+   "old": null,
+   "new": "يُقرأ كل رقم مركزًا في تاريخه، كما تعرضه النشرة للمؤسسات التي تشملها بياناتها، والنشرة لا تذكر المناطق التي تغطيها أرقامها. وقبل المقارنة بين تاريخين، تحقّق من أن البنود المقوّمة بالعملات الأجنبية قُيّمت على الأساس نفسه، وأن البيانات تتبع المنهجية نفسها: فقد عُدّلت بيانات النشرة وفق دليل محدَّث ابتداءً من ديسمبر 2025. والائتمان الممنوح للقطاع الخاص هنا يشمل الأسر، فليس مقياسًا لإقراض المنشآت وحدها، والميزانية لا تُظهر لماذا تقع الأصول حيث تقع، ولا جودتها."
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 86,
+   "col": 2,
+   "field": "CWR-011.what_would_change.section_order",
+   "old": "6",
+   "new": 7
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 86,
+   "col": 1,
+   "field": "CWR-011.use.reading_id",
+   "old": null,
+   "new": "CWR-011"
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 86,
+   "col": 2,
+   "field": "CWR-011.use.section_order",
+   "old": null,
+   "new": 6
+  },
+  {
+   "finding": "CLOSE-5:RD2",
+   "sheet": "09_READING_SECTIONS",
+   "row": 86,
+   "col": 3,
+   "field": "CWR-011.use.section_id",
+   "old": null,
+   "new": "use"
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 8,
+   "field": "CWR-011.thesis_en",
+   "old": "In May 2026 the banks’ consolidated balance sheet held more in claims on government, and far more in foreign assets, than in credit to the private sector. That is consistent with banks holding claims on the state and assets abroad rather than lending to firms, but it is a hypothesis: weak credit demand, frozen legacy treasury bills, exchange-rate valuation and an unstated reporting perimeter fit the same numbers.",
+   "new": "In May 2026 the banks’ consolidated balance sheet held more in claims on government, and far more in foreign assets, than in credit to the private sector. That is consistent with banks holding claims on the state and assets abroad rather than lending to firms, but it is a hypothesis: weak credit demand, frozen legacy treasury bills, exchange-rate valuation, an unstated reporting perimeter and asset quality, which the balance sheet does not show, fit the same numbers."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 15,
+   "field": "CWR-011.prohibited_inference_en",
+   "old": "One month of one balance sheet does not show why banks hold these assets, does not show that firms are refused credit and is not a trend; a fall in the government's share across the 2022 revaluation is consistent with valuation, not new lending.",
+   "new": "Three dates of one balance sheet do not show why banks hold these assets, do not show that firms are refused credit and are not a trend; a fall in the government's share across the 2022 revaluation is consistent with valuation, not new lending."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 21,
+   "field": "CWR-011.evidence_period_en",
+   "old": "CBY-Aden monthly bulletin, end of May 2026 (Issue No. 54) · December 2022 for the revaluation comparison",
+   "new": "CBY-Aden monthly bulletin: end of 2025, May 2026 (Issue No. 54) and June 2026 (Issue No. 55) · December 2022 for the revaluation comparison · IMF 2025 Article IV staff report (asset quality, described, not charted)"
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 21,
+   "field": "CWR-005.evidence_period_en",
+   "old": "Provider data 2016–2019, from a 2020 study of five e-money providers",
+   "new": "Provider data 2016–2019, from a 2020 study of five e-money providers · CBY-Aden payment reports 2024–2025 and the FMIIP baseline of January 2025, shown beside the historical data, not as a continuation"
+  },
+  {
+   "finding": "CLOSE-5:RD4",
+   "sheet": "08_READINGS",
+   "row": 12,
+   "col": 21,
+   "field": "CWR-008.evidence_period_en",
+   "old": "World Bank Yemen Enterprise Survey, September 2022, seven governorates · SMEPS programme report for 2024",
+   "new": "World Bank Yemen Enterprise Survey, September 2022, seven governorates · SMEPS programme report for 2024 · FMIIP appraisal document, May 2025, citing a 2018 survey of 141 firms"
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 9,
+   "field": "CWR-011.thesis_ar",
+   "old": "في مايو 2026 كانت الميزانية المجمعة للبنوك تحمل من الحقوق على الحكومة أكثر، ومن الأصول الخارجية أكثر بكثير، مما تحمله من ائتمان للقطاع الخاص. ويتسق ذلك مع أن البنوك تحتفظ بحقوق على الدولة وأصول في الخارج بدل إقراض المنشآت، لكنه يبقى فرضية: فضعف الطلب على الائتمان، وإرث أذون الخزانة المجمدة، وتقييم البنود بسعر الصرف، ونطاق الإبلاغ غير المعلن، كلها تنسجم مع الأرقام نفسها.",
+   "new": "في مايو 2026 كانت الميزانية المجمعة للبنوك تحمل من الحقوق على الحكومة أكثر، ومن الأصول الخارجية أكثر بكثير، مما تحمله من ائتمان للقطاع الخاص. ويتسق ذلك مع أن البنوك تحتفظ بحقوق على الدولة وأصول في الخارج بدل إقراض المنشآت، لكنه يبقى فرضية: فضعف الطلب على الائتمان، وإرث أذون الخزانة المجمدة، وتقييم البنود بسعر الصرف، ونطاق الإبلاغ غير المعلن، وجودة الأصول التي لا تُظهرها الميزانية، كلها تنسجم مع الأرقام نفسها."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 16,
+   "field": "CWR-011.prohibited_inference_ar",
+   "old": "لا يُظهر شهر واحد من ميزانية واحدة لماذا تحتفظ البنوك بهذه الأصول، ولا يثبت أن المنشآت تُحرم من الائتمان، وليس اتجاهًا؛ وانخفاض حصة الحكومة عبر إعادة التقييم في 2022 يتسق مع أثر التقييم، لا مع إقراض جديد.",
+   "new": "لا تُظهر ثلاثة تواريخ من ميزانية واحدة لماذا تحتفظ البنوك بهذه الأصول، ولا تثبت أن المنشآت تُحرم من الائتمان، وليست اتجاهًا؛ وانخفاض حصة الحكومة عبر إعادة التقييم في 2022 يتسق مع أثر التقييم، لا مع إقراض جديد."
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 22,
+   "field": "CWR-011.evidence_period_ar",
+   "old": "النشرة الشهرية للبنك المركزي اليمني – عدن، نهاية مايو 2026 (العدد رقم 54) · ديسمبر 2022 لمقارنة إعادة التقييم",
+   "new": "النشرة الشهرية للبنك المركزي اليمني – عدن: نهاية 2025 ومايو 2026 (العدد رقم 54) ويونيو 2026 (العدد رقم 55) · ديسمبر 2022 لمقارنة إعادة التقييم · تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (جودة الأصول، وصفًا لا رسمًا)"
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 22,
+   "field": "CWR-005.evidence_period_ar",
+   "old": "بيانات مقدمي الخدمة 2016–2019، من دراسة صدرت في 2020 عن خمسة من مقدمي خدمات النقود الإلكترونية",
+   "new": "بيانات مقدمي الخدمة 2016–2019، من دراسة صدرت في 2020 عن خمسة من مقدمي خدمات النقود الإلكترونية · تقارير المدفوعات للبنك المركزي اليمني – عدن 2024–2025 وخط أساس مشروع FMIIP في يناير 2025، معروضة إلى جانب البيانات التاريخية لا امتدادًا لها"
+  },
+  {
+   "finding": "CLOSE-5:RD4",
+   "sheet": "08_READINGS",
+   "row": 12,
+   "col": 22,
+   "field": "CWR-008.evidence_period_ar",
+   "old": "مسح البنك الدولي للمنشآت في اليمن، سبتمبر 2022، في سبع محافظات · تقرير وكالة تنمية المنشآت الصغيرة والأصغر لعام 2024",
+   "new": "مسح البنك الدولي للمنشآت في اليمن، سبتمبر 2022، في سبع محافظات · تقرير وكالة تنمية المنشآت الصغيرة والأصغر لعام 2024 · وثيقة تقييم مشروع FMIIP، مايو 2025، نقلًا عن مسح أُجري في 2018 وشمل 141 منشأة"
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 6,
+   "col": 19,
+   "field": "CWR-002.related_readings",
+   "old": "[\"CWR-001\",\"CWR-006\"]",
+   "new": "[\"CWR-001\",\"CWR-011\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD9",
+   "sheet": "08_READINGS",
+   "row": 8,
+   "col": 19,
+   "field": "CWR-004.related_readings",
+   "old": "[\"CWR-009\",\"CWR-003\"]",
+   "new": "[\"CWR-007\",\"CWR-009\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD9",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 20,
+   "field": "CWR-001.measurement_bindings",
+   "old": "[]",
+   "new": "[\"MA-001\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD9",
+   "sheet": "08_READINGS",
+   "row": 6,
+   "col": 20,
+   "field": "CWR-002.measurement_bindings",
+   "old": "[]",
+   "new": "[\"MA-008\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 20,
+   "field": "CWR-011.measurement_bindings",
+   "old": "[]",
+   "new": "[\"MA-008\",\"MA-004\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD1",
+   "sheet": "08_READINGS",
+   "row": 15,
+   "col": 12,
+   "field": "CWR-011.source_bindings",
+   "old": "[\"SRC-CBY-001\", \"SRC-WB-FMIIP-P180708\"]",
+   "new": "[\"SRC-CBY-001\", \"SRC-WB-FMIIP-P180708\", \"SRC-IMF-YEM-AIV-2025-2026\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 10,
+   "field": "CWR-005.claim_bindings",
+   "old": "[\"CLM-050\",\"CLM-051\",\"CLM-052\"]",
+   "new": "[\"CLM-050\",\"CLM-051\",\"CLM-052\",\"CLM-010\",\"FMIIP-BASELINE-2025-01\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 11,
+   "field": "CWR-005.evidence_bindings",
+   "old": "[\"CLM-050\",\"CLM-051\",\"CLM-052\"]",
+   "new": "[\"CLM-050\",\"CLM-051\",\"CLM-052\",\"CLM-010\",\"FMIIP-BASELINE-2025-01\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 12,
+   "field": "CWR-005.source_bindings",
+   "old": "[\"EP-IBS-EMONEY-2019-K04\",\"EP-IBS-EMONEY-VALUE-K04\",\"EP-IBS-GEO-GENDER-K04\"]",
+   "new": "[\"EP-IBS-EMONEY-2019-K04\",\"EP-IBS-EMONEY-VALUE-K04\",\"EP-IBS-GEO-GENDER-K04\",\"SRC-CBY-PAYREPORT-H1-2025\",\"SRC-WB-FMIIP-P180708\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD4",
+   "sheet": "08_READINGS",
+   "row": 12,
+   "col": 12,
+   "field": "CWR-008.source_bindings",
+   "old": "[\"INS-004\",\"EP-FIRM-2022\",\"DA-020\",\"EP-SMEPS-FINACCESS-KPI\"]",
+   "new": "[\"INS-004\",\"EP-FIRM-2022\",\"DA-020\",\"EP-SMEPS-FINACCESS-KPI\",\"SRC-WB-FMIIP-P180708\"]"
+  },
+  {
+   "finding": "CLOSE-5:RD3",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 17,
+   "field": "CWR-005.verification_bindings",
+   "old": "{\"claim_ids\": [\"CLM-050\", \"CLM-051\", \"CLM-052\"], \"direct_source_ids\": [], \"dependency_ids\": [\"EP-IBS-EMONEY-2019-K04\", \"EP-IBS-EMONEY-VALUE-K04\", \"EP-IBS-GEO-GENDER-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}",
+   "new": "{\"claim_ids\": [\"CLM-050\", \"CLM-051\", \"CLM-052\", \"CLM-010\", \"FMIIP-BASELINE-2025-01\"], \"direct_source_ids\": [], \"dependency_ids\": [\"EP-IBS-EMONEY-2019-K04\", \"EP-IBS-EMONEY-VALUE-K04\", \"EP-IBS-GEO-GENDER-K04\"], \"resolution_rule\": \"Direct SRC-* identifiers resolve in the source register. Other dependency identifiers resolve through the bound claim/evidence record in the workbook; the implementation must not convert them into invented URLs or sources.\"}"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 6,
+   "col": 23,
+   "field": "CWR-002.last_reviewed",
+   "old": "2026-09-26",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 7,
+   "col": 23,
+   "field": "CWR-003.last_reviewed",
+   "old": "2026-10-03",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 8,
+   "col": 23,
+   "field": "CWR-004.last_reviewed",
+   "old": "2026-10-03",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 9,
+   "col": 23,
+   "field": "CWR-005.last_reviewed",
+   "old": "2026-09-26",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 10,
+   "col": 23,
+   "field": "CWR-006.last_reviewed",
+   "old": "2026-09-26",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 11,
+   "col": 23,
+   "field": "CWR-007.last_reviewed",
+   "old": "2026-09-26",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 12,
+   "col": 23,
+   "field": "CWR-008.last_reviewed",
+   "old": "2026-09-26",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 13,
+   "col": 23,
+   "field": "CWR-009.last_reviewed",
+   "old": "2026-10-03",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD10",
+   "sheet": "08_READINGS",
+   "row": 14,
+   "col": 23,
+   "field": "CWR-010.last_reviewed",
+   "old": "2026-09-26",
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-5:RD9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 3,
+   "field": "VIS-EVIDENCE-CLASS-LADDER.public_routes",
+   "old": "/evidence/",
+   "new": "/evidence/ | /methodology/"
+  },
+  {
+   "finding": "CLOSE-5:RD9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 3,
+   "field": "VIS-EVIDENCE-FRESHNESS.public_routes",
+   "old": "/evidence/",
+   "new": "/evidence/ | /methodology/"
+  },
+  {
+   "finding": "CLOSE-5:RD9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 17,
+   "col": 3,
+   "field": "VIS-MECHANISM-METRIC-BRIDGE.public_routes",
+   "old": "/evidence/",
+   "new": "/evidence/ | /methodology/"
+  },
+  {
+   "finding": "CLOSE-5:RD9",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 13,
+   "col": 3,
+   "field": "VIS-SOURCE-COMPARISON.public_routes",
+   "old": "/evidence/compare/",
+   "new": "/evidence/compare/ | /methodology/"
+  },
+  {
+   "finding": "CLOSE-5:RD4",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 112,
+   "col": 29,
+   "field": "CLM-062.value_states",
+   "old": "[{\"t\":\"0.56%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"1.31%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"1.97%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"10.15%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"16.66%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"69.12%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"24.39%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 109 'Financial Intermediaries Used', p.147\"},{\"t\":\"73.48%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 109, p.147\"},{\"t\":\"58.2%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 104 'Account Ownership', p.143 (Total 58.2; IRG 62.8; Houthi 53.7)\"},{\"t\":\"191\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"p.143 text\"},{\"t\":\"328\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"p.139 intro; p.143 text\"},{\"t\":\"217\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III intro p.139; Figure 101 p.141\"},{\"t\":\"80.18%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 114 'Ownership of Bank Account', p.151\"},{\"t\":\"104\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"109\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"110\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"114\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"115\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"143\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"147\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"148\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"151\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"15%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"31%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"39%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"56%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"66%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"97%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"(micro <5)\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 102 p.142\"},{\"t\":\"September 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III Introduction, p.139 (PDF p.139)\"},{\"t\":\"139\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"141\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"less than 50%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"18.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"6.1%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"38.8%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"May 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document\"}]",
+   "new": "[{\"t\":\"0.56%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"1.31%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"1.97%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"10.15%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"16.66%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"69.12%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 110 'Sources of Working Capital', p.148\"},{\"t\":\"24.39%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III, Figure 109 'Financial Intermediaries Used', p.147\"},{\"t\":\"73.48%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 109, p.147\"},{\"t\":\"58.2%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 104 'Account Ownership', p.143 (Total 58.2; IRG 62.8; Houthi 53.7)\"},{\"t\":\"191\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"p.143 text\"},{\"t\":\"328\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"p.139 intro; p.143 text\"},{\"t\":\"217\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III intro p.139; Figure 101 p.141\"},{\"t\":\"80.18%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 114 'Ownership of Bank Account', p.151\"},{\"t\":\"104\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"109\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"110\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"114\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"115\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"143\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"147\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"148\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"151\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"15%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"31%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"39%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"56%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"66%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"97%\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"(micro <5)\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Figure 102 p.142\"},{\"t\":\"September 2022\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FSD-2024-001\",\"loc\":\"Annex III Introduction, p.139 (PDF p.139)\"},{\"t\":\"139\",\"k\":\"v\",\"s\":\"LOCATOR\"},{\"t\":\"141\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"less than 50%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"18.5%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"6.1%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"38.8%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), paragraph 10, printed p.3 (PDF p.13): \\\"According to a 2018 World Bank Group survey involving 141 firms, less than 50 percent of large enterprises, 18.5 percent of medium-sized businesses, and 6.1 percent of small firms reported having access to a functioning bank branch. Alarmingly, 38.8 percent indicated having no access to any bank branch whatsoever.\\\"; read 10 October 2026\"},{\"t\":\"May 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-FMIIP-P180708\",\"loc\":\"PAD (Report No. PADHI00396, 22 May 2025), date of the appraisal document\"}]"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 5,
+   "col": 6,
+   "field": "MA-001.dimensions_en",
+   "old": "[\"account ownership\",\"use\",\"saving\",\"borrowing\",\"payments\",\"resilience\",\"gender\",\"income\",\"age\",\"rurality\"]",
+   "new": "[\"account ownership\",\"use\",\"saving\",\"borrowing\",\"payments\",\"resilience\",\"gender\",\"income\",\"age\",\"rurality\",\"household remittance receipt\",\"remittance channel\",\"remittance currency\",\"remittance frequency\",\"financial capability\",\"collateral\",\"shop or supplier credit\",\"mobile-money account\"]"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 5,
+   "col": 7,
+   "field": "MA-001.dimensions_ar",
+   "old": "امتلاك الحساب,الاستخدام,الادخار,الاقتراض,المدفوعات,القدرة المالية على الصمود,النوع الاجتماعي,الدخل,العمر,الريف/الحضر",
+   "new": "امتلاك الحساب,الاستخدام,الادخار,الاقتراض,المدفوعات,القدرة المالية على الصمود,النوع الاجتماعي,الدخل,العمر,الريف/الحضر,تلقي الأسرة للحوالات,قناة الحوالات,عملة الحوالات,تكرار الحوالات,القدرات المالية,الضمانات,ائتمان المتاجر أو الموردين,حساب الأموال عبر الهاتف"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 6,
+   "field": "MA-003.dimensions_en",
+   "old": "[\"sex/gender\",\"age group\",\"displacement status\",\"access\",\"use\",\"quality\",\"identity\",\"device\",\"income\",\"work\",\"geography\",\"trust\",\"household constraints\"]",
+   "new": "[\"sex/gender\",\"age group\",\"displacement status\",\"access\",\"use\",\"quality\",\"identity\",\"device\",\"income\",\"work\",\"geography\",\"trust\",\"household constraints\",\"administrative-area coverage (both areas of control)\",\"digital literacy\"]"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 7,
+   "col": 7,
+   "field": "MA-003.dimensions_ar",
+   "old": "الجنس/النوع الاجتماعي,الفئة العمرية,حالة النزوح,الوصول,الاستخدام,الجودة,الهوية,الجهاز,الدخل,العمل,الجغرافيا,الثقة,قيود الأسرة",
+   "new": "الجنس/النوع الاجتماعي,الفئة العمرية,حالة النزوح,الوصول,الاستخدام,الجودة,الهوية,الجهاز,الدخل,العمل,الجغرافيا,الثقة,قيود الأسرة,تغطية المناطق الإدارية في منطقتَي السيطرة كلتيهما,الثقافة الرقمية"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 9,
+   "col": 6,
+   "field": "MA-005.dimensions_en",
+   "old": "[\"branch\",\"ATM\",\"agent\",\"merchant\",\"exchanger\",\"wallet point\",\"status\",\"service\",\"coordinates\",\"hours\",\"liquidity\"]",
+   "new": "[\"branch\",\"ATM\",\"agent\",\"merchant\",\"exchanger\",\"wallet point\",\"status\",\"service\",\"coordinates\",\"hours\",\"liquidity\",\"microfinance provider panel\",\"reporting scope\",\"exchanger flows\",\"agent and till liquidity\",\"banknote denominations\",\"withdrawal caps\"]"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 9,
+   "col": 7,
+   "field": "MA-005.dimensions_ar",
+   "old": "الفرع,الصراف الآلي,الوكيل,التاجر,منشأة الصرافة,نقطة المحفظة,الحالة التشغيلية,الخدمة,الإحداثيات,ساعات العمل,السيولة",
+   "new": "الفرع,الصراف الآلي,الوكيل,التاجر,منشأة الصرافة,نقطة المحفظة,الحالة التشغيلية,الخدمة,الإحداثيات,ساعات العمل,السيولة,مجموعة مقدمي التمويل الأصغر المُبلِّغة,نطاق الإبلاغ,تدفقات منشآت الصرافة,سيولة الوكلاء وصناديق الصرف,فئات الأوراق النقدية,سقوف السحب"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 12,
+   "col": 6,
+   "field": "MA-008.dimensions_en",
+   "old": "[\"credit bureau coverage\",\"inquiries\",\"report use\",\"collateral registration\",\"lender participation\",\"borrower type\",\"decision use\"]",
+   "new": "[\"credit bureau coverage\",\"inquiries\",\"report use\",\"collateral registration\",\"lender participation\",\"borrower type\",\"decision use\",\"insolvency\"]"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 12,
+   "col": 7,
+   "field": "MA-008.dimensions_ar",
+   "old": "تغطية معلومات الائتمان,الاستعلامات,استخدام التقارير,تسجيل الضمانات,مشاركة المقرضين,نوع المقترض,الاستخدام في القرار",
+   "new": "تغطية معلومات الائتمان,الاستعلامات,استخدام التقارير,تسجيل الضمانات,مشاركة المقرضين,نوع المقترض,الاستخدام في القرار,الإعسار"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 13,
+   "col": 6,
+   "field": "MA-009.dimensions_en",
+   "old": "[\"payment receipt\",\"account/wallet exposure\",\"activation\",\"repeat use\",\"merchant use\",\"saving\",\"cash-out\",\"time since transfer\"]",
+   "new": "[\"payment receipt\",\"account/wallet exposure\",\"activation\",\"repeat use\",\"merchant use\",\"saving\",\"cash-out\",\"time since transfer\",\"cash-out constraints\"]"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 13,
+   "col": 7,
+   "field": "MA-009.dimensions_ar",
+   "old": "استلام الدفعة,الاتصال بحساب/محفظة,التفعيل,الاستخدام المتكرر,الاستخدام لدى التجار,الادخار,السحب النقدي,الزمن منذ التحويل",
+   "new": "استلام الدفعة,الاتصال بحساب/محفظة,التفعيل,الاستخدام المتكرر,الاستخدام لدى التجار,الادخار,السحب النقدي,الزمن منذ التحويل,قيود السحب النقدي"
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 12,
+   "col": 8,
+   "field": "MA-008.current_evidence_en",
+   "old": "Legal texts, project documents and institutional records can establish that credit infrastructure exists or is being developed; lender participation, inquiry use and borrower reach are not yet documented as one complete evidence chain.",
+   "new": "Legal texts, project documents and institutional records can establish that credit infrastructure exists or is being developed; lender participation, inquiry use and borrower reach are not yet documented as one complete evidence chain. This resource holds no current measure of the reach or use of credit infrastructure in Yemen."
+  },
+  {
+   "finding": "CLOSE-5:M1",
+   "sheet": "10_MEASUREMENT_AGENDA",
+   "row": 12,
+   "col": 9,
+   "field": "MA-008.current_evidence_ar",
+   "old": "قد تثبت النصوص القانونية ووثائق المشروعات والسجلات المؤسسية وجود بنية تحتية ائتمانية أو أنها قيد التطوير، لكن الأدلة الحالية لا تربط بعد مشاركة المقرضين واستخدام الاستعلامات والوصول إلى المقترضين في سلسلة قياس واحدة مكتملة.",
+   "new": "قد تثبت النصوص القانونية ووثائق المشروعات والسجلات المؤسسية وجود بنية تحتية ائتمانية أو أنها قيد التطوير، لكن الأدلة الحالية لا تربط بعد مشاركة المقرضين واستخدام الاستعلامات والوصول إلى المقترضين في سلسلة قياس واحدة مكتملة. ولا يملك هذا المورد مقياسًا حاليًا لمدى تغطية البنية التحتية الائتمانية في اليمن أو استخدامها."
+  },
+  {
+   "finding": "CLOSE-5:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 2,
+   "field": "00_MASTER!r15c2",
+   "old": "237",
+   "new": 246
+  },
+  {
+   "finding": "CLOSE-5:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 3,
+   "field": "00_MASTER!r15c3",
+   "old": "237",
+   "new": 246
+  },
+  {
+   "finding": "CLOSE-5:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r6c4",
+   "old": "237",
+   "new": 246
+  },
+  {
+   "finding": "CLOSE-5:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r6c3",
+   "old": "237",
+   "new": 246
+  }
+ ]
+}
