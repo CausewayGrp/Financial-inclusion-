@@ -1,0 +1,385 @@
+{
+ "decision": {
+  "value": "draft",
+  "reasons": [
+   "Every number, percentage, count and date printed is an exact value_state of a bound record; every bare year is in the governed period/summary/limitations text of a bound record (validate.py treats years as periods).",
+   "Every source named has an http primary_url in source_reference_map.json; CLM-044 (CCY remittance estimate) is not bound or used; no Appendix E item (FATF/OFAC/Saudi caps, comparator countries, corridor shares, raw 2026 synthesis shares) appears.",
+   "The brief's hypothesis is stated as a hypothesis, four named alternatives are given, and the Reading ends with what would confirm or overturn it.",
+   "Condition still open: the Arabic is drafted to the house style but needs the native economic-editor review the brief requires before it is applied; if that review fails, drop per RD8."
+  ]
+ },
+ "reading": {
+  "reading_id": "CWR-012",
+  "slug": "how-money-reaches-households",
+  "route": "/readings/how-money-reaches-households/",
+  "title_en": "How money reaches households",
+  "title_ar": "كيف يصل المال إلى الأسر",
+  "question_en": "Does money sent between people reach households in Yemen mainly through exchange companies rather than through accounts?",
+  "question_ar": "هل تصل الأموال المرسلة بين الأفراد إلى الأسر في اليمن عبر شركات الصرافة أساسًا لا عبر الحسابات؟",
+  "thesis_en": "In Yemen’s Global Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances, while 11.9% of adults had an account. That is consistent with the hypothesis that money sent between households travels mainly through exchange companies rather than accounts, but it is a hypothesis: the survey counts adults, not households, its values here cover transfers within Yemen only, and no channel value for that wave is held here; survey coverage, humanitarian cash, currency and the meaning of “remittance” all fit the same numbers.",
+  "thesis_ar": "في موجة 2021 من Global Findex الخاصة باليمن، تلقى 31.9% من البالغين في المناطق التي شملها المسح حوالات محلية، في حين كان لدى 11.9% من البالغين حساب. ويتسق ذلك مع فرضية أن الأموال المرسلة بين الأسر تمر أساسًا عبر شركات الصرافة لا عبر الحسابات، لكنه يبقى فرضية: فالمسح يعدّ البالغين لا الأسر، ولا تغطي قيمه الواردة هنا إلا الحوالات داخل اليمن، ولا تتضمن قاعدة الأدلة قيمة لقناة الاستلام في تلك الموجة؛ كما أن تغطية المسح، والمساعدات النقدية الإنسانية، والعملة، ومعنى «الحوالة» كلها تنسجم مع الأرقام نفسها.",
+  "claim_bindings": [
+   "CLM-026",
+   "VIS-FINDEX-FLOW-CHANNELS",
+   "CLM-030",
+   "CLM-009",
+   "CLM-016",
+   "VIS-REMITTANCE-COST",
+   "CLM-032"
+  ],
+  "evidence_bindings": [
+   "CLM-026",
+   "VIS-FINDEX-FLOW-CHANNELS",
+   "CLM-030",
+   "CLM-009",
+   "CLM-016",
+   "VIS-REMITTANCE-COST",
+   "CLM-032"
+  ],
+  "source_bindings": [
+   "SRC-WB-FINDEX-AGG-2022",
+   "SRC-WB-FINDEX-001",
+   "SRC-WB-FINDEX-LDB-2015-001",
+   "SRC-CBY-EXCH-LIST-2026-001",
+   "SRC-WB-FMIIP-P180708",
+   "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+   "SRC-WB-WDI-RMT-COST-YEM",
+   "SRC-WB-RPW-SA-YEM-2025Q3-001",
+   "SRC-CBY-AR2024-BOP",
+   "SRC-CBY-AR2025-BOP",
+   "SRC-CCY-ISP-2024",
+   "SRC-CCY-SAM-2024"
+  ],
+  "visual_bindings": [],
+  "audiences": [
+   "CBY",
+   "WB/UN",
+   "NGOs",
+   "banks/PSPs",
+   "researchers"
+  ],
+  "prohibited_inference_en": "A share of adults who received domestic remittances is not a share of households that depend on them; a higher share of recipients than of account holders does not show that recipients lack accounts; a roster entry or a branch count is not a measure of remittance flows; and a price of sending money from abroad is not the cost a household pays to collect it.",
+  "prohibited_inference_ar": "لا تمثل نسبة البالغين الذين تلقوا حوالات محلية نسبة الأسر التي تعتمد عليها؛ وارتفاع نسبة المتلقين عن نسبة أصحاب الحسابات لا يثبت أن المتلقين لا يملكون حسابات؛ وليس القيد في قائمة أو عدد الفروع مقياسًا لتدفقات الحوالات؛ وليس سعر إرسال المال من الخارج التكلفة التي تتحملها الأسرة لاستلامه.",
+  "verification_bindings": {
+   "claim_ids": [
+    "CLM-026",
+    "VIS-FINDEX-FLOW-CHANNELS",
+    "CLM-030",
+    "CLM-009",
+    "CLM-016",
+    "VIS-REMITTANCE-COST",
+    "CLM-032"
+   ],
+   "direct_source_ids": [
+    "SRC-WB-FINDEX-AGG-2022",
+    "SRC-WB-FINDEX-001",
+    "SRC-WB-FINDEX-LDB-2015-001",
+    "SRC-CBY-EXCH-LIST-2026-001",
+    "SRC-WB-FMIIP-P180708",
+    "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+    "SRC-WB-WDI-RMT-COST-YEM",
+    "SRC-WB-RPW-SA-YEM-2025Q3-001",
+    "SRC-CBY-AR2024-BOP",
+    "SRC-CBY-AR2025-BOP",
+    "SRC-CCY-ISP-2024",
+    "SRC-CCY-SAM-2024"
+   ],
+   "dependency_ids": [],
+   "resolution_rule": "Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources."
+  },
+  "domain_surface_routes": [
+   "/remittances/"
+  ],
+  "related_readings": [
+   "CWR-001",
+   "CWR-010"
+  ],
+  "measurement_bindings": [
+   "MA-001",
+   "MA-005"
+  ],
+  "evidence_period_en": "Global Findex 2021, Yemen fieldwork 7 November 2022 – 9 January 2023 · World Bank country profile for 2014 · CBY-Aden roster for 2026 · remittance prices for 2023 and 2025 Q3 · CBY-Aden annual reports 2024 and 2025",
+  "evidence_period_ar": "Global Findex 2021، العمل الميداني في اليمن 7 نوفمبر 2022 – 9 يناير 2023 · الملف القطري للبنك الدولي لعام 2014 · قائمة البنك المركزي اليمني – عدن لعام 2026 · أسعار الحوالات لعام 2023 والربع الثالث من 2025 · التقريران السنويان للبنك المركزي اليمني – عدن 2024 و2025",
+  "last_reviewed": "2026-10-11",
+  "featured": null
+ },
+ "related_back": {
+  "reading_id": "CWR-001",
+  "current": [
+   "CWR-002",
+   "CWR-004"
+  ],
+  "proposed": [
+   "CWR-002",
+   "CWR-012"
+  ],
+  "replaces": "CWR-004",
+  "why": "CWR-001 is the measurement Reading for QE-007 on /remittances/; CWR-012 is its system lens. After CLOSE-5 (CWR-002 -> [CWR-001, CWR-011]; CWR-004 -> [CWR-007, CWR-009]) CWR-004 keeps inbound links from CWR-007 and CWR-009, and CWR-001 keeps its inbound link from CWR-002, so no Reading loses its last inbound link. CWR-010 (CWR-012's other relation) stays [CWR-005, CWR-009]; CWR-012 then has one inbound link (CWR-001)."
+ },
+ "sections": [
+  {
+   "section_order": 1,
+   "section_id": "strongest_reading",
+   "heading_en": "What the evidence supports",
+   "body_en": "In Yemen’s Global Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances, while 11.9% of adults had an account. That is consistent with the hypothesis that money sent between households travels mainly through exchange companies rather than accounts, but it is a hypothesis: the survey counts adults, not households, its values here cover transfers within Yemen only, and no channel value for that wave is held here; survey coverage, humanitarian cash, currency and the meaning of “remittance” all fit the same numbers.",
+   "heading_ar": "ما الذي تسنده الأدلة",
+   "body_ar": "في موجة 2021 من Global Findex الخاصة باليمن، تلقى 31.9% من البالغين في المناطق التي شملها المسح حوالات محلية، في حين كان لدى 11.9% من البالغين حساب. ويتسق ذلك مع فرضية أن الأموال المرسلة بين الأسر تمر أساسًا عبر شركات الصرافة لا عبر الحسابات، لكنه يبقى فرضية: فالمسح يعدّ البالغين لا الأسر، ولا تغطي قيمه الواردة هنا إلا الحوالات داخل اليمن، ولا تتضمن قاعدة الأدلة قيمة لقناة الاستلام في تلك الموجة؛ كما أن تغطية المسح، والمساعدات النقدية الإنسانية، والعملة، ومعنى «الحوالة» كلها تنسجم مع الأرقام نفسها."
+  },
+  {
+   "section_order": 2,
+   "section_id": "opening",
+   "heading_en": null,
+   "body_en": "A larger share of adults in Yemen’s surveyed areas received money from within the country than held an account, but the survey does not say how that money travelled. In the World Bank’s Global Findex 2021 wave for Yemen, fielded from 7 November 2022 to 9 January 2023, 17.7% of adults in surveyed areas sent domestic remittances, 31.9% received them and 37.8% did either; 11.9% of adults had an account. Each is a share of all adults, from a separate question, so the figures do not show how many of the adults who received money had an account. The World Bank also publishes the sending and receiving shares by sex, age, education, income and labour-force status, in the table on /people/; no interval is published here for a group value, and a difference between groups is not a cause.\nThe survey counts adults, not households, and the values here cover transfers within Yemen only.",
+   "heading_ar": null,
+   "body_ar": "نسبة البالغين الذين تلقوا أموالًا من داخل البلاد في المناطق التي شملها المسح في اليمن أعلى من نسبة من يملكون حسابًا، لكن المسح لا يبيّن كيف وصلت تلك الأموال. ففي موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن، التي نُفّذ عملها الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023، أرسل 17.7% من البالغين في المناطق المشمولة حوالات محلية، وتلقاها 31.9%، وقام 37.8% بأيٍّ من الأمرين؛ وكان لدى 11.9% من البالغين حساب. وكل قيمة من هذه نسبة من جميع البالغين، مأخوذة من سؤال مستقل، فلا تُظهر الأرقام كم ممن تلقوا الأموال كان لديهم حساب. وينشر البنك الدولي أيضًا نسب الإرسال والاستلام بحسب الجنس والعمر والتعليم والدخل والمشاركة في قوة العمل، وتُعرض في الجدول في صفحة /people/؛ ولا تُنشر هنا فترة ثقة لقيمة أي فئة، والفرق بين الفئات ليس سببًا.\nويعدّ المسح البالغين لا الأسر، ولا تغطي القيم الواردة هنا إلا الحوالات داخل اليمن."
+  },
+  {
+   "section_order": 3,
+   "section_id": "evidence_channels",
+   "heading_en": "The channel evidence is old, and the network is listed, not measured",
+   "body_en": "The only channel values held here are historical. The World Bank’s weighted country profile for 2014 reports that 18.3% of adults received domestic remittances; among those recipients, 31.1% received them through a money transfer operator and 2.0% through a financial institution. These are shares of recipients, not of all adults; they do not show how much money moved through each channel, and they do not describe the situation today. For the 2021 wave, this evidence base holds no channel value for domestic remittances, and Yemen’s survey did not ask the mobile-money questions.\nOn the supply side, the official 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are entries counted by the roster’s own classes, not a count of unique providers or of providers operating now. Older counts do not compare with them: the World Bank’s appraisal document for FMIIP (May 2025) reports money-exchanger branches rising from 876 in 2017 to 3,244 in 2019, citing no source, while an International Growth Centre report (February 2026) presents the same pair as estimates of entities, including microfinance institutions.",
+   "heading_ar": "أدلة القنوات قديمة، والشبكة مُدرجة في قوائم لا مَقيسة",
+   "body_ar": "القيم الوحيدة المتعلقة بالقنوات في قاعدة الأدلة هذه قيم تاريخية. فالملف القطري الموزون للبنك الدولي لعام 2014 يفيد بأن 18.3% من البالغين تلقوا حوالات محلية، وأن 31.1% من هؤلاء المتلقين تلقوها عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية. وهذه نسب من المتلقين لا من جميع البالغين؛ ولا تبيّن حصة الأموال التي مرت عبر كل قناة، ولا تصف الوضع الراهن. أما موجة 2021، فلا تتضمن قاعدة الأدلة هذه أي قيمة لقنوات الحوالات المحلية فيها، ولم يطرح مسح اليمن أسئلة خدمات الأموال عبر الهاتف.\nوعلى جانب العرض، تُدرج القائمة الرسمية لعام 2026 الصادرة عن البنك المركزي اليمني – عدن 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها، لا عدد لمقدمي خدمات فريدين ولا لمن يعمل منهم حاليًا. ولا تُقارن بها أعداد أقدم: إذ تذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن فروع شركات الصرافة ارتفعت من 876 في 2017 إلى 3,244 في 2019، من دون ذكر مصدر، بينما يعرض تقرير للمركز الدولي للنمو (فبراير 2026) الزوج نفسه من الأرقام بوصفه تقديرات لعدد الكيانات، بما فيها مؤسسات التمويل الأصغر."
+  },
+  {
+   "section_order": 4,
+   "section_id": "hypothesis",
+   "heading_en": "A hypothesis, not a finding",
+   "body_en": "The evidence is consistent with a hypothesis: that remittances, including informal transfers between households, are a main channel through which many households receive cash, and that this money travels mainly through exchange companies rather than through accounts. A larger share of adults received domestic remittances than had an account; in 2014, recipients named a money transfer operator far more often than a financial institution; and CBY-Aden lists exchange companies, exchange establishments and remittance agents as separate licensed classes. This Reading states that as a hypothesis. No source here measures what share of household cash comes from transfers, or how often transfers arrive. A money transfer operator in the survey is not necessarily an exchange company, a listing is not proof of operation, and the survey values do not show whether the adults who received money were those without an account.",
+   "heading_ar": "فرضية لا نتيجة",
+   "body_ar": "تتسق الأدلة مع فرضية مفادها أن الحوالات، بما فيها الأموال المرسلة بين الأسر بطرق غير رسمية، قناة رئيسية تتلقى عبرها أسر كثيرة النقد، وأن هذه الأموال تمر أساسًا عبر شركات الصرافة لا عبر الحسابات. فنسبة البالغين الذين تلقوا حوالات محلية أعلى من نسبة من يملكون حسابًا؛ وفي 2014 ذكر المتلقون مشغل تحويل الأموال أكثر بكثير مما ذكروا المؤسسة المالية؛ ويُدرج البنك المركزي اليمني – عدن شركات الصرافة ومنشآت الصرافة ووكلاء الحوالات فئاتٍ مرخّصة مستقلة. وتطرح هذه القراءة ذلك فرضيةً. فلا يقيس أي مصدر هنا حصة الحوالات من النقد الذي تتلقاه الأسر، ولا عدد مرات وصولها. ومشغل تحويل الأموال في المسح ليس بالضرورة شركة صرافة، والإدراج في القائمة ليس دليلًا على التشغيل، ولا تُظهر قيم المسح ما إذا كان البالغون الذين تلقوا الأموال هم أنفسهم من لا يملكون حسابًا."
+  },
+  {
+   "section_order": 5,
+   "section_id": "alternatives",
+   "heading_en": "Four other explanations fit the same numbers",
+   "body_en": "- Survey coverage. The survey interviewed 1,000 adults, and its frame excludes Al Baydaa, Al Jawf, Mareb, Sadah, Socotra and several districts elsewhere: areas with about 23% of the population. Money may reach households there differently, and the shares say nothing about them; group values rest on smaller samples still.\n- Humanitarian cash. Cash assistance from programmes and agencies is another route into households, and the published values do not show whether any respondent counted it as a remittance. The Cash Consortium of Yemen has studied informal social protection (“The Unseen Assistance”) and the multiplier effect of cash assistance in Ad’ Dhali and Ja’ar; their findings are not yet held as records here, so this Reading prints none of them.\n- Currency. Exchange companies change money as well as pay out transfers, so a count of their entries or branches does not show how much of their business is remittances, and a change in the exchange rate changes the rial value of the same transfer.\n- What “remittance” means. In the survey it is money sent or received within Yemen, as adults report it. In CBY-Aden’s balance of payments it is a cross-border flow, in US dollars. In the World Bank’s price data it is a formal product for sending money into Yemen. The three share a word, not a measure.",
+   "heading_ar": "أربعة تفسيرات أخرى تنسجم مع الأرقام نفسها",
+   "body_ar": "- تغطية المسح: أجرى المسح مقابلات مع 1,000 من البالغين، ويستبعد إطاره محافظات البيضاء والجوف ومأرب وصعدة وسقطرى وعددًا من المديريات في محافظات أخرى، وهي مناطق تضم نحو 23% من السكان. وقد يصل المال إلى الأسر فيها بطرق مختلفة، ولا تقول النسب عنها شيئًا؛ كما تستند قيم الفئات إلى عينات أصغر.\n- المساعدات النقدية الإنسانية: المساعدات النقدية التي تقدمها البرامج والجهات الإنسانية طريق آخر يصل به المال إلى الأسر، ولا تُظهر القيم المنشورة ما إذا كان أي مستجيب قد عدّ شيئًا منها حوالة. وقد درس تحالف النقد في اليمن (Cash Consortium of Yemen) الحماية الاجتماعية غير الرسمية («المساعدة غير المرئية») والأثر المضاعف للمساعدات النقدية في عزلتَي الضالع وجعار؛ ولم تُدرج نتائج الدراستين بعدُ سجلاتٍ في قاعدة الأدلة هذه، لذلك لا تعرض هذه القراءة أيًّا منها.\n- العملة: تمارس شركات الصرافة تبديل العملات إلى جانب صرف الحوالات، فلا يُظهر عدد قيودها أو فروعها حجم ما يخص الحوالات من نشاطها، ويغيّر تحرك سعر الصرف قيمة الحوالة نفسها بالريال.\n- معنى «الحوالة»: هي في المسح أموال أُرسلت أو استُلمت داخل اليمن بحسب إفادة البالغين، وهي في ميزان مدفوعات البنك المركزي اليمني – عدن تدفق عابر للحدود بالدولار الأمريكي، وهي في بيانات أسعار البنك الدولي منتج رسمي لإرسال المال إلى اليمن. فالثلاثة تشترك في الكلمة لا في المقياس."
+  },
+  {
+   "section_order": 6,
+   "section_id": "evidence_scale",
+   "heading_en": "Price and scale are measured for money from abroad",
+   "body_en": "Two further series concern money sent into Yemen, not within it. The World Bank’s yearly average cost of sending US$200 to Yemen was 2.81% of the amount in 2023; in 2025 Q3, quoted formal products for sending US$200 from Saudi Arabia to Yemen averaged 2.70%. These are prices of sending, not the cost of collecting the money in Yemen or a household’s cost, and they do not cover informal channels. For the economy as a whole, CBY-Aden’s annual reports give different values for the same year: the 2024 report put remittances in 2024 at USD 6,245 million, and the 2025 report restated 2024 at USD 3,422.16 million, as the Reading “Same year, different number” explains. Neither value says how many households received money, or through which channel.",
+   "heading_ar": "السعر والحجم يُقاسان للأموال الواردة من الخارج",
+   "body_ar": "تتعلق سلسلتان أخريان بالأموال المرسلة إلى اليمن، لا داخله. فقد بلغ المتوسط السنوي الذي ينشره البنك الدولي لتكلفة إرسال 200 دولار أمريكي إلى اليمن 2.81% من المبلغ في 2023؛ وفي الربع الثالث من 2025 بلغ متوسط عروض الأسعار لمنتجات رسمية لإرسال 200 دولار أمريكي من السعودية إلى اليمن 2.70%. وهذه أسعار للإرسال، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة، ولا تشمل القنوات غير الرسمية. وعلى مستوى الاقتصاد ككل، تورد التقارير السنوية للبنك المركزي اليمني – عدن قيمًا مختلفة للسنة نفسها: فقد قدّر التقرير السنوي 2024 الحوالات في عام 2024 بمبلغ 6,245 مليون دولار، ثم أعاد التقرير السنوي 2025 عرض عام 2024 عند 3,422.16 مليون دولار، كما تشرح القراءة التحليلية «العام نفسه، رقم مختلف». ولا تبيّن أيٌّ من القيمتين عدد الأسر التي تلقت أموالًا ولا القناة التي وصلت عبرها."
+  },
+  {
+   "section_order": 7,
+   "section_id": "boundary",
+   "heading_en": "Where the evidence stops",
+   "body_en": "The evidence counts adults, roster entries and prices; it does not observe households’ money. It does not show what share of household cash comes from remittances, how recipients collected the money in the 2021 wave, or whether the adults who received money were those without an account. It does not establish that exchange companies stand in for banks, that a larger exchange network brought more transfers, or that any authority’s rules produced the pattern. A channel value that is missing is unknown, not zero.",
+   "heading_ar": "أين يتوقف الدليل؟",
+   "body_ar": "يعدّ الدليل البالغين وقيود القوائم والأسعار، لكنه لا يرصد أموال الأسر نفسها. فلا يُظهر حصة الحوالات من النقد الذي تتلقاه الأسر، ولا كيف استلم المتلقون أموالهم في موجة 2021، ولا ما إذا كان البالغون الذين تلقوا الأموال هم أنفسهم من لا يملكون حسابًا. ولا يثبت أن شركات الصرافة تحل محل البنوك، ولا أن اتساع شبكة الصرافة أدى إلى زيادة الحوالات، ولا أن قواعد أي سلطة أنتجت هذا النمط. وقيمة القناة الغائبة غير معروفة — لا يعني ذلك صفرًا."
+  },
+  {
+   "section_order": 8,
+   "section_id": "use",
+   "heading_en": "How to use the figures",
+   "body_en": "Before relying on these figures, a regulator, donor or provider can check four things:\n- the unit: adults in surveyed areas, not households and not accounts;\n- where the money moved: within Yemen in the survey, from abroad in CBY-Aden’s figures and the World Bank’s price data;\n- the date: survey fieldwork ended on 9 January 2023, and the only channel values are for 2014;\n- the status of a provider: a roster entry is not proof that it operates now.",
+   "heading_ar": "كيف تُستخدم هذه الأرقام",
+   "body_ar": "قبل الاعتماد على هذه الأرقام، يمكن للجهة الرقابية أو الجهة المانحة أو مقدم الخدمة التحقق من أربعة أمور:\n- الوحدة: البالغون في المناطق المشمولة بالمسح، لا الأسر ولا الحسابات؛\n- موضع حركة المال: داخل اليمن في المسح، ومن الخارج في أرقام البنك المركزي اليمني – عدن وبيانات أسعار البنك الدولي؛\n- التاريخ: انتهى العمل الميداني للمسح في 9 يناير 2023، وقيم القنوات الوحيدة تخص عام 2014؛\n- وضع مقدم الخدمة: الإدراج في القائمة ليس دليلًا على أنه يعمل حاليًا."
+  },
+  {
+   "section_order": 9,
+   "section_id": "what_would_change",
+   "heading_en": "What would change this reading?",
+   "body_en": "Four kinds of evidence would test the hypothesis against its alternatives:\n- a household survey module on remittances that records receipt, channel, currency and frequency;\n- channel values for domestic remittances from a current survey wave;\n- reporting by exchange companies and remittance agents that separates remittance pay-outs from currency exchange, by area;\n- data that separate humanitarian cash from transfers between relatives in what households receive.\nIf households that receive transfers mostly used accounts or wallets, or if transfers were a small part of household cash, the hypothesis would fail.\n> Until then, read the survey shares as the share of adults who sent or received money, not as how much households depend on it.",
+   "heading_ar": "ما الذي قد يغيّر هذه القراءة؟",
+   "body_ar": "من شأن أربعة أنواع من الأدلة أن تختبر الفرضية في مقابل بدائلها:\n- وحدة في مسح للأسر عن الحوالات تسجل الاستلام والقناة والعملة وتواتر الوصول؛\n- قيم لقنوات الحوالات المحلية من موجة مسح حديثة؛\n- بيانات من شركات الصرافة ووكلاء الحوالات تفصل صرف الحوالات عن تبديل العملات، بحسب المنطقة؛\n- بيانات تفصل المساعدات النقدية الإنسانية عن الأموال المرسلة من الأقارب ضمن ما تتلقاه الأسر.\nوإذا تبيّن أن الأسر التي تتلقى الحوالات تستخدم الحسابات أو المحافظ الإلكترونية في الغالب، أو أن الحوالات جزء صغير من النقد الذي تتلقاه الأسر، سقطت الفرضية.\n> وإلى أن تتوافر، تُقرأ نسب المسح مقياسًا لنسبة البالغين الذين أرسلوا أموالًا أو تلقوها، لا لمدى اعتماد الأسر عليها."
+  }
+ ],
+ "sections_storage": "Order 1: 09 holds reading_id/section_order/section_id and title_en/title_ar ('What the evidence supports' / 'ما الذي تسنده الأدلة'); its copy derives from 08 thesis (09 copy cells empty). Orders 2-9: 09 holds the index row only (title/copy cells empty); heading and body live in 03_PAGE_SECTIONS on /readings/how-money-reaches-households/ with section_role null; order 2 has no heading in either language (as CWR-011). Nine sections is the maximum (orders 2-9 in 03).",
+ "literals": [
+  {
+   "text": "31.9%",
+   "record_id": "CLM-026",
+   "field": "value_states"
+  },
+  {
+   "text": "31.9%",
+   "record_id": "VIS-FINDEX-FLOW-CHANNELS",
+   "field": "value_states"
+  },
+  {
+   "text": "17.7%",
+   "record_id": "CLM-026",
+   "field": "value_states"
+  },
+  {
+   "text": "37.8%",
+   "record_id": "CLM-026",
+   "field": "value_states"
+  },
+  {
+   "text": "11.9%",
+   "record_id": "CLM-026",
+   "field": "value_states"
+  },
+  {
+   "text": "7 November 2022",
+   "record_id": "VIS-FINDEX-FLOW-CHANNELS",
+   "field": "value_states"
+  },
+  {
+   "text": "9 January 2023",
+   "record_id": "VIS-FINDEX-FLOW-CHANNELS",
+   "field": "value_states"
+  },
+  {
+   "text": "1,000",
+   "record_id": "VIS-FINDEX-FLOW-CHANNELS",
+   "field": "value_states"
+  },
+  {
+   "text": "23%",
+   "record_id": "VIS-FINDEX-FLOW-CHANNELS",
+   "field": "value_states"
+  },
+  {
+   "text": "2021",
+   "record_id": "VIS-FINDEX-FLOW-CHANNELS",
+   "field": "period_en/summary_en (study name 'Global Findex 2021')"
+  },
+  {
+   "text": "18.3%",
+   "record_id": "CLM-030",
+   "field": "value_states"
+  },
+  {
+   "text": "31.1%",
+   "record_id": "CLM-030",
+   "field": "value_states"
+  },
+  {
+   "text": "2.0%",
+   "record_id": "CLM-030",
+   "field": "value_states"
+  },
+  {
+   "text": "2014",
+   "record_id": "CLM-030",
+   "field": "period_en"
+  },
+  {
+   "text": "100",
+   "record_id": "CLM-009",
+   "field": "value_states"
+  },
+  {
+   "text": "231",
+   "record_id": "CLM-009",
+   "field": "value_states"
+  },
+  {
+   "text": "111",
+   "record_id": "CLM-009",
+   "field": "value_states"
+  },
+  {
+   "text": "2026",
+   "record_id": "CLM-009",
+   "field": "summary_en (the official 2026 roster)"
+  },
+  {
+   "text": "876",
+   "record_id": "CLM-016",
+   "field": "value_states"
+  },
+  {
+   "text": "3,244",
+   "record_id": "CLM-016",
+   "field": "value_states"
+  },
+  {
+   "text": "May 2025",
+   "record_id": "CLM-016",
+   "field": "value_states"
+  },
+  {
+   "text": "February 2026",
+   "record_id": "CLM-016",
+   "field": "value_states"
+  },
+  {
+   "text": "2017",
+   "record_id": "CLM-016",
+   "field": "limitations_en"
+  },
+  {
+   "text": "2019",
+   "record_id": "CLM-016",
+   "field": "limitations_en"
+  },
+  {
+   "text": "200",
+   "record_id": "VIS-REMITTANCE-COST",
+   "field": "value_states"
+  },
+  {
+   "text": "2.81%",
+   "record_id": "VIS-REMITTANCE-COST",
+   "field": "value_states"
+  },
+  {
+   "text": "2.70%",
+   "record_id": "VIS-REMITTANCE-COST",
+   "field": "value_states"
+  },
+  {
+   "text": "2025 Q3",
+   "record_id": "VIS-REMITTANCE-COST",
+   "field": "value_states"
+  },
+  {
+   "text": "2023",
+   "record_id": "VIS-REMITTANCE-COST",
+   "field": "period_en/summary_en"
+  },
+  {
+   "text": "USD 6,245 million",
+   "record_id": "CLM-032",
+   "field": "value_states"
+  },
+  {
+   "text": "USD 3,422.16 million",
+   "record_id": "CLM-032",
+   "field": "value_states"
+  },
+  {
+   "text": "2024",
+   "record_id": "CLM-032",
+   "field": "summary_en"
+  },
+  {
+   "text": "2025",
+   "record_id": "CLM-032",
+   "field": "summary_en (the 2025 annual report)"
+  }
+ ],
+ "site_map": {
+  "route": "/readings/how-money-reaches-households/",
+  "page_class": "reading_detail",
+  "template_route": "/readings/[reading_id]",
+  "instance_id": "how-money-reaches-households",
+  "title_en": null,
+  "title_ar": null,
+  "title_note": "02 title cells must be blank for reading_detail; the projected title derives from 08 (How money reaches households / كيف يصل المال إلى الأسر). full_copy is derived.",
+  "meta_description_en": "In Yemen’s Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances and 11.9% had an account; the channel is not measured.",
+  "meta_description_ar": "في موجة 2021 من Global Findex لليمن، تلقى 31.9% من البالغين في المناطق المشمولة حوالات محلية، وكان لدى 11.9% من البالغين حساب؛ ولم تُقَس قناة وصول المال.",
+  "meta_note": "Authored (as CWR-001/005/007/008); may be left null, in which case the generator derives 'title — first sentence' truncated to 155 characters. Lengths EN 147, AR 153."
+ },
+ "notes": [
+  "visual_bindings is []: no RV-CWR-012 contract exists and the brief asks for none. The two existing visual records VIS-FINDEX-FLOW-CHANNELS and VIS-REMITTANCE-COST are bound as claim/evidence records (as CWR-007 binds VIS-FINDEX-GAPS and CWR-008 binds VIS-FIRM-*); both already list /remittances/. Every other Reading carries an RV-CWR-0xx; W4's visual audit should record CWR-012 as text-only or commission one.",
+  "Domain surface /remittances/ only: it then carries CWR-001 and CWR-012 (the F2 limit of two). /providers/ (CWR-006 only) is the one other open page that fits the exchanger evidence, if a second surface is wanted.",
+  "measurement_bindings MA-001 and MA-005 exist today; the M1 dimensions they will carry after CLOSE-5 (MA-001 household remittance module: receipt, channel, currency, frequency; MA-005 exchanger points and flows) match the first and third 'what would change' items. If M1 is not applied, the bindings are still valid.",
+  "U3 (CCY 'The Unseen Assistance' and the SAM multiplier study) has public locators but no governed finding or value in any record; the Reading names the two studies by title only and says their findings are not held. Binding a finding needs a new or extended record (e.g. CLM-045) first.",
+  "U1 subgroup values are not printed; the opening points to the /people/ table (VIS-FINDEX-FLOW-CHANNELS), whose group values live in the visual's data, not in value_states.",
+  "Years printed (2014, 2017, 2019, 2021, 2023, 2024, 2025, 2026) are not standalone value_states; they are in the bound records' governed period/summary/limitations text (see literals.field). If the steward requires year literals in value_states too, add TRIVIAL/SITE states or rephrase before applying.",
+  "The 2014 'money transfer operator' is the Findex profile's category; the text says it is not necessarily an exchange company. 0.0% via mobile phone (CLM-030) is deliberately not printed.",
+  "The UAE corridor average (7.53%) is not printed: it rests on six quotes, one an outlier, and would need that caveat; the Saudi corridor (2.70%) and the WDI yearly average (2.81%, 2023) are printed with the price-of-sending limit.",
+  "Downstream (RD8): readings count 11 -> 12 (CO-G01 self-counts), page_spec_design_intent route entry, page specs, search index, sitemap, social image, README, checkpoint and Context rebind; the 'used in' lists of the seven bound records gain CWR-012.",
+  "New Arabic: every Arabic string here is new and must be listed in NEW_ARABIC_SINCE_2ddbfb61.csv."
+ ]
+}
