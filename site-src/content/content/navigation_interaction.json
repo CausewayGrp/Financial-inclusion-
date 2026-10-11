@@ -3297,6 +3297,26 @@
       "navigation_prominence": "CONTEXTUAL"
     },
     {
+      "route": "/readings/how-money-reaches-households/",
+      "page_class": "reading_detail",
+      "page_family": "Reading",
+      "stable_object_id": "CWR-012",
+      "entry_modes": [
+        "deep_link",
+        "reading_index",
+        "search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "UNIQUE_ANALYTICAL_OBJECT",
+      "depth_role": "SYNTHESIS",
+      "navigation_prominence": "CONTEXTUAL"
+    },
+    {
       "route": "/evidence/CBY-BANKS-2026-05/",
       "page_class": "evidence_detail",
       "page_family": "Evidence Record",
@@ -3361,6 +3381,46 @@
       "page_class": "evidence_detail",
       "page_family": "Evidence Record",
       "stable_object_id": "YMPS-YEM-2022-R1",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CCY-ISP-2024/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CCY-ISP-2024",
+      "entry_modes": [
+        "deep_link",
+        "search",
+        "verification_link_or_search"
+      ],
+      "search_record_count": 2,
+      "unique_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
+      "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
+      "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+      "explicit_next_actions": [],
+      "deletion_disposition": "KEEP",
+      "deletion_reason_code": "STABLE_VERIFICATION_ENDPOINT",
+      "depth_role": "VERIFICATION",
+      "navigation_prominence": "ADDRESSABLE_VERIFICATION"
+    },
+    {
+      "route": "/evidence/CCY-SAM-2024/",
+      "page_class": "evidence_detail",
+      "page_family": "Evidence Record",
+      "stable_object_id": "CCY-SAM-2024",
       "entry_modes": [
         "deep_link",
         "search",
@@ -3863,7 +3923,7 @@
       "No archive factual proposition changes current controlled evidence in R4."
     ]
   },
-  "public_search_record_count": 508,
+  "public_search_record_count": 514,
   "r6_information_design_contract": {
     "status": "R6_CLOSED",
     "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",
