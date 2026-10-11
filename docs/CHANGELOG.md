@@ -1,5 +1,10 @@
 # Repository Change Log
 
+## 2026-10-11 — Stage A of the close-out brief is complete
+
+`audit/close_out/PROGRESS.md` records the #37 merge and the Stage A checkpoint (main `53dccc4d`): twelve pull requests
+merged at 9/9 CI, the findings closed, the gates added and what stays open. Stage B starts after the owner's review.
+
 ## 2026-10-11 — The open-items register's live view (Stage A, W3a and W3f)
 
 `FINAL_OPEN_ITEMS_REGISTER.md` now opens with "Live status at `876f52df`": every item, old and new, in exactly one of five
