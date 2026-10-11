@@ -261,4 +261,11 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   statement; "Eid al-Adha 2026" has no year in the source; FATF unreadable (403). run_stage first rolled back on F6-G01
   (social images for the new route are made after it, as in CLOSE-6C), then COMMITTED with that one message allowed;
   images, build, literal audit (19,847, 0 unresolved), inventory and utilisation (206 sources) re-run after.
-
+- 2026-10-11 · v5 · PR-4 merged: PR #44 at `ca8fabd2` (9/9 CI).
+- 2026-10-11 · v5 · PR-5 · CLOSE-6F (Master 7e4f2cb5 -> fcc1195b, 129 cells): 7a OECD and POS source notes; 7b eight cards
+  checked, no change; 7c D16 relabel (24 + 95 rows; CO-G04 rejects the retired state, new negative control), fin34a label
+  and 2022/2014 values as data, 605 and 1,114 UNVERIFIED__DO_NOT_PROJECT, OECD-YEM-003–005 attributed, 012–014 labelled,
+  019–023 added; 7d ADD3-4, ADD5-HH (register 267), checkpoint 522 search records, README Stage A row. Review: B1 series URL
+  (first run rolled back on CO-G04), S1–S9 and N1/N2/N4/N5/N7 applied; N3 (check 605 and 1,114 against the held PDF) and
+  N6 (packet only) not applied. Second run rolled back on CO-G06 (register heading); third COMMITTED. Challenges: "nine"
+  cards named, eight listed; CR-11 already closed; EXT-23 "values identical" false; the search count was 522, not 514.

@@ -50,7 +50,9 @@ External facts stay attributed to their original publishers. CauseWay attributio
 | Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
 | Content | Complete on `main`, 10 October 2026. The annotated tag `checkpoint/2026-10-10-content-complete` marks it, or is the owner's to push ([`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §9) |
-| Open pull requests | None. #21 (another session's alternative naming Part B, superseded by #19) and #23 (an earlier draft of this checkpoint, superseded by RIGHTS-FINAL) were closed without merge |
+| Stage A (evidence and Arabic) | STAGE A COMPLETE was recorded at `53dccc4d` (11 October 2026). The Stage A addendum followed on 11 October 2026 (#39 to #42: literal audit v3, CLOSE-6A to CLOSE-6C, Reading CWR-012). The Stage A final instruction v5 is being executed: CLOSE-6D (#43) and CLOSE-6E (#44) are merged; CLOSE-6F and the report follow. No new status is claimed: not DESIGN HANDOFF READY, not PUBLIC RELEASE READY, and Stage A is not declared closed |
+| Public inventory (11 October 2026) | 151 Page Specs (306 HTML documents), 116 Evidence Records, 60 public claims, 12 Readings, 10 measurement priorities, 31 dated events, 206 source records (191 with a public locator), 522 search records |
+| Open pull requests | Only the close-out's own, merged one at a time (`audit/close_out/PROGRESS.md`). #21 (another session's alternative naming Part B, superseded by #19) and #23 (an earlier draft of this checkpoint, superseded by RIGHTS-FINAL) were closed without merge |
 
 Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; the 23 dated events of the system chronology are indexed in search, each deep-linking to its own anchor on /finance/ (the analytical rule is not a dated event and is not indexed); the reuse licence for CauseWay's own content (CC BY 4.0, [`audit/OWNER_DECISIONS_2026-10-10.md`](audit/OWNER_DECISIONS_2026-10-10.md)) — a reuse licence is not regulatory licensing, and CauseWay neither holds nor claims the status of a licensed financial institution.
 
@@ -82,9 +84,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `7e4f2cb5d20aa3374ccfcebb12489ee28c283e8cfe19735279466a615f695073`
+Master SHA-256: `fcc1195bcf399c2c7e4b794f654ada0e45a626bfebae0dc884023d203ebbce8d`
 
-Page Specs SHA-256: `11b3b7b126271a789ada1a1deeb9e9da875ae0aa40c1a58b493e66675661627a`
+Page Specs SHA-256: `e2b50bfa3235fda63b411734a6be3138aa1ca9306438b0de7980c1a87b5b9f0a`
 
 | Layer | Role |
 |---|---|

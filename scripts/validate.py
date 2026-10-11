@@ -3948,7 +3948,11 @@ try:
             _st = _r[_sgi["current_state"]]
             if _st == "PUBLIC_WB_PUBLISHED_SAME_WAVE":
                 _pub += 1
-            elif _st in ("CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED", "NOT_ASKED_IN_SURVEY"):
+            elif _st == "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED":
+                # close-out v5 7c (CLOSE-6F, 11 October 2026): under owner decision D16 a weighted derivation becomes
+                # possible but none is approved; the compute contracts carry the D16 review label instead
+                errors.append(f"CO-G04 {_r[0]} keeps the retired state {_st}; it is NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW")
+            elif _st in ("NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW", "NOT_ASKED_IN_SURVEY"):
                 _held += 1
                 _why = str(_r[_sgi["public_behavior"]] or "")
                 _var = _ddi.get(str(_r[_sgi["variable_name"]] or ""))
