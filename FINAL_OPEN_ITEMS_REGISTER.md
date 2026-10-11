@@ -13,10 +13,10 @@ the public state meanwhile and a cadence. A state change updates this view and i
 |---|---|
 | CLOSED | 92 |
 | HOSTING | 9 |
-| FRONTIER | 46 |
+| FRONTIER | 47 |
 | OWNER-OPTIONAL | 8 |
 | DECIDED | 110 |
-| **Total** | **265** |
+| **Total** | **266** |
 
 ### CLOSED — with the evidence of closure
 
@@ -165,6 +165,7 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | EXT-37 | Printed date of OECD *Digital Financial Inclusion of Youth* | Card EXT-37 (checked 10 Oct 2026) | A person with a browser. Once before release. |
 | EXT-38 | Identity of the World Bank FASTT fast-payments paper | Card EXT-38 (checked 10 Oct 2026) | A person with a browser. Once before release. |
 | EXT-39 | CBY-Aden Quarterly Bulletin, June 2021 | Card EXT-39 (checked 10 Oct 2026) | Owner (a request to CBY-Aden). Each new edition. |
+| EXT-40 | Owner's aggregate file for the 2021-wave domestic transfer channels (instruction v5, 6C-6; D16) | Card EXT-40 (checked 11 Oct 2026) | Owner to run the aggregate script; then a Master transaction. When the owner supplies the file. |
 | FRN-01 | CLM-044 residual-model value withheld | Card FRN-01 (checked 10 Oct 2026) | Owner (through EXT-17). Each new edition. |
 | FRN-02 | Firm base (about 147) and question wording behind 91.84% | Card FRN-02 (checked 3 Oct 2026) | A person with a browser. Each new edition, or a new Enterprise Survey wave. |
 | FRN-03 | No crosswalk between CBY-Aden and IMF remittance levels | Card FRN-03 (checked 10 Oct 2026) | Claude Code. Each IMF Yemen report and each CBY-Aden annual report. |
@@ -830,3 +831,5 @@ and the twin agree, that nothing outside HOSTING says PENDING, and that every FR
 - 11 October 2026, Stage A addendum (advisor review of the Stage A report): the live view takes 8 items closed by
   PR #39 and CLOSE-6A to CLOSE-6C, 9 recorded decisions and one owner option; OWN-13 closes with CWR-012's
   publication; X-REG-LINK-C12 closed in CLOSE-6B; X-REG-LINK-AR2015's card was updated there. Total 265.
+
+- 11 October 2026, CLOSE-6E (Stage A final instruction v5): item 6C-6 is EXT-40 (FRONTIER): the owner's aggregate file for the 2021-wave domestic transfer channels has not arrived (D16). Card in `audit/close_out/FRONTIER_CARDS.md`. Total 266.

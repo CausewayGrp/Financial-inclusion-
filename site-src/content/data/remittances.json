@@ -527,6 +527,56 @@
       "https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/Yemen"
     ],
     [
+      "RMO-RPW-US-2025Q3-200",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
+      "RPW_Q3_2025",
+      "remittance_corridor_costs",
+      "United States → Yemen",
+      "2025-Q3",
+      "OBSERVED_QUOTE_COLLECTION_PERIOD",
+      "RMT-002",
+      "Total remittance transfer cost",
+      "التكلفة الإجمالية لإرسال التحويل",
+      3.92,
+      "percent of send amount",
+      200,
+      "United States",
+      "Yemen",
+      "DERIVED_FROM_PRIMARY_OFFICIAL_CORRIDOR_QUOTES",
+      "RPW quote observations in the dataset for the specified corridor and send amount",
+      "RPW quote-level dataset rpw_dataset_2011_2025_q3.xlsx, sheet 'Dataset (from Q2 2016)', period 2025_3Q, source_code USA, destination_code YEM: simple mean of 'cc1 total cost %' over the corridor's 12 quotes = 3.9167; read 11 October 2026; the corridor page refuses automated requests",
+      "CAUSEWAY_SIMPLE_MEAN_OF_SOURCE_QUOTES",
+      "AMOUNT_SPECIFIC__DO_NOT_COLLAPSE",
+      "Average is transaction-amount specific and can vary by provider, payment instrument, receiving method, fee and FX margin. It is not a cost for all remittances into Yemen. Computed here as the simple average of the corridor's 12 quotes in the World Bank's dataset, the method that reproduces the published Saudi Arabia and United Arab Emirates averages; the corridor page was not read.",
+      "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن. ويُحسب هنا بوصفه المتوسط البسيط لعروض الأسعار الـ12 لهذا الممر في مجموعة بيانات البنك الدولي، وهي الطريقة التي تعيد إنتاج متوسطات السعودية والإمارات المنشورة؛ ولم تُقرأ صفحة الممر.",
+      "https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx"
+    ],
+    [
+      "RMO-RPW-US-2025Q3-500",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
+      "RPW_Q3_2025",
+      "remittance_corridor_costs",
+      "United States → Yemen",
+      "2025-Q3",
+      "OBSERVED_QUOTE_COLLECTION_PERIOD",
+      "RMT-002",
+      "Total remittance transfer cost",
+      "التكلفة الإجمالية لإرسال التحويل",
+      2.3,
+      "percent of send amount",
+      500,
+      "United States",
+      "Yemen",
+      "DERIVED_FROM_PRIMARY_OFFICIAL_CORRIDOR_QUOTES",
+      "RPW quote observations in the dataset for the specified corridor and send amount",
+      "RPW quote-level dataset rpw_dataset_2011_2025_q3.xlsx, sheet 'Dataset (from Q2 2016)', period 2025_3Q, source_code USA, destination_code YEM: simple mean of 'cc2 total cost %' over the corridor's 12 quotes = 2.3000; read 11 October 2026; the corridor page refuses automated requests",
+      "CAUSEWAY_SIMPLE_MEAN_OF_SOURCE_QUOTES",
+      "AMOUNT_SPECIFIC__DO_NOT_COLLAPSE",
+      "Average is transaction-amount specific and can vary by provider, payment instrument, receiving method, fee and FX margin. It is not a cost for all remittances into Yemen. Computed here as the simple average of the corridor's 12 quotes in the World Bank's dataset, the method that reproduces the published Saudi Arabia and United Arab Emirates averages; the corridor page was not read.",
+      "المتوسط خاص بقيمة التحويل المحددة، وقد يختلف باختلاف مقدم الخدمة وأداة الدفع وطريقة الاستلام والرسوم وهامش سعر الصرف. ولا يمثل تكلفة جميع الحوالات الواردة إلى اليمن. ويُحسب هنا بوصفه المتوسط البسيط لعروض الأسعار الـ12 لهذا الممر في مجموعة بيانات البنك الدولي، وهي الطريقة التي تعيد إنتاج متوسطات السعودية والإمارات المنشورة؛ ولم تُقرأ صفحة الممر.",
+      "https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx"
+    ],
+    [
       "RMO-CBY-2024-AR2024",
       "SRC-CBY-AR2024-BOP",
       "CBY_ANNUAL_REPORT_2024",
@@ -698,7 +748,7 @@
       "SOURCE_PUBLISHED_AVERAGE",
       "COUNTRY_AVERAGE__NOT_ONE_SERIES_WITH_CORRIDORS",
       "The World Bank's yearly average for Yemen of the total cost of sending US$200: a simple average of the prices quoted by the remittance service providers that Remittance Prices Worldwide includes for Yemen, not weighted by the amounts sent. A price of sending (fees and the exchange-rate margin), not the cost of collecting the money in Yemen or a household's cost; not one series with the 2025 Q3 corridor averages.",
-      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرين للربع الثالث من 2025 سلسلة واحدة.",
+      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرات للربع الثالث من 2025 سلسلة واحدة.",
       "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE"
     ],
     [
@@ -723,7 +773,7 @@
       "SOURCE_PUBLISHED_AVERAGE",
       "COUNTRY_AVERAGE__NOT_ONE_SERIES_WITH_CORRIDORS",
       "The World Bank's yearly average for Yemen of the total cost of sending US$200: a simple average of the prices quoted by the remittance service providers that Remittance Prices Worldwide includes for Yemen, not weighted by the amounts sent. A price of sending (fees and the exchange-rate margin), not the cost of collecting the money in Yemen or a household's cost; not one series with the 2025 Q3 corridor averages.",
-      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرين للربع الثالث من 2025 سلسلة واحدة.",
+      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرات للربع الثالث من 2025 سلسلة واحدة.",
       "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE"
     ],
     [
@@ -748,7 +798,7 @@
       "SOURCE_PUBLISHED_AVERAGE",
       "COUNTRY_AVERAGE__NOT_ONE_SERIES_WITH_CORRIDORS",
       "The World Bank's yearly average for Yemen of the total cost of sending US$200: a simple average of the prices quoted by the remittance service providers that Remittance Prices Worldwide includes for Yemen, not weighted by the amounts sent. A price of sending (fees and the exchange-rate margin), not the cost of collecting the money in Yemen or a household's cost; not one series with the 2025 Q3 corridor averages.",
-      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرين للربع الثالث من 2025 سلسلة واحدة.",
+      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرات للربع الثالث من 2025 سلسلة واحدة.",
       "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE"
     ],
     [
@@ -773,7 +823,7 @@
       "SOURCE_PUBLISHED_AVERAGE",
       "COUNTRY_AVERAGE__NOT_ONE_SERIES_WITH_CORRIDORS",
       "The World Bank's yearly average for Yemen of the total cost of sending US$200: a simple average of the prices quoted by the remittance service providers that Remittance Prices Worldwide includes for Yemen, not weighted by the amounts sent. A price of sending (fees and the exchange-rate margin), not the cost of collecting the money in Yemen or a household's cost; not one series with the 2025 Q3 corridor averages.",
-      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرين للربع الثالث من 2025 سلسلة واحدة.",
+      "المتوسط السنوي الذي ينشره البنك الدولي لليمن، للتكلفة الإجمالية لإرسال 200 دولار أمريكي: متوسط بسيط للأسعار التي يعرضها مقدمو خدمات الحوالات الذين تشملهم قاعدة Remittance Prices Worldwide لليمن، غير مرجّح بالمبالغ المرسلة. وهو سعر للإرسال (الرسوم وهامش سعر الصرف)، لا تكلفة استلام المال في اليمن ولا تكلفة تتحملها الأسرة؛ ولا يشكّل مع متوسطات الممرات للربع الثالث من 2025 سلسلة واحدة.",
       "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE"
     ]
   ]

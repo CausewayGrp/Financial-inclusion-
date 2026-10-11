@@ -4772,6 +4772,8 @@
       "RV-CWR-010"
     ],
     "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
       "MA-009"
     ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -4816,6 +4818,8 @@
       "RV-CWR-010"
     ],
     "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
       "MA-009"
     ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -4862,6 +4866,8 @@
       "RV-CWR-010"
     ],
     "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
       "MA-009"
     ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -4928,16 +4934,23 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CLM-045",
       "DS-QUAL-EVIDENCE"
     ],
-    "linked_claim_ids": [],
+    "linked_claim_ids": [
+      "CLM-045"
+    ],
     "linked_reading_ids": [
       "CWR-010"
     ],
     "linked_visual_ids": [
       "RV-CWR-010"
     ],
-    "linked_measurement_ids": [],
+    "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
+      "MA-009"
+    ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
   {
@@ -6063,6 +6076,7 @@
       "VIS-TARGET-RESULT-STATE"
     ],
     "linked_measurement_ids": [
+      "MA-001",
       "MA-004",
       "MA-005",
       "MA-009",
@@ -6477,6 +6491,8 @@
       "RV-CWR-010"
     ],
     "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
       "MA-009"
     ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -6594,6 +6610,8 @@
       "RV-CWR-010"
     ],
     "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
       "MA-009"
     ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -6979,6 +6997,8 @@
       "RV-CWR-010"
     ],
     "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
       "MA-009"
     ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -7976,6 +7996,207 @@
     "linked_claim_ids": [
       "CLM-059"
     ],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
+    "linked_measurement_ids": [
+      "MA-004"
+    ],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-UNICEF-UCT-2024-10",
+    "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+    "additional_urls": null,
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__UNICEF_UCT_PROGRAMME_RELEASES",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "1.43 million vulnerable families supported with cash assistance across Yemen (UNICEF press release, 2 October 2024)",
+    "display_title_ar": "1.43 مليون أسرة ضعيفة تتلقى مساعدات نقدية في أنحاء اليمن (بيان صحفي لليونيسف، 2 أكتوبر 2024)",
+    "publisher": "UNICEF Yemen",
+    "publisher_ar": "اليونيسف – اليمن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": "2024-10-02",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "CLM-045"
+    ],
+    "linked_claim_ids": [
+      "CLM-045"
+    ],
+    "linked_reading_ids": [
+      "CWR-010"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-010"
+    ],
+    "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
+      "MA-009"
+    ],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-UNICEF-UCT-2024-12",
+    "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
+    "additional_urls": null,
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__UNICEF_UCT_PROGRAMME_RELEASES",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "UNICEF and partners launch the 19th Payment Cycle of the current Unconditional Cash Transfer Project in Yemen (UNICEF press release, 7 December 2024)",
+    "display_title_ar": "اليونيسف وشركاؤها يطلقون دورة الدفع 19 من مشروع التحويلات النقدية غير المشروطة الحالي في اليمن (بيان صحفي لليونيسف، 7 ديسمبر 2024)",
+    "publisher": "UNICEF Yemen",
+    "publisher_ar": "اليونيسف – اليمن",
+    "document_label": "News release",
+    "document_label_ar": "بيان صحفي",
+    "document_date": "2024-12-07",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "CLM-045"
+    ],
+    "linked_claim_ids": [
+      "CLM-045"
+    ],
+    "linked_reading_ids": [
+      "CWR-010"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-010"
+    ],
+    "linked_measurement_ids": [
+      "MA-001",
+      "MA-005",
+      "MA-009"
+    ],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-WB-RPW-US-YEM-2025Q3-001",
+    "primary_url": "https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx",
+    "additional_urls": null,
+    "datasets_or_use": "DS-REMITTANCES",
+    "row_count": 2,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Remittance Prices Worldwide: United States to Yemen corridor (third quarter of 2025)",
+    "display_title_ar": "قاعدة بيانات Remittance Prices Worldwide: ممر الحوالات من الولايات المتحدة إلى اليمن (الربع الثالث من 2025)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Database or web interface",
+    "document_label_ar": "قاعدة بيانات أو واجهة إلكترونية",
+    "document_date": null,
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "VIS-REMITTANCE-COST"
+    ],
+    "linked_claim_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
+    "linked_visual_ids": [
+      "VIS-REMITTANCE-COST"
+    ],
+    "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-WB-DB2020-YEM-001",
+    "primary_url": "https://www.doingbusiness.org/content/dam/doingBusiness/country/y/yemen/YEM.pdf",
+    "additional_urls": "[\"https://www.worldbank.org/en/news/statement/2021/09/16/world-bank-group-to-discontinue-doing-business-report\"]",
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__CREDIT_REGISTRY_HISTORICAL_MEASURE,14_SYSTEM_CHRONOLOGY",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Doing Business 2020: Yemen, Rep. economy profile (World Bank, 2019)",
+    "display_title_ar": "ممارسة أنشطة الأعمال 2020: الملف الاقتصادي لليمن (البنك الدولي، 2019)",
+    "publisher": "World Bank",
+    "publisher_ar": "البنك الدولي",
+    "document_label": "Periodic statistical report",
+    "document_label_ar": "تقرير إحصائي دوري",
+    "document_date": "2019",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [],
+    "linked_claim_ids": [],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
+    "linked_measurement_ids": [
+      "MA-008"
+    ],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-IFAD-CPE-YEM-2011",
+    "primary_url": "https://webapps.ifad.org/members/ec/69/docs/EC-2011-69-W-P-4-Rev-1.pdf",
+    "additional_urls": null,
+    "datasets_or_use": "RESOURCE_LIBRARY_ONLY__IFAD_RURAL_FINANCE_EVALUATION",
+    "row_count": 0,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Republic of Yemen: Country Programme Evaluation (IFAD Independent Office of Evaluation, EC 2011/69/W.P.4/Rev.1, 6 October 2011)",
+    "display_title_ar": "الجمهورية اليمنية: تقييم البرنامج القُطري (مكتب التقييم المستقل في الصندوق الدولي للتنمية الزراعية، EC 2011/69/W.P.4/Rev.1، 6 أكتوبر 2011)",
+    "publisher": "International Fund for Agricultural Development (IFAD)",
+    "publisher_ar": "الصندوق الدولي للتنمية الزراعية (إيفاد)",
+    "document_label": "Research or policy paper",
+    "document_label_ar": "ورقة بحثية أو سياساتية",
+    "document_date": "2011-10-06",
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "IFAD-CPE-YEM-2011-RF"
+    ],
+    "linked_claim_ids": [],
     "linked_reading_ids": [],
     "linked_visual_ids": [],
     "linked_measurement_ids": [

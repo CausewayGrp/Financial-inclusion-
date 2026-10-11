@@ -962,7 +962,7 @@
   {
     "ui_id": "UI-VIS-RPW-AVERAGE-NOTE",
     "label_en": "Corridor panel: each value is the average of quotes for its amount — not the cost of all remittances",
-    "label_ar": "لوحة الممرين: كل قيمة هي متوسط عروض الأسعار لمبلغها — وليست تكلفة جميع الحوالات",
+    "label_ar": "لوحة الممرات: كل قيمة هي متوسط عروض الأسعار لمبلغها — وليست تكلفة جميع الحوالات",
     "use_rule": "Pre-Tranche-C P4 (re-verification R5). In-frame chart text."
   },
   {
@@ -3553,8 +3553,8 @@
   },
   {
     "ui_id": "UI-VIS-PANEL-RMT-RPW",
-    "label_en": "Two of the corridors to Yemen, by amount sent: third quarter of 2025",
-    "label_ar": "ممران من الممرات إلى اليمن، بحسب المبلغ المرسل: الربع الثالث من 2025",
+    "label_en": "The three corridors to Yemen surveyed, by amount sent: third quarter of 2025",
+    "label_ar": "الممرات الثلاثة المرصودة إلى اليمن، بحسب المبلغ المرسل: الربع الثالث من 2025",
     "use_rule": "Close-out U7. Panel heading of VIS-REMITTANCE-COST (corridor averages)."
   },
   {
@@ -3578,7 +3578,7 @@
   {
     "ui_id": "UI-VIS-NOTE-SDG-10C",
     "label_en": "Reference, not a pass mark: SDG target 10.c aims, by 2030, to reduce the transaction costs of migrant remittances to less than 3% and to eliminate corridors with costs higher than 5% (UN metadata for indicator 10.c.1, last updated 27 March 2026). The 3% applies to the global average cost of sending US$200, not to one country; the 5% applies, in each corridor, to the average of the three cheapest qualifying services (the World Bank's SmaRT measure), not to the corridor averages shown here. Neither panel shows either measure, and no value here is marked as meeting or missing the target.",
-    "label_ar": "مرجع لا معيار نجاح: تهدف الغاية 10.c من أهداف التنمية المستدامة إلى خفض تكاليف معاملات تحويلات المهاجرين إلى أقل من 3% بحلول 2030، وإلغاء الممرات التي تزيد تكاليفها على 5% (البيانات الوصفية للمؤشر 10.c.1 الصادرة عن الأمم المتحدة، آخر تحديث في 27 مارس 2026). وتنطبق نسبة 3% على المتوسط العالمي لتكلفة إرسال 200 دولار أمريكي، لا على بلد بعينه؛ وتنطبق نسبة 5% في كل ممر على متوسط أرخص ثلاث خدمات مؤهلة (مقياس SmaRT لدى البنك الدولي)، لا على متوسطات الممرين المعروضة هنا. ولا تعرض أيّةُ لوحة من اللوحتين أيًّا من المقياسين، ولا تُوسَم أي قيمة هنا بأنها تحقق الغاية أو تقصر عنها.",
+    "label_ar": "مرجع لا معيار نجاح: تهدف الغاية 10.c من أهداف التنمية المستدامة إلى خفض تكاليف معاملات تحويلات المهاجرين إلى أقل من 3% بحلول 2030، وإلغاء الممرات التي تزيد تكاليفها على 5% (البيانات الوصفية للمؤشر 10.c.1 الصادرة عن الأمم المتحدة، آخر تحديث في 27 مارس 2026). وتنطبق نسبة 3% على المتوسط العالمي لتكلفة إرسال 200 دولار أمريكي، لا على بلد بعينه؛ وتنطبق نسبة 5% في كل ممر على متوسط أرخص ثلاث خدمات مؤهلة (مقياس SmaRT لدى البنك الدولي)، لا على متوسطات الممرات المعروضة هنا. ولا تعرض أيّةُ لوحة من اللوحتين أيًّا من المقياسين، ولا تُوسَم أي قيمة هنا بأنها تحقق الغاية أو تقصر عنها.",
     "use_rule": "Close-out U7. Frame note of VIS-REMITTANCE-COST (SDG 10.c as a reference line in words; FRN-09)."
   },
   {
@@ -3586,5 +3586,11 @@
     "label_en": "Open the dated events on the Banks and microfinance page",
     "label_ar": "افتح الأحداث المؤرخة في صفحة «البنوك والتمويل الأصغر»",
     "use_rule": "Close-out W3d. The /data/ pointer to the one chronology on /finance/ (#chronology)."
+  },
+  {
+    "ui_id": "UI-VIS-CAT-CORRIDOR-US",
+    "label_en": "United States",
+    "label_ar": "الولايات المتحدة الأمريكية",
+    "use_rule": "Close-out CLOSE-6E (6C-3). Chart label: corridor value 'United States'."
   }
 ]

@@ -1,0 +1,97 @@
+{
+ "stage": "CLOSE-6E",
+ "staged_master_sha256": "7e4f2cb5d20aa3374ccfcebb12489ee28c283e8cfe19735279466a615f695073",
+ "installed": [
+  "scripts/projection/controlled_inputs/visual_design_contract.json",
+  "scripts/projection/controlled_inputs/page_spec_design_intent.json"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 306 HTML files from 151 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=19847 unresolved=0 open=0 problems=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 151 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 2217 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 1,
+   "tail": [
+    "HTML=306 ERRORS=2 WARN=0",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/IFAD-CPE-YEM-2011-RF: /assets/social/evidence_IFAD-CPE-YEM-2011-RF__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/IFAD-CPE-YEM-2011-RF: /assets/social/evidence_IFAD-CPE-YEM-2011-RF__ar.png"
+   ],
+   "allowed_errors": [
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/IFAD-CPE-YEM-2011-RF: /assets/social/evidence_IFAD-CPE-YEM-2011-RF__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/IFAD-CPE-YEM-2011-RF: /assets/social/evidence_IFAD-CPE-YEM-2011-RF__ar.png"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"7e4f2cb5d20aa3374ccfcebb12489ee28c283e8cfe19735279466a615f695073\",",
+    " \"outputs\": 40,",
+    " \"differences\": [],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "7e4f2cb5d20aa3374ccfcebb12489ee28c283e8cfe19735279466a615f695073",
+ "page_specs_sha256": "11b3b7b126271a789ada1a1deeb9e9da875ae0aa40c1a58b493e66675661627a"
+}

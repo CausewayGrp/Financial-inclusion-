@@ -251,3 +251,14 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   negative controls. Checkpoint 200 -> 201 source records. Challenges: CLM-041 trade sources and 1.838; "includes Yemen
   itself"; "The Instructions are the binding text"; 6B-1(c) Arabic reason; "an account type the survey did not measure";
   POS January 2026 files not value-identical (for PR-5).
+- 2026-10-11 · v5 · PR-3 merged: PR #43 at `eac94b9c` (9/9 CI; negative controls 6/6 shards).
+- 2026-10-11 · v5 · PR-4 · CLOSE-6E (Master 6769673f -> 7e4f2cb5, 132 cells): 6C-1 to 6C-5; 6C-6 FRONTIER EXT-40 (no
+  aggregate file). Steward D9 commit `22bf5c71` for /evidence/IFAD-CPE-YEM-2011-RF/. Five new sources (UNICEF ×2, RPW US,
+  Doing Business 2020, IFAD CPE). Review: domain lens B1 (MPCA ≠ UCT), B2 (US rows computed, not published) and S2–S13
+  applied, S1 does not reproduce (SAM p.1); confirmation pass ACCEPT after S-1/S-2 (applied); Arabic lens PASS after B1
+  («شملها»), B2 (no causal «فـ») (applied); first Arabic run lost to a rate limit, re-run. Challenges: MA-008 binds no
+  record and no new route is allowed, so Doing Business sits on YSC-030; SAM prints no date; Pressure has no shop-credit
+  statement; "Eid al-Adha 2026" has no year in the source; FATF unreadable (403). run_stage first rolled back on F6-G01
+  (social images for the new route are made after it, as in CLOSE-6C), then COMMITTED with that one message allowed;
+  images, build, literal audit (19,847, 0 unresolved), inventory and utilisation (206 sources) re-run after.
+

@@ -2,24 +2,24 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "6769673fc715a1865e54c8028e5365bb6dbdde42c9b85ef640c719c8d23308db",
-  "page_specs_sha256": "26e61cb8e5960ae1006c5defd7f207e06bbbd8d81bc4db00602d094d7cc14f33",
+  "production_master_sha256": "7e4f2cb5d20aa3374ccfcebb12489ee28c283e8cfe19735279466a615f695073",
+  "page_specs_sha256": "11b3b7b126271a789ada1a1deeb9e9da875ae0aa40c1a58b493e66675661627a",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
-  "evidence_records": 115,
+  "evidence_records": 116,
   "public_claims": 60,
   "chronology_events": 31,
-  "sources": 201,
-  "public_locators": 186,
+  "sources": 206,
+  "public_locators": 191,
   "curated_resources": 28,
   "readings": 12,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 42,
   "evidence_passports": 55,
-  "search_records": 515,
-  "page_specs": 150
+  "search_records": 522,
+  "page_specs": 151
  },
  "projection_roles": {
   "rules": {
@@ -107,7 +107,7 @@
   },
   {
    "page_family": "Evidence Record",
-   "route_count": 115,
+   "route_count": 116,
    "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
    "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "depth_role": "VERIFICATION",
@@ -193,7 +193,7 @@
     "MA-005"
    ],
    "source_ids": [],
-   "source_references": 32,
+   "source_references": 41,
    "next_actions": [],
    "next_action_policy": "TASK_OR_QUESTION",
    "collection": {
@@ -273,7 +273,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 42,
+   "source_references": 51,
    "next_actions": [
     "/evidence/"
    ],
@@ -580,7 +580,12 @@
      "SRC-UN-OSESGY-2024-07-23",
      "SRC-CBY-DIL-21-2008",
      "SRC-CBY-NEWS-832",
-     "SRC-YLG-AR-2022"
+     "SRC-YLG-AR-2022",
+     "SRC-UNICEF-UCT-2024-10",
+     "SRC-UNICEF-UCT-2024-12",
+     "SRC-WB-RPW-US-YEM-2025Q3-001",
+     "SRC-WB-DB2020-YEM-001",
+     "SRC-IFAD-CPE-YEM-2011"
     ],
     "displayed_sources_without_document_type": [
      "SRC-SFD-MF-HISTORY-TOR-2012-001"
@@ -781,6 +786,7 @@
      "DS-QUAL-EVIDENCE",
      "FAS-YEM-2015",
      "FMIIP-BASELINE-2025-01",
+     "IFAD-CPE-YEM-2011-RF",
      "MF-ORIG-001+002",
      "MFI-SPINE-2015-Q4",
      "MICS-YEM-2022-23",
@@ -2311,12 +2317,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 7,
+   "source_references": 10,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 7,
+   "public_sources_listed": 10,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3019,6 +3025,37 @@
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "FMIIP-BASELINE-2025-01"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_ids": [],
+   "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/IFAD-CPE-YEM-2011-RF/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "IFAD-CPE-YEM-2011-RF",
+   "html": {
+    "en": "dist/en/evidence/IFAD-CPE-YEM-2011-RF/index.html",
+    "ar": "dist/ar/evidence/IFAD-CPE-YEM-2011-RF/index.html"
+   },
+   "title_en": "Rural credit in IFAD-financed projects in Yemen, 1993 to 2010: an evaluation by IFAD's Independent Office of Evaluation (2011)",
+   "title_ar": "الائتمان الريفي في المشروعات التي موّلها الصندوق الدولي للتنمية الزراعية (إيفاد) في اليمن، 1993 إلى 2010: تقييم أجراه مكتب التقييم المستقل التابع للصندوق (2011)",
+   "sections": 2,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "IFAD-CPE-YEM-2011-RF"
    ],
    "visual_ids": [],
    "reading_ids": [],
@@ -4268,8 +4305,8 @@
     "en": "dist/en/evidence/VIS-REMITTANCE-COST/index.html",
     "ar": "dist/ar/evidence/VIS-REMITTANCE-COST/index.html"
    },
-   "title_en": "The cost of sending money to Yemen: two corridors in 2025 Q3 and the World Bank's yearly average",
-   "title_ar": "تكلفة إرسال الأموال إلى اليمن: ممران في الربع الثالث من 2025 والمتوسط السنوي للبنك الدولي",
+   "title_en": "The cost of sending money to Yemen: three corridors in 2025 Q3 and the World Bank's yearly average",
+   "title_ar": "تكلفة إرسال الأموال إلى اليمن: ثلاثة ممرات في الربع الثالث من 2025 والمتوسط السنوي للبنك الدولي",
    "sections": 2,
    "section_rows_split_by_language": false,
    "evidence_ids": [
@@ -4281,12 +4318,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 4,
+   "source_references": 5,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 4,
+   "public_sources_listed": 5,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4548,7 +4585,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 51,
+   "source_references": 55,
    "next_actions": [],
    "next_action_policy": "DOMAIN_ANSWER",
    "collection": {
@@ -4644,6 +4681,7 @@
     "CLM-056",
     "CLM-057",
     "CLM-058",
+    "IFAD-CPE-YEM-2011-RF",
     "MF-ORIG-001+002",
     "MFI-SPINE-2015-Q4",
     "QUAL-001",
@@ -4665,7 +4703,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 47,
+   "source_references": 49,
    "next_actions": [
     "/evidence/CLM-022/"
    ],
@@ -4698,6 +4736,7 @@
     "CLM-059",
     "CLM-060",
     "CLM-062",
+    "IFAD-CPE-YEM-2011-RF",
     "VIS-FIRM-CONSTRAINTS",
     "VIS-FIRM-FINANCE-PATH",
     "VIS-FIRM-FINANCE-SEVERITY"
@@ -4716,7 +4755,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 13,
+   "source_references": 15,
    "next_actions": [
     "/evidence/CLM-005/"
    ],
@@ -4881,7 +4920,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 44,
+   "source_references": 47,
    "next_actions": [
     "/evidence/CLM-003/"
    ],
@@ -4960,7 +4999,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 49,
+   "source_references": 52,
    "next_actions": [
     "/evidence/CLM-001/"
    ],
@@ -5037,7 +5076,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 41,
+   "source_references": 50,
    "next_actions": [
     "/evidence/CLM-009/"
    ],
@@ -5080,7 +5119,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 67,
+   "source_references": 70,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -5133,9 +5172,13 @@
     "MA-009"
    ],
    "source_ids": [
+    "SRC-CCY-CASH-DURATION-2026",
+    "SRC-CCY-SAM-2024",
+    "SRC-UNICEF-UCT-2024-10",
+    "SRC-UNICEF-UCT-2024-12",
     "SRC-WB-G2PX-YEM-UCT-2024-001"
    ],
-   "source_references": 8,
+   "source_references": 10,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5448,9 +5491,10 @@
     "SRC-WB-FINDEX-LDB-2015-001",
     "SRC-WB-FMIIP-P180708",
     "SRC-WB-RPW-SA-YEM-2025Q3-001",
+    "SRC-WB-RPW-US-YEM-2025Q3-001",
     "SRC-WB-WDI-RMT-COST-YEM"
    ],
-   "source_references": 28,
+   "source_references": 29,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5682,7 +5726,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 51,
+   "source_references": 54,
    "next_actions": [
     "/evidence/CLM-011/"
    ],
@@ -5743,7 +5787,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 43,
+   "source_references": 51,
    "next_actions": [
     "/evidence/CLM-007/"
    ],
@@ -6031,7 +6075,7 @@
    }
   ],
   "evidence_lineage_states": {
-   "BOUND_EXACT": 101,
+   "BOUND_EXACT": 102,
    "COMPOSITE_OF_OBJECTS": 8,
    "FRAMING_NO_FACT": 6
   },
@@ -6107,6 +6151,7 @@
      "DS-FINDEX-PUBLIC-HISTORY",
      "FAS-YEM-2015",
      "FMIIP-BASELINE-2025-01",
+     "IFAD-CPE-YEM-2011-RF",
      "MF-ORIG-001+002",
      "MFI-SPINE-2015-Q4",
      "MICS-YEM-2022-23",
