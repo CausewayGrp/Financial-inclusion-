@@ -432,18 +432,12 @@ def data_sources(page: dict, shell: dict) -> str:
         if s.get("inventory"):
             items = "".join(f'<div><dt>{esc(x["label"])}</dt><dd dir="ltr">{esc(x["value"])}</dd></div>' for x in s["inventory"])
             parts.append(f'<section class="qa" id="s{s["order"]}"><div>{rubric(s.get("role") or "")}<h2>{esc(s["heading"])}</h2></div><dl class="inventory" data-public-inventory>{items}</dl></section>')
-        elif s["order"] == 9 and page.get("chronology"):
-            ch = page["chronology"]; CL = ch["labels"]
-            ev = []
-            for e in ch["items"]:
-                src = " · ".join(f'<a href="{x["href"]}">{esc(x["title"] or x["id"])}</a>' for x in e["sources"])
-                ev.append(f'<li class="compact" id="{esc(e["id"])}">{clock(L["period"], esc(e["period"]))}<div class="q">{esc(e["fact"])}</div>'
-                          + (f'<div class="small"><b>{esc(CL["relevance"])}</b> {esc(e["relevance"])}</div>' if e["relevance"] else "")
-                          + (f'<div class="small bnd-line"><b>{esc(CL["does_not_establish"])}</b> {esc(e["does_not_establish"])}</div>' if e["does_not_establish"] else "")
-                          + (f'<div class="small"><b>{esc(CL["sources"])}</b> {src}</div>' if src else "")
-                          + (f'<div class="small vnote">{esc(e["verification_note"])}</div>' if e.get("verification_note") else "") + "</li>")
+        elif s["order"] == 9 and page.get("chronology_pointer"):
+            # close-out W3d: the dated chronology is kept once, on /finance/ (folded under its own heading); here the
+            # governed section says so in one line and links to it
+            cp = page["chronology_pointer"]
             parts.append(f'<section class="qa" id="chronology"><div>{rubric(s.get("role") or "")}<h2>{esc(s["heading"])}</h2></div><div><div class="body">{body_paras(s["paragraphs"])}</div>'
-                         f'<details class="fold chron-fold"><summary>{esc(ch["heading"])} <span class="count">({bdi(len(ev))})</span></summary><p class="small">{esc(ch["intro"])}</p><ol class="objs chron">{"".join(ev)}</ol></details></div></section>')
+                         f'<p class="small"><a href="{cp["href"]}">{esc(cp["label"])}</a></p></div></section>')
             index.append(("chronology", s["heading"]))
             continue
         else:

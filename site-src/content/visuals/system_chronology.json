@@ -505,6 +505,73 @@
     ]
   },
   {
+    "event_id": "YSC-025",
+    "period_en": "14 September 2023",
+    "event_class": "REGIONAL_PAYMENT_CONNECTION",
+    "fact_en": "CBY-Aden announced that it had joined the Buna regional payment platform, describing itself as the seventh Arab central bank to join.",
+    "fact_ar": "أعلن البنك المركزي اليمني – عدن انضمامه إلى منصة بُنى الإقليمية للمدفوعات، مشيرًا إلى أنه سابع بنك مركزي عربي ينضم إليها.",
+    "source_ids": "SRC-CBY-NEWS-579",
+    "source_scope": "CBY-Aden news release on its connection to a regional platform; no transaction data.",
+    "system_implication_en": "A cross-border payment rail became available to the central bank in Aden; who uses it, and for which transfers, is not reported.",
+    "system_implication_ar": "أصبح مسار دفع عابر للحدود متاحًا للبنك المركزي في عدن؛ ولم يُفصَح عمّن يستخدمه ولا عن التحويلات التي تمر عبره.",
+    "fi_relevance_en": "Cross-border rails matter for remittance channels and their cost, but a connection is not a channel that households use.",
+    "fi_relevance_ar": "لمسارات الدفع العابرة للحدود أهمية بالنسبة إلى قنوات الحوالات وتكلفتها، لكن الربط ليس قناة تستخدمها الأسر.",
+    "does_not_establish_en": "Joining the platform does not establish transactions through it, lower remittance costs or wider access.",
+    "does_not_establish_ar": "لا يثبت الانضمام إلى المنصة وجود معاملات عبرها ولا انخفاض تكلفة الحوالات ولا اتساع الوصول.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/payments | /remittances | /reforms",
+    "interpretation_note": "Connection is not operation, and operation is not use.",
+    "period_ar": "14 سبتمبر 2023",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "14 September 2023",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-NEWS-579",
+        "loc": "cby-ye.com/news/579, dated 14 September 2023; read 10 October 2026"
+      }
+    ]
+  },
+  {
+    "event_id": "YSC-026",
+    "period_en": "7 and 28 March 2024",
+    "event_class": "NATIONAL_SWITCH_PHASE",
+    "fact_en": "CBY-Aden launched the first phase of the national switch on 7 March 2024, connecting seven banks, and said official operation would follow once all banks were connected; on 28 March 2024 its Board of Directors reviewed the first phase (ATMs, POS and e-wallets) and the launch of the unified money-transfer network.",
+    "fact_ar": "دشّن البنك المركزي اليمني – عدن في 7 مارس 2024 المرحلة الأولى من العمل بنظام المقسم الوطني بربط سبعة بنوك، وذكر أن التشغيل الرسمي سيبدأ بعد ربط جميع البنوك؛ وفي 28 مارس 2024 استعرض مجلس إدارته المرحلة الأولى (أجهزة الصراف الآلي ونقاط البيع والمحافظ الإلكترونية) وإطلاق الشبكة الموحدة للحوالات.",
+    "source_ids": "SRC-CBY-NEWS-645 | SRC-CBY-NEWS-656",
+    "source_scope": "CBY-Aden news releases on a launch and a Board review; no transaction data.",
+    "system_implication_en": "As CBY-Aden reported it, the first phase connected part of the banking system; the bank named the connection of all banks as the condition for official operation.",
+    "system_implication_ar": "بحسب ما أفاد به البنك المركزي اليمني – عدن، ربطت المرحلة الأولى جزءًا من الجهاز المصرفي؛ وجعل البنك ربط جميع البنوك شرطًا للتشغيل الرسمي.",
+    "fi_relevance_en": "An interoperable switch is a precondition for card, POS and e-wallet payments between different providers, not a measure of their use.",
+    "fi_relevance_ar": "المقسم القابل للتشغيل البيني شرط مسبق لمدفوعات البطاقات ونقاط البيع والمحافظ الإلكترونية بين مقدمي الخدمات المختلفين، وليس مقياسًا لاستخدامها.",
+    "does_not_establish_en": "The launch does not establish that all banks connected, that the switch operates officially, or that transactions moved through it.",
+    "does_not_establish_ar": "لا يثبت التدشين أن جميع البنوك ارتبطت، ولا أن المقسم يعمل رسميًا، ولا أن معاملات مرّت عبره.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/payments | /reforms",
+    "interpretation_note": "Launch is not operation; a first phase is not the system.",
+    "period_ar": "7 و28 مارس 2024",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "7 March 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-NEWS-645",
+        "loc": "cby-ye.com/news/645 (posted 9 March 2024): launch on Thursday 7 March, first phase connecting seven banks; read 10 October 2026"
+      },
+      {
+        "t": "28 March 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-NEWS-656",
+        "loc": "cby-ye.com/news/656, Board meeting 2 of 2024, 28 March 2024; read 10 October 2026"
+      }
+    ]
+  },
+  {
     "event_id": "YSC-012",
     "period_en": "March–June 2024",
     "event_class": "REGULATORY_CURRENCY_FRAGMENTATION",
@@ -610,6 +677,62 @@
         "s": "READ",
         "src": "SRC-WB-G2PX-YEM-UCT-2024-001",
         "loc": "worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen, event description"
+      }
+    ]
+  },
+  {
+    "event_id": "YSC-027",
+    "period_en": "30 May to 6 August 2024",
+    "event_class": "BANKING_MEASURES_AND_CANCELLATION",
+    "fact_en": "On 30 May 2024 CBY-Aden's Governor's Decision No. 20 of 2024 ordered a halt to dealings with a number of banks from 2 June 2024, and directed those banks to keep serving the public and meeting their obligations to customers until further notice. On 23 July 2024 the Office of the UN Special Envoy for Yemen announced that the Government of Yemen and Ansar Allah had agreed to cancel the recent decisions and procedures against banks by both sides and to refrain in future from any similar decisions or procedures; on 6 August 2024 CBY-Aden posted that it had cancelled the recent decisions concerning banks, in implementation of those commitments.",
+    "fact_ar": "في 30 مايو 2024 قضى قرار محافظ البنك المركزي اليمني – عدن رقم (20) لسنة 2024 بإيقاف التعامل مع عدد من البنوك والمصارف اعتبارًا من 2 يونيو 2024، وألزم تلك البنوك بالاستمرار في تقديم خدماتها للجمهور والوفاء بالتزاماتها تجاه عملائها حتى إشعار آخر. وفي 23 يوليو 2024 أعلن مكتب المبعوث الأممي الخاص إلى اليمن أن الحكومة اليمنية وجماعة أنصار الله اتفقا على إلغاء القرارات والإجراءات الأخيرة ضد البنوك من الجانبين والتوقف مستقبلًا عن أي قرارات أو إجراءات مماثلة؛ وفي 6 أغسطس 2024 نشر البنك المركزي اليمني – عدن أنه ألغى القرارات الأخيرة بحق البنوك تنفيذًا لتلك الالتزامات.",
+    "source_ids": "SRC-CBY-DEC-20-2024 | SRC-UN-OSESGY-2024-07-23 | SRC-CBY-NEWS-724",
+    "source_scope": "A CBY-Aden decision and notice, and the statement of the Office of the UN Special Envoy; the parties' own measures are named only as the statement names them.",
+    "system_implication_en": "Under an agreement the Office of the UN Special Envoy announced, both sides committed to cancel the recent decisions and procedures against banks and to refrain in future from any similar decisions or procedures; CBY-Aden posted that it had cancelled the recent decisions concerning banks. The sources held do not report whether or when the other side's measures were cancelled.",
+    "system_implication_ar": "بموجب اتفاق أعلنه مكتب المبعوث الأممي الخاص إلى اليمن، التزم الجانبان بإلغاء القرارات والإجراءات الأخيرة ضد البنوك وبالتوقف مستقبلًا عن أي قرارات أو إجراءات مماثلة؛ ونشر البنك المركزي اليمني – عدن أنه ألغى القرارات الأخيرة بحق البنوك. ولا تُبلغ المصادر التي تضمها قاعدة الأدلة عمّا إذا كانت إجراءات الجانب الآخر قد أُلغيت ولا عن موعد ذلك.",
+    "fi_relevance_en": "Measures on banks, and their cancellation, bear on whether customers in either area can use banks' services; the sources do not report effects on customers.",
+    "fi_relevance_ar": "تتصل الإجراءات المتخذة بحق البنوك وإلغاؤها بقدرة العملاء في أيٍّ من المنطقتين على استخدام خدمات البنوك؛ ولا تُبلغ المصادر عن آثارها على العملاء.",
+    "does_not_establish_en": "The decision, the agreement and the cancellation notice do not establish whether each side cancelled its measures, which ones or when, what each measure required in practice, which banks or customers were affected, or any later effect on access to services.",
+    "does_not_establish_ar": "لا يثبت القرار ولا الاتفاق ولا إشعار الإلغاء ما إذا كان كل جانب قد ألغى إجراءاته، ولا أيّها ولا موعد إلغائها، ولا ما اقتضاه كل إجراء عمليًا، ولا البنوك أو العملاء الذين تأثروا، ولا أي أثر لاحق على الوصول إلى الخدمات.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/finance | /providers | /access | /reforms",
+    "interpretation_note": "Neutral wording: the event follows the UN statement's own words for the parties and their measures. The parties' text is Arabic; the UN's English is an informal translation and adds 'all', which neither edition of this event carries.",
+    "period_ar": "من 30 مايو إلى 6 أغسطس 2024",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "30 May 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-20-2024",
+        "loc": "cby-ye.com/files/665878ad66e09.pdf p.1, ref. 294/CBY/2024, dated 30/5/2024; read 10 October 2026"
+      },
+      {
+        "t": "2 June 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-20-2024",
+        "loc": "cby-ye.com/files/665878ad66e09.pdf p.2, Art. 3: in force from 2024/6/2; read 10 October 2026"
+      },
+      {
+        "t": "23 July 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-UN-OSESGY-2024-07-23",
+        "loc": "osesgy.unmissions.org statement dated 23 July 2024, item 1; read 10 October 2026"
+      },
+      {
+        "t": "6 August 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-NEWS-724",
+        "loc": "cby-ye.com/news/724, clarification notice of 6 August 2024; read 10 October 2026"
+      },
+      {
+        "t": "20",
+        "k": "v",
+        "s": "TRIVIAL"
       }
     ]
   },
@@ -832,6 +955,55 @@
     ]
   },
   {
+    "event_id": "YSC-028",
+    "period_en": "20 July 2025",
+    "event_class": "DEPOSIT_INSURANCE_INSTITUTION",
+    "fact_en": "Governor's Decision No. 6 of 2025 provided for relocating the head office of the Deposit Insurance Institution to Aden, in force from issue. The law on the Institution is Law No. 21 of 2008 in the copy CBY-Aden hosts; the decision's recital cites Law No. 40 of 2008.",
+    "fact_ar": "نصّ قرار المحافظ رقم (6) لسنة 2025 على نقل المركز الرئيسي لمؤسسة ضمان الودائع إلى عدن، ويُعمل به من تاريخ صدوره. والقانون الخاص بالمؤسسة هو القانون رقم (21) لسنة 2008 وفق النسخة التي يستضيفها البنك المركزي اليمني – عدن؛ وتشير ديباجة القرار إلى القانون رقم (40) لسنة 2008.",
+    "source_ids": "SRC-CBY-DEC-06-2025 | SRC-CBY-DIL-21-2008",
+    "source_scope": "A CBY-Aden decision and the law copy it hosts; the two cite different law numbers.",
+    "system_implication_en": "The decision provides for the head office to move; it does not show that the move was completed, and a relocation is not the start of deposit cover.",
+    "system_implication_ar": "ينصّ القرار على نقل المركز الرئيسي، ولا يُظهر أن النقل اكتمل؛ والنقل ليس بدءًا لتغطية الودائع.",
+    "fi_relevance_en": "Deposit insurance matters for trust in deposits, but no source here reports cover, premiums or payouts.",
+    "fi_relevance_ar": "لضمان الودائع أهمية في الثقة بالودائع، لكن لا يُبلغ أي مصدر هنا عن التغطية أو الأقساط أو التعويضات.",
+    "does_not_establish_en": "The decision does not establish that deposit cover operates, which deposits are covered or that depositors are protected.",
+    "does_not_establish_ar": "لا يثبت القرار أن تغطية الودائع تعمل، ولا الودائع المشمولة، ولا أن المودعين محميون.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/finance | /providers | /reforms",
+    "interpretation_note": "Relocation is not establishment, and establishment is not operating cover.",
+    "period_ar": "20 يوليو 2025",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "20 July 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-06-2025",
+        "loc": "cby-ye.com/files/687c9970b82d9.pdf p.1, ref. 376/CBY/2025, signed 20 July 2025; read 10 October 2026"
+      },
+      {
+        "t": "6",
+        "k": "v",
+        "s": "TRIVIAL"
+      },
+      {
+        "t": "21",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-DIL-21-2008",
+        "loc": "cby-ye.com/files/62c2edbaad8eb.pdf p.1, «قانون رقم (٢١) لسنة ٢٠٠٨م»; read 10 October 2026"
+      },
+      {
+        "t": "40",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-06-2025",
+        "loc": "cby-ye.com/files/687c9970b82d9.pdf p.1, recital «القانون رقم (40) لسنة 2008»; read 10 October 2026"
+      }
+    ]
+  },
+  {
     "event_id": "YSC-016",
     "period_en": "Mid-July–early August 2025",
     "event_class": "FX_STABILIZATION_EPISODE",
@@ -872,6 +1044,69 @@
         "s": "READ",
         "src": "SRC-IMF-AIV-2025-STAFF-001",
         "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), printed p.7 (PDF p.12) para 8; DSA printed p.9 (PDF p.68)"
+      }
+    ]
+  },
+  {
+    "event_id": "YSC-029",
+    "period_en": "23 July to 6 August 2025",
+    "event_class": "EXCHANGE_SECTOR_ENFORCEMENT",
+    "fact_en": "Between 23 July and 6 August 2025 CBY-Aden posted in its news 11 Governor's decisions (Nos. 7 to 17 of 2025) covering 51 licences: 44 suspensions and 7 withdrawals of exchange companies and establishments and their branches, including one remittance agent, on the basis of field-inspection reports of the Banking Supervision Sector.",
+    "fact_ar": "في الفترة من 23 يوليو إلى 6 أغسطس 2025 نشر البنك المركزي اليمني – عدن في أخباره 11 قرارًا للمحافظ (من رقم (7) إلى رقم (17) لسنة 2025) شملت 51 ترخيصًا: إيقاف 44 ترخيصًا وسحب 7 تراخيص لشركات ومنشآت صرافة وفروعها، من بينها وكيل حوالة واحد، استنادًا إلى تقارير النزول الميداني لقطاع الرقابة على البنوك.",
+    "source_ids": "SRC-CBY-ENF-2025-JUL-AUG",
+    "source_scope": "CBY-Aden decisions as posted in its news; counts only, no names.",
+    "system_implication_en": "The decisions changed the status of 51 exchange-sector licences; later reinstatements, if any, are not covered here.",
+    "system_implication_ar": "غيّرت القرارات حالة 51 ترخيصًا في قطاع الصرافة؛ ولا يغطي هذا الحدث أي إعادة لاحقة للتراخيص إن وُجدت.",
+    "fi_relevance_en": "Exchange companies handle transfers and remittances, so licence actions bear on where people can send or collect money; the decisions report licences, not customers or volumes.",
+    "fi_relevance_ar": "تتولى شركات الصرافة الحوالات والتحويلات، فتتصل إجراءات التراخيص بالأماكن التي يستطيع الناس فيها إرسال المال أو استلامه؛ والقرارات تُبلغ عن تراخيص لا عن عملاء أو أحجام.",
+    "does_not_establish_en": "The counts do not establish which areas lost service, for how long, how many customers were affected, or any effect on transfer costs; names are deliberately not recorded here.",
+    "does_not_establish_ar": "لا تثبت هذه الأعداد المناطق التي فقدت الخدمة ولا مدة ذلك ولا عدد العملاء المتأثرين ولا أي أثر على تكلفة التحويلات؛ ولا تُسجَّل الأسماء هنا، وذلك عن قصد.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/providers | /remittances | /access | /reforms",
+    "interpretation_note": "Licence status is not service availability; counts only.",
+    "period_ar": "من 23 يوليو إلى 6 أغسطس 2025",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "6 August 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-ENF-2025-JUL-AUG",
+        "loc": "cby-ye.com/news/848, posting date of the last of the eleven decisions; read 10 October 2026"
+      },
+      {
+        "t": "11",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-ENF-2025-JUL-AUG",
+        "loc": "cby-ye.com/news/834 to /news/848: Governor's Decisions Nos. 7 to 17 of 2025; read 10 October 2026"
+      },
+      {
+        "t": "51",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-ENF-2025-JUL-AUG",
+        "loc": "sum of the licences named in Decisions Nos. 7 to 17 of 2025 (44 + 7); read 10 October 2026"
+      },
+      {
+        "t": "44",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-ENF-2025-JUL-AUG",
+        "loc": "suspensions: Decisions 7 (13), 8 (5), 9 (10), 10 (2), 11 (7, one a remittance agent), 12 (2), 15 (4), 17 (1); read 10 October 2026"
+      },
+      {
+        "t": "7",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-ENF-2025-JUL-AUG",
+        "loc": "withdrawals: Decisions 13 (4 company branches), 14 (1), 16 (2); read 10 October 2026"
+      },
+      {
+        "t": "17",
+        "k": "v",
+        "s": "TRIVIAL"
       }
     ]
   },
@@ -1120,6 +1355,41 @@
         "s": "READ",
         "src": "SRC-IMF-YEM-SMP-2026",
         "loc": "IMF press release 'IMF Reaches Staff-Level Agreement with Yemen on a New Staff-Monitored Program', published 16 July 2026 (www.imf.org/en/news/articles/2026/07/16/pr26249-yemen-imf-reaches-sla-on-new-staff-monitored-program): 'The proposed 18-month SMP aims to ...'; 'This staff-level agreement is subject to approval by IMF Management.'; '... the mission will not result in a Board discussion ...'; mission in Amman, 5-16 July 2026; read 10 October 2026 (WebFetch; curl refused)"
+      }
+    ]
+  },
+  {
+    "event_id": "YSC-030",
+    "period_en": "5 August 2026",
+    "event_class": "CREDIT_INFORMATION_INFRASTRUCTURE",
+    "fact_en": "CBY-Aden launched a defaulters registry system: a digital platform for exchanging data on defaulting customers among the banks operating in Yemen, whose success, it said, depends on all banks supplying accurate data.",
+    "fact_ar": "دشّن البنك المركزي اليمني – عدن نظام سجل المتعثرين: منصة رقمية لتبادل البيانات عن العملاء المتعثرين بين البنوك العاملة في اليمن، وذكر أن نجاحه مرهون بتزويد جميع البنوك له ببيانات دقيقة.",
+    "source_ids": "SRC-CBY-NEWS-963 | SRC-CBY-CRI-149 | SRC-CBY-CRI-150",
+    "source_scope": "CBY-Aden news release on a launch, beside the credit-information rules the bank publishes.",
+    "system_implication_en": "The registry adds a platform to the credit-information rules CBY-Aden publishes (exposure reporting on Form No. 6 and an enquiry before lending).",
+    "system_implication_ar": "يضيف السجل منصة إلى قواعد معلومات الائتمان التي ينشرها البنك المركزي اليمني – عدن (الإبلاغ عن التعرضات الائتمانية على الاستمارة رقم (6) والاستعلام قبل منح الائتمان).",
+    "fi_relevance_en": "A defaulters registry holds data on defaulting customers; any effect on access to credit depends on the data being complete and on lenders using them.",
+    "fi_relevance_ar": "يضم سجل المتعثرين بيانات العملاء المتعثرين؛ وأي أثر على الوصول إلى الائتمان مشروط بأن تكون البيانات كاملة وأن يستخدمها المقرضون.",
+    "does_not_establish_en": "The launch does not establish coverage, data completeness, lender use or any effect on access to credit.",
+    "does_not_establish_ar": "لا يثبت التدشين التغطية ولا اكتمال البيانات ولا استخدام المقرضين لها ولا أي أثر على الوصول إلى الائتمان.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/firms | /finance | /reforms",
+    "interpretation_note": "Launch is not coverage.",
+    "period_ar": "5 أغسطس 2026",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "5 August 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-NEWS-963",
+        "loc": "cby-ye.com/news/963, dated 5 August 2026; read 10 October 2026"
+      },
+      {
+        "t": "6",
+        "k": "v",
+        "s": "TRIVIAL"
       }
     ]
   },

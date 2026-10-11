@@ -2575,8 +2575,8 @@
   },
   {
     "ui_id": "UI-DATA-GROUP-REGULATORY-SCOPE",
-    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no law as a source document, and this group holds no instrument issued in Sana'a.",
-    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون بوصفه وثيقة مصدرية، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء.",
+    "label_en": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued or posted by the Central Bank of Yemen – Aden; its undated pages on credit-risk information cite older instructions, the earliest from 1991. This group holds no law and no instrument issued in Sana'a; the one law the evidence base holds, on the Bank Deposit Insurance Institution, is listed below with the other sources.",
+    "label_ar": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا أو نشرها البنك المركزي اليمني – عدن؛ وتشير صفحتاه غير المؤرختين عن معلومات مخاطر الائتمان إلى تعليمات أقدم، أولها من عام 1991. ولا تضم هذه المجموعة أي قانون ولا أي وثيقة صادرة في صنعاء؛ أما القانون الوحيد الذي تضمه قاعدة الأدلة، وهو قانون مؤسسة ضمان الودائع المصرفية، فمدرج أدناه مع المصادر الأخرى.",
     "use_rule": "RC-4 (Part B B5). /data/ the regulatory group's one scope line."
   },
   {
@@ -3580,5 +3580,11 @@
     "label_en": "Reference, not a pass mark: SDG target 10.c aims, by 2030, to reduce the transaction costs of migrant remittances to less than 3% and to eliminate corridors with costs higher than 5% (UN metadata for indicator 10.c.1, last updated 27 March 2026). The 3% applies to the global average cost of sending US$200, not to one country; the 5% applies, in each corridor, to the average of the three cheapest qualifying services (the World Bank's SmaRT measure), not to the corridor averages shown here. Neither panel shows either measure, and no value here is marked as meeting or missing the target.",
     "label_ar": "مرجع لا معيار نجاح: تهدف الغاية 10.c من أهداف التنمية المستدامة إلى خفض تكاليف معاملات تحويلات المهاجرين إلى أقل من 3% بحلول 2030، وإلغاء الممرات التي تزيد تكاليفها على 5% (البيانات الوصفية للمؤشر 10.c.1 الصادرة عن الأمم المتحدة، آخر تحديث في 27 مارس 2026). وتنطبق نسبة 3% على المتوسط العالمي لتكلفة إرسال 200 دولار أمريكي، لا على بلد بعينه؛ وتنطبق نسبة 5% في كل ممر على متوسط أرخص ثلاث خدمات مؤهلة (مقياس SmaRT لدى البنك الدولي)، لا على متوسطات الممرين المعروضة هنا. ولا تعرض أيّةُ لوحة من اللوحتين أيًّا من المقياسين، ولا تُوسَم أي قيمة هنا بأنها تحقق الغاية أو تقصر عنها.",
     "use_rule": "Close-out U7. Frame note of VIS-REMITTANCE-COST (SDG 10.c as a reference line in words; FRN-09)."
+  },
+  {
+    "ui_id": "UI-DATA-CHRONOLOGY-OPEN",
+    "label_en": "Open the dated events on the Banks and microfinance page",
+    "label_ar": "افتح الأحداث المؤرخة في صفحة «البنوك والتمويل الأصغر»",
+    "use_rule": "Close-out W3d. The /data/ pointer to the one chronology on /finance/ (#chronology)."
   }
 ]

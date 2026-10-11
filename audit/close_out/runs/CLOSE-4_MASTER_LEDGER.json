@@ -1,0 +1,4933 @@
+{
+ "transaction": "CLOSE-4",
+ "summary": "W3d: 23 sources (CBY-Aden instruments, decisions and news; the UN Special Envoy's statement of 23 July 2024; the deposit-insurance law copy, labelled Law, with the /data/ regulatory scope line saying where it is); 12 instruments in 31; 6 dated events in 14; the /data/ chronology becomes a pointer to /finance/; CWR-006 on licence conversion, binding the two Board decisions it cites; passport locators.",
+ "self_counts": {
+  "site_pages": 144,
+  "bilingual_sections": 237,
+  "questions": 11,
+  "evidence_objects": 110,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 29,
+  "sources": 199,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 27
+ },
+ "input_master_sha256": "c447171006a8d1be4e684c36e90f29ea5db9295c649bf747083ec81914d0ae13",
+ "output_master_sha256": "c24791d6fd22b127f9f5109f93a91b7d50b942303799993d0fb3ab5510100852",
+ "cells_written": 545,
+ "changes": [
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 1,
+   "field": "SRC-CBY-DEC-07-2026.source_id",
+   "old": null,
+   "new": "SRC-CBY-DEC-07-2026"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 2,
+   "field": "SRC-CBY-DEC-07-2026.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/69dcac86e3520.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 4,
+   "field": "SRC-CBY-DEC-07-2026.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 5,
+   "field": "SRC-CBY-DEC-07-2026.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 6,
+   "field": "SRC-CBY-DEC-07-2026.display_title",
+   "old": null,
+   "new": "Governor's Decision No. 7 of 2026 on interest rates on deposits and credit at banks (9 April 2026; ref. 220/CBY/2026)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 12,
+   "field": "SRC-CBY-DEC-07-2026.display_title_ar",
+   "old": null,
+   "new": "قرار محافظ البنك المركزي اليمني رقم (7) لسنة 2026 بشأن أسعار الفائدة على الودائع والائتمان لدى البنوك (9 أبريل 2026؛ المرجع 220/CBY/2026)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 7,
+   "field": "SRC-CBY-DEC-07-2026.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 25,
+   "field": "SRC-CBY-DEC-07-2026.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 11,
+   "field": "SRC-CBY-DEC-07-2026.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 19,
+   "field": "SRC-CBY-DEC-07-2026.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 22,
+   "field": "SRC-CBY-DEC-07-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 26,
+   "field": "SRC-CBY-DEC-07-2026.document_label",
+   "old": null,
+   "new": "Regulatory decision"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 27,
+   "field": "SRC-CBY-DEC-07-2026.document_label_ar",
+   "old": null,
+   "new": "قرار تنظيمي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 28,
+   "field": "SRC-CBY-DEC-07-2026.document_date",
+   "old": null,
+   "new": "2026-04-09"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 1,
+   "field": "SRC-CBY-EKYC-2023.source_id",
+   "old": null,
+   "new": "SRC-CBY-EKYC-2023"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 2,
+   "field": "SRC-CBY-EKYC-2023.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/65806fe2b3757.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 4,
+   "field": "SRC-CBY-EKYC-2023.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 5,
+   "field": "SRC-CBY-EKYC-2023.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 6,
+   "field": "SRC-CBY-EKYC-2023.display_title",
+   "old": null,
+   "new": "Instructions regulating electronic know-your-customer procedures (9 November 2023; ref. 840/CBY/2023)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 12,
+   "field": "SRC-CBY-EKYC-2023.display_title_ar",
+   "old": null,
+   "new": "تعليمات تنظيم إجراءات اعرف عميلك إلكترونيًا (9 نوفمبر 2023؛ المرجع 840/CBY/2023)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 7,
+   "field": "SRC-CBY-EKYC-2023.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 25,
+   "field": "SRC-CBY-EKYC-2023.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 11,
+   "field": "SRC-CBY-EKYC-2023.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 19,
+   "field": "SRC-CBY-EKYC-2023.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 22,
+   "field": "SRC-CBY-EKYC-2023.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 26,
+   "field": "SRC-CBY-EKYC-2023.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 27,
+   "field": "SRC-CBY-EKYC-2023.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 28,
+   "field": "SRC-CBY-EKYC-2023.document_date",
+   "old": null,
+   "new": "2023-11-09"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 1,
+   "field": "SRC-CBY-CIRC-02-2025.source_id",
+   "old": null,
+   "new": "SRC-CBY-CIRC-02-2025"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 2,
+   "field": "SRC-CBY-CIRC-02-2025.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/68dcd80cd12b9.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 4,
+   "field": "SRC-CBY-CIRC-02-2025.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 5,
+   "field": "SRC-CBY-CIRC-02-2025.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 6,
+   "field": "SRC-CBY-CIRC-02-2025.display_title",
+   "old": null,
+   "new": "Periodic Circular No. 2 of 2025 to banks and exchange companies and establishments, supplementing the anti-money laundering and counter-terrorist financing circulars (24 September 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 12,
+   "field": "SRC-CBY-CIRC-02-2025.display_title_ar",
+   "old": null,
+   "new": "منشور دوري رقم (2) لسنة 2025 إلى البنوك وشركات ومنشآت الصرافة، ملحق بمنشورات مكافحة غسل الأموال وتمويل الإرهاب (24 سبتمبر 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 7,
+   "field": "SRC-CBY-CIRC-02-2025.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 25,
+   "field": "SRC-CBY-CIRC-02-2025.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 11,
+   "field": "SRC-CBY-CIRC-02-2025.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 19,
+   "field": "SRC-CBY-CIRC-02-2025.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 22,
+   "field": "SRC-CBY-CIRC-02-2025.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 26,
+   "field": "SRC-CBY-CIRC-02-2025.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 27,
+   "field": "SRC-CBY-CIRC-02-2025.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 28,
+   "field": "SRC-CBY-CIRC-02-2025.document_date",
+   "old": null,
+   "new": "2025-09-24"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 1,
+   "field": "SRC-CBY-CIRC-03-2025.source_id",
+   "old": null,
+   "new": "SRC-CBY-CIRC-03-2025"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 2,
+   "field": "SRC-CBY-CIRC-03-2025.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/690e0e07d4981.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 4,
+   "field": "SRC-CBY-CIRC-03-2025.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 5,
+   "field": "SRC-CBY-CIRC-03-2025.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 6,
+   "field": "SRC-CBY-CIRC-03-2025.display_title",
+   "old": null,
+   "new": "Periodic Circular No. 3 of 2025 on risk-management instructions for banks (2 November 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 12,
+   "field": "SRC-CBY-CIRC-03-2025.display_title_ar",
+   "old": null,
+   "new": "منشور دوري رقم (3) لسنة 2025 بشأن تعليمات إدارة المخاطر في البنوك (2 نوفمبر 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 7,
+   "field": "SRC-CBY-CIRC-03-2025.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 25,
+   "field": "SRC-CBY-CIRC-03-2025.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 11,
+   "field": "SRC-CBY-CIRC-03-2025.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 19,
+   "field": "SRC-CBY-CIRC-03-2025.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 22,
+   "field": "SRC-CBY-CIRC-03-2025.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 26,
+   "field": "SRC-CBY-CIRC-03-2025.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 27,
+   "field": "SRC-CBY-CIRC-03-2025.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 28,
+   "field": "SRC-CBY-CIRC-03-2025.document_date",
+   "old": null,
+   "new": "2025-11-02"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 1,
+   "field": "SRC-CBY-CIRC-04-2025.source_id",
+   "old": null,
+   "new": "SRC-CBY-CIRC-04-2025"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 2,
+   "field": "SRC-CBY-CIRC-04-2025.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/690e0e39ce5d9.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 4,
+   "field": "SRC-CBY-CIRC-04-2025.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 5,
+   "field": "SRC-CBY-CIRC-04-2025.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 6,
+   "field": "SRC-CBY-CIRC-04-2025.display_title",
+   "old": null,
+   "new": "Periodic Circular No. 4 of 2025: instructions on applying enhanced due diligence procedures and screening against international sanctions lists (2 November 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 12,
+   "field": "SRC-CBY-CIRC-04-2025.display_title_ar",
+   "old": null,
+   "new": "منشور دوري رقم (4) لسنة 2025: تعليمات تطبيق إجراءات العناية الواجبة المعززة والتحقق من قوائم العقوبات الدولية (2 نوفمبر 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 7,
+   "field": "SRC-CBY-CIRC-04-2025.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 25,
+   "field": "SRC-CBY-CIRC-04-2025.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 11,
+   "field": "SRC-CBY-CIRC-04-2025.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 19,
+   "field": "SRC-CBY-CIRC-04-2025.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 22,
+   "field": "SRC-CBY-CIRC-04-2025.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 26,
+   "field": "SRC-CBY-CIRC-04-2025.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 27,
+   "field": "SRC-CBY-CIRC-04-2025.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 28,
+   "field": "SRC-CBY-CIRC-04-2025.document_date",
+   "old": null,
+   "new": "2025-11-02"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 1,
+   "field": "SRC-CBY-CIRC-01-2026.source_id",
+   "old": null,
+   "new": "SRC-CBY-CIRC-01-2026"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 2,
+   "field": "SRC-CBY-CIRC-01-2026.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/6aaa38b226baa.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 4,
+   "field": "SRC-CBY-CIRC-01-2026.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 5,
+   "field": "SRC-CBY-CIRC-01-2026.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 6,
+   "field": "SRC-CBY-CIRC-01-2026.display_title",
+   "old": null,
+   "new": "Circular No. 1 of 2026 prohibiting dealings in virtual assets or cryptocurrencies and with their service providers (15 September 2026; ref. CBY/L/258/2026)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 12,
+   "field": "SRC-CBY-CIRC-01-2026.display_title_ar",
+   "old": null,
+   "new": "منشور رقم (1) لسنة 2026 بشأن حظر التعامل بالأصول الافتراضية أو العملات المشفرة ومع مقدمي خدماتها (15 سبتمبر 2026؛ المرجع CBY/L/258/2026)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 7,
+   "field": "SRC-CBY-CIRC-01-2026.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 25,
+   "field": "SRC-CBY-CIRC-01-2026.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 11,
+   "field": "SRC-CBY-CIRC-01-2026.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 19,
+   "field": "SRC-CBY-CIRC-01-2026.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 22,
+   "field": "SRC-CBY-CIRC-01-2026.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 26,
+   "field": "SRC-CBY-CIRC-01-2026.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 27,
+   "field": "SRC-CBY-CIRC-01-2026.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 28,
+   "field": "SRC-CBY-CIRC-01-2026.document_date",
+   "old": null,
+   "new": "2026-09-15"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 1,
+   "field": "SRC-CBY-DEC-19-2024.source_id",
+   "old": null,
+   "new": "SRC-CBY-DEC-19-2024"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 2,
+   "field": "SRC-CBY-DEC-19-2024.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/6653499a7181b.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 4,
+   "field": "SRC-CBY-DEC-19-2024.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 5,
+   "field": "SRC-CBY-DEC-19-2024.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 6,
+   "field": "SRC-CBY-DEC-19-2024.display_title",
+   "old": null,
+   "new": "Governor's Decision No. 19 of 2024 regulating external money-transfer activity through international money-transfer companies (23 May 2024; ref. 289/CBY/2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 12,
+   "field": "SRC-CBY-DEC-19-2024.display_title_ar",
+   "old": null,
+   "new": "قرار محافظ البنك المركزي رقم (19) لسنة 2024 بشأن تنظيم مزاولة نشاط التحويلات الخارجية عبر شركات الحوالات الدولية (23 مايو 2024؛ المرجع 289/CBY/2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 7,
+   "field": "SRC-CBY-DEC-19-2024.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 25,
+   "field": "SRC-CBY-DEC-19-2024.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 11,
+   "field": "SRC-CBY-DEC-19-2024.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 19,
+   "field": "SRC-CBY-DEC-19-2024.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 22,
+   "field": "SRC-CBY-DEC-19-2024.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 26,
+   "field": "SRC-CBY-DEC-19-2024.document_label",
+   "old": null,
+   "new": "Regulatory decision"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 27,
+   "field": "SRC-CBY-DEC-19-2024.document_label_ar",
+   "old": null,
+   "new": "قرار تنظيمي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 28,
+   "field": "SRC-CBY-DEC-19-2024.document_date",
+   "old": null,
+   "new": "2024-05-23"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 1,
+   "field": "SRC-CBY-CIRC-01-2024.source_id",
+   "old": null,
+   "new": "SRC-CBY-CIRC-01-2024"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 2,
+   "field": "SRC-CBY-CIRC-01-2024.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/663c8ad5cafdc.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 4,
+   "field": "SRC-CBY-CIRC-01-2024.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 5,
+   "field": "SRC-CBY-CIRC-01-2024.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 6,
+   "field": "SRC-CBY-CIRC-01-2024.display_title",
+   "old": null,
+   "new": "Periodic Circular No. 1 of 2024 on the instructions and controls for shipping surplus foreign-currency banknotes abroad (29 April 2024; ref. 235/CBY/2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 12,
+   "field": "SRC-CBY-CIRC-01-2024.display_title_ar",
+   "old": null,
+   "new": "منشور دوري رقم (1) لسنة 2024 بشأن التعليمات والضوابط المنظمة لعمليات ترحيل فوائض أوراق النقد الأجنبي إلى الخارج (29 أبريل 2024؛ المرجع 235/CBY/2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 7,
+   "field": "SRC-CBY-CIRC-01-2024.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 25,
+   "field": "SRC-CBY-CIRC-01-2024.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 11,
+   "field": "SRC-CBY-CIRC-01-2024.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 19,
+   "field": "SRC-CBY-CIRC-01-2024.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 22,
+   "field": "SRC-CBY-CIRC-01-2024.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 26,
+   "field": "SRC-CBY-CIRC-01-2024.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 27,
+   "field": "SRC-CBY-CIRC-01-2024.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 28,
+   "field": "SRC-CBY-CIRC-01-2024.document_date",
+   "old": null,
+   "new": "2024-04-29"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 1,
+   "field": "SRC-CBY-BANKS-BS-2022.source_id",
+   "old": null,
+   "new": "SRC-CBY-BANKS-BS-2022"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 2,
+   "field": "SRC-CBY-BANKS-BS-2022.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/64bada99e708e.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 4,
+   "field": "SRC-CBY-BANKS-BS-2022.datasets_or_use",
+   "old": null,
+   "new": "RESOURCE_LIBRARY_ONLY__CONTEXT"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 5,
+   "field": "SRC-CBY-BANKS-BS-2022.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 6,
+   "field": "SRC-CBY-BANKS-BS-2022.display_title",
+   "old": null,
+   "new": "Developments in the consolidated balance sheet of banks, to December 2022 (no issue date printed)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 12,
+   "field": "SRC-CBY-BANKS-BS-2022.display_title_ar",
+   "old": null,
+   "new": "تطورات الميزانية المجمعة للبنوك حتى ديسمبر 2022 (لا تحمل تاريخ إصدار مطبوعًا)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 7,
+   "field": "SRC-CBY-BANKS-BS-2022.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 25,
+   "field": "SRC-CBY-BANKS-BS-2022.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 11,
+   "field": "SRC-CBY-BANKS-BS-2022.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 19,
+   "field": "SRC-CBY-BANKS-BS-2022.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 22,
+   "field": "SRC-CBY-BANKS-BS-2022.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 26,
+   "field": "SRC-CBY-BANKS-BS-2022.document_label",
+   "old": null,
+   "new": "Statistical release"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 27,
+   "field": "SRC-CBY-BANKS-BS-2022.document_label_ar",
+   "old": null,
+   "new": "إصدار إحصائي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 1,
+   "field": "SRC-CBY-BOARD-2022-2-11.source_id",
+   "old": null,
+   "new": "SRC-CBY-BOARD-2022-2-11"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 2,
+   "field": "SRC-CBY-BOARD-2022-2-11.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/623ad771a78d7.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 4,
+   "field": "SRC-CBY-BOARD-2022-2-11.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 5,
+   "field": "SRC-CBY-BOARD-2022-2-11.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 6,
+   "field": "SRC-CBY-BOARD-2022-2-11.display_title",
+   "old": null,
+   "new": "Board of Directors' Decision No. (2022/2/11) amending the regulation of the Microfinance Banks Law (21 March 2022; ref. 176/CBY/2022)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 12,
+   "field": "SRC-CBY-BOARD-2022-2-11.display_title_ar",
+   "old": null,
+   "new": "قرار مجلس إدارة البنك المركزي اليمني رقم (2022/2/11) بتعديل اللائحة التنفيذية لقانون بنوك التمويل الأصغر (21 مارس 2022؛ المرجع 176/CBY/2022)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 7,
+   "field": "SRC-CBY-BOARD-2022-2-11.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 25,
+   "field": "SRC-CBY-BOARD-2022-2-11.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 11,
+   "field": "SRC-CBY-BOARD-2022-2-11.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 19,
+   "field": "SRC-CBY-BOARD-2022-2-11.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 22,
+   "field": "SRC-CBY-BOARD-2022-2-11.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 26,
+   "field": "SRC-CBY-BOARD-2022-2-11.document_label",
+   "old": null,
+   "new": "Regulatory decision"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 27,
+   "field": "SRC-CBY-BOARD-2022-2-11.document_label_ar",
+   "old": null,
+   "new": "قرار تنظيمي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 190,
+   "col": 28,
+   "field": "SRC-CBY-BOARD-2022-2-11.document_date",
+   "old": null,
+   "new": "2022-03-21"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 1,
+   "field": "SRC-CBY-BOARD-2023-11-3.source_id",
+   "old": null,
+   "new": "SRC-CBY-BOARD-2023-11-3"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 2,
+   "field": "SRC-CBY-BOARD-2023-11-3.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/659aa2ee5852b.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 4,
+   "field": "SRC-CBY-BOARD-2023-11-3.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 5,
+   "field": "SRC-CBY-BOARD-2023-11-3.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 6,
+   "field": "SRC-CBY-BOARD-2023-11-3.display_title",
+   "old": null,
+   "new": "Board of Directors' Decision No. (2023/11/3) raising the capital of microfinance banks to YER 15 billion (31 December 2023; ref. 957/CBY/2023)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 12,
+   "field": "SRC-CBY-BOARD-2023-11-3.display_title_ar",
+   "old": null,
+   "new": "قرار مجلس الإدارة رقم (2023/11/3) بشأن رفع رؤوس أموال بنوك التمويل الأصغر إلى 15 مليار ريال يمني (31 ديسمبر 2023؛ المرجع 957/CBY/2023)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 7,
+   "field": "SRC-CBY-BOARD-2023-11-3.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 25,
+   "field": "SRC-CBY-BOARD-2023-11-3.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 11,
+   "field": "SRC-CBY-BOARD-2023-11-3.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 19,
+   "field": "SRC-CBY-BOARD-2023-11-3.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 22,
+   "field": "SRC-CBY-BOARD-2023-11-3.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 26,
+   "field": "SRC-CBY-BOARD-2023-11-3.document_label",
+   "old": null,
+   "new": "Regulatory decision"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 27,
+   "field": "SRC-CBY-BOARD-2023-11-3.document_label_ar",
+   "old": null,
+   "new": "قرار تنظيمي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 191,
+   "col": 28,
+   "field": "SRC-CBY-BOARD-2023-11-3.document_date",
+   "old": null,
+   "new": "2023-12-31"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 1,
+   "field": "SRC-CBY-CRI-149.source_id",
+   "old": null,
+   "new": "SRC-CBY-CRI-149"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 2,
+   "field": "SRC-CBY-CRI-149.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/publications/149"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 4,
+   "field": "SRC-CBY-CRI-149.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 5,
+   "field": "SRC-CBY-CRI-149.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 6,
+   "field": "SRC-CBY-CRI-149.display_title",
+   "old": null,
+   "new": "Credit-risk information exchange system and Form No. 6 (CBY-Aden publications page; cites Governor's Decision No. 4 of 1991)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 12,
+   "field": "SRC-CBY-CRI-149.display_title_ar",
+   "old": null,
+   "new": "نظام تبادل معلومات مخاطر الائتمان ومتطلبات الاستمارة رقم (6) (صفحة منشورات البنك المركزي اليمني – عدن؛ يشير إلى قرار المحافظ رقم (4) لسنة 1991)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 7,
+   "field": "SRC-CBY-CRI-149.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 25,
+   "field": "SRC-CBY-CRI-149.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 11,
+   "field": "SRC-CBY-CRI-149.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 19,
+   "field": "SRC-CBY-CRI-149.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 22,
+   "field": "SRC-CBY-CRI-149.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 26,
+   "field": "SRC-CBY-CRI-149.document_label",
+   "old": null,
+   "new": "Regulation"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 192,
+   "col": 27,
+   "field": "SRC-CBY-CRI-149.document_label_ar",
+   "old": null,
+   "new": "لائحة تنظيمية"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 1,
+   "field": "SRC-CBY-CRI-150.source_id",
+   "old": null,
+   "new": "SRC-CBY-CRI-150"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 2,
+   "field": "SRC-CBY-CRI-150.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/publications/150"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 4,
+   "field": "SRC-CBY-CRI-150.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 5,
+   "field": "SRC-CBY-CRI-150.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 6,
+   "field": "SRC-CBY-CRI-150.display_title",
+   "old": null,
+   "new": "Credit-risk information: enquiry before granting credit (CBY-Aden publications page)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 12,
+   "field": "SRC-CBY-CRI-150.display_title_ar",
+   "old": null,
+   "new": "معلومات مخاطر الائتمان: الاستعلام قبل منح الائتمان (صفحة منشورات البنك المركزي اليمني – عدن)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 7,
+   "field": "SRC-CBY-CRI-150.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 25,
+   "field": "SRC-CBY-CRI-150.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 11,
+   "field": "SRC-CBY-CRI-150.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 19,
+   "field": "SRC-CBY-CRI-150.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 22,
+   "field": "SRC-CBY-CRI-150.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 26,
+   "field": "SRC-CBY-CRI-150.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 193,
+   "col": 27,
+   "field": "SRC-CBY-CRI-150.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 1,
+   "field": "SRC-CBY-NEWS-963.source_id",
+   "old": null,
+   "new": "SRC-CBY-NEWS-963"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 2,
+   "field": "SRC-CBY-NEWS-963.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/news/963"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 4,
+   "field": "SRC-CBY-NEWS-963.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 5,
+   "field": "SRC-CBY-NEWS-963.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 6,
+   "field": "SRC-CBY-NEWS-963.display_title",
+   "old": null,
+   "new": "CBY-Aden launches the defaulters registry system (5 August 2026)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 12,
+   "field": "SRC-CBY-NEWS-963.display_title_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن يدشّن نظام سجل المتعثرين (5 أغسطس 2026)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 7,
+   "field": "SRC-CBY-NEWS-963.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 25,
+   "field": "SRC-CBY-NEWS-963.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 11,
+   "field": "SRC-CBY-NEWS-963.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 19,
+   "field": "SRC-CBY-NEWS-963.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 22,
+   "field": "SRC-CBY-NEWS-963.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 26,
+   "field": "SRC-CBY-NEWS-963.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 27,
+   "field": "SRC-CBY-NEWS-963.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 194,
+   "col": 28,
+   "field": "SRC-CBY-NEWS-963.document_date",
+   "old": null,
+   "new": "2026-08-05"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 1,
+   "field": "SRC-CBY-NEWS-645.source_id",
+   "old": null,
+   "new": "SRC-CBY-NEWS-645"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 2,
+   "field": "SRC-CBY-NEWS-645.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/news/645"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 4,
+   "field": "SRC-CBY-NEWS-645.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 5,
+   "field": "SRC-CBY-NEWS-645.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 6,
+   "field": "SRC-CBY-NEWS-645.display_title",
+   "old": null,
+   "new": "CBY-Aden launches the first phase of the national switch, connecting seven banks (7 March 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 12,
+   "field": "SRC-CBY-NEWS-645.display_title_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن يدشّن المرحلة الأولى من العمل بنظام المقسم الوطني بربط سبعة بنوك (7 مارس 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 7,
+   "field": "SRC-CBY-NEWS-645.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 25,
+   "field": "SRC-CBY-NEWS-645.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 11,
+   "field": "SRC-CBY-NEWS-645.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 19,
+   "field": "SRC-CBY-NEWS-645.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 22,
+   "field": "SRC-CBY-NEWS-645.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 26,
+   "field": "SRC-CBY-NEWS-645.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 27,
+   "field": "SRC-CBY-NEWS-645.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 195,
+   "col": 28,
+   "field": "SRC-CBY-NEWS-645.document_date",
+   "old": null,
+   "new": "2024-03-07"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 1,
+   "field": "SRC-CBY-NEWS-656.source_id",
+   "old": null,
+   "new": "SRC-CBY-NEWS-656"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 2,
+   "field": "SRC-CBY-NEWS-656.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/news/656"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 4,
+   "field": "SRC-CBY-NEWS-656.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 5,
+   "field": "SRC-CBY-NEWS-656.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 6,
+   "field": "SRC-CBY-NEWS-656.display_title",
+   "old": null,
+   "new": "CBY-Aden Board of Directors reviews the first phase of the national switch and the unified money-transfer network (28 March 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 12,
+   "field": "SRC-CBY-NEWS-656.display_title_ar",
+   "old": null,
+   "new": "مجلس إدارة البنك المركزي اليمني – عدن يستعرض المرحلة الأولى من المقسم الوطني والشبكة الموحدة للحوالات (28 مارس 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 7,
+   "field": "SRC-CBY-NEWS-656.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 25,
+   "field": "SRC-CBY-NEWS-656.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 11,
+   "field": "SRC-CBY-NEWS-656.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 19,
+   "field": "SRC-CBY-NEWS-656.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 22,
+   "field": "SRC-CBY-NEWS-656.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 26,
+   "field": "SRC-CBY-NEWS-656.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 27,
+   "field": "SRC-CBY-NEWS-656.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 196,
+   "col": 28,
+   "field": "SRC-CBY-NEWS-656.document_date",
+   "old": null,
+   "new": "2024-03-28"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 1,
+   "field": "SRC-CBY-NEWS-579.source_id",
+   "old": null,
+   "new": "SRC-CBY-NEWS-579"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 2,
+   "field": "SRC-CBY-NEWS-579.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/news/579"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 4,
+   "field": "SRC-CBY-NEWS-579.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 5,
+   "field": "SRC-CBY-NEWS-579.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 6,
+   "field": "SRC-CBY-NEWS-579.display_title",
+   "old": null,
+   "new": "CBY-Aden joins the Buna regional payment platform (14 September 2023)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 12,
+   "field": "SRC-CBY-NEWS-579.display_title_ar",
+   "old": null,
+   "new": "انضمام البنك المركزي اليمني – عدن إلى منصة بُنى الإقليمية للمدفوعات (14 سبتمبر 2023)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 7,
+   "field": "SRC-CBY-NEWS-579.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 25,
+   "field": "SRC-CBY-NEWS-579.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 11,
+   "field": "SRC-CBY-NEWS-579.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 19,
+   "field": "SRC-CBY-NEWS-579.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 22,
+   "field": "SRC-CBY-NEWS-579.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 26,
+   "field": "SRC-CBY-NEWS-579.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 27,
+   "field": "SRC-CBY-NEWS-579.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 197,
+   "col": 28,
+   "field": "SRC-CBY-NEWS-579.document_date",
+   "old": null,
+   "new": "2023-09-14"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 1,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.source_id",
+   "old": null,
+   "new": "SRC-CBY-ENF-2025-JUL-AUG"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 2,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/news/834"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 3,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.additional_urls",
+   "old": null,
+   "new": "[\"https://cby-ye.com/news/836\", \"https://cby-ye.com/news/837\", \"https://cby-ye.com/news/838\", \"https://cby-ye.com/news/839\", \"https://cby-ye.com/news/840\", \"https://cby-ye.com/news/841\", \"https://cby-ye.com/news/843\", \"https://cby-ye.com/news/846\", \"https://cby-ye.com/news/847\", \"https://cby-ye.com/news/848\"]"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 4,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 5,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 6,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.display_title",
+   "old": null,
+   "new": "Governor's Decisions Nos. 7 to 17 of 2025 on licence suspensions and withdrawals (posted 23 July to 6 August 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 12,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.display_title_ar",
+   "old": null,
+   "new": "قرارات المحافظ من رقم (7) إلى رقم (17) لسنة 2025 بشأن إيقاف تراخيص وسحبها (نُشرت من 23 يوليو إلى 6 أغسطس 2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 7,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 25,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 11,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 19,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 22,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 26,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.document_label",
+   "old": null,
+   "new": "Enforcement decision"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 27,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.document_label_ar",
+   "old": null,
+   "new": "قرار إنفاذ"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 198,
+   "col": 28,
+   "field": "SRC-CBY-ENF-2025-JUL-AUG.document_date",
+   "old": null,
+   "new": "2025-07-23"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 1,
+   "field": "SRC-CBY-DEC-06-2025.source_id",
+   "old": null,
+   "new": "SRC-CBY-DEC-06-2025"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 2,
+   "field": "SRC-CBY-DEC-06-2025.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/687c9970b82d9.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 3,
+   "field": "SRC-CBY-DEC-06-2025.additional_urls",
+   "old": null,
+   "new": "[\"https://cby-ye.com/news/833\"]"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 4,
+   "field": "SRC-CBY-DEC-06-2025.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 5,
+   "field": "SRC-CBY-DEC-06-2025.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 6,
+   "field": "SRC-CBY-DEC-06-2025.display_title",
+   "old": null,
+   "new": "Governor's Decision No. 6 of 2025: relocation of the head office of the Deposit Insurance Institution to Aden (20 July 2025; ref. 376/CBY/2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 12,
+   "field": "SRC-CBY-DEC-06-2025.display_title_ar",
+   "old": null,
+   "new": "قرار المحافظ رقم (6) لسنة 2025: نقل المركز الرئيسي لمؤسسة ضمان الودائع إلى عدن (20 يوليو 2025؛ المرجع 376/CBY/2025)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 7,
+   "field": "SRC-CBY-DEC-06-2025.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 25,
+   "field": "SRC-CBY-DEC-06-2025.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 11,
+   "field": "SRC-CBY-DEC-06-2025.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 19,
+   "field": "SRC-CBY-DEC-06-2025.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 22,
+   "field": "SRC-CBY-DEC-06-2025.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 26,
+   "field": "SRC-CBY-DEC-06-2025.document_label",
+   "old": null,
+   "new": "Regulatory decision"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 27,
+   "field": "SRC-CBY-DEC-06-2025.document_label_ar",
+   "old": null,
+   "new": "قرار تنظيمي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 199,
+   "col": 28,
+   "field": "SRC-CBY-DEC-06-2025.document_date",
+   "old": null,
+   "new": "2025-07-20"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 1,
+   "field": "SRC-CBY-DEC-20-2024.source_id",
+   "old": null,
+   "new": "SRC-CBY-DEC-20-2024"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 2,
+   "field": "SRC-CBY-DEC-20-2024.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/665878ad66e09.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 3,
+   "field": "SRC-CBY-DEC-20-2024.additional_urls",
+   "old": null,
+   "new": "[\"https://cby-ye.com/news/691\"]"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 4,
+   "field": "SRC-CBY-DEC-20-2024.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 5,
+   "field": "SRC-CBY-DEC-20-2024.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 6,
+   "field": "SRC-CBY-DEC-20-2024.display_title",
+   "old": null,
+   "new": "Governor's Decision No. 20 of 2024 on ceasing dealings with a number of banks (30 May 2024; ref. 294/CBY/2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 12,
+   "field": "SRC-CBY-DEC-20-2024.display_title_ar",
+   "old": null,
+   "new": "قرار محافظ البنك المركزي رقم (20) لسنة 2024 بشأن إيقاف التعامل مع عدد من البنوك والمصارف (30 مايو 2024؛ المرجع 294/CBY/2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 7,
+   "field": "SRC-CBY-DEC-20-2024.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 25,
+   "field": "SRC-CBY-DEC-20-2024.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 11,
+   "field": "SRC-CBY-DEC-20-2024.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 19,
+   "field": "SRC-CBY-DEC-20-2024.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 22,
+   "field": "SRC-CBY-DEC-20-2024.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 26,
+   "field": "SRC-CBY-DEC-20-2024.document_label",
+   "old": null,
+   "new": "Enforcement decision"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 27,
+   "field": "SRC-CBY-DEC-20-2024.document_label_ar",
+   "old": null,
+   "new": "قرار إنفاذ"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 200,
+   "col": 28,
+   "field": "SRC-CBY-DEC-20-2024.document_date",
+   "old": null,
+   "new": "2024-05-30"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 1,
+   "field": "SRC-CBY-NEWS-724.source_id",
+   "old": null,
+   "new": "SRC-CBY-NEWS-724"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 2,
+   "field": "SRC-CBY-NEWS-724.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/news/724"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 4,
+   "field": "SRC-CBY-NEWS-724.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 5,
+   "field": "SRC-CBY-NEWS-724.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 6,
+   "field": "SRC-CBY-NEWS-724.display_title",
+   "old": null,
+   "new": "CBY-Aden clarification notice on cancelling the recent decisions concerning banks (6 August 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 12,
+   "field": "SRC-CBY-NEWS-724.display_title_ar",
+   "old": null,
+   "new": "إشعار توضيحي من البنك المركزي اليمني – عدن بشأن إلغاء القرارات الأخيرة بحق البنوك (6 أغسطس 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 7,
+   "field": "SRC-CBY-NEWS-724.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 25,
+   "field": "SRC-CBY-NEWS-724.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 11,
+   "field": "SRC-CBY-NEWS-724.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 19,
+   "field": "SRC-CBY-NEWS-724.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 22,
+   "field": "SRC-CBY-NEWS-724.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 26,
+   "field": "SRC-CBY-NEWS-724.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 27,
+   "field": "SRC-CBY-NEWS-724.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 201,
+   "col": 28,
+   "field": "SRC-CBY-NEWS-724.document_date",
+   "old": null,
+   "new": "2024-08-06"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 1,
+   "field": "SRC-UN-OSESGY-2024-07-23.source_id",
+   "old": null,
+   "new": "SRC-UN-OSESGY-2024-07-23"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 2,
+   "field": "SRC-UN-OSESGY-2024-07-23.primary_url",
+   "old": null,
+   "new": "https://osesgy.unmissions.org/en/speeches-and-statements/statement-office-un-special-envoy-yemen"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 3,
+   "field": "SRC-UN-OSESGY-2024-07-23.additional_urls",
+   "old": null,
+   "new": "[\"https://osesgy.unmissions.org/ar/speeches-and-statements/statement-office-un-special-envoy-yemen\", \"https://osesgy.unmissions.org/en/node/15786\"]"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 4,
+   "field": "SRC-UN-OSESGY-2024-07-23.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 5,
+   "field": "SRC-UN-OSESGY-2024-07-23.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 6,
+   "field": "SRC-UN-OSESGY-2024-07-23.display_title",
+   "old": null,
+   "new": "Statement by the Office of the UN Special Envoy for Yemen (23 July 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 12,
+   "field": "SRC-UN-OSESGY-2024-07-23.display_title_ar",
+   "old": null,
+   "new": "بيان صادر عن مكتب المبعوث الأممي الخاص إلى اليمن (23 يوليو 2024)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 7,
+   "field": "SRC-UN-OSESGY-2024-07-23.publisher",
+   "old": null,
+   "new": "Office of the Special Envoy of the Secretary-General for Yemen"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 25,
+   "field": "SRC-UN-OSESGY-2024-07-23.publisher_ar",
+   "old": null,
+   "new": "مكتب المبعوث الخاص للأمين العام للأمم المتحدة لليمن"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 11,
+   "field": "SRC-UN-OSESGY-2024-07-23.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 19,
+   "field": "SRC-UN-OSESGY-2024-07-23.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 22,
+   "field": "SRC-UN-OSESGY-2024-07-23.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 26,
+   "field": "SRC-UN-OSESGY-2024-07-23.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 27,
+   "field": "SRC-UN-OSESGY-2024-07-23.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 202,
+   "col": 28,
+   "field": "SRC-UN-OSESGY-2024-07-23.document_date",
+   "old": null,
+   "new": "2024-07-23"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 1,
+   "field": "SRC-CBY-DIL-21-2008.source_id",
+   "old": null,
+   "new": "SRC-CBY-DIL-21-2008"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 2,
+   "field": "SRC-CBY-DIL-21-2008.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/62c2edbaad8eb.pdf"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 4,
+   "field": "SRC-CBY-DIL-21-2008.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 5,
+   "field": "SRC-CBY-DIL-21-2008.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 6,
+   "field": "SRC-CBY-DIL-21-2008.display_title",
+   "old": null,
+   "new": "Law No. 21 of 2008 on the Bank Deposit Insurance Institution (certified copy hosted by CBY-Aden)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 12,
+   "field": "SRC-CBY-DIL-21-2008.display_title_ar",
+   "old": null,
+   "new": "القانون رقم (21) لسنة 2008 بشأن مؤسسة ضمان الودائع المصرفية (نسخة مصدقة يستضيفها البنك المركزي اليمني – عدن)"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 7,
+   "field": "SRC-CBY-DIL-21-2008.publisher",
+   "old": null,
+   "new": "Republic of Yemen"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 25,
+   "field": "SRC-CBY-DIL-21-2008.publisher_ar",
+   "old": null,
+   "new": "الجمهورية اليمنية"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 11,
+   "field": "SRC-CBY-DIL-21-2008.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 19,
+   "field": "SRC-CBY-DIL-21-2008.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 22,
+   "field": "SRC-CBY-DIL-21-2008.retrieval_date",
+   "old": null,
+   "new": "2026-10-10"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 26,
+   "field": "SRC-CBY-DIL-21-2008.document_label",
+   "old": null,
+   "new": "Law"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 27,
+   "field": "SRC-CBY-DIL-21-2008.document_label_ar",
+   "old": null,
+   "new": "قانون"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 203,
+   "col": 28,
+   "field": "SRC-CBY-DIL-21-2008.document_date",
+   "old": null,
+   "new": "2008-04-23"
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "04_NAV_UX",
+   "row": 505,
+   "col": 2,
+   "field": "UI-DATA-GROUP-REGULATORY-SCOPE.label_en",
+   "old": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued by the Central Bank of Yemen – Aden. The evidence base holds no law as a source document, and this group holds no instrument issued in Sana'a.",
+   "new": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued or posted by the Central Bank of Yemen – Aden; its undated pages on credit-risk information cite older instructions, the earliest from 1991. This group holds no law and no instrument issued in Sana'a; the one law the evidence base holds, on the Bank Deposit Insurance Institution, is listed below with the other sources."
+  },
+  {
+   "finding": "CLOSE-4:SOURCES",
+   "sheet": "04_NAV_UX",
+   "row": 505,
+   "col": 3,
+   "field": "UI-DATA-GROUP-REGULATORY-SCOPE.label_ar",
+   "old": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا البنك المركزي اليمني – عدن. ولا تضم قاعدة الأدلة أي قانون بوصفه وثيقة مصدرية، ولا تضم هذه المجموعة أي وثيقة صادرة في صنعاء.",
+   "new": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا أو نشرها البنك المركزي اليمني – عدن؛ وتشير صفحتاه غير المؤرختين عن معلومات مخاطر الائتمان إلى تعليمات أقدم، أولها من عام 1991. ولا تضم هذه المجموعة أي قانون ولا أي وثيقة صادرة في صنعاء؛ أما القانون الوحيد الذي تضمه قاعدة الأدلة، وهو قانون مؤسسة ضمان الودائع المصرفية، فمدرج أدناه مع المصادر الأخرى."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 1,
+   "field": "REF-REG-001.event_id",
+   "old": null,
+   "new": "REF-REG-001"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 2,
+   "field": "REF-REG-001.date",
+   "old": null,
+   "new": "2022-03-21"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 3,
+   "field": "REF-REG-001.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden Board decision"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 4,
+   "field": "REF-REG-001.event",
+   "old": null,
+   "new": "Board Decision (2022/2/11): microfinance banks and exchange"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 5,
+   "field": "REF-REG-001.normalized_description",
+   "old": null,
+   "new": "Amends the regulation of Microfinance Banks Law No. 15 of 2009: exchange activity and microfinance activity may not be combined; an application to establish a microfinance bank is refused where its shareholders own exchange companies, unless the exchange company converts; earlier approvals must exit exchange activity within one year; minimum paid-up capital YER 5 billion (Art. 10, 15)."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 6,
+   "field": "REF-REG-001.event_class",
+   "old": null,
+   "new": "MFB_LICENSING_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 7,
+   "field": "REF-REG-001.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 25,
+   "col": 8,
+   "field": "REF-REG-001.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/623ad771a78d7.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 1,
+   "field": "REF-REG-002.event_id",
+   "old": null,
+   "new": "REF-REG-002"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 2,
+   "field": "REF-REG-002.date",
+   "old": null,
+   "new": "2023-11-09"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 3,
+   "field": "REF-REG-002.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden regulatory issuance"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 4,
+   "field": "REF-REG-002.event",
+   "old": null,
+   "new": "Electronic know-your-customer instructions"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 5,
+   "field": "REF-REG-002.normalized_description",
+   "old": null,
+   "new": "Instructions for banks and licensed mobile e-money providers on opening accounts remotely, without the customer present in person, with reporting requirements that include the average time to open or activate an account. No effective-date clause was found on the pages read; a requirement is not evidence of use."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 6,
+   "field": "REF-REG-002.event_class",
+   "old": null,
+   "new": "CUSTOMER_DUE_DILIGENCE_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 7,
+   "field": "REF-REG-002.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 26,
+   "col": 8,
+   "field": "REF-REG-002.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/65806fe2b3757.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 1,
+   "field": "REF-REG-003.event_id",
+   "old": null,
+   "new": "REF-REG-003"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 2,
+   "field": "REF-REG-003.date",
+   "old": null,
+   "new": "2023-12-31"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 3,
+   "field": "REF-REG-003.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden Board decision"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 4,
+   "field": "REF-REG-003.event",
+   "old": null,
+   "new": "Board Decision (2023/11/3): microfinance bank capital"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 5,
+   "field": "REF-REG-003.normalized_description",
+   "old": null,
+   "new": "Raises the minimum paid-up capital of microfinance banks to YER 15 billion, half of the increase each year from 2024, deadline 31 December 2025; non-compliance can lead to licence withdrawal (Art. 6)."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 6,
+   "field": "REF-REG-003.event_class",
+   "old": null,
+   "new": "MFB_CAPITAL_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 7,
+   "field": "REF-REG-003.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 27,
+   "col": 8,
+   "field": "REF-REG-003.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/659aa2ee5852b.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 1,
+   "field": "REF-REG-004.event_id",
+   "old": null,
+   "new": "REF-REG-004"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 2,
+   "field": "REF-REG-004.date",
+   "old": null,
+   "new": "2024-04-29"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 3,
+   "field": "REF-REG-004.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden periodic circular"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 4,
+   "field": "REF-REG-004.event",
+   "old": null,
+   "new": "Circular No. 1 of 2024: shipping surplus FX banknotes abroad"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 5,
+   "field": "REF-REG-004.normalized_description",
+   "old": null,
+   "new": "Banks wishing to ship surplus foreign-currency banknotes abroad apply to the Governor at least a week ahead; no answer within five days of the Banking Supervision Sector receiving a complete request, after referral by the Governor, counts as refusal; one shipment at most USD 25 million or its equivalent, from funds deposited for at least six months; SWIFT and credit advices within 10 days after shipment."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 6,
+   "field": "REF-REG-004.event_class",
+   "old": null,
+   "new": "FX_BANKNOTE_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 7,
+   "field": "REF-REG-004.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 28,
+   "col": 8,
+   "field": "REF-REG-004.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/663c8ad5cafdc.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 1,
+   "field": "REF-REG-005.event_id",
+   "old": null,
+   "new": "REF-REG-005"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 2,
+   "field": "REF-REG-005.date",
+   "old": null,
+   "new": "2024-05-23"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 3,
+   "field": "REF-REG-005.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden Governor decision"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 4,
+   "field": "REF-REG-005.event",
+   "old": null,
+   "new": "Decision No. 19 of 2024: external transfers"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 5,
+   "field": "REF-REG-005.normalized_description",
+   "old": null,
+   "new": "External transfers only through qualified banks or exchange companies; a CBY-Aden no-objection letter before any contract with an international money-transfer company or a sub-agent; a sub-agent must hold a valid CBY-Aden licence, and main agents with existing sub-agencies were to apply within two weeks of the decision to register them and obtain a no-objection letter; the main agent answers for its sub-agents; incoming transfers paid in the currency received, converted only at the beneficiary's wish at the market rate; in force from issue."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 6,
+   "field": "REF-REG-005.event_class",
+   "old": null,
+   "new": "CROSS_BORDER_TRANSFER_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 7,
+   "field": "REF-REG-005.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 29,
+   "col": 8,
+   "field": "REF-REG-005.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/6653499a7181b.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 1,
+   "field": "REF-REG-006.event_id",
+   "old": null,
+   "new": "REF-REG-006"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 2,
+   "field": "REF-REG-006.date",
+   "old": null,
+   "new": "2025-07-20"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 3,
+   "field": "REF-REG-006.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden Governor decision"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 4,
+   "field": "REF-REG-006.event",
+   "old": null,
+   "new": "Decision No. 6 of 2025: Deposit Insurance Institution head office"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 5,
+   "field": "REF-REG-006.normalized_description",
+   "old": null,
+   "new": "Provides for relocating the head office of the Deposit Insurance Institution to Aden, in force from issue; it does not show that the move was completed. It does not establish the Institution (Law No. 21 of 2008, in the copy CBY-Aden hosts; the decision's recital cites Law No. 40 of 2008) and does not show that deposit cover operates."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 6,
+   "field": "REF-REG-006.event_class",
+   "old": null,
+   "new": "DEPOSIT_INSURANCE_INSTITUTION"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 7,
+   "field": "REF-REG-006.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 30,
+   "col": 8,
+   "field": "REF-REG-006.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/687c9970b82d9.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 1,
+   "field": "REF-REG-007.event_id",
+   "old": null,
+   "new": "REF-REG-007"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 2,
+   "field": "REF-REG-007.date",
+   "old": null,
+   "new": "2025-09-24"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 3,
+   "field": "REF-REG-007.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden periodic circular"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 4,
+   "field": "REF-REG-007.event",
+   "old": null,
+   "new": "Circular No. 2 of 2025: AML/CFT supplement"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 5,
+   "field": "REF-REG-007.normalized_description",
+   "old": null,
+   "new": "Addressed to banks and exchange companies and establishments; supplements the anti-money laundering and counter-terrorist financing circulars of 2012, 2013, 2014 and 2021."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 6,
+   "field": "REF-REG-007.event_class",
+   "old": null,
+   "new": "AML_CFT_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 7,
+   "field": "REF-REG-007.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 31,
+   "col": 8,
+   "field": "REF-REG-007.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/68dcd80cd12b9.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 1,
+   "field": "REF-REG-008.event_id",
+   "old": null,
+   "new": "REF-REG-008"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 2,
+   "field": "REF-REG-008.date",
+   "old": null,
+   "new": "2025-11-02"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 3,
+   "field": "REF-REG-008.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden periodic circular"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 4,
+   "field": "REF-REG-008.event",
+   "old": null,
+   "new": "Circular No. 3 of 2025: risk management in banks"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 5,
+   "field": "REF-REG-008.normalized_description",
+   "old": null,
+   "new": "Risk-management instructions applying to all banks, prepared with IMF technical support (METAC)."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 6,
+   "field": "REF-REG-008.event_class",
+   "old": null,
+   "new": "PRUDENTIAL_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 7,
+   "field": "REF-REG-008.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 32,
+   "col": 8,
+   "field": "REF-REG-008.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/690e0e07d4981.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 1,
+   "field": "REF-REG-009.event_id",
+   "old": null,
+   "new": "REF-REG-009"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 2,
+   "field": "REF-REG-009.date",
+   "old": null,
+   "new": "2025-11-02"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 3,
+   "field": "REF-REG-009.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden periodic circular"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 4,
+   "field": "REF-REG-009.event",
+   "old": null,
+   "new": "Circular No. 4 of 2025: enhanced due diligence and sanctions screening"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 5,
+   "field": "REF-REG-009.normalized_description",
+   "old": null,
+   "new": "Addressed to banks and exchange firms: enhanced due diligence and screening against UN Security Council and OFAC sanctions lists."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 6,
+   "field": "REF-REG-009.event_class",
+   "old": null,
+   "new": "AML_CFT_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 7,
+   "field": "REF-REG-009.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 33,
+   "col": 8,
+   "field": "REF-REG-009.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/690e0e39ce5d9.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 1,
+   "field": "REF-REG-010.event_id",
+   "old": null,
+   "new": "REF-REG-010"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 2,
+   "field": "REF-REG-010.date",
+   "old": null,
+   "new": "2026-04-09"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 3,
+   "field": "REF-REG-010.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden Governor decision"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 4,
+   "field": "REF-REG-010.event",
+   "old": null,
+   "new": "Decision No. 7 of 2026: deposit and credit rates"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 5,
+   "field": "REF-REG-010.normalized_description",
+   "old": null,
+   "new": "Minimum 18% a year on new rial savings deposits at commercial banks; foreign-currency deposit rates and lending rates left to banks; Islamic banks exempt; applies to contracts after it takes effect on 12 April 2026."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 6,
+   "field": "REF-REG-010.event_class",
+   "old": null,
+   "new": "MONETARY_POLICY_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 7,
+   "field": "REF-REG-010.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 34,
+   "col": 8,
+   "field": "REF-REG-010.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/69dcac86e3520.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 1,
+   "field": "REF-REG-011.event_id",
+   "old": null,
+   "new": "REF-REG-011"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 2,
+   "field": "REF-REG-011.date",
+   "old": null,
+   "new": "2026-09-15"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 3,
+   "field": "REF-REG-011.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden circular"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 4,
+   "field": "REF-REG-011.event",
+   "old": null,
+   "new": "Circular No. 1 of 2026: virtual assets"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 5,
+   "field": "REF-REG-011.normalized_description",
+   "old": null,
+   "new": "Prohibits banks, exchange firms, payment-service providers and e-wallet operators from dealing in virtual assets or cryptocurrencies or with their service providers; in force from issue."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 6,
+   "field": "REF-REG-011.event_class",
+   "old": null,
+   "new": "VIRTUAL_ASSETS_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 7,
+   "field": "REF-REG-011.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 35,
+   "col": 8,
+   "field": "REF-REG-011.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/files/6aaa38b226baa.pdf"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 1,
+   "field": "REF-REG-012.event_id",
+   "old": null,
+   "new": "REF-REG-012"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 2,
+   "field": "REF-REG-012.date",
+   "old": null,
+   "new": "undated (web posting 2021-10-06)"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 3,
+   "field": "REF-REG-012.actor_event_type",
+   "old": null,
+   "new": "CBY-Aden regulation (legacy, web-posted)"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 4,
+   "field": "REF-REG-012.event",
+   "old": null,
+   "new": "Credit-risk information exchange and pre-credit enquiry"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 5,
+   "field": "REF-REG-012.normalized_description",
+   "old": null,
+   "new": "Commercial and specialised banks report credit exposures from YER 500,000 on Form No. 6 by the 15th of the following month, and grant no credit before an enquiry to the Credit and Banking Risk Department; the pages cite Governor's Decision No. 4 of 1991, whose text is not published. Web posting is not an issue date."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 6,
+   "field": "REF-REG-012.event_class",
+   "old": null,
+   "new": "CREDIT_INFORMATION_RULE"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 7,
+   "field": "REF-REG-012.route",
+   "old": null,
+   "new": "/reforms/regulation + /data"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "31_REFORMS_REGULATION",
+   "row": 36,
+   "col": 8,
+   "field": "REF-REG-012.source_url",
+   "old": null,
+   "new": "https://cby-ye.com/publications/149"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 1,
+   "field": "YSC-025.event_id",
+   "old": null,
+   "new": "YSC-025"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 2,
+   "field": "YSC-025.period_en",
+   "old": null,
+   "new": "14 September 2023"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 3,
+   "field": "YSC-025.event_class",
+   "old": null,
+   "new": "REGIONAL_PAYMENT_CONNECTION"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 4,
+   "field": "YSC-025.fact_en",
+   "old": null,
+   "new": "CBY-Aden announced that it had joined the Buna regional payment platform, describing itself as the seventh Arab central bank to join."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 5,
+   "field": "YSC-025.fact_ar",
+   "old": null,
+   "new": "أعلن البنك المركزي اليمني – عدن انضمامه إلى منصة بُنى الإقليمية للمدفوعات، مشيرًا إلى أنه سابع بنك مركزي عربي ينضم إليها."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 6,
+   "field": "YSC-025.source_ids",
+   "old": null,
+   "new": "SRC-CBY-NEWS-579"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 7,
+   "field": "YSC-025.source_scope",
+   "old": null,
+   "new": "CBY-Aden news release on its connection to a regional platform; no transaction data."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 8,
+   "field": "YSC-025.system_implication_en",
+   "old": null,
+   "new": "A cross-border payment rail became available to the central bank in Aden; who uses it, and for which transfers, is not reported."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 9,
+   "field": "YSC-025.system_implication_ar",
+   "old": null,
+   "new": "أصبح مسار دفع عابر للحدود متاحًا للبنك المركزي في عدن؛ ولم يُفصَح عمّن يستخدمه ولا عن التحويلات التي تمر عبره."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 10,
+   "field": "YSC-025.fi_relevance_en",
+   "old": null,
+   "new": "Cross-border rails matter for remittance channels and their cost, but a connection is not a channel that households use."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 11,
+   "field": "YSC-025.fi_relevance_ar",
+   "old": null,
+   "new": "لمسارات الدفع العابرة للحدود أهمية بالنسبة إلى قنوات الحوالات وتكلفتها، لكن الربط ليس قناة تستخدمها الأسر."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 12,
+   "field": "YSC-025.does_not_establish_en",
+   "old": null,
+   "new": "Joining the platform does not establish transactions through it, lower remittance costs or wider access."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 13,
+   "field": "YSC-025.does_not_establish_ar",
+   "old": null,
+   "new": "لا يثبت الانضمام إلى المنصة وجود معاملات عبرها ولا انخفاض تكلفة الحوالات ولا اتساع الوصول."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 14,
+   "field": "YSC-025.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 15,
+   "field": "YSC-025.linked_routes",
+   "old": null,
+   "new": "/payments | /remittances | /reforms"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 16,
+   "field": "YSC-025.interpretation_note",
+   "old": null,
+   "new": "Connection is not operation, and operation is not use."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 17,
+   "field": "YSC-025.period_ar",
+   "old": null,
+   "new": "14 سبتمبر 2023"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 16,
+   "col": 20,
+   "field": "YSC-025.value_states",
+   "old": null,
+   "new": "[{\"t\":\"14 September 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-NEWS-579\",\"loc\":\"cby-ye.com/news/579, dated 14 September 2023; read 10 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 1,
+   "field": "YSC-026.event_id",
+   "old": null,
+   "new": "YSC-026"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 2,
+   "field": "YSC-026.period_en",
+   "old": null,
+   "new": "7 and 28 March 2024"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 3,
+   "field": "YSC-026.event_class",
+   "old": null,
+   "new": "NATIONAL_SWITCH_PHASE"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 4,
+   "field": "YSC-026.fact_en",
+   "old": null,
+   "new": "CBY-Aden launched the first phase of the national switch on 7 March 2024, connecting seven banks, and said official operation would follow once all banks were connected; on 28 March 2024 its Board of Directors reviewed the first phase (ATMs, POS and e-wallets) and the launch of the unified money-transfer network."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 5,
+   "field": "YSC-026.fact_ar",
+   "old": null,
+   "new": "دشّن البنك المركزي اليمني – عدن في 7 مارس 2024 المرحلة الأولى من العمل بنظام المقسم الوطني بربط سبعة بنوك، وذكر أن التشغيل الرسمي سيبدأ بعد ربط جميع البنوك؛ وفي 28 مارس 2024 استعرض مجلس إدارته المرحلة الأولى (أجهزة الصراف الآلي ونقاط البيع والمحافظ الإلكترونية) وإطلاق الشبكة الموحدة للحوالات."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 6,
+   "field": "YSC-026.source_ids",
+   "old": null,
+   "new": "SRC-CBY-NEWS-645 | SRC-CBY-NEWS-656"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 7,
+   "field": "YSC-026.source_scope",
+   "old": null,
+   "new": "CBY-Aden news releases on a launch and a Board review; no transaction data."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 8,
+   "field": "YSC-026.system_implication_en",
+   "old": null,
+   "new": "As CBY-Aden reported it, the first phase connected part of the banking system; the bank named the connection of all banks as the condition for official operation."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 9,
+   "field": "YSC-026.system_implication_ar",
+   "old": null,
+   "new": "بحسب ما أفاد به البنك المركزي اليمني – عدن، ربطت المرحلة الأولى جزءًا من الجهاز المصرفي؛ وجعل البنك ربط جميع البنوك شرطًا للتشغيل الرسمي."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 10,
+   "field": "YSC-026.fi_relevance_en",
+   "old": null,
+   "new": "An interoperable switch is a precondition for card, POS and e-wallet payments between different providers, not a measure of their use."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 11,
+   "field": "YSC-026.fi_relevance_ar",
+   "old": null,
+   "new": "المقسم القابل للتشغيل البيني شرط مسبق لمدفوعات البطاقات ونقاط البيع والمحافظ الإلكترونية بين مقدمي الخدمات المختلفين، وليس مقياسًا لاستخدامها."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 12,
+   "field": "YSC-026.does_not_establish_en",
+   "old": null,
+   "new": "The launch does not establish that all banks connected, that the switch operates officially, or that transactions moved through it."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 13,
+   "field": "YSC-026.does_not_establish_ar",
+   "old": null,
+   "new": "لا يثبت التدشين أن جميع البنوك ارتبطت، ولا أن المقسم يعمل رسميًا، ولا أن معاملات مرّت عبره."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 14,
+   "field": "YSC-026.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 15,
+   "field": "YSC-026.linked_routes",
+   "old": null,
+   "new": "/payments | /reforms"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 16,
+   "field": "YSC-026.interpretation_note",
+   "old": null,
+   "new": "Launch is not operation; a first phase is not the system."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 17,
+   "field": "YSC-026.period_ar",
+   "old": null,
+   "new": "7 و28 مارس 2024"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 20,
+   "field": "YSC-026.value_states",
+   "old": null,
+   "new": "[{\"t\":\"7 March 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-NEWS-645\",\"loc\":\"cby-ye.com/news/645 (posted 9 March 2024): launch on Thursday 7 March, first phase connecting seven banks; read 10 October 2026\"},{\"t\":\"28 March 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-NEWS-656\",\"loc\":\"cby-ye.com/news/656, Board meeting 2 of 2024, 28 March 2024; read 10 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 1,
+   "field": "YSC-027.event_id",
+   "old": null,
+   "new": "YSC-027"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 2,
+   "field": "YSC-027.period_en",
+   "old": null,
+   "new": "30 May to 6 August 2024"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 3,
+   "field": "YSC-027.event_class",
+   "old": null,
+   "new": "BANKING_MEASURES_AND_CANCELLATION"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 4,
+   "field": "YSC-027.fact_en",
+   "old": null,
+   "new": "On 30 May 2024 CBY-Aden's Governor's Decision No. 20 of 2024 ordered a halt to dealings with a number of banks from 2 June 2024, and directed those banks to keep serving the public and meeting their obligations to customers until further notice. On 23 July 2024 the Office of the UN Special Envoy for Yemen announced that the Government of Yemen and Ansar Allah had agreed to cancel the recent decisions and procedures against banks by both sides and to refrain in future from any similar decisions or procedures; on 6 August 2024 CBY-Aden posted that it had cancelled the recent decisions concerning banks, in implementation of those commitments."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 5,
+   "field": "YSC-027.fact_ar",
+   "old": null,
+   "new": "في 30 مايو 2024 قضى قرار محافظ البنك المركزي اليمني – عدن رقم (20) لسنة 2024 بإيقاف التعامل مع عدد من البنوك والمصارف اعتبارًا من 2 يونيو 2024، وألزم تلك البنوك بالاستمرار في تقديم خدماتها للجمهور والوفاء بالتزاماتها تجاه عملائها حتى إشعار آخر. وفي 23 يوليو 2024 أعلن مكتب المبعوث الأممي الخاص إلى اليمن أن الحكومة اليمنية وجماعة أنصار الله اتفقا على إلغاء القرارات والإجراءات الأخيرة ضد البنوك من الجانبين والتوقف مستقبلًا عن أي قرارات أو إجراءات مماثلة؛ وفي 6 أغسطس 2024 نشر البنك المركزي اليمني – عدن أنه ألغى القرارات الأخيرة بحق البنوك تنفيذًا لتلك الالتزامات."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 6,
+   "field": "YSC-027.source_ids",
+   "old": null,
+   "new": "SRC-CBY-DEC-20-2024 | SRC-UN-OSESGY-2024-07-23 | SRC-CBY-NEWS-724"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 7,
+   "field": "YSC-027.source_scope",
+   "old": null,
+   "new": "A CBY-Aden decision and notice, and the statement of the Office of the UN Special Envoy; the parties' own measures are named only as the statement names them."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 8,
+   "field": "YSC-027.system_implication_en",
+   "old": null,
+   "new": "Under an agreement the Office of the UN Special Envoy announced, both sides committed to cancel the recent decisions and procedures against banks and to refrain in future from any similar decisions or procedures; CBY-Aden posted that it had cancelled the recent decisions concerning banks. The sources held do not report whether or when the other side's measures were cancelled."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 9,
+   "field": "YSC-027.system_implication_ar",
+   "old": null,
+   "new": "بموجب اتفاق أعلنه مكتب المبعوث الأممي الخاص إلى اليمن، التزم الجانبان بإلغاء القرارات والإجراءات الأخيرة ضد البنوك وبالتوقف مستقبلًا عن أي قرارات أو إجراءات مماثلة؛ ونشر البنك المركزي اليمني – عدن أنه ألغى القرارات الأخيرة بحق البنوك. ولا تُبلغ المصادر التي تضمها قاعدة الأدلة عمّا إذا كانت إجراءات الجانب الآخر قد أُلغيت ولا عن موعد ذلك."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 10,
+   "field": "YSC-027.fi_relevance_en",
+   "old": null,
+   "new": "Measures on banks, and their cancellation, bear on whether customers in either area can use banks' services; the sources do not report effects on customers."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 11,
+   "field": "YSC-027.fi_relevance_ar",
+   "old": null,
+   "new": "تتصل الإجراءات المتخذة بحق البنوك وإلغاؤها بقدرة العملاء في أيٍّ من المنطقتين على استخدام خدمات البنوك؛ ولا تُبلغ المصادر عن آثارها على العملاء."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 12,
+   "field": "YSC-027.does_not_establish_en",
+   "old": null,
+   "new": "The decision, the agreement and the cancellation notice do not establish whether each side cancelled its measures, which ones or when, what each measure required in practice, which banks or customers were affected, or any later effect on access to services."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 13,
+   "field": "YSC-027.does_not_establish_ar",
+   "old": null,
+   "new": "لا يثبت القرار ولا الاتفاق ولا إشعار الإلغاء ما إذا كان كل جانب قد ألغى إجراءاته، ولا أيّها ولا موعد إلغائها، ولا ما اقتضاه كل إجراء عمليًا، ولا البنوك أو العملاء الذين تأثروا، ولا أي أثر لاحق على الوصول إلى الخدمات."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 14,
+   "field": "YSC-027.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 15,
+   "field": "YSC-027.linked_routes",
+   "old": null,
+   "new": "/finance | /providers | /access | /reforms"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 16,
+   "field": "YSC-027.interpretation_note",
+   "old": null,
+   "new": "Neutral wording: the event follows the UN statement's own words for the parties and their measures. The parties' text is Arabic; the UN's English is an informal translation and adds 'all', which neither edition of this event carries."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 17,
+   "field": "YSC-027.period_ar",
+   "old": null,
+   "new": "من 30 مايو إلى 6 أغسطس 2024"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 20,
+   "col": 20,
+   "field": "YSC-027.value_states",
+   "old": null,
+   "new": "[{\"t\":\"30 May 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-20-2024\",\"loc\":\"cby-ye.com/files/665878ad66e09.pdf p.1, ref. 294/CBY/2024, dated 30/5/2024; read 10 October 2026\"},{\"t\":\"2 June 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-20-2024\",\"loc\":\"cby-ye.com/files/665878ad66e09.pdf p.2, Art. 3: in force from 2024/6/2; read 10 October 2026\"},{\"t\":\"23 July 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-UN-OSESGY-2024-07-23\",\"loc\":\"osesgy.unmissions.org statement dated 23 July 2024, item 1; read 10 October 2026\"},{\"t\":\"6 August 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-NEWS-724\",\"loc\":\"cby-ye.com/news/724, clarification notice of 6 August 2024; read 10 October 2026\"},{\"t\":\"20\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 1,
+   "field": "YSC-028.event_id",
+   "old": null,
+   "new": "YSC-028"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 2,
+   "field": "YSC-028.period_en",
+   "old": null,
+   "new": "20 July 2025"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 3,
+   "field": "YSC-028.event_class",
+   "old": null,
+   "new": "DEPOSIT_INSURANCE_INSTITUTION"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 4,
+   "field": "YSC-028.fact_en",
+   "old": null,
+   "new": "Governor's Decision No. 6 of 2025 provided for relocating the head office of the Deposit Insurance Institution to Aden, in force from issue. The law on the Institution is Law No. 21 of 2008 in the copy CBY-Aden hosts; the decision's recital cites Law No. 40 of 2008."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 5,
+   "field": "YSC-028.fact_ar",
+   "old": null,
+   "new": "نصّ قرار المحافظ رقم (6) لسنة 2025 على نقل المركز الرئيسي لمؤسسة ضمان الودائع إلى عدن، ويُعمل به من تاريخ صدوره. والقانون الخاص بالمؤسسة هو القانون رقم (21) لسنة 2008 وفق النسخة التي يستضيفها البنك المركزي اليمني – عدن؛ وتشير ديباجة القرار إلى القانون رقم (40) لسنة 2008."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 6,
+   "field": "YSC-028.source_ids",
+   "old": null,
+   "new": "SRC-CBY-DEC-06-2025 | SRC-CBY-DIL-21-2008"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 7,
+   "field": "YSC-028.source_scope",
+   "old": null,
+   "new": "A CBY-Aden decision and the law copy it hosts; the two cite different law numbers."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 8,
+   "field": "YSC-028.system_implication_en",
+   "old": null,
+   "new": "The decision provides for the head office to move; it does not show that the move was completed, and a relocation is not the start of deposit cover."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 9,
+   "field": "YSC-028.system_implication_ar",
+   "old": null,
+   "new": "ينصّ القرار على نقل المركز الرئيسي، ولا يُظهر أن النقل اكتمل؛ والنقل ليس بدءًا لتغطية الودائع."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 10,
+   "field": "YSC-028.fi_relevance_en",
+   "old": null,
+   "new": "Deposit insurance matters for trust in deposits, but no source here reports cover, premiums or payouts."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 11,
+   "field": "YSC-028.fi_relevance_ar",
+   "old": null,
+   "new": "لضمان الودائع أهمية في الثقة بالودائع، لكن لا يُبلغ أي مصدر هنا عن التغطية أو الأقساط أو التعويضات."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 12,
+   "field": "YSC-028.does_not_establish_en",
+   "old": null,
+   "new": "The decision does not establish that deposit cover operates, which deposits are covered or that depositors are protected."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 13,
+   "field": "YSC-028.does_not_establish_ar",
+   "old": null,
+   "new": "لا يثبت القرار أن تغطية الودائع تعمل، ولا الودائع المشمولة، ولا أن المودعين محميون."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 14,
+   "field": "YSC-028.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 15,
+   "field": "YSC-028.linked_routes",
+   "old": null,
+   "new": "/finance | /providers | /reforms"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 16,
+   "field": "YSC-028.interpretation_note",
+   "old": null,
+   "new": "Relocation is not establishment, and establishment is not operating cover."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 17,
+   "field": "YSC-028.period_ar",
+   "old": null,
+   "new": "20 يوليو 2025"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 20,
+   "field": "YSC-028.value_states",
+   "old": null,
+   "new": "[{\"t\":\"20 July 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-06-2025\",\"loc\":\"cby-ye.com/files/687c9970b82d9.pdf p.1, ref. 376/CBY/2025, signed 20 July 2025; read 10 October 2026\"},{\"t\":\"6\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"21\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-DIL-21-2008\",\"loc\":\"cby-ye.com/files/62c2edbaad8eb.pdf p.1, «قانون رقم (٢١) لسنة ٢٠٠٨م»; read 10 October 2026\"},{\"t\":\"40\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-06-2025\",\"loc\":\"cby-ye.com/files/687c9970b82d9.pdf p.1, recital «القانون رقم (40) لسنة 2008»; read 10 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 1,
+   "field": "YSC-029.event_id",
+   "old": null,
+   "new": "YSC-029"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 2,
+   "field": "YSC-029.period_en",
+   "old": null,
+   "new": "23 July to 6 August 2025"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 3,
+   "field": "YSC-029.event_class",
+   "old": null,
+   "new": "EXCHANGE_SECTOR_ENFORCEMENT"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 4,
+   "field": "YSC-029.fact_en",
+   "old": null,
+   "new": "Between 23 July and 6 August 2025 CBY-Aden posted in its news 11 Governor's decisions (Nos. 7 to 17 of 2025) covering 51 licences: 44 suspensions and 7 withdrawals of exchange companies and establishments and their branches, including one remittance agent, on the basis of field-inspection reports of the Banking Supervision Sector."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 5,
+   "field": "YSC-029.fact_ar",
+   "old": null,
+   "new": "في الفترة من 23 يوليو إلى 6 أغسطس 2025 نشر البنك المركزي اليمني – عدن في أخباره 11 قرارًا للمحافظ (من رقم (7) إلى رقم (17) لسنة 2025) شملت 51 ترخيصًا: إيقاف 44 ترخيصًا وسحب 7 تراخيص لشركات ومنشآت صرافة وفروعها، من بينها وكيل حوالة واحد، استنادًا إلى تقارير النزول الميداني لقطاع الرقابة على البنوك."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 6,
+   "field": "YSC-029.source_ids",
+   "old": null,
+   "new": "SRC-CBY-ENF-2025-JUL-AUG"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 7,
+   "field": "YSC-029.source_scope",
+   "old": null,
+   "new": "CBY-Aden decisions as posted in its news; counts only, no names."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 8,
+   "field": "YSC-029.system_implication_en",
+   "old": null,
+   "new": "The decisions changed the status of 51 exchange-sector licences; later reinstatements, if any, are not covered here."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 9,
+   "field": "YSC-029.system_implication_ar",
+   "old": null,
+   "new": "غيّرت القرارات حالة 51 ترخيصًا في قطاع الصرافة؛ ولا يغطي هذا الحدث أي إعادة لاحقة للتراخيص إن وُجدت."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 10,
+   "field": "YSC-029.fi_relevance_en",
+   "old": null,
+   "new": "Exchange companies handle transfers and remittances, so licence actions bear on where people can send or collect money; the decisions report licences, not customers or volumes."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 11,
+   "field": "YSC-029.fi_relevance_ar",
+   "old": null,
+   "new": "تتولى شركات الصرافة الحوالات والتحويلات، فتتصل إجراءات التراخيص بالأماكن التي يستطيع الناس فيها إرسال المال أو استلامه؛ والقرارات تُبلغ عن تراخيص لا عن عملاء أو أحجام."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 12,
+   "field": "YSC-029.does_not_establish_en",
+   "old": null,
+   "new": "The counts do not establish which areas lost service, for how long, how many customers were affected, or any effect on transfer costs; names are deliberately not recorded here."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 13,
+   "field": "YSC-029.does_not_establish_ar",
+   "old": null,
+   "new": "لا تثبت هذه الأعداد المناطق التي فقدت الخدمة ولا مدة ذلك ولا عدد العملاء المتأثرين ولا أي أثر على تكلفة التحويلات؛ ولا تُسجَّل الأسماء هنا، وذلك عن قصد."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 14,
+   "field": "YSC-029.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 15,
+   "field": "YSC-029.linked_routes",
+   "old": null,
+   "new": "/providers | /remittances | /access | /reforms"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 16,
+   "field": "YSC-029.interpretation_note",
+   "old": null,
+   "new": "Licence status is not service availability; counts only."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 17,
+   "field": "YSC-029.period_ar",
+   "old": null,
+   "new": "من 23 يوليو إلى 6 أغسطس 2025"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 27,
+   "col": 20,
+   "field": "YSC-029.value_states",
+   "old": null,
+   "new": "[{\"t\":\"6 August 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-ENF-2025-JUL-AUG\",\"loc\":\"cby-ye.com/news/848, posting date of the last of the eleven decisions; read 10 October 2026\"},{\"t\":\"11\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-ENF-2025-JUL-AUG\",\"loc\":\"cby-ye.com/news/834 to /news/848: Governor's Decisions Nos. 7 to 17 of 2025; read 10 October 2026\"},{\"t\":\"51\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-ENF-2025-JUL-AUG\",\"loc\":\"sum of the licences named in Decisions Nos. 7 to 17 of 2025 (44 + 7); read 10 October 2026\"},{\"t\":\"44\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-ENF-2025-JUL-AUG\",\"loc\":\"suspensions: Decisions 7 (13), 8 (5), 9 (10), 10 (2), 11 (7, one a remittance agent), 12 (2), 15 (4), 17 (1); read 10 October 2026\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-ENF-2025-JUL-AUG\",\"loc\":\"withdrawals: Decisions 13 (4 company branches), 14 (1), 16 (2); read 10 October 2026\"},{\"t\":\"17\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 1,
+   "field": "YSC-030.event_id",
+   "old": null,
+   "new": "YSC-030"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 2,
+   "field": "YSC-030.period_en",
+   "old": null,
+   "new": "5 August 2026"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 3,
+   "field": "YSC-030.event_class",
+   "old": null,
+   "new": "CREDIT_INFORMATION_INFRASTRUCTURE"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 4,
+   "field": "YSC-030.fact_en",
+   "old": null,
+   "new": "CBY-Aden launched a defaulters registry system: a digital platform for exchanging data on defaulting customers among the banks operating in Yemen, whose success, it said, depends on all banks supplying accurate data."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 5,
+   "field": "YSC-030.fact_ar",
+   "old": null,
+   "new": "دشّن البنك المركزي اليمني – عدن نظام سجل المتعثرين: منصة رقمية لتبادل البيانات عن العملاء المتعثرين بين البنوك العاملة في اليمن، وذكر أن نجاحه مرهون بتزويد جميع البنوك له ببيانات دقيقة."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 6,
+   "field": "YSC-030.source_ids",
+   "old": null,
+   "new": "SRC-CBY-NEWS-963 | SRC-CBY-CRI-149 | SRC-CBY-CRI-150"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 7,
+   "field": "YSC-030.source_scope",
+   "old": null,
+   "new": "CBY-Aden news release on a launch, beside the credit-information rules the bank publishes."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 8,
+   "field": "YSC-030.system_implication_en",
+   "old": null,
+   "new": "The registry adds a platform to the credit-information rules CBY-Aden publishes (exposure reporting on Form No. 6 and an enquiry before lending)."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 9,
+   "field": "YSC-030.system_implication_ar",
+   "old": null,
+   "new": "يضيف السجل منصة إلى قواعد معلومات الائتمان التي ينشرها البنك المركزي اليمني – عدن (الإبلاغ عن التعرضات الائتمانية على الاستمارة رقم (6) والاستعلام قبل منح الائتمان)."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 10,
+   "field": "YSC-030.fi_relevance_en",
+   "old": null,
+   "new": "A defaulters registry holds data on defaulting customers; any effect on access to credit depends on the data being complete and on lenders using them."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 11,
+   "field": "YSC-030.fi_relevance_ar",
+   "old": null,
+   "new": "يضم سجل المتعثرين بيانات العملاء المتعثرين؛ وأي أثر على الوصول إلى الائتمان مشروط بأن تكون البيانات كاملة وأن يستخدمها المقرضون."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 12,
+   "field": "YSC-030.does_not_establish_en",
+   "old": null,
+   "new": "The launch does not establish coverage, data completeness, lender use or any effect on access to credit."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 13,
+   "field": "YSC-030.does_not_establish_ar",
+   "old": null,
+   "new": "لا يثبت التدشين التغطية ولا اكتمال البيانات ولا استخدام المقرضين لها ولا أي أثر على الوصول إلى الائتمان."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 14,
+   "field": "YSC-030.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 15,
+   "field": "YSC-030.linked_routes",
+   "old": null,
+   "new": "/firms | /finance | /reforms"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 16,
+   "field": "YSC-030.interpretation_note",
+   "old": null,
+   "new": "Launch is not coverage."
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 17,
+   "field": "YSC-030.period_ar",
+   "old": null,
+   "new": "5 أغسطس 2026"
+  },
+  {
+   "finding": "CLOSE-4:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 33,
+   "col": 20,
+   "field": "YSC-030.value_states",
+   "old": null,
+   "new": "[{\"t\":\"5 August 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-NEWS-963\",\"loc\":\"cby-ye.com/news/963, dated 5 August 2026; read 10 October 2026\"},{\"t\":\"6\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]"
+  },
+  {
+   "finding": "CLOSE-4:DEDUP",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 81,
+   "col": 5,
+   "field": "/data/#s9.body_en",
+   "old": "The chronology brings together documented events across Yemen’s macro-financial and financial-inclusion system. Each event retains its date, evidence class, source, relevance to financial inclusion and the limit on what it establishes. Read the sequence as context, not causality: support flows, statistical revisions, cash-transfer digitisation pilots, project targets, programme stages and institutional events remain distinct kinds of evidence.",
+   "new": "The dated chronology of Yemen’s macro-financial and financial-inclusion system is kept in one place, on the Banks and microfinance page, where each event keeps its date, its source and what it does not establish."
+  },
+  {
+   "finding": "CLOSE-4:DEDUP",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 82,
+   "col": 7,
+   "field": "/data/#s9.body_ar",
+   "old": "تجمع السلسلة الزمنية أحداثًا موثقة عبر النظام الاقتصادي والمالي ومنظومة الشمول المالي في اليمن. ويحتفظ كل حدث بتاريخه وفئة دليله ومصدره وصلته بالشمول المالي والحد الذي لا يجوز تجاوزه في الاستنتاج. ويُقرأ التعاقب بوصفه سياقًا لا علاقة سببية؛ لذلك تبقى تدفقات الدعم والمراجعات الإحصائية وتجارب رقمنة برامج التحويلات النقدية ومستهدفات المشروعات ومراحل البرامج والأحداث المؤسسية أنواعًا منفصلة من الأدلة.",
+   "new": "تُحفظ السلسلة الزمنية المؤرخة للنظام الاقتصادي والمالي ومنظومة الشمول المالي في اليمن في موضع واحد، في صفحة «البنوك والتمويل الأصغر»، حيث يحتفظ كل حدث بتاريخه ومصدره وما لا يثبته."
+  },
+  {
+   "finding": "CLOSE-4:DEDUP",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-DATA-CHRONOLOGY-OPEN",
+   "old": null,
+   "new": "Open the dated events on the Banks and microfinance page || افتح الأحداث المؤرخة في صفحة «البنوك والتمويل الأصغر»"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 278,
+   "col": 5,
+   "field": "/readings/microfinance-structural-divergence/#s6.body_en",
+   "old": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.",
+   "new": "Institutional form matters too. The licensed-bank list of the Central Bank of Yemen – Aden, as checked on 3 October 2026, names 26 banks, 12 of which this resource classifies as microfinance banks from their names. A listing or licence establishes an institutional status. It does not establish current operation, geographic reach, client mix or outreach, so institutional change can matter without answering the inclusion question.\nThe rules on microfinance banks make the point concrete. A 2022 decision of the Board of Directors of CBY-Aden barred combining exchange and microfinance activity, and let the owners of an exchange company apply for a microfinance bank only by converting that company; a 2023 decision raised the minimum capital of microfinance banks, with a deadline at the end of 2025. A microfinance bank licensed through such a conversion can be an existing business reclassified, not new inclusion."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 278,
+   "col": 7,
+   "field": "/readings/microfinance-structural-divergence/#s6.body_ar",
+   "old": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.",
+   "new": "والشكل المؤسسي مهم أيضًا. فقائمة البنوك المرخصة لدى البنك المركزي اليمني – عدن، كما اطُّلع عليها في 3 أكتوبر 2026، تضم 26 بنكًا، يصنّف هذا المورد 12 منها بنوكَ تمويل أصغر استنادًا إلى أسمائها. ويثبت الإدراج أو الترخيص وضعًا مؤسسيًا، لكنه لا يثبت التشغيل الحالي ولا الانتشار الجغرافي ولا تركيبة العملاء ولا حجم الوصول؛ ولذلك قد يكون التغير المؤسسي مهمًا من دون أن يجيب عن سؤال الشمول.\nوتجسّد القواعد الخاصة ببنوك التمويل الأصغر هذه النقطة. فقد منع قرار لمجلس إدارة البنك المركزي اليمني – عدن صدر عام 2022 الجمع بين نشاط الصرافة ونشاط التمويل الأصغر، ولم يُجز لمالكي شركة صرافة التقدم بطلب إنشاء بنك تمويل أصغر إلا بتحويل تلك الشركة؛ ورفع قرار صدر عام 2023 الحد الأدنى لرأس مال بنوك التمويل الأصغر، على أن يكتمل ذلك بنهاية 2025. وقد يكون بنك التمويل الأصغر المرخّص عبر مثل هذا التحويل نشاطًا قائمًا أُعيد تصنيفه، لا شمولًا جديدًا."
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "08_READINGS",
+   "row": 10,
+   "col": 12,
+   "field": "CWR-006.source_bindings",
+   "old": "[\"INS-K04-023\",\"EP-CBY-BANK-ROSTER-2026\",\"CON-057\",\"SRC-SANAA-MF-2020\",\"CON-058\",\"SRC-WB-FSD-2024-001\"]",
+   "new": "[\"INS-K04-023\",\"EP-CBY-BANK-ROSTER-2026\",\"CON-057\",\"SRC-SANAA-MF-2020\",\"CON-058\",\"SRC-WB-FSD-2024-001\",\"SRC-CBY-BOARD-2022-2-11\",\"SRC-CBY-BOARD-2023-11-3\"]"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 37,
+   "col": 8,
+   "field": "EP-CBY-CREDIT-INFO-SPINE-K04.method",
+   "old": "Official CBY web publications + dated launch event",
+   "new": "Official CBY-Aden web publications (cby-ye.com/publications/149 and /150; SRC-CBY-CRI-149, SRC-CBY-CRI-150) + dated launch event (cby-ye.com/news/963, 5 August 2026; SRC-CBY-NEWS-963)"
+  },
+  {
+   "finding": "CLOSE-4:INSTRUMENTS",
+   "sheet": "34_EVIDENCE_PASSPORTS",
+   "row": 37,
+   "col": 13,
+   "field": "EP-CBY-CREDIT-INFO-SPINE-K04.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 23,
+   "col": 2,
+   "field": "00_MASTER!r23c2",
+   "old": "23",
+   "new": 29
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 23,
+   "col": 3,
+   "field": "00_MASTER!r23c3",
+   "old": "23",
+   "new": 29
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 2,
+   "field": "00_MASTER!r24c2",
+   "old": "176",
+   "new": 199
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 3,
+   "field": "00_MASTER!r24c3",
+   "old": "176",
+   "new": 199
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 14,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r14c4",
+   "old": "23",
+   "new": 29
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 14,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r14c3",
+   "old": "23",
+   "new": 29
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r15c4",
+   "old": "176",
+   "new": 199
+  },
+  {
+   "finding": "CLOSE-4:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r15c3",
+   "old": "176",
+   "new": 199
+  }
+ ]
+}

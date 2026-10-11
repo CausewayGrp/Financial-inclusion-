@@ -177,7 +177,9 @@ jobs:
     name: Gate negative controls (${{ matrix.shard }}/6)
     needs: gates
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # 35, not 20: on 11 October 2026 three shards caught every fault and were then cancelled at 20 minutes (run
+    # 38096726038; shard 3 took 1,181 s of tests). The controls grew with the content; a timeout is not a failed fault.
+    timeout-minutes: 35
     strategy:
       fail-fast: false
       matrix:

@@ -8420,6 +8420,8 @@
       "SRC-SANAA-MF-2020",
       "CON-058",
       "SRC-WB-FSD-2024-001",
+      "SRC-CBY-BOARD-2022-2-11",
+      "SRC-CBY-BOARD-2023-11-3",
       "CLM-054",
       "CLM-055",
       "CLM-056",
@@ -8428,11 +8430,15 @@
     ],
     "direct_source_ids": [
       "SRC-SANAA-MF-2020",
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-BOARD-2022-2-11",
+      "SRC-CBY-BOARD-2023-11-3"
     ],
     "resolved_source_ids": [
       "SRC-SANAA-MF-2020",
       "SRC-WB-FSD-2024-001",
+      "SRC-CBY-BOARD-2022-2-11",
+      "SRC-CBY-BOARD-2023-11-3",
       "SRC-SFD-Q4-2015-001",
       "SRC-SFD-Q4-2020-001",
       "SRC-SANAA-MFB-2024",
@@ -8464,6 +8470,16 @@
       {
         "source_id": "SRC-WB-FSD-2024-001",
         "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-BOARD-2022-2-11",
+        "primary_url": "https://cby-ye.com/files/623ad771a78d7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-BOARD-2023-11-3",
+        "primary_url": "https://cby-ye.com/files/659aa2ee5852b.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -10652,11 +10668,15 @@
     ],
     "direct_source_ids": [
       "SRC-SANAA-MF-2020",
-      "SRC-WB-FSD-2024-001"
+      "SRC-WB-FSD-2024-001",
+      "SRC-CBY-BOARD-2022-2-11",
+      "SRC-CBY-BOARD-2023-11-3"
     ],
     "resolved_source_ids": [
       "SRC-SANAA-MF-2020",
       "SRC-WB-FSD-2024-001",
+      "SRC-CBY-BOARD-2022-2-11",
+      "SRC-CBY-BOARD-2023-11-3",
       "SRC-SFD-Q4-2015-001",
       "SRC-SFD-Q4-2020-001",
       "SRC-SANAA-MFB-2024",
@@ -10688,6 +10708,16 @@
       {
         "source_id": "SRC-WB-FSD-2024-001",
         "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-BOARD-2022-2-11",
+        "primary_url": "https://cby-ye.com/files/623ad771a78d7.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-BOARD-2023-11-3",
+        "primary_url": "https://cby-ye.com/files/659aa2ee5852b.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {

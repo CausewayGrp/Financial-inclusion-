@@ -2,23 +2,23 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "c447171006a8d1be4e684c36e90f29ea5db9295c649bf747083ec81914d0ae13",
-  "page_specs_sha256": "d5789ead5b70b7192df7b9564bf3aabb60e857ce4756ea7df29c9f252befd7c6",
+  "production_master_sha256": "c24791d6fd22b127f9f5109f93a91b7d50b942303799993d0fb3ab5510100852",
+  "page_specs_sha256": "a7b7611be6590dad528d62702f22cf721340886830a78adf2953f08a88431eaf",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
   "evidence_records": 110,
   "public_claims": 60,
-  "chronology_events": 23,
-  "sources": 176,
-  "public_locators": 169,
+  "chronology_events": 29,
+  "sources": 199,
+  "public_locators": 192,
   "curated_resources": 28,
   "readings": 11,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 42,
   "evidence_passports": 55,
-  "search_records": 478,
+  "search_records": 507,
   "page_specs": 144
  },
  "projection_roles": {
@@ -562,7 +562,30 @@
      "SRC-UNICEF-MICS-YEM-2022-001",
      "SRC-WB-YMPS-R1-2022-001",
      "SRC-WB-WDI-RMT-COST-YEM",
-     "SRC-UN-SDG-10C1-METADATA"
+     "SRC-UN-SDG-10C1-METADATA",
+     "SRC-CBY-DEC-07-2026",
+     "SRC-CBY-EKYC-2023",
+     "SRC-CBY-CIRC-02-2025",
+     "SRC-CBY-CIRC-03-2025",
+     "SRC-CBY-CIRC-04-2025",
+     "SRC-CBY-CIRC-01-2026",
+     "SRC-CBY-DEC-19-2024",
+     "SRC-CBY-CIRC-01-2024",
+     "SRC-CBY-BANKS-BS-2022",
+     "SRC-CBY-BOARD-2022-2-11",
+     "SRC-CBY-BOARD-2023-11-3",
+     "SRC-CBY-CRI-149",
+     "SRC-CBY-CRI-150",
+     "SRC-CBY-NEWS-963",
+     "SRC-CBY-NEWS-645",
+     "SRC-CBY-NEWS-656",
+     "SRC-CBY-NEWS-579",
+     "SRC-CBY-ENF-2025-JUL-AUG",
+     "SRC-CBY-DEC-06-2025",
+     "SRC-CBY-DEC-20-2024",
+     "SRC-CBY-NEWS-724",
+     "SRC-UN-OSESGY-2024-07-23",
+     "SRC-CBY-DIL-21-2008"
     ],
     "displayed_sources_without_document_type": [
      "SRC-SFD-MF-HISTORY-TOR-2012-001",
@@ -615,18 +638,24 @@
      "YSC-009",
      "YSC-010",
      "YSC-011",
+     "YSC-025",
+     "YSC-026",
      "YSC-012",
      "YSC-024",
+     "YSC-027",
      "YSC-013",
      "YSC-014",
      "YSC-018",
      "YSC-015",
+     "YSC-028",
      "YSC-016",
+     "YSC-029",
      "YSC-017",
      "YSC-019",
      "YSC-021",
      "YSC-022",
      "YSC-023",
+     "YSC-030",
      "YSC-020"
     ],
     "never_displayed": "sources without a public locator are never named or linked (count: public_inventory sources − public_locators)"
@@ -4485,7 +4514,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 40,
+   "source_references": 42,
    "next_actions": [
     "/evidence/CLM-022/"
    ],
@@ -4848,7 +4877,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 33,
+   "source_references": 35,
    "next_actions": [
     "/evidence/CLM-009/"
    ],
@@ -4890,7 +4919,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 50,
+   "source_references": 52,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -5240,7 +5269,7 @@
     "SRC-SANAA-MF-2020",
     "SRC-WB-FSD-2024-001"
    ],
-   "source_references": 9,
+   "source_references": 11,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
