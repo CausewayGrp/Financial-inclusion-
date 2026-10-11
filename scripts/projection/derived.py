@@ -491,11 +491,31 @@ def object_source_closure(ctx, e):
             else:
                 out.append(record("visual", vid, routes, deps, "COMPOSITE_OF_OBJECTS" if members else "COMPOSITE_UNLISTED",
                                   "COMPOSITE_OF_OBJECTS", [], members, [], []))
+    # Close-out addendum item 1: a priority's current evidence closes like a Reading's — through the records and sources
+    # 10 binds (evidence_bindings, source_bindings); a priority that binds nothing stays NO_DIRECT_SOURCE_BINDING.
     for r in ctx.out["content/measurement_agenda.json"]:
+        deps = []
+        for x in list(r.get("source_bindings") or []) + list(r.get("evidence_bindings") or []):
+            if x not in deps:
+                deps.append(x)
+        cls = OrderedDict((d, classify(d)) for d in deps)
+        direct = [d for d, c in cls.items() if c == "SOURCE"]
+        members = [d for d, c in cls.items() if c == "MEMBER"]
+        context = [d for d, c in cls.items() if c == "CONTEXT"]
+        open_ = [d for d, c in cls.items() if c == "OPEN"]
+        resolved = list(direct)
+        for m in members:
+            c = eo_clo[m]
+            for s in c["resolved_source_ids"]:
+                if s not in resolved:
+                    resolved.append(s)
+            if c["closure_state"] not in tmpl["closed_states"]:
+                open_.append(m)
+        key = "measurement" if not deps else ("measurement_partial" if open_ or not resolved else "measurement_closed")
         out.append(OrderedDict([("object_type", "measurement"), ("object_id", r["measurement_id"]), ("public_routes", r["affected_route_list"]),
-                                ("lineage_state", None), ("dependency_ids", []), ("direct_source_ids", []), ("resolved_source_ids", []),
-                                ("resolved_via_object_ids", []), ("context_reference_ids", []), ("unresolved_dependency_ids", []),
-                                ("source_locators", []), ("closure_state", CS["measurement"]), ("rule", tmpl["rule"])]))
+                                ("lineage_state", None), ("dependency_ids", deps), ("direct_source_ids", direct), ("resolved_source_ids", resolved),
+                                ("resolved_via_object_ids", members), ("context_reference_ids", context), ("unresolved_dependency_ids", open_),
+                                ("source_locators", locators(resolved)), ("closure_state", CS[key]), ("rule", tmpl["rule"])]))
     return out
 
 

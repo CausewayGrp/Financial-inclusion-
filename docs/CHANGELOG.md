@@ -1,5 +1,36 @@
 # Repository Change Log
 
+## 2026-10-11 — Public-literal audit v3: every number a reader sees traces to a source (Stage A addendum, item 1)
+
+An independent audit found that the literal closure's "0 unresolved" covered less than a reader sees. The Measurement
+Agenda printed observations (MA-001 11.9%, 17.7%, 31.9%, 1,297; MA-003 Findex group values; MA-004 19%; MA-005 5.81,
+1.48, 103.1) that no record bound to the priority holds, and the audit never read them. Separately, any number in a record
+that was not itself closed to a source passed as "controlled dataset inventory or method metadata" (180 numbers,
+observations among them). `scripts/audit_public_literals.py` v3 fixes the gate, not a parallel one:
+
+- **Scope.** The audit now also reads the Measurement Agenda priorities on every page that renders them (every public
+  field on /measurement/, the card fields elsewhere and on the Readings bound to them) and the Reading fields printed
+  outside a Reading's sections (title, question, thesis, evidence period, prohibited inference; cards elsewhere). It
+  reads each record's field from the governed projection, and tokenises it itself (no fragments such as "445" from an
+  Arabic "و88,445").
+- **No fallback.** A number passes only as a date or period part, an identifier or document reference, a contract
+  inventory count, a number in a source-closed record bound to the page (or to the priority, or to the Reading), or an
+  allowed constant with its reason. A composite record's own text never traces itself: its number must be in a listed
+  member record that is closed to a source, or equal a governed data row its visual contract draws or tabulates whose
+  source has a public locator. Otherwise it is unresolved.
+- **Open traces are listed, not hidden.** The 314 public numbers that the widened rule cannot yet trace — the four
+  priorities, the Findex vintage ladder (values held in CLM-026, not a listed member), the MFI table (MFI-SPINE-2015-Q4)
+  and the crosswalk's count of 36 measures — are listed in `scripts/literal_audit_open_traces.json` with the transaction
+  that closes them (CLOSE-6A). The audit reports them as OPEN_TRACE_LISTED, never as resolved; the list is pinned to
+  this Master, and an entry that no longer matches fails. Validation now reads 0 unresolved and 314 open.
+- **Bindings for priorities.** The projection and the closure accept `evidence_bindings` and `source_bindings` on
+  10_MEASUREMENT_AGENDA (closed or partial like a Reading); the /measurement/ card lists the bound records and the
+  sources their closure reaches. Nothing changes on a page until the Master binds them (CLOSE-6A).
+- **Gates.** `scripts/validate.py` requires audit v3, no audit problem, the widened surfaces read, no retired category
+  and an open list pinned to this Master. Five negative controls (runner `scripts/tests/literal_audit_check.py`): a
+  priority's number, a Reading thesis number, a composite number held only in its own text, a tabled value without its
+  governed row, and a stale open trace.
+
 ## 2026-10-11 — Stage A of the close-out brief is complete
 
 `audit/close_out/PROGRESS.md` records the #37 merge and the Stage A checkpoint (main `53dccc4d`): twelve pull requests

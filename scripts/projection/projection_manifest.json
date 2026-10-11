@@ -222,7 +222,9 @@
       "stable_key": "measurement_id",
       "fields": {
         "dimensions_en": "json",
-        "affected_routes": "json"
+        "affected_routes": "json",
+        "evidence_bindings": "json",
+        "source_bindings": "json"
       },
       "derived_fields": [
         {
