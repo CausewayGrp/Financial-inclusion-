@@ -1,0 +1,105 @@
+{
+ "stage": "CLOSE-6C",
+ "staged_master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
+ "installed": [
+  "scripts/projection/controlled_inputs/page_spec_design_intent.json",
+  "OPENAI_REENTRY_CHECKPOINT.md",
+  "handoff/README_FIRST.md"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 304 HTML files from 150 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=18223 unresolved=0 open=0 problems=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 150 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 2182 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 1,
+   "tail": [
+    "FAIL F6-G01 og:image names an image the build does not ship en/readings/how-money-reaches-households: /assets/social/readings_how-money-reaches-households__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/readings/how-money-reaches-households: /assets/social/readings_how-money-reaches-households__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/CCY-ISP-2024: /assets/social/evidence_CCY-ISP-2024__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/CCY-ISP-2024: /assets/social/evidence_CCY-ISP-2024__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/CCY-SAM-2024: /assets/social/evidence_CCY-SAM-2024__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/CCY-SAM-2024: /assets/social/evidence_CCY-SAM-2024__ar.png"
+   ],
+   "allowed_errors": [
+    "FAIL F6-G01 og:image names an image the build does not ship en/readings/how-money-reaches-households: /assets/social/readings_how-money-reaches-households__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/readings/how-money-reaches-households: /assets/social/readings_how-money-reaches-households__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/CCY-ISP-2024: /assets/social/evidence_CCY-ISP-2024__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/CCY-ISP-2024: /assets/social/evidence_CCY-ISP-2024__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/CCY-SAM-2024: /assets/social/evidence_CCY-SAM-2024__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/CCY-SAM-2024: /assets/social/evidence_CCY-SAM-2024__ar.png"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092\",",
+    " \"outputs\": 40,",
+    " \"differences\": [],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
+ "page_specs_sha256": "e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394"
+}

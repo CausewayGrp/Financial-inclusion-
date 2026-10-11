@@ -1,0 +1,751 @@
+{
+ "transaction": "CLOSE-6C",
+ "summary": "Stage A addendum item 4: Reading CWR-012 'How money reaches households', with the two Cash Consortium of Yemen findings it uses held as records CCY-ISP-2024 and CCY-SAM-2024; and search alias 001's boundary note, which said the evidence base holds no law (found while closing CLOSE-6B).",
+ "self_counts": {
+  "site_pages": 150,
+  "bilingual_sections": 254,
+  "questions": 11,
+  "evidence_objects": 115,
+  "public_claims": 60,
+  "readings": 12,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 31,
+  "sources": 200,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 27
+ },
+ "input_master_sha256": "17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9",
+ "output_master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
+ "cells_written": 79,
+ "changes": [
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 1,
+   "field": "CCY-ISP-2024.object_id",
+   "old": null,
+   "new": "CCY-ISP-2024"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 2,
+   "field": "CCY-ISP-2024.object_class",
+   "old": null,
+   "new": "TEMPORAL_OBSERVATION"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 3,
+   "field": "CCY-ISP-2024.public_routes",
+   "old": null,
+   "new": "/remittances/"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 4,
+   "field": "CCY-ISP-2024.title_en",
+   "old": null,
+   "new": "Informal support in the cash income of cash-assistance households in three areas (CCY, June 2024)"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 5,
+   "field": "CCY-ISP-2024.title_ar",
+   "old": null,
+   "new": "الدعم غير الرسمي في الدخل النقدي لأسر تتلقى مساعدات نقدية في ثلاث مناطق (تحالف النقد في اليمن، يونيو 2024)"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 6,
+   "field": "CCY-ISP-2024.summary_en",
+   "old": null,
+   "new": "A Cash Consortium of Yemen survey, collected in June 2024, of households receiving multipurpose cash assistance in three areas that the study calls sub-districts and places in areas under the internationally recognized government (Al Mudhaffar in Taiz, Qa’tabah in Ad-Dali governorate and Tuban in Lahj) found that the assistance made up the majority of these households’ cash income; Qa’tabah reported the largest assistance share of the three areas (68%). Loans from informal support networks were the second-largest share in Al Mudhaffar (47%) and Qa’tabah (26%), and gifts the smallest share in all three areas. In Al Mudhaffar, 26% of the households reported an increased ability to give to their networks after receiving the assistance, against 4% reporting an increased ability to receive support."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 7,
+   "field": "CCY-ISP-2024.summary_ar",
+   "old": null,
+   "new": "وفق مسح لتحالف النقد في اليمن جُمعت بياناته في يونيو 2024 من أسر تتلقى مساعدات نقدية متعددة الأغراض في ثلاث مناطق تسميها الدراسة عُزلًا وتقول إنها تقع في المناطق الخاضعة للحكومة المعترف بها دوليًا (المظفر في تعز، وقعطبة في محافظة الضالع، وتُبن في لحج)، شكّلت المساعدات معظم الدخل النقدي لهذه الأسر، وسجّلت قعطبة أكبر حصة للمساعدات بين المناطق الثلاث (68%). وجاءت القروض من شبكات الدعم غير الرسمية في المرتبة الثانية في المظفر (47%) وقعطبة (26%)، وكانت الهدايا أصغر الحصص في المناطق الثلاث. وفي المظفر أفادت 26% من الأسر بأن قدرتها على تقديم الدعم لشبكاتها ازدادت بعد تلقي المساعدات، مقابل 4% أفادت بازدياد قدرتها على تلقي الدعم."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 8,
+   "field": "CCY-ISP-2024.definition_en",
+   "old": null,
+   "new": "The average share of earnings, gifts, loans and cash assistance in the cash income of sampled households receiving multipurpose cash assistance, and the changes in giving and receiving support that they reported."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 9,
+   "field": "CCY-ISP-2024.definition_ar",
+   "old": null,
+   "new": "متوسط حصة الكسب والهدايا والقروض والمساعدات النقدية في الدخل النقدي لأسر العينة التي تتلقى مساعدات نقدية متعددة الأغراض، والتغيرات التي أفادت بها في تقديم الدعم وتلقيه."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 10,
+   "field": "CCY-ISP-2024.period_en",
+   "old": null,
+   "new": "Data collected in June 2024; the period the income questions refer to is not printed"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 11,
+   "field": "CCY-ISP-2024.period_ar",
+   "old": null,
+   "new": "جُمعت البيانات في يونيو 2024؛ ولا تُذكر الفترة التي تشير إليها أسئلة الدخل"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 12,
+   "field": "CCY-ISP-2024.universe_en",
+   "old": null,
+   "new": "Households that received multipurpose cash assistance from a Cash Consortium of Yemen partner from December 2023 to May 2024 in Al Mudhaffar, Qa’tabah and Tuban, three areas the study calls sub-districts; it describes each sample as representative of those recipients at sub-district level, and does not state its sampling method or weighting."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 13,
+   "field": "CCY-ISP-2024.universe_ar",
+   "old": null,
+   "new": "الأسر التي تلقت مساعدات نقدية متعددة الأغراض من أحد شركاء تحالف النقد في اليمن بين ديسمبر 2023 ومايو 2024 في المظفر وقعطبة وتُبن، وهي ثلاث مناطق تسميها الدراسة عُزلًا؛ وتصف الدراسة كل عينة بأنها ممثلة لأولئك المستفيدين على مستوى العزلة، ولا تذكر طريقة المعاينة ولا الترجيح."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 14,
+   "field": "CCY-ISP-2024.method_en",
+   "old": null,
+   "new": "A household survey by Cash Consortium of Yemen partners using Mercy Corps’s Informal Social Protection Index; the study compares the cash income households report with the assistance amount (YER 240,000). Values and rankings are those printed in the report’s text (p. 9), not the data labels on its figure, and the shares are not summed."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 15,
+   "field": "CCY-ISP-2024.method_ar",
+   "old": null,
+   "new": "مسح أسري أجراه شركاء تحالف النقد في اليمن باستخدام مؤشر الحماية الاجتماعية غير الرسمية التابع لمنظمة ميرسي كور (Mercy Corps)؛ وتقارن الدراسة الدخل النقدي الذي تفيد به الأسر بمبلغ المساعدة (240,000 ريال يمني). والقيم والترتيب هي المطبوعة في نص التقرير (ص 9)، لا القيم المدوّنة على الشكل البياني، ولا تُجمع الحصص."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 16,
+   "field": "CCY-ISP-2024.limitations_en",
+   "old": null,
+   "new": "The shares describe cash-assistance recipients in three areas, not households in Yemen, and gifts and loans from informal networks are not remittances: the study prints no channel, frequency, amount or split between support from inside and outside Yemen. | The changes in giving and receiving are recipients’ own reports, with no baseline or comparison group, and the study draws no causal link."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 17,
+   "field": "CCY-ISP-2024.limitations_ar",
+   "old": null,
+   "new": "تصف الحصص متلقي المساعدات النقدية في ثلاث مناطق، لا الأسر في اليمن، والهدايا والقروض من الشبكات غير الرسمية ليست حوالات: فالدراسة لا تورد قناةً ولا تكرارًا ولا مبلغًا، ولا توزيعًا للدعم بين ما يأتي من داخل اليمن وما يأتي من خارجه. | التغيرات في تقديم الدعم وتلقيه هي ما أفاد به المستفيدون أنفسهم، دون خط أساس أو مجموعة مقارنة، ولا تستخلص الدراسة أي علاقة سببية."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 18,
+   "field": "CCY-ISP-2024.currentness_en",
+   "old": null,
+   "new": "Data were collected in June 2024; the report prints no date, and ReliefWeb lists it as posted on 14 November 2024 (checked on 11 October 2026)."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 19,
+   "field": "CCY-ISP-2024.currentness_ar",
+   "old": null,
+   "new": "جُمعت البيانات في يونيو 2024؛ ولا يحمل التقرير تاريخًا مطبوعًا، ويذكر موقع ReliefWeb أنه نُشر على الموقع في 14 نوفمبر 2024 (جرى التحقق في 11 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 20,
+   "field": "CCY-ISP-2024.change_trigger_en",
+   "old": null,
+   "new": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 21,
+   "field": "CCY-ISP-2024.change_trigger_ar",
+   "old": null,
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 22,
+   "field": "CCY-ISP-2024.verification_en",
+   "old": null,
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 23,
+   "field": "CCY-ISP-2024.verification_ar",
+   "old": null,
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 24,
+   "field": "CCY-ISP-2024.source_dependencies",
+   "old": null,
+   "new": "SRC-CCY-ISP-2024"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 26,
+   "field": "CCY-ISP-2024.lineage_state",
+   "old": null,
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 29,
+   "field": "CCY-ISP-2024.value_states",
+   "old": null,
+   "new": "[{\"t\":\"68%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"The Unseen Assistance, printed p.9 (PDF p.10): 'Qa’tabah reporting the largest MPCA proportion (68%)'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"47%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"same, p.9: 'Loans comprised the second-highest proportion contribution of cash income in Al Mudhaffar (47%)'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"26%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"same, p.9: 'and Qa’tabah (26%)'; and 'a much greater proportion of HHs reported an increased ability to provide assistance (26%)' (Al Mudhaffar); read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"4%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"same, p.9: 'compared to the proportion reporting an increased ability to receive support (4%)'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"240,000\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"same, p.9: 'the amount of MPCA distributed to a HH (YER 240,000)'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"9\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"June 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"same, p.5 (PDF p.6): 'Data was collected in June 2024'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"December 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"same, p.5: 'from a CCY partner from December 2023 to May 2024'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"May 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"same, p.5; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"14 November 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-ISP-2024\",\"loc\":\"ReliefWeb landing page: 'Posted 14 Nov 2024'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"11 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 118,
+   "col": 25,
+   "field": "CCY-ISP-2024.source_links",
+   "old": null,
+   "new": "[{\"source_id\":\"SRC-CCY-ISP-2024\",\"url\":\"https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 1,
+   "field": "CCY-SAM-2024.object_id",
+   "old": null,
+   "new": "CCY-SAM-2024"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 2,
+   "field": "CCY-SAM-2024.object_class",
+   "old": null,
+   "new": "TEMPORAL_OBSERVATION"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 3,
+   "field": "CCY-SAM-2024.public_routes",
+   "old": null,
+   "new": "/remittances/"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 4,
+   "field": "CCY-SAM-2024.title_en",
+   "old": null,
+   "new": "Income sources reported by cash-assistance households, with a multiplier estimate, in selected villages of Ad-Dali and Ja’ar (CCY pilot study, 2024)"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 5,
+   "field": "CCY-SAM-2024.title_ar",
+   "old": null,
+   "new": "مصادر الدخل التي أفادت بها أسر تتلقى مساعدات نقدية، مع تقدير للمضاعف، في قرى مختارة من الضالع وجعار (دراسة تجريبية لتحالف النقد في اليمن، 2024)"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 6,
+   "field": "CCY-SAM-2024.summary_en",
+   "old": null,
+   "new": "A 2024 Cash Consortium of Yemen pilot study reports that, on average, 61% of the households assessed in selected villages of Ad-Dali and Ja’ar, two areas it calls sub-districts and places under the internationally recognized government, named the cash assistance as a main income source in the 30 days before the interview, and 55% casual or daily wage labour; it notes that some respondents did not count money received by “hawala” (the study’s word) or debt as income. Using a single social accounting matrix for each locality, built from a survey of households receiving multipurpose cash assistance and interviews with local business owners, the study estimated that each US dollar of the assistance produced USD 2.56 of economic activity, the transfer included, in the Ad-Dali villages and USD 2.29 in the Ja’ar villages, and says the two values cannot be directly compared."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 7,
+   "field": "CCY-SAM-2024.summary_ar",
+   "old": null,
+   "new": "تفيد دراسة تجريبية لتحالف النقد في اليمن عام 2024 بأن 61% في المتوسط من الأسر التي شملها التقييم في قرى مختارة من الضالع وجعار ذكرت المساعدات النقدية مصدرًا رئيسيًا للدخل خلال 30 يومًا سبقت المقابلة، وأن 55% ذكرت العمل العرضي أو بالأجر اليومي؛ والضالع وجعار منطقتان تسميهما الدراسة عزلتين وتقول إنهما تقعان في المناطق الخاضعة للحكومة المعترف بها دوليًا. وتشير الدراسة إلى أن بعض المستجيبين لم يحتسبوا ما تلقوه عن طريق «الحوالة» (بتعبير الدراسة) ولا الديون دخلًا. وباستخدام مصفوفة محاسبة اجتماعية واحدة لكل منطقة، بُنيت من مسح لأسر تتلقى مساعدات نقدية متعددة الأغراض ومقابلات مع أصحاب أعمال محليين، قدّرت الدراسة أن كل دولار أمريكي واحد من المساعدات أنتج نشاطًا اقتصاديًا قيمته 2.56 دولار، بما فيه التحويل النقدي نفسه، في قرى الضالع، و2.29 دولار في قرى جعار، وتذكر أن القيمتين لا تقبلان المقارنة المباشرة."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 8,
+   "field": "CCY-SAM-2024.definition_en",
+   "old": null,
+   "new": "The main income sources the assessed households reported, and the study’s estimated ratio of total economic activity, the cash injected included, to the cash assistance injected in each locality."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 9,
+   "field": "CCY-SAM-2024.definition_ar",
+   "old": null,
+   "new": "مصادر الدخل الرئيسية التي أفادت بها الأسر التي شملها التقييم، ونسبة إجمالي النشاط الاقتصادي، بما فيه النقد المضخوخ، إلى المساعدات النقدية المضخوخة في كل منطقة، كما تقدّرها الدراسة."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 10,
+   "field": "CCY-SAM-2024.period_en",
+   "old": null,
+   "new": "The latest assistance distribution, October–December 2023; household survey in January 2024 (the report also gives January 2023 in one place)"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 11,
+   "field": "CCY-SAM-2024.period_ar",
+   "old": null,
+   "new": "آخر توزيع للمساعدات بين أكتوبر وديسمبر 2023؛ والمسح الأسري في يناير 2024 (ويذكر التقرير أيضًا يناير 2023 في موضع واحد)"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 12,
+   "field": "CCY-SAM-2024.universe_en",
+   "old": null,
+   "new": "Selected villages and towns of Ad-Dali (Ad-Dali governorate) and Ja’ar (Khanfar district, Abyan governorate), which the study calls sub-districts, that received the most assistance and were accessible: 291 household interviews in Ad-Dali and 209 in Ja’ar, with households that had received at least two rounds of assistance, and interviews with local businesses."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 13,
+   "field": "CCY-SAM-2024.universe_ar",
+   "old": null,
+   "new": "قرى وبلدات مختارة من منطقتَي الضالع (محافظة الضالع) وجعار (مديرية خنفر، محافظة أبين)، وتسميهما الدراسة عزلتين، تلقت أكبر قدر من المساعدات وأمكن الوصول إليها: 291 مقابلة أسرية في الضالع و209 في جعار، مع أسر تلقت جولتين على الأقل من المساعدات، إضافة إلى مقابلات مع منشآت تجارية محلية."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 14,
+   "field": "CCY-SAM-2024.method_en",
+   "old": null,
+   "new": "A multiplier from a single social accounting matrix for each locality, a snapshot at constant prices with fixed spending shares: total economic activity, the injection included, divided by the cash injected. It counts first-round effects only, leaves out business owners’ and employees’ spending and spending outside the locality, and publishes no interval or range; Ja’ar’s matrices are not printed, so its value cannot be recomputed from the report."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 15,
+   "field": "CCY-SAM-2024.method_ar",
+   "old": null,
+   "new": "مضاعف مستخرج من مصفوفة محاسبة اجتماعية واحدة لكل منطقة، تمثل لقطة بأسعار ثابتة وحصص إنفاق ثابتة: إجمالي النشاط الاقتصادي، بما فيه النقد المضخوخ، مقسومًا على النقد المضخوخ. ولا يحتسب إلا آثار الجولة الأولى من الإنفاق، ويستبعد إنفاق أصحاب الأعمال والعاملين لديهم والإنفاق خارج المنطقة، ولا تُنشر له فترة ثقة ولا مدى؛ ولم ينشر التقرير مصفوفات جعار، فلا يمكن إعادة حساب قيمتها منه."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 16,
+   "field": "CCY-SAM-2024.limitations_en",
+   "old": null,
+   "new": "The multipliers are model estimates for selected villages, not a multiplier for Yemen or a governorate, and measure economic activity that includes the transfer, not household or local income; they say nothing about how money reaches households. | The income sources describe assistance recipients chosen for having received at least two rounds, so the share citing the assistance reflects how the sample was chosen; remittances and loans or support from family, friends and neighbours carry no printed value, which is missing, not zero."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 17,
+   "field": "CCY-SAM-2024.limitations_ar",
+   "old": null,
+   "new": "المضاعفان تقديران مستخرجان من نموذج لقرى مختارة، لا مضاعف لليمن أو لمحافظة، ويقيسان نشاطًا اقتصاديًا يشمل التحويل النقدي نفسه، لا دخل الأسر أو الدخل المحلي؛ ولا يقولان شيئًا عن طريقة وصول المال إلى الأسر. | تصف مصادر الدخل متلقي مساعدات اختيروا لأنهم تلقوا جولتين على الأقل من المساعدات، فحصة من ذكروا المساعدات تعكس طريقة اختيار العينة؛ ولا تحمل الحوالات والقروض أو الدعم من الأسرة والأصدقاء والجيران أي قيمة مطبوعة، وهذا غياب للبيانات لا صفر."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 18,
+   "field": "CCY-SAM-2024.currentness_en",
+   "old": null,
+   "new": "The household survey ran in January 2024; the report prints no date, and its host lists it under November 2024 (checked on 11 October 2026)."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 19,
+   "field": "CCY-SAM-2024.currentness_ar",
+   "old": null,
+   "new": "أُجري المسح الأسري في يناير 2024؛ ولا يحمل التقرير تاريخًا مطبوعًا، ويُدرجه الموقع الذي يستضيفه ضمن ملفات نوفمبر 2024 (جرى التحقق في 11 أكتوبر 2026)."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 20,
+   "field": "CCY-SAM-2024.change_trigger_en",
+   "old": null,
+   "new": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 21,
+   "field": "CCY-SAM-2024.change_trigger_ar",
+   "old": null,
+   "new": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 22,
+   "field": "CCY-SAM-2024.verification_en",
+   "old": null,
+   "new": "This record is drawn from the source(s) listed on this page. Open a source record to reach the original document, and check that the definition, period, population and geography match what is stated here."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 23,
+   "field": "CCY-SAM-2024.verification_ar",
+   "old": null,
+   "new": "يستند هذا السجل إلى المصدر أو المصادر المدرجة في هذه الصفحة. افتح سجل المصدر للوصول إلى الوثيقة الأصلية، وتحقق من تطابق التعريف والفترة والمجتمع والنطاق الجغرافي مع ما يرد هنا."
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 24,
+   "field": "CCY-SAM-2024.source_dependencies",
+   "old": null,
+   "new": "SRC-CCY-SAM-2024"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 26,
+   "field": "CCY-SAM-2024.lineage_state",
+   "old": null,
+   "new": "BOUND_EXACT"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 29,
+   "field": "CCY-SAM-2024.value_states",
+   "old": null,
+   "new": "[{\"t\":\"2.56\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"The Multiplier Effect of MPCA, printed p.26 (PDF p.27): 'The estimated multiplier effect for Ad-Dali’s was 2.56'; also p.1 and p.35; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"2.29\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.26: 'The estimated multiplier effect for Ja’ar was 2.29'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"61%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.12 (PDF p.13): 'humanitarian cash assistance (61%)'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"55%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.12: 'casual/daily wage labor (55%)'; hawala limitation p.36 (PDF p.37); read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"30\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.12: income sources 'in the 30 days prior to the interview'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"291\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.2 (PDF p.3): '291 HH interviews in Ad-Dali and 209 in Ja’ar'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"209\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.2; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"December 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.26: cash injection 'between October and December 2023'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"January 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.7 (PDF p.8): 'In January 2024, the CCY conducted a HH survey'; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"January 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"same, p.32 (PDF p.33): 'mid-January 2023' (the report's own inconsistency); read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"November 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CCY-SAM-2024\",\"loc\":\"host path calpnetwork.org/wp-content/uploads/2024/11/; read 11 October 2026 (audit/close_out/addendum/R5_ccy_isp_sam.md)\"},{\"t\":\"11 October 2026\",\"k\":\"d\",\"s\":\"SITE\"}]"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 119,
+   "col": 25,
+   "field": "CCY-SAM-2024.source_links",
+   "old": null,
+   "new": "[{\"source_id\":\"SRC-CCY-SAM-2024\",\"url\":\"https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf\",\"audit_state\":\"PASS_AUTHORITY_OR_PROVIDER_LOCATOR\"}]"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "08_READINGS",
+   "row": 16,
+   "col": null,
+   "field": "CWR-012",
+   "old": null,
+   "new": "{\"reading_id\": \"CWR-012\", \"slug\": \"how-money-reaches-households\", \"route\": \"/readings/how-money-reaches-households\", \"title_en\": \"How money reaches households\", \"title_ar\": \"كيف يصل المال إلى الأسر\", \"question_en\": \"Does money sent between people in Yemen reach households more through exchange companies than through accounts?\", \"question_ar\": \"هل تصل الأموال المرسلة بين الأفراد في اليمن إلى الأسر عبر شركات الصرافة أكثر مما تصل عبر الحسابات؟\", \"thesis_en\": \"In Yemen’s Global Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances, while 11.9% of adults in those areas had an account. That is consistent with the hypothesis that money sent between people moves more through exchange companies and other money-transfer providers than through accounts, but it is a hypothesis: the survey counts adults, not households, its values here cover transfers within Yemen only, and no channel value for that wave is held here. Other routes and humanitarian cash fit the same numbers, and survey coverage, currency and the meaning of “remittance” limit what they show.\", \"thesis_ar\": \"في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن، تلقى 31.9% من البالغين في المناطق التي شملها المسح حوالات محلية، في حين كان لدى 11.9% من البالغين في تلك المناطق حساب. ويتسق ذلك مع فرضية أن الأموال المرسلة بين الأفراد تنتقل عبر شركات الصرافة وغيرها من مقدمي خدمات تحويل الأموال أكثر مما تنتقل عبر الحسابات، لكنه يبقى فرضية: فالمسح يعدّ البالغين لا الأسر، ولا تغطي قيمه الواردة هنا إلا الحوالات داخل اليمن، ولا تتضمن قاعدة الأدلة أي قيمة لقنوات الحوالات في تلك الموجة. وتنسجم الطرق الأخرى والمساعدات النقدية الإنسانية مع الأرقام نفسها، وتحدّ تغطيةُ المسح والعملةُ ومعنى «الحوالة» مما تُظهره.\", \"claim_bindings\": \"[\\\"CLM-026\\\",\\\"VIS-FINDEX-FLOW-CHANNELS\\\",\\\"CLM-030\\\",\\\"CLM-009\\\",\\\"CLM-016\\\",\\\"VIS-REMITTANCE-COST\\\",\\\"CLM-032\\\",\\\"VIS-PAYMENT-RAILS\\\",\\\"CCY-ISP-2024\\\",\\\"CCY-SAM-2024\\\"]\", \"evidence_bindings\": \"[\\\"CLM-026\\\",\\\"VIS-FINDEX-FLOW-CHANNELS\\\",\\\"CLM-030\\\",\\\"CLM-00"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "09 rows",
+   "row": null,
+   "col": null,
+   "field": "CWR-012",
+   "old": null,
+   "new": "9 appended"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "03 rows",
+   "row": null,
+   "col": null,
+   "field": "CWR-012",
+   "old": null,
+   "new": "8 appended"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "02_SITE_MAP",
+   "row": null,
+   "col": null,
+   "field": "/evidence/CCY-ISP-2024/",
+   "old": null,
+   "new": "{\"route\": \"/evidence/CCY-ISP-2024/\", \"page_class\": \"evidence_detail\", \"template_route\": \"/evidence/[id]\", \"instance_id\": \"CCY-ISP-2024\", \"meta_description_en\": \"A 2024 Cash Consortium of Yemen survey: cash assistance made up most of recipients’ cash income in three areas; informal loans came second in two.\", \"meta_description_ar\": \"مسح لتحالف النقد في اليمن عام 2024: شكّلت المساعدات النقدية معظم الدخل النقدي للمستفيدين في ثلاث مناطق، وجاءت القروض غير الرسمية ثانيةً في اثنتين منها.\"}"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "02_SITE_MAP",
+   "row": null,
+   "col": null,
+   "field": "/evidence/CCY-SAM-2024/",
+   "old": null,
+   "new": "{\"route\": \"/evidence/CCY-SAM-2024/\", \"page_class\": \"evidence_detail\", \"template_route\": \"/evidence/[id]\", \"instance_id\": \"CCY-SAM-2024\", \"meta_description_en\": \"A 2024 Cash Consortium of Yemen pilot: on average, 61% of assessed households named aid a main income source; estimated activity per aid dollar in selected villages, aid included: USD 2.56 and 2.29.\", \"meta_description_ar\": \"دراسة تجريبية لتحالف النقد في اليمن عام 2024: ذكرت 61% من الأسر المشمولة، في المتوسط، المساعدات مصدرًا رئيسيًا للدخل؛ والنشاط المقدَّر في قرى مختارة 2.56 و2.29 دولار لكل دولار، بما فيه المساعدات.\"}"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "02_SITE_MAP",
+   "row": null,
+   "col": null,
+   "field": "/readings/how-money-reaches-households/",
+   "old": null,
+   "new": "{\"route\": \"/readings/how-money-reaches-households/\", \"page_class\": \"reading_detail\", \"template_route\": \"/readings/[reading_id]\", \"instance_id\": \"how-money-reaches-households\", \"meta_description_en\": \"In Yemen’s Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances and 11.9% had an account; no channel value for that wave is held here.\", \"meta_description_ar\": \"في موجة 2021 من Global Findex لليمن، تلقى 31.9% من البالغين في المناطق التي شملها المسح حوالات محلية، وكان لدى 11.9% من البالغين حساب؛ ولا تتضمن قاعدة الأدلة قيمة لقنوات الحوالات في تلك الموجة.\"}"
+  },
+  {
+   "finding": "CLOSE-6C",
+   "sheet": "08_READINGS",
+   "row": 5,
+   "col": 19,
+   "field": "CWR-001.related_readings",
+   "old": "[\"CWR-002\",\"CWR-004\"]",
+   "new": "[\"CWR-002\", \"CWR-012\"]"
+  },
+  {
+   "finding": "CLOSE-6C:ALIAS-001",
+   "sheet": "04_NAV_UX",
+   "row": 687,
+   "col": 5,
+   "field": "SEARCH-ALIAS-001.boundary_note_en",
+   "old": "Discovery aid only: this evidence base holds no law as a source document. It holds regulations, circulars, decisions and official lists issued by the Central Bank of Yemen – Aden, listed on the Data & sources page.",
+   "new": "Discovery aid only: this evidence base holds one law as a source document, on the Bank Deposit Insurance Institution. Its regulations, circulars, decisions and official lists were issued or posted by the Central Bank of Yemen – Aden, except one circular of the Central Bank of Yemen in Sana'a. All are listed on the Data & sources page."
+  },
+  {
+   "finding": "CLOSE-6C:ALIAS-001",
+   "sheet": "04_NAV_UX",
+   "row": 687,
+   "col": 6,
+   "field": "SEARCH-ALIAS-001.boundary_note_ar",
+   "old": "أداة اكتشاف فقط: لا تضم قاعدة الأدلة هذه أي قانون بوصفه وثيقة مصدرية. وتضم لوائح وتعاميم وقرارات وقوائم رسمية صادرة عن البنك المركزي اليمني – عدن، مدرجة في صفحة البيانات والمصادر.",
+   "new": "أداة اكتشاف فقط: تضم قاعدة الأدلة هذه قانونًا واحدًا بوصفه وثيقة مصدرية، هو قانون مؤسسة ضمان الودائع المصرفية. أما لوائحها وتعاميمها وقراراتها وقوائمها الرسمية فقد أصدرها البنك المركزي اليمني – عدن أو نشرها، عدا تعميم واحد للبنك المركزي اليمني في صنعاء. وجميعها مدرجة في صفحة البيانات والمصادر."
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 14,
+   "col": 2,
+   "field": "00_MASTER!r14c2",
+   "old": "147",
+   "new": 150,
+   "formula_kept": "=COUNTA('02_SITE_MAP'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 14,
+   "col": 3,
+   "field": "00_MASTER!r14c3",
+   "old": "147",
+   "new": 150
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 2,
+   "field": "00_MASTER!r15c2",
+   "old": "246",
+   "new": 254
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 15,
+   "col": 3,
+   "field": "00_MASTER!r15c3",
+   "old": "246",
+   "new": 254
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 17,
+   "col": 2,
+   "field": "00_MASTER!r17c2",
+   "old": "113",
+   "new": 115,
+   "formula_kept": "=COUNTA('06_EVIDENCE_OBJECTS'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 17,
+   "col": 3,
+   "field": "00_MASTER!r17c3",
+   "old": "113",
+   "new": 115
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 19,
+   "col": 2,
+   "field": "00_MASTER!r19c2",
+   "old": "11",
+   "new": 12,
+   "formula_kept": "=COUNTA('08_READINGS'!A5:A50)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 19,
+   "col": 3,
+   "field": "00_MASTER!r19c3",
+   "old": "11",
+   "new": 12
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 5,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r5c4",
+   "old": "147",
+   "new": 150,
+   "formula_kept": "=COUNTA('02_SITE_MAP'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 5,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r5c3",
+   "old": "147",
+   "new": 150
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r6c4",
+   "old": "246",
+   "new": 254
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 6,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r6c3",
+   "old": "246",
+   "new": 254
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 8,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r8c4",
+   "old": "113",
+   "new": 115,
+   "formula_kept": "=COUNTA('06_EVIDENCE_OBJECTS'!A5:A300)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 8,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r8c3",
+   "old": "113",
+   "new": 115
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 10,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r10c4",
+   "old": "11",
+   "new": 12,
+   "formula_kept": "=COUNTA('08_READINGS'!A5:A50)",
+   "note": "cached result of the formula updated; the formula is unchanged and computes the same value"
+  },
+  {
+   "finding": "CLOSE-6C:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 10,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r10c3",
+   "old": "11",
+   "new": 12
+  }
+ ]
+}

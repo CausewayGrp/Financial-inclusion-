@@ -5307,6 +5307,64 @@
     "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
   },
   {
+    "object_type": "evidence_object",
+    "object_id": "CCY-ISP-2024",
+    "public_routes": [
+      "/remittances/"
+    ],
+    "lineage_state": "BOUND_EXACT",
+    "dependency_ids": [
+      "SRC-CCY-ISP-2024"
+    ],
+    "direct_source_ids": [
+      "SRC-CCY-ISP-2024"
+    ],
+    "resolved_source_ids": [
+      "SRC-CCY-ISP-2024"
+    ],
+    "resolved_via_object_ids": [],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-CCY-ISP-2024",
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
+  },
+  {
+    "object_type": "evidence_object",
+    "object_id": "CCY-SAM-2024",
+    "public_routes": [
+      "/remittances/"
+    ],
+    "lineage_state": "BOUND_EXACT",
+    "dependency_ids": [
+      "SRC-CCY-SAM-2024"
+    ],
+    "direct_source_ids": [
+      "SRC-CCY-SAM-2024"
+    ],
+    "resolved_source_ids": [
+      "SRC-CCY-SAM-2024"
+    ],
+    "resolved_via_object_ids": [],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-CCY-SAM-2024",
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
+  },
+  {
     "object_type": "public_claim",
     "object_id": "CLM-001",
     "public_routes": [
@@ -9268,6 +9326,242 @@
       {
         "source_id": "SRC-CBY-AR2023-001",
         "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
+  },
+  {
+    "object_type": "reading",
+    "object_id": "CWR-012",
+    "public_routes": [
+      "/readings/how-money-reaches-households/"
+    ],
+    "lineage_state": null,
+    "dependency_ids": [
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-LDB-2015-001",
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-WB-RPW-SA-YEM-2025Q3-001",
+      "SRC-CBY-AR2024-BOP",
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-SAM-2024",
+      "SRC-CBY-DEC-23-2024-001",
+      "CLM-026",
+      "VIS-FINDEX-FLOW-CHANNELS",
+      "CLM-030",
+      "CLM-009",
+      "CLM-016",
+      "VIS-REMITTANCE-COST",
+      "CLM-032",
+      "VIS-PAYMENT-RAILS",
+      "CCY-ISP-2024",
+      "CCY-SAM-2024"
+    ],
+    "direct_source_ids": [
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-LDB-2015-001",
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-WB-RPW-SA-YEM-2025Q3-001",
+      "SRC-CBY-AR2024-BOP",
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-SAM-2024",
+      "SRC-CBY-DEC-23-2024-001"
+    ],
+    "resolved_source_ids": [
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-LDB-2015-001",
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-WB-RPW-SA-YEM-2025Q3-001",
+      "SRC-CBY-AR2024-BOP",
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-SAM-2024",
+      "SRC-CBY-DEC-23-2024-001",
+      "SRC-CBY-ENF-18-2026",
+      "SRC-CBY-EXCH-LIST-2025-001",
+      "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-UN-SDG-10C1-METADATA",
+      "SRC-CBY-AR2022-001",
+      "SRC-CBY-AR2023-001",
+      "SRC-UNDP-FMIIP-001",
+      "SRC-WB-FMIIP-ISR2-2026-001",
+      "SRC-CBY-EMONEY-AMD-2025-001",
+      "SRC-CBY-DIGITAL-EXPO-2026-001",
+      "SRC-CBY-PAY-BOARD-2026-001",
+      "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+      "SRC-CBY-UNIFIED-NET-2026-001",
+      "SRC-CBY-YPCC-FOUND-2026-001",
+      "SRC-CBY-YPCC-BOARD-2026-001"
+    ],
+    "resolved_via_object_ids": [
+      "CLM-026",
+      "VIS-FINDEX-FLOW-CHANNELS",
+      "CLM-030",
+      "CLM-009",
+      "CLM-016",
+      "VIS-REMITTANCE-COST",
+      "CLM-032",
+      "VIS-PAYMENT-RAILS",
+      "CCY-ISP-2024",
+      "CCY-SAM-2024"
+    ],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-WB-FINDEX-AGG-2022",
+        "primary_url": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-001",
+        "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FINDEX-LDB-2015-001",
+        "primary_url": "https://documents1.worldbank.org/curated/en/621891468329460041/pdf/956790PUB097810til0Apr170at011300am.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-EXCH-LIST-2026-001",
+        "primary_url": "https://cby-ye.com/files/6ab391c11043b.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "primary_url": "https://www.theigc.org/publications/cash-capital-leveraging-remittances-yemens-economic-future",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-WDI-RMT-COST-YEM",
+        "primary_url": "https://data.worldbank.org/indicator/SI.RMT.COST.IB.ZS?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-RPW-SA-YEM-2025Q3-001",
+        "primary_url": "https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/Yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2024-BOP",
+        "primary_url": "https://english.cby-ye.com/files/68c2ef16b4225.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2025-BOP",
+        "primary_url": "https://english.cby-ye.com/files/6a54b8fcd8b68.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-ISP-2024",
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-SAM-2024",
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-DEC-23-2024-001",
+        "primary_url": "https://cby-ye.com/files/667c596ef3bea.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-ENF-18-2026",
+        "primary_url": "https://cby-ye.com/news/975",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-EXCH-LIST-2025-001",
+        "primary_url": "https://cby-ye.com/files/69561aafe8942.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+        "primary_url": "https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/Yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-10C1-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0c-01.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2022-001",
+        "primary_url": "https://cby-ye.com/files/64a1f54c878e1.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-AR2023-001",
+        "primary_url": "https://www.english.cby-ye.com/files/66e7e260be038.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNDP-FMIIP-001",
+        "primary_url": "https://www.undp.org/yemen/projects/yemen-financial-market-infrastructure-and-inclusion-project",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-ISR2-2026-001",
+        "primary_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040826144025755",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-EMONEY-AMD-2025-001",
+        "primary_url": "https://cby-ye.com/files/6875fc55a253e.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-DIGITAL-EXPO-2026-001",
+        "primary_url": "https://cby-ye.com/news/915",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-PAY-BOARD-2026-001",
+        "primary_url": "https://cby-ye.com/news/922",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-BANK-NETWORK-MTG-2026-001",
+        "primary_url": "https://cby-ye.com/news/946",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-UNIFIED-NET-2026-001",
+        "primary_url": "https://cby-ye.com/news/957",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-YPCC-FOUND-2026-001",
+        "primary_url": "https://cby-ye.com/news/961",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CBY-YPCC-BOARD-2026-001",
+        "primary_url": "https://cby-ye.com/news/962",
         "metadata_state": "DISPLAY_READY"
       }
     ],

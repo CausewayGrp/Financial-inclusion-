@@ -2,24 +2,24 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9",
-  "page_specs_sha256": "e62dda32258f336abb01c3cff1a916c37f063993782ed6eab47fc957843156bd",
+  "production_master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
+  "page_specs_sha256": "e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
-  "evidence_records": 113,
+  "evidence_records": 115,
   "public_claims": 60,
   "chronology_events": 31,
   "sources": 200,
   "public_locators": 185,
   "curated_resources": 28,
-  "readings": 11,
+  "readings": 12,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 42,
   "evidence_passports": 55,
-  "search_records": 508,
-  "page_specs": 147
+  "search_records": 514,
+  "page_specs": 150
  },
  "projection_roles": {
   "rules": {
@@ -107,7 +107,7 @@
   },
   {
    "page_family": "Evidence Record",
-   "route_count": 113,
+   "route_count": 115,
    "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
    "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "depth_role": "VERIFICATION",
@@ -131,7 +131,7 @@
   },
   {
    "page_family": "Reading",
-   "route_count": 11,
+   "route_count": 12,
    "unique_user_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
    "primary_next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "depth_role": "SYNTHESIS",
@@ -710,6 +710,8 @@
    "collection": {
     "evidence_record_ids": [
      "CBY-BANKS-2026-05",
+     "CCY-ISP-2024",
+     "CCY-SAM-2024",
      "CLM-001",
      "CLM-002",
      "CLM-003",
@@ -853,6 +855,68 @@
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
    "public_sources_listed": 2,
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CCY-ISP-2024/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CCY-ISP-2024",
+   "html": {
+    "en": "dist/en/evidence/CCY-ISP-2024/index.html",
+    "ar": "dist/ar/evidence/CCY-ISP-2024/index.html"
+   },
+   "title_en": "Informal support in the cash income of cash-assistance households in three areas (CCY, June 2024)",
+   "title_ar": "الدعم غير الرسمي في الدخل النقدي لأسر تتلقى مساعدات نقدية في ثلاث مناطق (تحالف النقد في اليمن، يونيو 2024)",
+   "sections": 2,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "CCY-ISP-2024"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_ids": [],
+   "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/CCY-SAM-2024/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "CCY-SAM-2024",
+   "html": {
+    "en": "dist/en/evidence/CCY-SAM-2024/index.html",
+    "ar": "dist/ar/evidence/CCY-SAM-2024/index.html"
+   },
+   "title_en": "Income sources reported by cash-assistance households, with a multiplier estimate, in selected villages of Ad-Dali and Ja’ar (CCY pilot study, 2024)",
+   "title_ar": "مصادر الدخل التي أفادت بها أسر تتلقى مساعدات نقدية، مع تقدير للمضاعف، في قرى مختارة من الضالع وجعار (دراسة تجريبية لتحالف النقد في اليمن، 2024)",
+   "sections": 2,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "CCY-SAM-2024"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_ids": [],
+   "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -5010,11 +5074,12 @@
     "CWR-008",
     "CWR-009",
     "CWR-010",
-    "CWR-011"
+    "CWR-011",
+    "CWR-012"
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 56,
+   "source_references": 67,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -5032,7 +5097,8 @@
      "CWR-008",
      "CWR-009",
      "CWR-010",
-     "CWR-011"
+     "CWR-011",
+     "CWR-012"
     ]
    },
    "structured_data": [],
@@ -5334,6 +5400,65 @@
    "hard_state_acceptance": []
   },
   {
+   "route": "/readings/how-money-reaches-households/",
+   "page_family": "Reading",
+   "page_class": "reading_detail",
+   "stable_object_id": "how-money-reaches-households",
+   "html": {
+    "en": "dist/en/readings/how-money-reaches-households/index.html",
+    "ar": "dist/ar/readings/how-money-reaches-households/index.html"
+   },
+   "title_en": "How money reaches households",
+   "title_ar": "كيف يصل المال إلى الأسر",
+   "sections": 8,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "CCY-ISP-2024",
+    "CCY-SAM-2024",
+    "CLM-009",
+    "CLM-016",
+    "CLM-026",
+    "CLM-030",
+    "CLM-032",
+    "VIS-FINDEX-FLOW-CHANNELS",
+    "VIS-PAYMENT-RAILS",
+    "VIS-REMITTANCE-COST"
+   ],
+   "visual_ids": [],
+   "reading_ids": [
+    "CWR-001",
+    "CWR-010",
+    "CWR-012"
+   ],
+   "measurement_ids": [
+    "MA-001",
+    "MA-005"
+   ],
+   "source_ids": [
+    "SRC-CBY-AR2024-BOP",
+    "SRC-CBY-AR2025-BOP",
+    "SRC-CBY-DEC-23-2024-001",
+    "SRC-CBY-EXCH-LIST-2026-001",
+    "SRC-CCY-ISP-2024",
+    "SRC-CCY-SAM-2024",
+    "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+    "SRC-WB-FINDEX-001",
+    "SRC-WB-FINDEX-AGG-2022",
+    "SRC-WB-FINDEX-LDB-2015-001",
+    "SRC-WB-FMIIP-P180708",
+    "SRC-WB-RPW-SA-YEM-2025Q3-001",
+    "SRC-WB-WDI-RMT-COST-YEM"
+   ],
+   "source_references": 28,
+   "next_actions": [],
+   "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
+   "structured_data": [
+    "BreadcrumbList",
+    "Article"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
    "route": "/readings/microfinance-structural-divergence/",
    "page_family": "Reading",
    "page_class": "reading_detail",
@@ -5447,7 +5572,7 @@
    "reading_ids": [
     "CWR-001",
     "CWR-002",
-    "CWR-004"
+    "CWR-012"
    ],
    "measurement_ids": [
     "MA-001"
@@ -5582,6 +5707,8 @@
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [
+    "CCY-ISP-2024",
+    "CCY-SAM-2024",
     "CLM-007",
     "CLM-030",
     "CLM-032",
@@ -5608,13 +5735,14 @@
     "VIS-REMITTANCE-MACRO"
    ],
    "reading_ids": [
-    "CWR-001"
+    "CWR-001",
+    "CWR-012"
    ],
    "measurement_ids": [
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 26,
+   "source_references": 43,
    "next_actions": [
     "/evidence/CLM-007/"
    ],
@@ -5770,7 +5898,8 @@
       "REPORTED"
      ],
      "reading_ids": [
-      "CWR-001"
+      "CWR-001",
+      "CWR-012"
      ]
     }
    },
@@ -5844,7 +5973,7 @@
      "reading_ids": [
       "CWR-001",
       "CWR-002",
-      "CWR-004"
+      "CWR-012"
      ]
     }
    },
@@ -5901,7 +6030,7 @@
    }
   ],
   "evidence_lineage_states": {
-   "BOUND_EXACT": 99,
+   "BOUND_EXACT": 101,
    "COMPOSITE_OF_OBJECTS": 8,
    "FRAMING_NO_FACT": 6
   },
@@ -5914,6 +6043,8 @@
     ],
     "records": [
      "CBY-BANKS-2026-05",
+     "CCY-ISP-2024",
+     "CCY-SAM-2024",
      "CLM-001",
      "CLM-002",
      "CLM-003",

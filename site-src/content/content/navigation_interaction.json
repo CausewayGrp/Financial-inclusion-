@@ -4,9 +4,9 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9",
-    "page_specs_sha256": "e62dda32258f336abb01c3cff1a916c37f063993782ed6eab47fc957843156bd",
-    "page_spec_count": 147
+    "master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
+    "page_specs_sha256": "e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394",
+    "page_spec_count": 150
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
   "global_navigation": [
@@ -322,7 +322,7 @@
     },
     {
       "page_family": "Evidence Record",
-      "route_count": 113,
+      "route_count": 115,
       "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
       "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
       "depth_role": "VERIFICATION",
@@ -346,7 +346,7 @@
     },
     {
       "page_family": "Reading",
-      "route_count": 11,
+      "route_count": 12,
       "unique_user_value_role": "BOUNDED_CROSS_SOURCE_SYNTHESIS",
       "primary_next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
       "depth_role": "SYNTHESIS",
