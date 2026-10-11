@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 46,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 263,
+  "CURRENT_PROGRAMME_RECORD": 266,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -785,6 +785,18 @@
   },
   {
    "path": "audit/close_out/source_utilisation.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/ARABIC_6D.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/DISPOSITION_6D.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/REDTEAM_6D.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

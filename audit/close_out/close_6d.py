@@ -207,7 +207,7 @@ def main():
         ("source_id", "SRC-YLG-AR-2022"), ("primary_url", YLG_URL), ("datasets_or_use", "DS-FIRM-FINANCE"), ("row_count", 15),
         ("display_title", "Yemen Loan Guarantee Program (YLGP) Annual Report 2022"), ("publisher", "Yemen Loan Guarantee Program"),
         ("public_card_state", "CITATION_CARD"), ("display_title_ar", "التقرير السنوي لبرنامج ضمان القروض في اليمن لعام 2022"),
-        ("non_public_locator_note", "Source type PRIMARY_PROGRAMME_REPORT. Fiscal year 2022; pages used 4, 8, 14-17, 29-30. No "
+        ("non_public_locator_note", "Source type PRIMARY_PROGRAMME_REPORT. Fiscal year 2022; pages used 4, 8, 9, 14-17, 29-31 (the 12th partner p.9; the partner chart p.31). No "
                                     "publication date is printed (p.35 '© Copyright reserved 2022'; the file's metadata give 16 "
                                     "April 2023). Amounts are in thousand YER (p.14). Read 11 October 2026 (35 pages, SHA-256 "
                                     "fc6651b7bf87f299243c1b78cdf3a5507b5702bfd6bb8b23cc4419a5f9c3fb22). Facts cited; nothing "

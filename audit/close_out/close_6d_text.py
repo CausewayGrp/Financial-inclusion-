@@ -1057,3 +1057,386 @@ REF_FCP = {"date": ("2023-08-28", "2023-08-20"),
            "text_add": (" Issued 20 August 2023 (ref. 589/CBY/2023; instrument p.1 and p.32); announced 28 August 2023 (news/567); "
                         "the adjustment period is stated in the announcement, not in the Instructions."),
            "url": ("https://cby-ye.com/news/567", INSTR_URL)}
+
+# ======================================================================================================================
+# Domain-lens revisions (audit/close_out/v5_reads/REDTEAM_6D.md): verdict KEEP, conditional on B1-B3. Applied to the entries
+# above by key, so that the first draft and what the review changed stay legible.
+# B1 the thesis keeps its counterweight; B2 the bound is a survey estimate, for surveyed areas; B3 the bound moves to the
+# descriptive section 2, section 4 refers to it with a disclaimer about what it bears on (receipt into one's own
+# financial-institution account), and the thesis no longer carries it; S1 "usable here", the printed zero named; S2 both
+# halves, in order, in sections 8 and 9; S3 the item asks about a bank or mobile-money account; S4 the first heading;
+# S5 the routes overlap; S6 Yemen's classification, not its membership; S7 the gender figures are not compared; S8 the
+# Instructions' own scope words; S9 how items ج and د relate; S10 the deposit-guarantee exclusions, the search scope and
+# the decision named; S11 1.838 described, not denied; S12 the IMF basis; S13 the Postal Savings Fund; B4 12 partners
+# reported, not "through"; nits N1, N3, N4, N6, N8.
+# ======================================================================================================================
+def _sec(route, order, lang, field, old_start, new, which="new"):
+    hits = [i for i, e in enumerate(SEC) if e[1:5] == (route, order, lang, field) and e[5].startswith(old_start)]
+    if len(hits) != 1:
+        raise ValueError(f"review override: {route} s{order} {lang} {old_start[:40]!r}: {len(hits)} entries")
+    e = SEC[hits[0]]
+    SEC[hits[0]] = e[:6] + (new,) if which == "new" else e[:5] + (new, e[6])
+
+
+def _cell(sheet, key, field, old_start, new):
+    hits = [i for i, e in enumerate(CELL) if e[1:4] == (sheet, key, field) and e[4].startswith(old_start)]
+    if len(hits) != 1:
+        raise ValueError(f"review override: {sheet} {key}.{field} {old_start[:40]!r}: {len(hits)} entries")
+    CELL[hits[0]] = CELL[hits[0]][:5] + (new,)
+
+
+CWR_SET["thesis_en"] = (
+    "In Yemen’s Global Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances and 11.9% of adults "
+    "in those areas had an account at a financial institution. For that wave, no weighted estimate of the channel usable here "
+    "is published or held (the database’s printed zero for receipt into an account conflicts with the World Bank’s own "
+    "documentation and is not used); the World Bank’s published variable documentation records that recipients were asked "
+    "whether they received the money using a bank or mobile-money account, and that some answered yes. That money sent "
+    "between people reaches recipients more through exchange companies and other money-transfer providers than into accounts "
+    "of their own remains a hypothesis: the survey counts adults, not households, and its values here cover transfers within "
+    "Yemen only. Other routes, such as cash carried by hand, and humanitarian cash fit the same numbers, and survey coverage, "
+    "currency and the meaning of “remittance” limit what they show.")
+CWR_SET["thesis_ar"] = (
+    "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن، تلقى 31.9% من البالغين في المناطق التي شملها "
+    "المسح حوالات محلية، وكان لدى 11.9% من البالغين في تلك المناطق حساب لدى مؤسسة مالية. ولتلك الموجة لا يُنشر أي تقدير موزون "
+    "للقناة صالح للاستخدام هنا ولا يُحتفظ به (فالصفر الذي تطبعه قاعدة البيانات لاستلام الأموال في حساب يتعارض مع توثيق البنك "
+    "الدولي نفسه، ولا يُستخدم)؛ ويسجل توثيق المتغيرات الذي ينشره البنك الدولي أن المتلقين سُئلوا عمّا إذا كانوا قد تلقوا المال "
+    "باستخدام حساب مصرفي أو حساب أموال عبر الهاتف المحمول، وأن بعضهم أجاب بنعم. ويبقى القول بأن الأموال المرسلة بين الأفراد تصل "
+    "إلى متلقيها عبر شركات الصرافة وغيرها من مقدمي خدمات تحويل الأموال أكثر مما تصل إلى حسابات خاصة بهم فرضيةً: فالمسح يعدّ "
+    "البالغين لا الأسر، ولا تغطي قيمه الواردة هنا إلا الحوالات داخل اليمن. وتنسجم الطرق الأخرى، كالنقد الذي يُحمل باليد، "
+    "والمساعدات النقدية الإنسانية مع الأرقام نفسها، وتحدّ تغطيةُ المسح والعملةُ ومعنى «الحوالة» مما تُظهره.")
+CWR_SET["prohibited_inference_en"] = (
+    "A share of adults who received domestic remittances is not a share of households that depend on them; the bound that "
+    "CauseWay calculates from the two published shares (at least 62.7% of recipients in surveyed areas without an account at a "
+    "financial institution, itself a survey estimate) describes the group, not any individual recipient, does not establish "
+    "the channel, and does not rule out an account type for which no Yemen value is published; a roster entry or a branch "
+    "count is not a measure of remittance flows; and a price of sending money from abroad is not the cost a household pays to "
+    "collect it.")
+CWR_SET["prohibited_inference_ar"] = (
+    "لا تمثل نسبة البالغين الذين تلقوا حوالات محلية نسبة الأسر التي تعتمد عليها؛ والحدّ الذي تحسبه CauseWay من النسبتين "
+    "المنشورتين (62.7% على الأقل من المتلقين في المناطق التي شملها المسح بلا حساب لدى مؤسسة مالية، وهو تقدير مسحي أيضًا) يصف "
+    "المجموعة لا أي متلقٍّ بعينه، ولا يثبت القناة، ولا يستبعد نوعًا من الحسابات لا تُنشر له قيمة لليمن؛ وليس القيد في قائمة أو "
+    "عدد الفروع مقياسًا لتدفقات الحوالات؛ وليس سعر إرسال المال من الخارج التكلفة التي تتحملها الأسرة لاستلامه.")
+S1_HEAD = (("What the evidence supports", "What the evidence establishes, and what remains a hypothesis"),
+           ("ما الذي تسنده الأدلة", "ما الذي تثبته الأدلة، وما الذي يبقى فرضية؟"))
+META_EN = ("A hypothesis on domestic remittances and accounts in Yemen. For 2021 no usable weighted channel estimate is "
+           "published or held; World Bank documentation records the item as asked and answered.")
+META_AR = ("فرضية عن الحوالات المحلية والحسابات في اليمن. لموجة 2021 لا يُنشر ولا يُحتفظ هنا بأي تقدير موزون صالح للقناة؛ "
+           "ويسجل توثيق البنك الدولي أن السؤال طُرح وأُجيب عنه.")
+
+S2_BOUND_EN = (
+    "so the figures give no exact count of the recipients who had an account. The two shares do bound it: by CauseWay’s "
+    "calculation from them, at most 11.9% of adults can be both, so at least 62.7% of the adults in surveyed areas who received "
+    "domestic remittances did not have an account at a financial institution. Both shares are survey estimates, so the bound "
+    "is an estimate too, not an exact floor; it is a bound on the group, not a statement about any individual. It does not "
+    "establish the channel: it bears only on whether recipients could have received the money into a financial-institution "
+    "account of their own, does not show how they did receive it or how many used an exchange company, and does not rule out "
+    "a mobile wallet or another account type for which the World Bank publishes no Yemen value.")
+S2_BOUND_AR = (
+    "فلا تعطي الأرقام عددًا دقيقًا للمتلقين الذين كان لديهم حساب. لكن النسبتين تحدّانه: فبحساب أجرته CauseWay منهما، لا يمكن "
+    "أن يجمع بين الأمرين أكثر من 11.9% من البالغين، أي أن 62.7% على الأقل من البالغين في المناطق التي شملها المسح ممن تلقوا "
+    "حوالات محلية لم يكن لديهم حساب لدى مؤسسة مالية. والنسبتان تقديران مسحيان، فالحدّ تقدير أيضًا لا حدّ أدنى دقيق؛ وهو حدّ "
+    "يتعلق بالمجموعة لا بأي فرد بعينه. ولا يثبت القناة: فلا يتصل إلا بمسألة ما إذا كان بوسع المتلقين استلام المال في حساب خاص "
+    "بهم لدى مؤسسة مالية، ولا يبيّن كيف استلموه فعلًا ولا عدد من استخدم منهم شركة صرافة، ولا يستبعد محفظة إلكترونية أو نوعًا آخر "
+    "من الحسابات لا ينشر البنك الدولي له قيمة لليمن.")
+_sec(R, 2, "en", "body", "so the figures do not show how many", S2_BOUND_EN)
+_sec(R, 2, "ar", "body", "فلا تُظهر الأرقام كم ممن", S2_BOUND_AR)
+_sec(R, 3, "en", "body", "For the 2021 wave, this evidence base holds no channel value",
+     "For the 2021 wave, no weighted estimate of the channel for domestic remittances usable here is published or held. The "
+     "World Bank’s published variable documentation for that wave records that recipients were asked whether they received the "
+     "money using a bank or mobile-money account and that some answered yes; these are unweighted counts of answers, not an "
+     "estimate for the population, and they are not used here. The World Bank’s database prints zero for receipt into an "
+     "account, with no recipient or group value; the two statements cannot both describe the same quantity, so the printed "
+     "value is not used either. The World Bank publishes no mobile-money-account figure for Yemen, and its figure for an "
+     "account at a financial institution is the same as its account figure.")
+_sec(R, 3, "ar", "body", "أما موجة 2021، فلا تتضمن قاعدة الأدلة هذه",
+     "أما موجة 2021، فلا يُنشر لها أي تقدير موزون لقناة الحوالات المحلية صالح للاستخدام هنا ولا يُحتفظ به. ويسجل توثيق المتغيرات "
+     "الذي ينشره البنك الدولي لتلك الموجة أن المتلقين سُئلوا عمّا إذا كانوا قد تلقوا المال باستخدام حساب مصرفي أو حساب أموال عبر "
+     "الهاتف المحمول، وأن بعضهم أجاب بنعم؛ وهذه أعداد غير موزونة من الإجابات، لا تقدير للسكان، ولا تُستخدم هنا. وتطبع قاعدة بيانات "
+     "البنك الدولي صفرًا لاستلام الأموال في حساب، من دون قيمة للمتلقين أو للفئات؛ ولا يمكن أن يصف البيانان الكمية نفسها، فلا تُستخدم "
+     "القيمة المطبوعة أيضًا. ولا ينشر البنك الدولي أي رقم لليمن عن حسابات الأموال عبر الهاتف المحمول، ورقمه للحساب لدى مؤسسة "
+     "مالية مساوٍ لرقم ملكية الحساب.")
+S4_EN = ("This Reading’s hypothesis is that money sent between people within Yemen reaches recipients more through exchange "
+         "companies and other money-transfer providers than into accounts of their own. “Into accounts” means receipt into the "
+         "recipient’s own account: a transfer can move through the banking system and still be paid out in cash to a recipient "
+         "without one, so the hypothesis says nothing about the part banks play in moving money. The two routes are not mutually "
+         "exclusive, and the evidence here does not separate them. The evidence bears on whether recipients held accounts and "
+         "says nothing about magnitudes: no source here measures what share of households’ cash comes from transfers, how much "
+         "money moves through each channel, or how often transfers arrive. The bound set out above, by CauseWay’s calculation at "
+         "least 62.7% of recipients in surveyed areas without an account at a financial institution, bears only on whether "
+         "recipients could have received the money into such an account of their own; it does not establish the channel, and it "
+         "neither confirms nor refutes the hypothesis. Separately, the 2014 profile reports that 31.1% of recipients named a money "
+         "transfer operator and 2.0% a financial institution; it does not show how the others received money, a money transfer "
+         "operator in the survey is not necessarily an exchange company, and these values do not describe the 2021 wave. This "
+         "Reading states a hypothesis, not a finding.")
+S4_AR = ("تفترض هذه القراءة أن الأموال المرسلة بين الأفراد داخل اليمن تصل إلى متلقيها عبر شركات الصرافة وغيرها من مقدمي خدمات "
+         "تحويل الأموال أكثر مما تصل إلى حسابات خاصة بهم. والمقصود بالوصول «إلى الحسابات» استلامُ المال في حساب المتلقي نفسه: "
+         "فقد تنتقل الحوالة عبر النظام المصرفي ثم تُسلَّم نقدًا لمتلقٍّ لا يملك حسابًا، لذلك لا تقول الفرضية شيئًا عن الدور الذي "
+         "تؤديه البنوك في نقل الأموال. والطريقان غير متنافيين، ولا تفصل الأدلة الواردة هنا بينهما. وتتصل الأدلة بمسألة امتلاك "
+         "المتلقين حسابات، ولا تقول شيئًا عن الأحجام: فلا يقيس أي مصدر هنا حصة الحوالات من النقد الذي تتلقاه الأسر، ولا مقدار ما "
+         "ينتقل عبر كل قناة، ولا عدد مرات وصول الحوالات. والحدّ المبيَّن أعلاه، أي أن 62.7% على الأقل من المتلقين في المناطق التي "
+         "شملها المسح لم يكن لديهم حساب لدى مؤسسة مالية بحساب أجرته CauseWay، لا يتصل إلا بمسألة ما إذا كان بوسع المتلقين استلام "
+         "المال في حساب من هذا النوع خاص بهم؛ فهو لا يثبت القناة، ولا يؤكد الفرضية ولا ينقضها. وبصورة منفصلة، يفيد ملف 2014 بأن "
+         "31.1% من المتلقين ذكروا مشغل تحويل أموال، و2.0% مؤسسة مالية؛ ولا يبيّن كيف تلقى الباقون أموالهم، ومشغل تحويل الأموال في "
+         "المسح ليس بالضرورة شركة صرافة، ولا تصف هذه القيم موجة 2021. وتطرح هذه القراءة فرضيةً لا نتيجة.")
+SECW = [("6B-5", R, 4, "en", "body", "The evidence is consistent with a hypothesis", S4_EN),
+        ("6B-5", R, 4, "ar", "body", "تتسق الأدلة مع فرضية", S4_AR)]
+SEC += [
+    ("6B-5", R, 5, "en", "body", "Money may reach households there differently", "Money may reach recipients there differently"),
+    ("6B-5", R, 5, "ar", "body", "وقد يصل المال إلى الأسر فيها بطرق مختلفة", "وقد يصل المال إلى المتلقين فيها بطرق مختلفة"),
+]
+_sec(R, 7, "en", "body", "It does not show what share of household cash comes from remittances, how",
+     "It does not show what share of household cash comes from remittances or how recipients collected the money in the 2021 "
+     "wave. The two survey shares bound the share of recipients in surveyed areas who lacked an account at a financial "
+     "institution (at least 62.7%, by CauseWay’s calculation, itself an estimate), but that bound describes the group, not any "
+     "individual, and does not establish the channel.")
+_sec(R, 7, "ar", "body", "فلا يُظهر حصة الحوالات من النقد الذي تتلقاه الأسر، ولا كيف استلم المتلقون أموالهم في موجة 2021، ولا",
+     "فلا يُظهر حصة الحوالات من النقد الذي تتلقاه الأسر، ولا كيف استلم المتلقون أموالهم في موجة 2021. وتحدّ نسبتا المسح نسبةَ "
+     "المتلقين في المناطق التي شملها المسح الذين لم يكن لديهم حساب لدى مؤسسة مالية (62.7% على الأقل، بحساب أجرته CauseWay، وهو "
+     "تقدير أيضًا)، لكن هذا الحدّ يصف المجموعة لا أي فرد بعينه، ولا يثبت القناة.")
+_sec(R, 8, "en", "body", "and the only channel values are for 2014;",
+     "and the only weighted channel values are for 2014: for the 2021 wave none usable here is published or held, though World "
+     "Bank documentation records the item as asked and answered;")
+_sec(R, 8, "ar", "body", "وقيم القنوات الوحيدة تخص عام 2014؛",
+     "وقيم القنوات الموزونة الوحيدة تخص عام 2014: فلا يُنشر لموجة 2021 أي تقدير موزون صالح للاستخدام هنا ولا يُحتفظ به، وإن كان "
+     "توثيق البنك الدولي يسجل أن السؤال طُرح وأُجيب عنه؛")
+_sec(R, 9, "en", "body", "- channel values for domestic remittances from a current survey wave;",
+     "- weighted channel estimates for domestic remittances: for the 2021 wave none usable here is published or held, though "
+     "the World Bank documents that the question was asked and answered; and the World Bank has published no later Yemen wave;")
+_sec(R, 9, "ar", "body", "- قيم لقنوات الحوالات المحلية من موجة مسح حديثة؛",
+     "- تقديرات موزونة لقنوات الحوالات المحلية: فلا يُنشر لموجة 2021 أي تقدير موزون صالح للاستخدام هنا ولا يُحتفظ به، وإن كان "
+     "البنك الدولي يوثّق أن السؤال طُرح وأُجيب عنه؛ ولم ينشر البنك الدولي موجة أحدث لليمن؛")
+
+# B2 on the record that holds the bound
+BOUND_EN2 = (" By CauseWay’s calculation from the receiving share and the published share of adults with an account at a "
+             "financial institution (11.9%), at least 62.7% of the adults in surveyed areas who received domestic remittances "
+             "did not have such an account. Both shares are survey estimates, so the bound is an estimate too; it is a bound on "
+             "the group, not on any individual. It does not establish the channel and does not rule out an account type for "
+             "which the World Bank publishes no Yemen value.")
+BOUND_AR2 = (" وبحساب أجرته CauseWay من نسبة المتلقين ومن النسبة المنشورة للبالغين الذين لديهم حساب لدى مؤسسة مالية (11.9%)، لم "
+             "يكن لدى 62.7% على الأقل من البالغين في المناطق التي شملها المسح ممن تلقوا حوالات محلية حساب من هذا النوع. والنسبتان "
+             "تقديران مسحيان، فالحدّ تقدير أيضًا؛ وهو حدّ يتعلق بالمجموعة لا بأي فرد بعينه. ولا يثبت القناة، ولا يستبعد نوعًا من "
+             "الحسابات لا ينشر البنك الدولي له قيمة لليمن.")
+for _sh, _f in ((O6, "summary_en"), ("11_VISUAL_LIBRARY", "accessible_summary_en")):
+    _cell(_sh, "VIS-FINDEX-FLOW-CHANNELS", _f, FLOW_SUM_END_EN, FLOW_SUM_END_EN + BOUND_EN2)
+for _sh, _f in ((O6, "summary_ar"), ("11_VISUAL_LIBRARY", "accessible_summary_ar")):
+    _cell(_sh, "VIS-FINDEX-FLOW-CHANNELS", _f, FLOW_SUM_END_AR, FLOW_SUM_END_AR + BOUND_AR2)
+
+# S6: Yemen's classification, not its membership of the aggregate (the publisher does not say)
+LIC_EN = LIC_EN.replace("The aggregate averages economies in very different conditions, includes Yemen itself, and groups "
+                        "economies by the World Bank income classification.",
+                        "The aggregate averages economies in very different conditions and groups them by the World Bank income "
+                        "classification, under which Yemen is itself classed as low income.")
+LIC_AR = LIC_AR.replace("ويتوسط التجميع اقتصادات شديدة التباين في أحوالها، ويشمل اليمن نفسه، ويصنف الاقتصادات وفق تصنيف الدخل "
+                        "المعتمد في البنك الدولي.",
+                        "ويتوسط التجميع اقتصادات شديدة التباين في أحوالها، ويصنفها وفق تصنيف الدخل المعتمد في البنك الدولي، الذي "
+                        "يضع اليمن نفسه ضمن فئة الدخل المنخفض.")
+assert "under which Yemen is itself classed" in LIC_EN and "يضع اليمن نفسه" in LIC_AR
+_sec("/people/", 2, "en", "body", "For context only, the World Bank's figure", LIC_EN)
+_sec("/people/", 2, "ar", "body", "وللسياق فقط، يبلغ رقم البنك الدولي", LIC_AR)
+_cell(O6, "CLM-001", "limitations_en", "The low-income figure is context",
+      "The low-income figures are context, not a benchmark, a target or a ranking: they average economies in very different "
+      "conditions and group them by the World Bank's income classification for fiscal year 2024, under which Yemen is itself "
+      "classed as low income, while Yemen's own figure covers only the areas its survey reached. Only the financial-institution "
+      "figure, 24.5%, compares with Yemen's 11.9% on the same definition.")
+_cell(O6, "CLM-001", "limitations_ar", "ورقم الاقتصادات منخفضة الدخل للسياق فقط",
+      "ورقما الاقتصادات منخفضة الدخل للسياق فقط، وليسا معيارًا ولا هدفًا ولا ترتيبًا: فهما يتوسطان اقتصادات ذات ظروف متباينة جدًا، "
+      "ويصنفانها وفق تصنيف الدخل المعتمد في البنك الدولي للسنة المالية 2024، الذي يضع اليمن نفسه ضمن فئة الدخل المنخفض، في حين "
+      "يقتصر رقم اليمن على المناطق التي بلغها المسح. ولا يُقارَن بنسبة اليمن البالغة 11.9% على التعريف نفسه إلا رقم الحساب لدى "
+      "مؤسسة مالية، 24.5%.")
+
+# B4, S7, N8: YLG
+YLG_EN = YLG_EN.replace("covering loans of YER 9.4 billion, through 12 partner institutions; women-led businesses received 693 "
+                        "of them (about 20%).",
+                        "covering loans of YER 9.4 billion, and that it has 12 partner institutions; women-led businesses "
+                        "received 693 of the letters (about 20%).")
+YLG_EN = YLG_EN.replace("The two sets of figures differ in total and in gender split, and the published documents do not "
+                        "explain why, so they are shown side by side and not combined.",
+                        "The totals differ, and the published documents do not explain why; the gender figures cover different "
+                        "periods and use different terms (women-led, men-owned), so they are not compared. The two sets of "
+                        "figures are shown side by side and not combined.")
+YLG_AR = YLG_AR.replace("تغطي قروضًا بقيمة 9.4 مليار ريال، عبر 12 مؤسسة شريكة، وأن المنشآت التي تقودها نساء حصلت على 693 منها "
+                        "(نحو 20%).",
+                        "تغطي قروضًا بقيمة 9.4 مليار ريال، وأن عدد مؤسساته الشريكة 12 مؤسسة؛ وأن المنشآت التي تقودها نساء حصلت "
+                        "على 693 من هذه الخطابات (نحو 20%).")
+YLG_AR = YLG_AR.replace("ويختلف الرقمان في المجموع وفي التوزيع بحسب الجنس، ولا تشرح الوثائق المنشورة سبب ذلك، لذا يُعرضان جنبًا "
+                        "إلى جنب ولا يُدمجان في سلسلة واحدة.",
+                        "ويختلف المجموعان، ولا تشرح الوثائق المنشورة سبب ذلك؛ أما أرقام الجنس فتغطي فترتين مختلفتين وتستخدم "
+                        "مصطلحين مختلفين (تقودها نساء، يملكها رجال)، فلا تُقارن. ويُعرض الرقمان جنبًا إلى جنب ولا يُدمجان في "
+                        "سلسلة واحدة.")
+assert "it has 12 partner institutions" in YLG_EN and "not compared" in YLG_EN
+assert "عدد مؤسساته الشريكة 12" in YLG_AR and "فلا تُقارن" in YLG_AR and "ولا يُدمجان في سلسلة واحدة" in YLG_AR
+FIRMS_NEW_EN = ("Guarantee data measure something else. " + YLG_EN + " Both publishers count guarantees or transactions, not firms: "
+                "the figures show what the programme backed, not how many firms could borrow, on what terms, or what share of "
+                "MSME lending they represent.")
+FIRMS_NEW_AR = ("وتقيس بيانات الضمانات شيئًا آخر. " + YLG_AR + " ويعدّ المصدران خطابات الضمان أو المعاملات لا المنشآت: "
+                "فتبين الأرقام ما دعمه البرنامج، لا عدد المنشآت التي تمكنت من الاقتراض ولا شروطه ولا حصته من إقراض المنشآت "
+                "الأصغر والصغيرة والمتوسطة.")
+_sec("/firms/", 7, "en", "body", "Guarantee data tell a different story:", FIRMS_NEW_EN)
+_sec("/firms/", 7, "ar", "body", "وتقدم بيانات الضمانات صورة من نوع آخر:", FIRMS_NEW_AR)
+_cell(O6, "CLM-059", "summary_en", "Separately, the Organisation", YLG_EN)
+_cell(O6, "CLM-059", "summary_ar", "وبصورة منفصلة، تفيد منظمة", YLG_AR)
+
+# S13, N3, N6
+_sec("/methodology/", 4, "en", "body", "Yemen Post is not covered by any evidence record",
+     "Yemen Post is not covered here. The World Bank (2024, p. 16) describes the Yemen Post and Postal Savings Authority and the "
+     "Postal Savings Fund as providing payment services, savings accounts and other financial products, and gives no count of "
+     "their offices, accounts or balances; their network and services would be measured through the postal operator's own "
+     "records of offices, services and transactions.")
+_sec("/methodology/", 4, "ar", "body", "أما البريد اليمني فلا يغطيه أي سجل دليل",
+     "أما البريد اليمني فلا يغطيه هذا المورد. ويصف البنك الدولي (2024، ص. 16) الهيئة العامة للبريد والتوفير البريدي وصندوق التوفير "
+     "البريدي بأنهما يقدمان خدمات دفع وحسابات ادخار ومنتجات مالية أخرى، ولا يورد عددًا لمكاتبهما أو حساباتهما أو أرصدتهما؛ ويمكن "
+     "قياس شبكتهما وخدماتهما من سجلات مشغل البريد نفسه عن المكاتب والخدمات والمعاملات.")
+SEC += [
+    ("6B-3c", "/methodology/", 4, "en", "body", "(round; fieldwork 2022–23)", "(the latest round; fieldwork 2022–23)"),
+    ("6B-1d", "/finance/", 13, "en", "body",
+     "Any such measures would in any case use questions and constructs different from the Global Findex account-ownership "
+     "measure and would remain separate evidence rather than a harmonised series.",
+     "Such figures would remain separate evidence rather than a harmonised series."),
+    ("6B-1d", "/finance/", 13, "ar", "body",
+     "وأي مقاييس من هذا النوع تقوم في كل الأحوال على أسئلة ومفاهيم تختلف عن مقياس امتلاك الحساب في Global Findex، فتبقى أدلة "
+     "منفصلة لا سلسلة موحدة.", "وتبقى أرقام من هذا النوع أدلة منفصلة لا سلسلة موحدة."),
+]
+
+# S11, S12
+_cell(O6, "CLM-041", "limitations_en", "The constant ratio of 1.838",
+      "The ratio of 1.838 is this resource's ratio of the CBY-Aden remittance series to the IMF's over 2021–2024, and it is "
+      "specific to remittances. The 33% population ratio is the IMF's stated rule, as proposed by the authorities, for splitting "
+      "its external-sector estimates between areas under the internationally recognized government and other areas; for trade, "
+      "the IMF relied mainly on UN Comtrade data and used trade data reported by the government for that split, and it allocates "
+      "the official grants from Saudi Arabia and the United Arab Emirates wholly to the government. Neither is a published "
+      "conversion factor: 1.838 describes how the two remittance series relate in 2021–2024, not a rule for other years or "
+      "components, and the 33% ratio is applied inside the IMF's own estimates.")
+_cell(O6, "CLM-041", "limitations_ar", "لا تنطبق النسبة الثابتة البالغة 1.838",
+      "النسبة 1.838 هي نسبة سلسلة الحوالات لدى البنك المركزي اليمني – عدن إلى سلسلة صندوق النقد الدولي خلال 2021–2024 كما "
+      "احتسبها هذا المورد، وهي خاصة بالحوالات. أما نسبة السكان البالغة 33% فهي القاعدة التي يذكرها الصندوق، كما اقترحتها "
+      "السلطات، لتقسيم تقديراته للقطاع الخارجي بين المناطق الخاضعة للحكومة المعترف بها دوليًا والمناطق الأخرى؛ وفي التجارة "
+      "اعتمد الصندوق أساسًا على بيانات قاعدة UN Comtrade واستخدم بيانات التجارة التي أبلغت عنها الحكومة لذلك التقسيم، وينسب "
+      "المنح الرسمية من السعودية والإمارات بكاملها إلى الحكومة. وليست أيٌّ منهما معامل تحويل منشورًا: فالنسبة 1.838 تصف العلاقة "
+      "بين سلسلتي الحوالات خلال 2021–2024، لا قاعدة لسنوات أو مكونات أخرى، ونسبة 33% تُطبَّق داخل تقديرات الصندوق نفسه.")
+CELL += [
+    ("6B-4b", O6, "CLM-007", "summary_en",
+     "The IMF series covers areas under the internationally recognized government, so its level",
+     "The IMF's method places the series on the basis of areas under the internationally recognized government, so its level"),
+    ("6B-4b", O6, "CLM-007", "summary_ar", "وتغطي سلسلة الصندوق المناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك",
+     "ويضع منهج الصندوق السلسلة على أساس المناطق الخاضعة للحكومة المعترف بها دوليًا، لذلك"),
+]
+
+# S10: deposit guarantee
+DI_EN = DI_EN.replace("deposits in a foreign currency are guaranteed only if the Central Bank decides to subject them to the law.",
+                      "deposits in a foreign currency are guaranteed only if the Central Bank decides to subject them to the law. "
+                      "Government deposits, deposits between banks, and cash collateral up to the facilities it secures are not "
+                      "deposits subject to the law (Art. 13).")
+DI_EN = DI_EN.replace("and this resource has found no published revision.", "and this resource found no published revision on "
+                      "cby-ye.com.")
+DI_EN = DI_EN.replace("and the 2025 decision does not establish that cover operates.",
+                      "and Governor's Decision No. 6 of 2025, which provides for moving the Institution's head office to Aden, does "
+                      "not establish that cover operates.")
+DI_AR = DI_AR.replace("ولا تُضمن الودائع بالعملة الأجنبية إلا إذا قرر البنك المركزي إخضاعها للقانون.",
+                      "ولا تُضمن الودائع بالعملة الأجنبية إلا إذا قرر البنك المركزي إخضاعها للقانون. ولا تُعدّ ودائع الحكومة "
+                      "والودائع بين البنوك والتأمينات النقدية، بحدود التسهيلات التي تضمنها، من الودائع الخاضعة للقانون (المادة 13).")
+DI_AR = DI_AR.replace("ولم يجد هذا المورد أي تعديل منشور له.", "ولم يجد هذا المورد أي تعديل منشور له في موقع cby-ye.com.")
+DI_AR = DI_AR.replace("ولا يثبت قرار 2025 أن الضمان يعمل فعليًا.",
+                      "ولا يثبت قرار المحافظ رقم (6) لسنة 2025، الذي ينص على نقل المركز الرئيسي للمؤسسة إلى عدن، أن الضمان يعمل "
+                      "فعليًا.")
+assert DI_EN.count("(Art. 13)") == 2 and "on cby-ye.com" in DI_EN and "Decision No. 6 of 2025" in DI_EN
+assert DI_AR.count("(المادة 13)") == 2 and "موقع cby-ye.com" in DI_AR and "رقم (6) لسنة 2025" in DI_AR
+
+# S8, S9, N4: the Instructions' own scope words; how items ج and د relate
+_SCOPE_EN = ("The Financial Consumer Protection Regulatory Instructions of the Central Bank of Yemen – Aden (CBY-Aden) (ref. "
+             "589/CBY/2023, dated 20 August 2023) apply to the financial service providers under CBY-Aden's supervision and to "
+             "their agents.")
+_SCOPE_EN2 = ("The Financial Consumer Protection Regulatory Instructions issued by the Central Bank of Yemen – Aden (CBY-Aden) "
+              "(ref. 589/CBY/2023, dated 20 August 2023) apply, in their own words, to providers of financial products and "
+              "services in the Republic of Yemen under the supervision of “the Central Bank”, and to their agents: as CBY-Aden's "
+              "instrument, they reach the providers CBY-Aden supervises.")
+_SCOPE_AR = ("تسري التعليمات التنظيمية لحماية المستهلك المالي الصادرة عن البنك المركزي اليمني – عدن (المرجع 589/CBY/2023، بتاريخ "
+             "20 أغسطس 2023) على مقدمي الخدمات المالية الخاضعين لرقابة البنك المركزي اليمني – عدن وإشرافه وعلى وكلائهم.")
+_SCOPE_AR2 = ("تسري التعليمات التنظيمية لحماية المستهلك المالي الصادرة عن البنك المركزي اليمني – عدن (المرجع 589/CBY/2023، بتاريخ "
+              "20 أغسطس 2023)، بحسب نصها، على مقدمي المنتجات والخدمات المالية في الجمهورية اليمنية الخاضعين لرقابة «البنك المركزي» "
+              "وإشرافه وعلى وكلائهم؛ وبوصفها أداة صادرة عن البنك المركزي اليمني – عدن، فهي تشمل مقدمي الخدمات الذين يخضعون لرقابته.")
+_JD_EN = "The Instructions do not make clear how items ج and د relate."
+_JD_EN2 = "Item د refers back to item ج's period, but the Instructions do not say whether its extension replaces or adds to item ج's."
+_JD_AR = "ولا توضح التعليمات العلاقة بين البندين (ج) و(د)."
+_JD_AR2 = ("ويحيل البند (د) إلى مدة البند (ج)، لكن التعليمات لا تبيّن ما إذا كان تمديده يحل محل تمديد البند (ج) أو يُضاف إليه.")
+for _a, _b in ((_SCOPE_EN, _SCOPE_EN2), (_JD_EN, _JD_EN2),
+               ("provides that the consumer may take the complaint to CBY-Aden's consumer-protection department, if no reply came "
+                "in time or the consumer is not satisfied with the decision,",
+                "provides that the consumer may take the complaint to the issuing central bank's consumer-protection department, if "
+                "no reply came in time, the complaint was not handled as the Instructions provide, or the consumer is not "
+                "satisfied with the decision,")):
+    assert CP_EN.count(_a) == 1, _a[:50]
+    CP_EN = CP_EN.replace(_a, _b)
+for _a, _b in ((_SCOPE_AR, _SCOPE_AR2), (_JD_AR, _JD_AR2),
+               ("إلى الإدارة المختصة بحماية العملاء في البنك المركزي اليمني – عدن، إذا لم يتلقَّ ردًّا في الوقت المحدد أو لم يرضَ "
+                "بالقرار،",
+                "إلى الإدارة المختصة بحماية العملاء في البنك المركزي المُصدِر، إذا لم يتلقَّ ردًّا في الوقت المحدد، أو لم يُتعامل مع "
+                "شكواه بالطريقة التي تنص عليها التعليمات، أو لم يرضَ بالقرار،")):
+    assert CP_AR.count(_a) == 1, _a[:50]
+    CP_AR = CP_AR.replace(_a, _b)
+for _a, _b in (("which apply to the providers under CBY-Aden's supervision and their agents:",
+                "which apply, in their own words, to providers in the Republic of Yemen under the supervision of “the Central "
+                "Bank” and to their agents:"),
+               ("(items ج and د, whose relationship the Instructions do not make clear)",
+                "(items ج and د; the Instructions do not say whether د's extension replaces or adds to ج's)"),
+               ("for taking the complaint to CBY-Aden,", "for taking the complaint to the issuing central bank,")):
+    assert VIS_CP_EN.count(_a) == 1, _a[:50]
+    VIS_CP_EN = VIS_CP_EN.replace(_a, _b)
+for _a, _b in (("التي تسري على مقدمي الخدمات الخاضعين لرقابة البنك المركزي اليمني – عدن وعلى وكلائهم:",
+                "التي تسري، بحسب نصها، على مقدمي الخدمات في الجمهورية اليمنية الخاضعين لرقابة «البنك المركزي» وعلى وكلائهم:"),
+               ("(البندان (ج) و(د)، ولا توضح التعليمات العلاقة بينهما)",
+                "(البندان (ج) و(د)؛ ولا تبيّن التعليمات ما إذا كان تمديد البند (د) يحل محل تمديد البند (ج) أو يُضاف إليه)"),
+               ("يرفع خلالها المستهلك الشكوى إلى البنك المركزي اليمني – عدن،", "يرفع خلالها المستهلك الشكوى إلى البنك المركزي المُصدِر،")):
+    assert VIS_CP_AR.count(_a) == 1, _a[:50]
+    VIS_CP_AR = VIS_CP_AR.replace(_a, _b)
+CLM011_LIM = ((CLM011_LIM[0][0], CLM011_LIM[0][1].replace(
+                   "The published text does not make clear how items ج and د of Article 9 relate, so no total period is given here.",
+                   "Item د of Article 9 refers back to item ج's period, but the Instructions do not say whether its extension "
+                   "replaces or adds to item ج's, so no total period is given here.")),
+              (CLM011_LIM[1][0], CLM011_LIM[1][1].replace(
+                   "ولا يوضح النص المنشور العلاقة بين البندين (ج) و(د) من المادة 9، لذلك لا تُذكر هنا مدة إجمالية؛",
+                   "ويحيل البند (د) من المادة 9 إلى مدة البند (ج)، لكن التعليمات لا تبيّن ما إذا كان تمديده يحل محل تمديد البند (ج) "
+                   "أو يُضاف إليه، لذلك لا تُذكر هنا مدة إجمالية؛")))
+VIS_LIM = ((VIS_LIM[0][0], VIS_LIM[0][1].replace("the Instructions do not make clear how items ج and د relate, so no total "
+                                                 "period is shown.",
+                                                 "item د refers back to item ج's period, but the Instructions do not say whether "
+                                                 "its extension replaces or adds to item ج's, so no total period is shown.")),
+           (VIS_LIM[1][0], VIS_LIM[1][1].replace("ولا توضح التعليمات العلاقة بين البندين (ج) و(د)، لذلك لا تُعرض مدة إجمالية.",
+                                                 "ويحيل البند (د) إلى مدة البند (ج)، لكن التعليمات لا تبيّن ما إذا كان تمديده يحل "
+                                                 "محل تمديد البند (ج) أو يُضاف إليه، لذلك لا تُعرض مدة إجمالية.")))
+assert "refers back" in CLM011_LIM[0][1] and "يحيل" in CLM011_LIM[1][1] and "refers back" in VIS_LIM[0][1] and "يحيل" in VIS_LIM[1][1]
+FCP_ARCH["FCP-ARCH-006"] = (FCP_ARCH["FCP-ARCH-006"][0].replace(
+    "The Instructions do not make clear how the two items relate.",
+    "Item د refers back to item ج's period; the Instructions do not say whether its extension replaces or adds to item ج's."),
+    FCP_ARCH["FCP-ARCH-006"][1])
+assert "refers back" in FCP_ARCH["FCP-ARCH-006"][0]
+CP_DEF["universe_en"] = ("Providers of financial products and services in the Republic of Yemen under the supervision of “the "
+                         "Central Bank”, and their agents, as the Instructions, issued by the Central Bank of Yemen – Aden "
+                         "(CBY-Aden), define their scope (Article 1)")
+CP_DEF["universe_ar"] = ("مقدمو المنتجات والخدمات المالية في الجمهورية اليمنية الخاضعون لرقابة «البنك المركزي» وإشرافه، ووكلاؤهم، "
+                         "كما تحدد التعليمات الصادرة عن البنك المركزي اليمني – عدن نطاقها (المادة 1).")
+VIS11["denominator_universe"] = ("Providers of financial products and services in the Republic of Yemen under the supervision of "
+                                 "“the Central Bank”, and their agents, as the 2023 Instructions of CBY-Aden define their scope")
+VIS11["what_it_shows_en"] = VIS11["what_it_shows_en"].replace("for taking the complaint to CBY-Aden", "for taking the complaint "
+                                                              "to the issuing central bank")
+VIS11["what_it_shows_ar"] = VIS11["what_it_shows_ar"].replace("يرفع خلالها المستهلك الشكوى إلى البنك المركزي اليمني – عدن",
+                                                              "يرفع خلالها المستهلك الشكوى إلى البنك المركزي المُصدِر")
+OECD_FCP = ((OECD_FCP[0][0], OECD_FCP[0][1].replace(
+                 "The Instructions apply to the providers under CBY-Aden's supervision and their agents.",
+                 "The Instructions apply, in their own words, to providers in the Republic of Yemen under the supervision of “the "
+                 "Central Bank” and to their agents.")),
+            (OECD_FCP[1][0], OECD_FCP[1][1].replace(
+                 "وتسري التعليمات على مقدمي الخدمات الخاضعين لرقابة البنك المركزي اليمني – عدن ووكلائهم.",
+                 "وتسري التعليمات، بحسب نصها، على مقدمي الخدمات في الجمهورية اليمنية الخاضعين لرقابة «البنك المركزي» وعلى وكلائهم.")))
+MA006 = ((MA006[0][0], MA006[0][1].replace(
+              "They require providers to report to CBY-Aden's consumer-protection department every three months",
+              "They require the providers they cover to report to the central bank's consumer-protection department every three "
+              "months").replace("and provide for CBY-Aden to prepare and publish", "and provide for the central bank to prepare "
+                                "and publish")),
+         (MA006[1][0], MA006[1][1].replace(
+              "وتُلزم مقدمي الخدمات برفع تقارير كل ثلاثة أشهر إلى الإدارة المختصة بحماية العملاء في البنك المركزي اليمني – عدن",
+              "وتُلزم مقدمي الخدمات المشمولين بها برفع تقارير كل ثلاثة أشهر إلى الإدارة المختصة بحماية العملاء في البنك المركزي")
+          .replace("وتنص على أن يعدّ البنك المركزي اليمني – عدن تقارير سنوية", "وتنص على أن يعدّ البنك المركزي تقارير سنوية")))
+for _x in ("covering the providers", ):
+    pass
+assert "the providers they cover" in MA006[0][1] and "المشمولين بها" in MA006[1][1]
+assert "in their own words" in OECD_FCP[0][1] and "بحسب نصها" in OECD_FCP[1][1]
