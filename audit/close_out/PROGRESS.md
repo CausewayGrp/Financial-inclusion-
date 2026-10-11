@@ -199,3 +199,12 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   /finance/ under F2), OWN-13 (CWR-012), CWR-002 → MA-008 binding. FRONTIER: 47 items with cards
   (audit/close_out/FRONTIER_CARDS.md), incl. EXT-23 (the CBY POS January 2026 file address changed).
 - Next: Stage B, after the owner reviews the STAGE A REPORT. Not declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
+
+## Stage A addendum (advisor review of the Stage A report, 11 October 2026)
+
+- 2026-10-11 · A+ · item 1 · Public-literal audit v3 (code PR): scope widened to the Measurement Agenda priorities and
+  the Reading fields; the inventory/method fallback removed; composite records trace through a listed member or a
+  governed data row; 314 public numbers that cannot yet be traced are listed in scripts/literal_audit_open_traces.json
+  (70 entries, closes in CLOSE-6A), reported as open, pinned to the Master. "0 unresolved" in the Stage A report is
+  re-stated: under the widened scope, 0 unresolved and 314 open. Five negative controls (LIT-3) caught. Source reads for
+  items 2–4 (R1–R5) are in scratch and will be committed with the transactions that use them.

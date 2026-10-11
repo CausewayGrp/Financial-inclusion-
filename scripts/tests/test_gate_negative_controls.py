@@ -51,7 +51,7 @@ def _run(tree: Path, script: str) -> tuple[int, str]:
 
 # A control may name the gate that must catch it; the default is the repository validator. Each runs inside a copy.
 GATE_SCRIPTS = {"validate": "scripts/validate.py", "content_parity": "scripts/tests/test_content_parity.py",
-                "bilingual": "audit/tranche_c/checks/bilingual_invariance.py"}
+                "bilingual": "audit/tranche_c/checks/bilingual_invariance.py", "literals": "scripts/tests/literal_audit_check.py"}
 
 
 def tree_files() -> list[str]:
@@ -669,6 +669,21 @@ CONTROLS = [
     ("CO-G06: an item is PENDING outside the five states", "audit/close_out/OPEN_ITEMS_STATES.json",
      sub_once(r'"EXT-21": "FRONTIER"', '"EXT-21": "PENDING"'),
      "CO-G06 OPEN_ITEMS_STATES.json gives EXT-21 the state 'PENDING', not one of the five"),
+    # Public-literal audit v3 (close-out addendum item 1): a priority, a Reading field and a composite record each trace a
+    # number only through what they bind; a governed row stands behind a tabled value; an open trace never goes stale.
+    ("LIT-3: a priority prints a number no record it binds holds", "site-src/content/content/measurement_agenda.json",
+     replace("1,297", "1,279"), "measurement_priority MA-001 current_evidence_en 1,279", "literals"),
+    ("LIT-3: a Reading's thesis prints a number its bound records do not hold", "site-src/content/content/readings.json",
+     replace("45,460", "45,640"), "reading_record CWR-010 thesis_en 45,640", "literals"),
+    ("LIT-3: a composite's number is held only in its own text", "site-src/content/evidence/evidence_objects.json",
+     sub_once(r'("object_id": "VIS-PROVIDER-TIME".*?)lists 100 exchange companies', r"\1lists 107 exchange companies"),
+     "governed_numeric_inventory VIS-PROVIDER-TIME summary_en 107", "literals"),
+    ("LIT-3: a tabled value loses the governed row behind it", "site-src/content/visuals/visual_design_contracts.json",
+     replace('"number": 11925.0', '"number": 11952.0'), "governed_numeric_inventory VIS-CBY-MONETARY-SNAPSHOT accessible_summary_en 11,925.0", "literals"),
+    ("LIT-3: an open trace that no page prints stays listed", "scripts/literal_audit_open_traces.json",
+     sub_once(r'"open": \[(\s*)(\]?)', lambda m: '"open": [{"route": "/", "surface": "section", "object": "", "field": "body_en", "token": "999999", '
+                                                 '"closes_in": "control", "reason": "control"}' + ("" if m.group(2) else ",") + m.group(1) + m.group(2)),
+     "stale open trace (no longer printed, or now traced): / section  body_en 999999", "literals"),
     # Close-out W2 (owner decision D7): handoff/ is superseded; its start file may not claim the old status again.
     ("R86-G01: the handoff start file claims DESIGN HANDOFF READY again", "handoff/README_FIRST.md",
      sub_once(r'^[^\n]*', '> STATUS: **DESIGN HANDOFF READY.** Start here.'),

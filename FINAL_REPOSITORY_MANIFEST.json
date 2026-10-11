@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 44,
+  "BUILD_AND_GATES": 46,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 221,
@@ -6872,6 +6872,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/literal_audit_open_traces.json",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/logo_derivatives.py",
    "class": "BUILD_AND_GATES"
   },
@@ -6989,6 +6993,10 @@
   },
   {
    "path": "scripts/tests/content_oracle.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/literal_audit_check.py",
    "class": "BUILD_AND_GATES"
   },
   {

@@ -13,7 +13,9 @@
   "reading_closed": "CLOSED_TO_SOURCE_ID",
   "reading_partial": "PARTIALLY_RESOLVED",
   "reading_unbound": "SOURCE_NOT_YET_BOUND",
-  "measurement": "NO_DIRECT_SOURCE_BINDING"
+  "measurement": "NO_DIRECT_SOURCE_BINDING",
+  "measurement_closed": "CLOSED_TO_SOURCE_ID",
+  "measurement_partial": "PARTIALLY_RESOLVED"
  },
  "metadata_state_rule": {
   "field": "public_card_state",

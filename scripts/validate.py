@@ -159,6 +159,20 @@ try:
     if pla.get('authority_master_sha256')!=master_sha: errors.append('public-literal audit Master hash is stale')
     if pla.get('page_specs_sha256')!=actual_page_specs_sha: errors.append('public-literal audit Page Specs hash is stale')
     if pla.get('unresolved_substantive_count')!=0: errors.append('public-literal audit has unresolved substantive public numbers')
+    # close-out addendum item 1 (audit v3): the priorities and the Reading fields are in scope, the inventory/method
+    # fallback is gone, an open trace is listed (never resolved) and pinned to this Master, and the audit has no problem
+    if pla.get('schema')!='YFIE_PUBLIC_LITERAL_CLOSURE/3.0': errors.append('public-literal audit is not v3 (re-run scripts/audit_public_literals.py)')
+    for _p in pla.get('audit_problems') or []: errors.append('public-literal audit problem: '+str(_p))
+    for _s,_min in (('section',2000),('governed_numeric_inventory',10000),('measurement_priority',300),('reading_record',300)):
+        if (pla.get('surfaces') or {}).get(_s,0)<_min: errors.append(f'public-literal audit read only {(pla.get("surfaces") or {}).get(_s,0)} numbers on surface {_s}')
+    _cats=set((pla.get('summary') or {}))
+    for _gone in ('CONTROLLED_DATASET_INVENTORY_OR_METHOD_METADATA','ROUTE_COMPOSITE_TRACE__MEMBERS_LISTED'):
+        if _gone in _cats: errors.append(f'public-literal audit still uses the retired category {_gone}')
+    _otl=[r for r in pla.get('records') or [] if r.get('category')=='OPEN_TRACE_LISTED']
+    if len(_otl)!=pla.get('open_trace_count'): errors.append('public-literal audit open-trace count disagrees with its records')
+    _ot=json.load(open(ROOT/'scripts/literal_audit_open_traces.json',encoding='utf-8'))
+    if _ot.get('open') and _ot.get('authority_master_sha256')!=master_sha: errors.append('scripts/literal_audit_open_traces.json is pinned to another Master')
+    if _otl: warns.append(f'public-literal audit: {len(_otl)} public numbers have an open trace (scripts/literal_audit_open_traces.json)')
 except Exception as e:
     errors.append('public-literal audit missing or unreadable '+str(e))
 

@@ -950,6 +950,15 @@ class Content:
             out["blocked"] = self.loc(m, "blocked_evidence", lang)
             out["dimensions"] = dimension_list(self.loc(m, "dimensions", lang))   # 4.2 (owner note, 11:15)
             out["more"] = [{"label": L(uid), "text": self.loc(m, f, lang)} for f, uid in (("guardrail", "UI-MA-GUARDRAIL"), ("feasibility", "UI-MA-FEASIBILITY"), ("priority_basis", "UI-MA-BASIS"), ("what_changes", "UI-MA-CHANGES")) if self.loc(m, f, lang)]
+            # Close-out addendum item 1: the records behind the priority's current evidence (10 evidence_bindings) and the
+            # sources their closure reaches, as links; a source without a public locator is never named
+            out["evidence"] = [{"id": oid, "href": self.href(self.detail_routes[oid], lang),
+                                "title": self.loc(self.evidence_objects.get(oid) or {}, "title", lang) or oid}
+                               for oid in (m.get("evidence_bindings") or []) if oid in self.detail_routes]
+            cards = [self.source_card(sid, lang) for sid in (self.closure.get(("measurement", mid)) or {}).get("resolved_source_ids") or []]
+            out["sources"] = [{"id": c["id"], "title": c["title"], "href": c["url"]} for c in cards if c]
+            out["labels"]["evidence"] = L("UI-READING-TRACE-H")
+            out["labels"]["sources"] = L("UI-SOURCES-SOURCES")
         return out
 
     def governed_blocks(self, spec: dict, lang: str, route_key: str) -> list[dict]:

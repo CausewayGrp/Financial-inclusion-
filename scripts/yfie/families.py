@@ -486,6 +486,8 @@ def measurement(page: dict, shell: dict) -> str:
                      + f'<p><b>{esc(ML["current"])}</b> {esc(m["current"])}</p><p><b>{esc(ML["missing"])}</b> {esc(m["missing"])}</p><p><b>{esc(ML["unlocked"])}</b> {esc(m["unlocked"])}</p>'
                      + (f'<div data-ma-decisions><p><b>{esc(ML["decisions"])}</b></p><ul class="rlist">' + "".join(f"<li>{esc(x)}</li>" for x in m["decisions"]) + "</ul></div>" if m.get("decisions") else "")
                      + (f'<p data-ma-blocked><b>{esc(ML["blocked"])}</b> {esc(m["blocked"])}</p>' if m.get("blocked") else "")   # B6
+                     + (f'<p class="small" data-ma-evidence><b>{esc(ML["evidence"])}</b> ' + " · ".join(f'<a href="{x["href"]}">{esc(x["title"])}</a>' for x in m["evidence"]) + "</p>" if m.get("evidence") else "")
+                     + (f'<p class="small" data-ma-sources><b>{esc(ML["sources"])}</b> ' + " · ".join(f'<a href="{esc(x["href"])}" rel="noopener noreferrer" target="_blank">{esc(x["title"] or x["id"])}</a>' for x in m["sources"]) + "</p>" if m.get("sources") else "")
                      + f'</div>{examined}'
                      f'<div class="ref"><b>{esc(ML["reference"])}</b> {bdi(m["id"])}</div>' + (f'<details class="more"><summary>{esc(ML["more"])}</summary><dl class="kv">{more}</dl></details>' if more else "") + "</article>")
     ag = next((s for s in page["sections"] if s["order"] == 10), None)
