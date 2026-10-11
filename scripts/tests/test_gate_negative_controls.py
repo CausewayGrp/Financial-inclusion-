@@ -552,8 +552,9 @@ CONTROLS = [
      into_main(lambda: "<p>On 17 May 2019 the authority closed the register.</p>"),
      "E2-DATES en/reforms/index.html prints the date 2019-05-17, which no record, event or source states"),
     ("a record's printed date loses its state", "site-src/content/evidence/evidence_objects.json",
-     edit_states("CLM-001", lambda vs: [e for e in vs if e["t"] != "7 November 2022"]),
-     "E2-DATES CLM-001 summary_en prints the date 2022-11-07 without a stated state in its record"),
+     # close-out CLOSE-6A (CR-21): CLM-001 prints the fieldwork at month precision, so the control drops the month state
+     edit_states("CLM-001", lambda vs: [e for e in vs if e["t"] != "November 2022"]),
+     "E2-DATES CLM-001 summary_en prints the date 2022-11 without a stated state in its record"),
     ("a traced value loses its state", "site-src/content/evidence/evidence_objects.json",
      edit_states("CLM-001", lambda vs: [e for e in vs if e["t"] != "11.9%"]),
      "E2-READ /people/ prints '11.9%', traced to CLM-001, which gives it no state"),

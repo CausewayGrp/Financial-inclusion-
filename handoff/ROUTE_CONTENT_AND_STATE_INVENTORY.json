@@ -2,12 +2,12 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "d14b36c5c1714cdc75dcc92bddac8777a301050ee6d147596e446978418ef360",
-  "page_specs_sha256": "8889e1ac2aabafeba3f74e01dcc128275bcdfe89f461b09729b960caa2f2a014",
+  "production_master_sha256": "1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16",
+  "page_specs_sha256": "565c1cf886e94636e8f6164b4aec50a48fb107bca563680be2f3967ec108029a",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
-  "evidence_records": 110,
+  "evidence_records": 113,
   "public_claims": 60,
   "chronology_events": 29,
   "sources": 199,
@@ -18,8 +18,8 @@
   "entry_questions": 11,
   "visual_contracts": 42,
   "evidence_passports": 55,
-  "search_records": 507,
-  "page_specs": 144
+  "search_records": 513,
+  "page_specs": 147
  },
  "projection_roles": {
   "rules": {
@@ -107,7 +107,7 @@
   },
   {
    "page_family": "Evidence Record",
-   "route_count": 110,
+   "route_count": 113,
    "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
    "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "depth_role": "VERIFICATION",
@@ -193,7 +193,7 @@
     "MA-005"
    ],
    "source_ids": [],
-   "source_references": 11,
+   "source_references": 32,
    "next_actions": [],
    "next_action_policy": "TASK_OR_QUESTION",
    "collection": {
@@ -259,6 +259,7 @@
     "CLM-009",
     "CLM-050",
     "CLM-052",
+    "FAS-YEM-2015",
     "XW-FMIIP-005"
    ],
    "visual_ids": [
@@ -272,7 +273,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 19,
+   "source_references": 42,
    "next_actions": [
     "/evidence/"
    ],
@@ -710,7 +711,7 @@
     "MA-006"
    ],
    "source_ids": [],
-   "source_references": 39,
+   "source_references": 40,
    "next_actions": [
     "/evidence/compare/",
     "/data/",
@@ -786,9 +787,11 @@
      "DS-FINDEX-HISTORY-CROSSWALK",
      "DS-FINDEX-PUBLIC-HISTORY",
      "DS-QUAL-EVIDENCE",
+     "FAS-YEM-2015",
      "FMIIP-BASELINE-2025-01",
      "MF-ORIG-001+002",
      "MFI-SPINE-2015-Q4",
+     "MICS-YEM-2022-23",
      "PSE-011",
      "QUAL-001",
      "VIS-BORROWING-SOURCES-2014",
@@ -828,7 +831,8 @@
      "VIS-REMITTANCE-MACRO",
      "VIS-SOURCE-COMPARISON",
      "VIS-TARGET-RESULT-STATE",
-     "XW-FMIIP-005"
+     "XW-FMIIP-005",
+     "YMPS-YEM-2022-R1"
     ]
    },
    "structured_data": [],
@@ -1230,12 +1234,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -1296,7 +1300,7 @@
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "verification_state": "COMPOSITE_OF_OBJECTS",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -2067,12 +2071,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 1,
+   "source_references": 2,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 1,
+   "public_sources_listed": 2,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -2784,7 +2788,7 @@
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "verification_state": "COMPOSITE_OF_OBJECTS",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -2916,6 +2920,37 @@
    "hard_state_acceptance": []
   },
   {
+   "route": "/evidence/FAS-YEM-2015/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "FAS-YEM-2015",
+   "html": {
+    "en": "dist/en/evidence/FAS-YEM-2015/index.html",
+    "ar": "dist/ar/evidence/FAS-YEM-2015/index.html"
+   },
+   "title_en": "ATMs, bank branches and depositors: Yemen's last values from the IMF Financial Access Survey in the World Development Indicators (2015)",
+   "title_ar": "أجهزة الصراف الآلي وفروع البنوك والمودعون: آخر قيم اليمن من مسح الوصول المالي لصندوق النقد الدولي في مؤشرات التنمية العالمية (2015)",
+   "sections": 2,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "FAS-YEM-2015"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_ids": [],
+   "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
    "route": "/evidence/FMIIP-BASELINE-2025-01/",
    "page_family": "Evidence Record",
    "page_class": "evidence_detail",
@@ -2992,6 +3027,37 @@
    "section_rows_split_by_language": false,
    "evidence_ids": [
     "MFI-SPINE-2015-Q4"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_ids": [],
+   "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/MICS-YEM-2022-23/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "MICS-YEM-2022-23",
+   "html": {
+    "en": "dist/en/evidence/MICS-YEM-2022-23/index.html",
+    "ar": "dist/ar/evidence/MICS-YEM-2022-23/index.html"
+   },
+   "title_en": "MICS 2022–2023: one household question on bank accounts, not tabulated in its findings report",
+   "title_ar": "المسح العنقودي متعدد المؤشرات 2022–2023: سؤال واحد في استبيان الأسرة عن الحسابات المصرفية، لم تُجدوَل إجاباته في تقرير نتائجه",
+   "sections": 2,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "MICS-YEM-2022-23"
    ],
    "visual_ids": [],
    "reading_ids": [],
@@ -3218,12 +3284,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 3,
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -3254,8 +3320,8 @@
    "source_references": 0,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "lineage_state": "FRAMING_NO_FACT",
+   "verification_state": "FRAMING_NO_FACT",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -3320,8 +3386,8 @@
    "source_references": 0,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "lineage_state": "FRAMING_NO_FACT",
+   "verification_state": "FRAMING_NO_FACT",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -3743,8 +3809,8 @@
    "source_references": 0,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "lineage_state": "FRAMING_NO_FACT",
+   "verification_state": "FRAMING_NO_FACT",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -3776,8 +3842,8 @@
    "source_references": 0,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "lineage_state": "FRAMING_NO_FACT",
+   "verification_state": "FRAMING_NO_FACT",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -4101,7 +4167,7 @@
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "verification_state": "COMPOSITE_OF_OBJECTS",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -4230,8 +4296,8 @@
    "source_references": 0,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
-   "lineage_state": "COMPOSITE_OF_OBJECTS",
-   "verification_state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "lineage_state": "FRAMING_NO_FACT",
+   "verification_state": "FRAMING_NO_FACT",
    "public_sources_listed": 0,
    "structured_data": [
     "BreadcrumbList"
@@ -4297,6 +4363,37 @@
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
    "public_sources_listed": 3,
+   "structured_data": [
+    "BreadcrumbList"
+   ],
+   "hard_state_acceptance": []
+  },
+  {
+   "route": "/evidence/YMPS-YEM-2022-R1/",
+   "page_family": "Evidence Record",
+   "page_class": "evidence_detail",
+   "stable_object_id": "YMPS-YEM-2022-R1",
+   "html": {
+    "en": "dist/en/evidence/YMPS-YEM-2022-R1/index.html",
+    "ar": "dist/ar/evidence/YMPS-YEM-2022-R1/index.html"
+   },
+   "title_en": "The World Bank's phone survey of August–September 2022 records respondents in both areas of control",
+   "title_ar": "مسح الهاتف المحمول للبنك الدولي في أغسطس–سبتمبر 2022 يسجل مستجيبين في منطقتَي السيطرة كلتيهما",
+   "sections": 2,
+   "section_rows_split_by_language": false,
+   "evidence_ids": [
+    "YMPS-YEM-2022-R1"
+   ],
+   "visual_ids": [],
+   "reading_ids": [],
+   "measurement_ids": [],
+   "source_ids": [],
+   "source_references": 1,
+   "next_actions": [],
+   "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
+   "lineage_state": "BOUND_EXACT",
+   "verification_state": "SOURCES_LISTED",
+   "public_sources_listed": 1,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4397,7 +4494,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 0,
+   "source_references": 50,
    "next_actions": [],
    "next_action_policy": "DOMAIN_ANSWER",
    "collection": {
@@ -4514,7 +4611,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 42,
+   "source_references": 46,
    "next_actions": [
     "/evidence/CLM-022/"
    ],
@@ -4565,7 +4662,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 9,
+   "source_references": 12,
    "next_actions": [
     "/evidence/CLM-005/"
    ],
@@ -4593,7 +4690,10 @@
    "evidence_ids": [
     "CLM-009",
     "CLM-026",
-    "VIS-EVIDENCE-GAPS"
+    "FAS-YEM-2015",
+    "MICS-YEM-2022-23",
+    "VIS-EVIDENCE-GAPS",
+    "YMPS-YEM-2022-R1"
    ],
    "visual_ids": [
     "VIS-EVIDENCE-GAPS"
@@ -4601,7 +4701,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 4,
+   "source_references": 7,
    "next_actions": [
     "/explore/",
     "/evidence/"
@@ -4666,7 +4766,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 31,
+   "source_references": 32,
    "next_actions": [
     "/evidence/",
     "/data/",
@@ -4727,7 +4827,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 40,
+   "source_references": 44,
    "next_actions": [
     "/evidence/CLM-003/"
    ],
@@ -4773,6 +4873,7 @@
     "DS-DEMAND-VINTAGE-LENS",
     "DS-FINDEX-HISTORY-CROSSWALK",
     "DS-FINDEX-PUBLIC-HISTORY",
+    "MICS-YEM-2022-23",
     "VIS-BORROWING-SOURCES-2014",
     "VIS-DEMAND-VINTAGE-LADDER",
     "VIS-DOMESTIC-REMITTANCE-PATH-2014",
@@ -4782,7 +4883,8 @@
     "VIS-FINDEX-GAPS",
     "VIS-FINDEX-OBSERVED-WAVES",
     "VIS-FINDEX-RESILIENCE",
-    "VIS-FL-EVIDENCE-LADDER"
+    "VIS-FL-EVIDENCE-LADDER",
+    "YMPS-YEM-2022-R1"
    ],
    "visual_ids": [
     "VIS-FINDEX-ACCESS-USE",
@@ -4804,7 +4906,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 36,
+   "source_references": 49,
    "next_actions": [
     "/evidence/CLM-001/"
    ],
@@ -4881,7 +4983,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 35,
+   "source_references": 41,
    "next_actions": [
     "/evidence/CLM-009/"
    ],
@@ -4923,7 +5025,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 55,
+   "source_references": 56,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -4977,7 +5079,7 @@
    "source_ids": [
     "SRC-WB-G2PX-YEM-UCT-2024-001"
    ],
-   "source_references": 7,
+   "source_references": 8,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5465,7 +5567,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 44,
+   "source_references": 51,
    "next_actions": [
     "/evidence/CLM-011/"
    ],
@@ -5523,7 +5625,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 22,
+   "source_references": 26,
    "next_actions": [
     "/evidence/CLM-007/"
    ],
@@ -5810,9 +5912,9 @@
    }
   ],
   "evidence_lineage_states": {
-   "BOUND_EXACT": 96,
-   "COMPOSITE_OF_OBJECTS": 13,
-   "FRAMING_NO_FACT": 1
+   "BOUND_EXACT": 99,
+   "COMPOSITE_OF_OBJECTS": 8,
+   "FRAMING_NO_FACT": 6
   },
   "verification_states": {
    "SOURCES_LISTED": {
@@ -5882,9 +5984,11 @@
      "CLM-062",
      "DS-FCP-ARCH",
      "DS-FINDEX-PUBLIC-HISTORY",
+     "FAS-YEM-2015",
      "FMIIP-BASELINE-2025-01",
      "MF-ORIG-001+002",
      "MFI-SPINE-2015-Q4",
+     "MICS-YEM-2022-23",
      "PSE-011",
      "QUAL-001",
      "VIS-BORROWING-SOURCES-2014",
@@ -5915,7 +6019,8 @@
      "VIS-REMITTANCE-COST",
      "VIS-REMITTANCE-MACRO",
      "VIS-TARGET-RESULT-STATE",
-     "XW-FMIIP-005"
+     "XW-FMIIP-005",
+     "YMPS-YEM-2022-R1"
     ]
    },
    "SOURCES_LISTED_SOME_WITHOUT_PUBLIC_LOCATOR": {
@@ -5941,10 +6046,13 @@
      "UI-VERIFY-COMPOSITE"
     ],
     "records": [
+     "CLM-014",
      "CLM-031",
+     "DS-DEMAND-VINTAGE-LENS",
      "DS-FINDEX-HISTORY-CROSSWALK",
      "VIS-DEMAND-VINTAGE-LADDER",
      "VIS-EVIDENCE-FRESHNESS",
+     "VIS-PROVIDER-OBSERVABILITY",
      "VIS-PROVIDER-TIME"
     ]
    },
@@ -5953,16 +6061,7 @@
     "ui_ids": [
      "UI-VERIFY-COMPOSITE-UNLISTED"
     ],
-    "records": [
-     "CLM-014",
-     "DS-DEMAND-VINTAGE-LENS",
-     "VIS-EVIDENCE-CLASS-LADDER",
-     "VIS-EVIDENCE-GAPS",
-     "VIS-INCLUSION-TRANSMISSION",
-     "VIS-MECHANISM-METRIC-BRIDGE",
-     "VIS-PROVIDER-OBSERVABILITY",
-     "VIS-SOURCE-COMPARISON"
-    ]
+    "records": []
    },
    "FRAMING_NO_FACT": {
     "meaning": "A framing rule with no fact: no source is expected; must not look like missing evidence",
@@ -5970,7 +6069,12 @@
      "UI-EVID-FRAMING"
     ],
     "records": [
-     "CLM-004"
+     "CLM-004",
+     "VIS-EVIDENCE-CLASS-LADDER",
+     "VIS-EVIDENCE-GAPS",
+     "VIS-INCLUSION-TRANSMISSION",
+     "VIS-MECHANISM-METRIC-BRIDGE",
+     "VIS-SOURCE-COMPARISON"
     ]
    },
    "SOURCE_NOT_YET_BOUND": {

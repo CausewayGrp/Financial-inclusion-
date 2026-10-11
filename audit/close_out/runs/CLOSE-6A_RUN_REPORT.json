@@ -1,0 +1,106 @@
+{
+ "stage": "CLOSE-6A",
+ "staged_master_sha256": "1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16",
+ "installed": [
+  "scripts/projection/master_structure.json",
+  "scripts/projection/controlled_inputs/page_spec_design_intent.json",
+  "OPENAI_REENTRY_CHECKPOINT.md",
+  "handoff/README_FIRST.md"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 298 HTML files from 147 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=17869 unresolved=0 open=0 problems=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 147 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 2142 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 1,
+   "tail": [
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/FAS-YEM-2015: /assets/social/evidence_FAS-YEM-2015__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/FAS-YEM-2015: /assets/social/evidence_FAS-YEM-2015__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/MICS-YEM-2022-23: /assets/social/evidence_MICS-YEM-2022-23__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/MICS-YEM-2022-23: /assets/social/evidence_MICS-YEM-2022-23__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/YMPS-YEM-2022-R1: /assets/social/evidence_YMPS-YEM-2022-R1__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/YMPS-YEM-2022-R1: /assets/social/evidence_YMPS-YEM-2022-R1__ar.png"
+   ],
+   "allowed_errors": [
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/FAS-YEM-2015: /assets/social/evidence_FAS-YEM-2015__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/FAS-YEM-2015: /assets/social/evidence_FAS-YEM-2015__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/MICS-YEM-2022-23: /assets/social/evidence_MICS-YEM-2022-23__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/MICS-YEM-2022-23: /assets/social/evidence_MICS-YEM-2022-23__ar.png",
+    "FAIL F6-G01 og:image names an image the build does not ship en/evidence/YMPS-YEM-2022-R1: /assets/social/evidence_YMPS-YEM-2022-R1__en.png",
+    "FAIL F6-G01 og:image names an image the build does not ship ar/evidence/YMPS-YEM-2022-R1: /assets/social/evidence_YMPS-YEM-2022-R1__ar.png"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16\",",
+    " \"outputs\": 40,",
+    " \"differences\": [],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTION CHECK PASS"
+   ]
+  }
+ ],
+ "result": "COMMITTED",
+ "master_sha256": "1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16",
+ "page_specs_sha256": "565c1cf886e94636e8f6164b4aec50a48fb107bca563680be2f3967ec108029a"
+}

@@ -2,38 +2,36 @@
  "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
  "as_of": "Pre-Tranche-C P5",
  "evidence_record_lineage_state_counts": {
-  "BOUND_EXACT": 96,
-  "COMPOSITE_OF_OBJECTS": 13,
-  "FRAMING_NO_FACT": 1
+  "BOUND_EXACT": 99,
+  "FRAMING_NO_FACT": 6,
+  "COMPOSITE_OF_OBJECTS": 8
  },
  "closure_state_counts_by_object_type": {
   "evidence_object": {
-   "CLOSED_TO_SOURCE_ID": 96,
-   "COMPOSITE_MEMBERS_NOT_LISTED": 8,
-   "COMPOSITE_OF_OBJECTS": 5,
-   "FRAMING_NO_FACT": 1
+   "CLOSED_TO_SOURCE_ID": 99,
+   "FRAMING_NO_FACT": 6,
+   "COMPOSITE_OF_OBJECTS": 8
   },
   "public_claim": {
    "CLOSED_TO_SOURCE_ID": 57,
    "FRAMING_NO_FACT": 1,
-   "COMPOSITE_MEMBERS_NOT_LISTED": 1,
-   "COMPOSITE_OF_OBJECTS": 1
+   "COMPOSITE_OF_OBJECTS": 2
   },
   "reading": {
    "CLOSED_TO_SOURCE_ID": 11
   },
   "visual": {
    "CLOSED_TO_SOURCE_ID": 31,
-   "COMPOSITE_MEMBERS_NOT_LISTED": 7,
-   "COMPOSITE_OF_OBJECTS": 4
+   "FRAMING_NO_FACT": 5,
+   "COMPOSITE_OF_OBJECTS": 6
   },
   "measurement": {
-   "NO_DIRECT_SOURCE_BINDING": 10
+   "CLOSED_TO_SOURCE_ID": 10
   }
  },
  "records_not_closed_to_source": {
   "VIS-INCLUSION-TRANSMISSION": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "FRAMING_NO_FACT",
    "open_inputs": [],
    "members": []
   },
@@ -81,7 +79,7 @@
    ]
   },
   "VIS-SOURCE-COMPARISON": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "FRAMING_NO_FACT",
    "open_inputs": [],
    "members": []
   },
@@ -94,14 +92,21 @@
    ]
   },
   "VIS-MECHANISM-METRIC-BRIDGE": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "FRAMING_NO_FACT",
    "open_inputs": [],
    "members": []
   },
   "VIS-PROVIDER-OBSERVABILITY": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "COMPOSITE_OF_OBJECTS",
    "open_inputs": [],
-   "members": []
+   "members": [
+    "CLM-008",
+    "CLM-055",
+    "CLM-009",
+    "CLM-019",
+    "CLM-010",
+    "CLM-015"
+   ]
   },
   "CLM-031": {
    "state": "COMPOSITE_OF_OBJECTS",
@@ -120,6 +125,7 @@
    "open_inputs": [],
    "members": [
     "CLM-001",
+    "CLM-026",
     "CLM-027",
     "CLM-028",
     "CLM-029",
@@ -138,9 +144,19 @@
    ]
   },
   "DS-DEMAND-VINTAGE-LENS": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "COMPOSITE_OF_OBJECTS",
    "open_inputs": [],
-   "members": []
+   "members": [
+    "CLM-001",
+    "CLM-026",
+    "CLM-027",
+    "CLM-028",
+    "CLM-029",
+    "CLM-030",
+    "VIS-FINDEX-RESILIENCE",
+    "VIS-FINDEX-BARRIERS",
+    "VIS-FINDEX-FLOW-CHANNELS"
+   ]
   },
   "CLM-004": {
    "state": "FRAMING_NO_FACT",
@@ -148,17 +164,55 @@
    "members": []
   },
   "CLM-014": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "COMPOSITE_OF_OBJECTS",
    "open_inputs": [],
-   "members": []
+   "members": [
+    "CLM-001",
+    "CLM-025",
+    "CLM-029",
+    "CLM-031",
+    "CLM-028",
+    "CLM-013",
+    "VIS-FL-EVIDENCE-LADDER",
+    "VIS-FINDEX-RESILIENCE",
+    "CLM-002",
+    "VIS-FINDEX-GAPS",
+    "XW-FMIIP-005",
+    "CLM-052",
+    "CLM-050",
+    "FMIIP-BASELINE-2025-01",
+    "CLM-003",
+    "CLM-017",
+    "CLM-012",
+    "CLM-045",
+    "CLM-030",
+    "CLM-007",
+    "CLM-032",
+    "VIS-REMITTANCE-COST",
+    "CLM-008",
+    "CLM-009",
+    "CLM-019",
+    "CLM-015",
+    "CLM-053",
+    "CLM-054",
+    "CLM-033",
+    "CLM-038",
+    "CLM-005",
+    "CLM-006",
+    "CLM-059",
+    "CLM-060",
+    "CLM-011",
+    "DS-FCP-ARCH",
+    "CLM-018"
+   ]
   },
   "VIS-EVIDENCE-GAPS": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "FRAMING_NO_FACT",
    "open_inputs": [],
    "members": []
   },
   "VIS-EVIDENCE-CLASS-LADDER": {
-   "state": "COMPOSITE_MEMBERS_NOT_LISTED",
+   "state": "FRAMING_NO_FACT",
    "open_inputs": [],
    "members": []
   }
@@ -185,6 +239,7 @@
      "DS-FINDEX-PUBLIC-HISTORY"
     ],
     "member_record_references": [
+     "CLM-014 -> DS-FCP-ARCH",
      "DS-FINDEX-HISTORY-CROSSWALK -> DS-FINDEX-PUBLIC-HISTORY",
      "VIS-EVIDENCE-FRESHNESS -> DS-FCP-ARCH"
     ]

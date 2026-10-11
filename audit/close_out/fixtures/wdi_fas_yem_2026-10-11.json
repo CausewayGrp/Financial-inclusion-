@@ -1,0 +1,3311 @@
+{
+ "retrieved": "2026-10-11",
+ "note": "World Bank open data API (api.worldbank.org/v2), World Development Indicators, the IMF Financial Access Survey series for Yemen (FB.ATM.TOTL.P5, FB.CBK.BRCH.P5, FB.CBK.DPTR.P3), as fetched on 11 October 2026 for close-out CLOSE-6A (Stage A addendum item 1a, FAS-YEM-2015 and MA-005). A dated snapshot: the transaction reads it, never the live API. Each series' last value for Yemen is 2015; later years are null.",
+ "requests": {
+  "FB.ATM.TOTL.P5": {
+   "data": "https://api.worldbank.org/v2/country/YEM/indicator/FB.ATM.TOTL.P5?format=json&per_page=100",
+   "indicator": "https://api.worldbank.org/v2/indicator/FB.ATM.TOTL.P5?format=json"
+  },
+  "FB.CBK.BRCH.P5": {
+   "data": "https://api.worldbank.org/v2/country/YEM/indicator/FB.CBK.BRCH.P5?format=json&per_page=100",
+   "indicator": "https://api.worldbank.org/v2/indicator/FB.CBK.BRCH.P5?format=json"
+  },
+  "FB.CBK.DPTR.P3": {
+   "data": "https://api.worldbank.org/v2/country/YEM/indicator/FB.CBK.DPTR.P3?format=json&per_page=100",
+   "indicator": "https://api.worldbank.org/v2/indicator/FB.CBK.DPTR.P3?format=json"
+  }
+ },
+ "series": {
+  "FB.ATM.TOTL.P5": {
+   "data": [
+    {
+     "page": 1,
+     "pages": 1,
+     "per_page": 100,
+     "total": 66,
+     "sourceid": "2",
+     "lastupdated": "2026-10-08"
+    },
+    [
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2025",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2024",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2023",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2022",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2021",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2020",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2019",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2018",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2017",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2016",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2015",
+      "value": 5.80977836621394,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2014",
+      "value": 5.87253389530686,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2013",
+      "value": 4.44151214915082,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2012",
+      "value": 3.82051639207698,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2011",
+      "value": 3.3580994281063,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2010",
+      "value": 3.102922117768,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2009",
+      "value": 2.64727689856353,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2008",
+      "value": 2.27173528165428,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2007",
+      "value": 1.88321577609419,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2006",
+      "value": 1.34839755359321,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2005",
+      "value": 1.01227719194999,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2004",
+      "value": 0.50546995211304,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2003",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2002",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2001",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2000",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1999",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1998",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1997",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1996",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1995",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1994",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1993",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1992",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1991",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1990",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1989",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1988",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1987",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1986",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1985",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1984",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1983",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1982",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1981",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1980",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1979",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1978",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1977",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1976",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1975",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1974",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1973",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1972",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1971",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1970",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1969",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1968",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1967",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1966",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1965",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1964",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1963",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1962",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1961",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     },
+     {
+      "indicator": {
+       "id": "FB.ATM.TOTL.P5",
+       "value": "Automated teller machines (ATMs) (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1960",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+     }
+    ]
+   ],
+   "indicator": [
+    {
+     "page": 1,
+     "pages": 1,
+     "per_page": "50",
+     "total": 1
+    },
+    [
+     {
+      "id": "FB.ATM.TOTL.P5",
+      "name": "Automated teller machines (ATMs) (per 100,000 adults)",
+      "unit": "",
+      "source": {
+       "id": "2",
+       "value": "World Development Indicators"
+      },
+      "sourceNote": "Automated teller machines (ATMs) are electromechanical devices which enable customers of financial institutions to perform financial transactions such as cash withdrawals, balance inquiries, deposits, transfer of funds, and obtaining account information, using an electronic card.",
+      "sourceOrganization": "Financial Access Survey, International Monetary Fund (IMF), uri: https://data.imf.org/?sk=E5DCAB7E-A5CA-4892-A6EA-598B5463A34C",
+      "topics": [
+       {
+        "id": "7",
+        "value": "Financial Sector "
+       }
+      ]
+     }
+    ]
+   ]
+  },
+  "FB.CBK.BRCH.P5": {
+   "data": [
+    {
+     "page": 1,
+     "pages": 1,
+     "per_page": 100,
+     "total": 66,
+     "sourceid": "2",
+     "lastupdated": "2026-10-08"
+    },
+    [
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2025",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2024",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2023",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2022",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2021",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2020",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2019",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2018",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2017",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2016",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2015",
+      "value": 1.47559111890891,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2014",
+      "value": 1.52805728908494,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2013",
+      "value": 1.55918818103056,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2012",
+      "value": 1.591344939027,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2011",
+      "value": 1.65229194968577,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2010",
+      "value": 1.73930611982511,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2009",
+      "value": 1.83496179544266,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2008",
+      "value": 1.84767802907881,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2007",
+      "value": 1.86739043343793,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2006",
+      "value": 1.82819545609878,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2005",
+      "value": 1.77364807136536,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2004",
+      "value": 1.67888234094688,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2003",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2002",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2001",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2000",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1999",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1998",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1997",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1996",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1995",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1994",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1993",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1992",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1991",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1990",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1989",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1988",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1987",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1986",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1985",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1984",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1983",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1982",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1981",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1980",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1979",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1978",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1977",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1976",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1975",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1974",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1973",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1972",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1971",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1970",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1969",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1968",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1967",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1966",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1965",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1964",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1963",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1962",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1961",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.BRCH.P5",
+       "value": "Commercial bank branches (per 100,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1960",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     }
+    ]
+   ],
+   "indicator": [
+    {
+     "page": 1,
+     "pages": 1,
+     "per_page": "50",
+     "total": 1
+    },
+    [
+     {
+      "id": "FB.CBK.BRCH.P5",
+      "name": "Commercial bank branches (per 100,000 adults)",
+      "unit": "",
+      "source": {
+       "id": "2",
+       "value": "World Development Indicators"
+      },
+      "sourceNote": "Commercial bank branches are retail locations of resident commercial banks and other resident banks that function as commercial banks that provide financial services to customers and are physically separated from the main office but not organized as legally separated subsidiaries.",
+      "sourceOrganization": "Financial Access Survey, International Monetary Fund (IMF), uri: https://data.imf.org/en/datasets/IMF.STA:FAS",
+      "topics": [
+       {
+        "id": "7",
+        "value": "Financial Sector "
+       }
+      ]
+     }
+    ]
+   ]
+  },
+  "FB.CBK.DPTR.P3": {
+   "data": [
+    {
+     "page": 1,
+     "pages": 1,
+     "per_page": 100,
+     "total": 66,
+     "sourceid": "2",
+     "lastupdated": "2026-10-08"
+    },
+    [
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2025",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2024",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2023",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2022",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2021",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2020",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2019",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2018",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2017",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2016",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2015",
+      "value": 103.054647215096,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2014",
+      "value": 108.094772629869,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2013",
+      "value": 105.021449397727,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2012",
+      "value": 105.482009362262,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2011",
+      "value": 81.0367817580546,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2010",
+      "value": 78.7670518093375,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2009",
+      "value": 96.7892302683403,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2008",
+      "value": 79.6717251648598,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2007",
+      "value": 71.4571192163416,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2006",
+      "value": 70.1093103707572,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2005",
+      "value": 62.0447185994859,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2004",
+      "value": 52.6692469102472,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2003",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2002",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2001",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "2000",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1999",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1998",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1997",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1996",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1995",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1994",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1993",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1992",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1991",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1990",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1989",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1988",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1987",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1986",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1985",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1984",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1983",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1982",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1981",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1980",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1979",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1978",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1977",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1976",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1975",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1974",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1973",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1972",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1971",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1970",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1969",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1968",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1967",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1966",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1965",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1964",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1963",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1962",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1961",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     },
+     {
+      "indicator": {
+       "id": "FB.CBK.DPTR.P3",
+       "value": "Depositors with commercial banks (per 1,000 adults)"
+      },
+      "country": {
+       "id": "YE",
+       "value": "Yemen, Rep."
+      },
+      "countryiso3code": "YEM",
+      "date": "1960",
+      "value": null,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+     }
+    ]
+   ],
+   "indicator": [
+    {
+     "page": 1,
+     "pages": 1,
+     "per_page": "50",
+     "total": 1
+    },
+    [
+     {
+      "id": "FB.CBK.DPTR.P3",
+      "name": "Depositors with commercial banks (per 1,000 adults)",
+      "unit": "",
+      "source": {
+       "id": "2",
+       "value": "World Development Indicators"
+      },
+      "sourceNote": "Depositors with commercial banks are the reported number of deposit account holders, including both resident non-financial corporations (both public and private) and individuals from the household sector, at commercial banks within the reporting jurisdiction for every 1,000 adults. The major types of deposits are checking accounts, savings accounts, and time deposits.",
+      "sourceOrganization": "Financial Access Survey, International Monetary Fund (IMF), uri: https://data.imf.org/en/datasets/IMF.STA:FAS",
+      "topics": [
+       {
+        "id": "7",
+        "value": "Financial Sector "
+       }
+      ]
+     }
+    ]
+   ]
+  }
+ }
+}

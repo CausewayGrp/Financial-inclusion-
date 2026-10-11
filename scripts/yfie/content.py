@@ -12,6 +12,7 @@ display beyond what a contract states (presentation_priority tiers, Page Spec se
 """
 from __future__ import annotations
 
+import calendar
 import hashlib
 import json
 import re
@@ -816,6 +817,14 @@ class Content:
             clm = self.evidence_objects.get("CLM-001") or {}
             period = self.loc(clm, "period", lang)
             dates = re.findall(r"\d{4}-\d{2}-\d{2}", period)
+            if len(dates) < 2:
+                # close-out CR-21: the governed period is stated to the month ("November 2022 to January 2023", read from the
+                # English field, which carries the same dates); the span runs from the first month's start to the last's end
+                months = [(int(y), MONTHS["en"].index(mn) + 1) for mn, y in
+                          re.findall(r"(" + "|".join(MONTHS["en"]) + r") ((?:19|20)\d{2})", str(clm.get("period_en") or ""))]
+                if len(months) >= 2:
+                    (y0, m0), (y1, m1) = months[0], months[-1]
+                    dates = [f"{y0:04d}-{m0:02d}-01", f"{y1:04d}-{m1:02d}-{calendar.monthrange(y1, m1)[1]:02d}"]
             out["people_span"] = {"from": dates[0], "to": dates[-1], "text": period, "href": self.href(self.detail_routes["CLM-001"], lang)} if len(dates) >= 2 else None
         if vid == "VIS-PROVIDER-OBSERVABILITY" and "RV-CWR-009" in self.visual_contracts:
             # The contract's known gap: no governed row exists for payment-system operators; the row is drawn as UNKNOWN

@@ -1166,7 +1166,9 @@ s05_numeric_signatures={
     '/payments/':['561','1,651'],
     '/providers/':['100','231','111'],
     # Tranche C TC-A (EN-30): the limitation says "more than a quarter" without the redundant "(1/4)".
-    '/evidence/CLM-001/':['11.9%','2022-11-07','2023-01-09','23%'],
+    # Close-out CR-21 (11 October 2026): the fieldwork period is printed to the month in both languages ("November 2022 to
+    # January 2023"); the two World Bank day-level dates are kept, with their locators, on CLM-023.
+    '/evidence/CLM-001/':['11.9%','2022','2023','23%'],
     '/evidence/CLM-060/':['19%','15%','40%','2024','2021'],
     '/evidence/CLM-032/':['2020','2025'],
     # Tranche B PB-0362/PB-0363 (CWR-001) printed the restated 2024 value as "USD 3.42 billion" beside a table in USD million.
