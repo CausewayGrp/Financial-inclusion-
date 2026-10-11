@@ -75,7 +75,9 @@
       "CWR-002",
       "CWR-004"
     ],
-    "measurement_bindings": [],
+    "measurement_bindings": [
+      "MA-001"
+    ],
     "evidence_period_en": "Reference years 2021–2024 · CBY-Aden annual reports 2024 and 2025 · IMF Article IV consultation 2025",
     "evidence_period_ar": "السنوات المرجعية 2021–2024 · التقريران السنويان للبنك المركزي اليمني – عدن 2024 و2025 · مشاورات المادة الرابعة لصندوق النقد الدولي 2025",
     "last_reviewed": "2026-09-26",
@@ -142,12 +144,14 @@
     ],
     "related_readings": [
       "CWR-001",
-      "CWR-006"
+      "CWR-011"
     ],
-    "measurement_bindings": [],
+    "measurement_bindings": [
+      "MA-008"
+    ],
     "evidence_period_en": "Positions at end-2022 as published in the 2022 annual report and restated from 2023 · valuation change of January 2023",
     "evidence_period_ar": "المراكز في نهاية 2022 كما نُشرت في التقرير السنوي لعام 2022 وكما أُعيد عرضها ابتداءً من 2023 · تغيير التقييم في يناير 2023",
-    "last_reviewed": "2026-09-26",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -233,7 +237,7 @@
     ],
     "evidence_period_en": "Global Findex fieldwork 2022–2023 · point-of-sale (POS) counts March 2025 – June 2026 · project baseline January 2025, target 2030",
     "evidence_period_ar": "العمل الميداني لمسح Findex العالمي 2022–2023 · أعداد نقاط البيع مارس 2025 – يونيو 2026 · خط أساس المشروع يناير 2025 ومستهدفه 2030",
-    "last_reviewed": "2026-10-03",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -295,15 +299,15 @@
       "/people/"
     ],
     "related_readings": [
-      "CWR-009",
-      "CWR-003"
+      "CWR-007",
+      "CWR-009"
     ],
     "measurement_bindings": [
       "MA-001"
     ],
     "evidence_period_en": "Global Findex fieldwork November 2022 – January 2023 · point-of-sale (POS) counts March 2025 – June 2026 · institutional records June–August 2026",
     "evidence_period_ar": "العمل الميداني لمسح Findex العالمي نوفمبر 2022 – يناير 2023 · أعداد نقاط البيع مارس 2025 – يونيو 2026 · سجلات مؤسسية يونيو–أغسطس 2026",
-    "last_reviewed": "2026-10-03",
+    "last_reviewed": "2026-10-10",
     "featured": "FEATURED"
   },
   {
@@ -319,17 +323,23 @@
     "claim_bindings": [
       "CLM-050",
       "CLM-051",
-      "CLM-052"
+      "CLM-052",
+      "CLM-010",
+      "FMIIP-BASELINE-2025-01"
     ],
     "evidence_bindings": [
       "CLM-050",
       "CLM-051",
-      "CLM-052"
+      "CLM-052",
+      "CLM-010",
+      "FMIIP-BASELINE-2025-01"
     ],
     "source_bindings": [
       "EP-IBS-EMONEY-2019-K04",
       "EP-IBS-EMONEY-VALUE-K04",
-      "EP-IBS-GEO-GENDER-K04"
+      "EP-IBS-GEO-GENDER-K04",
+      "SRC-CBY-PAYREPORT-H1-2025",
+      "SRC-WB-FMIIP-P180708"
     ],
     "visual_bindings": [
       "RV-CWR-005"
@@ -347,7 +357,9 @@
       "claim_ids": [
         "CLM-050",
         "CLM-051",
-        "CLM-052"
+        "CLM-052",
+        "CLM-010",
+        "FMIIP-BASELINE-2025-01"
       ],
       "direct_source_ids": [],
       "dependency_ids": [
@@ -367,9 +379,9 @@
     "measurement_bindings": [
       "MA-002"
     ],
-    "evidence_period_en": "Provider data 2016–2019, from a 2020 study of five e-money providers",
-    "evidence_period_ar": "بيانات مقدمي الخدمة 2016–2019، من دراسة صدرت في 2020 عن خمسة من مقدمي خدمات النقود الإلكترونية",
-    "last_reviewed": "2026-09-26",
+    "evidence_period_en": "Provider data 2016–2019, from a 2020 study of five e-money providers · CBY-Aden payment reports 2024–2025 and the FMIIP baseline of January 2025, shown beside the historical data, not as a continuation",
+    "evidence_period_ar": "بيانات مقدمي الخدمة 2016–2019، من دراسة صدرت في 2020 عن خمسة من مقدمي خدمات النقود الإلكترونية · تقارير المدفوعات للبنك المركزي اليمني – عدن 2024–2025 وخط أساس مشروع FMIIP في يناير 2025، معروضة إلى جانب البيانات التاريخية لا امتدادًا لها",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -451,7 +463,7 @@
     ],
     "evidence_period_en": "Borrower, saver and portfolio observations for end-2015, end-2020 and 2023 · licensed-bank list checked on 3 October 2026",
     "evidence_period_ar": "مشاهدات المقترضين والمدخرين ومحافظ القروض لنهاية 2015 ونهاية 2020 وعام 2023 · قائمة البنوك المرخصة كما اطُّلع عليها في 3 أكتوبر 2026",
-    "last_reviewed": "2026-09-26",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -522,7 +534,7 @@
     ],
     "evidence_period_en": "Global Findex, Yemen fieldwork 7 November 2022 – 9 January 2023",
     "evidence_period_ar": "مسح Findex العالمي، العمل الميداني في اليمن 7 نوفمبر 2022 – 9 يناير 2023",
-    "last_reviewed": "2026-09-26",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -555,7 +567,8 @@
       "INS-004",
       "EP-FIRM-2022",
       "DA-020",
-      "EP-SMEPS-FINACCESS-KPI"
+      "EP-SMEPS-FINACCESS-KPI",
+      "SRC-WB-FMIIP-P180708"
     ],
     "visual_bindings": [
       "RV-CWR-008"
@@ -597,9 +610,9 @@
     "measurement_bindings": [
       "MA-004"
     ],
-    "evidence_period_en": "World Bank Yemen Enterprise Survey, September 2022, seven governorates · SMEPS programme report for 2024",
-    "evidence_period_ar": "مسح البنك الدولي للمنشآت في اليمن، سبتمبر 2022، في سبع محافظات · تقرير وكالة تنمية المنشآت الصغيرة والأصغر لعام 2024",
-    "last_reviewed": "2026-09-26",
+    "evidence_period_en": "World Bank Yemen Enterprise Survey, September 2022, seven governorates · SMEPS programme report for 2024 · FMIIP appraisal document, May 2025, citing a 2018 survey of 141 firms",
+    "evidence_period_ar": "مسح البنك الدولي للمنشآت في اليمن، سبتمبر 2022، في سبع محافظات · تقرير وكالة تنمية المنشآت الصغيرة والأصغر لعام 2024 · وثيقة تقييم مشروع FMIIP، مايو 2025، نقلًا عن مسح أُجري في 2018 وشمل 141 منشأة",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -669,7 +682,7 @@
     ],
     "evidence_period_en": "Point-of-sale (POS) counts March 2025 – June 2026 · institutional records June–August 2026 · project results framework January 2025",
     "evidence_period_ar": "أعداد نقاط البيع مارس 2025 – يونيو 2026 · سجلات مؤسسية يونيو–أغسطس 2026 · إطار نتائج المشروع يناير 2025",
-    "last_reviewed": "2026-10-03",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -728,7 +741,7 @@
     ],
     "evidence_period_en": "World Bank and G2Px material, May 2024 · reference period of the recipient figure not recorded · Cash Consortium of Yemen study (2026) and World Bank project documents (2025–2026)",
     "evidence_period_ar": "مواد البنك الدولي ومبادرة G2Px، مايو 2024 · الفترة المرجعية لعدد المستفيدين غير مسجلة · دراسة لتحالف النقد في اليمن (Cash Consortium of Yemen، 2026) ووثائق مشروعات البنك الدولي (2025–2026)",
-    "last_reviewed": "2026-09-26",
+    "last_reviewed": "2026-10-10",
     "featured": null
   },
   {
@@ -739,8 +752,8 @@
     "title_ar": "أين تتركز أصول البنوك",
     "question_en": "Do Yemen’s banks lend to firms, or hold claims on the state and assets abroad?",
     "question_ar": "هل تُقرض البنوك في اليمن المنشآت، أم تحتفظ بحقوق على الدولة وأصول في الخارج؟",
-    "thesis_en": "In May 2026 the banks’ consolidated balance sheet held more in claims on government, and far more in foreign assets, than in credit to the private sector. That is consistent with banks holding claims on the state and assets abroad rather than lending to firms, but it is a hypothesis: weak credit demand, frozen legacy treasury bills, exchange-rate valuation and an unstated reporting perimeter fit the same numbers.",
-    "thesis_ar": "في مايو 2026 كانت الميزانية المجمعة للبنوك تحمل من الحقوق على الحكومة أكثر، ومن الأصول الخارجية أكثر بكثير، مما تحمله من ائتمان للقطاع الخاص. ويتسق ذلك مع أن البنوك تحتفظ بحقوق على الدولة وأصول في الخارج بدل إقراض المنشآت، لكنه يبقى فرضية: فضعف الطلب على الائتمان، وإرث أذون الخزانة المجمدة، وتقييم البنود بسعر الصرف، ونطاق الإبلاغ غير المعلن، كلها تنسجم مع الأرقام نفسها.",
+    "thesis_en": "In May 2026 the banks’ consolidated balance sheet held more in claims on government, and far more in foreign assets, than in credit to the private sector. That is consistent with banks holding claims on the state and assets abroad rather than lending to firms, but it is a hypothesis: weak credit demand, frozen legacy treasury bills, exchange-rate valuation, an unstated reporting perimeter and asset quality, which the balance sheet does not show, fit the same numbers.",
+    "thesis_ar": "في مايو 2026 كانت الميزانية المجمعة للبنوك تحمل من الحقوق على الحكومة أكثر، ومن الأصول الخارجية أكثر بكثير، مما تحمله من ائتمان للقطاع الخاص. ويتسق ذلك مع أن البنوك تحتفظ بحقوق على الدولة وأصول في الخارج بدل إقراض المنشآت، لكنه يبقى فرضية: فضعف الطلب على الائتمان، وإرث أذون الخزانة المجمدة، وتقييم البنود بسعر الصرف، ونطاق الإبلاغ غير المعلن، وجودة الأصول التي لا تُظهرها الميزانية، كلها تنسجم مع الأرقام نفسها.",
     "claim_bindings": [
       "CBY-BANKS-2026-05",
       "CLM-033"
@@ -751,7 +764,8 @@
     ],
     "source_bindings": [
       "SRC-CBY-001",
-      "SRC-WB-FMIIP-P180708"
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IMF-YEM-AIV-2025-2026"
     ],
     "visual_bindings": [
       "RV-CWR-011"
@@ -762,8 +776,8 @@
       "Government",
       "WB/UN"
     ],
-    "prohibited_inference_en": "One month of one balance sheet does not show why banks hold these assets, does not show that firms are refused credit and is not a trend; a fall in the government's share across the 2022 revaluation is consistent with valuation, not new lending.",
-    "prohibited_inference_ar": "لا يُظهر شهر واحد من ميزانية واحدة لماذا تحتفظ البنوك بهذه الأصول، ولا يثبت أن المنشآت تُحرم من الائتمان، وليس اتجاهًا؛ وانخفاض حصة الحكومة عبر إعادة التقييم في 2022 يتسق مع أثر التقييم، لا مع إقراض جديد.",
+    "prohibited_inference_en": "Three dates of one balance sheet do not show why banks hold these assets, do not show that firms are refused credit and are not a trend; a fall in the government's share across the 2022 revaluation is consistent with valuation, not new lending.",
+    "prohibited_inference_ar": "لا تُظهر ثلاثة تواريخ من ميزانية واحدة لماذا تحتفظ البنوك بهذه الأصول، ولا تثبت أن المنشآت تُحرم من الائتمان، وليست اتجاهًا؛ وانخفاض حصة الحكومة عبر إعادة التقييم في 2022 يتسق مع أثر التقييم، لا مع إقراض جديد.",
     "verification_bindings": {
       "claim_ids": [
         "CBY-BANKS-2026-05",
@@ -782,9 +796,12 @@
     "related_readings": [
       "CWR-002"
     ],
-    "measurement_bindings": [],
-    "evidence_period_en": "CBY-Aden monthly bulletin, end of May 2026 (Issue No. 54) · December 2022 for the revaluation comparison",
-    "evidence_period_ar": "النشرة الشهرية للبنك المركزي اليمني – عدن، نهاية مايو 2026 (العدد رقم 54) · ديسمبر 2022 لمقارنة إعادة التقييم",
+    "measurement_bindings": [
+      "MA-008",
+      "MA-004"
+    ],
+    "evidence_period_en": "CBY-Aden monthly bulletin: end of 2025, May 2026 (Issue No. 54) and June 2026 (Issue No. 55) · December 2022 for the revaluation comparison · IMF 2025 Article IV staff report (asset quality, described, not charted)",
+    "evidence_period_ar": "النشرة الشهرية للبنك المركزي اليمني – عدن: نهاية 2025 ومايو 2026 (العدد رقم 54) ويونيو 2026 (العدد رقم 55) · ديسمبر 2022 لمقارنة إعادة التقييم · تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (جودة الأصول، وصفًا لا رسمًا)",
     "last_reviewed": "2026-10-10",
     "featured": null
   }

@@ -606,8 +606,12 @@
     "linked_claim_ids": [
       "CLM-010"
     ],
-    "linked_reading_ids": [],
-    "linked_visual_ids": [],
+    "linked_reading_ids": [
+      "CWR-005"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-005"
+    ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
@@ -649,11 +653,13 @@
     ],
     "linked_reading_ids": [
       "CWR-003",
+      "CWR-005",
       "CWR-007",
       "CWR-009"
     ],
     "linked_visual_ids": [
       "RV-CWR-003",
+      "RV-CWR-005",
       "RV-CWR-007",
       "RV-CWR-009",
       "VIS-PAYMENT-ANATOMY"
@@ -693,8 +699,12 @@
     "linked_claim_ids": [
       "CLM-010"
     ],
-    "linked_reading_ids": [],
-    "linked_visual_ids": [],
+    "linked_reading_ids": [
+      "CWR-005"
+    ],
+    "linked_visual_ids": [
+      "RV-CWR-005"
+    ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   },
@@ -2647,8 +2657,11 @@
     "linked_claim_ids": [
       "CLM-010"
     ],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-005"
+    ],
     "linked_visual_ids": [
+      "RV-CWR-005",
       "VIS-PAYMENT-RAILS"
     ],
     "linked_measurement_ids": [],
@@ -4052,10 +4065,12 @@
       "CLM-042"
     ],
     "linked_reading_ids": [
-      "CWR-001"
+      "CWR-001",
+      "CWR-011"
     ],
     "linked_visual_ids": [
-      "RV-CWR-001"
+      "RV-CWR-001",
+      "RV-CWR-011"
     ],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -5892,6 +5907,7 @@
     "linked_reading_ids": [
       "CWR-003",
       "CWR-004",
+      "CWR-005",
       "CWR-007",
       "CWR-008",
       "CWR-009",
@@ -5901,6 +5917,7 @@
     "linked_visual_ids": [
       "RV-CWR-003",
       "RV-CWR-004",
+      "RV-CWR-005",
       "RV-CWR-007",
       "RV-CWR-008",
       "RV-CWR-009",

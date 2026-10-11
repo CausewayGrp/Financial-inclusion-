@@ -82,9 +82,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `c24791d6fd22b127f9f5109f93a91b7d50b942303799993d0fb3ab5510100852`
+Master SHA-256: `d14b36c5c1714cdc75dcc92bddac8777a301050ee6d147596e446978418ef360`
 
-Page Specs SHA-256: `a7b7611be6590dad528d62702f22cf721340886830a78adf2953f08a88431eaf`
+Page Specs SHA-256: `8889e1ac2aabafeba3f74e01dcc128275bcdfe89f461b09729b960caa2f2a014`
 
 | Layer | Role |
 |---|---|

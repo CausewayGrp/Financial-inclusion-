@@ -144,7 +144,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-001/",
       "presentation_family": "dense",
-      "measurement_limit": 2
+      "measurement_limit": 10
     },
     {
       "route": "/access/",
@@ -255,7 +255,7 @@
       ],
       "primary_verify_destination": "/evidence/",
       "presentation_family": "sparse",
-      "measurement_limit": 2
+      "measurement_limit": 10
     },
     {
       "route": "/firms/",
@@ -366,7 +366,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-005/",
       "presentation_family": "bounded-survey-programme",
-      "measurement_limit": 2
+      "measurement_limit": 10
     },
     {
       "route": "/finance/",
@@ -508,7 +508,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-022/",
       "presentation_family": "system-history",
-      "measurement_limit": 2
+      "measurement_limit": 10
     },
     {
       "route": "/payments/",
@@ -619,7 +619,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-003/",
       "presentation_family": "admin-infrastructure-use-boundary",
-      "measurement_limit": 2
+      "measurement_limit": 10
     },
     {
       "route": "/remittances/",
@@ -733,7 +733,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-007/",
       "presentation_family": "macro-vintage-concept",
-      "measurement_limit": 1
+      "measurement_limit": 10
     },
     {
       "route": "/providers/",
@@ -855,7 +855,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-009/",
       "presentation_family": "authority-status-operation",
-      "measurement_limit": 2
+      "measurement_limit": 10
     },
     {
       "route": "/reforms/",
@@ -977,7 +977,7 @@
       ],
       "primary_verify_destination": "/evidence/CLM-011/",
       "presentation_family": "transmission-state",
-      "measurement_limit": 2
+      "measurement_limit": 10
     }
   ],
   "orientation_routes": [

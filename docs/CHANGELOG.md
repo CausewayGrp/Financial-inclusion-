@@ -1,5 +1,34 @@
 # Repository Change Log
 
+## 2026-10-11 — CLOSE-5: Readings and the Measurement Agenda (Stage A, W3e, Appendix D)
+
+Master `c24791d6fd22` → `d14b36c5c171`, 182 cells (`audit/close_out/close_5.py`, text and bindings in
+`audit/close_out/close_5_text.json`; ledger and run report in `audit/close_out/runs/`), plus one steward edit of the
+controlled contract (owner decision D14, RD9): `presentation_priority.json` lets each domain page link every
+measurement priority that names it. An Arabic editor (1 must-fix, 10 should-fix, 13 nits) and an independent red-team
+(2 blockers, 8 should-fix, 6 nits) read every string before the run; applied, with the exceptions in PROGRESS.
+
+- **RD10, answer-first openings.** Seven Readings now open with their finding and main limit; whole sentences moved,
+  with one new joining phrase (CWR-008). CWR-001, CWR-006, CWR-007 and CWR-010 already did, and the adjudicated wording
+  (AR-003, AR-004, AR-005) is kept verbatim. ED-037 is applied to CWR-011's opening.
+- **RD2, "use" sections.** The nine Readings without one now say what to check before relying on their figures:
+  universe, unit, vintage, method and what the evidence does not establish. No advice, and no new numbers.
+- **RD1, CWR-011.** The latest bulletin (Issue No. 55, June 2026) and the end of 2025 sit beside May 2026, as an
+  ordering only: three dates are not a trend. Five alternatives, asset quality among them, with no ratio drawn. The 2025
+  rate episode keeps valuation, the change of method and other movements together. Related to CWR-002 and back; bound
+  to MA-008 and MA-004. /finance/ is not added: an answer page carries at most two Readings (owner question).
+- **RD3–RD5.** CWR-005 sets the 2024–2025 e-wallet records beside the 2019 study, not as one series, and says no
+  active or dormant share can be drawn from them. CWR-008 gains the FMIIP appraisal's 2018 survey of 141 firms as a
+  dated limit. CWR-010 gains the Cash for Nutrition and Livelihoods approval date and plan. RD6 and RD7 need no change.
+- **RD9, links.** /measurement/ links CWR-001, CWR-002 and CWR-011; each domain page lists every priority that names it
+  (/people/ 6, /reforms/ 5, /payments/ 4); /methodology/ lists the four evidence-method visuals among its related
+  records; CWR-004 relates to CWR-007, which had no inbound link.
+- **M1, M2.** MA-001, MA-003, MA-005, MA-008 and MA-009 gain dimensions (remittance receipt and channel, financial
+  capability, administrative-area coverage, digital literacy, a microfinance provider panel, exchanger flows, agent
+  liquidity, insolvency, cash-out constraints). MA-008 says this resource holds no current measure of credit
+  infrastructure in Yemen. /methodology/ records four topics it does not measure (ICT and telecommunications,
+  insolvency, digital literacy, Yemen Post) and where each could be measured.
+
 ## 2026-10-10 — CLOSE-4: regulation and chronology (Stage A, W3d, Appendix C)
 
 Master `c447171006a8` → `c24791d6fd22`, 545 cells (`audit/close_out/close_4.py`; ledger and run report in
