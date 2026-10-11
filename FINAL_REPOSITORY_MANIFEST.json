@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 46,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 253,
+  "CURRENT_PROGRAMME_RECORD": 263,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -488,6 +488,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/STAGE_A_FINAL_INSTRUCTION_v5_2026-10-11.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/addendum/ARABIC_6A.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -628,6 +632,14 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/close_6d.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/close_6d_text.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/close_lib.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -641,6 +653,10 @@
   },
   {
    "path": "audit/close_out/fixtures/findex_rural_urban_2026-10-10.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/fixtures/wb_api_close6d_2026-10-11.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -769,6 +785,30 @@
   },
   {
    "path": "audit/close_out/source_utilisation.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/V1_findex.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/V2_ylg_oecd.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/V3_cby_legal.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/V4_imf_wb.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/V5_cash_smeps_ifad_rpw.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/V6_pos_oecd.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
