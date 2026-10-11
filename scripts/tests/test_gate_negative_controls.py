@@ -662,6 +662,13 @@ CONTROLS = [
     ("CO-G02: a quarantined pseudo-codebook variable reaches a page", "en/people/index.html",
      sub_once(r'(<main[^>]*>)', r'\1<p>account_mob</p>'),
      "CO-G02 en/people/index.html prints the quarantined 'account_mob'"),
+    # CO-G06 (close-out W3f): the register's live view and its machine-readable twin give one state per item from the five.
+    ("CO-G06: the states twin moves an item without the live view", "audit/close_out/OPEN_ITEMS_STATES.json",
+     sub_once(r'"OWN-11": "OWNER-OPTIONAL"', '"OWN-11": "CLOSED"'),
+     "CO-G06 OPEN_ITEMS_STATES.json gives OWN-11 CLOSED, the live view OWNER-OPTIONAL"),
+    ("CO-G06: an item is PENDING outside the five states", "audit/close_out/OPEN_ITEMS_STATES.json",
+     sub_once(r'"EXT-21": "FRONTIER"', '"EXT-21": "PENDING"'),
+     "CO-G06 OPEN_ITEMS_STATES.json gives EXT-21 the state 'PENDING', not one of the five"),
     # Close-out W2 (owner decision D7): handoff/ is superseded; its start file may not claim the old status again.
     ("R86-G01: the handoff start file claims DESIGN HANDOFF READY again", "handoff/README_FIRST.md",
      sub_once(r'^[^\n]*', '> STATUS: **DESIGN HANDOFF READY.** Start here.'),

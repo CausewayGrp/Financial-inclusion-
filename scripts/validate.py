@@ -4297,6 +4297,65 @@ try:
 except Exception as _x:
     errors.append("CO-G02 unreadable " + repr(_x))
 
+# CO-G06 (close-out W3f, 11 October 2026): the open-items register leads with a live view in which every item, old and new,
+# is in exactly one of five states. Its tables, its count table and the machine-readable twin
+# audit/close_out/OPEN_ITEMS_STATES.json agree; nothing is PENDING outside HOSTING; every FRONTIER row has a verification
+# card in audit/close_out/FRONTIER_CARDS.md. The history sections below the view are not parsed.
+try:
+    _g6_states = ("CLOSED", "HOSTING", "FRONTIER", "OWNER-OPTIONAL", "DECIDED")
+    _g6_reg = (ROOT / "FINAL_OPEN_ITEMS_REGISTER.md").read_text(encoding="utf-8")
+    _g6_m = re.search(r"^## Live status at .*?$(.*?)(?=^## )", _g6_reg, re.M | re.S)
+    if not _g6_m:
+        errors.append("CO-G06 FINAL_OPEN_ITEMS_REGISTER.md has no '## Live status at' section before its history")
+    else:
+        _g6_view, _g6_rows, _g6_sec, _g6_count = _g6_m.group(1), {}, None, {}
+        for _ln in _g6_view.splitlines():
+            if _ln.startswith("### "):
+                _g6_sec = _ln[4:].split(" — ")[0].strip()
+                if _g6_sec not in _g6_states:
+                    errors.append(f"CO-G06 the live view has a section in no state of the five: {_ln!r}")
+                elif _g6_sec in _g6_count:
+                    errors.append(f"CO-G06 the live view has two {_g6_sec} sections")
+                _g6_count.setdefault(_g6_sec, 0)
+                continue
+            _c = [x.strip() for x in _ln.strip().strip("|").split("|")] if _ln.startswith("| ") else None
+            if not _c or _c[0] in ("ID", "State") or set(_c[0]) <= set("-"):
+                continue
+            if _g6_sec is None:                                      # the count table above the sections
+                if _c[0] in _g6_states:
+                    _g6_count[_c[0] + ":stated"] = int(_c[1])
+                elif _c[0] == "**Total**":
+                    _g6_count["total:stated"] = int(_c[1].strip("*"))
+                continue
+            if _c[0] in _g6_rows:
+                errors.append(f"CO-G06 {_c[0]} is in the live view twice ({_g6_rows[_c[0]][0]} and {_g6_sec})")
+            _g6_rows[_c[0]] = (_g6_sec, " ".join(_c[1:]))
+            _g6_count[_g6_sec] = _g6_count.get(_g6_sec, 0) + 1
+            if _g6_sec != "HOSTING" and "PENDING" in " ".join(_c[1:]).upper():
+                errors.append(f"CO-G06 {_c[0]} says PENDING but its state is {_g6_sec}")
+        if set(k for k in _g6_count if ":" not in k) != set(_g6_states):
+            errors.append(f"CO-G06 the live view's sections are not the five states: {sorted(k for k in _g6_count if ':' not in k)}")
+        for _s in _g6_states:
+            if _g6_count.get(_s + ":stated") != _g6_count.get(_s, 0):
+                errors.append(f"CO-G06 the count table says {_g6_count.get(_s + ':stated')} {_s}, the view lists {_g6_count.get(_s, 0)}")
+        if _g6_count.get("total:stated") != len(_g6_rows):
+            errors.append(f"CO-G06 the count table's total is {_g6_count.get('total:stated')}, the view lists {len(_g6_rows)}")
+        _g6_twin = json.load(open(ROOT / "audit/close_out/OPEN_ITEMS_STATES.json", encoding="utf-8"))
+        for _id in sorted(set(_g6_twin) | set(_g6_rows)):
+            _a, _b = _g6_twin.get(_id), _g6_rows.get(_id, (None,))[0]
+            if _a not in _g6_states:
+                errors.append(f"CO-G06 OPEN_ITEMS_STATES.json gives {_id} the state {_a!r}, not one of the five")
+            elif _a != _b:
+                errors.append(f"CO-G06 OPEN_ITEMS_STATES.json gives {_id} {_a}, the live view {_b}")
+        _g6_cards = set(re.findall(r"^## (\S+) — ", (ROOT / "audit/close_out/FRONTIER_CARDS.md").read_text(encoding="utf-8"), re.M))
+        for _id, (_s, _) in sorted(_g6_rows.items()):
+            if _s == "FRONTIER" and _id not in _g6_cards:
+                errors.append(f"CO-G06 FRONTIER item {_id} has no verification card")
+        if len(_g6_rows) < 200:
+            errors.append(f"CO-G06 the live view lists only {len(_g6_rows)} items")
+except Exception as _x:
+    errors.append("CO-G06 unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)

@@ -174,3 +174,14 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   every number bound, but the Arabic cannot be reviewed to a native economic editor's standard in this run (and no
   such review is claimed), and the Cash Consortium reports' findings it should use are not held as records. Owner
   question.
+- 2026-10-11 · A · W3e · PR #36 merged at `876f52df` (9/9 CI; negative controls 6/6 shards). Closed: RD1, RD2, RD3, RD4,
+  RD5, RD6, RD7 (no change needed), RD9, RD10, M1, M2, ED-037; OWN-12 (the measurement limit, D14). RD8 dropped (owner
+  question, OWN-13).
+- 2026-10-11 · A · W3a + W3f · The open-items register leads with a live view: 247 items, each in one of five states
+  (CLOSED 82, HOSTING 9, FRONTIER 47, OWNER-OPTIONAL 8, DECIDED 101); nothing outside HOSTING says PENDING. Every
+  FRONTIER item has a W3a verification card (audit/close_out/FRONTIER_CARDS.md: dated attempt, human step, record it
+  changes, public state meanwhile, cadence); the twin audit/close_out/OPEN_ITEMS_STATES.json is checked against the
+  view by the new gate CO-G06 (two negative controls). New IDs: REL-05…07 (HOSTING), EXT-20…39 (FRONTIER), OWN-11,
+  OWN-13 (OWNER-OPTIONAL), OWN-12 and CLOSE-5 (CLOSED). Sections 1–10 are history and are not rewritten; section 11 is
+  appended. The Context's two open_items fields point to the live view. Also recorded in card EXT-23: the CBY-Aden POS
+  page now links January 2026 to a different file from SRC-CBY-POS-2026-01's locator; no record was changed.
