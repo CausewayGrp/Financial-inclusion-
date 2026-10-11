@@ -31,6 +31,7 @@ original is read; then the item moves to CLOSED in the live view and a dated lin
 - EXT-37 (FRONTIER): Printed date of OECD *Digital Financial Inclusion of Youth*
 - EXT-38 (FRONTIER): Identity of the World Bank FASTT fast-payments paper
 - EXT-39 (FRONTIER): CBY-Aden Quarterly Bulletin, June 2021
+- EXT-40 (FRONTIER): Owner's aggregate file for the 2021-wave domestic transfer channels (D16; added by CLOSE-6E)
 - OWN-11 (OWNER-OPTIONAL): CWR-011 on `/finance/`
 - OWN-12 (CLOSED): Domain pages show at most two Measurement priorities
 - OWN-13 (OWNER-OPTIONAL): A twelfth Reading (RD8, CWR-012)
@@ -461,3 +462,12 @@ Cards: 47. No new FRN- ID was needed.
 - **Public state meanwhile:** The cards link them; none is known to be broken.
 - **Cadence:** At release (runbook steps 4 and 12); then each new edition.
 - **Who:** A person with a browser
+
+## EXT-40 — Owner's aggregate file for the 2021-wave domestic transfer channels (D16)
+
+- **Dated attempt:** 11 Oct 2026 (CLOSE-6E, instruction v5 item 6C-6): `audit/close_out/fixtures/findex_yem_channels_aggregates.json` has not arrived, so the item was not run. The respondent file was not read and no World Bank Microdata API key was used, requested or stored (D16).
+- **Human step:** The owner runs `findex_domestic_channels_aggregates.py` on the respondent file under the World Bank's terms and commits the script and `findex_yem_channels_aggregates.json` (aggregates only, never the data) under `audit/close_out/fixtures/`. Claude Code then checks the four anchors (account at a financial institution 11.9; received domestic remittances 31.9; sent 17.7; sent or received 37.8) and stops the item if any fails to reproduce.
+- **Record it changes:** A new Evidence Record FINDEX-YEM-DOM-CHANNELS (class CAUSEWAY_DERIVED_AGGREGATE, with a D9 route), bound to `/remittances/`, `/people/` and MA-001; MA-001's sentence on channels.
+- **Public state meanwhile:** MA-001 says the channels through which the money moved are not shown; CWR-012 says that no weighted estimate of the channel usable here is published or held for the 2021 wave, and that the World Bank's variable documentation records the item as asked and answered.
+- **Cadence:** When the owner supplies the file.
+- **Who:** Owner (runs the script); Claude Code (the transaction)

@@ -215,7 +215,8 @@
       },
       "corridor": {
         "Saudi Arabia": "UI-VIS-CAT-CORRIDOR-SA",
-        "United Arab Emirates": "UI-VIS-CAT-CORRIDOR-AE"
+        "United Arab Emirates": "UI-VIS-CAT-CORRIDOR-AE",
+        "United States": "UI-VIS-CAT-CORRIDOR-US"
       },
       "amount_sent": {
         "200": "UI-VIS-CAT-AMOUNT-200",
@@ -1313,7 +1314,7 @@
       "tier": "CORE_ANALYTICAL",
       "rationale": "Quoted costs by corridor and send amount: a small, decision-useful comparison with the scale effect visible. Close-out U7: the World Bank's yearly average for Yemen is a second panel, shown on the same scale but not as one series with the corridor panel.",
       "contract": {
-        "form": "Dot plot: two corridors × two send amounts; the amount is an explicit axis, never pooled. A second panel: the World Bank's yearly average for Yemen (US$200), one dot per year with a value, on the same value axis; never joined to the corridor panel.",
+        "form": "Dot plot: three corridors × two send amounts; the amount is an explicit axis, never pooled. A second panel: the World Bank's yearly average for Yemen (US$200), one dot per year with a value, on the same value axis; never joined to the corridor panel.",
         "series": [
           {
             "id": "rpw",
@@ -1337,7 +1338,8 @@
             "state": "REPORTED",
             "must_equal": {
               "RMO-RPW-SA-2025Q3-200": 2.7,
-              "RMO-RPW-UAE-2025Q3-200": 7.53
+              "RMO-RPW-UAE-2025Q3-200": 7.53,
+              "RMO-RPW-US-2025Q3-200": 3.92
             },
             "label_fields": {
               "x": "corridor",
@@ -1385,7 +1387,7 @@
         ],
         "ordering": "Corridor, then send amount ascending; the yearly panel in year order.",
         "transformation": "None.",
-        "missing": "Provider and quote counts are not held; not drawn. The yearly average has no value for 2018 to 2021 or after 2023: those years are named in the frame (UI-VIS-NOTE-RMT-WDI-YEARS), not drawn.",
+        "missing": "Quote counts are given in the record's limitations; not drawn. The yearly average has no value for 2018 to 2021 or after 2023: those years are named in the frame (UI-VIS-NOTE-RMT-WDI-YEARS), not drawn.",
         "breaks": "None.",
         "annotation": "Quarter and the governed note UI-VIS-RPW-AVERAGE-NOTE (frame_labels) in frame. Panel headings UI-VIS-PANEL-RMT-RPW and UI-VIS-PANEL-RMT-WDI; frame notes UI-VIS-NOTE-RMT-WDI-YEARS, UI-VIS-NOTE-RMT-PRICE and UI-VIS-NOTE-SDG-10C (the SDG 10.c reference in words: no line, no pass or fail colouring).",
         "credit": {
@@ -1396,10 +1398,11 @@
             "SRC-WB-RPW-SA-YEM-2025Q3-001",
             "SRC-WB-RPW-UAE-YEM-2025Q3-001",
             "SRC-WB-WDI-RMT-COST-YEM",
-            "SRC-UN-SDG-10C1-METADATA"
+            "SRC-UN-SDG-10C1-METADATA",
+            "SRC-WB-RPW-US-YEM-2025Q3-001"
           ]
         },
-        "mobile": "Two rows of paired dots; then one row per year.",
+        "mobile": "Three rows of paired dots; then one row per year.",
         "rtl": "Value axis left to right; labels mirror.",
         "fallback": "Table: corridor, amount, cost (%); a second table: year, average cost (%).",
         "frame_labels": [

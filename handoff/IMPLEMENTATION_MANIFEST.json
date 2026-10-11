@@ -17,10 +17,10 @@
   "authority": {
     "master_path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "master_sha256": "6769673fc715a1865e54c8028e5365bb6dbdde42c9b85ef640c719c8d23308db",
+    "master_sha256": "7e4f2cb5d20aa3374ccfcebb12489ee28c283e8cfe19735279466a615f695073",
     "page_specs_path": "site-src/content/page_specs.json",
     "page_specs_drive_id": "1jWAKnjH4lJ3XdrsG_USX7UtWDKIXLkEU",
-    "page_specs_sha256": "26e61cb8e5960ae1006c5defd7f207e06bbbd8d81bc4db00602d094d7cc14f33",
+    "page_specs_sha256": "11b3b7b126271a789ada1a1deeb9e9da875ae0aa40c1a58b493e66675661627a",
     "presentation_priority_path": "site-src/content/presentation_priority.json",
     "precedence": [
       "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
@@ -37,24 +37,24 @@
     "page_specs_external_repository_sync_state": "EXTERNAL_REPOSITORY_SYNC_PENDING"
   },
   "controlled_counts": {
-    "page_specs": 150,
-    "generated_locale_pages": 300,
-    "generated_html_total_including_root_and_404": 302,
-    "page_sections": 607,
+    "page_specs": 151,
+    "generated_locale_pages": 302,
+    "generated_html_total_including_root_and_404": 304,
+    "page_sections": 609,
     "questions": 11,
-    "evidence_objects": 115,
+    "evidence_objects": 116,
     "public_claims": 60,
     "evidence_passports": 55,
     "readings": 12,
     "reading_sections": 92,
     "measurement_priorities": 10,
     "visual_contracts": 42,
-    "sources": 201,
-    "publicly_addressable_sources": 186,
+    "sources": 206,
+    "publicly_addressable_sources": 191,
     "curated_source_report_cards": 28,
     "indicators": 217,
-    "public_search_records": 515,
-    "public_object_source_closure_records": 239,
+    "public_search_records": 522,
+    "public_object_source_closure_records": 240,
     "sources_without_public_locator": 15,
     "chronology_events": 31
   },
@@ -91,7 +91,7 @@
   },
   "implementation_target": {
     "ui": "Python production renderer in scripts/yfie (driven by scripts/build.py): static, pre-rendered HTML for every controlled route, with the one runtime site-src/app.js",
-    "route_requirement": "All 150 controlled routes in Arabic and English must be real deep-link-safe static output.",
+    "route_requirement": "All 151 controlled routes in Arabic and English must be real deep-link-safe static output.",
     "single_runtime_rule": "No permanent parallel legacy/new runtime. Migration may use temporary parity work, then obsolete presentation code is removed after acceptance.",
     "future_api_rule": "Future APIs must sit behind adapters and feed the same controlled schemas. They are not required for the first complete build."
   },
@@ -417,6 +417,10 @@
     },
     {
       "route": "/evidence/FMIIP-BASELINE-2025-01/",
+      "page_class": "evidence_detail"
+    },
+    {
+      "route": "/evidence/IFAD-CPE-YEM-2011-RF/",
       "page_class": "evidence_detail"
     },
     {
@@ -751,7 +755,7 @@
   "navigation_contract": {
     "path": "site-src/content/content/navigation_interaction.json",
     "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
-    "controlled_route_coverage": 150,
+    "controlled_route_coverage": 151,
     "page_family_count": 11,
     "journey_tests": 13,
     "search_smoke_tests": 32,

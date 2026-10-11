@@ -3388,18 +3388,21 @@
     "dependency_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
       "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
       "SRC-WB-WDI-RMT-COST-YEM",
       "SRC-UN-SDG-10C1-METADATA"
     ],
     "direct_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
       "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
       "SRC-WB-WDI-RMT-COST-YEM",
       "SRC-UN-SDG-10C1-METADATA"
     ],
     "resolved_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
       "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
       "SRC-WB-WDI-RMT-COST-YEM",
       "SRC-UN-SDG-10C1-METADATA"
     ],
@@ -3415,6 +3418,11 @@
       {
         "source_id": "SRC-WB-RPW-UAE-YEM-2025Q3-001",
         "primary_url": "https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/Yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-RPW-US-YEM-2025Q3-001",
+        "primary_url": "https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -4090,7 +4098,10 @@
       "EP-YEM-CASH-FIN-TRANSMISSION-K04",
       "SRC-CCY-CASH-DURATION-2026",
       "SRC-WB-ESPECRP-ISR10-2026-001",
-      "SRC-WB-YEM-CNL-2026-001"
+      "SRC-WB-YEM-CNL-2026-001",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026"
     ],
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
@@ -4099,7 +4110,10 @@
       "SRC-CCY-ISP-2024",
       "SRC-CCY-CASH-DURATION-2026",
       "SRC-WB-ESPECRP-ISR10-2026-001",
-      "SRC-WB-YEM-CNL-2026-001"
+      "SRC-WB-YEM-CNL-2026-001",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
@@ -4108,7 +4122,10 @@
       "SRC-CCY-ISP-2024",
       "SRC-CCY-CASH-DURATION-2026",
       "SRC-WB-ESPECRP-ISR10-2026-001",
-      "SRC-WB-YEM-CNL-2026-001"
+      "SRC-WB-YEM-CNL-2026-001",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -4149,6 +4166,21 @@
       {
         "source_id": "SRC-WB-YEM-CNL-2026-001",
         "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-10",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-12",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-PRESSURE-2026",
+        "primary_url": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5366,6 +5398,36 @@
       {
         "source_id": "SRC-CCY-SAM-2024",
         "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
+      }
+    ],
+    "closure_state": "CLOSED_TO_SOURCE_ID",
+    "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact."
+  },
+  {
+    "object_type": "evidence_object",
+    "object_id": "IFAD-CPE-YEM-2011-RF",
+    "public_routes": [
+      "/finance/",
+      "/firms/"
+    ],
+    "lineage_state": "BOUND_EXACT",
+    "dependency_ids": [
+      "SRC-IFAD-CPE-YEM-2011"
+    ],
+    "direct_source_ids": [
+      "SRC-IFAD-CPE-YEM-2011"
+    ],
+    "resolved_source_ids": [
+      "SRC-IFAD-CPE-YEM-2011"
+    ],
+    "resolved_via_object_ids": [],
+    "context_reference_ids": [],
+    "unresolved_dependency_ids": [],
+    "source_locators": [
+      {
+        "source_id": "SRC-IFAD-CPE-YEM-2011",
+        "primary_url": "https://webapps.ifad.org/members/ec/69/docs/EC-2011-69-W-P-4-Rev-1.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -7548,7 +7610,10 @@
       "SRC-CCY-ISP-2024",
       "SRC-CCY-CASH-DURATION-2026",
       "SRC-WB-ESPECRP-ISR10-2026-001",
-      "SRC-WB-YEM-CNL-2026-001"
+      "SRC-WB-YEM-CNL-2026-001",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
@@ -7557,7 +7622,10 @@
       "SRC-CCY-ISP-2024",
       "SRC-CCY-CASH-DURATION-2026",
       "SRC-WB-ESPECRP-ISR10-2026-001",
-      "SRC-WB-YEM-CNL-2026-001"
+      "SRC-WB-YEM-CNL-2026-001",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [
@@ -7598,6 +7666,21 @@
       {
         "source_id": "SRC-WB-YEM-CNL-2026-001",
         "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-10",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-12",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-PRESSURE-2026",
+        "primary_url": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8250,6 +8333,8 @@
       "FFM-008",
       "FFM-009",
       "FFM-011",
+      "FFM-012",
+      "FFM-013",
       "CLM-062"
     ],
     "direct_source_ids": [
@@ -9219,19 +9304,29 @@
       "EP-YEM-CASH-FIN-TRANSMISSION-K04",
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-PRESSURE-2026",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-SAM-2024",
+      "SRC-CCY-CASH-DURATION-2026",
       "CLM-045"
     ],
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-PRESSURE-2026",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-SAM-2024",
+      "SRC-CCY-CASH-DURATION-2026"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-PRESSURE-2026",
-      "SRC-WB-FMIIP-P180708",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
       "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-CCY-ISP-2024",
       "SRC-WB-ESPECRP-ISR10-2026-001",
       "SRC-WB-YEM-CNL-2026-001"
     ],
@@ -9254,8 +9349,13 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FMIIP-P180708",
-        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "source_id": "SRC-UNICEF-UCT-2024-10",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-12",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9264,13 +9364,18 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-CCY-CASH-DURATION-2026",
-        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-ISP-2024",
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9370,6 +9475,7 @@
       "SRC-CCY-ISP-2024",
       "SRC-CCY-SAM-2024",
       "SRC-CBY-DEC-23-2024-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
       "CLM-026",
       "VIS-FINDEX-FLOW-CHANNELS",
       "CLM-030",
@@ -9394,7 +9500,8 @@
       "SRC-CBY-AR2025-BOP",
       "SRC-CCY-ISP-2024",
       "SRC-CCY-SAM-2024",
-      "SRC-CBY-DEC-23-2024-001"
+      "SRC-CBY-DEC-23-2024-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
@@ -9410,6 +9517,7 @@
       "SRC-CCY-ISP-2024",
       "SRC-CCY-SAM-2024",
       "SRC-CBY-DEC-23-2024-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
       "SRC-CBY-ENF-18-2026",
       "SRC-CBY-EXCH-LIST-2025-001",
       "SRC-WB-RPW-UAE-YEM-2025Q3-001",
@@ -9504,6 +9612,11 @@
       {
         "source_id": "SRC-CBY-DEC-23-2024-001",
         "primary_url": "https://cby-ye.com/files/667c596ef3bea.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-RPW-US-YEM-2025Q3-001",
+        "primary_url": "https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -10722,12 +10835,14 @@
     "direct_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
       "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
       "SRC-WB-WDI-RMT-COST-YEM",
       "SRC-UN-SDG-10C1-METADATA"
     ],
     "resolved_source_ids": [
       "SRC-WB-RPW-SA-YEM-2025Q3-001",
       "SRC-WB-RPW-UAE-YEM-2025Q3-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001",
       "SRC-WB-WDI-RMT-COST-YEM",
       "SRC-UN-SDG-10C1-METADATA"
     ],
@@ -10743,6 +10858,11 @@
       {
         "source_id": "SRC-WB-RPW-UAE-YEM-2025Q3-001",
         "primary_url": "https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/Yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-RPW-US-YEM-2025Q3-001",
+        "primary_url": "https://datacatalogfiles.worldbank.org/ddh-published/0037898/DR0095523/rpw_dataset_2011_2025_q3.xlsx",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -11772,15 +11892,21 @@
     ],
     "direct_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-PRESSURE-2026",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-SAM-2024",
+      "SRC-CCY-CASH-DURATION-2026"
     ],
     "resolved_source_ids": [
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-CCY-PRESSURE-2026",
-      "SRC-WB-FMIIP-P180708",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
       "SRC-CCY-SAM-2024",
-      "SRC-CCY-ISP-2024",
       "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-CCY-ISP-2024",
       "SRC-WB-ESPECRP-ISR10-2026-001",
       "SRC-WB-YEM-CNL-2026-001"
     ],
@@ -11803,8 +11929,13 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-WB-FMIIP-P180708",
-        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "source_id": "SRC-UNICEF-UCT-2024-10",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-12",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -11813,13 +11944,18 @@
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-CCY-ISP-2024",
-        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
-        "source_id": "SRC-CCY-CASH-DURATION-2026",
-        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-ISP-2024",
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -12064,22 +12200,35 @@
     "lineage_state": null,
     "dependency_ids": [
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-CCY-SAM-2024",
       "CLM-001",
       "CLM-025",
       "CLM-026",
       "VIS-FINDEX-FLOW-CHANNELS",
       "MICS-YEM-2022-23",
-      "YMPS-YEM-2022-R1"
+      "YMPS-YEM-2022-R1",
+      "CLM-045"
     ],
     "direct_source_ids": [
-      "SRC-WB-FINDEX-2025-EDITION"
+      "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-CCY-SAM-2024"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-CCY-SAM-2024",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
       "SRC-UNICEF-MICS-YEM-2022-001",
-      "SRC-WB-YMPS-R1-2022-001"
+      "SRC-WB-YMPS-R1-2022-001",
+      "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026"
     ],
     "resolved_via_object_ids": [
       "CLM-001",
@@ -12087,7 +12236,8 @@
       "CLM-026",
       "VIS-FINDEX-FLOW-CHANNELS",
       "MICS-YEM-2022-23",
-      "YMPS-YEM-2022-R1"
+      "YMPS-YEM-2022-R1",
+      "CLM-045"
     ],
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
@@ -12095,6 +12245,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-SAM-2024",
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -12115,6 +12270,51 @@
       {
         "source_id": "SRC-WB-YMPS-R1-2022-001",
         "primary_url": "https://microdata.worldbank.org/index.php/catalog/5999",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
+        "primary_url": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-FMIIP-P180708",
+        "primary_url": "https://maps.worldbank.org/projects/wb/pid/P180708?status=active",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-ISP-2024",
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099063026134041997/pdf/P173582-a6512878-8a11-454d-98f2-213c6f4df820.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-CNL-2026-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-10",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-12",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-PRESSURE-2026",
+        "primary_url": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -12234,13 +12434,18 @@
     ],
     "lineage_state": null,
     "dependency_ids": [
+      "SRC-IFAD-CPE-YEM-2011",
       "CLM-062",
       "VIS-FIRM-CONSTRAINTS",
       "CLM-059",
-      "CLM-060"
+      "CLM-060",
+      "IFAD-CPE-YEM-2011-RF"
     ],
-    "direct_source_ids": [],
+    "direct_source_ids": [
+      "SRC-IFAD-CPE-YEM-2011"
+    ],
     "resolved_source_ids": [
+      "SRC-IFAD-CPE-YEM-2011",
       "SRC-WB-FSD-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-SMEPS-AR2024-2025",
@@ -12251,11 +12456,17 @@
       "CLM-062",
       "VIS-FIRM-CONSTRAINTS",
       "CLM-059",
-      "CLM-060"
+      "CLM-060",
+      "IFAD-CPE-YEM-2011-RF"
     ],
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
     "source_locators": [
+      {
+        "source_id": "SRC-IFAD-CPE-YEM-2011",
+        "primary_url": "https://webapps.ifad.org/members/ec/69/docs/EC-2011-69-W-P-4-Rev-1.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
       {
         "source_id": "SRC-WB-FSD-2024-001",
         "primary_url": "https://documents1.worldbank.org/curated/en/099102324070011985/pdf/P177631-d18a7ee4-3fcf-4393-9665-77f98b3e43a7.pdf",
@@ -12296,14 +12507,19 @@
     ],
     "lineage_state": null,
     "dependency_ids": [
+      "SRC-CCY-PRESSURE-2026",
       "FAS-YEM-2015",
       "CLM-008",
       "CLM-009",
       "CLM-055",
-      "CLM-019"
+      "CLM-019",
+      "CLM-045"
     ],
-    "direct_source_ids": [],
+    "direct_source_ids": [
+      "SRC-CCY-PRESSURE-2026"
+    ],
     "resolved_source_ids": [
+      "SRC-CCY-PRESSURE-2026",
       "SRC-WB-WDI-FAS-YEM-001",
       "SRC-CBY-BANKLIST-AR-2026-001",
       "SRC-WB-FMIIP-P180708",
@@ -12322,18 +12538,32 @@
       "SRC-CBY-ENF-13-2026",
       "SRC-CBY-ENF-14-2026",
       "SRC-CBY-ENF-15-2026",
-      "SRC-CBY-ENF-17-2026"
+      "SRC-CBY-ENF-17-2026",
+      "SRC-WB-G2PX-YEM-UCT-2024-001",
+      "SRC-CCY-SAM-2024",
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-CASH-DURATION-2026",
+      "SRC-WB-ESPECRP-ISR10-2026-001",
+      "SRC-WB-YEM-CNL-2026-001",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12"
     ],
     "resolved_via_object_ids": [
       "FAS-YEM-2015",
       "CLM-008",
       "CLM-009",
       "CLM-055",
-      "CLM-019"
+      "CLM-019",
+      "CLM-045"
     ],
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
     "source_locators": [
+      {
+        "source_id": "SRC-CCY-PRESSURE-2026",
+        "primary_url": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026",
+        "metadata_state": "DISPLAY_READY"
+      },
       {
         "source_id": "SRC-WB-WDI-FAS-YEM-001",
         "primary_url": "https://data.worldbank.org/indicator/FB.ATM.TOTL.P5?locations=YE",
@@ -12427,6 +12657,46 @@
       {
         "source_id": "SRC-CBY-ENF-17-2026",
         "primary_url": "https://cby-ye.com/news/973",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
+        "primary_url": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-SAM-2024",
+        "primary_url": "https://www.calpnetwork.org/wp-content/uploads/2024/11/SAM_Multiplie-Effect-of-Cash-Study.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-ISP-2024",
+        "primary_url": "https://reliefweb.int/report/yemen/unseen-assistance-measuring-informal-social-protection-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-CASH-DURATION-2026",
+        "primary_url": "https://www.calpnetwork.org/gf-uploads/2026/06/Cash-Duration-Report_CCY_2026.06.22.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-ESPECRP-ISR10-2026-001",
+        "primary_url": "https://documents.worldbank.org/curated/en/099063026134041997/pdf/P173582-a6512878-8a11-454d-98f2-213c6f4df820.pdf",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-YEM-CNL-2026-001",
+        "primary_url": "https://www.worldbank.org/en/news/press-release/2026/06/30/improving-human-capital-and-building-livelihoods-for-vulnerable-families-in-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-10",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-12",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -12552,17 +12822,20 @@
     "dependency_ids": [
       "SRC-CBY-CRI-149",
       "SRC-CBY-CRI-150",
-      "SRC-CBY-NEWS-963"
+      "SRC-CBY-NEWS-963",
+      "SRC-WB-DB2020-YEM-001"
     ],
     "direct_source_ids": [
       "SRC-CBY-CRI-149",
       "SRC-CBY-CRI-150",
-      "SRC-CBY-NEWS-963"
+      "SRC-CBY-NEWS-963",
+      "SRC-WB-DB2020-YEM-001"
     ],
     "resolved_source_ids": [
       "SRC-CBY-CRI-149",
       "SRC-CBY-CRI-150",
-      "SRC-CBY-NEWS-963"
+      "SRC-CBY-NEWS-963",
+      "SRC-WB-DB2020-YEM-001"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -12582,6 +12855,11 @@
         "source_id": "SRC-CBY-NEWS-963",
         "primary_url": "https://cby-ye.com/news/963",
         "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-WB-DB2020-YEM-001",
+        "primary_url": "https://www.doingbusiness.org/content/dam/doingBusiness/country/y/yemen/YEM.pdf",
+        "metadata_state": "DISPLAY_READY"
       }
     ],
     "closure_state": "CLOSED_TO_SOURCE_ID",
@@ -12598,11 +12876,21 @@
     ],
     "lineage_state": null,
     "dependency_ids": [
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026",
       "CLM-045",
       "YMPS-YEM-2022-R1"
     ],
-    "direct_source_ids": [],
+    "direct_source_ids": [
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026"
+    ],
     "resolved_source_ids": [
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-PRESSURE-2026",
       "SRC-WB-G2PX-YEM-UCT-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-CCY-SAM-2024",
@@ -12619,6 +12907,21 @@
     "context_reference_ids": [],
     "unresolved_dependency_ids": [],
     "source_locators": [
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-10",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/143-million-vulnerable-families-supported-cash-assistance-across-yemen",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UNICEF-UCT-2024-12",
+        "primary_url": "https://www.unicef.org/yemen/press-releases/unicef-and-partners-launch-19th-payment-cycle-current-unconditional-cash-transfer",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-CCY-PRESSURE-2026",
+        "primary_url": "https://reliefweb.int/report/yemen/yemen-under-pressure-how-iran-us-conflict-disrupting-trade-prices-and-cash-access-may-2026",
+        "metadata_state": "DISPLAY_READY"
+      },
       {
         "source_id": "SRC-WB-G2PX-YEM-UCT-2024-001",
         "primary_url": "https://www.worldbank.org/en/events/2024/05/30/digitalizing-g2p-payments-in-yemen",

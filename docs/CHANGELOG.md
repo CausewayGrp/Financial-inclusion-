@@ -1,5 +1,32 @@
 # Repository Change Log
 
+## 2026-10-11 — CLOSE-6E: evidence strengthening (Stage A final instruction v5, §5)
+
+Master transaction CLOSE-6E (Master 6769673f -> 7e4f2cb5, 132 cells; `audit/close_out/close_6e.py` with
+`close_6e_text.py`; ledger and run report in `audit/close_out/runs/`). The reads behind it are V3, V4, V5 and V7 in
+`audit/close_out/v5_reads/`, with the review pair (REDTEAM_6E, ARABIC_6E), its confirmation pass and the disposition of
+every finding (DISPOSITION_6E). The D9 detail route for the new record is the steward commit before it.
+
+- **Firms (6C-1).** CLM-062 adds the 217 informal firms' business debt (49.8%) and main sources of financing (Annex III,
+  Figures 115–116: multiple answers, financing in general, not the sources of the debts), with the sample's design and
+  skew, and why formal firms' 1.31% is not comparable. CLM-059 adds SMEPS's 2024 type split (7,257 and 960).
+- **After a transfer (6C-2).** The UNICEF programme around the pilot (new sources SRC-UNICEF-UCT-2024-10 and -12):
+  announced reach, channels and the programme's end; "different counts, and one is not a share of the other". Cash-out at
+  agents in humanitarian multi-purpose cash assistance (one interview; not the UCT). Debt repayment as a common use of
+  transfers (two Cash Consortium of Yemen studies, local samples). /people/ section 6 names what its borrowing sources
+  leave out. MA-001, MA-005 and MA-009 bound to CLM-045.
+- **Remittance cost (6C-3).** The United States–Yemen corridor (new source SRC-WB-RPW-US-YEM-2025Q3-001; rows
+  RMO-RPW-US-2025Q3-200/-500, 3.92% and 2.30%, computed here from 12 quotes and labelled so) on VIS-REMITTANCE-COST, its
+  contract and labels, /remittances/, /methodology/ and CWR-012.
+- **Credit infrastructure (6C-4).** REF-REG-012 and YSC-030 state the two credit-information rules as published and that the
+  registry announcement cites no instrument; Doing Business 2020 (new source SRC-WB-DB2020-YEM-001) on YSC-030 as a
+  historical reference, MA-008 pointing to it. FATF RESERVED (not read on fatf-gafi.org).
+- **Rural credit (6C-5).** New record IFAD-CPE-YEM-2011-RF (IFAD Independent Office of Evaluation, 2011; new source
+  SRC-IFAD-CPE-YEM-2011) at /evidence/IFAD-CPE-YEM-2011-RF/, on /finance/ and /firms/, cited by MA-004.
+- **6C-6.** Not run: the owner's aggregate file has not arrived. FRONTIER card EXT-40 (register total 266).
+- Counts: 151 Page Specs, 306 HTML, 116 Evidence Records, 206 source records (191 with a public locator); literal closure
+  19,847 records, 0 unresolved.
+
 ## 2026-10-11 — CLOSE-6D: truth corrections and the CWR-012 repair (Stage A final instruction v5, §4)
 
 Master transaction CLOSE-6D (Master 7627f97c -> 6769673f, 281 cells; `audit/close_out/close_6d.py` with

@@ -704,7 +704,11 @@
     "source_bindings": [
       "EP-YEM-CASH-FIN-TRANSMISSION-K04",
       "SRC-WB-G2PX-YEM-UCT-2024-001",
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-PRESSURE-2026",
+      "SRC-UNICEF-UCT-2024-10",
+      "SRC-UNICEF-UCT-2024-12",
+      "SRC-CCY-SAM-2024",
+      "SRC-CCY-CASH-DURATION-2026"
     ],
     "visual_bindings": [
       "RV-CWR-010"
@@ -723,7 +727,11 @@
         "CLM-045"
       ],
       "direct_source_ids": [
-        "SRC-WB-G2PX-YEM-UCT-2024-001"
+        "SRC-WB-G2PX-YEM-UCT-2024-001",
+        "SRC-UNICEF-UCT-2024-10",
+        "SRC-UNICEF-UCT-2024-12",
+        "SRC-CCY-SAM-2024",
+        "SRC-CCY-CASH-DURATION-2026"
       ],
       "dependency_ids": [
         "EP-YEM-CASH-FIN-TRANSMISSION-K04"
@@ -740,8 +748,8 @@
     "measurement_bindings": [
       "MA-009"
     ],
-    "evidence_period_en": "World Bank and G2Px material, May 2024 · reference period of the recipient figure not recorded · Cash Consortium of Yemen study (2026) and report (May 2026) and World Bank project documents (2025–2026)",
-    "evidence_period_ar": "مواد البنك الدولي ومبادرة G2Px، مايو 2024 · الفترة المرجعية لعدد المستفيدين غير مسجلة · دراسة لتحالف النقد في اليمن (Cash Consortium of Yemen، 2026) وتقرير له (مايو 2026) ووثائق مشروعات البنك الدولي (2025–2026)",
+    "evidence_period_en": "World Bank and G2Px material, May 2024 · reference period of the recipient figure not recorded · Cash Consortium of Yemen study (2026) and report (May 2026) and World Bank project documents (2025–2026) · UNICEF press releases (October and December 2024) · Cash Consortium of Yemen survey of January 2024 (posted online November 2024)",
+    "evidence_period_ar": "مواد البنك الدولي ومبادرة G2Px، مايو 2024 · الفترة المرجعية لعدد المستفيدين غير مسجلة · دراسة لتحالف النقد في اليمن (Cash Consortium of Yemen، 2026) وتقرير له (مايو 2026) ووثائق مشروعات البنك الدولي (2025–2026) · بيانان صحفيان لليونيسف (أكتوبر وديسمبر 2024) · مسح لتحالف النقد في اليمن أُجري في يناير 2024 (نُشر على الإنترنت في نوفمبر 2024)",
     "last_reviewed": "2026-10-11",
     "featured": null
   },
@@ -853,7 +861,8 @@
       "SRC-CBY-AR2025-BOP",
       "SRC-CCY-ISP-2024",
       "SRC-CCY-SAM-2024",
-      "SRC-CBY-DEC-23-2024-001"
+      "SRC-CBY-DEC-23-2024-001",
+      "SRC-WB-RPW-US-YEM-2025Q3-001"
     ],
     "visual_bindings": [],
     "audiences": [
@@ -887,6 +896,7 @@
         "SRC-IGC-AIDDATA-REMIT-YEM-2026",
         "SRC-WB-WDI-RMT-COST-YEM",
         "SRC-WB-RPW-SA-YEM-2025Q3-001",
+        "SRC-WB-RPW-US-YEM-2025Q3-001",
         "SRC-CBY-AR2024-BOP",
         "SRC-CBY-AR2025-BOP",
         "SRC-CCY-ISP-2024",
