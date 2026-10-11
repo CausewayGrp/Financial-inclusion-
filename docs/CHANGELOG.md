@@ -1,5 +1,42 @@
 # Repository Change Log
 
+## 2026-10-11 — CLOSE-6D: truth corrections and the CWR-012 repair (Stage A final instruction v5, §4)
+
+Master transaction CLOSE-6D (Master 7627f97c -> 6769673f, 281 cells; `audit/close_out/close_6d.py` with
+`close_6d_text.py`; ledger and run report in `audit/close_out/runs/`). The reads behind it (V1–V6), the review pair, its
+confirmation pass and the disposition of every finding are in `audit/close_out/v5_reads/`; the World Bank API values in
+`audit/close_out/fixtures/wb_api_close6d_2026-10-11.json`. Owner decisions D16–D18 are appended to
+`audit/OWNER_DECISIONS_2026-10-10.md`.
+
+- **People and Findex (6B-1).**
+  - The low-income comparator is now like-for-like: the World Bank's own aggregate for an account at a financial
+    institution (24.5%) stands beside its headline account figure (35.2%, which counts mobile-money accounts the World Bank
+    publishes no Yemen value for). The reproduction and the economy count leave the public text; the derivation stays in
+    25_FINDEX_BASELINE as CauseWay's check. The aggregate is described by Yemen's FY24 classification, not by membership.
+  - 0.4% is labelled as printed in the Little Data Book 2015, with 0.6% from the current database.
+  - For domestic remittances, the database's printed zero and the published variable documentation are shown as found;
+    the printed value is not used and no reason is offered.
+  - Every flat "the mobile-money questions were not asked" outside CLM-001's method now states the observation.
+  - /finance/: the OECD figures are described as unsourced and not used.
+- **Firms (6B-2).** YLG from two publishers side by side: the programme's Annual Report 2022 (new source SRC-YLG-AR-2022;
+  15 rows in 20_FIRM_FINANCE, youth, rural and outstanding held, PAR not stored) and the OECD (2026); totals not
+  reconciled, gender figures not compared. SMEPS passport title; the 2018 survey's missing particulars; MA-004.
+- **Regulation (6B-3).** The deposit-guarantee law (Arts 13, 31, 33) as the law states it, its 2008 ceiling, the authority
+  as it names it, and no claim that the scheme operates. The consumer-protection Instructions read in the original (ref.
+  589/CBY/2023, dated 20 August 2023; announced 28 August 2023): the complaint path item by item, the Instructions' own
+  scope words, and the brochure's different escalation window shown beside them. MA-006; the OECD statements as found;
+  Yemen Post.
+- **Remittances (6B-4).** CLM-041 (1.838 described, not denied; the IMF's 33% rule and trade sources), CLM-007 and the
+  23_REMITTANCES caveat (no whole-of-Yemen total), CLM-039 (World Development Indicators: no Yemen value after 2016).
+- **CWR-012 (6B-5).** Title "Domestic remittances and accounts: what the evidence establishes"; the question names receipt
+  into an account of one's own. The overlap bound (at least 62.7% of recipients in surveyed areas without an account at a
+  financial institution) is CauseWay's calculation from two published shares, a survey estimate, a bound on the group; it
+  does not establish the channel and neither confirms nor refutes the hypothesis. It sits in the descriptive section, not
+  the thesis. The two halves (no usable weighted channel estimate is published or held; the documentation records the
+  item as asked and answered) appear together and in order. Domain lens: KEEP after B1–B3; Arabic lens: KEEP.
+- **Gate.** E2-CTX now requires 24.5% beside 35.2% and rejects any economy count (its earlier rule required "19"); two
+  negative controls replace one.
+
 ## 2026-10-11 — CLOSE-6C: Reading CWR-012 "How money reaches households", with two Cash Consortium of Yemen records (Stage A addendum, item 4)
 
 Master transaction CLOSE-6C (Master 17c6b5dc -> 7627f97c, 79 cells; `audit/close_out/close_6c.py`, with `close_6c_text.py` and `close_6c_records.py`; ledger and

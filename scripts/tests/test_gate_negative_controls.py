@@ -527,13 +527,16 @@ CONTROLS = [
     ("a withdrawn group interval is printed again", "en/evidence/CLM-002/index.html",
      sub_once(r'(<main[^>]*>)', r'\1<p>The interval runs from 3.2% to 7.7% for women.</p>'),
      "CO-G03 en/evidence/CLM-002/index.html prints a withdrawn Findex interval: '3.2% to 7.7%'"),
-    # E2-CTX (edition 2, REOPEN-INTL): the low-income context figure is never bare and never on Home.
-    ("the low-income context figure loses what it averages", "en/people/index.html",
-     replace("across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%",
-             "is 35.2%"),
+    # E2-CTX (edition 2, REOPEN-INTL; CLOSE-6D): the low-income context figure is never bare, never without the
+    # like-for-like 24.5%, never given an economy count, and never on Home.
+    ("the low-income context figure loses its like-for-like comparator", "en/people/index.html",
+     replace("puts adults with an account at a financial institution at 24.5%", "puts adults with an account at a financial institution at a lower share"),
      "E2-CTX en/people/index.html prints the low-income context figure without naming what it averages"),
+    ("an economy count is attributed to the low-income aggregate again", "en/people/index.html",
+     replace("own aggregate for low-income economies in the same survey wave", "own aggregate for the 19 low-income economies in the same survey wave"),
+     "E2-CTX en/people/index.html attributes a count of economies to the low-income aggregate"),
     ("the low-income context figure reaches Home", "ar/index.html",
-     sub_once(r"(<p class=\"sent[^\"]*\">)", r"\1للمقارنة: 35.2% في 19 اقتصادًا منخفض الدخل. "),
+     sub_once(r"(<p class=\"sent[^\"]*\">)", r"\1للمقارنة: 35.2% و24.5% في الاقتصادات منخفضة الدخل. "),
      "E2-CTX ar/index.html prints the low-income context figure on Home"),
     # E2-DIFF (edition 2, candidate d): a pair that looks contradictory is explained where it meets, and each number
     # traces to the record that governs it.

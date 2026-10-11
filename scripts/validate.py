@@ -4022,10 +4022,13 @@ try:
 except Exception as _x:
     errors.append("CO-G05 unreadable " + repr(_x))
 
-# E2-CTX (edition 2, candidate c; REOPEN-INTL): the one same-source context figure beside Yemen's account ownership,
-# the World Bank's low-income aggregate for the same Findex wave (35.2%), is never shown bare. Asserted on what a reader
-# sees: every paragraph, list item or table cell that prints it also names what it averages (low-income economies and
-# their number, 19), and it never reaches Home, where a lone pair of numbers would read as a ranking.
+# E2-CTX (edition 2, candidate c; REOPEN-INTL; revised by CLOSE-6D, Stage A final instruction v5 item 6B-1(a)): the
+# World Bank's own low-income aggregates for the same Findex survey wave are context, never shown bare. 35.2% is the
+# headline account figure, which counts mobile-money accounts the World Bank publishes no Yemen value for; 24.5% (an
+# account at a financial institution) is the like-for-like aggregate. Asserted on what a reader sees: every paragraph,
+# list item or table cell that prints 35.2% also names low-income economies and prints 24.5% beside it; no block
+# attributes a count of economies to the aggregate (the publisher states none; the earlier rule required "19"); and the
+# figure never reaches Home, where a lone pair of numbers would read as a ranking.
 try:
     _nctx = 0
     for _f in sorted(DIST.glob("*/**/index.html")) + sorted(DIST.glob("*/index.html")):
@@ -4040,8 +4043,12 @@ try:
             _nctx += 1
             if _rel in ("en/index.html", "ar/index.html"):
                 errors.append(f"E2-CTX {_rel} prints the low-income context figure on Home")
-            if not (("low-income" in _bt or "low income" in _bt or "منخفضة الدخل" in _bt) and re.search(r"(?<!\d)19(?!\d)", _bt)):
-                errors.append(f"E2-CTX {_rel} prints the low-income context figure without naming what it averages: {_bt[:120]!r}")
+            if not (("low-income" in _bt or "low income" in _bt or "منخفضة الدخل" in _bt)
+                    and re.search(r"(?<![\d.])24\.5\s?%?(?!\d)", _bt)):
+                errors.append(f"E2-CTX {_rel} prints the low-income context figure without naming what it averages and the "
+                              f"like-for-like 24.5%: {_bt[:120]!r}")
+            if re.search(r"(?<![\d.])19\s+(?:low-income|low income|economies)|الـ\s?19\b|(?<!\d)19\s+اقتصاد", _bt):
+                errors.append(f"E2-CTX {_rel} attributes a count of economies to the low-income aggregate: {_bt[:120]!r}")
     if _nctx < 4:
         errors.append(f"E2-CTX read only {_nctx} context-figure blocks")
 except Exception as _x:

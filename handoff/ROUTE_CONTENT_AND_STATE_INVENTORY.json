@@ -2,23 +2,23 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
-  "page_specs_sha256": "e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394",
+  "production_master_sha256": "6769673fc715a1865e54c8028e5365bb6dbdde42c9b85ef640c719c8d23308db",
+  "page_specs_sha256": "26e61cb8e5960ae1006c5defd7f207e06bbbd8d81bc4db00602d094d7cc14f33",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
   "evidence_records": 115,
   "public_claims": 60,
   "chronology_events": 31,
-  "sources": 200,
-  "public_locators": 185,
+  "sources": 201,
+  "public_locators": 186,
   "curated_resources": 28,
   "readings": 12,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 42,
   "evidence_passports": 55,
-  "search_records": 514,
+  "search_records": 515,
   "page_specs": 150
  },
  "projection_roles": {
@@ -579,7 +579,8 @@
      "SRC-CBY-NEWS-724",
      "SRC-UN-OSESGY-2024-07-23",
      "SRC-CBY-DIL-21-2008",
-     "SRC-CBY-NEWS-832"
+     "SRC-CBY-NEWS-832",
+     "SRC-YLG-AR-2022"
     ],
     "displayed_sources_without_document_type": [
      "SRC-SFD-MF-HISTORY-TOR-2012-001"
@@ -2744,12 +2745,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 2,
+   "source_references": 3,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 2,
+   "public_sources_listed": 3,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4547,7 +4548,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 50,
+   "source_references": 51,
    "next_actions": [],
    "next_action_policy": "DOMAIN_ANSWER",
    "collection": {
@@ -4664,7 +4665,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 46,
+   "source_references": 47,
    "next_actions": [
     "/evidence/CLM-022/"
    ],
@@ -4715,7 +4716,7 @@
     "MA-008"
    ],
    "source_ids": [],
-   "source_references": 12,
+   "source_references": 13,
    "next_actions": [
     "/evidence/CLM-005/"
    ],
@@ -5408,8 +5409,8 @@
     "en": "dist/en/readings/how-money-reaches-households/index.html",
     "ar": "dist/ar/readings/how-money-reaches-households/index.html"
    },
-   "title_en": "How money reaches households",
-   "title_ar": "كيف يصل المال إلى الأسر",
+   "title_en": "Domestic remittances and accounts: what the evidence establishes",
+   "title_ar": "الحوالات المحلية والحسابات: ما الذي تثبته الأدلة؟",
    "sections": 8,
    "section_rows_split_by_language": false,
    "evidence_ids": [

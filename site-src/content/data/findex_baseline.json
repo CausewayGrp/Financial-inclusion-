@@ -64,7 +64,7 @@
       "World Bank Global Findex",
       "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
       "PUBLIC_PRIMARY_AGGREGATE",
-      "Latest Yemen year is 2022; do not label as 2021 calendar-year fieldwork. In Yemen's survey the mobile-money questions were not asked: fiaccount.t.d equals account.t.d (11.9033656433415) and mobileaccount.t.d is empty for Yemen (open API, source 28, read 10 October 2026)."
+      "Latest Yemen year is 2022; do not label as 2021 calendar-year fieldwork. The World Bank publishes no mobile-money-account value for Yemen, and the study's public metadata print no valid answer to the mobile-money items: fiaccount.t.d equals account.t.d (11.9033656433415) and mobileaccount.t.d is empty for Yemen (open API, source 28, read 10 October 2026)."
     ],
     [
       "WB-FINDEX-OBS-2022-002",
@@ -174,14 +174,14 @@
       "WB-FINDEX-CTX-2021-LIC",
       "account_t_d",
       "Account ownership (same definition as FX.OWN.TOTL.ZS)",
-      "low-income economies (19 economies with a 2021-wave observation, Yemen included)",
-      "2021 wave",
+      "low-income economies (World Bank FY24 income classification; Yemen included)",
+      "2021 (database year; the same survey wave as Yemen's 2022 observation)",
       35.2,
       "percent of population ages 15+",
       "World Bank Global Findex",
       "https://thedocs.worldbank.org/en/doc/be6615202d1f08a25855c8ac2d615122-0050012025/related/GlobalFindexDatabase2025.csv",
       "PUBLIC_PRIMARY_AGGREGATE_CONTEXT",
-      "World Bank aggregate 0.351821646573129 (Global Findex Database 2025, row Low income, 2021, all); reproduced as the adult-population-weighted mean of the 19 economies the file classes Low income with a 2021-wave observation, Yemen's 2022 observation included. Context only: not a benchmark, target or ranking."
+      "World Bank aggregate 0.351821646573129 (Global Findex Database 2025, row Low income, 2021, all); CauseWay's check, not for publication: reproduced as the adult-population-weighted mean of the 19 economies the file classes Low income with a 2021-wave observation, Yemen's 2022 observation included; the publisher states no economy count for this aggregate, so no count is printed (CLOSE-6D). The same value on the open API: account.t.d, LIC, date 2021, 35.1821646573129 (read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json). The aggregate for mobileaccount.t.d (18.3073126606225) is not published by this resource: in the publisher's aggregation Yemen's missing mobile-money value enters the numerator as zero while Yemen's adults stay in the denominator (CauseWay's reconstruction, not a published statement). Context only: not a benchmark, target or ranking."
     ],
     [
       "CW-FINDEX-MOE-2022-001",
@@ -2366,6 +2366,32 @@
       "https://api.worldbank.org/v2/country/YEM/indicator/merchant.pay?source=28&format=json&date=2022",
       "PUBLIC_PRIMARY_AGGREGATE",
       "World Bank published value for Yemen (Global Findex database, open API source 28; World Bank Data labels the year 2022; the study is the Yemen Global Findex 2021, fielded November 2022 to January 2023); unrounded value 0.610879263962454. No interval published here (EXT-07 held). Close-out U1, 10 October 2026. Panel measure FDP-032."
+    ],
+    [
+      "WB-FINDEX-CTX-2021-LIC-FI",
+      "fiaccount_t_d",
+      "Bank or similar financial institution account (% age 15+)",
+      "low-income economies (World Bank FY24 income classification; Yemen included)",
+      "2021 (database year; the same survey wave as Yemen's 2022 observation)",
+      24.5,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://api.worldbank.org/v2/country/LIC/indicator/fiaccount.t.d?date=2021&format=json&source=28",
+      "PUBLIC_PRIMARY_AGGREGATE_CONTEXT",
+      "World Bank aggregate 24.4577497822049 (open API, source 28, LIC, date 2021, lastupdated 2025-10-06; read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json). The like-for-like comparator for Yemen's 11.9% (fiaccount.t.d equals account.t.d for Yemen). The database's metadata name the FY24 classification (2022 Atlas GNI per capita of $1,135 or less) and state no economy count. Context only: not a benchmark, target or ranking (CLOSE-6D, 6B-1(a))."
+    ],
+    [
+      "WB-FINDEX-OBS-2014-FIN22A",
+      "fin22a",
+      "Borrowed from a formal bank or similar financial institution (% age 15+)",
+      "total",
+      2014,
+      0.6,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://api.worldbank.org/v2/country/YEM/indicator/fin22a?date=2014&format=json&source=28",
+      "PUBLIC_PRIMARY_AGGREGATE",
+      "Current database value 0.602877248196788 (open API, source 28, lastupdated 2025-10-06; read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json). The Little Data Book on Financial Inclusion 2015 printed 0.4% for the same 2014 measure (p.160); any comparison of 2014 with 2022 (1.8%) uses 0.6% (CLOSE-6D, 6B-1(b))."
     ]
   ]
 }

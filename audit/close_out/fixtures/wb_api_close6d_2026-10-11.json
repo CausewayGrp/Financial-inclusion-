@@ -1,0 +1,181 @@
+{
+ "schema": "YFIE_API_FIXTURE/1.0",
+ "retrieved": "2026-10-11",
+ "publisher": "World Bank, Global Findex database (API source 28)",
+ "purpose": "Stage A final instruction v5, CLOSE-6D items 6B-1(a), 6B-1(b), 6B-1(c), 6B-4(c), 6B-5(a): the publisher's own published values, unrounded, as returned by the open API. No microdata; no API key.",
+ "notes": {
+  "same_wave": "The publisher files the low-income aggregate at year 2021 and Yemen's own observation at year 2022, within one survey wave (Yemen fieldwork November 2022 to January 2023); date=2021 returns no value for Yemen. Say 'the same survey wave', never 'the same year'.",
+  "mobileaccount_LIC_not_published": "18.3073126606225 (mobileaccount.t.d, LIC, 2021) is NOT published by this resource. CauseWay's reconstruction of the publisher's aggregation (not a published statement): Yemen's missing mobile-money value enters the aggregate's numerator as zero while Yemen's adults stay in the denominator, so it is not a like-for-like comparator for Yemen and is a missing-is-not-zero problem inside the publisher's arithmetic. It stays here and in the Master, on no public page.",
+  "fiaccount_LIC_comparator": "fiaccount.t.d (24.4577497822049) is the publisher's own aggregate and the only one of the three that compares with Yemen's 11.9% on the same definition (account at a bank or similar financial institution).",
+  "overlap_bound": "CauseWay calculation from two published shares (not a published statistic): (fh2 31.9313981068809 - fiaccount.t.d 11.9033656433415) / 31.9313981068809 = 62.722066%, published as 'at least 62.7%' of adults who received domestic remittances did not have an account at a financial institution. A bound on the group; it does not establish the channel and does not rule out an account type the survey did not measure.",
+  "fin22a": "0.4% is the Little Data Book 2015 (printed p.160) value for 2014; the current database gives 0.602877248196788 (0.6%) for fin22a 2014 and 1.79326303531445 (1.8%) for 2022. Comparisons of 2014 with 2022 use 0.6%.",
+  "fin29_conflict": "fin29 ('Received domestic remittances: into an account (% age 15+)') is 0 for Yemen at year 2022, with no value for fin29.s (% of recipients) or for the group series (fin29.1, fin29.2, fin29.7 read). The World Bank's published variable documentation for the same study (microdata catalog 5862, variable V67, fin29_1 'Received domestic remittances through an account') shows 393 valid answers and 39 'yes' (unweighted response counts; the item is asked of recipients). The published series is a share of all adults and its definition does not explain a printed 0. The two statements cannot both describe the same quantity; the printed value is not used and no reason is offered. The database (source 28) publishes no domestic-remittance series for cash or money-transfer operators: its channel series are fin28, fin28.29 and fin29 (account) and their .s variants (indicator list read 11 October 2026).",
+  "lic_classification": "api.worldbank.org/v2/sources/28/country/LIC/series/account.t.d/metadata, SpecialNotes: \"The World Bank's FY24 classification is used, where low-income economies had a 2022 Atlas GNI per capita of $1,135 or less.\" No count of economies is stated for the aggregate (read 11 October 2026)."
+ },
+ "series": [
+  {
+   "economy": "LIC",
+   "indicator": "account.t.d",
+   "indicator_name": "Account  (% age 15+)",
+   "date": "2021",
+   "value": 35.1821646573129,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/LIC/indicator/account.t.d?date=2021&format=json&source=28"
+  },
+  {
+   "economy": "LIC",
+   "indicator": "fiaccount.t.d",
+   "indicator_name": "Bank or similar financial institution account  (% age 15+)",
+   "date": "2021",
+   "value": 24.4577497822049,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/LIC/indicator/fiaccount.t.d?date=2021&format=json&source=28"
+  },
+  {
+   "economy": "LIC",
+   "indicator": "mobileaccount.t.d",
+   "indicator_name": "Mobile money account  (% age 15+)",
+   "date": "2021",
+   "value": 18.3073126606225,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/LIC/indicator/mobileaccount.t.d?date=2021&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fh2",
+   "indicator_name": "Received domestic remittances  (% age 15+)",
+   "date": "2022",
+   "value": 31.9313981068809,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fh2?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fiaccount.t.d",
+   "indicator_name": "Bank or similar financial institution account  (% age 15+)",
+   "date": "2022",
+   "value": 11.9033656433415,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fiaccount.t.d?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "account.t.d",
+   "indicator_name": "Account  (% age 15+)",
+   "date": "2022",
+   "value": 11.9033656433415,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/account.t.d?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "mobileaccount.t.d",
+   "indicator_name": "Mobile money account  (% age 15+)",
+   "date": "2022",
+   "value": null,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/mobileaccount.t.d?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin22a",
+   "indicator_name": "Borrowed from a formal bank or similar financial institution  (% age 15+)",
+   "date": "2014",
+   "value": 0.602877248196788,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin22a?date=2014&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin22a",
+   "indicator_name": "Borrowed from a formal bank or similar financial institution  (% age 15+)",
+   "date": "2022",
+   "value": 1.79326303531445,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin22a?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin29",
+   "indicator_name": "Received domestic remittances: into an account  (% age 15+)",
+   "date": "2022",
+   "value": 0,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin29?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin34a",
+   "indicator_name": "Received wages: into a bank or similar financial institution account  (% age 15+)",
+   "date": "2014",
+   "value": 1.75089233870337,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin34a?date=2014&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin34a",
+   "indicator_name": "Received wages: into a bank or similar financial institution account  (% age 15+)",
+   "date": "2022",
+   "value": 3.10794980696722,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin34a?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fh2",
+   "indicator_name": "Received domestic remittances  (% age 15+)",
+   "date": "2021",
+   "value": null,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fh2?date=2021&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin29.s",
+   "indicator_name": "Received domestic remittances: into an account (% of recipients, age 15+)",
+   "date": "2022",
+   "value": null,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin29.s?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin29.1",
+   "indicator_name": "Received domestic remittances: into an account, women (% age 15+)",
+   "date": "2022",
+   "value": null,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin29.1?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin29.2",
+   "indicator_name": "Received domestic remittances: into an account, men (% age 15+)",
+   "date": "2022",
+   "value": null,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin29.2?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "fin29.7",
+   "indicator_name": "Received domestic remittances: into an account, poorest 40% (% age 15+)",
+   "date": "2022",
+   "value": null,
+   "lastupdated": "2025-10-06",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/fin29.7?date=2022&format=json&source=28"
+  },
+  {
+   "economy": "YEM",
+   "indicator": "BX.TRF.PWKR.CD.DT",
+   "indicator_name": "Personal remittances, received (current US$)",
+   "date": "2016",
+   "value": 3770584000,
+   "lastupdated": "2026-10-08",
+   "source": "World Development Indicators (API source 2)",
+   "locator": "https://api.worldbank.org/v2/country/YEM/indicator/BX.TRF.PWKR.CD.DT?format=json&per_page=100",
+   "note": "Last non-null Yemen observation; 2017 to 2025 return null (read 11 October 2026). CLOSE-6D item 6B-4(c)."
+  }
+ ]
+}

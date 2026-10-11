@@ -164,3 +164,60 @@ section is the later decision.
   and its scope.
 - **D15 Site-operation metrics.** The footprint values (Appendix G) are measurements of this website, not evidence.
   They sit outside AGENTS rule 5, under their own gate. Amend rule 5 in the W4F PR to say so.
+
+## 6. Owner decisions D16–D18 (Stage A final instruction v5, 11 October 2026)
+
+Recorded as given in the Stage A final instruction v5 of 11 October 2026 (§1), which the owner sent to this session; the
+owner's sending of that message approves exactly its scope and these decisions. Appended; nothing above is edited.
+Nothing here is applied to the Master, a projection or a page by this record.
+
+- **D16. CauseWay-derived aggregates from public-use microdata.**
+  - Weighted aggregate shares computed by CauseWay from the World Bank Global Findex 2021 Yemen public-use file may be
+    published as a distinct evidence class, CAUSEWAY_DERIVED_AGGREGATE.
+  - The Microdata Library terms allow the user to report aggregated information with citation. They forbid
+    redistribution and any attempt to identify respondents.
+  - Conditions:
+    - Report point estimates and unweighted bases only. Report no interval: the file has no PSU or stratum, which is
+      consistent with CR-02.
+    - Suppress any share whose base is under 100 or whose numerator is under 10.
+    - Label every figure "computed by CauseWay from World Bank microdata; not a World Bank published statistic", and
+      cite DOI 10.48529/10py-nv58.
+    - The respondent file never enters the repository, CI, Claude Code or any public surface. Only the owner-generated
+      aggregate JSON and the script that produced it are committed.
+    - Only version 4 of the script, dated 11 October 2026, may be run. Versions 1 to 3 had nine defects between them,
+      each found in review and each now fixed and covered by a synthetic-data regression that must pass before a real
+      run: a withheld share printed the exact numerator it was withholding; a missing answer was counted as "no", so a
+      respondent who did not answer the second channel item fell into "neither cash nor a money transfer operator"; the
+      conditional shares were based on the whole filter group rather than on the non-missing answers to their own item;
+      the anchors were displayed but not enforced; the channel cells are additively linked, so withholding one while
+      publishing its complements disclosed it exactly (both = cash + MTO - 1 + neither); the money-transfer-operator
+      shares used the cash item's base rather than their own; the QA block published exact small counts, among them the
+      count of recipients reporting receipt into an account while holding no financial-institution account, which is the
+      most identifying number in the output; a failed run still printed a complete-looking aggregate before exiting; and
+      the fieldwork end date followed one publisher surface without recording that the other differs.
+    - Disclosure control is a condition of D16, not a detail of the script. Before any figure is published, the set
+      must be checked so that a withheld cell cannot be recovered from the cells that are published, from the bases, or
+      from the totals. A linked set is withheld as a whole. Every count in the output, in the results and in the QA
+      block alike, is banded below the threshold rather than printed. The run exits non-zero and emits no aggregate at
+      all unless it reproduces the publisher's own unrounded values - 11.9033656433415, 31.9313981068809,
+      17.6714332248251 and 37.7705325180586 - within 0.1 percentage points. Commit the script with its regressions and
+      record, in the report, the result of each: disclosure control, the denominators, the weights and the anchors.
+      Nothing is published on the strength of "the tests passed".
+    - Record the rule in 28_METHODS_RIGHTS.
+  - This replaces the earlier blanket "no figure computed from microdata". The ban on the World Bank Microdata API key
+    stands.
+- **D17 (amended 11 October 2026, twice).** A Reading is added or kept on whether it is unique and useful, never on how
+  many Readings exist. The count is not the test and must not be cited as one.
+  - CWR-013 "Programmes count guarantees and grants. Can firms borrow?" is not added now, because it fails that test:
+    /firms/ sections 7 to 9, MA-004 and CWR-008 already carry its argument, and its proposed visual would restate a
+    ladder /firms/ section 9 already carries in prose. Its two genuinely new elements, the IFAD evaluation and the
+    stage-labelling of each programme figure, are published inside those existing objects.
+  - CWR-012 keeps its route only if the repaired Reading passes the same test. Any later Reading is judged the same
+    way, on merit, with the owner's word.
+- **D18.** The plain-language pass on page leads is done in Stage B, through Master-first copy transactions, together
+  with the design and the six-persona test. It is not a new route or module.
+
+What the instruction also records with these decisions (§0): the steward's earlier instruction to keep CWR-012 retired
+is withdrawn; the single new-Reading slot under D9 is spent on CWR-012; CWR-013 is RESERVED, not published. Recording
+D16 here does not run anything: the aggregate is used only when the owner supplies the file its script produces
+(instruction §5, 6C-6).
