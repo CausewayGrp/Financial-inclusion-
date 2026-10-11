@@ -185,3 +185,17 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   OWN-13 (OWNER-OPTIONAL), OWN-12 and CLOSE-5 (CLOSED). Sections 1–10 are history and are not rewritten; section 11 is
   appended. The Context's two open_items fields point to the live view. Also recorded in card EXT-23: the CBY-Aden POS
   page now links January 2026 to a different file from SRC-CBY-POS-2026-01's locator; no record was changed.
+- 2026-10-11 · A · W3a + W3f · PR #37 merged at `53dccc4d` (9/9 CI; negative controls 6/6 shards). Closed: W3a, W3f.
+
+## STAGE A COMPLETE at `53dccc4d` (11 October 2026)
+
+- Merged, each at 9/9 CI: #26 inputs, #27 CLOSE-1, #28 AR-1, #29 W2, #30 CLOSE-2, #31 CLOSE-3A, #32 CLOSE-3B, #33
+  CLOSE-3C, #34 CLOSE-3D, #35 CLOSE-4, #36 CLOSE-5, #37 W3f. Master `58b8f3ec5ac1` → `d14b36c5c171`.
+- Closed: D1, D3, CR-01…CR-16, CR-18…CR-20, U1–U14, Appendix C (W3d), RD1–RD7, RD9, RD10, M1, M2, OWN-10, OWN-12,
+  W2 (handoff superseded), W3a, W3f. Arabic register: 35 rows applied, 0 stopped; RETAIN AR-028, AR-036, ED-038.
+- Gates added: CO-G01, CO-G02, CO-G03 (replaces FC-MOE), CO-G04, CO-G05, CO-G06, RC-B12 (canonical pages),
+  R86-G01 (SUPERSEDED state); 150 negative controls, all caught.
+- Open: CR-17 (edition label, W8 or runbook step 4). RD8 dropped → OWN-13. Owner questions: OWN-11 (CWR-011 on
+  /finance/ under F2), OWN-13 (CWR-012), CWR-002 → MA-008 binding. FRONTIER: 47 items with cards
+  (audit/close_out/FRONTIER_CARDS.md), incl. EXT-23 (the CBY POS January 2026 file address changed).
+- Next: Stage B, after the owner reviews the STAGE A REPORT. Not declared: DESIGN HANDOFF READY, PUBLIC RELEASE READY.
