@@ -535,6 +535,41 @@
     ]
   },
   {
+    "event_id": "YSC-031",
+    "period_en": "9 November 2023",
+    "event_class": "CUSTOMER_DUE_DILIGENCE_RULE",
+    "fact_en": "CBY-Aden issued instructions regulating electronic know-your-customer procedures (ref. 840/CBY/2023) for banks and licensed mobile e-money providers, setting how accounts may be opened remotely, without the customer present in person, and requiring these institutions to report every half year figures that include the average time to open and activate an account.",
+    "fact_ar": "أصدر البنك المركزي اليمني – عدن تعليمات تنظيم إجراءات اعرف عميلك إلكترونيًا (المرجع 840/CBY/2023) للبنوك ولمقدمي خدمات النقود الإلكترونية عبر الهاتف المحمول المرخص لهم، تحدد كيفية فتح الحسابات عن بُعد دون حضور العميل شخصيًا، وتُلزم هذه المؤسسات بالإبلاغ كل نصف سنة عن بيانات منها متوسط الوقت المستغرق لفتح الحساب وتفعيله.",
+    "source_ids": "SRC-CBY-EKYC-2023",
+    "source_scope": "CBY-Aden instructions (the rule text); no data on use.",
+    "system_implication_en": "Remote account opening became a regulated route for the banks and e-money providers CBY-Aden supervises; whether they offer it, and to whom, is not reported.",
+    "system_implication_ar": "أصبح فتح الحسابات عن بُعد مسارًا منظمًا للبنوك ولمقدمي خدمات النقود الإلكترونية الخاضعين لرقابة البنك المركزي اليمني – عدن؛ ولم يُفصَح عمّا إذا كانوا يقدمونه ولا لمن يقدمونه.",
+    "fi_relevance_en": "Identity checks and onboarding are a step at which account access can be lost; the average onboarding time the instructions ask institutions to report is the kind of journey measure that the measurement priority on digital onboarding and identity journeys asks for.",
+    "fi_relevance_ar": "التحقق من الهوية وإجراءات الانضمام مرحلةٌ قد يتعثر فيها الوصول إلى الحسابات؛ ومتوسط وقت فتح الحساب الذي تطلب التعليمات من المؤسسات الإبلاغ عنه هو من نوع مقاييس الرحلة التي تطلبها أولوية القياس «رحلات الانضمام الرقمي وإثبات الهوية».",
+    "does_not_establish_en": "Issuing the instructions does not establish that remote onboarding is offered or used, how long it takes in practice, or that any reported figures were published; the instructions fix no date of entry into force, only compliance periods counted from it.",
+    "does_not_establish_ar": "لا يثبت إصدار التعليمات أن فتح الحسابات عن بُعد متاح أو مستخدم، ولا المدة التي يستغرقها فعليًا، ولا أن أي بيانات مُبلَّغ عنها قد نُشرت؛ ولا تحدد التعليمات تاريخ نفاذها، وإنما تحدد مُهَلًا للامتثال تُحسب من ذلك التاريخ.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/people | /payments | /measurement | /reforms",
+    "interpretation_note": "Issuance is not implementation.",
+    "period_ar": "9 نوفمبر 2023",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "9 November 2023",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-EKYC-2023",
+        "loc": "cby-ye.com/files/65806fe2b3757.pdf p.1: ref. 840/CBY/2023, dated 9/11/2023; Hijri date (25 Rabi' al-Akhir 1445) p.16; remote opening without the customer present, p.2; half-yearly reporting deadlines, p.15; Annex 5 item 3, average times, p.30; compliance periods, pp.14 and 16; no effective-date clause in the 30 pages; read 11 October 2026"
+      },
+      {
+        "t": "840",
+        "k": "v",
+        "s": "TRIVIAL"
+      }
+    ]
+  },
+  {
     "event_id": "YSC-026",
     "period_en": "7 and 28 March 2024",
     "event_class": "NATIONAL_SWITCH_PHASE",
@@ -575,16 +610,16 @@
     "event_id": "YSC-012",
     "period_en": "March–June 2024",
     "event_class": "REGULATORY_CURRENCY_FRAGMENTATION",
-    "fact_en": "A new 100-rial coin in Sana'a in March 2024 was followed by an April CBY-Aden directive for banks headquartered in Sana'a to relocate to Aden and further June measures affecting unlicensed entities, wallets, payment services and remittance networks.",
-    "fact_ar": "بعد طرح عملة معدنية جديدة من فئة 100 ريال في صنعاء في مارس 2024، صدر في أبريل توجيه من البنك المركزي اليمني – عدن للبنوك التي تقع مراكزها الرئيسية في صنعاء بنقل هذه المراكز إلى عدن، ثم اتُّخذت في يونيو تدابير إضافية طالت جهات غير مرخصة ومحافظ إلكترونية وخدمات دفع وشبكات تحويلات.",
-    "source_ids": "SRC-WB-YEM-FRAGMENTATION-2025-001 | SRC-CBY-UNLICENSED-EWALLET-2024-001 | SRC-CBY-DEC-23-2024-001",
-    "source_scope": "World Bank account of competing-authority measures; provider current status still requires provider-specific authority evidence.",
+    "fact_en": "A new 100-rial coin in Sana'a in March 2024 was followed by an April CBY-Aden directive for banks headquartered in Sana'a to relocate to Aden and further June measures affecting unlicensed entities, wallets, payment services and remittance networks. Circular No. 12 of the Central Bank of Yemen in Sana'a (dated 13 March 2024, applying from 14 March 2024) set how incoming external transfers are paid out through banks and exchange companies acting as main agents, paying individual transfers in US dollars or other foreign currencies in their Saudi-riyal equivalent; on 23 May 2024 Decision No. 19 of 2024 of the Governor of the Central Bank of Yemen in Aden required external transfers to pass only through qualified banks or exchange companies, with the bank's no-objection letter before contracts with international money-transfer companies or sub-agents, and incoming transfers to be paid in the currency received unless the beneficiary asks to convert them.",
+    "fact_ar": "بعد طرح عملة معدنية جديدة من فئة 100 ريال في صنعاء في مارس 2024، صدر في أبريل توجيه من البنك المركزي اليمني – عدن للبنوك التي تقع مراكزها الرئيسية في صنعاء بنقل هذه المراكز إلى عدن، ثم اتُّخذت في يونيو تدابير إضافية طالت جهات غير مرخصة ومحافظ إلكترونية وخدمات دفع وشبكات تحويلات. وحدّد التعميم رقم (12) الصادر عن البنك المركزي اليمني في صنعاء (المؤرخ 13 مارس 2024، والمعمول به من 14 مارس 2024) كيفية صرف الحوالات الخارجية الواردة عبر البنوك وشركات الصرافة العاملة وكلاءَ رئيسيين، فتُصرف الحوالات الفردية الواردة بالدولار الأمريكي أو بعملات أجنبية أخرى بما يعادلها بالريال السعودي؛ وفي 23 مايو 2024 ألزم قرار محافظ البنك المركزي رقم (19) لسنة 2024، الصادر عن البنك المركزي اليمني في عدن، بأن تجري التحويلات الخارجية عبر البنوك أو شركات الصرافة المؤهلة وحدها، مع الحصول على خطاب عدم ممانعة منه قبل التعاقد مع شركات الحوالات الدولية أو الوكلاء الفرعيين، وبأن تُصرف الحوالات الواردة بالعملة التي وردت بها ما لم يطلب المستفيد مصارفتها.",
+    "source_ids": "SRC-WB-YEM-FRAGMENTATION-2025-001 | SRC-CBY-UNLICENSED-EWALLET-2024-001 | SRC-CBY-DEC-23-2024-001 | SRC-CBY-SANAA-C12-2024 | SRC-CBY-DEC-19-2024",
+    "source_scope": "World Bank account of competing-authority measures; provider current status still requires provider-specific authority evidence. Rule texts of both central banks on paying out incoming external transfers: Circular No. 12 of the Central Bank of Yemen in Sana'a (in the copy a news site republished) and Decision No. 19 of 2024 of the Governor of the Central Bank of Yemen in Aden; neither shows how transfers were paid.",
     "system_implication_en": "Regulatory and payment fragmentation intensified, increasing the need to distinguish licence, headquarters, operating geography and usable channel.",
     "system_implication_ar": "ازداد الانقسام التنظيمي وفي المدفوعات، ما يعزز ضرورة الفصل بين الترخيص والمقر والجغرافيا التشغيلية والقناة القابلة للاستخدام.",
     "fi_relevance_en": "The same provider name can carry different regulatory and operational meanings by territory.",
     "fi_relevance_ar": "قد يحمل اسم مقدم الخدمة نفسه معاني تنظيمية وتشغيلية مختلفة بحسب المنطقة.",
-    "does_not_establish_en": "A directive or prohibition does not prove actual compliance, closure, relocation or user access at every location.",
-    "does_not_establish_ar": "لا يثبت التوجيه أو الحظر الامتثال الفعلي أو الإغلاق أو الانتقال أو وصول المستخدم في كل موقع.",
+    "does_not_establish_en": "A directive, circular, decision or prohibition does not prove actual compliance, closure, relocation, how transfers were actually paid, or user access at every location.",
+    "does_not_establish_ar": "لا يثبت التوجيه أو التعميم أو القرار أو الحظر الامتثال الفعلي أو الإغلاق أو الانتقال أو كيفية صرف الحوالات فعليًا أو وصول المستخدم في كل موقع.",
     "relationship_type": "CONTEXT",
     "linked_routes": "/providers | /payments | /remittances | /access | /reforms",
     "interpretation_note": null,
@@ -633,6 +668,37 @@
         "s": "READ",
         "src": "SRC-CBY-DEC-23-2024-001",
         "loc": "cby-ye.com/files/667c596ef3bea.pdf p.1 header and title (scanned; viewed as image)"
+      },
+      {
+        "t": "13 March 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-SANAA-C12-2024",
+        "loc": "yemeneco.org copy of Circular No. 12, p.1, date field 'Date: 13/ 3 / 2024' and 3/9/1445 AH; read 11 October 2026"
+      },
+      {
+        "t": "14 March 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-SANAA-C12-2024",
+        "loc": "same, p.1: 'ابتداءً من تاريخ 1445/09/04هـ الموافق 2024/03/14م'; read 11 October 2026"
+      },
+      {
+        "t": "23 May 2024",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-19-2024",
+        "loc": "cby-ye.com/files/6653499a7181b.pdf p.1: ref. 289/CBY/2024, dated 23/5/2024; issue line with Hijri date (15 Dhu al-Qa'da 1445) p.3; Art.1 p.1, Art.2 p.2, Art.3 (payout currency) and Art.4 (in force) p.3; read 11 October 2026"
+      },
+      {
+        "t": "12",
+        "k": "v",
+        "s": "TRIVIAL"
+      },
+      {
+        "t": "19",
+        "k": "v",
+        "s": "TRIVIAL"
       }
     ]
   },
@@ -928,16 +994,16 @@
     "event_id": "YSC-015",
     "period_en": "July 2025 onward",
     "event_class": "FX_IMPORT_POLICY",
-    "fact_en": "The internationally recognized government established the National Committee for the Regulation and Financing of Imports to prioritize FX use for essential imports, enhance import transparency and channel FX into the formal banking sector.",
-    "fact_ar": "أنشأت الحكومة المعترف بها دوليًا اللجنة الوطنية لتنظيم وتمويل الواردات لإعطاء الأولوية في استخدام النقد الأجنبي للواردات الأساسية، وتعزيز شفافية الاستيراد، وتوجيه النقد الأجنبي إلى القطاع المصرفي الرسمي.",
-    "source_ids": "SRC-IMF-AIV-2025-STAFF-001",
-    "source_scope": "IRG policy framework.",
+    "fact_en": "The internationally recognized government established the National Committee for the Regulation and Financing of Imports to prioritize FX use for essential imports, enhance import transparency and channel FX into the formal banking sector. CBY-Aden reported that the committee, which it called the Committee for Financing and Regulating Imports, held its first meeting on 17 July 2025 at the central bank in Aden, chaired by the Governor with the Minister of Trade and Industry as deputy chair, and that its members include the government bodies concerned with finance, trade, and customs and judicial enforcement, with representatives of banks, exchange companies and the commercial sector.",
+    "fact_ar": "أنشأت الحكومة المعترف بها دوليًا اللجنة الوطنية لتنظيم وتمويل الواردات لإعطاء الأولوية في استخدام النقد الأجنبي للواردات الأساسية، وتعزيز شفافية الاستيراد، وتوجيه النقد الأجنبي إلى القطاع المصرفي الرسمي. وأفاد البنك المركزي اليمني – عدن بأن اللجنة، التي سمّاها «لجنة تمويل وتنظيم الاستيراد»، عقدت أول اجتماعاتها في 17 يوليو 2025 في مبنى البنك المركزي بعدن برئاسة المحافظ وبحضور وزير التجارة والصناعة نائبًا لرئيسها، وأنها تضم الجهات الحكومية المعنية بالتمويل والتجارة والضبطية الجمركية والقضائية إلى جانب ممثلي البنوك وشركات الصرافة والقطاع التجاري.",
+    "source_ids": "SRC-IMF-AIV-2025-STAFF-001 | SRC-CBY-NEWS-832",
+    "source_scope": "IRG policy framework. CBY-Aden news release on the committee's first meeting (it states no establishing decision and no mandate).",
     "system_implication_en": "Import finance and FX allocation became more explicitly tied to formal banking and regulatory control.",
     "system_implication_ar": "أصبح تمويل الواردات وتخصيص النقد الأجنبي أكثر ارتباطًا بالقطاع المصرفي الرسمي والضبط التنظيمي.",
     "fi_relevance_en": "This may change incentives and flows through banks and exchangers, which should be measured.",
     "fi_relevance_ar": "قد يغير ذلك الحوافز والتدفقات عبر البنوك والصرافين، وهو أثر يحتاج إلى قياس.",
-    "does_not_establish_en": "Creation of the committee does not prove improved access, lower costs or successful formalization.",
-    "does_not_establish_ar": "إنشاء اللجنة لا يثبت تحسن الوصول أو انخفاض التكلفة أو نجاح التحول إلى القنوات الرسمية.",
+    "does_not_establish_en": "Creation of the committee does not prove improved access, lower costs or successful formalization. The news release of its first meeting does not say who established the committee or under which decision.",
+    "does_not_establish_ar": "إنشاء اللجنة لا يثبت تحسن الوصول أو انخفاض التكلفة أو نجاح التحول إلى القنوات الرسمية. ولا يذكر البيان الصحفي عن اجتماعها الأول الجهة التي أنشأتها ولا القرار الذي أُنشئت بموجبه.",
     "relationship_type": "MECHANISM_HYPOTHESIS",
     "linked_routes": "/finance | /firms | /providers | /reforms",
     "interpretation_note": null,
@@ -951,6 +1017,13 @@
         "s": "READ",
         "src": "SRC-IMF-AIV-2025-STAFF-001",
         "loc": "IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff appraisal printed p.21 (PDF p.26); description printed p.7 (PDF p.12) para 8"
+      },
+      {
+        "t": "17 July 2025",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-NEWS-832",
+        "loc": "cby-ye.com/news/832, dated 2025-07-17: 'صباح اليوم الخميس الموافق 17 يوليو 2025م'; read 11 October 2026"
       }
     ]
   },
@@ -1188,6 +1261,55 @@
         "s": "READ",
         "src": "SRC-SPA-SAU-BUDGET-2026-001",
         "loc": "spa.gov.sa/en/N2525739 body; AR N2525728"
+      }
+    ]
+  },
+  {
+    "event_id": "YSC-032",
+    "period_en": "9 April 2026 (in force 12 April 2026)",
+    "event_class": "MONETARY_POLICY_RULE",
+    "fact_en": "CBY-Aden's Governor's Decision No. 7 of 2026 set a minimum rate of 18% a year on new Yemeni-rial savings deposits at commercial banks, left foreign-currency deposit rates and lending rates to banks and exempted Islamic banks; it applies to contracts concluded after it took effect on 12 April 2026.",
+    "fact_ar": "حدّد قرار محافظ البنك المركزي اليمني رقم (7) لسنة 2026، الصادر في عدن، حدًا أدنى لسعر الفائدة قدره 18% سنويًا على ودائع الادخار الجديدة بالريال اليمني لدى البنوك التجارية، وترك أسعار الفائدة على الودائع بالعملات الأجنبية وعلى الإقراض للبنوك، واستثنى البنوك الإسلامية؛ ويسري على العقود المبرمة بعد نفاذه في 12 أبريل 2026.",
+    "source_ids": "SRC-CBY-DEC-07-2026",
+    "source_scope": "CBY-Aden decision (the rule text); no data on rates paid or deposits.",
+    "system_implication_en": "A floor on the rate paid on new rial savings deposits at commercial banks became a monetary-policy instrument; the rates banks pay are not reported.",
+    "system_implication_ar": "أصبح الحد الأدنى لسعر الفائدة على ودائع الادخار الجديدة بالريال لدى البنوك التجارية أداة من أدوات السياسة النقدية؛ ولم يُفصَح عن الأسعار التي تدفعها البنوك.",
+    "fi_relevance_en": "Deposit rates bear on whether keeping savings in a bank account is worthwhile, but a minimum rate is not a measure of saving or of account use.",
+    "fi_relevance_ar": "لأسعار الفائدة على الودائع صلة بجدوى الاحتفاظ بالمدخرات في حساب مصرفي، لكن الحد الأدنى للسعر ليس مقياسًا للادخار ولا لاستخدام الحسابات.",
+    "does_not_establish_en": "The decision does not establish the rates banks actually pay, deposit growth, or any effect on saving or on access to accounts.",
+    "does_not_establish_ar": "لا يثبت القرار الأسعار التي تدفعها البنوك فعليًا، ولا نمو الودائع، ولا أي أثر على الادخار أو الوصول إلى الحسابات.",
+    "relationship_type": "CONTEXT",
+    "linked_routes": "/finance | /reforms",
+    "interpretation_note": "A rule is not a rate paid.",
+    "period_ar": "9 أبريل 2026 (يُعمل به اعتبارًا من 12 أبريل 2026)",
+    "verification_note_en": null,
+    "verification_note_ar": null,
+    "value_states": [
+      {
+        "t": "9 April 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-07-2026",
+        "loc": "cby-ye.com/files/69dcac86e3520.pdf p.1: ref. 220/CBY/2026, header date 9/4/2026 (the issue line prints the Hijri and Gregorian months swapped); MPC meeting 8 April 2026; read 11 October 2026"
+      },
+      {
+        "t": "12 April 2026",
+        "k": "d",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-07-2026",
+        "loc": "cby-ye.com/files/69dcac86e3520.pdf p.1, Art. 7 (entry into force); read 11 October 2026"
+      },
+      {
+        "t": "18%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-DEC-07-2026",
+        "loc": "cby-ye.com/files/69dcac86e3520.pdf p.1, Art. 1 (minimum rate on new rial savings deposits at commercial banks); read 11 October 2026"
+      },
+      {
+        "t": "7",
+        "k": "v",
+        "s": "TRIVIAL"
       }
     ]
   },

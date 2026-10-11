@@ -277,6 +277,10 @@ CONTROLS = [
     ("the runtime's isolation drifts from the renderer's", "site-src/app.js",
      replace(r"(?<![A-Za-z0-9_-])\d{4}-\d{2}", r"(?<![A-Za-z0-9_-])\d{4}-\d{3}"),
      "the runtime's left-to-right isolation is not the renderer's expression"),
+    # close-out CLOSE-6B: the regulatory group's cards and its links to curated cards hold every regulatory source
+    ("the regulatory group loses its link to a curated card", "en/data/index.html",
+     replace('<p class="src-also" data-source-also', '<p class="src-also" data-source-alsx'),
+     "RC-GB B5 the regulatory group is missing"),
     ("the runtime loses its isolation helper", "site-src/app.js",
      replace("function iso(s){return esc(s).replace(LTR_RUN", "function iso(s){return esc(s).replace(/$^/"),
      "the runtime has no isolation helper"),

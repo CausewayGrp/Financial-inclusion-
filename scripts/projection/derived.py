@@ -533,7 +533,7 @@ def _source_metadata_states(ctx):
 SRC_DISPLAY_FIELDS = ["display_title", "display_title_ar", "publisher", "publisher_ar", "document_label", "document_label_ar",
                       "document_date", "resource_category", "resource_category_ar",
                       "why_it_matters", "why_it_matters_ar", "does_not_establish", "does_not_establish_ar"]
-CURATED_CARD_STATE = "FULL_PUBLIC_CARD"      # Tranche C TC-B: curated resource card; CITATION_CARD = governed bibliography only
+CURATED_CARD_STATE = "FULL_PUBLIC_CARD"      # Tranche C TC-B: curated resource card; CITATION_CARD = governed bibliography, with its governed why/boundary text where the record carries it (CLOSE-6B)
 LINK_FIELDS = [("evidence_object", "linked_evidence_object_ids"), ("public_claim", "linked_claim_ids"), ("reading", "linked_reading_ids"),
                ("visual", "linked_visual_ids"), ("measurement", "linked_measurement_ids")]
 

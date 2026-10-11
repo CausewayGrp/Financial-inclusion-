@@ -392,7 +392,10 @@ def source_row(c: dict, L: dict, curated: bool = False) -> str:
                 + (f'<p class="small bnd-line"><b>{esc(L["does_not_establish"])}</b> {esc(c["does_not_establish"])}</p>' if c["does_not_establish"] else "")
                 + f'<div class="acts">{open_}{cite}</div>{rights}{deps}</article>')
     if c["display_ready"] and c["title"]:
-        return f'<article class="src source-locator" {common}><strong dir="auto">{esc(c["title"])}</strong><span class="kind" dir="auto">{esc(c["kind_line"])}</span>{ref}<div class="acts">{open_}{cite}</div>{rights}{deps}</article>'
+        # close-out CLOSE-6B: a citation card with governed text prints it as a curated card does (about, then boundary)
+        about = ((f'<details class="about" data-source-about><summary>{esc(L["about_source"])}</summary><p class="small">{esc(c["why"])}</p></details>' if c.get("why") else "")
+                 + (f'<p class="small bnd-line"><b>{esc(L["does_not_establish"])}</b> {esc(c["does_not_establish"])}</p>' if c.get("does_not_establish") else ""))
+        return f'<article class="src source-locator" {common}><strong dir="auto">{esc(c["title"])}</strong><span class="kind" dir="auto">{esc(c["kind_line"])}</span>{ref}{about}<div class="acts">{open_}{cite}</div>{rights}{deps}</article>'
     kind = f'<span class="kind" dir="auto">{esc(c["kind_line"])}</span>' if c.get("kind_line") else ""   # B5 / EAD-07: "Document type not recorded"
     return f'<article class="src source-locator" {common}><strong>{esc(L["untitled"])}</strong>{kind}{ref}<a class="source-url" dir="ltr" href="{esc(c["url"])}" rel="noopener noreferrer" target="_blank">{esc(c["url"])}</a><div class="acts">{cite}</div>{rights}{deps}</article>'
 
@@ -417,7 +420,7 @@ def data_sources(page: dict, shell: dict) -> str:
             f'<p class="small reuse-once" data-reuse-terms>{esc(L["reuse_once"])}</p>'   # B8: the reuse terms, stated once above the list
             f'<h3 class="grp" id="curated">{esc(L["curated"])} <span class="count">({bdi(page["curated_count"])})</span></h3><div class="curated">{curated}</div>'
             + (f'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>{esc(L["regulatory"])} <span class="count">({bdi(reg_n)})</span></summary>'
-               f'<p class="small">{esc(L["regulatory_scope"])}</p><div class="objs">{regulatory}</div>{also}</details>' if reg_n else "")
+               f'<p class="small">{esc(L["regulatory_scope"])}</p><div class="objs">{regulatory}</div>{also}</details>' if reg_n or also else "")
             +
             # The supporting group stays open: it is the only place a locator-only source appears, and
             # `scripts/tests/test_public_tools.py` drives that source's cite control on this page. Closing it by

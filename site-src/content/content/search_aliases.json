@@ -358,5 +358,13 @@
     "targets": "route:/providers/ | document_type:decision/enforcement",
     "boundary_note_en": null,
     "boundary_note_ar": null
+  },
+  {
+    "alias_id": "SEARCH-ALIAS-046",
+    "terms_en": "Sanaa; Sana'a; CBY Sanaa; CBY-Sanaa; CBY Sana'a",
+    "terms_ar": "صنعاء; البنك المركزي في صنعاء",
+    "targets": "route:/providers/ | route:/data/",
+    "boundary_note_en": "Discovery aid only: this evidence base holds few documents issued in Sana'a; each source carries the scope of its issuer and does not describe all of Yemen.",
+    "boundary_note_ar": "وسيلة للعثور على المحتوى فقط: لا تضم قاعدة الأدلة هذه إلا وثائق قليلة صادرة في صنعاء؛ ويحمل كل مصدر نطاق الجهة التي أصدرته، ولا يصف اليمن كله."
   }
 ]

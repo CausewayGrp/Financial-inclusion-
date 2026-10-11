@@ -1,5 +1,47 @@
 # Repository Change Log
 
+## 2026-10-11 — CLOSE-6B: source utilisation — merges, withholds, card completions, regulation on /data/, chronology (Stage A addendum, item 3)
+
+Master transaction CLOSE-6B (`audit/close_out/close_6b.py`; Master 1d468c2c -> 17c6b5dc, 194 cells; ledger and run report
+in `audit/close_out/runs/`). The reads behind it are in `audit/close_out/addendum/` (R3, R7 added; R2, R4 from CLOSE-6A),
+with the review pair (REDTEAM_6B, ARABIC_6B) applied before the run.
+
+- **Merges.** SRC-SANAA-CTR-MFB-2024 and SRC-SANAA-CTR-EMONEY-2022 were second records of SRC-SANAA-MFB-2024 and
+  SRC-SANAA-EMONEY-2022 (identical e-money PDFs; microfinance PDFs differ only on the cover). Their addresses become
+  additional URLs of the canonical records; the two are retired with a note naming the record that carries them. Both
+  papers are by the Sana'a Center Economic Unit (Rethinking Yemen's Economy, with DeepRoot Consulting and CARPO);
+  "Publisher: DeepRoot Consulting" is corrected.
+- **Completions.** Circular No. 12 of 2024 of the Central Bank of Yemen in Sana'a (13 March 2024): title, issuer, label,
+  date, and the note that the copy is a news site's republication; it is the one Sana'a instrument in the regulatory
+  group, whose scope line now says so. The University of Aden article is a journal article (DOI 10.36056/0442-000-018-001),
+  not a CBY-Aden publication. The Quarterly Bulletin gets its subtitle; the AMB card names its two authors and says the
+  paper does not distinguish CBY-Aden from CBY-Sana'a; the CCY issuer line gives the cover as printed.
+- **Withheld** (the XIDIAN precedent: address kept in a NON_PUBLIC note; none feeds a record): the 2015 annual report
+  (unreachable; archive captures unopened), LIT-INVEST and LIT-OEB, CBY-Sana'a Circular No. 14 (reproduced only in
+  S/2024/731), the Saba/CBY-Sana'a 2024 item and the KfW RMMV conference page.
+- **Regulation on /data/.** The ten CBY instruments and reports whose cards were bare now say what they require and what
+  they do not establish (from 31_REFORMS_REGULATION and R7), in both languages. The group's count is now the number of
+  cards it renders (38), and gate B5 checks it, with one more link to a source that has its own curated card (39
+  regulatory sources); a new negative control breaks that link.
+- **Chronology** (issuance is not implementation). New events: the e-KYC instructions (9 November 2023, referring to
+  MA-007) and Decision No. 7 of 2026 (9 April 2026, in force 12 April). YSC-012 gains Decision No. 19 of 2024, paired
+  neutrally with Circular No. 12 of 2024 of CBY-Sana'a; YSC-015 gains CBY-Aden's news item on the import committee's first
+  meeting (17 July 2025), which states no establishing decision. The AML circulars stay directory cards (no access
+  channel changes). Dated events 23 -> 31 (the checkpoint count was stale since CLOSE-4); source records 199 -> 200, 185
+  with a public locator.
+- **Not changed, with reasons.** KfW 47229 prints no date, so its card keeps none; EUR 4.5 million is phase III's (and
+  phase I's) by the KfW funding field and the IATI commitment, but the card does not print it. ACAPS 2021, the Sana'a
+  Center trade brief, AMB 2026 and KfW 47229 stay as context cards.
+- **Code.** The renderer keeps reference numbers such as 840/CBY/2023 left-to-right in Arabic (`REF_NO` in the shared
+  LTR pattern; `site-src/app.js` regenerated from it, S05.3); citation cards render their governed "why it matters" and
+  boundary; `content.py` reports the regulatory card count.
+- **Source utilisation.** `audit/close_out/SOURCE_UTILISATION_2026-10-11.csv` (written by
+  `audit/close_out/source_utilisation.py` from the projections and the built /data/ page): 200 sources — used by a record
+  140, chronology only 19, context card 26, withheld 13, retired 2.
+- **Register.** X-REG-LINK-C12 -> CLOSED (the recorded locator opens and was read; card completed); X-REG-LINK-AR2015
+  stays FRONTIER with its card updated (withheld until a person confirms an archived copy). Live view: CLOSED 83,
+  FRONTIER 46 (total 247).
+
 ## 2026-10-11 — CLOSE-6A: Measurement Agenda bindings, composite members, the Findex fieldwork period and precision (Stage A addendum, items 1–2)
 
 Master transaction CLOSE-6A (`audit/close_out/close_6a.py`; Master d14b36c5 -> 1d468c2c, 457 cells; ledger and run report

@@ -2764,7 +2764,11 @@ try:
         _lab=lambda k: _html.escape(_uiB[k][f'label_{_lang}'],quote=False)
         if f'<p class="small reuse-once" data-reuse-terms>{_uiB["UI-DATA-REUSE-TERMS-ONCE"][f"label_{_lang}"]}</p>' not in _html.unescape(_d): errors.append(f'RC-GB B8 the reuse terms are not stated above the source list {_lang}')
         _m=re.search(r'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>([^<]*) <span class="count">\(<bdi dir="ltr">(\d+)</bdi>\)',_d)
-        if not _m or _m.group(1)!=_lab('UI-DATA-GROUP-REGULATORY') or int(_m.group(2))!=_nreg: errors.append(f'RC-GB B5 the regulatory group is missing or does not hold all {_nreg} regulatory sources {_lang}')
+        # close-out CLOSE-6B: the count is the cards the group renders; cards + links to curated cards hold every regulatory source
+        _gB=_d[_d.find('id="regulatory"'):] if _m else ''
+        _gB=_gB[:_gB.find('<details class="source-locator-details',10)] if '<details class="source-locator-details' in _gB[10:] else _gB
+        _ncB=len(re.findall(r'<article class="src[^"]*" id="source-',_gB)); _naB=_gB.count('data-source-also')
+        if not _m or _m.group(1)!=_lab('UI-DATA-GROUP-REGULATORY') or int(_m.group(2))!=_ncB or _ncB+_naB!=_nreg: errors.append(f'RC-GB B5 the regulatory group is missing, its count is not the {_ncB} cards it renders, or its cards and links do not hold all {_nreg} regulatory sources {_lang}')
         if _uiB['UI-DATA-GROUP-REGULATORY-SCOPE'][f'label_{_lang}'] not in _html.unescape(_d): errors.append(f'RC-GB B5 the regulatory group has no scope line {_lang}')
         _c=(DIST/_lang/'evidence/compare/index.html').read_text(encoding='utf-8')
         if _uiB['UI-JS-COMPARE-NOT-OFFERED'][f'label_{_lang}'] not in _html.unescape(_c.split('id="yfie-ui"')[0]): errors.append(f'RC-GB B7 the Compare intro does not carry the selected-set sentence {_lang}')
