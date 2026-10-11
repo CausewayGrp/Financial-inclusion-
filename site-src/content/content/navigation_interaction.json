@@ -4,8 +4,8 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
-    "page_specs_sha256": "e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394",
+    "master_sha256": "6769673fc715a1865e54c8028e5365bb6dbdde42c9b85ef640c719c8d23308db",
+    "page_specs_sha256": "26e61cb8e5960ae1006c5defd7f207e06bbbd8d81bc4db00602d094d7cc14f33",
     "page_spec_count": 150
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
@@ -505,7 +505,7 @@
         "footer",
         "search"
       ],
-      "search_record_count": 186,
+      "search_record_count": 187,
       "unique_value_role": "SOURCE_AND_DATA_DIRECTORY",
       "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
       "next_action_policy": "SOURCE_TO_DEPENDENT_EVIDENCE",
@@ -3923,7 +3923,7 @@
       "No archive factual proposition changes current controlled evidence in R4."
     ]
   },
-  "public_search_record_count": 514,
+  "public_search_record_count": 515,
   "r6_information_design_contract": {
     "status": "R6_CLOSED",
     "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",

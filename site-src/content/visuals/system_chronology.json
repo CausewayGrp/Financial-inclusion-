@@ -1037,8 +1037,8 @@
     "source_scope": "A CBY-Aden decision and the law copy it hosts; the two cite different law numbers.",
     "system_implication_en": "The decision provides for the head office to move; it does not show that the move was completed, and a relocation is not the start of deposit cover.",
     "system_implication_ar": "ينصّ القرار على نقل المركز الرئيسي، ولا يُظهر أن النقل اكتمل؛ والنقل ليس بدءًا لتغطية الودائع.",
-    "fi_relevance_en": "Deposit insurance matters for trust in deposits, but no source here reports cover, premiums or payouts.",
-    "fi_relevance_ar": "لضمان الودائع أهمية في الثقة بالودائع، لكن لا يُبلغ أي مصدر هنا عن التغطية أو الأقساط أو التعويضات.",
+    "fi_relevance_en": "Law No. 21 of 2008, which names the scheme a guarantee of bank deposits, provides that deposits in Yemeni rials are guaranteed in full where a deposit is YER 2,000,000 or less, and for two million rials where it is larger (Art. 31); deposits in a foreign currency are guaranteed only if the Central Bank decides to subject them to the law. Government deposits, deposits between banks, and cash collateral up to the facilities it secures are not deposits subject to the law (Art. 13). For this purpose, all of one person's accounts at the same bank, in any of its branches, count as one; the guarantee on a joint account is divided among its holders by their shares; and the person's obligations to the bank, including as guarantor of another of its debtors and whether or not they are due, are set off against the person's deposits, the remaining credit balance being the deposit the guarantee is paid on (Art. 33). The guarantee becomes payable if the Central Bank decides to liquidate the bank. The law requires each bank to pay an annual contribution of 0.2% of the deposits subject to it (Art. 13). The two-million-rial ceiling is the figure of 2008; the law allows it to be raised by decision of the Council of Ministers, and this resource found no published revision on cby-ye.com. The law predates the present institutional situation, in which the Central Bank of Yemen – Aden (CBY-Aden) and the Central Bank of Yemen in Sana'a each operate, and this resource does not establish which authority would take the decisions the law gives to “the Central Bank”. The law does not show that the scheme operates today: no source here reports the Institution's financial statements, fund size, contributions collected or any payout, and Governor's Decision No. 6 of 2025, which provides for moving the Institution's head office to Aden, does not establish that cover operates.",
+    "fi_relevance_ar": "ينص القانون رقم (21) لسنة 2008، الذي يسمي النظام ضمانًا للودائع المصرفية، على أن الودائع بالريال اليمني تُضمن بكامل قيمتها إذا كانت الوديعة مليوني ريال (2,000,000 ريال) أو أقل، ويكون الضمان مليوني ريال إذا زادت على ذلك (المادة 31)؛ ولا تُضمن الودائع بالعملة الأجنبية إلا إذا قرر البنك المركزي إخضاعها للقانون. ولا تُعدّ ودائع الحكومة والودائع بين البنوك والتأمينات النقدية، بحدود التسهيلات التي تضمنها، من الودائع الخاضعة للقانون (المادة 13). ولهذا الغرض تُعدّ حسابات الشخص الواحد لدى البنك نفسه، في أي من فروعه، حسابًا واحدًا؛ ويوزَّع الضمان في الحساب المشترك بين أصحابه بنسبة حصة كل منهم؛ ويُجرى التقاصّ بين ودائع الشخص وما عليه من التزامات للبنك، ولو بصفته كفيلًا لأحد مديني البنك، مستحقةً كانت أم لا، ويكون الرصيد الدائن الباقي هو الوديعة التي يُدفع عنها الضمان (المادة 33). ويُستحق الضمان إذا قرر البنك المركزي تصفية البنك. ويُلزم القانون كل بنك بدفع اشتراك سنوي بنسبة اثنين في الألف (0.2%) من الودائع الخاضعة له (المادة 13). وسقف المليوني ريال هو رقم عام 2008، ويجيز القانون زيادته بقرار من مجلس الوزراء، ولم يجد هذا المورد أي تعديل منشور له في موقع cby-ye.com. والقانون سابق للوضع المؤسسي الحالي الذي يعمل فيه البنك المركزي اليمني – عدن والبنك المركزي اليمني في صنعاء، ولا يثبت هذا المورد أيَّ سلطة ستتخذ القرارات التي يسندها القانون إلى «البنك المركزي». ولا يثبت القانون أن النظام يعمل اليوم: فلا يورد أي مصدر هنا القوائم المالية للمؤسسة أو حجم صندوقها أو الاشتراكات المحصّلة أو أي تعويض مدفوع، ولا يثبت قرار المحافظ رقم (6) لسنة 2025، الذي ينص على نقل المركز الرئيسي للمؤسسة إلى عدن، أن الضمان يعمل فعليًا.",
     "does_not_establish_en": "The decision does not establish that deposit cover operates, which deposits are covered or that depositors are protected.",
     "does_not_establish_ar": "لا يثبت القرار أن تغطية الودائع تعمل، ولا الودائع المشمولة، ولا أن المودعين محميون.",
     "relationship_type": "CONTEXT",
@@ -1073,6 +1073,35 @@
         "s": "READ",
         "src": "SRC-CBY-DEC-06-2025",
         "loc": "cby-ye.com/files/687c9970b82d9.pdf p.1, recital «القانون رقم (40) لسنة 2008»; read 10 October 2026"
+      },
+      {
+        "t": "2,000,000",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-DIL-21-2008",
+        "loc": "cby-ye.com/files/62c2edbaad8eb.pdf (certified copy), Art. 31(2), p.9: «يكون الضمان بكامل قيمة الوديعة إذا كانت بمقدار اثنين مليون ريال أو أقل … ويكون الضمان اثنين مليون ريال إذا زادت قيمة الوديعة على ذلك»; read 11 October 2026"
+      },
+      {
+        "t": "0.2%",
+        "k": "v",
+        "s": "READ",
+        "src": "SRC-CBY-DIL-21-2008",
+        "loc": "cby-ye.com/files/62c2edbaad8eb.pdf (certified copy), Art. 13(1), p.5: «بنسبة (٠,٠٠٢) اثنين بالألف من مجموع الودائع الخاضعة»; read 11 October 2026"
+      },
+      {
+        "t": "31",
+        "k": "v",
+        "s": "LOCATOR"
+      },
+      {
+        "t": "33",
+        "k": "v",
+        "s": "LOCATOR"
+      },
+      {
+        "t": "13",
+        "k": "v",
+        "s": "LOCATOR"
       }
     ]
   },

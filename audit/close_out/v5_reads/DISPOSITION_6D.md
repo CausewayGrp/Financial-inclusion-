@@ -50,3 +50,16 @@ Not applied: N-7's «وتختلف مجموعتا الأرقام» (it would brea
 N-5 (other fields), N-6, N-7's other items (unchanged fields; the bilingual-invariance check normalises 2022–23 and the
 dual); N-10 («الصفحة» is a recognised document reference; the OECD printed pages 33 and 36 are V2's reading, against the
 instruction's p.35); N-12 accepted as is.
+
+## Confirmation pass (revised texts, staged Master; pipeline 0 errors, 0 unresolved, bilingual invariance 0)
+
+- **Domain lens: KEEP.** "B1, B2 and B3 are resolved … nothing is still arranged as support"; the two halves present and
+  in order in the thesis, route description, sections 3, 8 and 9. Minor items applied: section 4 names the bound "itself a
+  survey estimate"; the route description says "the 2021 wave"; section 9's test holds "where the two can be told apart"
+  (the routes are not exclusive); section 8 punctuation. Recorded, not changed: the English first heading and title carry
+  no question mark where the Arabic does (Arabic convention; the Arabic lens judged it acceptable).
+- **Arabic lens: KEEP.** No blocker; all SF items verified in place. Applied: «صالح للاستخدام» on the right noun in the
+  route description; the section 4 attribution phrase; «الأرقام بحسب الجنس»; item ذ(1) concerns the complainant
+  («عدم التعامل مع مُقدّم الشكوى»), corrected in both languages.
+
+CWR-012 is kept: both lenses pass on the text that is installed.

@@ -256,7 +256,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -491,7 +491,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -638,7 +638,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -3549,7 +3549,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -5052,15 +5052,18 @@
     "lineage_state": "BOUND_EXACT",
     "dependency_ids": [
       "SRC-SMEPS-AR2024-2025",
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-YLG-AR-2022"
     ],
     "direct_source_ids": [
       "SRC-SMEPS-AR2024-2025",
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-YLG-AR-2022"
     ],
     "resolved_source_ids": [
       "SRC-SMEPS-AR2024-2025",
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-YLG-AR-2022"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5074,6 +5077,11 @@
       {
         "source_id": "SRC-OECD-YEM-RESILIENCE-001",
         "primary_url": "https://doi.org/10.1787/81ed2898-en",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YLG-AR-2022",
+        "primary_url": "https://www.ylg-yemen.org/_files/ugd/82b85d_8562d5fe47644538ab12044bb8938bc6.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5846,7 +5854,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8157,15 +8165,19 @@
       "OECD-YEM-015",
       "OECD-YEM-016",
       "OECD-YEM-017",
+      "SRC-YLG-AR-2022",
+      "20_FIRM_FINANCE",
       "CLM-059"
     ],
     "direct_source_ids": [
       "SRC-SMEPS-AR2024-2025",
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-YLG-AR-2022"
     ],
     "resolved_source_ids": [
       "SRC-SMEPS-AR2024-2025",
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-YLG-AR-2022"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -8179,6 +8191,11 @@
       {
         "source_id": "SRC-OECD-YEM-RESILIENCE-001",
         "primary_url": "https://doi.org/10.1787/81ed2898-en",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YLG-AR-2022",
+        "primary_url": "https://www.ylg-yemen.org/_files/ugd/82b85d_8562d5fe47644538ab12044bb8938bc6.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -9752,7 +9769,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9933,7 +9950,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -12227,7 +12244,8 @@
       "SRC-WB-FSD-2024-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-SMEPS-AR2024-2025",
-      "SRC-OECD-YEM-RESILIENCE-001"
+      "SRC-OECD-YEM-RESILIENCE-001",
+      "SRC-YLG-AR-2022"
     ],
     "resolved_via_object_ids": [
       "CLM-062",
@@ -12256,6 +12274,11 @@
       {
         "source_id": "SRC-OECD-YEM-RESILIENCE-001",
         "primary_url": "https://doi.org/10.1787/81ed2898-en",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-YLG-AR-2022",
+        "primary_url": "https://www.ylg-yemen.org/_files/ugd/82b85d_8562d5fe47644538ab12044bb8938bc6.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -12440,7 +12463,7 @@
     "source_locators": [
       {
         "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-        "primary_url": "https://cby-ye.com/news/567",
+        "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {

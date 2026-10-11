@@ -2393,19 +2393,19 @@
   },
   {
     "source_id": "SRC-CBY-FCP-INSTR-2023-001",
-    "primary_url": "https://cby-ye.com/news/567",
-    "additional_urls": "[\"https://www.cby-ye.com/files/64e6f1e87e2a1.pdf\"]",
+    "primary_url": "https://cby-ye.com/files/64e6f1e87e2a1.pdf",
+    "additional_urls": "[\"https://cby-ye.com/news/567\"]",
     "datasets_or_use": "DS-PRIMARY-AUTHORITY, DS-EVIDENCE-PASSPORTS, DS-REFORM-EVENTS",
     "row_count": 3,
     "metadata_state": "DISPLAY_READY",
     "standalone_resource_card_eligible": false,
-    "display_title": "Regulatory Instructions for Financial Consumer Protection (issuance announced 28 August 2023)",
-    "display_title_ar": "التعليمات التنظيمية لحماية المستهلك المالي (أُعلن إصدارها في 28 أغسطس 2023)",
+    "display_title": "Regulatory Instructions for Financial Consumer Protection (ref. 589/CBY/2023, 20 August 2023; announced 28 August 2023)",
+    "display_title_ar": "التعليمات التنظيمية لحماية المستهلك المالي (المرجع 589/CBY/2023، 20 أغسطس 2023؛ وأُعلن عنها في 28 أغسطس 2023)",
     "publisher": "Central Bank of Yemen — Aden",
     "publisher_ar": "البنك المركزي اليمني – عدن",
     "document_label": "Circular or instruction",
     "document_label_ar": "تعميم أو تعليمات",
-    "document_date": "2023-08-28",
+    "document_date": "2023-08-20",
     "resource_category": null,
     "resource_category_ar": null,
     "why_it_matters": null,
@@ -7942,6 +7942,45 @@
     "linked_reading_ids": [],
     "linked_visual_ids": [],
     "linked_measurement_ids": [],
+    "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
+  },
+  {
+    "source_id": "SRC-YLG-AR-2022",
+    "primary_url": "https://www.ylg-yemen.org/_files/ugd/82b85d_8562d5fe47644538ab12044bb8938bc6.pdf",
+    "additional_urls": null,
+    "datasets_or_use": "DS-FIRM-FINANCE",
+    "row_count": 15,
+    "metadata_state": "DISPLAY_READY",
+    "standalone_resource_card_eligible": false,
+    "display_title": "Yemen Loan Guarantee Program (YLGP) Annual Report 2022",
+    "display_title_ar": "التقرير السنوي لبرنامج ضمان القروض في اليمن لعام 2022",
+    "publisher": "Yemen Loan Guarantee Program",
+    "publisher_ar": "برنامج ضمان القروض في اليمن",
+    "document_label": "Annual report",
+    "document_label_ar": "تقرير سنوي",
+    "document_date": null,
+    "resource_category": null,
+    "resource_category_ar": null,
+    "why_it_matters": null,
+    "why_it_matters_ar": null,
+    "does_not_establish": null,
+    "does_not_establish_ar": null,
+    "rights_state": "NOT_ASSESSED",
+    "document_type": null,
+    "evidence_roles": null,
+    "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
+    "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
+    "linked_evidence_object_ids": [
+      "CLM-059"
+    ],
+    "linked_claim_ids": [
+      "CLM-059"
+    ],
+    "linked_reading_ids": [],
+    "linked_visual_ids": [],
+    "linked_measurement_ids": [
+      "MA-004"
+    ],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
   }
 ]

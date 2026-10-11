@@ -238,3 +238,16 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   DECIDED 110). New: ADD3-1, CR-21, CR-22, ADD3-EMONEY, ADD3-CCY-PRESSURE, ADD3-3, ADD3-4, ADD3-ALIAS-001 (CLOSED);
   ADD3-D1–D9 (DECIDED); ADD3-O1, CCY's own Arabic name (OWNER-OPTIONAL). OWN-13 CLOSED; X-REG-LINK-C12 CLOSED in
   CLOSE-6B. Context open_items updated.
+- 2026-10-11 · v5 · PR-3 · CLOSE-6D (Master 7627f97c -> 6769673f, 281 cells): truth corrections 6B-1 to 6B-5. Reads V1–V6
+  (audit/close_out/v5_reads/), API fixture wb_api_close6d_2026-10-11.json (named outside CO-G04's findex_api_* glob),
+  D16–D18 appended. 6B-1: 24.5% like-for-like beside 35.2%, no economy count, FY24 classification (Yemen classed low
+  income; membership not published); 0.4% as printed / 0.6% database; fin29 printed zero against the DDI (393 asked, 39
+  yes, unweighted) shown as found; flat "not asked" replaced everywhere but CLM-001's method. 6B-2: YLG two publishers
+  (SRC-YLG-AR-2022; 15 rows in 20); SMEPS title; 2018 survey; MA-004. 6B-3: deposit-guarantee law (flat cap; Arts 13, 31,
+  33; 2008 ceiling; "the Central Bank" as the law names it); Instructions 589/CBY/2023 of 20 August 2023, Art. 9 items
+  ج/د/ذ separately, «14 يومًا» unqualified; MA-006 (no aggregate report on cby-ye.com); Yemen Post (WB FSD p.16). 6B-4:
+  CLM-041, CLM-007, 23 caveat, CLM-039 (WDI last 2016). 6B-5: CWR-012 repaired and KEPT (domain lens KEEP after B1–B3;
+  Arabic lens KEEP; confirmation pass both KEEP). Gate E2-CTX revised (24.5% required; economy count rejected) with two
+  negative controls. Checkpoint 200 -> 201 source records. Challenges: CLM-041 trade sources and 1.838; "includes Yemen
+  itself"; "The Instructions are the binding text"; 6B-1(c) Arabic reason; "an account type the survey did not measure";
+  POS January 2026 files not value-identical (for PR-5).

@@ -1440,3 +1440,56 @@ for _x in ("covering the providers", ):
     pass
 assert "the providers they cover" in MA006[0][1] and "المشمولين بها" in MA006[1][1]
 assert "in their own words" in OECD_FCP[0][1] and "بحسب نصها" in OECD_FCP[1][1]
+
+# ======================================================================================================================
+# Confirmation-pass revisions (both lenses: KEEP). Domain: s4 names the bound an estimate; the route description says
+# "the 2021 wave"; s9's test holds "where the two can be told apart"; s8 punctuation. Arabic: «صالح للاستخدام» on the
+# right noun in the route description; the s4 attribution phrase; «الأرقام بحسب الجنس»; item ذ(1) is about the
+# complainant («عدم التعامل مع مُقدّم الشكوى»), in both languages.
+# ======================================================================================================================
+def _secw(lang, new):
+    hits = [i for i, e in enumerate(SECW) if e[3] == lang]
+    assert len(hits) == 1
+    SECW[hits[0]] = SECW[hits[0]][:6] + (new,)
+
+
+S4_EN = S4_EN.replace("The bound set out above, by CauseWay’s calculation at least 62.7% of recipients in surveyed areas without "
+                      "an account at a financial institution, bears only",
+                      "The bound set out above, by CauseWay’s calculation at least 62.7% of recipients in surveyed areas without "
+                      "an account at a financial institution, itself a survey estimate, bears only")
+S4_AR = S4_AR.replace("والحدّ المبيَّن أعلاه، أي أن 62.7% على الأقل من المتلقين في المناطق التي شملها المسح لم يكن لديهم حساب لدى "
+                      "مؤسسة مالية بحساب أجرته CauseWay، لا يتصل إلا",
+                      "والحدّ المبيَّن أعلاه، وهو بحساب أجرته CauseWay أن 62.7% على الأقل من المتلقين في المناطق التي شملها المسح لم "
+                      "يكن لديهم حساب لدى مؤسسة مالية، وهو تقدير مسحي، لا يتصل إلا")
+assert "itself a survey estimate, bears only" in S4_EN and "وهو تقدير مسحي، لا يتصل إلا" in S4_AR
+_secw("en", S4_EN)
+_secw("ar", S4_AR)
+META_EN = ("A hypothesis on Yemen's domestic remittances and accounts. For the 2021 wave, no usable weighted channel estimate is "
+           "published or held; World Bank documentation records the item as asked and answered.")
+META_AR = ("فرضية عن الحوالات المحلية والحسابات في اليمن. لموجة 2021 لا يُنشر ولا يُحتفظ هنا بأي تقدير موزون للقناة صالح "
+           "للاستخدام؛ ويسجل توثيق البنك الدولي أن السؤال طُرح وأُجيب عنه.")
+assert len(META_EN) <= 200 and len(META_AR) <= 200
+_sec(R, 8, "en", "body", "and the only channel values are for 2014;",
+     "and the only weighted channel values are for 2014; for the 2021 wave none usable here is published or held, though World "
+     "Bank documentation records the item as asked and answered;")
+_sec(R, 8, "ar", "body", "وقيم القنوات الوحيدة تخص عام 2014؛",
+     "وقيم القنوات الموزونة الوحيدة تخص عام 2014؛ ولا يُنشر لموجة 2021 أي تقدير موزون صالح للاستخدام هنا ولا يُحتفظ به، وإن كان "
+     "توثيق البنك الدولي يسجل أن السؤال طُرح وأُجيب عنه؛")
+_sec(R, 9, "en", "body", "If households that receive transfers",
+     "If adults who receive transfers received them into accounts or wallets of their own more often than through exchange "
+     "companies and other money-transfer providers, where the two can be told apart, the hypothesis would fail.")
+_sec(R, 9, "ar", "body", "وإذا تبيّن أن الأسر التي تتلقى الحوالات",
+     "وإذا تبيّن أن البالغين الذين يتلقون الحوالات يستلمونها في حسابات أو محافظ إلكترونية خاصة بهم أكثر مما يستلمونها عبر شركات "
+     "الصرافة وغيرها من مقدمي خدمات تحويل الأموال، حيث يمكن التمييز بينهما، سقطت الفرضية.")
+YLG_AR = YLG_AR.replace("أما أرقام الجنس فتغطي فترتين مختلفتين", "أما الأرقام بحسب الجنس فتغطي فترتين مختلفتين")
+assert "الأرقام بحسب الجنس" in YLG_AR
+FIRMS_NEW_AR = ("وتقيس بيانات الضمانات شيئًا آخر. " + YLG_AR + " ويعدّ المصدران خطابات الضمان أو المعاملات لا المنشآت: "
+                "فتبين الأرقام ما دعمه البرنامج، لا عدد المنشآت التي تمكنت من الاقتراض ولا شروطه ولا حصته من إقراض المنشآت "
+                "الأصغر والصغيرة والمتوسطة.")
+_sec("/firms/", 7, "ar", "body", "وتقدم بيانات الضمانات صورة من نوع آخر:", FIRMS_NEW_AR)
+_cell(O6, "CLM-059", "summary_ar", "وبصورة منفصلة، تفيد منظمة", YLG_AR)
+CP_EN = CP_EN.replace("the complaint was not handled as the Instructions provide,", "the complainant was not dealt with as the "
+                      "Instructions provide,")
+CP_AR = CP_AR.replace("أو لم يُتعامل مع شكواه بالطريقة التي تنص عليها التعليمات،", "أو لم يُتعامل معه بالطريقة التي تنص عليها "
+                      "التعليمات،")
+assert "the complainant was not dealt with" in CP_EN and "أو لم يُتعامل معه بالطريقة" in CP_AR
