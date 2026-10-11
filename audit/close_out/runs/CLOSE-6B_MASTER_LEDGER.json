@@ -1,0 +1,1774 @@
+{
+ "transaction": "CLOSE-6B",
+ "summary": "Stage A addendum item 3: two duplicate Sana'a Center records merged and retired; CBY-Sana'a Circular No. 12, the University of Aden article, the Quarterly Bulletin, the AMB and CCY cards completed; six sources withheld; nine regulatory cards and one CBY statistical report carry what they require and do not establish; two dated events added and two extended.",
+ "self_counts": {
+  "site_pages": 147,
+  "bilingual_sections": 246,
+  "questions": 11,
+  "evidence_objects": 113,
+  "public_claims": 60,
+  "readings": 11,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 31,
+  "sources": 200,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 84,
+  "remittances": 27
+ },
+ "input_master_sha256": "1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16",
+ "output_master_sha256": "17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9",
+ "cells_written": 194,
+ "changes": [
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 132,
+   "col": 3,
+   "field": "SRC-SANAA-MFB-2024.additional_urls",
+   "old": null,
+   "new": "[\"https://deeproot.consulting/en/publications/enhancing-the-role-of-microfinance-banks-for-sustainable-impact-in-yemen\", \"https://deeproot.consulting/en/publications/83/download\"]"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 132,
+   "col": 6,
+   "field": "SRC-SANAA-MFB-2024.display_title",
+   "old": "Enhancing the Role of Microfinance Banks for Sustainable Impact in Yemen (2024)",
+   "new": "Enhancing the Role of Microfinance Banks for Sustainable Impact in Yemen (Sana’a Center Economic Unit, September 2024)"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 132,
+   "col": 12,
+   "field": "SRC-SANAA-MFB-2024.display_title_ar",
+   "old": "تعزيز دور بنوك التمويل الأصغر لتحقيق أثر مستدام في اليمن (2024)",
+   "new": "تعزيز دور بنوك التمويل الأصغر لتحقيق أثر مستدام في اليمن (الوحدة الاقتصادية في مركز صنعاء، سبتمبر 2024)"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 132,
+   "col": 17,
+   "field": "SRC-SANAA-MFB-2024.issuer",
+   "old": null,
+   "new": "Sana’a Center Economic Unit (author line, p.1); prepared by the Sana’a Center for Strategic Studies in coordination with DeepRoot Consulting and CARPO, Rethinking Yemen’s Economy, RYE Policy Brief 29"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 132,
+   "col": 18,
+   "field": "SRC-SANAA-MFB-2024.hosting_platform",
+   "old": null,
+   "new": "Sana’a Center for Strategic Studies; a copy is also hosted by DeepRoot Consulting (pages 2–16 identical; the cover's preparation line differs)"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 132,
+   "col": 4,
+   "field": "SRC-SANAA-MFB-2024.datasets_or_use",
+   "old": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-LITERATURE-SOURCE-AUDIT,DS-K04-CAUSEWAY-READING-002,DS-K04-MFB2023-RECON,DS-K04-MFB-TRANSFORM-LENS,DS-K04-CAUSEWAY-READING-003",
+   "new": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-LITERATURE-SOURCE-AUDIT,DS-K04-CAUSEWAY-READING-002,DS-K04-MFB2023-RECON,DS-K04-MFB-TRANSFORM-LENS,DS-K04-CAUSEWAY-READING-003,DS-K04-PUBLICATION-BENCHMARK"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 171,
+   "col": 16,
+   "field": "SRC-SANAA-CTR-MFB-2024.non_public_locator_note",
+   "old": null,
+   "new": "RETIRED (close-out CLOSE-6B, 11 October 2026): a second record of SRC-SANAA-MFB-2024, the same policy brief (RYE Policy Brief 29; pages 2 to 16 are identical, only the cover build differs). Its two addresses are now additional URLs of SRC-SANAA-MFB-2024, and this record feeds no record. Its publisher line, which named DeepRoot Consulting as publisher, misstated the paper, which the Sana'a Center Economic Unit wrote and the Sana'a Center for Strategic Studies prepared with DeepRoot Consulting and CARPO. Addresses: https://deeproot.consulting/en/publications/enhancing-the-role-of-microfinance-banks-for-sustainable-impact-in-yemen; https://deeproot.consulting/en/publications/83/download"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 171,
+   "col": 2,
+   "field": "SRC-SANAA-CTR-MFB-2024.primary_url",
+   "old": "https://deeproot.consulting/en/publications/enhancing-the-role-of-microfinance-banks-for-sustainable-impact-in-yemen",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 171,
+   "col": 3,
+   "field": "SRC-SANAA-CTR-MFB-2024.additional_urls",
+   "old": "[\"https://deeproot.consulting/en/publications/83/download\"]",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 171,
+   "col": 11,
+   "field": "SRC-SANAA-CTR-MFB-2024.public_card_state",
+   "old": "CITATION_CARD",
+   "new": "LOCATOR_ONLY"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 171,
+   "col": 7,
+   "field": "SRC-SANAA-CTR-MFB-2024.publisher",
+   "old": "Sana'a Center Economic Unit, published by DeepRoot Consulting",
+   "new": "Sana’a Center for Strategic Studies"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 171,
+   "col": 25,
+   "field": "SRC-SANAA-CTR-MFB-2024.publisher_ar",
+   "old": "الوحدة الاقتصادية في مركز صنعاء، نشرتها ديب روت للاستشارات",
+   "new": "مركز صنعاء للدراسات الاستراتيجية"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 3,
+   "field": "SRC-SANAA-EMONEY-2022.additional_urls",
+   "old": null,
+   "new": "[\"https://deeproot.consulting/en/publications/challenges-and-prospects-for-electronic-money-and-payment-systems-in-yemen\", \"https://deeproot.consulting/en/publications/73/download\"]"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 6,
+   "field": "SRC-SANAA-EMONEY-2022.display_title",
+   "old": "Challenges and Prospects for Electronic Money and Payment Systems in Yemen",
+   "new": "Challenges and Prospects for Electronic Money and Payment Systems in Yemen (Sana’a Center Economic Unit, March 2022)"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 12,
+   "field": "SRC-SANAA-EMONEY-2022.display_title_ar",
+   "old": "تحديات وآفاق النقود الإلكترونية وأنظمة الدفع في اليمن",
+   "new": "تحديات وآفاق النقود الإلكترونية وأنظمة الدفع في اليمن (الوحدة الاقتصادية في مركز صنعاء، مارس 2022)"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 28,
+   "field": "SRC-SANAA-EMONEY-2022.document_date",
+   "old": "2022-03-07",
+   "new": "2022-03"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 17,
+   "field": "SRC-SANAA-EMONEY-2022.issuer",
+   "old": null,
+   "new": "Sana’a Center Economic Unit (author line, p.1); prepared by the Sana’a Center for Strategic Studies in coordination with DeepRoot Consulting and CARPO, Rethinking Yemen’s Economy (white paper)"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 18,
+   "field": "SRC-SANAA-EMONEY-2022.hosting_platform",
+   "old": null,
+   "new": "Sana’a Center for Strategic Studies (first posted 7 March 2022); an identical copy is hosted by DeepRoot Consulting"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 131,
+   "col": 4,
+   "field": "SRC-SANAA-EMONEY-2022.datasets_or_use",
+   "old": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-LITERATURE-SOURCE-AUDIT,DS-K04-CAUSEWAY-READING-002",
+   "new": "DS-K04-SOURCE-DEEP-INTAKE,DS-K04-LITERATURE-SOURCE-AUDIT,DS-K04-CAUSEWAY-READING-002,DS-K04-PUBLICATION-BENCHMARK"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 170,
+   "col": 16,
+   "field": "SRC-SANAA-CTR-EMONEY-2022.non_public_locator_note",
+   "old": null,
+   "new": "RETIRED (close-out CLOSE-6B, 11 October 2026): a second record of SRC-SANAA-EMONEY-2022, the same white paper (the two PDFs are byte-identical). Its two addresses are now additional URLs of SRC-SANAA-EMONEY-2022, and this record feeds no record. Its publisher line, which named DeepRoot Consulting as publisher, misstated the paper, which the Sana'a Center Economic Unit wrote and the Sana'a Center for Strategic Studies prepared with DeepRoot Consulting and CARPO. Addresses: https://deeproot.consulting/en/publications/challenges-and-prospects-for-electronic-money-and-payment-systems-in-yemen; https://deeproot.consulting/en/publications/73/download"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 170,
+   "col": 2,
+   "field": "SRC-SANAA-CTR-EMONEY-2022.primary_url",
+   "old": "https://deeproot.consulting/en/publications/challenges-and-prospects-for-electronic-money-and-payment-systems-in-yemen",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 170,
+   "col": 3,
+   "field": "SRC-SANAA-CTR-EMONEY-2022.additional_urls",
+   "old": "[\"https://deeproot.consulting/en/publications/73/download\"]",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 170,
+   "col": 11,
+   "field": "SRC-SANAA-CTR-EMONEY-2022.public_card_state",
+   "old": "CITATION_CARD",
+   "new": "LOCATOR_ONLY"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 170,
+   "col": 7,
+   "field": "SRC-SANAA-CTR-EMONEY-2022.publisher",
+   "old": "DeepRoot Consulting",
+   "new": "Sana’a Center for Strategic Studies"
+  },
+  {
+   "finding": "CLOSE-6B:MERGE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 170,
+   "col": 25,
+   "field": "SRC-SANAA-CTR-EMONEY-2022.publisher_ar",
+   "old": "ديب روت للاستشارات",
+   "new": "مركز صنعاء للدراسات الاستراتيجية"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 6,
+   "field": "SRC-CBY-SANAA-C12-2024.display_title",
+   "old": null,
+   "new": "Circular No. 12 to all banks and exchange companies and establishments: services of banks and financial institutions operating external remittance services (13 March 2024)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 12,
+   "field": "SRC-CBY-SANAA-C12-2024.display_title_ar",
+   "old": null,
+   "new": "تعميم رقم (12) موجه إلى كافة البنوك وشركات ومنشآت الصرافة بشأن خدمات البنوك والمؤسسات المالية المشغلة لخدمات الحوالات الخارجية (13 مارس 2024)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 7,
+   "field": "SRC-CBY-SANAA-C12-2024.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Sana'a"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 25,
+   "field": "SRC-CBY-SANAA-C12-2024.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – صنعاء"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 17,
+   "field": "SRC-CBY-SANAA-C12-2024.issuer",
+   "old": null,
+   "new": "Central Bank of Yemen, Head Office, Sana'a, Banking Supervision Sector (letterhead, every page)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 18,
+   "field": "SRC-CBY-SANAA-C12-2024.hosting_platform",
+   "old": null,
+   "new": "Yemen Eco (yemeneco.org), a news site that republished the document; it is not the issuer"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 26,
+   "field": "SRC-CBY-SANAA-C12-2024.document_label",
+   "old": null,
+   "new": "Circular or instruction"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 27,
+   "field": "SRC-CBY-SANAA-C12-2024.document_label_ar",
+   "old": null,
+   "new": "تعميم أو تعليمات"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 28,
+   "field": "SRC-CBY-SANAA-C12-2024.document_date",
+   "old": null,
+   "new": "2024-03-13"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 11,
+   "field": "SRC-CBY-SANAA-C12-2024.public_card_state",
+   "old": "LOCATOR_ONLY",
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 22,
+   "field": "SRC-CBY-SANAA-C12-2024.retrieval_date",
+   "old": "2026-10-04",
+   "new": "2026-10-11"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 2,
+   "field": "SRC-ADEN-CBY-LIQ-2016.primary_url",
+   "old": "https://search.mandumah.com/Record/932295",
+   "new": "https://doi.org/10.36056/0442-000-018-001"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 3,
+   "field": "SRC-ADEN-CBY-LIQ-2016.additional_urls",
+   "old": null,
+   "new": "[\"https://search.mandumah.com/Record/932295\"]"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 6,
+   "field": "SRC-ADEN-CBY-LIQ-2016.display_title",
+   "old": null,
+   "new": "The Central Bank of Yemen and Domestic Liquidity Management (Journal of Administrative and Economic Sciences, University of Aden, 2016)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 12,
+   "field": "SRC-ADEN-CBY-LIQ-2016.display_title_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني وإدارة السيولة المحلية (مجلة العلوم الإدارية والاقتصادية، جامعة عدن، 2016)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 7,
+   "field": "SRC-ADEN-CBY-LIQ-2016.publisher",
+   "old": null,
+   "new": "University of Aden, Faculty of Economics and Administration"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 25,
+   "field": "SRC-ADEN-CBY-LIQ-2016.publisher_ar",
+   "old": null,
+   "new": "جامعة عدن، كلية الاقتصاد والإدارة"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 17,
+   "field": "SRC-ADEN-CBY-LIQ-2016.issuer",
+   "old": null,
+   "new": "A journal article by Majdoleen Mohammed Abdo Saeed (مجدولين محمد عبده سعيد in the Crossref record; the transliteration is not printed); published by the University of Aden, Faculty of Economics and Administration (Crossref member 21867); not a publication of the Central Bank of Yemen"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 18,
+   "field": "SRC-ADEN-CBY-LIQ-2016.hosting_platform",
+   "old": null,
+   "new": "The DOI resolves to the Dar Almandumah database record, whose page requires sign-in"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 26,
+   "field": "SRC-ADEN-CBY-LIQ-2016.document_label",
+   "old": null,
+   "new": "Research or policy paper"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 27,
+   "field": "SRC-ADEN-CBY-LIQ-2016.document_label_ar",
+   "old": null,
+   "new": "ورقة بحثية أو سياساتية"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 28,
+   "field": "SRC-ADEN-CBY-LIQ-2016.document_date",
+   "old": null,
+   "new": "2016"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 11,
+   "field": "SRC-ADEN-CBY-LIQ-2016.public_card_state",
+   "old": "LOCATOR_ONLY",
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 135,
+   "col": 22,
+   "field": "SRC-ADEN-CBY-LIQ-2016.retrieval_date",
+   "old": null,
+   "new": "2026-10-11"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "32_QUAL_LITERATURE",
+   "row": 17,
+   "col": 5,
+   "field": "LIT-YEM-2016-001.source_reported_content",
+   "old": "Verified metadata identifies author Majdoleen Mohammad Abdu Saeed, issue 18, Dec 2016, pp. 9–40, DOI 10.36056/0442-000-018-001.",
+   "new": "Crossref metadata (read 11 October 2026): author مجدولين محمد عبده سعيد; title «البنك المركزي اليمني وإدارة السيولة المحلية»; Journal of Administrative and Economic Sciences, published by the University of Aden, Faculty of Economics and Administration; issued 2016; first page 9; DOI 10.36056/0442-000-018-001, which resolves to search.mandumah.com/Record/932295. Issue 18 is inferred from the DOI suffix and an end page of about 40 from the next article's first page (41); the month is not in the metadata."
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "32_QUAL_LITERATURE",
+   "row": 17,
+   "col": 6,
+   "field": "LIT-YEM-2016-001.study_population_or_method",
+   "old": "Full substantive text not yet reviewed.",
+   "new": "Full substantive text not yet reviewed: the record page requires sign-in."
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "32_QUAL_LITERATURE",
+   "row": 17,
+   "col": 10,
+   "field": "LIT-YEM-2016-001.source_url",
+   "old": "https://search.mandumah.com/Record/932295",
+   "new": "https://doi.org/10.36056/0442-000-018-001"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 99,
+   "col": 6,
+   "field": "SRC-CBY-HIST-METHOD-001.display_title",
+   "old": "Quarterly Bulletin, Issue No. 1 (December 2020)",
+   "new": "Quarterly Bulletin: Economic and Monetary Developments, Issue No. 1 (December 2020)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 99,
+   "col": 12,
+   "field": "SRC-CBY-HIST-METHOD-001.display_title_ar",
+   "old": "النشرة الفصلية، العدد 1 (ديسمبر 2020)",
+   "new": "النشرة الفصلية: التطورات الاقتصادية والنقدية، العدد 1 (ديسمبر 2020)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 99,
+   "col": 17,
+   "field": "SRC-CBY-HIST-METHOD-001.issuer",
+   "old": null,
+   "new": "General Department of Research and Statistics, Central Bank of Yemen, Head Office – Aden (title page)"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 99,
+   "col": 22,
+   "field": "SRC-CBY-HIST-METHOD-001.retrieval_date",
+   "old": "2026-10-04",
+   "new": "2026-10-11"
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 169,
+   "col": 9,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.why_it_matters",
+   "old": "A paper by authors from Al-Amal Microfinance Bank on how Yemen’s microfinance banks are supervised. It argues that supervision should assess social and developmental performance alongside financial soundness, which makes it a useful starting point for regulators and providers asking how licensing and supervision relate to inclusion outcomes.",
+   "new": "A policy brief by Mohammed Al-Lai and Dhekra Al-Gabri, published by Al-Amal Microfinance Bank, on how Yemen’s microfinance banks are supervised. It argues that supervision should assess social and developmental performance alongside financial soundness, which makes it a useful starting point for regulators and providers asking how licensing and supervision relate to inclusion outcomes."
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 169,
+   "col": 14,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.why_it_matters_ar",
+   "old": "ورقة أعدها مؤلفون من بنك الأمل للتمويل الأصغر حول الإشراف على بنوك التمويل الأصغر في اليمن، وتدعو إلى أن يقيّم الإشراف الأداء الاجتماعي والتنموي إلى جانب السلامة المالية. وهي نقطة انطلاق مفيدة للجهات الرقابية ومقدمي الخدمة عند النظر في علاقة الترخيص والإشراف بنتائج الشمول.",
+   "new": "ورقة سياسات موجزة أعدها محمد اللاعي وذكرى الجبري، ونشرها بنك الأمل للتمويل الأصغر، حول الإشراف على بنوك التمويل الأصغر في اليمن، وتدعو إلى أن يقيّم الإشراف الأداء الاجتماعي والتنموي إلى جانب السلامة المالية. وهي نقطة انطلاق مفيدة للجهات الرقابية ومقدمي الخدمة عند النظر في علاقة الترخيص والإشراف بنتائج الشمول."
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 169,
+   "col": 10,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.does_not_establish",
+   "old": "A proposal by authors from a microfinance bank: it is not a statement by the regulator or an independent assessment, it does not show how microfinance banks are supervised in practice or whether any institution is operating, and it provides no sector figures used by this resource.",
+   "new": "A proposal published by a microfinance bank: it is not a statement by the regulator or an independent assessment. It treats the Central Bank of Yemen as a single supervisor, without distinguishing the one in Aden from the one in Sana'a, and it does not show how microfinance banks are supervised in practice or whether any institution is operating, and it provides no sector figures used by this resource."
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 169,
+   "col": 15,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.does_not_establish_ar",
+   "old": "مقترح أعده مؤلفون من بنك للتمويل الأصغر: فهو ليس بيانًا صادرًا عن الجهة الرقابية ولا تقييمًا مستقلًا، ولا يبين كيف يجري الإشراف على بنوك التمويل الأصغر فعليًا أو ما إذا كانت أي مؤسسة تعمل، ولا يقدم أرقامًا عن القطاع يستخدمها هذا المورد.",
+   "new": "مقترح نشره بنك للتمويل الأصغر: فهو ليس بيانًا صادرًا عن الجهة الرقابية ولا تقييمًا مستقلًا. ويتناول البنك المركزي اليمني بوصفه جهة رقابية واحدة دون أن يميّز بين البنك المركزي اليمني في عدن ونظيره في صنعاء، ولا يبين كيف يجري الإشراف على بنوك التمويل الأصغر فعليًا أو ما إذا كانت أي مؤسسة تعمل، ولا يقدم أرقامًا عن القطاع يستخدمها هذا المورد."
+  },
+  {
+   "finding": "CLOSE-6B:COMPLETE",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 169,
+   "col": 17,
+   "field": "SRC-AMB-MFB-SUPERVISION-2026.issuer",
+   "old": "Al-Amal Microfinance Bank",
+   "new": "Mohammed Saleh Al-Lai and Dhekra Ahmed Al-Gabri (authors, cover: “Prepared by”); Al-Amal Microfinance Bank (publisher, FinDev Gateway page); no author affiliation is printed in the paper"
+  },
+  {
+   "finding": "CLOSE-6B:CR-11",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 123,
+   "col": 17,
+   "field": "SRC-CCY-PRESSURE-2026.issuer",
+   "old": "Cash Consortium of Yemen, with Crisis Analysis MENA/Europe (cover)",
+   "new": "Cash Consortium of Yemen (cover logos: the Cash Consortium of Yemen; Crisis Analysis MENA/Europe, with a Mercy Corps mark; European Union Civil Protection and Humanitarian Aid); no author is printed"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 100,
+   "col": 16,
+   "field": "SRC-CBY-AR2015-HIST-001.non_public_locator_note",
+   "old": null,
+   "new": "NON_PUBLIC (close-out CLOSE-6B, 11 October 2026; the XIDIAN precedent): the address returned HTTP 503 or a reset connection on 11 October 2026; the Wayback Machine lists captures of 16 March 2019 and 30 June 2022, which could not be opened from this environment, so the title and issuer were not read; feeds no record; withheld from the public directory until a person confirms an archived copy. Address: http://centralbank.gov.ye/App_Upload/Ann_rep2015AR.pdf"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 100,
+   "col": 2,
+   "field": "SRC-CBY-AR2015-HIST-001.primary_url",
+   "old": "http://centralbank.gov.ye/App_Upload/Ann_rep2015AR.pdf",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 126,
+   "col": 16,
+   "field": "SRC-LIT-INVEST-ISLAMIC-FI-2024.non_public_locator_note",
+   "old": null,
+   "new": "NON_PUBLIC (close-out CLOSE-6B, 11 October 2026; the XIDIAN precedent): comparative Islamic-finance literature, not Yemen evidence (32_QUAL_LITERATURE LIT-ISLAMIC-2024-001, COMPARATIVE_CONCEPT_ONLY); feeds no public record; withheld from the public directory. Address: https://jurnal.iainponorogo.ac.id/index.php/invest/article/view/8340"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 126,
+   "col": 2,
+   "field": "SRC-LIT-INVEST-ISLAMIC-FI-2024.primary_url",
+   "old": "https://jurnal.iainponorogo.ac.id/index.php/invest/article/view/8340",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 127,
+   "col": 16,
+   "field": "SRC-LIT-OEB-FX-PRICES-2025.non_public_locator_note",
+   "old": null,
+   "new": "NON_PUBLIC (close-out CLOSE-6B, 11 October 2026; the XIDIAN precedent): a regression on eight annual observations whose construction and territorial comparability have not been reviewed (32_QUAL_LITERATURE LIT-YEM-2025-006, QUANTITATIVE_HYPOTHESIS__METHOD_BOUNDED); feeds no public record; withheld from the public directory. Address: https://asjp.cerist.dz/en/article/273259"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 127,
+   "col": 2,
+   "field": "SRC-LIT-OEB-FX-PRICES-2025.primary_url",
+   "old": "https://asjp.cerist.dz/en/article/273259",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 102,
+   "col": 16,
+   "field": "SRC-CBY-SANAA-C14-2024.non_public_locator_note",
+   "old": "Circular No. 14 of 2024 of the Central Bank of Yemen in Sana'a has no public locator of its own that could be opened on 4 October 2026. The locator here is the document that reproduces it: the final report of the UN Panel of Experts on Yemen, UN document S/2024/731 of 11 October 2024, where the circular is reproduced as an image at printed page 114, \"Figure 28.2 - Circular No 14 dated 26 March 2024 issued by CBY, Sana'a\", captioned \"Source: Panel\". Cite the circular only through that page, never as if the Panel's report were the circular. The earlier locator was a mirror of the same UN report and is kept as an additional address. cbyemen.com must not be cited: that domain has been repurposed and serves an unrelated commercial site.",
+   "new": "NON_PUBLIC (close-out CLOSE-6B, 11 October 2026; the XIDIAN precedent): Circular No. 14 of 2024 of the Central Bank of Yemen in Sana'a (26 March 2024) has no locator of its own; the final report of the UN Panel of Experts on Yemen, S/2024/731 of 11 October 2024, reproduces it as Figure 28.2 of Annex 28 (printed p. 114). This record feeds no record and is withheld; if the circular is used, S/2024/731 is cited as its own source, never as if it were the circular. cbyemen.com must not be cited (the domain serves an unrelated site). Addresses: https://documents.un.org/doc/undoc/gen/n24/259/53/pdf/n2425953.pdf; https://docs.un.org/en/S/2024/731; https://www.ecoi.net/en/file/local/2117585/n2425953.pdf"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 102,
+   "col": 2,
+   "field": "SRC-CBY-SANAA-C14-2024.primary_url",
+   "old": "https://documents.un.org/doc/undoc/gen/n24/259/53/pdf/n2425953.pdf",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 102,
+   "col": 3,
+   "field": "SRC-CBY-SANAA-C14-2024.additional_urls",
+   "old": "[\"https://docs.un.org/en/S/2024/731\", \"https://www.ecoi.net/en/file/local/2117585/n2425953.pdf\"]",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 103,
+   "col": 16,
+   "field": "SRC-CBY-SANAA-CURR-2024.non_public_locator_note",
+   "old": null,
+   "new": "NON_PUBLIC (close-out CLOSE-6B, 11 October 2026; the XIDIAN precedent): saba.ye returned HTTP 403 (a Cloudflare challenge) and centralbank.gov.ye HTTP 503 or a reset connection on 11 October 2026; Wayback captures are listed (10 April 2026 and 31 August 2024) but could not be opened, so the title, date and issuer were not read; feeds no record; withheld from the public directory. Addresses: https://www.saba.ye/ar/news3337222.htm; https://centralbank.gov.ye/upldImgAndFile/file/urgent.pdf"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 103,
+   "col": 2,
+   "field": "SRC-CBY-SANAA-CURR-2024.primary_url",
+   "old": "https://www.saba.ye/ar/news3337222.htm",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 103,
+   "col": 3,
+   "field": "SRC-CBY-SANAA-CURR-2024.additional_urls",
+   "old": "[\"https://centralbank.gov.ye/upldImgAndFile/file/urgent.pdf\"]",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 103,
+   "col": 11,
+   "field": "SRC-CBY-SANAA-CURR-2024.public_card_state",
+   "old": "CITATION_CARD",
+   "new": "LOCATOR_ONLY"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 56,
+   "col": 16,
+   "field": "SRC-KFW-RMMV-2023-001.non_public_locator_note",
+   "old": null,
+   "new": "NON_PUBLIC (close-out CLOSE-6B, 11 October 2026; the XIDIAN precedent): a conference page and booklet on remote management, monitoring and verification tools: a method reference, not evidence on Yemen's financial system (33_ANALYTICS_MASTER CTR-007 reclassifies it to method); feeds no public record; withheld from the public directory. Addresses: https://www.kfw-entwicklungsbank.de/Service/RMMV-conference-2023/; https://www.kfw-entwicklungsbank.de/PDF/Entwicklungsfinanzierung/RMMV/Booklet-of-RMMV-Service-Providers.pdf"
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 56,
+   "col": 2,
+   "field": "SRC-KFW-RMMV-2023-001.primary_url",
+   "old": "https://www.kfw-entwicklungsbank.de/Service/RMMV-conference-2023/",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 56,
+   "col": 3,
+   "field": "SRC-KFW-RMMV-2023-001.additional_urls",
+   "old": "[\"https://www.kfw-entwicklungsbank.de/PDF/Entwicklungsfinanzierung/RMMV/Booklet-of-RMMV-Service-Providers.pdf\"]",
+   "new": null
+  },
+  {
+   "finding": "CLOSE-6B:WITHHOLD",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 56,
+   "col": 11,
+   "field": "SRC-KFW-RMMV-2023-001.public_card_state",
+   "old": "CITATION_CARD",
+   "new": "LOCATOR_ONLY"
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 9,
+   "field": "SRC-CBY-EKYC-2023.why_it_matters",
+   "old": null,
+   "new": "CBY-Aden's instructions for banks and licensed mobile e-money providers on opening accounts remotely, without the customer present in person; the institutions report, every half year, figures that include the average time to complete an application and to open and activate an account."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 14,
+   "field": "SRC-CBY-EKYC-2023.why_it_matters_ar",
+   "old": null,
+   "new": "تعليمات البنك المركزي اليمني – عدن للبنوك ولمقدمي خدمات النقود الإلكترونية عبر الهاتف المحمول المرخص لهم بشأن فتح الحسابات عن بُعد دون حضور العميل شخصيًا؛ وتُبلغ هذه المؤسسات كل نصف سنة عن بيانات منها متوسط الوقت المستغرق لاستكمال الطلب ولفتح الحساب وتفعيله."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 10,
+   "field": "SRC-CBY-EKYC-2023.does_not_establish",
+   "old": null,
+   "new": "The instructions do not show that remote account opening is offered or used, how long it takes in practice, or how many people opened accounts this way; they fix no date of entry into force, only compliance periods counted from it."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 182,
+   "col": 15,
+   "field": "SRC-CBY-EKYC-2023.does_not_establish_ar",
+   "old": null,
+   "new": "لا تُظهر التعليمات أن فتح الحسابات عن بُعد متاح أو مستخدم، ولا المدة التي يستغرقها فعليًا، ولا عدد من فتحوا حسابات بهذه الطريقة؛ ولا تحدد تاريخ نفاذها، وإنما تحدد مُهَلًا للامتثال تُحسب من ذلك التاريخ."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 9,
+   "field": "SRC-CBY-CIRC-01-2024.why_it_matters",
+   "old": null,
+   "new": "Rules for banks that wish to ship surplus foreign-currency banknotes abroad: an application to the Governor ahead of each shipment, a ceiling per shipment, a minimum period for which the funds shipped must have been deposited, and confirmation of the credit abroad after shipment."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 14,
+   "field": "SRC-CBY-CIRC-01-2024.why_it_matters_ar",
+   "old": null,
+   "new": "قواعد للبنوك التي ترغب في ترحيل فوائض أوراق النقد الأجنبي إلى الخارج: طلب يُقدَّم إلى المحافظ قبل كل شحنة، وسقف لكل شحنة، وحد أدنى لمدة إيداع الأموال المرحَّلة، وتأكيد قيد المبالغ في الخارج بعد الشحن."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 10,
+   "field": "SRC-CBY-CIRC-01-2024.does_not_establish",
+   "old": null,
+   "new": "The circular does not show how many shipments were requested, approved or made, or any effect on banks' foreign-currency liquidity."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 188,
+   "col": 15,
+   "field": "SRC-CBY-CIRC-01-2024.does_not_establish_ar",
+   "old": null,
+   "new": "لا يُظهر المنشور عدد الشحنات التي طُلبت أو وُوفق عليها أو نُفذت، ولا أي أثر على سيولة البنوك من النقد الأجنبي."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 9,
+   "field": "SRC-CBY-DEC-19-2024.why_it_matters",
+   "old": null,
+   "new": "CBY-Aden's rules for external money transfers: only through qualified banks or exchange companies, with its no-objection letter before any contract with an international money-transfer company or a sub-agent; sub-agents licensed by CBY-Aden, for which the main agent answers; and incoming transfers paid in the currency received unless the beneficiary asks to convert them at the market rate."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 14,
+   "field": "SRC-CBY-DEC-19-2024.why_it_matters_ar",
+   "old": null,
+   "new": "قواعد البنك المركزي اليمني – عدن للتحويلات الخارجية: ألا تجري إلا عبر البنوك أو شركات الصرافة المؤهلة، مع الحصول على خطاب عدم ممانعة منه قبل أي تعاقد مع شركة حوالات دولية أو وكيل فرعي؛ وأن يكون الوكلاء الفرعيون مرخصًا لهم منه، ويكون الوكيل الرئيسي مسؤولًا عنهم؛ وأن تُصرف الحوالات الواردة بالعملة التي وردت بها ما لم يطلب المستفيد مصارفتها بسعر السوق."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 10,
+   "field": "SRC-CBY-DEC-19-2024.does_not_establish",
+   "old": null,
+   "new": "The decision does not show how many providers obtained no-objection letters, how transfers were actually paid out, or any effect on remittance costs or access."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 187,
+   "col": 15,
+   "field": "SRC-CBY-DEC-19-2024.does_not_establish_ar",
+   "old": null,
+   "new": "لا يُظهر القرار عدد مقدمي الخدمة الذين حصلوا على خطابات عدم ممانعة، ولا كيف صُرفت الحوالات فعليًا، ولا أي أثر على تكلفة الحوالات أو الوصول إليها."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 9,
+   "field": "SRC-CBY-CIRC-02-2025.why_it_matters",
+   "old": null,
+   "new": "An anti-money laundering and counter-terrorist financing circular to banks and exchange companies and establishments, supplementing the earlier circulars on the subject (of 2012, 2013, 2014 and 2021)."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 14,
+   "field": "SRC-CBY-CIRC-02-2025.why_it_matters_ar",
+   "old": null,
+   "new": "منشور لمكافحة غسل الأموال وتمويل الإرهاب موجه إلى البنوك وشركات ومنشآت الصرافة، مُلحق بالمنشورات السابقة في هذا الشأن (الصادرة في 2012 و2013 و2014 و2021)."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 10,
+   "field": "SRC-CBY-CIRC-02-2025.does_not_establish",
+   "old": null,
+   "new": "The circular does not show how it is supervised or enforced, or any effect on correspondent banking, remittance channels or access."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 183,
+   "col": 15,
+   "field": "SRC-CBY-CIRC-02-2025.does_not_establish_ar",
+   "old": null,
+   "new": "لا يُظهر المنشور كيف يُراقَب تطبيقه أو كيف يجري إنفاذه، ولا أي أثر على علاقات المراسلة المصرفية أو قنوات الحوالات أو الوصول."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 9,
+   "field": "SRC-CBY-CIRC-03-2025.why_it_matters",
+   "old": null,
+   "new": "Risk-management instructions applying to all banks, prepared with technical support from the IMF's Middle East Regional Technical Assistance Center (METAC)."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 14,
+   "field": "SRC-CBY-CIRC-03-2025.why_it_matters_ar",
+   "old": null,
+   "new": "تعليمات لإدارة المخاطر تسري على جميع البنوك، أُعدّت بدعم فني من المركز الإقليمي للمساعدة الفنية للشرق الأوسط (METAC) التابع لصندوق النقد الدولي."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 10,
+   "field": "SRC-CBY-CIRC-03-2025.does_not_establish",
+   "old": null,
+   "new": "The instructions do not show banks' compliance, the quality of their risk management, or any effect on lending or access."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 184,
+   "col": 15,
+   "field": "SRC-CBY-CIRC-03-2025.does_not_establish_ar",
+   "old": null,
+   "new": "لا تُظهر التعليمات مدى امتثال البنوك، ولا جودة إدارتها للمخاطر، ولا أي أثر على الإقراض أو الوصول."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 9,
+   "field": "SRC-CBY-CIRC-04-2025.why_it_matters",
+   "old": null,
+   "new": "Instructions to banks and exchange companies and establishments on enhanced due diligence and on screening against international sanctions lists, including those of the UN Security Council, the US Treasury (OFAC), the European Union and the UK Treasury."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 14,
+   "field": "SRC-CBY-CIRC-04-2025.why_it_matters_ar",
+   "old": null,
+   "new": "تعليمات للبنوك وشركات ومنشآت الصرافة بشأن إجراءات العناية الواجبة المعززة والتحقق من قوائم العقوبات الدولية، ومنها قوائم مجلس الأمن الدولي ومكتب مراقبة الأصول الأجنبية التابع لوزارة الخزانة الأمريكية (OFAC) والاتحاد الأوروبي ووزارة الخزانة البريطانية."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 10,
+   "field": "SRC-CBY-CIRC-04-2025.does_not_establish",
+   "old": null,
+   "new": "The instructions do not show how screening is applied, how many customers or transfers it affects, or any effect on access to accounts or remittances."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 185,
+   "col": 15,
+   "field": "SRC-CBY-CIRC-04-2025.does_not_establish_ar",
+   "old": null,
+   "new": "لا تُظهر التعليمات كيف يُطبَّق التحقق، ولا عدد العملاء أو التحويلات التي يمسّها، ولا أي أثر على الوصول إلى الحسابات أو الحوالات."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 9,
+   "field": "SRC-CBY-DEC-07-2026.why_it_matters",
+   "old": null,
+   "new": "Sets a minimum rate of 18% a year on new Yemeni-rial savings deposits at commercial banks, leaves foreign-currency deposit rates and lending rates to banks, exempts Islamic banks, and applies to contracts concluded after it took effect on 12 April 2026."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 14,
+   "field": "SRC-CBY-DEC-07-2026.why_it_matters_ar",
+   "old": null,
+   "new": "يحدد حدًا أدنى لسعر الفائدة قدره 18% سنويًا على ودائع الادخار الجديدة بالريال اليمني لدى البنوك التجارية، ويترك أسعار الفائدة على الودائع بالعملات الأجنبية وعلى الإقراض للبنوك، ويستثني البنوك الإسلامية، ويسري على العقود المبرمة بعد نفاذه في 12 أبريل 2026."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 10,
+   "field": "SRC-CBY-DEC-07-2026.does_not_establish",
+   "old": null,
+   "new": "The decision does not show the rates banks actually pay, deposit growth, or any effect on saving or on access to accounts."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 181,
+   "col": 15,
+   "field": "SRC-CBY-DEC-07-2026.does_not_establish_ar",
+   "old": null,
+   "new": "لا يُظهر القرار الأسعار التي تدفعها البنوك فعليًا، ولا نمو الودائع، ولا أي أثر على الادخار أو الوصول إلى الحسابات."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 9,
+   "field": "SRC-CBY-CIRC-01-2026.why_it_matters",
+   "old": null,
+   "new": "Prohibits banks, exchange companies and establishments, payment-service providers and e-wallet operators from dealing in virtual assets or cryptocurrencies or with their service providers, in force from issue."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 14,
+   "field": "SRC-CBY-CIRC-01-2026.why_it_matters_ar",
+   "old": null,
+   "new": "يحظر على البنوك وشركات ومنشآت الصرافة ومقدمي خدمات الدفع ومشغلي المحافظ الإلكترونية التعامل بالأصول الافتراضية أو العملات المشفرة أو مع مقدمي خدماتها، ويُعمل به من تاريخ صدوره."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 10,
+   "field": "SRC-CBY-CIRC-01-2026.does_not_establish",
+   "old": null,
+   "new": "The circular does not show how much such dealing there was before it, or how it is enforced."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 186,
+   "col": 15,
+   "field": "SRC-CBY-CIRC-01-2026.does_not_establish_ar",
+   "old": null,
+   "new": "لا يُظهر المنشور حجم هذا التعامل قبل صدوره، ولا كيفية إنفاذه."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 9,
+   "field": "SRC-CBY-BANKS-BS-2022.why_it_matters",
+   "old": null,
+   "new": "A Central Bank of Yemen statistical report on the banks' consolidated balance sheet to December 2022: total assets, deposits, loans and financing and equity, with the number of banks, branches and accounts. No issue date or issuing department appears on the pages read."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 14,
+   "field": "SRC-CBY-BANKS-BS-2022.why_it_matters_ar",
+   "old": null,
+   "new": "تقرير إحصائي للبنك المركزي اليمني عن الميزانية المجمعة للبنوك حتى ديسمبر 2022: إجمالي الأصول والودائع والقروض والتمويلات وحقوق الملكية، مع عدد البنوك والفروع والحسابات. ولا يظهر تاريخ إصدار ولا اسم الإدارة المصدرة في الصفحات التي قُرئت."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 10,
+   "field": "SRC-CBY-BANKS-BS-2022.does_not_establish",
+   "old": null,
+   "new": "A count of accounts is not a count of people, and the report does not show who holds them or how they are used; one change figure it prints does not match its own values, so its figures are not taken without checking."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 189,
+   "col": 15,
+   "field": "SRC-CBY-BANKS-BS-2022.does_not_establish_ar",
+   "old": null,
+   "new": "عدد الحسابات ليس عدد الأشخاص، ولا يُظهر التقرير مَن يملكها ولا كيف تُستخدم؛ وفيه رقم للتغير لا يتطابق مع القيمتين اللتين يذكرهما، فلا تؤخذ أرقامه دون تحقق."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 9,
+   "field": "SRC-CBY-SANAA-C12-2024.why_it_matters",
+   "old": null,
+   "new": "The circular of the Central Bank of Yemen in Sana'a on how banks and exchange companies acting as main agents for external remittance services pay out incoming transfers: transfers in Saudi riyals are paid in Saudi riyals; individual transfers in US dollars are paid in their Saudi-riyal equivalent at the dollar rate its Foreign Exchange Dealing Unit approves, and those in other foreign currencies at the international selling rate against the Saudi riyal on the day the transfer was issued; it applies from 14 March 2024."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 14,
+   "field": "SRC-CBY-SANAA-C12-2024.why_it_matters_ar",
+   "old": null,
+   "new": "تعميم البنك المركزي اليمني في صنعاء بشأن صرف الحوالات الواردة عبر البنوك وشركات الصرافة العاملة وكلاءَ رئيسيين لخدمات الحوالات الخارجية: تُصرف الحوالات الواردة بالريال السعودي بالريال السعودي، والحوالات الفردية الواردة بالدولار الأمريكي بما يعادلها بالريال السعودي بسعر الدولار الذي تعتمده وحدة التعاملات بالنقد الأجنبي لديه، والواردة بعملات أجنبية أخرى بما يعادلها بالريال السعودي بسعر البيع العالمي مقابل الريال السعودي يوم إصدار الحوالة؛ ويُعمل به اعتبارًا من 14 مارس 2024."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 10,
+   "field": "SRC-CBY-SANAA-C12-2024.does_not_establish",
+   "old": null,
+   "new": "A circular states rules; it does not show how transfers were actually paid, at what rates, or how many recipients were affected. This copy was republished by a news site, not by the issuer."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 101,
+   "col": 15,
+   "field": "SRC-CBY-SANAA-C12-2024.does_not_establish_ar",
+   "old": null,
+   "new": "يحدد التعميم قواعد، ولا يُظهر كيف صُرفت الحوالات فعليًا، ولا بأي أسعار، ولا عدد المستفيدين المتأثرين. وهذه النسخة أعاد نشرها موقع إخباري، لا الجهة المصدرة."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "04_NAV_UX",
+   "row": 505,
+   "col": 2,
+   "field": "UI-DATA-GROUP-REGULATORY-SCOPE.label_en",
+   "old": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All were issued or posted by the Central Bank of Yemen – Aden; its undated pages on credit-risk information cite older instructions, the earliest from 1991. This group holds no law and no instrument issued in Sana'a; the one law the evidence base holds, on the Bank Deposit Insurance Institution, is listed below with the other sources.",
+   "new": "These are the regulatory documents held in this evidence base, not a complete register of Yemen's financial regulation. All but one were issued or posted by the Central Bank of Yemen – Aden; its undated pages on credit-risk information cite older instructions, the earliest from 1991. The one instrument issued in Sana'a, a circular of the Central Bank of Yemen – Sana'a on paying out incoming external transfers, is held in the copy a news site republished. This group holds no law; the one law the evidence base holds, on the Bank Deposit Insurance Institution, is listed below with the other sources."
+  },
+  {
+   "finding": "CLOSE-6B:REG",
+   "sheet": "04_NAV_UX",
+   "row": 505,
+   "col": 3,
+   "field": "UI-DATA-GROUP-REGULATORY-SCOPE.label_ar",
+   "old": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وقد أصدرها جميعًا أو نشرها البنك المركزي اليمني – عدن؛ وتشير صفحتاه غير المؤرختين عن معلومات مخاطر الائتمان إلى تعليمات أقدم، أولها من عام 1991. ولا تضم هذه المجموعة أي قانون ولا أي وثيقة صادرة في صنعاء؛ أما القانون الوحيد الذي تضمه قاعدة الأدلة، وهو قانون مؤسسة ضمان الودائع المصرفية، فمدرج أدناه مع المصادر الأخرى.",
+   "new": "هذه هي الوثائق التنظيمية المتوفرة في قاعدة الأدلة هذه، وليست سجلًا كاملًا للتنظيم المالي في اليمن. وجميعها، عدا وثيقة واحدة، أصدرها البنك المركزي اليمني – عدن أو نشرها؛ وتشير صفحتاه غير المؤرختين عن معلومات مخاطر الائتمان إلى تعليمات أقدم، أولها من عام 1991. والوثيقة الوحيدة الصادرة في صنعاء تعميمٌ للبنك المركزي اليمني – صنعاء بشأن صرف الحوالات الخارجية الواردة، والنسخة المتوفرة منه هي التي أعاد موقع إخباري نشرها. ولا تضم هذه المجموعة أي قانون؛ أما القانون الوحيد الذي تضمه قاعدة الأدلة، وهو قانون مؤسسة ضمان الودائع المصرفية، فمدرج أدناه مع المصادر الأخرى."
+  },
+  {
+   "finding": "CLOSE-6B:SEARCH",
+   "sheet": "04_NAV_UX",
+   "row": 732,
+   "col": null,
+   "field": "SEARCH-ALIAS-046",
+   "old": null,
+   "new": "{\"alias_id\": \"SEARCH-ALIAS-046\", \"terms_en\": \"Sanaa; Sana'a; CBY Sanaa; CBY-Sanaa; CBY Sana'a\", \"terms_ar\": \"صنعاء; البنك المركزي في صنعاء\", \"targets\": \"route:/providers/ | route:/data/\", \"boundary_note_en\": \"Discovery aid only: this evidence base holds few documents issued in Sana'a; each source carries the scope of its issuer and does not describe all of Yemen.\", \"boundary_note_ar\": \"وسيلة للعثور على المحتوى فقط: لا تضم قاعدة الأدلة هذه إلا وثائق قليلة صادرة في صنعاء؛ ويحمل كل مصدر نطاق الجهة التي أصدرته، ولا يصف اليمن كله.\"}"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 1,
+   "field": "SRC-CBY-NEWS-832.source_id",
+   "old": null,
+   "new": "SRC-CBY-NEWS-832"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 2,
+   "field": "SRC-CBY-NEWS-832.primary_url",
+   "old": null,
+   "new": "https://cby-ye.com/news/832"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 4,
+   "field": "SRC-CBY-NEWS-832.datasets_or_use",
+   "old": null,
+   "new": "DS-REFORM-EVENTS"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 5,
+   "field": "SRC-CBY-NEWS-832.row_count",
+   "old": null,
+   "new": 0
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 6,
+   "field": "SRC-CBY-NEWS-832.display_title",
+   "old": null,
+   "new": "The Committee for Financing and Regulating Imports holds its first meeting (17 July 2025)"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 12,
+   "field": "SRC-CBY-NEWS-832.display_title_ar",
+   "old": null,
+   "new": "لجنة تمويل وتنظيم الاستيراد تدشن أولى اجتماعاتها (17 يوليو 2025)"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 7,
+   "field": "SRC-CBY-NEWS-832.publisher",
+   "old": null,
+   "new": "Central Bank of Yemen — Aden"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 25,
+   "field": "SRC-CBY-NEWS-832.publisher_ar",
+   "old": null,
+   "new": "البنك المركزي اليمني – عدن"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 11,
+   "field": "SRC-CBY-NEWS-832.public_card_state",
+   "old": null,
+   "new": "CITATION_CARD"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 19,
+   "field": "SRC-CBY-NEWS-832.rights_state",
+   "old": null,
+   "new": "NOT_ASSESSED"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 22,
+   "field": "SRC-CBY-NEWS-832.retrieval_date",
+   "old": null,
+   "new": "2026-10-11"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 26,
+   "field": "SRC-CBY-NEWS-832.document_label",
+   "old": null,
+   "new": "News release"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 27,
+   "field": "SRC-CBY-NEWS-832.document_label_ar",
+   "old": null,
+   "new": "بيان صحفي"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 204,
+   "col": 28,
+   "field": "SRC-CBY-NEWS-832.document_date",
+   "old": null,
+   "new": "2025-07-17"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 1,
+   "field": "YSC-031.event_id",
+   "old": null,
+   "new": "YSC-031"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 2,
+   "field": "YSC-031.period_en",
+   "old": null,
+   "new": "9 November 2023"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 3,
+   "field": "YSC-031.event_class",
+   "old": null,
+   "new": "CUSTOMER_DUE_DILIGENCE_RULE"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 4,
+   "field": "YSC-031.fact_en",
+   "old": null,
+   "new": "CBY-Aden issued instructions regulating electronic know-your-customer procedures (ref. 840/CBY/2023) for banks and licensed mobile e-money providers, setting how accounts may be opened remotely, without the customer present in person, and requiring these institutions to report every half year figures that include the average time to open and activate an account."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 5,
+   "field": "YSC-031.fact_ar",
+   "old": null,
+   "new": "أصدر البنك المركزي اليمني – عدن تعليمات تنظيم إجراءات اعرف عميلك إلكترونيًا (المرجع 840/CBY/2023) للبنوك ولمقدمي خدمات النقود الإلكترونية عبر الهاتف المحمول المرخص لهم، تحدد كيفية فتح الحسابات عن بُعد دون حضور العميل شخصيًا، وتُلزم هذه المؤسسات بالإبلاغ كل نصف سنة عن بيانات منها متوسط الوقت المستغرق لفتح الحساب وتفعيله."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 6,
+   "field": "YSC-031.source_ids",
+   "old": null,
+   "new": "SRC-CBY-EKYC-2023"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 7,
+   "field": "YSC-031.source_scope",
+   "old": null,
+   "new": "CBY-Aden instructions (the rule text); no data on use."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 8,
+   "field": "YSC-031.system_implication_en",
+   "old": null,
+   "new": "Remote account opening became a regulated route for the banks and e-money providers CBY-Aden supervises; whether they offer it, and to whom, is not reported."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 9,
+   "field": "YSC-031.system_implication_ar",
+   "old": null,
+   "new": "أصبح فتح الحسابات عن بُعد مسارًا منظمًا للبنوك ولمقدمي خدمات النقود الإلكترونية الخاضعين لرقابة البنك المركزي اليمني – عدن؛ ولم يُفصَح عمّا إذا كانوا يقدمونه ولا لمن يقدمونه."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 10,
+   "field": "YSC-031.fi_relevance_en",
+   "old": null,
+   "new": "Identity checks and onboarding are a step at which account access can be lost; the average onboarding time the instructions ask institutions to report is the kind of journey measure that the measurement priority on digital onboarding and identity journeys asks for."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 11,
+   "field": "YSC-031.fi_relevance_ar",
+   "old": null,
+   "new": "التحقق من الهوية وإجراءات الانضمام مرحلةٌ قد يتعثر فيها الوصول إلى الحسابات؛ ومتوسط وقت فتح الحساب الذي تطلب التعليمات من المؤسسات الإبلاغ عنه هو من نوع مقاييس الرحلة التي تطلبها أولوية القياس «رحلات الانضمام الرقمي وإثبات الهوية»."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 12,
+   "field": "YSC-031.does_not_establish_en",
+   "old": null,
+   "new": "Issuing the instructions does not establish that remote onboarding is offered or used, how long it takes in practice, or that any reported figures were published; the instructions fix no date of entry into force, only compliance periods counted from it."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 13,
+   "field": "YSC-031.does_not_establish_ar",
+   "old": null,
+   "new": "لا يثبت إصدار التعليمات أن فتح الحسابات عن بُعد متاح أو مستخدم، ولا المدة التي يستغرقها فعليًا، ولا أن أي بيانات مُبلَّغ عنها قد نُشرت؛ ولا تحدد التعليمات تاريخ نفاذها، وإنما تحدد مُهَلًا للامتثال تُحسب من ذلك التاريخ."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 14,
+   "field": "YSC-031.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 15,
+   "field": "YSC-031.linked_routes",
+   "old": null,
+   "new": "/people | /payments | /measurement | /reforms"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 16,
+   "field": "YSC-031.interpretation_note",
+   "old": null,
+   "new": "Issuance is not implementation."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 17,
+   "field": "YSC-031.period_ar",
+   "old": null,
+   "new": "9 نوفمبر 2023"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 17,
+   "col": 20,
+   "field": "YSC-031.value_states",
+   "old": null,
+   "new": "[{\"t\":\"9 November 2023\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-EKYC-2023\",\"loc\":\"cby-ye.com/files/65806fe2b3757.pdf p.1: ref. 840/CBY/2023, dated 9/11/2023; Hijri date (25 Rabi' al-Akhir 1445) p.16; remote opening without the customer present, p.2; half-yearly reporting deadlines, p.15; Annex 5 item 3, average times, p.30; compliance periods, pp.14 and 16; no effective-date clause in the 30 pages; read 11 October 2026\"},{\"t\":\"840\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 1,
+   "field": "YSC-032.event_id",
+   "old": null,
+   "new": "YSC-032"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 2,
+   "field": "YSC-032.period_en",
+   "old": null,
+   "new": "9 April 2026 (in force 12 April 2026)"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 3,
+   "field": "YSC-032.event_class",
+   "old": null,
+   "new": "MONETARY_POLICY_RULE"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 4,
+   "field": "YSC-032.fact_en",
+   "old": null,
+   "new": "CBY-Aden's Governor's Decision No. 7 of 2026 set a minimum rate of 18% a year on new Yemeni-rial savings deposits at commercial banks, left foreign-currency deposit rates and lending rates to banks and exempted Islamic banks; it applies to contracts concluded after it took effect on 12 April 2026."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 5,
+   "field": "YSC-032.fact_ar",
+   "old": null,
+   "new": "حدّد قرار محافظ البنك المركزي اليمني رقم (7) لسنة 2026، الصادر في عدن، حدًا أدنى لسعر الفائدة قدره 18% سنويًا على ودائع الادخار الجديدة بالريال اليمني لدى البنوك التجارية، وترك أسعار الفائدة على الودائع بالعملات الأجنبية وعلى الإقراض للبنوك، واستثنى البنوك الإسلامية؛ ويسري على العقود المبرمة بعد نفاذه في 12 أبريل 2026."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 6,
+   "field": "YSC-032.source_ids",
+   "old": null,
+   "new": "SRC-CBY-DEC-07-2026"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 7,
+   "field": "YSC-032.source_scope",
+   "old": null,
+   "new": "CBY-Aden decision (the rule text); no data on rates paid or deposits."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 8,
+   "field": "YSC-032.system_implication_en",
+   "old": null,
+   "new": "A floor on the rate paid on new rial savings deposits at commercial banks became a monetary-policy instrument; the rates banks pay are not reported."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 9,
+   "field": "YSC-032.system_implication_ar",
+   "old": null,
+   "new": "أصبح الحد الأدنى لسعر الفائدة على ودائع الادخار الجديدة بالريال لدى البنوك التجارية أداة من أدوات السياسة النقدية؛ ولم يُفصَح عن الأسعار التي تدفعها البنوك."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 10,
+   "field": "YSC-032.fi_relevance_en",
+   "old": null,
+   "new": "Deposit rates bear on whether keeping savings in a bank account is worthwhile, but a minimum rate is not a measure of saving or of account use."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 11,
+   "field": "YSC-032.fi_relevance_ar",
+   "old": null,
+   "new": "لأسعار الفائدة على الودائع صلة بجدوى الاحتفاظ بالمدخرات في حساب مصرفي، لكن الحد الأدنى للسعر ليس مقياسًا للادخار ولا لاستخدام الحسابات."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 12,
+   "field": "YSC-032.does_not_establish_en",
+   "old": null,
+   "new": "The decision does not establish the rates banks actually pay, deposit growth, or any effect on saving or on access to accounts."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 13,
+   "field": "YSC-032.does_not_establish_ar",
+   "old": null,
+   "new": "لا يثبت القرار الأسعار التي تدفعها البنوك فعليًا، ولا نمو الودائع، ولا أي أثر على الادخار أو الوصول إلى الحسابات."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 14,
+   "field": "YSC-032.relationship_type",
+   "old": null,
+   "new": "CONTEXT"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 15,
+   "field": "YSC-032.linked_routes",
+   "old": null,
+   "new": "/finance | /reforms"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 16,
+   "field": "YSC-032.interpretation_note",
+   "old": null,
+   "new": "A rule is not a rate paid."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 17,
+   "field": "YSC-032.period_ar",
+   "old": null,
+   "new": "9 أبريل 2026 (يُعمل به اعتبارًا من 12 أبريل 2026)"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 31,
+   "col": 20,
+   "field": "YSC-032.value_states",
+   "old": null,
+   "new": "[{\"t\":\"9 April 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-07-2026\",\"loc\":\"cby-ye.com/files/69dcac86e3520.pdf p.1: ref. 220/CBY/2026, header date 9/4/2026 (the issue line prints the Hijri and Gregorian months swapped); MPC meeting 8 April 2026; read 11 October 2026\"},{\"t\":\"12 April 2026\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-07-2026\",\"loc\":\"cby-ye.com/files/69dcac86e3520.pdf p.1, Art. 7 (entry into force); read 11 October 2026\"},{\"t\":\"18%\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-07-2026\",\"loc\":\"cby-ye.com/files/69dcac86e3520.pdf p.1, Art. 1 (minimum rate on new rial savings deposits at commercial banks); read 11 October 2026\"},{\"t\":\"7\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 4,
+   "field": "YSC-012.fact_en",
+   "old": "A new 100-rial coin in Sana'a in March 2024 was followed by an April CBY-Aden directive for banks headquartered in Sana'a to relocate to Aden and further June measures affecting unlicensed entities, wallets, payment services and remittance networks.",
+   "new": "A new 100-rial coin in Sana'a in March 2024 was followed by an April CBY-Aden directive for banks headquartered in Sana'a to relocate to Aden and further June measures affecting unlicensed entities, wallets, payment services and remittance networks. Circular No. 12 of the Central Bank of Yemen in Sana'a (dated 13 March 2024, applying from 14 March 2024) set how incoming external transfers are paid out through banks and exchange companies acting as main agents, paying individual transfers in US dollars or other foreign currencies in their Saudi-riyal equivalent; on 23 May 2024 Decision No. 19 of 2024 of the Governor of the Central Bank of Yemen in Aden required external transfers to pass only through qualified banks or exchange companies, with the bank's no-objection letter before contracts with international money-transfer companies or sub-agents, and incoming transfers to be paid in the currency received unless the beneficiary asks to convert them."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 5,
+   "field": "YSC-012.fact_ar",
+   "old": "بعد طرح عملة معدنية جديدة من فئة 100 ريال في صنعاء في مارس 2024، صدر في أبريل توجيه من البنك المركزي اليمني – عدن للبنوك التي تقع مراكزها الرئيسية في صنعاء بنقل هذه المراكز إلى عدن، ثم اتُّخذت في يونيو تدابير إضافية طالت جهات غير مرخصة ومحافظ إلكترونية وخدمات دفع وشبكات تحويلات.",
+   "new": "بعد طرح عملة معدنية جديدة من فئة 100 ريال في صنعاء في مارس 2024، صدر في أبريل توجيه من البنك المركزي اليمني – عدن للبنوك التي تقع مراكزها الرئيسية في صنعاء بنقل هذه المراكز إلى عدن، ثم اتُّخذت في يونيو تدابير إضافية طالت جهات غير مرخصة ومحافظ إلكترونية وخدمات دفع وشبكات تحويلات. وحدّد التعميم رقم (12) الصادر عن البنك المركزي اليمني في صنعاء (المؤرخ 13 مارس 2024، والمعمول به من 14 مارس 2024) كيفية صرف الحوالات الخارجية الواردة عبر البنوك وشركات الصرافة العاملة وكلاءَ رئيسيين، فتُصرف الحوالات الفردية الواردة بالدولار الأمريكي أو بعملات أجنبية أخرى بما يعادلها بالريال السعودي؛ وفي 23 مايو 2024 ألزم قرار محافظ البنك المركزي رقم (19) لسنة 2024، الصادر عن البنك المركزي اليمني في عدن، بأن تجري التحويلات الخارجية عبر البنوك أو شركات الصرافة المؤهلة وحدها، مع الحصول على خطاب عدم ممانعة منه قبل التعاقد مع شركات الحوالات الدولية أو الوكلاء الفرعيين، وبأن تُصرف الحوالات الواردة بالعملة التي وردت بها ما لم يطلب المستفيد مصارفتها."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 12,
+   "field": "YSC-012.does_not_establish_en",
+   "old": "A directive or prohibition does not prove actual compliance, closure, relocation or user access at every location.",
+   "new": "A directive, circular, decision or prohibition does not prove actual compliance, closure, relocation, how transfers were actually paid, or user access at every location."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 13,
+   "field": "YSC-012.does_not_establish_ar",
+   "old": "لا يثبت التوجيه أو الحظر الامتثال الفعلي أو الإغلاق أو الانتقال أو وصول المستخدم في كل موقع.",
+   "new": "لا يثبت التوجيه أو التعميم أو القرار أو الحظر الامتثال الفعلي أو الإغلاق أو الانتقال أو كيفية صرف الحوالات فعليًا أو وصول المستخدم في كل موقع."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 6,
+   "field": "YSC-012.source_ids",
+   "old": "SRC-WB-YEM-FRAGMENTATION-2025-001 | SRC-CBY-UNLICENSED-EWALLET-2024-001 | SRC-CBY-DEC-23-2024-001",
+   "new": "SRC-WB-YEM-FRAGMENTATION-2025-001 | SRC-CBY-UNLICENSED-EWALLET-2024-001 | SRC-CBY-DEC-23-2024-001 | SRC-CBY-SANAA-C12-2024 | SRC-CBY-DEC-19-2024"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 7,
+   "field": "YSC-012.source_scope",
+   "old": "World Bank account of competing-authority measures; provider current status still requires provider-specific authority evidence.",
+   "new": "World Bank account of competing-authority measures; provider current status still requires provider-specific authority evidence. Rule texts of both central banks on paying out incoming external transfers: Circular No. 12 of the Central Bank of Yemen in Sana'a (in the copy a news site republished) and Decision No. 19 of 2024 of the Governor of the Central Bank of Yemen in Aden; neither shows how transfers were paid."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 19,
+   "col": 20,
+   "field": "YSC-012.value_states",
+   "old": "[{\"t\":\"March 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"100-rial\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"April 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"June 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"June 2024 (wallets/payment services)\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-UNLICENSED-EWALLET-2024-001\",\"loc\":\"cby-ye.com/files/667c32dabd223.pdf p.1 header (scanned; viewed as image)\"},{\"t\":\"June 2024 (remittance networks)\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-23-2024-001\",\"loc\":\"cby-ye.com/files/667c596ef3bea.pdf p.1 header and title (scanned; viewed as image)\"}]",
+   "new": "[{\"t\":\"March 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"100-rial\",\"k\":\"v\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"April 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"June 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-WB-YEM-FRAGMENTATION-2025-001\",\"loc\":\"YEM Fall 2024 (additional URL of SRC-WB-YEM-FRAGMENTATION-2025-001), printed p.11 (PDF p.21); also PDF p.19\"},{\"t\":\"June 2024 (wallets/payment services)\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-UNLICENSED-EWALLET-2024-001\",\"loc\":\"cby-ye.com/files/667c32dabd223.pdf p.1 header (scanned; viewed as image)\"},{\"t\":\"June 2024 (remittance networks)\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-23-2024-001\",\"loc\":\"cby-ye.com/files/667c596ef3bea.pdf p.1 header and title (scanned; viewed as image)\"},{\"t\":\"13 March 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-SANAA-C12-2024\",\"loc\":\"yemeneco.org copy of Circular No. 12, p.1, date field 'Date: 13/ 3 / 2024' and 3/9/1445 AH; read 11 October 2026\"},{\"t\":\"14 March 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-SANAA-C12-2024\",\"loc\":\"same, p.1: 'ابتداءً من تاريخ 1445/09/04هـ الموافق 2024/03/14م'; read 11 October 2026\"},{\"t\":\"23 May 2024\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-DEC-19-2024\",\"loc\":\"cby-ye.com/files/6653499a7181b.pdf p.1: ref. 289/CBY/2024, dated 23/5/2024; issue line with Hijri date (15 Dhu al-Qa'da 1445) p.3; Art.1 p.1, Art.2 p.2, Art.3 (payout currency) and Art.4 (in force) p.3; read 11 October 2026\"},{\"t\":\"12\",\"k\":\"v\",\"s\":\"TRIVIAL\"},{\"t\":\"19\",\"k\":\"v\",\"s\":\"TRIVIAL\"}]"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 4,
+   "field": "YSC-015.fact_en",
+   "old": "The internationally recognized government established the National Committee for the Regulation and Financing of Imports to prioritize FX use for essential imports, enhance import transparency and channel FX into the formal banking sector.",
+   "new": "The internationally recognized government established the National Committee for the Regulation and Financing of Imports to prioritize FX use for essential imports, enhance import transparency and channel FX into the formal banking sector. CBY-Aden reported that the committee, which it called the Committee for Financing and Regulating Imports, held its first meeting on 17 July 2025 at the central bank in Aden, chaired by the Governor with the Minister of Trade and Industry as deputy chair, and that its members include the government bodies concerned with finance, trade, and customs and judicial enforcement, with representatives of banks, exchange companies and the commercial sector."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 5,
+   "field": "YSC-015.fact_ar",
+   "old": "أنشأت الحكومة المعترف بها دوليًا اللجنة الوطنية لتنظيم وتمويل الواردات لإعطاء الأولوية في استخدام النقد الأجنبي للواردات الأساسية، وتعزيز شفافية الاستيراد، وتوجيه النقد الأجنبي إلى القطاع المصرفي الرسمي.",
+   "new": "أنشأت الحكومة المعترف بها دوليًا اللجنة الوطنية لتنظيم وتمويل الواردات لإعطاء الأولوية في استخدام النقد الأجنبي للواردات الأساسية، وتعزيز شفافية الاستيراد، وتوجيه النقد الأجنبي إلى القطاع المصرفي الرسمي. وأفاد البنك المركزي اليمني – عدن بأن اللجنة، التي سمّاها «لجنة تمويل وتنظيم الاستيراد»، عقدت أول اجتماعاتها في 17 يوليو 2025 في مبنى البنك المركزي بعدن برئاسة المحافظ وبحضور وزير التجارة والصناعة نائبًا لرئيسها، وأنها تضم الجهات الحكومية المعنية بالتمويل والتجارة والضبطية الجمركية والقضائية إلى جانب ممثلي البنوك وشركات الصرافة والقطاع التجاري."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 12,
+   "field": "YSC-015.does_not_establish_en",
+   "old": "Creation of the committee does not prove improved access, lower costs or successful formalization.",
+   "new": "Creation of the committee does not prove improved access, lower costs or successful formalization. The news release of its first meeting does not say who established the committee or under which decision."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 13,
+   "field": "YSC-015.does_not_establish_ar",
+   "old": "إنشاء اللجنة لا يثبت تحسن الوصول أو انخفاض التكلفة أو نجاح التحول إلى القنوات الرسمية.",
+   "new": "إنشاء اللجنة لا يثبت تحسن الوصول أو انخفاض التكلفة أو نجاح التحول إلى القنوات الرسمية. ولا يذكر البيان الصحفي عن اجتماعها الأول الجهة التي أنشأتها ولا القرار الذي أُنشئت بموجبه."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 7,
+   "field": "YSC-015.source_scope",
+   "old": "IRG policy framework.",
+   "new": "IRG policy framework. CBY-Aden news release on the committee's first meeting (it states no establishing decision and no mandate)."
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 6,
+   "field": "YSC-015.source_ids",
+   "old": "SRC-IMF-AIV-2025-STAFF-001",
+   "new": "SRC-IMF-AIV-2025-STAFF-001 | SRC-CBY-NEWS-832"
+  },
+  {
+   "finding": "CLOSE-6B:EVENTS",
+   "sheet": "14_SYSTEM_CHRONOLOGY",
+   "row": 25,
+   "col": 20,
+   "field": "YSC-015.value_states",
+   "old": "[{\"t\":\"July 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff appraisal printed p.21 (PDF p.26); description printed p.7 (PDF p.12) para 8\"}]",
+   "new": "[{\"t\":\"July 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-IMF-AIV-2025-STAFF-001\",\"loc\":\"IMF CR 26/80 PDF (src/imf_cr2680_upload.pdf, obtained 2026-10-04; imf.org pages 403 today), staff appraisal printed p.21 (PDF p.26); description printed p.7 (PDF p.12) para 8\"},{\"t\":\"17 July 2025\",\"k\":\"d\",\"s\":\"READ\",\"src\":\"SRC-CBY-NEWS-832\",\"loc\":\"cby-ye.com/news/832, dated 2025-07-17: 'صباح اليوم الخميس الموافق 17 يوليو 2025م'; read 11 October 2026\"}]"
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 23,
+   "col": 2,
+   "field": "00_MASTER!r23c2",
+   "old": "29",
+   "new": 31
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 23,
+   "col": 3,
+   "field": "00_MASTER!r23c3",
+   "old": "29",
+   "new": 31
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 2,
+   "field": "00_MASTER!r24c2",
+   "old": "199",
+   "new": 200
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "00_MASTER",
+   "row": 24,
+   "col": 3,
+   "field": "00_MASTER!r24c3",
+   "old": "199",
+   "new": 200
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 14,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r14c4",
+   "old": "29",
+   "new": 31
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 14,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r14c3",
+   "old": "29",
+   "new": 31
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 4,
+   "field": "37_READINESS_CHECKLIST!r15c4",
+   "old": "199",
+   "new": 200
+  },
+  {
+   "finding": "CLOSE-6B:OWN-10",
+   "sheet": "37_READINESS_CHECKLIST",
+   "row": 15,
+   "col": 3,
+   "field": "37_READINESS_CHECKLIST!r15c3",
+   "old": "199",
+   "new": 200
+  }
+ ]
+}

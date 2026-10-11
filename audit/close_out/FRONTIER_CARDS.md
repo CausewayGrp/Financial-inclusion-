@@ -441,6 +441,7 @@ Cards: 47. No new FRN- ID was needed.
 - **Public state meanwhile:** A locator-only card with the original address.
 - **Cadence:** At release (runbook step 4); then each new edition.
 - **Who:** A person with a browser
+- **Update, 11 Oct 2026 (CLOSE-6B, addendum item 3):** HTTP 503 or a reset connection again; the Wayback Machine lists captures of 16 March 2019 and 30 June 2022, which could not be opened from this environment. The source feeds no record and is now withheld from the public directory (NON_PUBLIC). Public state meanwhile: not listed. Human step unchanged: confirm an archived copy; if confirmed, the steward may restore it Master-first, labelled as an archived copy.
 
 ## X-REG-LINK-C12 — CBY Sana'a Circular No. 12 of 2024: no working locator
 
@@ -450,6 +451,7 @@ Cards: 47. No new FRN- ID was needed.
 - **Public state meanwhile:** A locator-only card.
 - **Cadence:** At release (runbook step 4); then each new edition.
 - **Who:** A person with a browser
+- **Closed, 11 Oct 2026 (CLOSE-6B, addendum item 3):** the locator recorded on 4 Oct 2026 (a copy on yemeneco.org; the issuer publishes none that opens from here) was opened and read in full (`audit/close_out/addendum/R3_cby_completions.md`). The card is completed: issuer CBY-Sana'a, 13 March 2024, why it matters and what it does not establish. Register state: CLOSED. A link check at release (runbook step 4) still covers it.
 
 ## X-REG-LINK-CDN14 — 14 locators refused by publishers' CDNs
 

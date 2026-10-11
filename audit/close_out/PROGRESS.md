@@ -216,3 +216,11 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   S1–S21; Arabic M1–M8, S1–S16, nits). Reads R1, R2, R4, R6 and both reviews committed in audit/close_out/addendum/;
   WDI snapshot in fixtures. Challenges recorded: MA-005 1.48 -> 1.5; Brief 40 not corroboration; "until 2023" right for
   e-money, completed by the 2022 PSP instructions.
+- 2026-10-11 · A+ · item 3 · CLOSE-6B (Master 1d468c2c -> 17c6b5dc, 194 cells): two Sana'a Center duplicates retired into
+  their canonical records (authors: Sana'a Center Economic Unit); six sources withheld; C12, the University of Aden
+  article, the Quarterly Bulletin, AMB and CCY cards completed; ten regulatory cards carry why-it-matters and boundary
+  text from 31_REFORMS_REGULATION; /data/ count = cards rendered (38; gate B5 + negative control); chronology 31 events
+  (e-KYC 2023 -> MA-007; Decision No. 7 of 2026; YSC-012 paired with CBY-Sana'a Circular No. 12; news/832 = first
+  meeting, not establishment); AML grouped event declined (no access channel). SOURCE_UTILISATION_2026-10-11.csv written.
+  X-REG-LINK-C12 CLOSED; AR2015 card updated. Review pair applied (REDTEAM_6B, ARABIC_6B). Challenges recorded: KfW
+  47229 undated (no date invented; EUR 4.5m is phase III and phase I); AR2015 and CURR-2024 unverifiable, withheld.

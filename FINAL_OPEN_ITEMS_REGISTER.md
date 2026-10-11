@@ -11,9 +11,9 @@ the public state meanwhile and a cadence. A state change updates this view and i
 
 | State | Items |
 |---|---|
-| CLOSED | 82 |
+| CLOSED | 83 |
 | HOSTING | 9 |
-| FRONTIER | 47 |
+| FRONTIER | 46 |
 | OWNER-OPTIONAL | 8 |
 | DECIDED | 101 |
 | **Total** | **247** |
@@ -104,6 +104,7 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | U12 | UCT status | CLOSE-3B, PR #32 at `4bd931d0` | — |
 | U13 | MICS 2022–23 | CLOSE-3B, PR #32 at `4bd931d0` | — |
 | U14 | WB phone survey | CLOSE-3B, PR #32 at `4bd931d0`: catalogue metadata only; no microdata used | — |
+| X-REG-LINK-C12 | CBY Sana'a Circular No. 12 of 2024: no working locator | CLOSE-6B (addendum item 3, 11 Oct 2026): the recorded locator (a copy on yemeneco.org, recorded 4 Oct 2026) opens and was read in full (R3); the card is completed (issuer CBY-Sana'a, 13 March 2024, why it matters, what it does not establish) | — |
 
 ### HOSTING — done at or after deployment
 
@@ -163,7 +164,6 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | FRN-06 | Size of the 2022 banking restatement | Card FRN-06 (checked 3 Oct 2026) | Claude Code. Each CBY-Aden annual report. |
 | FRN-07 | Composite records whose members are not listed | Card FRN-07 (checked 10 Oct 2026) | Programme steward. Each new edition. |
 | FRN-08 | WB Joint Food Security Monitor sub-national rate series | Card FRN-08 (checked 3 Oct 2026) | Owner. Each new edition. |
-| X-REG-LINK-C12 | CBY Sana'a Circular No. 12 of 2024: no working locator | Card X-REG-LINK-C12 (checked 10 Oct 2026) | A person with a browser. At release (runbook step 4); then each new edition. |
 | X-REG-LINK-AR2015 | CBY annual report 2015 host (503) | Card X-REG-LINK-AR2015 (checked 10 Oct 2026) | A person with a browser. At release (runbook step 4); then each new edition. |
 | X-REG-LINK-CDN14 | 14 locators refused by publishers' CDNs | Card X-REG-LINK-CDN14 (checked 10 Oct 2026) | A person with a browser. At release (runbook steps 4 and 12); then each new edition. |
 | X-LINK-TLS-SIGNIN | Two locators: TLS failure and sign-in wall | Card X-LINK-TLS-SIGNIN (checked 10 Oct 2026) | A person with a browser. At release; then each new edition. |

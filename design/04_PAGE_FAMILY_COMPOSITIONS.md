@@ -116,7 +116,8 @@ Head (flow rubric, `h1`, lead) → the strip → **the register** as the first a
 the filter (`data-source-filter`, its status), then three groups — *Curated reports and references* (28 cards grouped
 by `resource_category`, each with its kind line, reference, why it matters, boundary, open original, copy reference,
 reuse state, dependent records), *Sources supporting the evidence now published* (closed by default under its governed
-summary and count; citation cards by governed title, locator-only sources by reference and locator, never a title;
+summary and count; citation cards by governed title, and, where the record carries it, its why-it-matters under About
+this source and its boundary (CLOSE-6B); locator-only sources by reference and locator, never a title;
 the untouched runtime opens the group on a filter match and on a `?source=` deep link, and print opens every
 disclosure), *Additional original references* (closed) — and the no-match state → sections 2–7 (limits in the
 boundary voice) → section 8 as the inventory list → section 9 with the chronology (24 dated events as compact

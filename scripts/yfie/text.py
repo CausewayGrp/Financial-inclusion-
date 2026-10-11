@@ -16,7 +16,10 @@ SIGNED = re.compile(r"(?<![\w\u0600-\u06FF-])[+\u2212\u2013-]\d[\d,]*(?:\.\d+)?%
 # a table or figure number as its source prints it ("Table 4-1"): after Arabic letters its parts would display reversed
 # (edition 2, E2-7)
 TABLE_NO = re.compile(r"(?<![\w.,\u2013-])\d{1,2}-\d{1,2}(?![\w.,\u2013-])")
-LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})|(?:{SIGNED.pattern})|(?:{TABLE_NO.pattern})")
+# a reference number as an instrument prints it ("840/CBY/2023"): after Arabic letters its parts would display
+# "CBY/2023/840" (close-out CLOSE-6B, Arabic review S10)
+REF_NO = re.compile(r"(?<![\w/])\d{1,4}[/][A-Z]{2,}(?:[/][A-Z]+)?[/]\d{4}(?![\w/])")
+LTR_RUN = re.compile(f"(?:{NUM_RANGE.pattern})|(?:{ISO_DATE.pattern})|(?:{SIGNED.pattern})|(?:{TABLE_NO.pattern})|(?:{REF_NO.pattern})")
 # A record, source or object identifier with a digit (CLM-001, FMIIP-BASELINE-2025-01, SRC-CBY-AR2022-001): left to right
 # and isolated wherever governed text reaches an Arabic page, but never "nw" — it breaks at its own hyphens.
 ID_RUN = re.compile(r"(?<![A-Za-z0-9_-])(?=[A-Z][A-Za-z0-9-]*\d)[A-Z][A-Z0-9]*(?:-[A-Za-z0-9]+)+(?![A-Za-z0-9_-])")

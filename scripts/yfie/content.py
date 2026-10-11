@@ -1242,6 +1242,10 @@ class Content:
                 facet_opts["domain"].setdefault("none", L("UI-DATA-FILTER-NOT-RECORDED"))
             card["regulatory"] = r.get("document_label") in REGULATORY_LABELS
             card["kind_line"] = " · ".join(x for x in [card["publisher"], card["kind"], card["date"]] if x)
+            # close-out CLOSE-6B (addendum item 3): a citation card prints the governed "why it matters" and boundary its
+            # record carries (the regulatory instruments: what they require, and that a rule is not its implementation)
+            card["why"] = ((r.get("why_it_matters_ar") if ar else r.get("why_it_matters")) or "") if display_ready else ""
+            card["does_not_establish"] = ((r.get("does_not_establish_ar") if ar else r.get("does_not_establish")) or "") if display_ready else ""
             if display_ready and r.get("standalone_resource_card_eligible"):
                 card.update({"category": (r.get("resource_category_ar") if ar else r.get("resource_category")) or "", "why": (r.get("why_it_matters_ar") if ar else r.get("why_it_matters")) or "",
                              "does_not_establish": (r.get("does_not_establish_ar") if ar else r.get("does_not_establish")) or ""})
@@ -1263,7 +1267,9 @@ class Content:
                 "chronology_pointer": {"label": L("UI-DATA-CHRONOLOGY-OPEN"), "href": self.href("/finance/", lang) + "#chronology"},
                 "blocks": self.governed_blocks(spec, lang, "/data"),
                 # the group counts the page prints are handed over with the groups (the page prints no number the loader does not)
-                "regulatory_count": len(regulatory) + len(regulatory_also), "supporting_count": len(supporting), "reference_count": len(reference),
+                # close-out CLOSE-6B (addendum housekeeping): the group's count is the cards it renders; a curated regulatory
+                # card is linked below them, not counted twice
+                "regulatory_count": len(regulatory), "supporting_count": len(supporting), "reference_count": len(reference),
                 "next": self.journey_next("/data/", lang),
                 "labels": {**self.common_labels(lang), "directory": L("UI-DATA-SOURCE-DIRECTORY-AND-VERIFICATION"), "intro": L("UI-DATA-ONLY-SOURCE-INFORMATION-PERMITTED-BY"),
                            "curated": L("UI-DATA-CURATED-REPORTS-AND-REFERENCES"), "supporting": L("UI-DATA-SOURCES-SUPPORTING-CURRENT-PUBLIC-EVIDENCE"),
