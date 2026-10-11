@@ -224,3 +224,17 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   meeting, not establishment); AML grouped event declined (no access channel). SOURCE_UTILISATION_2026-10-11.csv written.
   X-REG-LINK-C12 CLOSED; AR2015 card updated. Review pair applied (REDTEAM_6B, ARABIC_6B). Challenges recorded: KfW
   47229 undated (no date invented; EUR 4.5m is phase III and phase I); AR2015 and CURR-2024 unverifiable, withheld.
+- 2026-10-11 · A+ · CLOSE-6A merged: PR #40 at `2b6b2b2c` (9/9 CI after the CR-21 negative-control fix `2f9fec66`).
+  CLOSE-6B opened as PR #41 (156/156 negative controls locally).
+- 2026-10-11 · A+ · item 4 · CLOSE-6C (Master 17c6b5dc -> 7627f97c, 79 cells): CWR-012 "How money reaches households"
+  promoted at /readings/how-money-reaches-households/ with CCY-ISP-2024 and CCY-SAM-2024 (R5 read both studies in
+  full). Review pair: red-team HOLD (B1 "informal" transfers through licensed providers, B2 "mainly", B3 "the economy
+  as a whole") -> fixed; confirmation pass NB1 (route description "the channel is not measured", false) -> fixed;
+  final PROMOTE. Arabic PASS (M1–M6, S1–S13, C-S1–C-S4 applied; 0 numeral drift over 37 pairs). Search alias 001 said
+  the base holds no law -> corrected (found while closing CLOSE-6B). Steward D9 commit for the three routes (508 -> 514
+  search records). Build 304 HTML, 150 Page Specs, 115 Evidence Records, 12 Readings; literal closure 0 unresolved, 0
+  open (18,223). Owner questions 1 (F2) and 3 (CWR-002 -> MA-008) accepted and kept.
+- 2026-10-11 · A+ · item 5 · W3f re-run: live view 265 items (CLOSED 92, HOSTING 9, FRONTIER 46, OWNER-OPTIONAL 8,
+  DECIDED 110). New: ADD3-1, CR-21, CR-22, ADD3-EMONEY, ADD3-CCY-PRESSURE, ADD3-3, ADD3-4, ADD3-ALIAS-001 (CLOSED);
+  ADD3-D1–D9 (DECIDED); ADD3-O1, CCY's own Arabic name (OWNER-OPTIONAL). OWN-13 CLOSED; X-REG-LINK-C12 CLOSED in
+  CLOSE-6B. Context open_items updated.

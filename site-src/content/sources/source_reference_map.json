@@ -595,7 +595,9 @@
       "CLM-009",
       "CLM-019"
     ],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [],
     "linked_measurement_ids": [
       "MA-005"
@@ -1686,7 +1688,9 @@
       "VIS-REMITTANCE-COST"
     ],
     "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [
       "VIS-REMITTANCE-COST"
     ],
@@ -1723,7 +1727,9 @@
       "VIS-REMITTANCE-COST"
     ],
     "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [
       "VIS-REMITTANCE-COST"
     ],
@@ -1964,7 +1970,8 @@
     "linked_reading_ids": [
       "CWR-003",
       "CWR-004",
-      "CWR-007"
+      "CWR-007",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-003",
@@ -2027,7 +2034,8 @@
     "linked_reading_ids": [
       "CWR-003",
       "CWR-004",
-      "CWR-007"
+      "CWR-007",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-003",
@@ -2542,7 +2550,9 @@
       "VIS-PAYMENT-RAILS"
     ],
     "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [
       "VIS-PAYMENT-RAILS"
     ],
@@ -2672,7 +2682,9 @@
     "linked_claim_ids": [
       "CLM-012"
     ],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [
       "VIS-E-MONEY-RULE-STACK",
       "VIS-PAYMENT-RAILS"
@@ -2717,7 +2729,8 @@
       "CLM-010"
     ],
     "linked_reading_ids": [
-      "CWR-005"
+      "CWR-005",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-005",
@@ -2798,7 +2811,9 @@
     "linked_claim_ids": [
       "CLM-016"
     ],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [],
     "linked_measurement_ids": [],
     "rule": "DISPLAY_READY fields come only from the Production Master. LOCATOR_ONLY preserves the locator without inventing missing bibliography or rights metadata."
@@ -2838,7 +2853,8 @@
     ],
     "linked_reading_ids": [
       "CWR-004",
-      "CWR-009"
+      "CWR-009",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-004",
@@ -2885,7 +2901,8 @@
     ],
     "linked_reading_ids": [
       "CWR-004",
-      "CWR-009"
+      "CWR-009",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-004",
@@ -2932,7 +2949,8 @@
     ],
     "linked_reading_ids": [
       "CWR-004",
-      "CWR-009"
+      "CWR-009",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-004",
@@ -2979,7 +2997,8 @@
     ],
     "linked_reading_ids": [
       "CWR-004",
-      "CWR-009"
+      "CWR-009",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-004",
@@ -3844,7 +3863,8 @@
       "CLM-030"
     ],
     "linked_reading_ids": [
-      "CWR-007"
+      "CWR-007",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-007"
@@ -3920,7 +3940,8 @@
     ],
     "linked_reading_ids": [
       "CWR-004",
-      "CWR-009"
+      "CWR-009",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-004",
@@ -4259,7 +4280,9 @@
       "CLM-008",
       "CLM-016"
     ],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [],
     "linked_measurement_ids": [
       "MA-005"
@@ -4458,7 +4481,8 @@
       "CLM-043"
     ],
     "linked_reading_ids": [
-      "CWR-001"
+      "CWR-001",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-001"
@@ -4501,7 +4525,8 @@
       "CLM-035"
     ],
     "linked_reading_ids": [
-      "CWR-001"
+      "CWR-001",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-001"
@@ -4732,6 +4757,7 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CCY-SAM-2024",
       "CLM-045",
       "DS-QUAL-EVIDENCE"
     ],
@@ -4739,7 +4765,8 @@
       "CLM-045"
     ],
     "linked_reading_ids": [
-      "CWR-010"
+      "CWR-010",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-010"
@@ -4820,6 +4847,7 @@
     "rights_display_state": "OBJECT_LEVEL_OR_UNSPECIFIED",
     "citation_behavior": "Use the original locator and object-level controlled citation/source text; do not infer missing bibliographic or rights metadata.",
     "linked_evidence_object_ids": [
+      "CCY-ISP-2024",
       "CLM-045",
       "DS-QUAL-EVIDENCE"
     ],
@@ -4827,7 +4855,8 @@
       "CLM-045"
     ],
     "linked_reading_ids": [
-      "CWR-010"
+      "CWR-010",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-010"
@@ -5587,7 +5616,8 @@
     "linked_claim_ids": [],
     "linked_reading_ids": [
       "CWR-003",
-      "CWR-009"
+      "CWR-009",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-003",
@@ -6017,7 +6047,8 @@
       "CWR-008",
       "CWR-009",
       "CWR-010",
-      "CWR-011"
+      "CWR-011",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-003",
@@ -6142,7 +6173,8 @@
     "linked_reading_ids": [
       "CWR-001",
       "CWR-002",
-      "CWR-011"
+      "CWR-011",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-001",
@@ -6191,7 +6223,8 @@
     "linked_reading_ids": [
       "CWR-001",
       "CWR-002",
-      "CWR-011"
+      "CWR-011",
+      "CWR-012"
     ],
     "linked_visual_ids": [
       "RV-CWR-001",
@@ -6599,7 +6632,9 @@
       "CLM-009",
       "CLM-019"
     ],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [],
     "linked_measurement_ids": [
       "MA-005"
@@ -6639,7 +6674,9 @@
     "linked_claim_ids": [
       "CLM-015"
     ],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [
       "VIS-PAYMENT-RAILS"
     ],
@@ -7051,7 +7088,9 @@
       "VIS-REMITTANCE-COST"
     ],
     "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [
       "VIS-REMITTANCE-COST"
     ],
@@ -7088,7 +7127,9 @@
       "VIS-REMITTANCE-COST"
     ],
     "linked_claim_ids": [],
-    "linked_reading_ids": [],
+    "linked_reading_ids": [
+      "CWR-012"
+    ],
     "linked_visual_ids": [
       "VIS-REMITTANCE-COST"
     ],

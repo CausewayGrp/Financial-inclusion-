@@ -16,7 +16,7 @@ evidence for human decisions; it makes no regulatory, political, business or fun
 It moves a reader from a question to the strongest defensible answer, what it means, what it does not establish, the
 system context, what remains unknown, what should be measured next — and then to the evidence record, the method and
 the original source. The public site already exists as a complete, tested reference build with a deliberately plain baseline style, in
-`dist/` (296 static HTML documents). You are designing the final product from that governed baseline.
+`dist/` (302 static HTML documents). You are designing the final product from that governed baseline.
 
 ## 2. Your role
 
@@ -41,8 +41,8 @@ authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx      the only authority
   → dist/                                                     the public build (never edit by hand)
 ```
 
-Production Master SHA-256 `17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9`; Page Specs
-(`site-src/content/page_specs.json`) SHA-256 `e62dda32258f336abb01c3cff1a916c37f063993782ed6eab47fc957843156bd`. If the
+Production Master SHA-256 `7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092`; Page Specs
+(`site-src/content/page_specs.json`) SHA-256 `e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394`. If the
 repository shows other hashes, the repository is right — re-read it; never restore a hash from a document.
 
 A content defect is never fixed in a page, a JSON file or a component. It is escalated (§10) and fixed in the Master by

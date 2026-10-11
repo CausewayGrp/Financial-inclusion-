@@ -2,13 +2,13 @@
  "rule": "Evidence records show only exact bound sources, listed member records, or an explicit unbound or framing state (Tranche B Stage 1, PB-0001/PB-0002). Dataset-level tokens are never expanded into source lists; an input that is not bound to a source stays explicit as unresolved. Never invent a source, title, publisher, date, licence or missing fact.",
  "as_of": "Pre-Tranche-C P5",
  "evidence_record_lineage_state_counts": {
-  "BOUND_EXACT": 99,
+  "BOUND_EXACT": 101,
   "FRAMING_NO_FACT": 6,
   "COMPOSITE_OF_OBJECTS": 8
  },
  "closure_state_counts_by_object_type": {
   "evidence_object": {
-   "CLOSED_TO_SOURCE_ID": 99,
+   "CLOSED_TO_SOURCE_ID": 101,
    "FRAMING_NO_FACT": 6,
    "COMPOSITE_OF_OBJECTS": 8
   },
@@ -18,7 +18,7 @@
    "COMPOSITE_OF_OBJECTS": 2
   },
   "reading": {
-   "CLOSED_TO_SOURCE_ID": 11
+   "CLOSED_TO_SOURCE_ID": 12
   },
   "visual": {
    "CLOSED_TO_SOURCE_ID": 31,

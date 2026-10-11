@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-11T14:00:00Z",
+  "generated_at": "2026-10-11T16:00:00Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -27,7 +27,7 @@
         "The owner's release approval and tag (steps 13–14)"
       ],
       "handover": "docs/HANDOVER_TO_DEVELOPER.md",
-      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md, section \"Live status at 876f52df\" at the top: 247 items, one state each — CLOSED 82, HOSTING 9, FRONTIER 47 (each with a verification card and a cadence), OWNER-OPTIONAL 8, DECIDED 101; twin audit/close_out/OPEN_ITEMS_STATES.json, gate CO-G06; nothing is PENDING outside HOSTING; sections 1–10 below it are history"
+      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md, section \"Live status at the close of the Stage A addendum (CLOSE-6C, 11 October 2026)\" at the top: 265 items, one state each — CLOSED 92, HOSTING 9, FRONTIER 46 (each with a verification card and a cadence), OWNER-OPTIONAL 8, DECIDED 110; twin audit/close_out/OPEN_ITEMS_STATES.json, gate CO-G06; nothing is PENDING outside HOSTING; sections 1–10 below it are history"
     },
     "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
     "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
@@ -65,7 +65,7 @@
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9",
+    "sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -79,27 +79,27 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "e62dda32258f336abb01c3cff1a916c37f063993782ed6eab47fc957843156bd",
-    "page_specs": 147,
+    "page_specs_sha256": "e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394",
+    "page_specs": 150,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
   },
   "controlled_scale": {
-    "page_specs": 147,
-    "page_sections": 595,
+    "page_specs": 150,
+    "page_sections": 607,
     "entry_questions": 11,
-    "evidence_objects": 113,
+    "evidence_objects": 115,
     "public_claims": 60,
     "evidence_passports": 55,
-    "readings": 11,
+    "readings": 12,
     "measurement_priorities": 10,
     "visual_contracts": 42,
-    "search_records": 508,
+    "search_records": 514,
     "sources": 200,
     "publicly_addressable_sources": 185,
     "curated_source_report_cards": 28,
     "chronology_events": 31,
-    "reading_sections": 83
+    "reading_sections": 92
   },
   "public_navigation": {
     "rule": "Derived from site-src/content/content/navigation_interaction.json by scripts/rebind_authority.py.",
@@ -238,7 +238,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9",
+    "master_sha256_recorded": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

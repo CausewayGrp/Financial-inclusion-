@@ -1,5 +1,49 @@
 # Repository Change Log
 
+## 2026-10-11 — CLOSE-6C: Reading CWR-012 "How money reaches households", with two Cash Consortium of Yemen records (Stage A addendum, item 4)
+
+Master transaction CLOSE-6C (Master 17c6b5dc -> 7627f97c, 79 cells; `audit/close_out/close_6c.py`, with `close_6c_text.py` and `close_6c_records.py`; ledger and
+run report in `audit/close_out/runs/`). The read behind it is R5 (both CCY studies in full). The review pair, its
+confirmation pass and the disposition of every finding are in `audit/close_out/addendum/`.
+
+- **The Reading.** /readings/how-money-reaches-households/ asks whether money sent between people in Yemen reaches
+  households more through exchange companies than through accounts. In Yemen's Findex 2021 wave, 31.9% of adults in
+  surveyed areas received domestic remittances and 11.9% had an account. That is consistent with a comparative hypothesis
+  (more through exchange companies and other money-transfer providers than through accounts), stated as a hypothesis. The
+  only channel values held are 2014's (31.1% of recipients through a money transfer operator, 2.0% through a financial
+  institution). Other routes and humanitarian cash fit the same numbers; survey coverage, currency and the meaning of
+  "remittance" limit them. The CBY-Aden roster is scoped to CBY-Aden licensing, and the June 2024 domestic-transfer rule
+  is stated with its date and scope (VIS-PAYMENT-RAILS). The balance-of-payments values are not "the economy as a
+  whole". Both remittance-price corridors are named. Owner questions 1 (F2: /remittances/ carries CWR-001 and CWR-012)
+  and 3 (CWR-002 → MA-008) stand.
+- **Two new Evidence Records.**
+  - CCY-ISP-2024: informal support in the cash income of cash-assistance households in three areas (June 2024).
+  - CCY-SAM-2024: the income sources the households reported, with the study's multiplier estimate, in selected
+    villages of Ad-Dali and Ja'ar (2024). The multiplier is activity, the transfer included, not income.
+  - Both are attributed to the study ("calls sub-districts", "places in areas under the internationally recognized
+    government"); "hawala" is the study's word. Neither records how money moves between households, and the Reading
+    prints none of their values.
+- **Review.**
+  - The red-team (exchange-company, central-bank and methods readers) held the first text on three blockers: "informal"
+    transfers through licensed providers, "mainly", and "the economy as a whole". All three were fixed. Its confirmation
+    pass found one more blocker, NB1, a false "the channel is not measured" in the route description, also fixed. Final
+    verdict: PROMOTE.
+  - The Arabic editor: 6 must-fix, 13 + 4 should-fix and nits applied. Final verdict: PASS, with 0 numeral drift across
+    37 EN–AR pairs.
+  - Both review files and DISPOSITION_6C.md are committed.
+- **Search alias 001** (found while closing CLOSE-6B). Its boundary note said the evidence base holds no law. It holds
+  one, on the Bank Deposit Insurance Institution, and one of its regulatory documents was issued in Sana'a. The note now
+  says both, in EN and AR, reviewed by the same pair.
+- **Steward edit (D9, own commit).** Three detail routes; public search records 508 -> 514.
+- **Build:** 304 HTML documents from 150 Page Specs; 115 Evidence Records; 12 Readings. Literal closure 0 unresolved,
+  0 open.
+- **Register (W3f re-run, item 5).**
+  - Live view: every addendum item in one of the five states. OWN-13 closes with CWR-012's publication.
+  - New items:
+    - CLOSED: ADD3-1, CR-21, CR-22, ADD3-EMONEY, ADD3-CCY-PRESSURE, ADD3-3, ADD3-4, ADD3-ALIAS-001;
+    - DECIDED: ADD3-D1–D9;
+    - OWNER-OPTIONAL: ADD3-O1 (CCY's own Arabic name, a site-wide terminology decision).
+
 ## 2026-10-11 — CLOSE-6B: source utilisation — merges, withholds, card completions, regulation on /data/, chronology (Stage A addendum, item 3)
 
 Master transaction CLOSE-6B (`audit/close_out/close_6b.py`; Master 1d468c2c -> 17c6b5dc, 194 cells; ledger and run report

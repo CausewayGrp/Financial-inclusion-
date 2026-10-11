@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "17c6b5dcb8fc91f74955baf08a2c2a742d09b1e0a82c632ad1b1864756ccb5f9",
+  "production_master_sha256": "7627f97cd96ca8719fe2aa778e9d69d80ebca4ca27e7292e8102159f1702f092",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "e62dda32258f336abb01c3cff1a916c37f063993782ed6eab47fc957843156bd",
+  "page_specs_sha256": "e755b8851a09effeece3af440b31edacc3ea6d552e505d39107ef1dcdbdfd394",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -28,14 +28,14 @@
   "BUILD_AND_GATES": 46,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 240,
+  "CURRENT_PROGRAMME_RECORD": 253,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
   "GENERATED_PROJECTION": 38,
-  "GENERATED_PUBLIC_BUILD": 615,
-  "GENERATED_SOCIAL_IMAGES": 295,
+  "GENERATED_PUBLIC_BUILD": 627,
+  "GENERATED_SOCIAL_IMAGES": 301,
   "LOGO_AUTHORITY": 1,
   "PRODUCTION_RENDERER": 9,
   "PROJECTION_CONTRACT": 11,
@@ -496,6 +496,26 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/addendum/ARABIC_6C.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/ARABIC_6C_CONFIRM.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/CWR-012_review_bundle_v1.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/CWR-012_review_bundle_v2.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/DISPOSITION_6C.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/addendum/R1_findex_mdb40.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -512,6 +532,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/addendum/R5_ccy_isp_sam.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/addendum/R6_mics_ymps.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -525,6 +549,14 @@
   },
   {
    "path": "audit/close_out/addendum/REDTEAM_6B.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/REDTEAM_6C.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/REDTEAM_6C_CONFIRM.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -581,6 +613,18 @@
   },
   {
    "path": "audit/close_out/close_6b.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/close_6c.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/close_6c_records.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/close_6c_text.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -713,6 +757,14 @@
   },
   {
    "path": "audit/close_out/runs/CLOSE-6B_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-6C_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-6C_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -4268,6 +4320,14 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/ar/evidence/CCY-ISP-2024/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/CCY-SAM-2024/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/ar/evidence/CLM-001/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -4796,6 +4856,10 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/ar/readings/how-money-reaches-households/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/ar/readings/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -4957,6 +5021,22 @@
   },
   {
    "path": "dist/assets/social/evidence_CBY-BANKS-2026-05__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CCY-ISP-2024__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CCY-ISP-2024__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CCY-SAM-2024__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_CCY-SAM-2024__en.png",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -6016,6 +6096,14 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/assets/social/readings_how-money-reaches-households__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/readings_how-money-reaches-households__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/assets/social/readings_microfinance-structural-divergence__ar.png",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -6109,6 +6197,14 @@
   },
   {
    "path": "dist/en/evidence/CBY-BANKS-2026-05/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CCY-ISP-2024/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/CCY-SAM-2024/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -6637,6 +6733,10 @@
   },
   {
    "path": "dist/en/readings/gender-gap-measured-causes-open/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/readings/how-money-reaches-households/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -7317,6 +7417,22 @@
   },
   {
    "path": "site-src/assets/social/evidence_CBY-BANKS-2026-05__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CCY-ISP-2024__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CCY-ISP-2024__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CCY-SAM-2024__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_CCY-SAM-2024__en.png",
    "class": "GENERATED_SOCIAL_IMAGES"
   },
   {
@@ -8373,6 +8489,14 @@
   },
   {
    "path": "site-src/assets/social/readings_gender-gap-measured-causes-open__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_how-money-reaches-households__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/readings_how-money-reaches-households__en.png",
    "class": "GENERATED_SOCIAL_IMAGES"
   },
   {

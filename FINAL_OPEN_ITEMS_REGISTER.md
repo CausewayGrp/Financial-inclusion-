@@ -1,6 +1,6 @@
 # Final open-items register
 
-## Live status at `876f52df` (main after PR #36, 11 October 2026)
+## Live status at the close of the Stage A addendum (CLOSE-6C, 11 October 2026)
 
 This is the register's live view (brief W3f): every item, old and new, in exactly one state — CLOSED, HOSTING, FRONTIER,
 OWNER-OPTIONAL or DECIDED. Sections 1–10 below are history and are not rewritten; where a cell there is stale, this view
@@ -11,12 +11,12 @@ the public state meanwhile and a cadence. A state change updates this view and i
 
 | State | Items |
 |---|---|
-| CLOSED | 83 |
+| CLOSED | 92 |
 | HOSTING | 9 |
 | FRONTIER | 46 |
 | OWNER-OPTIONAL | 8 |
-| DECIDED | 101 |
-| **Total** | **247** |
+| DECIDED | 110 |
+| **Total** | **265** |
 
 ### CLOSED — with the evidence of closure
 
@@ -105,6 +105,15 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | U13 | MICS 2022–23 | CLOSE-3B, PR #32 at `4bd931d0` | — |
 | U14 | WB phone survey | CLOSE-3B, PR #32 at `4bd931d0`: catalogue metadata only; no microdata used | — |
 | X-REG-LINK-C12 | CBY Sana'a Circular No. 12 of 2024: no working locator | CLOSE-6B (addendum item 3, 11 Oct 2026): the recorded locator (a copy on yemeneco.org, recorded 4 Oct 2026) opens and was read in full (R3); the card is completed (issuer CBY-Sana'a, 13 March 2024, why it matters, what it does not establish) | — |
+| ADD3-1 | Literal closure covers every number a reader sees (MA priorities, Reading fields, composites; fallback removed) | PR #39 at `677fb870` (audit v3: 0 unresolved, 314 open listed) and CLOSE-6A, PR #40: priorities bound, three new records, composite members listed; 0 unresolved, 0 open (17,869 public numbers) | — |
+| CR-21 | Findex 2021 fieldwork printed at day precision | CLOSE-6A, PR #40: "November 2022 to January 2023" in every printed form (post-condition); CLM-023 keeps both World Bank dates and the one-day difference | — |
+| CR-22 | Findex intervals: design effect and coverage | CLOSE-6A, PR #40: /methodology/ says the design effect reflects the weights only, the ~23% coverage limit is separate, and no adjusted interval is computed | — |
+| ADD3-EMONEY | E-money jurisdiction statement | CLOSE-6A, PR #40: VIS-E-MONEY-RULE-STACK gains the attributed Sana'a Center statement; CLM-012 says its rules are CBY-Aden's | — |
+| ADD3-CCY-PRESSURE | CCY cash-pressure report as a bounded item | CLOSE-6A, PR #40: CWR-010 third finding (reported practice, not prevalence); its "12%" is not reused | — |
+| ADD3-3 | Source utilisation (merges, withholds, card completions, /data/ regulation text, chronology, utilisation file) | CLOSE-6B, PR #41: Master `1d468c2c` -> `17c6b5dc`, 194 cells; audit/close_out/SOURCE_UTILISATION_2026-10-11.csv | — |
+| ADD3-4 | Reading CWR-012 "How money reaches households" | CLOSE-6C (11 Oct 2026): promoted after the review pair (red-team PROMOTE, Arabic PASS); CCY findings held as CCY-ISP-2024 and CCY-SAM-2024 | — |
+| ADD3-ALIAS-001 | Search alias 001 said the evidence base holds no law | CLOSE-6C (11 Oct 2026): the note names the one law held (Bank Deposit Insurance Institution) and the one Sana'a circular, EN and AR | — |
+| OWN-13 | A twelfth Reading (RD8, CWR-012) | CLOSE-6C (11 Oct 2026): published as /readings/how-money-reaches-households/ with its two source records and the review pair (audit/close_out/addendum/) | — |
 
 ### HOSTING — done at or after deployment
 
@@ -181,8 +190,8 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | EXT-07 | Findex subgroup base *n* and intervals | Needs licensed microdata, so it opens only through OWN-09; pages say no interval is published here (CLOSE-3A) | Owner, through OWN-09 |
 | OWN-09 | World Bank written confirmation on the microdata | Would unlock the 105 subgroup rows that need computation (held with this reason in CLOSE-3A) | Owner may request it |
 | OWN-11 | CWR-011 on `/finance/` | Not added: rule F2 caps an answer page at two Readings and `/finance/` carries CWR-002 and CWR-006 (PROGRESS, CLOSE-3C departure 4). Since PR #36 at `876f52df` CWR-011 is linked from CWR-002 and from `/measurement/` (MA-008) | Owner: keep F2, or name the Reading that yields |
-| OWN-13 | A twelfth Reading (RD8, CWR-012) | Drafted, not published: `audit/close_out/drafts/CWR-012_draft.json` holds the text; it needs a native Arabic read and its own source records before a transaction (PROGRESS, CLOSE-5) | Owner: commission the review, or leave the eleven Readings as they are |
 | X-REG-SFD62 | SFD newsletter No. 62 exists in two editions | Bound values follow the original edition; nothing printed is false; a caveat would be enrichment (B16) | Owner or steward may add a caveat |
+| ADD3-O1 | The Cash Consortium of Yemen's own Arabic name | The cover prints «اتحاد المساعدات النقدية في اليمن»; the site uses «تحالف النقد في اليمن» (89 cells) and an English publisher_ar. Default: the site name with the Latin gloss (review S15, Arabic S14, N16) | Owner: a site-wide terminology decision |
 
 ### DECIDED — a recorded decision; nothing here is open
 
@@ -289,6 +298,15 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | APX-E-17 | SEBR 2025 bank-efficiency paper | Rejected, brief Appendix E (recorded as DECIDED) | — |
 | APX-E-18 | 2009/2010 Enterprise Survey questionnaires and notes | Rejected, brief Appendix E (recorded as DECIDED) | — |
 | APX-E-19 | Findex respondent files | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| ADD3-D1 | Findex 2021 recall period ("past 12 months") | Not printed: the questionnaire wording was not verified here (review N3) | — |
+| ADD3-D2 | Record class of CCY-SAM-2024 | TEMPORAL_OBSERVATION kept: 06 has no estimate class; the class is internal and not rendered; the record says "model estimates" (review N7) | — |
+| ADD3-D3 | CCY ISP Figure 4 bar labels | Not used: values and rankings are the report's text (p. 9); nothing printed rests on the image read (review S12) | — |
+| ADD3-D4 | Date of the KfW 47229 page | Undated page: no date invented; EUR 4.5 million belongs to phase III (and phase I) and is not printed | — |
+| ADD3-D5 | SRC-ADEN-CBY-LIQ-2016 id reads as a CBY publication | Ids are stable keys; the card's issuer line says it is not a publication of the Central Bank of Yemen (review N15) | — |
+| ADD3-D6 | A grouped AML chronology event | Declined: the AML circulars are compliance duties, not an access channel; they stay directory cards | — |
+| ADD3-D7 | Migration and Development Brief 40 as corroboration for CLM-039 | Recorded as one publication inconsistent with itself, not corroboration; no value taken | — |
+| ADD3-D8 | Six sources withheld in CLOSE-6B | NON_PUBLIC with the address kept; none feeds a record; AR2015 keeps its card (X-REG-LINK-AR2015) | — |
+| ADD3-D9 | MA-005 printed 1.48 branches | 1.5, the decimals the World Bank publishes (1.4756); recorded as a challenge to the advisor's figure | — |
 
 ## The register as first built, and its history
 
@@ -808,3 +826,7 @@ and their counts above are the F9 state and are not rewritten; where a cell abov
 view governs. FRONTIER items keep their verification cards in `audit/close_out/FRONTIER_CARDS.md`. Gate CO-G06
 (`scripts/validate.py`) checks that each ID appears once and in one of the five states, that the view, its count table
 and the twin agree, that nothing outside HOSTING says PENDING, and that every FRONTIER item has a card.
+
+- 11 October 2026, Stage A addendum (advisor review of the Stage A report): the live view takes 8 items closed by
+  PR #39 and CLOSE-6A to CLOSE-6C, 9 recorded decisions and one owner option; OWN-13 closes with CWR-012's
+  publication; X-REG-LINK-C12 closed in CLOSE-6B; X-REG-LINK-AR2015's card was updated there. Total 265.

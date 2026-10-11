@@ -73,7 +73,7 @@
     ],
     "related_readings": [
       "CWR-002",
-      "CWR-004"
+      "CWR-012"
     ],
     "measurement_bindings": [
       "MA-001"
@@ -804,6 +804,112 @@
     "evidence_period_en": "CBY-Aden monthly bulletin: end of 2025, May 2026 (Issue No. 54) and June 2026 (Issue No. 55) · December 2022 for the revaluation comparison · IMF 2025 Article IV staff report (asset quality, described, not charted)",
     "evidence_period_ar": "النشرة الشهرية للبنك المركزي اليمني – عدن: نهاية 2025 ومايو 2026 (العدد رقم 54) ويونيو 2026 (العدد رقم 55) · ديسمبر 2022 لمقارنة إعادة التقييم · تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 (جودة الأصول، وصفًا لا رسمًا)",
     "last_reviewed": "2026-10-10",
+    "featured": null
+  },
+  {
+    "reading_id": "CWR-012",
+    "slug": "how-money-reaches-households",
+    "route": "/readings/how-money-reaches-households/",
+    "title_en": "How money reaches households",
+    "title_ar": "كيف يصل المال إلى الأسر",
+    "question_en": "Does money sent between people in Yemen reach households more through exchange companies than through accounts?",
+    "question_ar": "هل تصل الأموال المرسلة بين الأفراد في اليمن إلى الأسر عبر شركات الصرافة أكثر مما تصل عبر الحسابات؟",
+    "thesis_en": "In Yemen’s Global Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances, while 11.9% of adults in those areas had an account. That is consistent with the hypothesis that money sent between people moves more through exchange companies and other money-transfer providers than through accounts, but it is a hypothesis: the survey counts adults, not households, its values here cover transfers within Yemen only, and no channel value for that wave is held here. Other routes and humanitarian cash fit the same numbers, and survey coverage, currency and the meaning of “remittance” limit what they show.",
+    "thesis_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن، تلقى 31.9% من البالغين في المناطق التي شملها المسح حوالات محلية، في حين كان لدى 11.9% من البالغين في تلك المناطق حساب. ويتسق ذلك مع فرضية أن الأموال المرسلة بين الأفراد تنتقل عبر شركات الصرافة وغيرها من مقدمي خدمات تحويل الأموال أكثر مما تنتقل عبر الحسابات، لكنه يبقى فرضية: فالمسح يعدّ البالغين لا الأسر، ولا تغطي قيمه الواردة هنا إلا الحوالات داخل اليمن، ولا تتضمن قاعدة الأدلة أي قيمة لقنوات الحوالات في تلك الموجة. وتنسجم الطرق الأخرى والمساعدات النقدية الإنسانية مع الأرقام نفسها، وتحدّ تغطيةُ المسح والعملةُ ومعنى «الحوالة» مما تُظهره.",
+    "claim_bindings": [
+      "CLM-026",
+      "VIS-FINDEX-FLOW-CHANNELS",
+      "CLM-030",
+      "CLM-009",
+      "CLM-016",
+      "VIS-REMITTANCE-COST",
+      "CLM-032",
+      "VIS-PAYMENT-RAILS",
+      "CCY-ISP-2024",
+      "CCY-SAM-2024"
+    ],
+    "evidence_bindings": [
+      "CLM-026",
+      "VIS-FINDEX-FLOW-CHANNELS",
+      "CLM-030",
+      "CLM-009",
+      "CLM-016",
+      "VIS-REMITTANCE-COST",
+      "CLM-032",
+      "VIS-PAYMENT-RAILS",
+      "CCY-ISP-2024",
+      "CCY-SAM-2024"
+    ],
+    "source_bindings": [
+      "SRC-WB-FINDEX-AGG-2022",
+      "SRC-WB-FINDEX-001",
+      "SRC-WB-FINDEX-LDB-2015-001",
+      "SRC-CBY-EXCH-LIST-2026-001",
+      "SRC-WB-FMIIP-P180708",
+      "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+      "SRC-WB-WDI-RMT-COST-YEM",
+      "SRC-WB-RPW-SA-YEM-2025Q3-001",
+      "SRC-CBY-AR2024-BOP",
+      "SRC-CBY-AR2025-BOP",
+      "SRC-CCY-ISP-2024",
+      "SRC-CCY-SAM-2024",
+      "SRC-CBY-DEC-23-2024-001"
+    ],
+    "visual_bindings": [],
+    "audiences": [
+      "CBY",
+      "WB/UN",
+      "NGOs",
+      "banks/PSPs",
+      "researchers"
+    ],
+    "prohibited_inference_en": "A share of adults who received domestic remittances is not a share of households that depend on them; a higher share of recipients than of account holders does not show that recipients lack accounts; a roster entry or a branch count is not a measure of remittance flows; and a price of sending money from abroad is not the cost a household pays to collect it.",
+    "prohibited_inference_ar": "لا تمثل نسبة البالغين الذين تلقوا حوالات محلية نسبة الأسر التي تعتمد عليها؛ وارتفاع نسبة المتلقين عن نسبة أصحاب الحسابات لا يثبت أن المتلقين لا يملكون حسابات؛ وليس القيد في قائمة أو عدد الفروع مقياسًا لتدفقات الحوالات؛ وليس سعر إرسال المال من الخارج التكلفة التي تتحملها الأسرة لاستلامه.",
+    "verification_bindings": {
+      "claim_ids": [
+        "CLM-026",
+        "VIS-FINDEX-FLOW-CHANNELS",
+        "CLM-030",
+        "CLM-009",
+        "CLM-016",
+        "VIS-REMITTANCE-COST",
+        "CLM-032",
+        "VIS-PAYMENT-RAILS",
+        "CCY-ISP-2024",
+        "CCY-SAM-2024"
+      ],
+      "direct_source_ids": [
+        "SRC-WB-FINDEX-AGG-2022",
+        "SRC-WB-FINDEX-001",
+        "SRC-WB-FINDEX-LDB-2015-001",
+        "SRC-CBY-EXCH-LIST-2026-001",
+        "SRC-WB-FMIIP-P180708",
+        "SRC-IGC-AIDDATA-REMIT-YEM-2026",
+        "SRC-WB-WDI-RMT-COST-YEM",
+        "SRC-WB-RPW-SA-YEM-2025Q3-001",
+        "SRC-CBY-AR2024-BOP",
+        "SRC-CBY-AR2025-BOP",
+        "SRC-CCY-ISP-2024",
+        "SRC-CCY-SAM-2024",
+        "SRC-CBY-DEC-23-2024-001"
+      ],
+      "dependency_ids": [],
+      "resolution_rule": "Direct SRC-* identifiers resolve in the Source Library. Other dependency identifiers remain lineage/verification anchors and must never be converted into invented URLs or sources."
+    },
+    "domain_surface_routes": [
+      "/remittances/"
+    ],
+    "related_readings": [
+      "CWR-001",
+      "CWR-010"
+    ],
+    "measurement_bindings": [
+      "MA-001",
+      "MA-005"
+    ],
+    "evidence_period_en": "Global Findex 2021, Yemen fieldwork November 2022 – January 2023 · World Bank country profile for 2014 · CBY-Aden roster for 2026 · CBY-Aden domestic-transfer rule of June 2024 · remittance prices for 2023 and 2025 Q3 · CBY-Aden annual reports 2024 and 2025 · Cash Consortium of Yemen studies of aid recipients (survey data of January and June 2024)",
+    "evidence_period_ar": "المؤشر العالمي للشمول المالي (Global Findex) 2021، العمل الميداني في اليمن نوفمبر 2022 – يناير 2023 · الملف القطري للبنك الدولي لعام 2014 · قائمة البنك المركزي اليمني – عدن لعام 2026 · قرار البنك المركزي اليمني – عدن بشأن الحوالات الداخلية الصادر في يونيو 2024 · أسعار الحوالات لعام 2023 والربع الثالث من 2025 · التقريران السنويان للبنك المركزي اليمني – عدن 2024 و2025 · دراستا تحالف النقد في اليمن (Cash Consortium of Yemen) عن متلقي المساعدات (بيانات مسوح يناير ويونيو 2024)",
+    "last_reviewed": "2026-10-11",
     "featured": null
   }
 ]
