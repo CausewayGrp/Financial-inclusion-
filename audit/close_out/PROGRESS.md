@@ -208,3 +208,11 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   (70 entries, closes in CLOSE-6A), reported as open, pinned to the Master. "0 unresolved" in the Stage A report is
   re-stated: under the widened scope, 0 unresolved and 314 open. Five negative controls (LIT-3) caught. Source reads for
   items 2–4 (R1–R5) are in scratch and will be committed with the transactions that use them.
+- 2026-10-11 · A+ · items 1a/1b/2 + CR-21/CR-22/CLM-039/CCY/e-money · CLOSE-6A (Master d14b36c5 -> 1d468c2c, 457
+  cells): ten priorities bound (MA-008 to sources only), three new Evidence Records (FAS-YEM-2015, MICS-YEM-2022-23,
+  YMPS-YEM-2022-R1), composite members listed or framing stated, open-trace list emptied: literal closure 0 unresolved,
+  0 open. CR-21 month precision everywhere printed (post-condition), CLM-023 keeps both dates; CR-22 sentence; CLM-039
+  recorded as inconsistency; e-money history attributed; CWR-010 third finding. Review pair applied (red-team B1–B4,
+  S1–S21; Arabic M1–M8, S1–S16, nits). Reads R1, R2, R4, R6 and both reviews committed in audit/close_out/addendum/;
+  WDI snapshot in fixtures. Challenges recorded: MA-005 1.48 -> 1.5; Brief 40 not corroboration; "until 2023" right for
+  e-money, completed by the 2022 PSP instructions.

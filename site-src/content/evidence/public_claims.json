@@ -5,8 +5,8 @@
     "claim_type": "MEASURED_LEVEL",
     "headline_en": "Account ownership: the representative measure from the Global Findex 2021 wave",
     "headline_ar": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
-    "copy_en": "The latest survey estimate published by the World Bank puts account ownership at 11.9% of adults in the areas covered by Yemen's survey; it reflects accounts at financial institutions, because the mobile-money questions were not asked in this survey. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from 7 November 2022 to 9 January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
-    "copy_ar": "بحسب أحدث تقدير مسحي ينشره البنك الدولي، بلغت نسبة امتلاك الحساب 11.9% بين البالغين في المناطق التي شملها مسح اليمن، وهي تعكس الحسابات لدى المؤسسات المالية، لأن أسئلة خدمات الأموال عبر الهاتف لم تُطرح في هذا المسح. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من 7 نوفمبر 2022 إلى 9 يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
+    "copy_en": "The latest survey estimate published by the World Bank puts account ownership at 11.9% of adults in the areas covered by Yemen's survey; it reflects accounts at financial institutions, because the mobile-money questions were not asked in this survey. World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from November 2022 to January 2023. The Global Findex 2025 edition adds 2024 observations for many economies, but no newer Yemen observation. For context, the World Bank's figure for the same survey wave across the 19 low-income economies surveyed in it, Yemen among them, is 35.2%.",
+    "copy_ar": "بحسب أحدث تقدير مسحي ينشره البنك الدولي، بلغت نسبة امتلاك الحساب 11.9% بين البالغين في المناطق التي شملها مسح اليمن، وهي تعكس الحسابات لدى المؤسسات المالية، لأن أسئلة خدمات الأموال عبر الهاتف لم تُطرح في هذا المسح. ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من نوفمبر 2022 إلى يناير 2023. وتضيف نسخة Global Findex 2025 مشاهدات لعام 2024 في اقتصادات عديدة، لكنها لا تضيف مشاهدة أحدث لليمن. وللسياق، يبلغ رقم البنك الدولي لموجة المسح نفسها في الاقتصادات منخفضة الدخل الـ19 التي شملتها الموجة، ومنها اليمن، 35.2%.",
     "evidence_badge": "PRIMARY_WEIGHTED_SURVEY",
     "evidence_inputs": [
       "EP-FINDEX-2022-ACCOUNT",
@@ -33,8 +33,8 @@
     "claim_type": "DERIVED_SAME_WAVE_GAP",
     "headline_en": "A measured gender gap in account ownership",
     "headline_ar": "فجوة مقاسة بين النساء والرجال في امتلاك الحساب",
-    "copy_en": "In the 2021 Global Findex wave for Yemen (fieldwork 7 November 2022 to 9 January 2023; World Bank data year 2022), 18.3% of men and 5.4% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.9 percentage points.",
-    "copy_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة امتلاك الحساب 18.3% بين الرجال و5.4% بين النساء من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.9 نقطة مئوية.",
+    "copy_en": "In the 2021 Global Findex wave for Yemen (fieldwork November 2022 to January 2023; World Bank data year 2022), 18.3% of men and 5.4% of women aged 15 and over in the areas the survey covered had an account, a difference of 12.9 percentage points.",
+    "copy_ar": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن (العمل الميداني من نوفمبر 2022 إلى يناير 2023؛ سنة البيانات لدى البنك الدولي 2022)، بلغت نسبة امتلاك الحساب 18.3% بين الرجال و5.4% بين النساء من البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح، بفارق 12.9 نقطة مئوية.",
     "evidence_badge": "PRIMARY_SURVEY_PLUS_APPROVED_DERIVATION",
     "evidence_inputs": [
       "28_FINDEX_OBS",
@@ -314,8 +314,8 @@
       "56_E_MONEY_REGULATORY",
       "EP-CBY-EMONEY-2023-25"
     ],
-    "does_not_prove_en": "It does not establish that products were launched, which providers offer the service, actual balances, how transactions are distributed, or adoption.",
-    "does_not_prove_ar": "لا يثبت هذا الدليل إطلاق المنتجات، ولا هوية مقدمي الخدمة الذين يوفرونها، ولا الأرصدة الفعلية، ولا توزيع المعاملات، ولا التبني.",
+    "does_not_prove_en": "It does not establish that products were launched, which providers offer the service, actual balances, how transactions are distributed, or adoption, and these are CBY-Aden's rules, not those the Central Bank of Yemen in Sana'a has issued.",
+    "does_not_prove_ar": "لا يثبت هذا الدليل إطلاق المنتجات، ولا هوية مقدمي الخدمة الذين يوفرونها، ولا الأرصدة الفعلية، ولا توزيع المعاملات، ولا التبني؛ وهذه قواعد البنك المركزي اليمني – عدن، لا القواعد التي أصدرها البنك المركزي اليمني في صنعاء.",
     "change_trigger_en": "This record is updated when an authoritative source is revised or replaced, a newer comparable observation becomes available, the definition, population or method changes, or the conditions for public use change.",
     "change_trigger_ar": "يُحدَّث هذا السجل عند مراجعة المصدر المعتمد أو استبداله، أو توفر مشاهدة أحدث قابلة للمقارنة، أو تغير التعريف أو المجتمع أو الطريقة، أو تغير شروط الاستخدام العام.",
     "public_routes": [
@@ -607,8 +607,8 @@
     "claim_type": "FINDEX_STUDY_CONTRACT",
     "headline_en": "What the Yemen Findex 2021 study contains",
     "headline_ar": "ما تتضمنه دراسة Findex 2021 الخاصة باليمن",
-    "copy_en": "The Yemen Global Findex 2021 study file has 1,000 respondents and 113 variables; Yemen fieldwork ran from 7 November 2022 to 9 January 2023 and all population estimates require survey weights.",
-    "copy_ar": "يضم ملف دراسة اليمن ضمن موجة 2021 من المؤشر العالمي للشمول المالي 1,000 مستجيب و113 متغيرًا. ونُفذ العمل الميداني من 7 نوفمبر 2022 إلى 9 يناير 2023، وتتطلب جميع تقديرات السكان استخدام أوزان المسح.",
+    "copy_en": "The Yemen Global Findex 2021 study file has 1,000 respondents and 113 variables; Yemen fieldwork ran from November 2022 to January 2023 and all population estimates require survey weights.",
+    "copy_ar": "يضم ملف دراسة اليمن ضمن موجة 2021 من المؤشر العالمي للشمول المالي 1,000 مستجيب و113 متغيرًا. ونُفذ العمل الميداني من نوفمبر 2022 إلى يناير 2023، وتتطلب جميع تقديرات السكان استخدام أوزان المسح.",
     "evidence_badge": "PRIMARY_SURVEY_METADATA",
     "evidence_inputs": [
       "25_FINDEX_META",
@@ -1045,8 +1045,8 @@
     "claim_type": "PUBLIC_INTERFACE_STATE_DIVERGENCE",
     "headline_en": "A public interface is not the same thing as the underlying dataset",
     "headline_ar": "واجهة البيانات العامة ليست هي مجموعة البيانات نفسها",
-    "copy_en": "World Bank public remittance interfaces do not expose Yemen history uniformly. One interface, reviewed on 10 September 2026, showed an older span of years, while other World Bank interfaces and earlier documented retrievals contained later observations. The difference reflects what each interface displays and how its data can be traced; it is not evidence that later underlying data are absent.",
-    "copy_ar": "لا تعرض واجهات البنك الدولي العامة الخاصة بالحوالات تاريخ اليمن بصورة موحدة. فقد أظهرت واجهةٌ اطُّلع عليها في 10 سبتمبر 2026 نطاقًا أقدم، بينما احتوت واجهات أخرى ونسخ سابقة موثقة جرى الاطلاع عليها على مشاهدات أحدث. هذا اختلاف في ما تعرضه الواجهات وفي تتبع المصدر، وليس دليلًا على غياب البيانات الأحدث من مجموعة البيانات الأساسية.",
+    "copy_en": "World Bank public remittance interfaces do not expose Yemen history uniformly. One interface, reviewed on 10 September 2026, showed an older span of years, while other World Bank interfaces and earlier documented retrievals contained later observations. The difference reflects what each interface displays and how its data can be traced; it is not evidence that later underlying data are absent. One World Bank publication is also inconsistent on Yemen: the note to Figure A.4.2 of Migration and Development Brief 40 (June 2024) says Yemen is excluded “due to data availability”, yet panel (a), remittances in US dollars for 2023, shows a value for Yemen, and only panel (b), remittances as a share of GDP, omits it. The brief does not say which panel the note applies to, and this resource takes no value from the figure.",
+    "copy_ar": "لا تعرض واجهات البنك الدولي العامة الخاصة بالحوالات تاريخ اليمن بصورة موحدة. فقد أظهرت واجهةٌ اطُّلع عليها في 10 سبتمبر 2026 نطاقًا أقدم، بينما احتوت واجهات أخرى ونسخ سابقة موثقة جرى الاطلاع عليها على مشاهدات أحدث. هذا اختلاف في ما تعرضه الواجهات وفي تتبع المصدر، وليس دليلًا على غياب البيانات الأحدث من مجموعة البيانات الأساسية. ويقع منشور واحد للبنك الدولي أيضًا في عدم اتساق بشأن اليمن: إذ تذكر الملاحظة المرافقة للشكل A.4.2 في موجز الهجرة والتنمية رقم 40 (يونيو 2024) أن اليمن مستبعد «لأسباب تتعلق بتوفر البيانات»، غير أن اللوحة (a)، وهي التحويلات بالدولار الأمريكي لعام 2023، تعرض قيمة لليمن، ولا تغفله إلا اللوحة (b)، وهي التحويلات نسبةً إلى الناتج المحلي الإجمالي. ولا يحدد الموجز اللوحة التي تنطبق عليها الملاحظة، ولا يأخذ هذا المورد أي قيمة من الشكل.",
     "evidence_badge": "INTERFACE_NOT_DATASET",
     "evidence_inputs": [
       "182_REMITTANCE_SOURCE_LENSES",

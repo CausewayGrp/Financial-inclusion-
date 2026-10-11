@@ -1,6 +1,10 @@
 {
   "schema": "YFIE_LITERAL_AUDIT_ALLOWANCES/1.0",
   "rule": "A public number that is neither a date, an identifier, a contract-derived inventory count nor present in a bound source-traced record fails the public-literal audit, unless it is listed here as a method or tool constant with its reason. Each entry is route- and context-specific; it never allows a statistic.",
+  "inventory_counts_rule": "An inventory count is allowed only where the audit recomputes it from the governed rows on every run; a mismatch fails the audit. It never allows a statistic.",
+  "inventory_counts": [
+    {"object_id": "DS-FINDEX-HISTORY-CROSSWALK", "tokens": ["36"], "context": ["36 historical Findex measures", "36 مقياسًا تاريخيًا", "التاريخية الـ36"], "count": {"file": "data/findex_history.json", "header_key": "history_obs_id", "where": {}, "distinct": "hist_metric_id"}, "reason": "The number of historical Findex measures for Yemen that the crosswalk maps: distinct hist_metric_id in the published-history rows of 26_FINDEX_HISTORY (40 rows, 36 measures, 2011 and 2014). The audit recounts it from the governed rows on every run, and a different count fails (close-out addendum item 1, 11 October 2026)."}
+  ],
   "allowances": [
     {"route": "/evidence/compare/", "tokens": ["2", "4"], "context": "Select 2–4 records", "reason": "Compare tool rule: a comparison takes two to four Evidence Records. A product constant, not an observation."},
     {"route": "/evidence/compare/", "tokens": ["2", "4"], "context": "اختر من 2 إلى 4 سجلات", "reason": "Arabic edition of the same Compare tool rule (Tranche C TC-I, bilingual parity). A product constant, not an observation."},

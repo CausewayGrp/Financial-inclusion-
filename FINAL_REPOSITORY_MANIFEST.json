@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "d14b36c5c1714cdc75dcc92bddac8777a301050ee6d147596e446978418ef360",
+  "production_master_sha256": "1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "8889e1ac2aabafeba3f74e01dcc128275bcdfe89f461b09729b960caa2f2a014",
+  "page_specs_sha256": "565c1cf886e94636e8f6164b4aec50a48fb107bca563680be2f3967ec108029a",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -28,14 +28,14 @@
   "BUILD_AND_GATES": 46,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 221,
+  "CURRENT_PROGRAMME_RECORD": 231,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
   "GENERATED_PROJECTION": 38,
-  "GENERATED_PUBLIC_BUILD": 603,
-  "GENERATED_SOCIAL_IMAGES": 289,
+  "GENERATED_PUBLIC_BUILD": 615,
+  "GENERATED_SOCIAL_IMAGES": 295,
   "LOGO_AUTHORITY": 1,
   "PRODUCTION_RENDERER": 9,
   "PROJECTION_CONTRACT": 11,
@@ -484,6 +484,30 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/addendum/ARABIC_6A.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/R1_findex_mdb40.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/R2_sanaa_papers.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/R4_ccy_amb_kfw.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/R6_mics_ymps.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/addendum/REDTEAM_6A.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/ar_1.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -532,6 +556,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/close_6a.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/close_lib.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -545,6 +573,10 @@
   },
   {
    "path": "audit/close_out/fixtures/findex_rural_urban_2026-10-10.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/fixtures/wdi_fas_yem_2026-10-11.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -641,6 +673,14 @@
   },
   {
    "path": "audit/close_out/runs/CLOSE-5_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-6A_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-6A_RUN_REPORT.json",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -4456,6 +4496,10 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/ar/evidence/FAS-YEM-2015/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/ar/evidence/FMIIP-BASELINE-2025-01/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -4465,6 +4509,10 @@
   },
   {
    "path": "dist/ar/evidence/MFI-SPINE-2015-Q4/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/MICS-YEM-2022-23/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -4629,6 +4677,10 @@
   },
   {
    "path": "dist/ar/evidence/XW-FMIIP-005/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/ar/evidence/YMPS-YEM-2022-R1/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -5400,6 +5452,14 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/assets/social/evidence_FAS-YEM-2015__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_FAS-YEM-2015__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/assets/social/evidence_FMIIP-BASELINE-2025-01__ar.png",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -5421,6 +5481,14 @@
   },
   {
    "path": "dist/assets/social/evidence_MFI-SPINE-2015-Q4__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_MICS-YEM-2022-23__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_MICS-YEM-2022-23__en.png",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -5741,6 +5809,14 @@
   },
   {
    "path": "dist/assets/social/evidence_XW-FMIIP-005__en.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_YMPS-YEM-2022-R1__ar.png",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/social/evidence_YMPS-YEM-2022-R1__en.png",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -6264,6 +6340,10 @@
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
+   "path": "dist/en/evidence/FAS-YEM-2015/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
    "path": "dist/en/evidence/FMIIP-BASELINE-2025-01/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
@@ -6273,6 +6353,10 @@
   },
   {
    "path": "dist/en/evidence/MFI-SPINE-2015-Q4/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/MICS-YEM-2022-23/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -6437,6 +6521,10 @@
   },
   {
    "path": "dist/en/evidence/XW-FMIIP-005/index.html",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/en/evidence/YMPS-YEM-2022-R1/index.html",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -7724,6 +7812,14 @@
    "class": "GENERATED_SOCIAL_IMAGES"
   },
   {
+   "path": "site-src/assets/social/evidence_FAS-YEM-2015__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_FAS-YEM-2015__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
    "path": "site-src/assets/social/evidence_FMIIP-BASELINE-2025-01__ar.png",
    "class": "GENERATED_SOCIAL_IMAGES"
   },
@@ -7745,6 +7841,14 @@
   },
   {
    "path": "site-src/assets/social/evidence_MFI-SPINE-2015-Q4__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_MICS-YEM-2022-23__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_MICS-YEM-2022-23__en.png",
    "class": "GENERATED_SOCIAL_IMAGES"
   },
   {
@@ -8065,6 +8169,14 @@
   },
   {
    "path": "site-src/assets/social/evidence_XW-FMIIP-005__en.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_YMPS-YEM-2022-R1__ar.png",
+   "class": "GENERATED_SOCIAL_IMAGES"
+  },
+  {
+   "path": "site-src/assets/social/evidence_YMPS-YEM-2022-R1__en.png",
    "class": "GENERATED_SOCIAL_IMAGES"
   },
   {

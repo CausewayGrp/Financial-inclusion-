@@ -1,5 +1,46 @@
 # Repository Change Log
 
+## 2026-10-11 — CLOSE-6A: Measurement Agenda bindings, composite members, the Findex fieldwork period and precision (Stage A addendum, items 1–2)
+
+Master transaction CLOSE-6A (`audit/close_out/close_6a.py`; Master d14b36c5 -> 1d468c2c, 457 cells; ledger and run report
+in `audit/close_out/runs/`). The reads behind it are in `audit/close_out/addendum/` (R1, R2, R4, R6), the World Bank
+values in `audit/close_out/fixtures/wdi_fas_yem_2026-10-11.json`.
+
+- **Item 1a — every priority binds the records behind its figures.** 10_MEASUREMENT_AGENDA gains `evidence_bindings`
+  and `source_bindings`; nine priorities bind records (MA-001 also VIS-FINDEX-FLOW-CHANNELS, for its by-group values),
+  MA-007 binds CBY-Aden's e-KYC instructions and MA-008 its credit-information pages and the defaulters-registry release,
+  which their texts now name. Three new Evidence Records hold figures no record held: FAS-YEM-2015 (the IMF Financial
+  Access Survey values the World Development Indicators publish for Yemen, last year 2015), MICS-YEM-2022-23 (the
+  survey design and its one bank-account item, not tabulated in its findings report) and YMPS-YEM-2022-R1 (the World
+  Bank's phone survey of August–September 2022). MA-005 prints 1.5 branches, the decimals the World Bank publishes
+  (1.4756), not 1.48. MA-003 states the age gap its bound record holds.
+- **Item 1b — composites.** The Findex vintage ladder and its lens list CLM-026; the MFI divergence table lists
+  MFI-SPINE-2015-Q4; VIS-PROVIDER-OBSERVABILITY and CLM-014 list their members; the access layer names its records;
+  five framing visuals print no sourced figure and say so (FRAMING_NO_FACT). The open-trace list is empty: the public
+  literal closure reads **0 unresolved and 0 open** (17,869 public numbers).
+- **CR-21.** Public clocks and prose give the Yemen Findex 2021 fieldwork as "November 2022 to January 2023" in both
+  languages (every form, en dash included; a post-condition fails the transaction if any printed cell keeps 9 January
+  2023). CLM-023's method note keeps both World Bank dates with their locators and says they differ by one day on the
+  end date.
+- **CR-22.** /methodology/: the World Bank's design effect reflects the weights only, not intraclass correlation
+  coefficients (they vary by question), so the intervals may be narrower than the true sampling uncertainty; the ~23%
+  excluded population is a separate coverage limit; no adjusted interval is computed.
+- **CLM-039.** Migration and Development Brief 40 is recorded as one publication inconsistent with itself (the note
+  excludes Yemen; panel a shows a value, panel b omits it), not as corroboration; no value is taken.
+- **E-money history.** VIS-E-MONEY-RULE-STACK gains one attributed statement from the Sana'a Center paper (March
+  2022): bank-led under Circular No. 11 of 2014; licensing opened to non-banks in Sana'a from March 2020; CBY-Aden, as
+  of the paper, bank-led; CBY-Aden's own payment-service-provider instructions (14 September 2022) and e-money
+  instructions (9 August 2023) follow. No number is taken from the paper. CLM-012 says its rules are CBY-Aden's.
+- **CCY cash pressure.** CWR-010 gains a third later finding from the CCY report of May 2026 (exchange and withdrawal
+  limits in areas administered by the internationally recognized government; reported practice, not prevalence; the
+  report's attribution untested); its "12%" is not reused.
+- **Review pair.** Red-team (4 blockers, 22 should-fix) and Arabic editor (8 must-fix, 16 should-fix) applied before the
+  run; S22 not applied (a composite lists records only). Code: the audit treats lettered table/figure references and
+  "section/study/item" references as identifiers and counts the crosswalk's 36 measures from `findex_history.json`;
+  the people-side clock parses month precision; S05.1's CLM-001 signature follows CR-21.
+- **Steward edit (D9, own commit).** Three detail routes; public search records 507 -> 513. Build: 298 HTML documents
+  from 147 Page Specs; 113 Evidence Records.
+
 ## 2026-10-11 — Public-literal audit v3: every number a reader sees traces to a source (Stage A addendum, item 1)
 
 An independent audit found that the literal closure's "0 unresolved" covered less than a reader sees. The Measurement

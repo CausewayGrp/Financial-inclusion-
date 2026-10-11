@@ -64,8 +64,12 @@ year_rx=re.compile(r'^(?:19|20)\d{2}$')
 MONTHS=r'(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|يناير|فبراير|مارس|أبريل|مايو|يونيو|يوليو|أغسطس|سبتمبر|أكتوبر|نوفمبر|ديسمبر)'
 # a document reference or identifier: a number that names a document, a part of one, a standard or a record
 DOCREF=(r'(?:No\.|Nos\.|Number|Issue|Table|Tables|Figure|Fig\.|Annex|Appendix|Article|Articles|Art\.|paragraph|para\.|¶|p\.|pp\.|page|pages'
-        r'|Chapter|Section|Volume|Vol\.|sequence|Sequence|reference|Reference|Decision|Circular|Law|Resolution|Box'
-        r'|المرجع|رقم|العدد|الأعداد|جدول|الجدول|الشكل|شكل|الملحق|المادة|المواد|الفقرة|ص\.|صفحة|الصفحة|القانون|القرار|التعميم|المنشور|الفصل|القسم|الإطار)')
+        r'|Chapter|Section|section|sections|Volume|Vol\.|sequence|Sequence|reference|Reference|Decision|Circular|Law|Resolution|Box'
+        r'|study|catalogue|catalog|Brief|item'
+        r'|المرجع|رقم|العدد|الأعداد|جدول|الجدول|الشكل|شكل|الملحق|المادة|المواد|الفقرة|ص\.|صفحة|الصفحة|القانون|القرار|التعميم|المنشور|الفصل|القسم|الإطار'
+        r'|الدراسة|الفهرس|البند)')
+# a lettered part of a document: "Table A.1", "Figure A.4.2", «الجدول A.1»
+LETTERED=r'(?:Table|Tables|Figure|Fig\.|Annex|Appendix|Box|جدول|الجدول|الشكل|شكل|الملحق)\s+[A-Z]\.$'
 ALLOWANCES=load(ROOT/'scripts/literal_audit_allowances.json')
 ALLOW=ALLOWANCES['allowances']
 OBJECT_ALLOW=ALLOWANCES.get('object_allowances') or []
@@ -239,7 +243,7 @@ def date_or_identifier(token,context,start,end):
         return 'DATE_OR_PERIOD'
     if re.search(r'[A-Z][A-Z0-9]*-(?:[A-Z0-9]+-)*$',pre) or re.search(r'(?:WCAG|ISO|BPM|IFRS|SDG)\s*$',pre):
         return 'STABLE_ID_OR_TECHNICAL_STANDARD'
-    if re.search(DOCREF+r'\s*\(?$',pre):
+    if re.search(DOCREF+r'\s*\(?$',pre) or re.search(LETTERED,pre):
         return 'STABLE_ID_OR_TECHNICAL_STANDARD'     # a document reference or decision number is an identifier, not a quantity
     if re.search(r'(?:SDG|ODD|الهدف)\s*\d+\.$',pre) or re.match(r'\.\d',post) and re.search(r'(?:SDG|indicator|المؤشر)\s*$',pre):
         return 'STABLE_ID_OR_TECHNICAL_STANDARD'
@@ -249,11 +253,13 @@ def allowed(route,obj,token,text):
     for a in ALLOW:
         if a['route']==route and token in a['tokens'] and a['context'] in text:
             return 'ALLOWED_METHOD_OR_TOOL_CONSTANT'
+    def ctx(a):
+        return any(c in text for c in (a['context'] if isinstance(a['context'],list) else [a['context']]))
     for a in OBJECT_ALLOW:
-        if a['object_id']==obj and token in a['tokens'] and a['context'] in text:
+        if a['object_id']==obj and token in a['tokens'] and ctx(a):
             return 'ALLOWED_METHOD_OR_TOOL_CONSTANT'
     for a in INVENTORY_ALLOW:
-        if a['object_id']==obj and token in a['tokens'] and a['context'] in text and a.get('_verified'):
+        if a['object_id']==obj and token in a['tokens'] and ctx(a) and a.get('_verified'):
             return 'INVENTORY_COUNT_VERIFIED'
     return None
 
@@ -312,7 +318,7 @@ def classify_route_token(spec,route,token,context,start,end):
                 r=trace(oid,token)
                 if r:
                     return 'READING_BOUND_RECORD_TRACE',oid,r[1]
-    a=allowed(route,None,token,context)
+    a=allowed(route,spec.get('instance_id'),token,context)     # an Evidence Record page's sections are its own governed copy
     if a:
         return a,None,None
     return 'UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER',None,None

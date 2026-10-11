@@ -4,9 +4,9 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "d14b36c5c1714cdc75dcc92bddac8777a301050ee6d147596e446978418ef360",
-    "page_specs_sha256": "8889e1ac2aabafeba3f74e01dcc128275bcdfe89f461b09729b960caa2f2a014",
-    "page_spec_count": 144
+    "master_sha256": "1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16",
+    "page_specs_sha256": "565c1cf886e94636e8f6164b4aec50a48fb107bca563680be2f3967ec108029a",
+    "page_spec_count": 147
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
   "global_navigation": [
@@ -322,7 +322,7 @@
     },
     {
       "page_family": "Evidence Record",
-      "route_count": 110,
+      "route_count": 113,
       "unique_user_value_role": "CANONICAL_PUBLIC_VERIFICATION_ENDPOINT",
       "primary_next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
       "depth_role": "VERIFICATION",

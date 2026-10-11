@@ -53,6 +53,17 @@
       "/remittances"
     ],
     "domain_ar": "الأفراد",
+    "evidence_bindings": [
+      "CLM-001",
+      "CLM-025",
+      "CLM-026",
+      "VIS-FINDEX-FLOW-CHANNELS",
+      "MICS-YEM-2022-23",
+      "YMPS-YEM-2022-R1"
+    ],
+    "source_bindings": [
+      "SRC-WB-FINDEX-2025-EDITION"
+    ],
     "affected_route_list": [
       "/people/",
       "/",
@@ -104,6 +115,14 @@
       "/explore"
     ],
     "domain_ar": "المدفوعات / الأفراد",
+    "evidence_bindings": [
+      "CLM-004",
+      "CLM-010",
+      "CLM-050",
+      "CLM-051",
+      "VIS-PAYMENT-ANATOMY"
+    ],
+    "source_bindings": [],
     "affected_route_list": [
       "/payments/",
       "/people/",
@@ -135,8 +154,8 @@
       "digital literacy"
     ],
     "dimensions_ar": "الجنس/النوع الاجتماعي,الفئة العمرية,حالة النزوح,الوصول,الاستخدام,الجودة,الهوية,الجهاز,الدخل,العمل,الجغرافيا,الثقة,قيود الأسرة,تغطية المناطق الإدارية في منطقتَي السيطرة كلتيهما,الثقافة الرقمية",
-    "current_evidence_en": "Within the same survey wave, account ownership differs by 12.9 percentage points between women (5.4%) and men (18.3%), and by 9.0 percentage points between adults in the poorest 40% (6.5%) and the richest 60% (15.5%) by household income. Comparable current differences by age group and displacement status are not established in the evidence base, and the contribution of identity, device, income, geography, trust and household constraints to any measured disparity is not established.",
-    "current_evidence_ar": "في موجة المسح نفسها يختلف امتلاك الحساب بين النساء (5.4%) والرجال (18.3%) بمقدار 12.9 نقطة مئوية، وبين البالغين في أفقر 40% (6.5%) وأغنى 60% (15.5%) بحسب دخل الأسرة بمقدار 9.0 نقطة مئوية. أما الفروق الراهنة القابلة للمقارنة بحسب الفئة العمرية وحالة النزوح فلا تثبتها قاعدة الأدلة الحالية، كما لا تثبت مقدار إسهام الهوية أو الجهاز أو الدخل أو الجغرافيا أو الثقة أو قيود الأسرة في تفسير أي تفاوت مقاس.",
+    "current_evidence_en": "Within the same survey wave, account ownership differs by 12.9 percentage points between women (5.4%) and men (18.3%), by 9.0 percentage points between adults in the poorest 40% (6.5%) and the richest 60% (15.5%) by household income, and by 11.1 percentage points between adults aged 15–24 (5.0%) and those aged 25 and over (16.1%). Comparable current differences by finer age groups and by displacement status are not established in the evidence base, and the contribution of identity, device, income, geography, trust and household constraints to any measured disparity is not established.",
+    "current_evidence_ar": "في موجة المسح نفسها يختلف امتلاك الحساب بين النساء (5.4%) والرجال (18.3%) بمقدار 12.9 نقطة مئوية، وبين البالغين في أفقر 40% (6.5%) وأغنى 60% (15.5%) بحسب دخل الأسرة بمقدار 9.0 نقطة مئوية، وبين البالغين بعمر 15–24 سنة (5.0%) والبالغين بعمر 25 سنة فأكثر (16.1%) بمقدار 11.1 نقطة مئوية. أما الفروق الراهنة القابلة للمقارنة بحسب فئات عمرية أدق وبحسب حالة النزوح فلا تثبتها قاعدة الأدلة الحالية، كما لا تثبت مقدار إسهام الهوية أو الجهاز أو الدخل أو الجغرافيا أو الثقة أو قيود الأسرة في تفسير أي تفاوت مقاس.",
     "missing_evidence_en": "Representative or clearly bounded disaggregated quantitative evidence to measure subgroup outcomes, with linked mechanism variables and qualitative or stronger causal designs where explanation is required.",
     "missing_evidence_ar": "أدلة كمية مفصلة حسب الفئات، ممثلة أو محددة النطاق بوضوح، لقياس النتائج؛ مع متغيرات مرتبطة بالآليات وبحث نوعي أو تصميمات سببية أقوى عندما يكون المطلوب تفسير الفروق.",
     "guardrail_en": "Do not turn an unmeasured subgroup into a measured gap. Measuring a disparity and explaining it are separate evidence products; causal mechanisms require a design capable of testing them.",
@@ -149,8 +168,8 @@
     "blocked_evidence_ar": "تقديرات حديثة حسب الفئات ذات مجتمعات مرجعية وتعريفات قابلة للمقارنة، مع أدلة تراعي الآليات وتسمح بالتمييز بين الارتباط والتفسير.",
     "feasibility_en": "MEDIUM — survey modules and bounded qualitative work are feasible, but causal attribution needs stronger designs.",
     "feasibility_ar": "متوسطة — يمكن إضافة وحدات مسحية وبحث نوعي مقيد، لكن إسناد السببية يحتاج تصميمات أقوى.",
-    "priority_basis_en": "P0 among these measurement priorities because material disparities by sex and by household income are measured within one survey wave, while current age- and displacement-disaggregated evidence and causal explanations remain incomplete; without new measurement, unmeasured subgroup gaps and their causes would remain speculative.",
-    "priority_basis_ar": "أولوية P0 ضمن أولويات الأدلة في هذا المورد لأن تفاوتات مهمة بحسب الجنس ودخل الأسرة مقاسة بالفعل داخل موجة مسح واحدة، بينما تظل الأدلة الراهنة المفصلة بحسب العمر وحالة النزوح والتفسيرات السببية غير مكتملة؛ ومن دون قياس جديد ستبقى الفجوات غير المقاسة وأسبابها في نطاق التخمين.",
+    "priority_basis_en": "P0 among these measurement priorities because material disparities by sex, household income and age are measured within one survey wave, while current evidence for finer age groups and by displacement status, and causal explanations, remain incomplete; without new measurement, unmeasured subgroup gaps and their causes would remain speculative.",
+    "priority_basis_ar": "أولوية P0 ضمن أولويات الأدلة في هذا المورد لأن تفاوتات مهمة بحسب الجنس ودخل الأسرة والعمر مقاسة بالفعل داخل موجة مسح واحدة، بينما تظل الأدلة الراهنة المفصلة بحسب فئات عمرية أدق وبحسب حالة النزوح، والتفسيرات السببية، غير مكتملة؛ ومن دون قياس جديد ستبقى الفجوات غير المقاسة وأسبابها في نطاق التخمين.",
     "what_changes_en": "Keeps apart what needs different evidence: whether a disparity is measured, what is associated with it, and what design could test a causal mechanism or intervention.",
     "what_changes_ar": "يفصل بين ما يحتاج أدلة مختلفة: هل يوجد تفاوت مقاس، وما العوامل المرتبطة به، وما التصميم القادر على اختبار آلية سببية أو تدخل.",
     "recommended_visual_en": "Subgroup evidence frontier: measured difference → associated factors → causal test",
@@ -161,6 +180,11 @@
       "/explore"
     ],
     "domain_ar": "الأفراد / الإنصاف",
+    "evidence_bindings": [
+      "CLM-002",
+      "VIS-FINDEX-GAPS"
+    ],
+    "source_bindings": [],
     "affected_route_list": [
       "/people/",
       "/",
@@ -214,6 +238,13 @@
       "/explore"
     ],
     "domain_ar": "المنشآت / المنشآت الأصغر والصغيرة والمتوسطة",
+    "evidence_bindings": [
+      "CLM-062",
+      "VIS-FIRM-CONSTRAINTS",
+      "CLM-059",
+      "CLM-060"
+    ],
+    "source_bindings": [],
     "affected_route_list": [
       "/firms/",
       "/finance/",
@@ -246,8 +277,8 @@
       "withdrawal caps"
     ],
     "dimensions_ar": "الفرع,الصراف الآلي,الوكيل,التاجر,منشأة الصرافة,نقطة المحفظة,الحالة التشغيلية,الخدمة,الإحداثيات,ساعات العمل,السيولة,مجموعة مقدمي التمويل الأصغر المُبلِّغة,نطاق الإبلاغ,تدفقات منشآت الصرافة,سيولة الوكلاء وصناديق الصرف,فئات الأوراق النقدية,سقوف السحب",
-    "current_evidence_en": "Current official rosters establish selected listing, licensing and event states, but do not provide a complete, geocoded register of active branches, agents, merchants and other service points. The IMF Financial Access Survey, as published in the World Bank's World Development Indicators (series FB.ATM.TOTL.P5, FB.CBK.BRCH.P5 and FB.CBK.DPTR.P3), last reports Yemen for 2015: 5.81 ATMs and 1.48 commercial bank branches per 100,000 adults, and 103.1 depositors with commercial banks per 1,000 adults. The series stops in 2015 and its population denominators are the IMF's; the values are dated historical context, not a current measure of access.",
-    "current_evidence_ar": "تثبت القوائم الرسمية الحالية أوضاعًا محددة للإدراج والترخيص وأحداثًا مؤرخة، لكنها لا توفر سجلًا كاملًا ومحدد المواقع الجغرافية للفروع والوكلاء والتجار ونقاط الخدمة النشطة. ويعود آخر ما ينشره مسح الوصول المالي لصندوق النقد الدولي عن اليمن، كما تعرضه مؤشرات التنمية العالمية للبنك الدولي (السلاسل FB.ATM.TOTL.P5 وFB.CBK.BRCH.P5 وFB.CBK.DPTR.P3)، إلى عام 2015: 5.81 جهاز صراف آلي و1.48 فرع للبنوك التجارية لكل 100,000 بالغ، و103.1 مودِع لدى البنوك التجارية لكل 1,000 بالغ. وتتوقف السلسلة في 2015، وقواعد الاحتساب السكانية فيها هي التي يعتمدها الصندوق؛ فهذه القيم سياق تاريخي مؤرخ، لا مقياس حالي للوصول.",
+    "current_evidence_en": "Current official rosters establish selected listing, licensing and event states, but do not provide a complete, geocoded register of active branches, agents, merchants and other service points. The IMF Financial Access Survey, as published in the World Bank's World Development Indicators (series FB.ATM.TOTL.P5, FB.CBK.BRCH.P5 and FB.CBK.DPTR.P3), last reports Yemen for 2015: 5.81 ATMs and 1.5 commercial bank branches per 100,000 adults, and 103.1 depositors with commercial banks per 1,000 adults. The series stops in 2015 and its population denominators are the IMF's; the values are dated historical context, not a current measure of access to, or use of, financial services.",
+    "current_evidence_ar": "تثبت القوائم الرسمية الحالية أوضاعًا محددة للإدراج والترخيص وأحداثًا مؤرخة، لكنها لا توفر سجلًا كاملًا ومحدد المواقع الجغرافية للفروع والوكلاء والتجار ونقاط الخدمة النشطة. ويعود آخر ما ينشره مسح الوصول المالي لصندوق النقد الدولي عن اليمن، كما تعرضه مؤشرات التنمية العالمية للبنك الدولي (السلاسل FB.ATM.TOTL.P5 وFB.CBK.BRCH.P5 وFB.CBK.DPTR.P3)، إلى عام 2015: 5.81 جهاز صراف آلي و1.5 فرع للبنوك التجارية لكل 100,000 بالغ، و103.1 مودِع لدى البنوك التجارية لكل 1,000 بالغ. وتتوقف السلسلة في 2015، وأعداد السكان المعتمدة مقامًا فيها هي أعداد الصندوق؛ فهذه القيم سياق تاريخي مؤرخ، لا مقياس حالي للوصول إلى الخدمات المالية أو استخدامها.",
     "missing_evidence_en": "An authoritative or jointly documented register of individual access points recording type, active status, date, location and services, plus population denominators and road-network data that allow coverage and travel distance or time to be calculated.",
     "missing_evidence_ar": "سجل رسمي أو موثق بالاشتراك لنقاط الوصول فرادى، يسجل النوع ووضع النشاط والتاريخ والموقع الجغرافي والخدمات المتاحة، مع قواعد احتساب سكانية وأخرى لطرق الوصول تسمح بحساب التغطية ومسافة الوصول أو زمنه.",
     "guardrail_en": "Listed/licensed address is not necessarily active access; modelled accessibility must remain distinct from observed service use.",
@@ -273,6 +304,14 @@
       "/explore"
     ],
     "domain_ar": "مقدمو الخدمات / الجغرافيا",
+    "evidence_bindings": [
+      "FAS-YEM-2015",
+      "CLM-008",
+      "CLM-009",
+      "CLM-055",
+      "CLM-019"
+    ],
+    "source_bindings": [],
     "affected_route_list": [
       "/access/",
       "/providers/",
@@ -324,6 +363,12 @@
       "/explore"
     ],
     "domain_ar": "حماية المستهلك / الجودة",
+    "evidence_bindings": [
+      "DS-FCP-ARCH",
+      "CLM-011",
+      "VIS-FCP-REDRESS-PATH"
+    ],
+    "source_bindings": [],
     "affected_route_list": [
       "/reforms/",
       "/evidence/",
@@ -348,8 +393,8 @@
       "provider"
     ],
     "dimensions_ar": "حيازة الهوية,محاولة اعرف عميلك,الإكمال,الرفض,سبب الرفض,الجهاز/الشريحة,التحقق الإلكتروني من الهوية,الوقت/التكلفة,مقدم الخدمة",
-    "current_evidence_en": "KYC and e-money rules are documented, but this resource lacks journey-level evidence on attempts, completion, rejection, abandonment, time and cost.",
-    "current_evidence_ar": "قواعد «اعرف عميلك» (KYC) وقواعد النقود الإلكترونية موثقة، لكن قاعدة الأدلة لا تتضمن دليلًا على مستوى الرحلة عن المحاولات والإكمال والرفض والانسحاب والوقت والتكلفة.",
+    "current_evidence_en": "CBY-Aden's e-money rules and its electronic know-your-customer (KYC) instructions, which ask providers to report the average time to open or activate an account, are documented, but this resource lacks journey-level evidence on attempts, completion, rejection, abandonment, time and cost.",
+    "current_evidence_ar": "قواعد النقود الإلكترونية الصادرة عن البنك المركزي اليمني – عدن وتعليماته بشأن إجراءات «اعرف عميلك» (KYC) إلكترونيًا، التي تطلب من مقدمي الخدمة الإبلاغ عن متوسط الوقت اللازم لفتح الحساب أو تفعيله، موثقة، لكن قاعدة الأدلة لا تتضمن دليلًا على مستوى الرحلة عن المحاولات والإكمال والرفض والانسحاب والوقت والتكلفة.",
     "missing_evidence_en": "Journey-level administrative or survey data across onboarding stages: identity and KYC verification, attempts, completion, rejection, abandonment, time and cost.",
     "missing_evidence_ar": "بيانات إدارية أو مسحية على مستوى رحلة الانضمام عبر مراحلها: التحقق من الهوية وإجراءات «اعرف عميلك» (KYC)، والمحاولة، والإكمال، والرفض، والانسحاب، والوقت، والتكلفة.",
     "guardrail_en": "Do not infer exclusion from the existence of KYC rules; measure where and why people fail or abandon the journey.",
@@ -374,6 +419,13 @@
       "/providers"
     ],
     "domain_ar": "الهوية / الوصول الرقمي",
+    "evidence_bindings": [
+      "CLM-012",
+      "VIS-E-MONEY-RULE-STACK"
+    ],
+    "source_bindings": [
+      "SRC-CBY-EKYC-2023"
+    ],
     "affected_route_list": [
       "/people/",
       "/payments/",
@@ -397,8 +449,8 @@
       "insolvency"
     ],
     "dimensions_ar": "تغطية معلومات الائتمان,الاستعلامات,استخدام التقارير,تسجيل الضمانات,مشاركة المقرضين,نوع المقترض,الاستخدام في القرار,الإعسار",
-    "current_evidence_en": "Legal texts, project documents and institutional records can establish that credit infrastructure exists or is being developed; lender participation, inquiry use and borrower reach are not yet documented as one complete evidence chain. This resource holds no current measure of the reach or use of credit infrastructure in Yemen.",
-    "current_evidence_ar": "قد تثبت النصوص القانونية ووثائق المشروعات والسجلات المؤسسية وجود بنية تحتية ائتمانية أو أنها قيد التطوير، لكن الأدلة الحالية لا تربط بعد مشاركة المقرضين واستخدام الاستعلامات والوصول إلى المقترضين في سلسلة قياس واحدة مكتملة. ولا يملك هذا المورد مقياسًا حاليًا لمدى تغطية البنية التحتية الائتمانية في اليمن أو استخدامها.",
+    "current_evidence_en": "CBY-Aden's published credit-information rules (exposure reporting on a set form and an enquiry before lending) and its launch of a defaulters registry show that credit-information infrastructure exists; lender participation, inquiry use and borrower reach are not yet documented as one complete evidence chain. This resource holds no current measure of the reach or use of credit infrastructure in Yemen.",
+    "current_evidence_ar": "تُظهر قواعد معلومات الائتمان التي ينشرها البنك المركزي اليمني – عدن (الإبلاغ عن التعرضات الائتمانية على استمارة محددة والاستعلام قبل منح الائتمان) وتدشينه نظام سجل المتعثرين وجود بنية تحتية لمعلومات الائتمان، لكن الأدلة الحالية لا تربط بعد مشاركة المقرضين واستخدام الاستعلامات والوصول إلى المقترضين في سلسلة قياس واحدة مكتملة. ولا يملك هذا المورد مقياسًا حاليًا لمدى تغطية البنية التحتية الائتمانية في اليمن أو استخدامها.",
     "missing_evidence_en": "Administrative data from credit-information and collateral infrastructure and participating institutions on coverage, inquiries, report use, collateral registration, lender participation and borrower type.",
     "missing_evidence_ar": "بيانات إدارية من البنية التحتية للمعلومات الائتمانية والضمانات ومن المؤسسات المشاركة، عن التغطية والاستعلامات واستخدام التقارير وتسجيل الضمانات ومشاركة المقرضين ونوع المقترض.",
     "guardrail_en": "Establishment or legal authority does not prove operational coverage or lender use.",
@@ -423,6 +475,12 @@
       "/reforms"
     ],
     "domain_ar": "البنية التحتية للائتمان / المنشآت الأصغر والصغيرة والمتوسطة",
+    "evidence_bindings": [],
+    "source_bindings": [
+      "SRC-CBY-CRI-149",
+      "SRC-CBY-CRI-150",
+      "SRC-CBY-NEWS-963"
+    ],
     "affected_route_list": [
       "/finance/",
       "/firms/",
@@ -474,6 +532,11 @@
       "/explore"
     ],
     "domain_ar": "الحماية الاجتماعية / المدفوعات",
+    "evidence_bindings": [
+      "CLM-045",
+      "YMPS-YEM-2022-R1"
+    ],
+    "source_bindings": [],
     "affected_route_list": [
       "/payments/",
       "/people/",
@@ -529,6 +592,13 @@
       "/explore"
     ],
     "domain_ar": "الإصلاحات / المدفوعات / الجودة",
+    "evidence_bindings": [
+      "CLM-018",
+      "FMIIP-BASELINE-2025-01",
+      "VIS-TARGET-RESULT-STATE",
+      "VIS-PAYMENT-RAILS"
+    ],
+    "source_bindings": [],
     "affected_route_list": [
       "/reforms/",
       "/payments/",

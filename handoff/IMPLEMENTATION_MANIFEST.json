@@ -17,10 +17,10 @@
   "authority": {
     "master_path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "master_drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "master_sha256": "d14b36c5c1714cdc75dcc92bddac8777a301050ee6d147596e446978418ef360",
+    "master_sha256": "1d468c2c559d844bfcd2e0fcb96b84699d890a7b05454ee7e222c0894744bc16",
     "page_specs_path": "site-src/content/page_specs.json",
     "page_specs_drive_id": "1jWAKnjH4lJ3XdrsG_USX7UtWDKIXLkEU",
-    "page_specs_sha256": "8889e1ac2aabafeba3f74e01dcc128275bcdfe89f461b09729b960caa2f2a014",
+    "page_specs_sha256": "565c1cf886e94636e8f6164b4aec50a48fb107bca563680be2f3967ec108029a",
     "presentation_priority_path": "site-src/content/presentation_priority.json",
     "precedence": [
       "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
@@ -37,12 +37,12 @@
     "page_specs_external_repository_sync_state": "EXTERNAL_REPOSITORY_SYNC_PENDING"
   },
   "controlled_counts": {
-    "page_specs": 144,
-    "generated_locale_pages": 288,
-    "generated_html_total_including_root_and_404": 290,
-    "page_sections": 589,
+    "page_specs": 147,
+    "generated_locale_pages": 294,
+    "generated_html_total_including_root_and_404": 296,
+    "page_sections": 595,
     "questions": 11,
-    "evidence_objects": 110,
+    "evidence_objects": 113,
     "public_claims": 60,
     "evidence_passports": 55,
     "readings": 11,
@@ -53,8 +53,8 @@
     "publicly_addressable_sources": 192,
     "curated_source_report_cards": 28,
     "indicators": 217,
-    "public_search_records": 507,
-    "public_object_source_closure_records": 233,
+    "public_search_records": 513,
+    "public_object_source_closure_records": 236,
     "sources_without_public_locator": 7,
     "chronology_events": 29
   },
@@ -91,7 +91,7 @@
   },
   "implementation_target": {
     "ui": "Python production renderer in scripts/yfie (driven by scripts/build.py): static, pre-rendered HTML for every controlled route, with the one runtime site-src/app.js",
-    "route_requirement": "All 144 controlled routes in Arabic and English must be real deep-link-safe static output.",
+    "route_requirement": "All 147 controlled routes in Arabic and English must be real deep-link-safe static output.",
     "single_runtime_rule": "No permanent parallel legacy/new runtime. Migration may use temporary parity work, then obsolete presentation code is removed after acceptance.",
     "future_api_rule": "Future APIs must sit behind adapters and feed the same controlled schemas. They are not required for the first complete build."
   },
@@ -404,6 +404,10 @@
       "page_class": "evidence_detail"
     },
     {
+      "route": "/evidence/FAS-YEM-2015/",
+      "page_class": "evidence_detail"
+    },
+    {
       "route": "/evidence/FMIIP-BASELINE-2025-01/",
       "page_class": "evidence_detail"
     },
@@ -413,6 +417,10 @@
     },
     {
       "route": "/evidence/MFI-SPINE-2015-Q4/",
+      "page_class": "evidence_detail"
+    },
+    {
+      "route": "/evidence/MICS-YEM-2022-23/",
       "page_class": "evidence_detail"
     },
     {
@@ -576,6 +584,10 @@
       "page_class": "evidence_detail"
     },
     {
+      "route": "/evidence/YMPS-YEM-2022-R1/",
+      "page_class": "evidence_detail"
+    },
+    {
       "route": "/evidence/compare/",
       "page_class": "static"
     },
@@ -727,7 +739,7 @@
   "navigation_contract": {
     "path": "site-src/content/content/navigation_interaction.json",
     "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
-    "controlled_route_coverage": 144,
+    "controlled_route_coverage": 147,
     "page_family_count": 11,
     "journey_tests": 13,
     "search_smoke_tests": 32,
