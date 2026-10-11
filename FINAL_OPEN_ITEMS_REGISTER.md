@@ -1,5 +1,297 @@
 # Final open-items register
 
+## Live status at `876f52df` (main after PR #36, 11 October 2026)
+
+This is the register's live view (brief W3f): every item, old and new, in exactly one state — CLOSED, HOSTING, FRONTIER,
+OWNER-OPTIONAL or DECIDED. Sections 1–10 below are history and are not rewritten; where a cell there is stale, this view
+governs (dated line, section 11). Nothing is PENDING unless its state is HOSTING.
+FRONTIER rows point to their verification cards (`audit/close_out/FRONTIER_CARDS.md`): the dated attempt, the human step, the record it changes,
+the public state meanwhile and a cadence. A state change updates this view and its machine-readable twin
+(`audit/close_out/OPEN_ITEMS_STATES.json`) in the same commit, and a gate checks one state per ID from the five.
+
+| State | Items |
+|---|---|
+| CLOSED | 82 |
+| HOSTING | 9 |
+| FRONTIER | 47 |
+| OWNER-OPTIONAL | 8 |
+| DECIDED | 101 |
+| **Total** | **247** |
+
+### CLOSED — with the evidence of closure
+
+| ID | Item | State evidence or card | Owner/next step |
+|---|---|---|---|
+| EAD-01 | One production runtime replaces the reference renderer | Closed 29 Sep 2026 (§1); suite count corrected to 27/28 by the dated line of 2 Oct 2026 | — |
+| EAD-03 | Web-size derivatives of the master logo | Owner approval 2 Oct 2026; eight resamples, master unchanged (`scripts/logo_derivatives.py`, G4 item 2); cold page 0.30–0.69 MB | — |
+| EAD-04 | No CSS filter on the logo | Closed 29 Sep 2026 with EAD-01 | — |
+| EAD-05 | Presentation of the "Method & Measurement" group | Closed 29 Sep 2026 (design decision shipped) | D8 changes the group to one link in W4 |
+| EAD-06 | Compare entry, mobile Compare, `?q=` state, result-type facet | `8ec2365` (`?q=`); `7895694` and `d668f11` (facet, "N of M"); B16 DONE | Domain facet: X-ESC-ANT-01 in `design/ESCALATIONS.md`, W4 |
+| EAD-07 | Document-type filter on `/data/` | RC-4 `ae0f3db` (label), RC-12 `98f43f5` (filter); B16 DONE | The untyped sources are EXT-09 |
+| EAD-09 | Social images from governed text | Closed 29 Sep 2026 (§1) | — |
+| EAD-11 | Question sets in a governed contract | G3, 2 Oct 2026: `question_sets` in `presentation_priority.json`; pages byte-identical | — |
+| EXT-01 | IMF Country Report No. 26/80 read in the original | RC-7 Path A, 3 Oct 2026 (§3 dated line) | — |
+| EXT-02 | Date of Governor's Decision No. 10 of 2026 | RC-8, 3 Oct 2026: 8 June 2026 from the signed scan | — |
+| EXT-03 | Entity names in Decision No. 18 of 2026 | RC-8, 3 Oct 2026: transcribed and held non-public; no page names them | — |
+| EXT-08 | Partial lineage of CLM-039, CLM-046, CLM-056 | CR-09, CLOSE-2B, PR #30 at `f71a327d`: the three dataset inputs print nothing; all three records BOUND_EXACT (checked at `19105ede`) | — |
+| EXT-19 | CBY-Aden bulletin currentness | U4, CLOSE-3C, PR #33 at `cf37e210`: SRC-CBY-001 moved to Issue No. 55 (June 2026); June 2026 rows added | Issue No. 56 is watched under EXT-22 |
+| FRN-09 | SDG 10.c (no record of indicator 10.c.1) | U7, CLOSE-3D, PR #34 at `69263241` (Master commit `19105ede`): 10.c stated as a reference in words; no pass/fail colouring | — |
+| OWN-01 | Who CauseWay is, funding, relationships | Owner decision 2 Oct 2026 (RC-2); D1 sentence added in CLOSE-1, PR #27 at `d4241f79` | — |
+| OWN-02 | `office@causewaygrp.com` is monitored | Owner decision 2 Oct 2026; D2 | — |
+| OWN-04 | Reuse licence for CauseWay's content | Closed 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §4, RIGHTS-FINAL): the owner confirms the CC BY 4.0 text. No legal review is claimed. Code licence: D3 | — |
+| OWN-05 | Stewardship decisions | Owner decision 2 Oct 2026; analytics: D5 | — |
+| OWN-07 | `/remittances/` Measurement card | Post-F9 correction, 27 Sep 2026 (§8) | — |
+| OWN-08 | Stale fields in `navigation_interaction.json` | Post-F9 correction, 27 Sep 2026 (§8) | — |
+| OWN-12 | Domain pages show at most two Measurement priorities | RD9 under D14: `measurement_limit` set to 10 on the eight domain routes in its own commit (`64d290ae`), so each domain page links every priority that names it; PR #36 at `876f52df` | — |
+| CLOSE-5 | Readings and the Measurement Agenda (W3e: RD1–RD7, RD9, RD10, M1, M2, ED-037) | CLOSE-5, PR #36 at `876f52df`: Master `c24791d6fd22` → `d14b36c5c171`, 182 cells; RD6 and RD7 needed no change; RD8 moved to OWN-13 | — |
+| OWN-10 | Internal Master self-counts | CLOSE-1, PR #27 at `d4241f79`; gates CO-G01, CO-G02 with negative controls | — |
+| X-REG-FMIIP-ISR0 | FMIIP ISR "0" placeholder | RC-12 `98f43f5`: not bound | — |
+| X-REG-SEVERITY-BASE | Base of VIS-FIRM-FINANCE-SEVERITY | RC-16 `b49fe93`: ambiguity stated in both languages | — |
+| X-REG-REGDOCS9 | Nine CBY-Aden files on `cby-ye.com/pages/14` not held | CLOSE-4, PR #35 at `da4ac79f`: all nine held | Items not found are EXT-26 to EXT-34 |
+| ADD2-IMP-A1 | VIS-PAYMENT-RAILS drawing, table and text agree | RC-8 `fda3965`; gate RC-A1; B16 DONE | — |
+| ADD2-IMP-A2 | Search alias 001 note; `/data/` scope line | RC-8 `fda3965`, RC-8b `7947347`; B16 DONE | — |
+| ADD2-IMP-1a | Document types of the e-wallet circular and e-money amendment | RC-17 `a4ff911`; B16 DONE | — |
+| ADD2-IMP-1b | ENF-10 date from its original | RC-8 `fda3965` (EXT-02); B16 DONE | — |
+| ADD2-IMP-1c | Regulatory group ordered by date, anchored and linked | RC-17 `a4ff911`; gate RC-ADD2; B16 DONE | — |
+| ADD2-IMP-1d | `/reforms/` names instruments by number | RC-17 `a4ff911`; B16 DONE | — |
+| ADD2-IMP-1e | "decision" ranks rule-making first; "N of M" | RC-17 `a4ff911`; `d668f11`, `7895694`; B16 DONE | — |
+| ADD2-IMP-2b | Short Arabic tokens match whole words | `9236ffc`; B16 DONE | — |
+| ADD2-IMP-2d | Aliases Findex and PSP | RC-17 `a4ff911` (aliases 029, 030); B16 DONE | — |
+| ADD2-IMP-2e | Alias 007 note on «محفظة» | RC-17 `a4ff911`; B16 DONE | — |
+| ADD2-IMP-3a | Evidence landscape table | RC-10 `ae86d2d`; gate RC-LAND; B16 DONE | — |
+| ADD2-IMP-5a | Preset Compare links | RC-17 `a4ff911`; gate RC-ADD2; B16 DONE | — |
+| ADD2-IMP-5b | Compare lead promises only what Compare compares | RC-15 `0a3ac6f`; B16 DONE | — |
+| ADD2-IMP-9a | Trust links in the opened phone menu | Steward patch `88a0f86`; B16 DONE | — |
+| ADD2-IMP-9c | Shorter `/payments/` headline | RC-17 `a4ff911`; B16 DONE | — |
+| ADD2-IMP-9d | "How numbers are presented" shown once | `ab380cf`; gate RC-0950; B16 DONE | — |
+| ADD2-IMP-9i | POS chart labels no longer collide | RC-10 `ae86d2d`; B16 DONE | — |
+| ADD2-IMP-10 | 00_MASTER and 37_READINESS_CHECKLIST counts | RC-17 `a4ff911`; computed since CLOSE-1 (OWN-10); B16 DONE | — |
+| ADD2-IMP-11 | "resolve … resolve" on Home and Explore | RC-17 `a4ff911`; B16 DONE | — |
+| ADD2-IMP-L1 | Never "latest" without a date | RC-16 `b49fe93`; gate RC-LATEST; B16 DONE | — |
+| ADD2-IMP-L2 | Survey coverage on survey records | RC-10, RC-16 `b49fe93` (2014 wave: roadmap item 26); B16 DONE | — |
+| ADD2-IMP-L3 | Findex 2025's absence stated | RC-10 `ae86d2d`, RC-17 `a4ff911`; B16 DONE | — |
+| ADD2-IMP-L4 | Two-part citation | RC-15, RC-16, `ab380cf`; gate RC-0950; B16 DONE | — |
+| ADD2-IMP-J2 | Publisher facet in the library | RC-12 `98f43f5`; B16 DONE | — |
+| CR-01 | Findex 11.9% described as including mobile money | CLOSE-2A, PR #30 at `f71a327d` | — |
+| CR-02 | Findex uncertainty | CLOSE-2A, PR #30 at `f71a327d`: national intervals from WB DE 1.9; 12 group rows withdrawn | — |
+| CR-03 | False sentence in CLM-026 | CLOSE-3A, PR #31 at `4ce74e68`: CLM-026 lists 16 published measures | — |
+| CR-04 | Locators of WB-FINDEX-OBS-2022-010/011/012 | CLOSE-1, PR #27 at `d4241f79` | — |
+| CR-05 | IMF remittance estimates shown as reported history | CLOSE-2B, PR #30 at `f71a327d`: model-based estimates, IRG scope | — |
+| CR-06 | Text and visual disagree on 5,202,019 | CLOSE-3B, PR #32 at `4bd931d0` (with U2) | — |
+| CR-07 | Stale SMP status | CLOSE-2B, PR #30 at `f71a327d`: approved by IMF Management 7 Oct 2026 (SRC-IMF-YEM-SMP-2026-APPROVAL) | — |
+| CR-08 | NPL ratios | CLOSE-2B, PR #30 at `f71a327d`: FSI table described; zeros = not reported; no ratio charted | — |
+| CR-09 | Untraced inputs | CLOSE-2B, PR #30 at `f71a327d`: records BOUND_EXACT | — |
+| CR-10 | NFID procurement source set NON_PUBLIC | CLOSE-1, PR #27 at `d4241f79` | — |
+| CR-11 | DS-QUAL-EVIDENCE binds SRC-CCY-PRESSURE-2026 | CLOSE-2B, PR #30 at `f71a327d`: ReliefWeb locator | — |
+| CR-12 | Quarantine OECD benchmark and illustrative codebook rows | CLOSE-1, PR #27 at `d4241f79` | — |
+| CR-13 | Sex-composition labels of the H1-2025 shares | CLOSE-2B, PR #30 at `f71a327d` (Master); published by U6, PR #32 at `4bd931d0` | — |
+| CR-14 | Wording of the low-income comparator | CLOSE-2A, PR #30 at `f71a327d`: verified, no change (35.2% is the WB aggregate) | — |
+| CR-15 | Is the CBY still producing remittance data? | CLOSE-2B, PR #30 at `f71a327d` | — |
+| CR-16 | OECD/INFE scores 15 and 42 | CLOSE-2B, PR #30 at `f71a327d`: printed labels | — |
+| CR-19 | CLM-056 provider share under D10 | CLOSE-2B, PR #30 at `f71a327d`: provider described, not named | — |
+| CR-20 | Deposit-insurance law number | CLOSE-2B, PR #30 at `f71a327d`: Law No. 21 of 2008 | — |
+| U1 | Findex 2021 published values | CLOSE-3A, PR #31 at `4ce74e68`: 147 WB values; 51 subgroup rows published; 105 held with reasons | — |
+| U2 | OBS-00037 in VIS-PAYMENT-ANATOMY | CLOSE-3B, PR #32 at `4bd931d0`: 58,512 kept held with its reason | — |
+| U3 | Cash Consortium of Yemen sources | CLOSE-3B, PR #32 at `4bd931d0`: three reports public; CWR-010 findings with limits | — |
+| U4 | CBY monetary context | CLOSE-3C, PR #33 at `cf37e210`: Issue No. 55 rows; snapshot table and rate line on `/finance/` | — |
+| U5 | RV-CWR-011 bank composition | CLOSE-3C, PR #33 at `cf37e210` | — |
+| U6 | Held payment observations | CLOSE-3B, PR #32 at `4bd931d0`: 11 rows drawn, 5 as text, 25 kept with reasons | — |
+| U7 | Remittance cost series | CLOSE-3D, PR #34 at `69263241` (Master commit `19105ede`): WDI yearly average added; RPW stays 2025 Q3 (EXT-12) | — |
+| U8 | IMF FAS 2015 via WDI | CLOSE-3B, PR #32 at `4bd931d0`: MA-005 | — |
+| U9 | FMIIP PAD additions | CLOSE-3B, PR #32 at `4bd931d0` | — |
+| U10 | Women's evidence concordance | CLOSE-3B, PR #32 at `4bd931d0` | — |
+| U11 | CWR-001 compare case | CLOSE-3B, PR #32 at `4bd931d0` | — |
+| U12 | UCT status | CLOSE-3B, PR #32 at `4bd931d0` | — |
+| U13 | MICS 2022–23 | CLOSE-3B, PR #32 at `4bd931d0` | — |
+| U14 | WB phone survey | CLOSE-3B, PR #32 at `4bd931d0`: catalogue metadata only; no microdata used | — |
+
+### HOSTING — done at or after deployment
+
+| ID | Item | State evidence or card | Owner/next step |
+|---|---|---|---|
+| EAD-10 | Remeasure bytes and requests on the release host | PENDING — runbook step 10; implemented site measured and budgeted locally (`8c977f3`) | Claude Code, after the first deploy |
+| REL-01 | Security headers at the host | PENDING — prepared (`_headers`, `1ca46dc`; 0 violations on 288 pages); checked live at runbook steps 8–9 | Owner (account); Claude Code (live test) |
+| REL-04 | Named release acceptance | PENDING — runbook step 13: a dated, signed line in `audit/OWNER_DECISIONS_*.md` | Owner |
+| REL-05 | Phone check of the live site from Yemen | PENDING — `docs/HANDOVER_TO_DEVELOPER.md` §5: a phone on a Yemeni network, in Arabic | A person the owner names |
+| REL-06 | Deployment switch-on | PENDING — runbook steps 6–8: token, `YFIE_DEPLOY_ENABLED=true`; the deploy workflow stays inactive until then | Owner |
+| REL-07 | Optional aggregate request counts (D5) | PENDING, optional — runbook step 11; the `/privacy/` wording is applied Master-first on the day counts are switched on, never before | Owner decides; Claude Code applies |
+| OWN-03 | Public origin | PENDING — runbook steps 1 and 3; `public_origin` is null and the deploy refuses a null origin | Owner, then Claude Code |
+| X-REG-HAND3 | Currentness re-run at the release date | PENDING — runbook step 4 (`scripts/currentness_rerun.py --append`). IMF part closed by CR-07; RPW is EXT-12; the CBY Sana'a host is X-REG-LINK-AR2015 | Claude Code at release |
+| CR-17 | Stale edition label ("Edition of 3 October 2026") | PENDING — `UI-CONTENT-VERSION` moves to the release date Master-first at runbook step 4; the brief also lists the fix for W8 | Claude Code (W8 or step 4) |
+
+### FRONTIER — a disclosed evidence limit; each row has a verification card with its cadence
+
+| ID | Item | State evidence or card | Owner/next step |
+|---|---|---|---|
+| REL-02 | Reuse terms of the original sources not assessed | Card REL-02 (checked 10 Oct 2026) | Owner (with counsel if the owner wants it); no legal review is claimed. Each new edition, and before any download or export is switched on. |
+| EXT-05 | OECD 2026 review: product-holding and mobile-access figures | Card EXT-05 (checked 10 Oct 2026) | A person with a browser. Once before release; then each new edition. |
+| EXT-06 | Primary SFD/SMED 2023 portfolio document (78,686 borrowers) | Card EXT-06 (checked 10 Oct 2026) | A person with a browser. Each new edition. |
+| EXT-09 | Seven locator-only sources without governed title or type | Card EXT-09 (checked 10 Oct 2026) | A person with a browser. Each new edition. |
+| EXT-11 | IFAD *Sending Money Home 2026* | Card EXT-11 (no dated check since F3) | A person with a browser. Yearly. |
+| EXT-12 | Remittance Prices Worldwide after 2025 Q3 | Card EXT-12 (checked 10 Oct 2026) | A person with a browser. Quarterly (each RPW release). |
+| EXT-13 | IMF Financial Access Survey after 2015 | Card EXT-13 (checked 10 Oct 2026) | A person with a browser. Yearly (each FAS release). |
+| EXT-14 | ESPECRP unit of reach | Card EXT-14 (checked 10 Oct 2026) | Claude Code. Each new ESPECRP ISR until closing (31 Dec 2026), then the completion report. |
+| EXT-15 | CBY-Aden definition of "subscriber" | Card EXT-15 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Each CBY-Aden payments report (half-yearly). |
+| EXT-16 | Source and year of the FMIIP PAD's "two percent" | Card EXT-16 (checked 10 Oct 2026) | Owner or Claude Code. Each new FMIIP document. |
+| EXT-17 | Two Cash Consortium of Yemen reports without a public copy | Card EXT-17 (checked 10 Oct 2026) | Owner. Each new edition. |
+| EXT-18 | Date of the 26-bank list | Card EXT-18 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Monthly, with the currentness re-run. |
+| EXT-20 | ESCWA, *Enhancing MSME Support Systems in Yemen* (July 2025) | Card EXT-20 (checked 10 Oct 2026) | A person with a browser. Once before release; then each new edition. |
+| EXT-21 | SMEPS annual report 2025 | Card EXT-21 (checked 10 Oct 2026) | Claude Code. Quarterly until found; then yearly. |
+| EXT-22 | CBY-Aden bulletin Issue No. 56 (July 2026) | Card EXT-22 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Monthly. |
+| EXT-23 | CBY-Aden POS releases, July–September 2026 | Card EXT-23 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Monthly. |
+| EXT-24 | FMIIP (P180708) ISR sequence 3 | Card EXT-24 (checked 10 Oct 2026) | Claude Code. Half-yearly (ISR cycle). |
+| EXT-25 | IMF SMP staff report and a new remittance vintage | Card EXT-25 (checked 10 Oct 2026) | A person with a browser. Monthly until published; then each SMP review. |
+| EXT-26 | Governor's Decision No. 8 of 2026 | Card EXT-26 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Monthly, with the currentness re-run. |
+| EXT-27 | Governor's Decision No. 12 of 2026 | Card EXT-27 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Monthly, with the currentness re-run. |
+| EXT-28 | Governor's Decision No. 16 of 2026 | Card EXT-28 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Monthly, with the currentness re-run. |
+| EXT-29 | February 2026 SAR exchange-rate repricing decision | Card EXT-29 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Once more at release (runbook step 4); then each new edition. |
+| EXT-30 | Text of Governor's Decision No. 4 of 1991 | Card EXT-30 (checked 10 Oct 2026) | Owner (a request to CBY-Aden). Each new edition. |
+| EXT-31 | July 2024 licence revocation | Card EXT-31 (checked 10 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Once more at release; then each new edition. |
+| EXT-32 | `cby-ye.com/news/709` (HTTP 500) | Card EXT-32 (checked 10 Oct 2026) | A person with a browser. At release (runbook step 4); then each new edition. |
+| EXT-33 | `cby-ye.com/news/722` (HTTP 500) | Card EXT-33 (checked 10 Oct 2026) | A person with a browser. At release (runbook step 4); then each new edition. |
+| EXT-34 | `cby-ye.com/news/731` (HTTP 500) | Card EXT-34 (checked 10 Oct 2026) | A person with a browser. At release (runbook step 4); then each new edition. |
+| EXT-35 | SDRPY deposit notice (SPA N2234277) | Card EXT-35 (checked 10 Oct 2026) | A person with a browser. Once before release. |
+| EXT-36 | Own locator for CBY Sana'a Circular No. 14 of 2024 | Card EXT-36 (checked 10 Oct 2026) | A person with a browser. Each new edition. |
+| EXT-37 | Printed date of OECD *Digital Financial Inclusion of Youth* | Card EXT-37 (checked 10 Oct 2026) | A person with a browser. Once before release. |
+| EXT-38 | Identity of the World Bank FASTT fast-payments paper | Card EXT-38 (checked 10 Oct 2026) | A person with a browser. Once before release. |
+| EXT-39 | CBY-Aden Quarterly Bulletin, June 2021 | Card EXT-39 (checked 10 Oct 2026) | Owner (a request to CBY-Aden). Each new edition. |
+| FRN-01 | CLM-044 residual-model value withheld | Card FRN-01 (checked 10 Oct 2026) | Owner (through EXT-17). Each new edition. |
+| FRN-02 | Firm base (about 147) and question wording behind 91.84% | Card FRN-02 (checked 3 Oct 2026) | A person with a browser. Each new edition, or a new Enterprise Survey wave. |
+| FRN-03 | No crosswalk between CBY-Aden and IMF remittance levels | Card FRN-03 (checked 10 Oct 2026) | Claude Code. Each IMF Yemen report and each CBY-Aden annual report. |
+| FRN-04 | Causes of the gender gap not established | Card FRN-04 (checked 10 Oct 2026) | Claude Code. Each new edition. |
+| FRN-05 | No reconciled operating status across provider classes | Card FRN-05 (checked 3 Oct 2026) | Claude Code (currentness re-run); a person with a browser if the host refuses. Monthly, with the currentness re-run. |
+| FRN-06 | Size of the 2022 banking restatement | Card FRN-06 (checked 3 Oct 2026) | Claude Code. Each CBY-Aden annual report. |
+| FRN-07 | Composite records whose members are not listed | Card FRN-07 (checked 10 Oct 2026) | Programme steward. Each new edition. |
+| FRN-08 | WB Joint Food Security Monitor sub-national rate series | Card FRN-08 (checked 3 Oct 2026) | Owner. Each new edition. |
+| X-REG-LINK-C12 | CBY Sana'a Circular No. 12 of 2024: no working locator | Card X-REG-LINK-C12 (checked 10 Oct 2026) | A person with a browser. At release (runbook step 4); then each new edition. |
+| X-REG-LINK-AR2015 | CBY annual report 2015 host (503) | Card X-REG-LINK-AR2015 (checked 10 Oct 2026) | A person with a browser. At release (runbook step 4); then each new edition. |
+| X-REG-LINK-CDN14 | 14 locators refused by publishers' CDNs | Card X-REG-LINK-CDN14 (checked 10 Oct 2026) | A person with a browser. At release (runbook steps 4 and 12); then each new edition. |
+| X-LINK-TLS-SIGNIN | Two locators: TLS failure and sign-in wall | Card X-LINK-TLS-SIGNIN (checked 10 Oct 2026) | A person with a browser. At release; then each new edition. |
+| X-REG-FIRSTSCREEN22 | First-screen values not re-read on 3 October | Card X-REG-FIRSTSCREEN22 (checked 10 Oct 2026) | A person with a browser. Before release. |
+| X-B12-VIS-ACCESS-EVIDENCE-LAYER | VIS-ACCESS-EVIDENCE-LAYER: needs a register of operating locations | Card X-B12-VIS-ACCESS-EVIDENCE-LAYER (checked 3 Oct 2026) | Claude Code. Each new edition. |
+| X-B12-VIS-TARGET-RESULT-STATE-DRAWING | VIS-TARGET-RESULT-STATE drawing: needs an observed FMIIP result | Card X-B12-VIS-TARGET-RESULT-STATE-DRAWING (checked 10 Oct 2026) | Claude Code. Half-yearly, with each FMIIP ISR. |
+
+### OWNER-OPTIONAL — the owner may act; the default holds if not
+
+| ID | Item | State evidence or card | Owner/next step |
+|---|---|---|---|
+| EAD-02 | Manual assistive-technology audit with a human screen-reader user (AR, EN) | Automated half done: 0 axe violations on every page, keyboard walk. Recommended before launch; never claimed; no conformance is claimed | Owner commissions it, if wanted |
+| EAD-08 | A self-made subset of IBM Plex | Optional performance gain; the budget is met without it (`8c977f3`); the licence reserves the name "Plex" | Owner |
+| REL-03 | Native-speaker certification of the Arabic corpus | Optional; D6: none is sought or claimed | Owner |
+| EXT-07 | Findex subgroup base *n* and intervals | Needs licensed microdata, so it opens only through OWN-09; pages say no interval is published here (CLOSE-3A) | Owner, through OWN-09 |
+| OWN-09 | World Bank written confirmation on the microdata | Would unlock the 105 subgroup rows that need computation (held with this reason in CLOSE-3A) | Owner may request it |
+| OWN-11 | CWR-011 on `/finance/` | Not added: rule F2 caps an answer page at two Readings and `/finance/` carries CWR-002 and CWR-006 (PROGRESS, CLOSE-3C departure 4). Since PR #36 at `876f52df` CWR-011 is linked from CWR-002 and from `/measurement/` (MA-008) | Owner: keep F2, or name the Reading that yields |
+| OWN-13 | A twelfth Reading (RD8, CWR-012) | Drafted, not published: `audit/close_out/drafts/CWR-012_draft.json` holds the text; it needs a native Arabic read and its own source records before a transaction (PROGRESS, CLOSE-5) | Owner: commission the review, or leave the eleven Readings as they are |
+| X-REG-SFD62 | SFD newsletter No. 62 exists in two editions | Bound values follow the original edition; nothing printed is false; a caveat would be enrichment (B16) | Owner or steward may add a caveat |
+
+### DECIDED — a recorded decision; nothing here is open
+
+| ID | Item | State evidence or card | Owner/next step |
+|---|---|---|---|
+| OWN-06 | A reversed (light-on-dark) logo | Not needed: the logo is used on light surfaces only (D7 acceptance 2 Oct 2026; B16) | — |
+| REJ-01 | Domain prose that restates a record stays authored prose | Rejected (§6): PB-0471 | — |
+| REJ-02 | No second Measurement priority for household remittances | Rejected (§6): Tranche B | — |
+| REJ-03 | No `Dataset` structured data | Rejected (§6): F6 §1; downloads stay off (D4) | — |
+| REJ-04 | No carbon figure, badge or "green" claim | Rejected (§6): `docs/SUSTAINABILITY_METHOD.md`; D12 sets the footprint line | — |
+| REJ-05 | 26 corpus findings rejected, 7 superseded | Rejected (§6): `audit/F5_CORPUS_FINDINGS_LEDGER.csv` | — |
+| REJ-06 | Two Resource Library candidates rejected | Rejected (§6): `audit/F3_RESOURCE_DECISIONS.md` | — |
+| REJ-07 | No sync of the pre-GitHub Drive copies | Rejected (§6): README "Historical lineage" | — |
+| EAD-12 | Table rows for the 13 table-only records | Post-launch by owner decision A4 / C6 (2 Oct 2026); method text already printed (B1 `d9df1d2`, PB-0401) | — |
+| EXT-04 | Status-event table for `/providers/` | Post-launch with ADD2-IMP-6 (B16); entity names stay withheld (owner note 3 Oct 2026; D10) | — |
+| EXT-10 | Values held as governed text in RV-CWR-005, RV-CWR-008, VIS-MFI-DIVERGENCE | Post-launch (B16, 3 Oct 2026); the missing inputs are named in B12 | CLOSE-5 (PR #36 at `876f52df`) left RV-CWR-008 as text: RD4 added FMIIP PAD ¶10, and the SMEPS 2025 report it needs is not published (EXT-21) |
+| X-REG-ORIGIN-TABLES | Four origin tables are not Master sheets | Recorded as external working tables (B16); records trace to public originals | — |
+| X-B12-VIS-MFI-DIVERGENCE | VIS-MFI-DIVERGENCE renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: saver-definition crosswalk and a rial-valuation field | — |
+| X-B12-RV-CWR-006 | RV-CWR-006 renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: the same inputs as VIS-MFI-DIVERGENCE | — |
+| X-B12-RV-CWR-002 | RV-CWR-002 renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: origin table 173 is not a Master sheet | — |
+| X-B12-RV-CWR-003 | RV-CWR-003 renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: programme-lane label and crosswalk XW-FMIIP-005 as data | — |
+| X-B12-RV-CWR-005 | RV-CWR-005 renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: rows from the 2020 e-payment study (Tables 3 and 8) | — |
+| X-B12-RV-CWR-007 | RV-CWR-007 renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: a data file for four MECH- hypotheses | — |
+| X-B12-RV-CWR-008 | RV-CWR-008 renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: panel 3 rows from the SMEPS annual report 2024 | Opens with EXT-21 |
+| X-B12-RV-CWR-010 | RV-CWR-010 renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: labels for the ladder steps and a reference period | CLOSE-5 changed the Reading's text (RD5), not this input |
+| X-B12-VIS-E-MONEY-RULE-STACK | VIS-E-MONEY-RULE-STACK renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: one row per ceiling; Arabic for EMR-001…013 | — |
+| X-B12-VIS-FCP-REDRESS-PATH | VIS-FCP-REDRESS-PATH renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: limit and unit fields; Arabic step labels | — |
+| X-B12-VIS-FL-EVIDENCE-LADDER | VIS-FL-EVIDENCE-LADDER renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: rung labels and a data file | — |
+| X-B12-VIS-EVIDENCE-CLASS-LADDER | VIS-EVIDENCE-CLASS-LADDER renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: a governed class taxonomy | — |
+| X-B12-VIS-INCLUSION-TRANSMISSION | VIS-INCLUSION-TRANSMISSION renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: evidence and source for each of 13 relationships | — |
+| X-B12-VIS-EVIDENCE-GAPS | VIS-EVIDENCE-GAPS renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: a typed gap field on 10_MEASUREMENT_AGENDA | — |
+| X-B12-VIS-OECD-FCP-TIMELINE | VIS-OECD-FCP-TIMELINE renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: event labels and an event row | — |
+| X-B12-VIS-MECHANISM-METRIC-BRIDGE | VIS-MECHANISM-METRIC-BRIDGE renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: edge types reconciled with the taxonomy | — |
+| X-B12-VIS-FIRM-FINANCE-PATH-DRAWING | VIS-FIRM-FINANCE-PATH-DRAWING renders as a text frame | Post-launch (B16, 3 Oct 2026); missing Master input: the 2022 questionnaire's skip logic | — |
+| ADD2-REJ-01 | A composite evidence-maturity score | Rejected (B16): composites are closed | — |
+| ADD2-REJ-02 | An interpolated account-ownership path | Rejected (B16): missing ≠ zero; observed ≠ estimated | — |
+| ADD2-REJ-03 | Operating-provider counts from rosters | Rejected (B16): licence ≠ operation | — |
+| ADD2-REJ-04 | POS terminals per adult | Rejected (B16): infrastructure ≠ outcome | — |
+| ADD2-REJ-05 | "True level" factors for remittances | Rejected (B16): no crosswalk exists (FRN-03) | — |
+| ADD2-REJ-06 | Access maps from rosters | Rejected (B16): a listed location is not an operating point | — |
+| ADD2-REJ-07 | A provider "2026 status" badge | Rejected (B16): no synchronised current state | — |
+| ADD2-REJ-08 | An "is my wallet licensed?" lookup | Rejected (B16): no complete named set exists | — |
+| ADD2-REJ-09 | Provider profile pages | Rejected (B16): no new route; names non-public | — |
+| ADD2-REJ-10 | A rial converter | Rejected (B16): no invented conversion factor | — |
+| ADD2-REJ-11 | Food-security monitoring | Rejected (B16): out of scope | — |
+| ADD2-REJ-12 | The Uzbekistan comparator | Rejected (B16): not a same-definition aggregate | — |
+| ADD2-REJ-13 | A "five key numbers" explainer | Rejected (B16): figures keep their boundaries | — |
+| ADD2-REJ-14 | Regulatory instruments merged into the chronology | Rejected (B16): chronology ≠ causality | — |
+| B15-BLOCK-01 | «كوزواي» as the publisher's Arabic name | Rejected (B15 red team): the owner set "CauseWay" in Latin script | — |
+| B15-BLOCK-02 | Relabelling the IMF remittance history | Rejected (B15 red team): CLM-036 cannot be carried over unread | — |
+| B15-BLOCK-03 | An eleventh Measurement priority | Rejected (B15 red team): REJ-02 | — |
+| B15-BLOCK-04 | Removing Home's "Another view of the evidence" | Rejected (B15 red team): it is the system figure's text description | — |
+| B15-BLOCK-05 | An entity-level status register | Rejected (B15 red team): it would publish names | — |
+| B15-BLOCK-06 | A "strength" rating on a policy brief | Rejected (B15 red team): composites are closed | — |
+| ADD2-IMP-2c | "We Cash" found first | Rejected: withdrawn by the owner (3 Oct 2026, point 2); names never enter the index (gate RC-NAMES) | — |
+| ADD2-IMP-2a | A whole-phrase bonus in search | Next edition (B16, 3 Oct 2026): withdrawn after it broke the search smoke (PB-0494) | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-3b | DS-DEMAND-VINTAGE-LENS ten-function table | Next edition (B16, 3 Oct 2026): origin table is not a Master sheet (EAD-12 family) | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-4a | CWR-010 reachable from `/payments/` | Next edition (B16, 3 Oct 2026): two-Readings cap (rule F2); roadmap item 31 | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-4b | CLM-045 and YSC-022 cross-referenced | Next edition (B16, 3 Oct 2026): needs a Master binding and a template place | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-4c | MA-001 card leads with its remittance sentence | Next edition (B16, 3 Oct 2026): needs a governed title variant | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-6 | Status-event table PSE-001…015 | Next edition (B16, 3 Oct 2026): needs a contract; names withheld (EXT-04) | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-7 | Pairing notes | Next edition (B16, 3 Oct 2026): needs a Master binding and code | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-8 | Chronology on three more pages | Next edition (B16, 3 Oct 2026): roadmap item 29; chronology ≠ causality | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-9b | Text alternative in a details element | Next edition (B16, 3 Oct 2026): a design refinement | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-9e | One boundary band before the first answer | Next edition (B16, 3 Oct 2026): steward contract (`presentation_priority.json`) | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-9f | Spine index lists answer sections only | Next edition (B16, 3 Oct 2026): the index also serves phone navigation (DEBT-014) | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-9g | `/ar/data/` compact by default | Next edition (B16, 3 Oct 2026): roadmap item 30; complete without JavaScript by rule | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-9h | Home's first figure higher on a phone | Next edition (B16, 3 Oct 2026): governed copy order | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-L5 | Show the dates the governed fields hold together | Next edition (B16, 3 Oct 2026): needs governed labels and code | W4 may take it up; a CLOSED line is then appended |
+| ADD2-IMP-J1 | A bounded expression of 18_CBY_MONETARY | Next edition (B16, 3 Oct 2026): owner deferral (3 Oct 2026, C7); U4 has since published a dated table | W4 may take it up; a CLOSED line is then appended |
+| D1 | About and funding: keep §6 and add one sentence (applied in CLOSE-1) | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D2 | Contact: `office@causewaygrp.com` is monitored | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D3 | Code licence: all rights reserved; CC BY 4.0 covers CauseWay's content only | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D4 | Downloads stay off in v1 | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D5 | Analytics: none in the build; optional host-side counts at hosting only (REL-07) | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D6 | Arabic: no certification sought or claimed | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D7 | Design is executed by Claude Code (W4); `handoff/` superseded | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D8 | Navigation: hub numerals removed; one link to `/methodology/` | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D9 | Scope: no new page family, hub or tool route | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D10 | Naming providers only on a primary public source | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D11 | Arabic review register is final | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D12 | Measured, restrained footprint line; no generic green claims | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D13 | Content preservation: nothing governed is cut for length | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D14 | Steward designation for scoped edits of the two controlled contracts | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| D15 | Site-operation metrics sit outside rule 5, under their own gate | Owner decision, 10 Oct 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §5) | — |
+| CR-18 | Rurality holds get a permanent reason | CLOSE-1, PR #27 at `d4241f79`: the World Bank publishes no rural/urban split for Yemen for this wave | — |
+| AR-REVIEW | The external Arabic review | Applied per the register (D11): AR-1, PR #28 at `98f2f782` (25 rows); CLOSE-2 rows, PR #30 at `f71a327d`; AR-004, PR #32 at `4bd931d0`; ED-037 with RD1 in CLOSE-5, PR #36 at `876f52df`. RETAIN, not applied: AR-028, AR-036, ED-038 | — |
+| APX-E-01 | POS value in USD | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-02 | Reading the rate plateau as "held" or "administered" | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-03 | "Implied 80% dormant" and "targets below reported numbers" | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-04 | Enforcement and sanctioned-entity names | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-05 | Contradiction-index, coverage-matrix, 39-gap and FAQ/benchmark pages | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-06 | The five-systems material (except UCT and July 2024) | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-07 | Doing Business 2020 "getting credit" | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-08 | FATF narrative, OFAC, Saudi transfer caps, comparator countries | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-09 | Unweighted raw shares from the 2026 syntheses | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-10 | Rural/urban values | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-11 | "50% without national ID" and "78% of Muhamasheen" | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-12 | Corridor origin shares without a period | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-13 | Workbook lead figures and legacy CSVs | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-14 | CauseWay-internal inferences | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-15 | Insurance, postal savings and capital markets | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-16 | WBG Country Survey FY14 | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-17 | SEBR 2025 bank-efficiency paper | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-18 | 2009/2010 Enterprise Survey questionnaires and notes | Rejected, brief Appendix E (recorded as DECIDED) | — |
+| APX-E-19 | Findex respondent files | Rejected, brief Appendix E (recorded as DECIDED) | — |
+
+## The register as first built, and its history
+
 Every item that remains open at the Design handoff, in exactly one class, with where it shows today, what would close it
 and who owns it. **There are zero `DESIGN_BLOCKER` items**: each item below is either stated honestly on the page it
 affects, part of the scope Design and Code already receive, or needed only for public release.
@@ -506,3 +798,13 @@ or is not published.
 | EXT-19 | EXTERNAL_EVIDENCE_DEPENDENCY | **CBY-Aden bulletin currentness.** CBY-BANKS-2026-05 and CWR-011 use Issue No. 54 (May 2026); Issue No. 55 (June 2026) exists | The record and the Reading say May 2026 throughout and claim no later month | At release (runbook step 4), decide whether to roll the record forward by transaction | Claude Code at release |
 | FRN-09 | KNOWN_EVIDENCE_FRONTIER | **SDG 10.c.** The resource holds no record of SDG indicator 10.c.1 (remittance costs as a share of the amount sent) or its 3% target | Not published | A next-edition decision whether to set the target beside VIS-REMITTANCE-COST; a target is not a result | Owner |
 | OWN-10 | OWNER_INPUT | **Internal Master counts.** `00_MASTER` and `37_READINESS_CHECKLIST` hold site pages 143, Readings 10 and sources 165, both as formula caches and as constants; the sheets hold 144, 11 and 167. The definition behind "bilingual page sections 574" was not re-derived | Internal and unprojected; nothing public shows them | A Master transaction following `audit/release_candidate/rc_17_addendum2.py` (`set_formula_cache`) | Programme steward |
+
+## 11. Live view, 11 October 2026 (appended)
+
+The section "Live status at …" at the top of this file is the register's current state (close-out brief W3f). It puts
+every item of sections 1–10, and every item raised since, in one of five states — CLOSED, HOSTING, FRONTIER,
+OWNER-OPTIONAL or DECIDED — and its machine-readable twin is `audit/close_out/OPEN_ITEMS_STATES.json`. The six classes
+and their counts above are the F9 state and are not rewritten; where a cell above disagrees with the live view, the live
+view governs. FRONTIER items keep their verification cards in `audit/close_out/FRONTIER_CARDS.md`. Gate CO-G06
+(`scripts/validate.py`) checks that each ID appears once and in one of the five states, that the view, its count table
+and the twin agree, that nothing outside HOSTING says PENDING, and that every FRONTIER item has a card.

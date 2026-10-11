@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 2026-10-11 — The open-items register's live view (Stage A, W3a and W3f)
+
+`FINAL_OPEN_ITEMS_REGISTER.md` now opens with "Live status at `876f52df`": every item, old and new, in exactly one of five
+states — CLOSED 82, HOSTING 9, FRONTIER 47, OWNER-OPTIONAL 8, DECIDED 101 (247 in all). Nothing outside HOSTING says
+PENDING. Sections 1–10 stay as history; section 11 is appended and says the live view governs where they differ.
+
+- **FRONTIER cards (W3a).** Each FRONTIER item has a card in `audit/close_out/FRONTIER_CARDS.md`: the dated attempt, the
+  exact human step, the record it would change, what the public pages say meanwhile, and a cadence.
+- **Gate CO-G06.** `scripts/validate.py` checks the live view against its machine-readable twin
+  `audit/close_out/OPEN_ITEMS_STATES.json`: one state per ID from the five, the count table, no PENDING outside
+  HOSTING, a card for every FRONTIER item. Two negative controls prove it fires.
+- **Context.** The two `open_items` fields of `authority/YFI_CURRENT_PROJECT_CONTEXT.json` point to the live view; the
+  F9 count is kept as history.
+
 ## 2026-10-11 — CLOSE-5: Readings and the Measurement Agenda (Stage A, W3e, Appendix D)
 
 Master `c24791d6fd22` → `d14b36c5c171`, 182 cells (`audit/close_out/close_5.py`, text and bindings in

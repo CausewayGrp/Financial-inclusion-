@@ -13,7 +13,7 @@
 - OpenAI's independent acceptance review.
 - The owner's release approval and tag.
 
-Open evidence items are in `FINAL_OPEN_ITEMS_REGISTER.md` §10.
+Open evidence items are in `FINAL_OPEN_ITEMS_REGISTER.md`, in its live view at the top (one state per item; §1–10 are history).
 
 **Programme:** Final integration to the Design handoff — directive D7 (`audit/directives/`), sessions F0–F9.
 **Position (current):** OpenAI accepted the Tranche C checkpoint on 26 September 2026 (recipient verification 31/31) and

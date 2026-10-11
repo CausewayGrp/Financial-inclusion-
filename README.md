@@ -74,7 +74,7 @@ still stands between this repository and a public site, each with its owner:
 | Repository housekeeping this session's access refuses: deleting 16 merged branches, and the checkpoint tag if absent | Owner (or anyone with write access) | handover §9 |
 
 The full list of what a person must still do is [`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md);
-open evidence items are in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md) §10.
+open evidence items are in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md), in its live view at the top (one state per item; §1–10 are history).
 
 ## Authority
 
