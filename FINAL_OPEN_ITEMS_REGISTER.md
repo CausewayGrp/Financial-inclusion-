@@ -1,6 +1,6 @@
 # Final open-items register
 
-## Live status at the close of the Stage A addendum (CLOSE-6C, 11 October 2026)
+## Live status at CLOSE-6F (Stage A final instruction v5, 11 October 2026)
 
 This is the register's live view (brief W3f): every item, old and new, in exactly one state — CLOSED, HOSTING, FRONTIER,
 OWNER-OPTIONAL or DECIDED. Sections 1–10 below are history and are not rewritten; where a cell there is stale, this view
@@ -15,8 +15,8 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | HOSTING | 9 |
 | FRONTIER | 47 |
 | OWNER-OPTIONAL | 8 |
-| DECIDED | 110 |
-| **Total** | **266** |
+| DECIDED | 111 |
+| **Total** | **267** |
 
 ### CLOSED — with the evidence of closure
 
@@ -111,7 +111,7 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | ADD3-EMONEY | E-money jurisdiction statement | CLOSE-6A, PR #40: VIS-E-MONEY-RULE-STACK gains the attributed Sana'a Center statement; CLM-012 says its rules are CBY-Aden's | — |
 | ADD3-CCY-PRESSURE | CCY cash-pressure report as a bounded item | CLOSE-6A, PR #40: CWR-010 third finding (reported practice, not prevalence); its "12%" is not reused | — |
 | ADD3-3 | Source utilisation (merges, withholds, card completions, /data/ regulation text, chronology, utilisation file) | CLOSE-6B, PR #41: Master `1d468c2c` -> `17c6b5dc`, 194 cells; audit/close_out/SOURCE_UTILISATION_2026-10-11.csv | — |
-| ADD3-4 | Reading CWR-012 "How money reaches households" | CLOSE-6C (11 Oct 2026): promoted after the review pair (red-team PROMOTE, Arabic PASS); CCY findings held as CCY-ISP-2024 and CCY-SAM-2024 | — |
+| ADD3-4 | Reading CWR-012 "How money reaches households" | Published on 11 October 2026 in CLOSE-6C. The steward's instruction to keep it retired was withdrawn the same day: the three grounds for retirement — a marginal-shares inference, an unreviewed Arabic text, and the Cash Consortium findings not held as records — were each met in the transaction. The retirement was never caused by a ban on microdata. Repaired and kept in CLOSE-6D (#43; domain and Arabic lenses KEEP) | — |
 | ADD3-ALIAS-001 | Search alias 001 said the evidence base holds no law | CLOSE-6C (11 Oct 2026): the note names the one law held (Bank Deposit Insurance Institution) and the one Sana'a circular, EN and AR | — |
 | OWN-13 | A twelfth Reading (RD8, CWR-012) | CLOSE-6C (11 Oct 2026): published as /readings/how-money-reaches-households/ with its two source records and the review pair (audit/close_out/addendum/) | — |
 
@@ -308,6 +308,7 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | ADD3-D7 | Migration and Development Brief 40 as corroboration for CLM-039 | Recorded as one publication inconsistent with itself, not corroboration; no value taken | — |
 | ADD3-D8 | Six sources withheld in CLOSE-6B | NON_PUBLIC with the address kept; none feeds a record; AR2015 keeps its card (X-REG-LINK-AR2015) | — |
 | ADD3-D9 | MA-005 printed 1.48 branches | 1.5, the decimals the World Bank publishes (1.4756); recorded as a challenge to the advisor's figure | — |
+| ADD5-HH | CWR-012's route slug says "households" while the Reading concerns adults | Decided in PR-3 (CLOSE-6D, #43): the slug /readings/how-money-reaches-households/ is kept, as the instruction (v5) directs; the title, question, thesis and sections speak of adults and recipients ("adults, not households"; section 5 corrected) | — |
 
 ## The register as first built, and its history
 
@@ -833,3 +834,4 @@ and the twin agree, that nothing outside HOSTING says PENDING, and that every FR
   publication; X-REG-LINK-C12 closed in CLOSE-6B; X-REG-LINK-AR2015's card was updated there. Total 265.
 
 - 11 October 2026, CLOSE-6E (Stage A final instruction v5): item 6C-6 is EXT-40 (FRONTIER): the owner's aggregate file for the 2021-wave domestic transfer channels has not arrived (D16). Card in `audit/close_out/FRONTIER_CARDS.md`. Total 266.
+- 11 October 2026, CLOSE-6F (Stage A final instruction v5, 7d): ADD3-4 records the facts of CWR-012's publication (v3's planned retirement record was never written); ADD5-HH (DECIDED) records the "households" slug decision of PR-3. Total 267.

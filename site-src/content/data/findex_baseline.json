@@ -2392,6 +2392,32 @@
       "https://api.worldbank.org/v2/country/YEM/indicator/fin22a?date=2014&format=json&source=28",
       "PUBLIC_PRIMARY_AGGREGATE",
       "Current database value 0.602877248196788 (open API, source 28, lastupdated 2025-10-06; read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json). The Little Data Book on Financial Inclusion 2015 printed 0.4% for the same 2014 measure (p.160); any comparison of 2014 with 2022 (1.8%) uses 0.6% (CLOSE-6D, 6B-1(b))."
+    ],
+    [
+      "WB-FINDEX-OBS-2022-160",
+      "fin34a",
+      "Received wages: into a bank or similar financial institution account  (% age 15+)",
+      "total",
+      2022,
+      3.1,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://api.worldbank.org/v2/country/YEM/indicator/fin34a?source=28&format=json&date=2022",
+      "PUBLIC_PRIMARY_AGGREGATE",
+      "Data only, not projected to a page (close-out v5 7c). World Bank published value for Yemen (Global Findex database, open API source 28, lastupdated 2025-10-06; read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json); unrounded value 3.10794980696722. Wages received into a bank or similar financial institution account, not into any account."
+    ],
+    [
+      "WB-FINDEX-OBS-2014-FIN34A",
+      "fin34a",
+      "Received wages: into a bank or similar financial institution account  (% age 15+)",
+      "total",
+      2014,
+      1.8,
+      "percent of population ages 15+",
+      "World Bank Global Findex",
+      "https://api.worldbank.org/v2/country/YEM/indicator/fin34a?source=28&format=json&date=2014",
+      "PUBLIC_PRIMARY_AGGREGATE",
+      "Data only, not projected to a page (close-out v5 7c). World Bank published value for Yemen (Global Findex database, open API source 28, lastupdated 2025-10-06; read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json); unrounded value 1.75089233870337. Wages received into a bank or similar financial institution account, not into any account."
     ]
   ]
 }

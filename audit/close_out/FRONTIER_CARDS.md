@@ -176,8 +176,9 @@ Cards: 47. No new FRN- ID was needed.
 ## EXT-23 — CBY-Aden monthly POS releases, July–September 2026
 
 - **Dated attempt:** 10 Oct 2026 (W3a): https://cby-ye.com/pages/33 lists March 2025 to June 2026 only; the English page ends January 2026. Also seen: the page now links January 2026 to `/files/6a6f950da3173.pdf`, while SRC-CBY-POS-2026-01 points at `69b058d4bc306` (values not re-read).
-- **Human step:** Check pages/33; read each new release's transactions, value and terminal count. Re-read the January 2026 file at its new address and repoint the locator if the values match.
-- **Record it changes:** New SRC-CBY-POS-2026-07 and later; 19_PAYMENTS_DATA; VIS-POS-VALUE; CWR-003, CWR-009 (RD6); SRC-CBY-POS-2026-01 locator.
+- **Dated attempt:** 11 Oct 2026 (CLOSE-6F, v5 7a): pages/33 still ends at June 2026. The January files are both read and recorded; which version is authoritative stays unconfirmed (V6 §4). Both January files were read (`audit/close_out/v5_reads/V6_pos_oecd.md`; SHA-256 6036fcdc… original, 52fa66f4… re-issue of 2 Aug 2026; the re-issue is image-only and was read visually). They are not value-identical (four governorate cells differ; the Shabwah SAR cell and the two YER change signs cannot be settled from the files), so `69b058d4bc306` stays the primary locator, the re-issue is an additional URL with that note, and the original's figures are kept. The July–September 2026 releases and the authoritative January version keep this card open.
+- **Human step:** Check pages/33; read each new release's transactions, value and terminal count. Ask CBY-Aden which January 2026 version is authoritative (Shabwah SAR 480 or 0; Hadhramout and Shabwah YER change signs).
+- **Record it changes:** New SRC-CBY-POS-2026-07 and later; 19_PAYMENTS_DATA; VIS-POS-VALUE; CWR-003, CWR-009 (RD6); SRC-CBY-POS-2026-01 locator only if CBY-Aden names the re-issue authoritative.
 - **Public state meanwhile:** The POS series ends at June 2026 and says so.
 - **Cadence:** Monthly.
 - **Who:** Claude Code (currentness re-run); a person with a browser if the host refuses

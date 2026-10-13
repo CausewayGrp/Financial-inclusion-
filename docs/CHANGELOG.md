@@ -1,5 +1,29 @@
 # Repository Change Log
 
+## 2026-10-11 — CLOSE-6F: sources, regulation check, Master hygiene and registers (Stage A final instruction v5, §7)
+
+Master transaction CLOSE-6F (Master 7e4f2cb5 -> fcc1195b, 129 cells; `audit/close_out/close_6f.py`; ledger and run report
+in `audit/close_out/runs/`). The checks behind it are in `audit/close_out/v5_reads/V8_close6f_checks.md` (with V2 and V6).
+
+- **Sources (7a).** SRC-OECD-YEM-RESILIENCE-001 adds the PDF and chapter page as additional URLs, with the PDF's SHA-256
+  and page offset; the DOI and chapter pages refuse automated requests (HTTP 403). SRC-CBY-POS-2026-01 records both January
+  2026 files: they are not value-identical (four governorate cells differ), so the original stays primary; the re-issue
+  is image-only, and which version is authoritative stays unconfirmed (FRONTIER EXT-23 updated).
+- **Regulation check (7b).** Eight cards checked (the instruction says nine and lists eight): each carries why it matters
+  and what it does not establish, in both languages, in the Master and on its page. No change needed.
+- **Master hygiene (7c).** The 24 fin11a–f rows and the 95 subgroup rows that waited on a weighted microdata compute now
+  read NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW; gate CO-G04 rejects the retired state (with a negative control).
+  fin34a carries the World Bank's published label; its 2022 and 2014 values (3.1 and 1.8) are held in 25_FINDEX_BASELINE
+  as data only. 605 and 1,114 are marked UNVERIFIED__DO_NOT_PROJECT in 00_MASTER and 12_VISUAL_PREVIEWS.
+  29_OECD_BENCHMARKS: OECD-YEM-003 to 005 ATTRIBUTED__NOT_PROJECTED with the OECD's own words; OECD-YEM-012 to 014 labelled
+  as a different unit and window from SMEPS's report; five attributed facts added (OECD-YEM-019 to 023), none projected.
+- **Registers (7d).** ADD3-4 records the CWR-012 publication facts; new DECIDED item ADD5-HH (the "households" slug kept);
+  register 267 items. The checkpoint states 522 search records (476 was stale). README states Stage A's position without
+  a new status.
+- Review: domain and Arabic lenses, ACCEPT after B1 (the series URL) with S1–S9, N1, N2, N4, N5 and N7 applied.
+- Counts unchanged: 151 Page Specs, 306 HTML, 116 Evidence Records, 206 source records; literal closure 19,847 records,
+  0 unresolved.
+
 ## 2026-10-11 — CLOSE-6E: evidence strengthening (Stage A final instruction v5, §5)
 
 Master transaction CLOSE-6E (Master 6769673f -> 7e4f2cb5, 132 cells; `audit/close_out/close_6e.py` with

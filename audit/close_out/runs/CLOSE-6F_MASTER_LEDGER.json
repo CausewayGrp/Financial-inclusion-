@@ -1,0 +1,1189 @@
+{
+ "transaction": "CLOSE-6F",
+ "summary": "Stage A final instruction v5, section 7 (7a, 7c): the OECD PDF and chapter locators; the January 2026 POS re-issue recorded (not value-identical); fin11a-f and 95 subgroup contracts relabelled for D16 review; fin34a's published label and values; 605 and 1,114 marked not to project; OECD-YEM-012-014 labelled; five OECD assertions recorded and three re-stated as attributed, not projected.",
+ "self_counts": {
+  "site_pages": 151,
+  "bilingual_sections": 254,
+  "questions": 11,
+  "evidence_objects": 116,
+  "public_claims": 60,
+  "readings": 12,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 31,
+  "sources": 206,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 99,
+  "remittances": 29
+ },
+ "input_master_sha256": "7e4f2cb5d20aa3374ccfcebb12489ee28c283e8cfe19735279466a615f695073",
+ "output_master_sha256": "fcc1195bcf399c2c7e4b794f654ada0e45a626bfebae0dc884023d203ebbce8d",
+ "cells_written": 129,
+ "changes": [
+  {
+   "finding": "CLOSE-6F:7a",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 52,
+   "col": 3,
+   "field": "SRC-OECD-YEM-RESILIENCE-001.additional_urls",
+   "old": null,
+   "new": "[\"https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/promoting-economic-resilience-in-yemen_b66657c1/81ed2898-en.pdf\", \"https://www.oecd.org/en/publications/promoting-economic-resilience-in-yemen_81ed2898-en/full-report/the-financial-sector_4d6228a4.html\"]"
+  },
+  {
+   "finding": "CLOSE-6F:7a",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 52,
+   "col": 16,
+   "field": "SRC-OECD-YEM-RESILIENCE-001.non_public_locator_note",
+   "old": null,
+   "new": "Publisher text read 11 October 2026 from the PDF (additional URL; 71 pages, SHA-256 4ae2f699e06796b25e2e13312f125fa2582a37b9a7b0aa108bf81606a6ef33b0; printed page = PDF page - 2). The DOI landing page and the chapter HTML (additional URL, as OECD-YEM-003 to 017 cite it; URL from an oecd.org-restricted web search, content not read) refuse automated requests (Cloudflare challenge, HTTP 403, 11 October 2026). Rights state unchanged; nothing reproduced."
+  },
+  {
+   "finding": "CLOSE-6F:7a",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 52,
+   "col": 22,
+   "field": "SRC-OECD-YEM-RESILIENCE-001.retrieval_date",
+   "old": "2026-10-04",
+   "new": "2026-10-11"
+  },
+  {
+   "finding": "CLOSE-6F:7a",
+   "sheet": "15_SOURCE_LIBRARY",
+   "row": 33,
+   "col": 16,
+   "field": "SRC-CBY-POS-2026-01.non_public_locator_note",
+   "old": null,
+   "new": "January 2026 file read in two forms on 11 October 2026 (audit/close_out/v5_reads/V6_pos_oecd.md): the original, the primary locator 69b058d4bc306 (SHA-256 6036fcdc445c28289c45b86a4f3e37578fba10636251f46ebde52ac3e5025d88; the English listing's 69b05c24bea8d is byte-identical), and 6a6f950da3173 (SHA-256 52fa66f423f5072a3b73185dff24398dc289d8d3a448214420d19c61d4af46bf), re-issued in a redesigned layout on 2 August 2026 (HTTP Last-Modified and PDF creation date; the Arabic listing links it). The values are not identical: totals and sector shares match, four governorate cells differ (Aden SAR change +866% / +86.6%; Hadhramout and Shabwah YER change signs; Shabwah SAR 480 / 0). The original's figures are kept: its Aden change fits the published total, the re-issue's does not. The re-issue is image-only; its values were read visually. The Shabwah SAR cell and the two YER change signs cannot be settled from the files, and CBY-Aden has not said which version is authoritative."
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 34,
+   "col": 8,
+   "field": "fin11a.use_class",
+   "old": "PUBLIC_INDICATOR_CANDIDATE__WEIGHTED_COMPUTATION_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 35,
+   "col": 8,
+   "field": "fin11b.use_class",
+   "old": "PUBLIC_INDICATOR_CANDIDATE__WEIGHTED_COMPUTATION_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 36,
+   "col": 8,
+   "field": "fin11c.use_class",
+   "old": "PUBLIC_INDICATOR_CANDIDATE__WEIGHTED_COMPUTATION_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 37,
+   "col": 8,
+   "field": "fin11d.use_class",
+   "old": "PUBLIC_INDICATOR_CANDIDATE__WEIGHTED_COMPUTATION_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 38,
+   "col": 8,
+   "field": "fin11e.use_class",
+   "old": "PUBLIC_INDICATOR_CANDIDATE__WEIGHTED_COMPUTATION_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 39,
+   "col": 8,
+   "field": "fin11f.use_class",
+   "old": "PUBLIC_INDICATOR_CANDIDATE__WEIGHTED_COMPUTATION_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-fin34a",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 82,
+   "col": 9,
+   "field": "fin34a.candidate_public_label_en",
+   "old": null,
+   "new": "Received wages: into a bank or similar financial institution account (% age 15+)"
+  },
+  {
+   "finding": "CLOSE-6F:7c-fin34a",
+   "sheet": "24_FINDEX_CODEBOOK",
+   "row": 82,
+   "col": 13,
+   "field": "fin34a.critical_caveat",
+   "old": "Use survey weight wgt; raw case counts are not population estimates.",
+   "new": "Use survey weight wgt; raw case counts are not population estimates. The World Bank publishes fin34a as wages received into a bank or similar financial institution account (not any account): 3.11% of adults in 2022 and 1.75% in 2014 (open API source 28, read 11 October 2026); both held in 25_FINDEX_BASELINE as data only. The DDI labels the microdata variable 'Received wage payments into an account'; the published series label is the World Bank's and was not checked against the questionnaire text."
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 17,
+   "col": 7,
+   "field": "FSG-0013.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 18,
+   "col": 7,
+   "field": "FSG-0014.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 19,
+   "col": 7,
+   "field": "FSG-0015.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 20,
+   "col": 7,
+   "field": "FSG-0016.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 21,
+   "col": 7,
+   "field": "FSG-0017.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 23,
+   "col": 7,
+   "field": "FSG-0019.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 24,
+   "col": 7,
+   "field": "FSG-0020.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 25,
+   "col": 7,
+   "field": "FSG-0021.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 26,
+   "col": 7,
+   "field": "FSG-0022.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 27,
+   "col": 7,
+   "field": "FSG-0023.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 29,
+   "col": 7,
+   "field": "FSG-0025.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 30,
+   "col": 7,
+   "field": "FSG-0026.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 31,
+   "col": 7,
+   "field": "FSG-0027.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 32,
+   "col": 7,
+   "field": "FSG-0028.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 33,
+   "col": 7,
+   "field": "FSG-0029.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 35,
+   "col": 7,
+   "field": "FSG-0031.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 36,
+   "col": 7,
+   "field": "FSG-0032.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 37,
+   "col": 7,
+   "field": "FSG-0033.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 38,
+   "col": 7,
+   "field": "FSG-0034.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 39,
+   "col": 7,
+   "field": "FSG-0035.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 41,
+   "col": 7,
+   "field": "FSG-0037.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 42,
+   "col": 7,
+   "field": "FSG-0038.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 43,
+   "col": 7,
+   "field": "FSG-0039.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 44,
+   "col": 7,
+   "field": "FSG-0040.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 45,
+   "col": 7,
+   "field": "FSG-0041.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 47,
+   "col": 7,
+   "field": "FSG-0043.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 48,
+   "col": 7,
+   "field": "FSG-0044.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 49,
+   "col": 7,
+   "field": "FSG-0045.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 50,
+   "col": 7,
+   "field": "FSG-0046.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 51,
+   "col": 7,
+   "field": "FSG-0047.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 53,
+   "col": 7,
+   "field": "FSG-0049.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 54,
+   "col": 7,
+   "field": "FSG-0050.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 55,
+   "col": 7,
+   "field": "FSG-0051.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 56,
+   "col": 7,
+   "field": "FSG-0052.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 57,
+   "col": 7,
+   "field": "FSG-0053.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 65,
+   "col": 7,
+   "field": "FSG-0061.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 66,
+   "col": 7,
+   "field": "FSG-0062.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 67,
+   "col": 7,
+   "field": "FSG-0063.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 68,
+   "col": 7,
+   "field": "FSG-0064.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 69,
+   "col": 7,
+   "field": "FSG-0065.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 77,
+   "col": 7,
+   "field": "FSG-0073.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 78,
+   "col": 7,
+   "field": "FSG-0074.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 79,
+   "col": 7,
+   "field": "FSG-0075.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 80,
+   "col": 7,
+   "field": "FSG-0076.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 81,
+   "col": 7,
+   "field": "FSG-0077.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 95,
+   "col": 7,
+   "field": "FSG-0091.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 96,
+   "col": 7,
+   "field": "FSG-0092.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 97,
+   "col": 7,
+   "field": "FSG-0093.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 98,
+   "col": 7,
+   "field": "FSG-0094.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 99,
+   "col": 7,
+   "field": "FSG-0095.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 119,
+   "col": 7,
+   "field": "FSG-0115.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 120,
+   "col": 7,
+   "field": "FSG-0116.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 121,
+   "col": 7,
+   "field": "FSG-0117.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 122,
+   "col": 7,
+   "field": "FSG-0118.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 123,
+   "col": 7,
+   "field": "FSG-0119.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 131,
+   "col": 7,
+   "field": "FSG-0127.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 132,
+   "col": 7,
+   "field": "FSG-0128.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 133,
+   "col": 7,
+   "field": "FSG-0129.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 134,
+   "col": 7,
+   "field": "FSG-0130.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 135,
+   "col": 7,
+   "field": "FSG-0131.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 137,
+   "col": 7,
+   "field": "FSG-0133.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 138,
+   "col": 7,
+   "field": "FSG-0134.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 139,
+   "col": 7,
+   "field": "FSG-0135.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 140,
+   "col": 7,
+   "field": "FSG-0136.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 141,
+   "col": 7,
+   "field": "FSG-0137.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 143,
+   "col": 7,
+   "field": "FSG-0139.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 144,
+   "col": 7,
+   "field": "FSG-0140.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 145,
+   "col": 7,
+   "field": "FSG-0141.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 146,
+   "col": 7,
+   "field": "FSG-0142.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 147,
+   "col": 7,
+   "field": "FSG-0143.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 149,
+   "col": 7,
+   "field": "FSG-0145.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 150,
+   "col": 7,
+   "field": "FSG-0146.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 151,
+   "col": 7,
+   "field": "FSG-0147.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 152,
+   "col": 7,
+   "field": "FSG-0148.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 153,
+   "col": 7,
+   "field": "FSG-0149.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 173,
+   "col": 7,
+   "field": "FSG-0169.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 174,
+   "col": 7,
+   "field": "FSG-0170.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 175,
+   "col": 7,
+   "field": "FSG-0171.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 176,
+   "col": 7,
+   "field": "FSG-0172.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 177,
+   "col": 7,
+   "field": "FSG-0173.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 179,
+   "col": 7,
+   "field": "FSG-0175.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 180,
+   "col": 7,
+   "field": "FSG-0176.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 181,
+   "col": 7,
+   "field": "FSG-0177.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 182,
+   "col": 7,
+   "field": "FSG-0178.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 183,
+   "col": 7,
+   "field": "FSG-0179.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 185,
+   "col": 7,
+   "field": "FSG-0181.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 186,
+   "col": 7,
+   "field": "FSG-0182.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 187,
+   "col": 7,
+   "field": "FSG-0183.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 188,
+   "col": 7,
+   "field": "FSG-0184.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 189,
+   "col": 7,
+   "field": "FSG-0185.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 191,
+   "col": 7,
+   "field": "FSG-0187.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 192,
+   "col": 7,
+   "field": "FSG-0188.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 193,
+   "col": 7,
+   "field": "FSG-0189.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 194,
+   "col": 7,
+   "field": "FSG-0190.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-D16",
+   "sheet": "27_FINDEX_SUBGROUPS",
+   "row": 195,
+   "col": 7,
+   "field": "FSG-0191.current_state",
+   "old": "CONTROLLED_MICRODATA_WEIGHTED_COMPUTE_REQUIRED",
+   "new": "NOT_PUBLISHED__DERIVATION_REQUIRES_D16_REVIEW"
+  },
+  {
+   "finding": "CLOSE-6F:7c-fin34a",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 185,
+   "col": null,
+   "field": "WB-FINDEX-OBS-2022-160",
+   "old": null,
+   "new": "{\"observation_id\": \"WB-FINDEX-OBS-2022-160\", \"indicator_code\": \"fin34a\", \"indicator\": \"Received wages: into a bank or similar financial institution account  (% age 15+)\", \"group\": \"total\", \"year\": 2022, \"value\": 3.1, \"unit\": \"percent of population ages 15+\", \"publisher\": \"World Bank Global Findex\", \"source_url\": \"https://api.worldbank.org/v2/country/YEM/indicator/fin34a?source=28&format=json&date=2022\", \"evidence_state\": \"PUBLIC_PRIMARY_AGGREGATE\", \"caveat\": \"Data only, not projected to a page (close-out v5 7c). World Bank published value for Yemen (Global Findex database, open API source 28, lastupdated 2025-10-06; read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json); unrounded value 3.10794980696722. Wages received into a bank or similar financial institution account, not into any account.\"}"
+  },
+  {
+   "finding": "CLOSE-6F:7c-fin34a",
+   "sheet": "25_FINDEX_BASELINE",
+   "row": 186,
+   "col": null,
+   "field": "WB-FINDEX-OBS-2014-FIN34A",
+   "old": null,
+   "new": "{\"observation_id\": \"WB-FINDEX-OBS-2014-FIN34A\", \"indicator_code\": \"fin34a\", \"indicator\": \"Received wages: into a bank or similar financial institution account  (% age 15+)\", \"group\": \"total\", \"year\": 2014, \"value\": 1.8, \"unit\": \"percent of population ages 15+\", \"publisher\": \"World Bank Global Findex\", \"source_url\": \"https://api.worldbank.org/v2/country/YEM/indicator/fin34a?source=28&format=json&date=2014\", \"evidence_state\": \"PUBLIC_PRIMARY_AGGREGATE\", \"caveat\": \"Data only, not projected to a page (close-out v5 7c). World Bank published value for Yemen (Global Findex database, open API source 28, lastupdated 2025-10-06; read 11 October 2026; audit/close_out/fixtures/wb_api_close6d_2026-10-11.json); unrounded value 1.75089233870337. Wages received into a bank or similar financial institution account, not into any account.\"}"
+  },
+  {
+   "finding": "CLOSE-6F:7c-605",
+   "sheet": "00_MASTER",
+   "row": 33,
+   "col": 2,
+   "field": "00_MASTER.Licensed money exchangers.value",
+   "old": "605",
+   "new": "UNVERIFIED__DO_NOT_PROJECT"
+  },
+  {
+   "finding": "CLOSE-6F:7c-605",
+   "sheet": "00_MASTER",
+   "row": 33,
+   "col": 6,
+   "field": "00_MASTER.Licensed money exchangers.note",
+   "old": null,
+   "new": "UNVERIFIED__DO_NOT_PROJECT: OECD (2026) figure 605 not verified against the OECD text; held only in 29_OECD_BENCHMARKS (OECD-YEM-006/007); close-out v5 7c, 11 October 2026"
+  },
+  {
+   "finding": "CLOSE-6F:7c-605",
+   "sheet": "00_MASTER",
+   "row": 34,
+   "col": 2,
+   "field": "00_MASTER.Money-exchange businesses.value",
+   "old": "1114",
+   "new": "UNVERIFIED__DO_NOT_PROJECT"
+  },
+  {
+   "finding": "CLOSE-6F:7c-605",
+   "sheet": "00_MASTER",
+   "row": 34,
+   "col": 6,
+   "field": "00_MASTER.Money-exchange businesses.note",
+   "old": null,
+   "new": "UNVERIFIED__DO_NOT_PROJECT: OECD (2026) figure 1,114 not verified against the OECD text; held only in 29_OECD_BENCHMARKS (OECD-YEM-006/007); close-out v5 7c, 11 October 2026"
+  },
+  {
+   "finding": "CLOSE-6F:7c-605",
+   "sheet": "12_VISUAL_PREVIEWS",
+   "row": 3,
+   "col": 18,
+   "field": "12_VISUAL_PREVIEWS.r3.c18",
+   "old": "605",
+   "new": "UNVERIFIED__DO_NOT_PROJECT"
+  },
+  {
+   "finding": "CLOSE-6F:7c-605",
+   "sheet": "12_VISUAL_PREVIEWS",
+   "row": 4,
+   "col": 18,
+   "field": "12_VISUAL_PREVIEWS.r4.c18",
+   "old": "1114",
+   "new": "UNVERIFIED__DO_NOT_PROJECT"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 46,
+   "col": 12,
+   "field": "OECD-YEM-012.reconciliation_note",
+   "old": null,
+   "new": "NOT_PROJECTED__DIFFERENT_UNIT_AND_WINDOW_FROM_SMEPS_AR2024: the OECD counts SMEPS beneficiaries since 2017 (micro-producers, job opportunities); SMEPS's own report counts MSMEs supported by year. Not superseded; not projected."
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 47,
+   "col": 12,
+   "field": "OECD-YEM-013.reconciliation_note",
+   "old": null,
+   "new": "NOT_PROJECTED__DIFFERENT_UNIT_AND_WINDOW_FROM_SMEPS_AR2024: the OECD counts SMEPS beneficiaries since 2017 (micro-producers, job opportunities); SMEPS's own report counts MSMEs supported by year. Not superseded; not projected."
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 48,
+   "col": 12,
+   "field": "OECD-YEM-014.reconciliation_note",
+   "old": null,
+   "new": "NOT_PROJECTED__DIFFERENT_UNIT_AND_WINDOW_FROM_SMEPS_AR2024: the OECD counts SMEPS beneficiaries since 2017 (micro-producers, job opportunities); SMEPS's own report counts MSMEs supported by year. Not superseded; not projected."
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 37,
+   "col": 11,
+   "field": "OECD-YEM-003.verification_state",
+   "old": "NOT_CONFIRMED__INSTRUMENT_AND_PERIOD_UNKNOWN",
+   "new": "ATTRIBUTED__NOT_PROJECTED"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 37,
+   "col": 12,
+   "field": "OECD-YEM-003.reconciliation_note",
+   "old": null,
+   "new": "ATTRIBUTED__NOT_PROJECTED (11 October 2026; earlier state NOT_CONFIRMED__INSTRUMENT_AND_PERIOD_UNKNOWN): the OECD's own words, printed p.32: 'Just 12% of adults declared having a current account …'; no survey, year or source named (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected."
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 38,
+   "col": 11,
+   "field": "OECD-YEM-004.verification_state",
+   "old": "NOT_CONFIRMED__INSTRUMENT_AND_PERIOD_UNKNOWN",
+   "new": "ATTRIBUTED__NOT_PROJECTED"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 38,
+   "col": 12,
+   "field": "OECD-YEM-004.reconciliation_note",
+   "old": null,
+   "new": "ATTRIBUTED__NOT_PROJECTED (11 October 2026; earlier state NOT_CONFIRMED__INSTRUMENT_AND_PERIOD_UNKNOWN): the OECD's own words, printed p.32: '11% declared having a savings account'; no survey, year or source named (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected."
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 39,
+   "col": 11,
+   "field": "OECD-YEM-005.verification_state",
+   "old": "NOT_CONFIRMED__INSTRUMENT_AND_PERIOD_UNKNOWN",
+   "new": "ATTRIBUTED__NOT_PROJECTED"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 39,
+   "col": 12,
+   "field": "OECD-YEM-005.reconciliation_note",
+   "old": null,
+   "new": "ATTRIBUTED__NOT_PROJECTED (11 October 2026; earlier state NOT_CONFIRMED__INSTRUMENT_AND_PERIOD_UNKNOWN): the OECD's own words, printed p.42, in the recommendations: 'access to mobile phones (68%)'; no survey, year or source; the population is ambiguous (rural areas or all) (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected."
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 53,
+   "col": null,
+   "field": "OECD-YEM-019",
+   "old": null,
+   "new": "{\"1\": \"OECD-YEM-019\", \"2\": \"Informal sector\", \"3\": \"Financial transactions outside the formal financial sector\", \"4\": 70, \"5\": \"percent (almost)\", \"6\": \"currently (undated)\", \"7\": \"OECD (2026) states that almost 70% of financial transactions in Yemen are currently performed outside the formal financial sector (printed p.35).\", \"8\": \"تذكر منظمة التعاون الاقتصادي والتنمية (2026) أن قرابة 70% من المعاملات المالية في اليمن تجري حاليًا خارج القطاع المالي الرسمي (ص. 35).\", \"9\": \"SRC-OECD-YEM-RESILIENCE-001\", \"10\": \"https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/promoting-economic-resilience-in-yemen_b66657c1/81ed2898-en.pdf\", \"11\": \"ATTRIBUTED__NOT_PROJECTED\", \"12\": \"ATTRIBUTED__NOT_PROJECTED (11 October 2026): no source, date or method is given; not to be confused with 'approximately 70% of surveyed firms' (printed p.9) (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected.\"}"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 54,
+   "col": null,
+   "field": "OECD-YEM-020",
+   "old": null,
+   "new": "{\"1\": \"OECD-YEM-020\", \"2\": \"Deposits\", \"3\": \"Deposits covered by the deposit guarantee scheme\", \"4\": 70, \"5\": \"percent (some)\", \"6\": \"undated\", \"7\": \"OECD (2026) states that under the current deposit guarantee scheme some 70% of deposits would be covered in case of a bank failure (printed p.38).\", \"8\": \"تذكر منظمة التعاون الاقتصادي والتنمية (2026) أن نحو 70% من الودائع ستكون مشمولة بنظام ضمان الودائع الحالي في حال تعثر بنك (ص. 38).\", \"9\": \"SRC-OECD-YEM-RESILIENCE-001\", \"10\": \"https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/promoting-economic-resilience-in-yemen_b66657c1/81ed2898-en.pdf\", \"11\": \"ATTRIBUTED__NOT_PROJECTED\", \"12\": \"ATTRIBUTED__NOT_PROJECTED (11 October 2026): no source or date; the deposit-guarantee law's own rules are on YSC-028, and no OECD '70%' appears on any public page (v5 test 2) (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected.\"}"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 55,
+   "col": null,
+   "field": "OECD-YEM-021",
+   "old": null,
+   "new": "{\"1\": \"OECD-YEM-021\", \"2\": \"Banks\", \"3\": \"Banks operating in Yemen\", \"4\": 22, \"5\": \"banks\", \"6\": \"currently (undated)\", \"7\": \"OECD (2026) states that 22 banks are currently operating in Yemen: 3 state-owned, 4 domestic commercial, 4 foreign-owned commercial, 5 Islamic and 6 microfinance banks (printed p.29).\", \"8\": \"تذكر منظمة التعاون الاقتصادي والتنمية (2026) أن 22 بنكًا تعمل حاليًا في اليمن: 3 بنوك حكومية و4 بنوك تجارية محلية و4 بنوك تجارية مملوكة لأجانب و5 بنوك إسلامية و6 بنوك للتمويل الأصغر (ص. 29).\", \"9\": \"SRC-OECD-YEM-RESILIENCE-001\", \"10\": \"https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/promoting-economic-resilience-in-yemen_b66657c1/81ed2898-en.pdf\", \"11\": \"ATTRIBUTED__NOT_PROJECTED\", \"12\": \"ATTRIBUTED__NOT_PROJECTED (11 October 2026): no as-of date and no source; not reconciled with the CBY-Aden rosters (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected.\"}"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 56,
+   "col": null,
+   "field": "OECD-YEM-022",
+   "old": null,
+   "new": "{\"1\": \"OECD-YEM-022\", \"2\": \"Reforms\", \"3\": \"Box 2.1 board resolutions and decisions 7-11/2022\", \"4\": null, \"5\": null, \"6\": \"2022 (box titled 2021-2022)\", \"7\": \"OECD (2026), Box 2.1 (printed p.28), lists Board Resolution No. (7/2022) and No. (11/2022) and Board of Directors Decisions No. (8/2022), (9/2022) and (10/2022), and one resolution without a number.\", \"8\": \"يورد الإطار 2.1 في تقرير منظمة التعاون الاقتصادي والتنمية (2026) (ص. 28) قراري المجلس رقم (7/2022) ورقم (11/2022)، وقرارات مجلس الإدارة رقم (8/2022) و(9/2022) و(10/2022)، وقرارًا للمجلس بلا رقم.\", \"9\": \"SRC-OECD-YEM-RESILIENCE-001\", \"10\": \"https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/promoting-economic-resilience-in-yemen_b66657c1/81ed2898-en.pdf\", \"11\": \"ATTRIBUTED__NOT_PROJECTED\", \"12\": \"ATTRIBUTED__NOT_PROJECTED (11 October 2026): the two-part numbers probably abbreviate CBY-Aden three-part numbers; not mapped until the signed decisions are read (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected.\"}"
+  },
+  {
+   "finding": "CLOSE-6F:7c-29",
+   "sheet": "29_OECD_BENCHMARKS",
+   "row": 57,
+   "col": null,
+   "field": "OECD-YEM-023",
+   "old": null,
+   "new": "{\"1\": \"OECD-YEM-023\", \"2\": \"Firms\", \"3\": \"YLG sector shares of the amount of guarantees\", \"4\": null, \"5\": \"percent (six shares as printed; CauseWay sum 104)\", \"6\": \"since 2017\", \"7\": \"OECD (2026) gives six sector shares of the amount of YLG guarantees (36%, 29%, 19%, 9%, 7% and 4%), which sum to 104% (printed p.32).\", \"8\": \"تعطي منظمة التعاون الاقتصادي والتنمية (2026) ست حصص قطاعية من مبلغ ضمانات برنامج ضمان القروض في اليمن (36% و29% و19% و9% و7% و4%) مجموعها 104% (ص. 32).\", \"9\": \"SRC-OECD-YEM-RESILIENCE-001\", \"10\": \"https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/promoting-economic-resilience-in-yemen_b66657c1/81ed2898-en.pdf\", \"11\": \"ATTRIBUTED__NOT_PROJECTED\", \"12\": \"ATTRIBUTED__NOT_PROJECTED (11 October 2026): the shares sum to 104%, so they are shown neither as a breakdown nor renormalised (audit/close_out/v5_reads/V2_ylg_oecd.md). Not projected.\"}"
+  }
+ ]
+}
