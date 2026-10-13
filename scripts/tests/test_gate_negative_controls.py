@@ -681,6 +681,11 @@ CONTROLS = [
     ("CO-G06: an item is PENDING outside the five states", "audit/close_out/OPEN_ITEMS_STATES.json",
      sub_once(r'"EXT-21": "FRONTIER"', '"EXT-21": "PENDING"'),
      "CO-G06 OPEN_ITEMS_STATES.json gives EXT-21 the state 'PENDING', not one of the five"),
+    # CO-G07 (close-out v5 §8): a retired assertion comes back out of the context that makes it legitimate. The 2024
+    # brochure's "14 business days" is printed as the escalation window itself, with no attribution to the brochure.
+    ("CO-G07: the brochure's 14 business days returns as the escalation window", "en/reforms/index.html",
+     sub_once(r'(<main[^>]*>)', r'\1<p>A consumer may escalate a complaint to the central bank within 14 business days.</p>'),
+     "CO-G07 G7-01 en/reforms/index.html prints '14 business days' out of its context"),
     # Public-literal audit v3 (close-out addendum item 1): a priority, a Reading field and a composite record each trace a
     # number only through what they bind; a governed row stands behind a tabled value; an open trace never goes stale.
     ("LIT-3: a priority prints a number no record it binds holds", "site-src/content/content/measurement_agenda.json",

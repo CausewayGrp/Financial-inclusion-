@@ -269,3 +269,9 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   (first run rolled back on CO-G04), S1–S9 and N1/N2/N4/N5/N7 applied; N3 (check 605 and 1,114 against the held PDF) and
   N6 (packet only) not applied. Second run rolled back on CO-G06 (register heading); third COMMITTED. Challenges: "nine"
   cards named, eight listed; CR-11 already closed; EXT-23 "values identical" false; the search count was 522, not 514.
+- 2026-10-11 · v5 · PR-6 · CO-G07 (12 entries, G7-01 to G7-12; one negative control) and CLOSE-6G (Master
+  fcc1195b -> 87dafc6f, 4 cells). CO-G07 G7-08 found that VIS-REMITTANCE-COST printed the US averages without "computed
+  here"; fixed Master-first. Review pair: ACCEPT after two wording fixes (Arabic dual agreement; name the corridor).
+  Register 299 items (§9 RESERVED/EXCLUDED, CWR-013, SB-01/SB-02, AR-FINDEX-NAME). Arabic-editor ruling V9.
+  Challenge: no state named CAUSEWAY_DERIVED_AGGREGATE exists; mapped to the CauseWay-computed aggregates (US corridor
+  means; the overlap bound).
