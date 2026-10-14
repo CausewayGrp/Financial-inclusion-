@@ -1,5 +1,35 @@
 # Repository Change Log
 
+## 2026-10-11 — PR-6: gate CO-G07, CLOSE-6G, and the RESERVED and EXCLUDED register (Stage A final instruction v5, §6, §8, §9)
+
+- **Gate CO-G07** (`scripts/validate.py`) pins retired assertions in their context, never as bare strings. It has 12
+  entries, G7-01 to G7-12, in both languages:
+  - the brochure's 14 business days;
+  - the deposit-insurance "no source" sentence;
+  - CLM-041's old non-establishment;
+  - "12% of adults" as an account figure;
+  - 1,149 as removed sites, and 8.54 as portfolio at risk;
+  - 35.2% without 24.5%;
+  - 5,731 without the OECD;
+  - CauseWay-derived aggregates without their label;
+  - "the channel is not measured" as a route description;
+  - economy counts for the low-income aggregate;
+  - "at least 62.7%" without CauseWay;
+  - bracketed placeholders.
+
+  The withdrawn "9 January 2023" entry is explained beside the gate. One negative control: the brochure's 14 business
+  days returning as the escalation window.
+- **CLOSE-6G** (Master fcc1195b -> 87dafc6f, 4 cells; `audit/close_out/close_6g.py`). CO-G07 found that the summary of
+  VIS-REMITTANCE-COST printed the United States–Yemen averages (3.92% and 2.30%) without "computed here". The label is
+  added in both languages; no number changes. Review pair: ACCEPT after two wording fixes (applied).
+- **Register.** Items rise from 267 to 299:
+  - OWNER-OPTIONAL: CWR-013 (RESERVED; trigger: the owner grants a second new-Reading slot), RES-03, AR-FINDEX-NAME
+    (the Arabic-editor ruling, `audit/close_out/v5_reads/V9_findex_arabic_name.md`; nothing changed), and the Stage B
+    precondition SB-01;
+  - DECIDED: RES-01 to RES-18 (but RES-03; the SAR settings are RES-18, FATF RES-17), EXC-01 to EXC-10 and the Stage B
+    input SB-02;
+  - ADD3-O1 carries the owner's 11 October note.
+
 ## 2026-10-11 — CLOSE-6F: sources, regulation check, Master hygiene and registers (Stage A final instruction v5, §7)
 
 Master transaction CLOSE-6F (Master 7e4f2cb5 -> fcc1195b, 129 cells; `audit/close_out/close_6f.py`; ledger and run report

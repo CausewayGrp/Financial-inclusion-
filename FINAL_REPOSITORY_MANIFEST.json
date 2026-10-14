@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "fcc1195bcf399c2c7e4b794f654ada0e45a626bfebae0dc884023d203ebbce8d",
+  "production_master_sha256": "87dafc6f18837ff61f032f1c93a7668c9affe9638aa104ab6ad50a2c05512975",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "e2b50bfa3235fda63b411734a6be3138aa1ca9306438b0de7980c1a87b5b9f0a",
+  "page_specs_sha256": "221c5e05d70d332b4867ef1f40b4e7b5a216008546c58f3d6cce347cf93b3a74",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -28,7 +28,7 @@
   "BUILD_AND_GATES": 46,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 280,
+  "CURRENT_PROGRAMME_RECORD": 285,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -488,6 +488,10 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/STAGE_A_FINAL_INSTRUCTION_v5_2026-10-11.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -649,6 +653,10 @@
   },
   {
    "path": "audit/close_out/close_6f.py",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/close_6g.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
@@ -820,6 +828,14 @@
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {
+   "path": "audit/close_out/runs/CLOSE-6G_MASTER_LEDGER.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/runs/CLOSE-6G_RUN_REPORT.json",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
    "path": "audit/close_out/source_utilisation.py",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
@@ -877,6 +893,10 @@
   },
   {
    "path": "audit/close_out/v5_reads/V8_close6f_checks.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/v5_reads/V9_findex_arabic_name.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

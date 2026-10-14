@@ -14,9 +14,9 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | CLOSED | 92 |
 | HOSTING | 9 |
 | FRONTIER | 47 |
-| OWNER-OPTIONAL | 8 |
-| DECIDED | 111 |
-| **Total** | **267** |
+| OWNER-OPTIONAL | 12 |
+| DECIDED | 139 |
+| **Total** | **299** |
 
 ### CLOSED — with the evidence of closure
 
@@ -192,7 +192,11 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | OWN-09 | World Bank written confirmation on the microdata | Would unlock the 105 subgroup rows that need computation (held with this reason in CLOSE-3A) | Owner may request it |
 | OWN-11 | CWR-011 on `/finance/` | Not added: rule F2 caps an answer page at two Readings and `/finance/` carries CWR-002 and CWR-006 (PROGRESS, CLOSE-3C departure 4). Since PR #36 at `876f52df` CWR-011 is linked from CWR-002 and from `/measurement/` (MA-008) | Owner: keep F2, or name the Reading that yields |
 | X-REG-SFD62 | SFD newsletter No. 62 exists in two editions | Bound values follow the original edition; nothing printed is false; a caveat would be enrichment (B16) | Owner or steward may add a caveat |
-| ADD3-O1 | The Cash Consortium of Yemen's own Arabic name | The cover prints «اتحاد المساعدات النقدية في اليمن»; the site uses «تحالف النقد في اليمن» (89 cells) and an English publisher_ar. Default: the site name with the Latin gloss (review S15, Arabic S14, N16) | Owner: a site-wide terminology decision |
+| ADD3-O1 | The Cash Consortium of Yemen's own Arabic name | The cover prints «اتحاد المساعدات النقدية في اليمن»; the site uses «تحالف النقد في اليمن» (89 cells) and an English publisher_ar. Owner's decision (v5 §9, 11 Oct 2026): a natural institutional Arabic rendering with the original English name beside it on first use; no Arabic rendering is presented as the official name without a document from the consortium that uses it; the earlier note treating «اتحاد المساعدات النقدية في اليمن» as its own name is withdrawn. No self-naming document was located; RESERVED (v5 §9) | Owner: one transaction when it comes, not a find-replace across 89 places |
+| CWR-013 | Reading CWR-013 (MSME finance stages), RESERVED, not published (v5 §6, D17 as amended) | The one new-Reading slot D9 allows went to CWR-012. CWR-013 fails the deletion test against /firms/ sections 7–9, MA-004 and CWR-008, and its stage-ladder visual would restate /firms/ section 9. Its argument is published in /firms/, CLM-059, CLM-060, CLM-062 and MA-004 (CLOSE-6D 6B-2; CLOSE-6E 6C-1, 6C-5). The specification is kept unchanged in the v5 instruction §6 | Trigger: the owner grants a second new-Reading slot |
+| RES-03 | OECD/INFE comparator averages, RESERVED (v5 §9) | Admissible, but not needed for a current answer; comparators enter only by owner decision | Trigger: an owner decision |
+| AR-FINDEX-NAME | The Arabic name of the Global Findex («المؤشر العالمي للشمول المالي», «قاعدة بيانات Global Findex» and a longer form) | Arabic-editor ruling `audit/close_out/v5_reads/V9_findex_arabic_name.md`: the first form is the World Bank's own Arabic in its 2025 Arabic blogs; «مؤشر» can read as one index but not as a ranking; the inconsistency between the three forms matters more than either form. Nothing changed in this run (v5 §9) | Owner: one Master transaction if wanted (first mention «قاعدة بيانات المؤشر العالمي للشمول المالي (Global Findex)»; retire the hybrid) |
+| SB-01 | Stage B precondition: the Stage B charter and AMENDMENTS_D16_D22.md are not in the repository | The charter exists only outside the repository and directs its own commit as `audit/close_out/STAGE_B_DESIGN_CHARTER.md`; it cites AMENDMENTS_D16_D22.md, also absent from main. Before Stage B is handed to anyone, both must be committed, the approved text of each established rather than assumed from a filename, and the authority of decisions D16 to D22 recorded. Not done in Stage A; W4 not started (v5 §9) | Owner, before Stage B |
 
 ### DECIDED — a recorded decision; nothing here is open
 
@@ -309,6 +313,34 @@ the public state meanwhile and a cadence. A state change updates this view and i
 | ADD3-D8 | Six sources withheld in CLOSE-6B | NON_PUBLIC with the address kept; none feeds a record; AR2015 keeps its card (X-REG-LINK-AR2015) | — |
 | ADD3-D9 | MA-005 printed 1.48 branches | 1.5, the decimals the World Bank publishes (1.4756); recorded as a challenge to the advisor's figure | — |
 | ADD5-HH | CWR-012's route slug says "households" while the Reading concerns adults | Decided in PR-3 (CLOSE-6D, #43): the slug /readings/how-money-reaches-households/ is kept, as the instruction (v5) directs; the title, question, thesis and sections speak of adults and recipients ("adults, not households"; section 5 corrected) | — |
+| RES-01 | WFP 2025 audit and WFP annual country reports | RESERVED (v5 §9): the public summary has no channel or account data | Trigger: MA-009 needs the full report |
+| RES-02 | UNDP ESPECRP achievements (716 VSLAs; 10,020 MSMEs; 131,178 households), CGAP and CARE savings-group counts | RESERVED (v5 §9): programme outputs, no activity evidence | Trigger: a published measure of activity |
+| RES-04 | The World Bank Yemen Economic Monitor line on CBY remittance data | RESERVED (v5 §9): CR-15 placed it in CLM-043 | Trigger: a question CLM-043 does not answer |
+| RES-05 | YLG stock, youth and rural shares, and PAR; YLG reports after 2022 | RESERVED (v5 §9): PAR has no stated base; later reports not searched (CLM-059) | Trigger: a YLG report after 2022 with stated bases |
+| RES-06 | ESPECRP funds frozen at YKB (RES00988) | RESERVED (v5 §9): verified, but no pathway to people | Trigger: a documented pathway to people |
+| RES-07 | CPMI–SWIFT data ending in 2022 | RESERVED (v5 §9) | Trigger: a release after 2022 |
+| RES-08 | The OECD deposit-guarantee statements and Box 2.1 decisions 7–11/2022 | RESERVED (v5 §9): held as OECD-YEM-020 and OECD-YEM-022, ATTRIBUTED__NOT_PROJECTED (CLOSE-6F) | Trigger: the signed CBY-Aden decisions are read |
+| RES-09 | The 2007 World Bank MSE survey | RESERVED (v5 §9) | Trigger: a question only it answers |
+| RES-10 | Primary copies of Decree-Law 37/1992, Law 40/2006, Circular 11/2014 and Law 64/1991 | RESERVED (v5 §9) | Trigger: a located primary copy |
+| RES-11 | The 2022 and 2023 exchange registers, and the 2025 enforcement wave | RESERVED (v5 §9) | Trigger: a provider-count question the current rosters do not answer |
+| RES-12 | Board Decision 8/2022 | RESERVED (v5 §9): the OECD names it (Box 2.1); the signed text was not read | Trigger: the signed decision is read |
+| RES-13 | The FAS branch series; IDA H870; fin30; crypto awareness | RESERVED (v5 §9) | Trigger: a page question that needs one of them |
+| RES-14 | CCY "Barriers to Interoperability" | RESERVED (v5 §9) | Trigger: an interoperability question on a page |
+| RES-15 | P514855 targets; the UNJSPF hold | RESERVED (v5 §9): targets are not results | Trigger: reported results |
+| RES-16 | The SAM p.37 note on hawala and debt as income | RESERVED (v5 §9) | Trigger: a question on income sources |
+| RES-17 | The FATF line | RESERVED (v5 §9): not read at source (fatf-gafi.org refused the request, HTTP 403, CLOSE-6E) | Trigger: read on fatf-gafi.org itself |
+| RES-18 | The CBY-Aden board's SAR cross-rate settings | RESERVED (v5 §9): no primary document located; the rate is not inferred (see EXT-29) | Trigger: a located primary document |
+| EXC-01 | The Findex respondent file, any row-level output, any derived figure outside D16's conditions; the Microdata API key | EXCLUDED (v5 §9): never read, stored or published (D16) | — |
+| EXC-02 | RI-001…005; 605 and 1,114; "~800 unlicensed"; "700–800 providers" | EXCLUDED (v5 §9): 605 and 1,114 are marked UNVERIFIED__DO_NOT_PROJECT in the Master (CLOSE-6F) | — |
+| EXC-03 | The predecessor's computations and withdrawn repairs (FX pin, Monte Carlo, Shapley, deflation signs, 72.1%, localisation analytics, donor AR(1), ÷0.33) | EXCLUDED (v5 §9) | — |
+| EXC-04 | YLG: a sector pie or renormalisation, PAR, growth rates, partner and governorate tables, USD conversions, repeat-borrower inference; "1,149 of 3,371 sites removed" | EXCLUDED (v5 §9): the OECD's six sector shares sum to 104%; gate CO-G07 (G7-05) pins 1,149 as a count of removed sites | — |
+| EXC-05 | AMAL; CCY "Estimates and Impact"; IGC survey prevalence and its USD 3.8 billion; corridor shares 60/18/5/5; SAMA outflows; OCHA funding totals as inclusion results | EXCLUDED (v5 §9) | — |
+| EXC-06 | UNICEF Al-Khawkha 2026 (a local case) and the UNICEF SPSF 2025–2030 targets presented as results | EXCLUDED (v5 §9) | — |
+| EXC-07 | CGAP's responsible digital credit framework as Yemen evidence | EXCLUDED (v5 §9) | — |
+| EXC-08 | OFAC GL 24A interpretation, exchange-company designations, MENAFATF reports | EXCLUDED (v5 §9) | — |
+| EXC-09 | OECD 12/11/68, both "70%" figures and "22 banks operating" as public figures | EXCLUDED (v5 §9): held as attributed facts, not projected (29_OECD_BENCHMARKS, CLOSE-6F) | — |
+| EXC-10 | Every "12%" restatement; fin29 printed as 0; Doing Business index scores; ISP chart-read shares | EXCLUDED (v5 §9): gate CO-G07 (G7-04) pins "12% of adults" as an account figure | — |
+| SB-02 | Stage B input: CWR-012 has no governed visual | Its visual_bindings is empty and there is no RV-CWR-012 in either visuals file, where comparable Readings carry one (CWR-008: RV-CWR-008). Deferred to Stage B for the visualisation lens; no visual is built in Stage A (v5 §9) | — |
 
 ## The register as first built, and its history
 
@@ -835,3 +867,4 @@ and the twin agree, that nothing outside HOSTING says PENDING, and that every FR
 
 - 11 October 2026, CLOSE-6E (Stage A final instruction v5): item 6C-6 is EXT-40 (FRONTIER): the owner's aggregate file for the 2021-wave domestic transfer channels has not arrived (D16). Card in `audit/close_out/FRONTIER_CARDS.md`. Total 266.
 - 11 October 2026, CLOSE-6F (Stage A final instruction v5, 7d): ADD3-4 records the facts of CWR-012's publication (v3's planned retirement record was never written); ADD5-HH (DECIDED) records the "households" slug decision of PR-3. Total 267.
+- 11 October 2026, PR-6 (Stage A final instruction v5, §6 and §9): the RESERVED and EXCLUDED items of §9 are recorded — CWR-013, RES-03, AR-FINDEX-NAME and the Stage B precondition SB-01 as OWNER-OPTIONAL (owner-triggered); RES-01 to RES-18 (but RES-03), EXC-01 to EXC-10 and the Stage B input SB-02 as DECIDED; ADD3-O1 carries the owner's 11 October note. Total 299.

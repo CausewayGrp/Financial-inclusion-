@@ -4387,6 +4387,77 @@ try:
 except Exception as _x:
     errors.append("CO-G06 unreadable " + repr(_x))
 
+# CO-G07 (close-out v5 §8, 11 October 2026): retired assertions are pinned in their context, never as bare strings. A gate
+# that forbids a string forbids its legitimate uses too, and a number or a date is not false in itself, so each entry names
+# the assertion, the surface it is forbidden on and the context that makes it legitimate elsewhere. Surfaces: the visible
+# text of every page in dist, split into paragraphs (block elements) and sentences, and the page's description metadata.
+# A 'needs' entry requires its context in the same sentence or paragraph; a 'not_with' entry forbids the assertion in that
+# context; a 'never' entry forbids the assertion on its surface. One entry of the earlier draft is withdrawn: a bare ban on
+# "9 January 2023" would forbid a correct publisher statement (the microdata catalogue gives the fieldwork end as 9 January
+# 2023, the survey methodology table prints 10 January 2023; both are the publisher's, the pages carry month precision, and
+# the day-level pair belongs in the record with both locators). For the same reason no legitimate number is forbidden, only
+# an assertion made with it: 1,149 is a POS-terminal count (2025-10) and stays; it may not be a count of removed sites.
+# The Master has no state named CAUSEWAY_DERIVED_AGGREGATE: the aggregates CauseWay derives and prints are the United
+# States–Yemen corridor averages (CAUSEWAY_SIMPLE_MEAN_OF_SOURCE_QUOTES, G7-08) and the overlap bound (G7-11); computed
+# intervals are CO-G03's.
+_G7_SENT = re.compile(r'(?<=[.!?؟])\s+(?=\S)')
+_G7 = [
+    ("G7-01", "en", r"\b14 business days\b", "needs", r"brochure", "sentence"),
+    ("G7-01", "ar", r"14 يوم عمل", "needs", r"الكتي[ّ]?ب", "sentence"),
+    ("G7-02", "en", r"no source here reports cover, premiums or payouts", "never", None, "sentence"),
+    ("G7-02", "ar", r"لا يُبلغ أي مصدر هنا عن التغطية أو الأقساط أو التعويضات", "never", None, "sentence"),
+    ("G7-03", "en", r"do not apply to other balance-of-payments components", "never", None, "sentence"),
+    ("G7-03", "ar", r"على مكونات أخرى من ميزان المدفوعات", "never", None, "sentence"),
+    ("G7-04", "en", r"\b12 ?% of adults\b", "not_with", r"account", "sentence"),
+    ("G7-04", "ar", r"12 ?% من البالغين", "not_with", r"حساب", "sentence"),
+    ("G7-05", "en", r"(?<![\d.,])1,?149(?![\d,])", "not_with", r"\bsites?\b|removed", "sentence"),
+    ("G7-05", "ar", r"(?<![\d.,])1,?149(?![\d,])", "not_with", r"موقع|مواقع|أزيل|أُزيل|إزالة", "sentence"),
+    ("G7-05", "en", r"(?<![\d.])8\.54(?!\d)", "not_with", r"\bat risk\b|\bPAR\b|portfolio", "sentence"),
+    ("G7-05", "ar", r"(?<![\d.])8\.54(?!\d)", "not_with", r"المعر[ّ]?ضة|المحفظة|متأخر", "sentence"),
+    ("G7-06", "en", r"(?<![\d.])35\.2 ?%", "needs", r"(?<![\d.])24\.5 ?%", "paragraph"),
+    ("G7-06", "ar", r"(?<![\d.])35\.2 ?%", "needs", r"(?<![\d.])24\.5 ?%", "paragraph"),
+    ("G7-07", "en", r"(?<![\d,])5,?731(?![\d,])", "needs", r"\bOECD\b", "sentence"),
+    ("G7-07", "ar", r"(?<![\d,])5,?731(?![\d,])", "needs", r"OECD|منظمة التعاون الاقتصادي", "sentence"),
+    ("G7-08", "en", r"(?<![\d.])(?:3\.92|2\.30) ?%", "needs", r"computed here|calculated here|CauseWay", "sentence"),
+    ("G7-08", "ar", r"(?<![\d.])(?:3\.92|2\.30) ?%", "needs", r"محسوب|احتسب|بحساب|CauseWay", "sentence"),
+    ("G7-09", "en", r"channel is not measured", "never", None, "meta"),
+    ("G7-09", "ar", r"لم تُقَس قناة|القناة غير مقيسة", "never", None, "meta"),
+    ("G7-10", "en", r"\b\d+ (?:low-income )?economies\b", "not_with", r"low-income|low income", "sentence"),
+    ("G7-10", "ar", r"(?:الـ ?\d+|\b\d+ اقتصاد)", "not_with", r"منخفضة الدخل", "sentence"),
+    ("G7-11", "en", r"at least 62\.7 ?%", "needs", r"CauseWay", "sentence"),
+    ("G7-11", "ar", r"62\.7 ?% على الأقل", "needs", r"CauseWay", "sentence"),
+    ("G7-12", "en", r"\[(?:date|day|month|year|id|identifier|record id|record|placeholder|tbd|todo|source|locator)[^\]]{0,20}\]", "never", None, "page"),
+    ("G7-12", "ar", r"\[(?:date|id|identifier|record id|placeholder|tbd|todo|التاريخ|تاريخ|المعرف|المعرّف)[^\]]{0,20}\]", "never", None, "page"),
+]
+try:
+    _g7_n = 0
+    for _f in sorted(DIST.rglob('*.html')):
+        _rel = _f.relative_to(DIST).as_posix()
+        _lang = _rel.split('/')[0]
+        if _lang not in ('en', 'ar'):
+            continue
+        _raw = _f.read_text(encoding='utf-8')
+        _t = re.sub(r'<(script|style)\b.*?</\1>', '', _raw, flags=re.S)
+        _t = re.sub(r'</(p|h[1-6]|li|div|section|summary|dt|dd|tr|td|th|article|figcaption|caption|title)>|<br\s*/?>', '\n', _t)
+        _paras = [re.sub(r'\s+', ' ', x).strip() for x in _html.unescape(re.sub(r'<[^>]+>', ' ', _t)).split('\n') if x.strip()]
+        _units = {"paragraph": _paras, "sentence": [s for p in _paras for s in _G7_SENT.split(p)],
+                  "meta": [_html.unescape(m) for m in re.findall(
+                      r'<meta\s+(?:name|property)="(?:description|og:description|twitter:description)"\s+content="([^"]*)"', _raw)],
+                  "page": [_html.unescape(_raw)]}
+        _g7_n += 1
+        for _gid, _lg, _rx, _rule, _ctx, _scope in _G7:
+            if _lg != _lang:
+                continue
+            for _u in _units[_scope]:
+                for _m in re.finditer(_rx, _u, re.I if _scope == "page" else 0):
+                    _has = bool(_ctx and re.search(_ctx, _u, re.I))
+                    if _rule == "never" or (_rule == "needs" and not _has) or (_rule == "not_with" and _has):
+                        errors.append(f"CO-G07 {_gid} {_rel} prints {_m.group(0)!r} out of its context: {_u[:140]!r}")
+    if _g7_n < 300:
+        errors.append(f"CO-G07 read only {_g7_n} pages")
+except Exception as _x:
+    errors.append("CO-G07 unreadable " + repr(_x))
+
 print(f'HTML={len(list(DIST.rglob("*.html")))} ERRORS={len(errors)} WARN={len(warns)}')
 if warns:
     for w in warns[:20]: print('WARN',w)
