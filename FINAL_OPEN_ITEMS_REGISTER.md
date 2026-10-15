@@ -1,6 +1,6 @@
 # Final open-items register
 
-## Live status at CLOSE-6F (Stage A final instruction v5, 11 October 2026)
+## Live status at CLOSE-6G (Stage A final instruction v5; integrated 14 October 2026)
 
 This is the register's live view (brief W3f): every item, old and new, in exactly one state — CLOSED, HOSTING, FRONTIER,
 OWNER-OPTIONAL or DECIDED. Sections 1–10 below are history and are not rewritten; where a cell there is stale, this view
@@ -8,6 +8,11 @@ governs (dated line, section 11). Nothing is PENDING unless its state is HOSTING
 FRONTIER rows point to their verification cards (`audit/close_out/FRONTIER_CARDS.md`): the dated attempt, the human step, the record it changes,
 the public state meanwhile and a cadence. A state change updates this view and its machine-readable twin
 (`audit/close_out/OPEN_ITEMS_STATES.json`) in the same commit, and a gate checks one state per ID from the five.
+
+Operational reconciliation, 15 October 2026: PR #45 integrated CLOSE-6F at `612ec146` on 13 October; PR #46 integrated
+CO-G07/CLOSE-6G and the addendum report at `e46ff9eb` on 14 October. This heading now names the integrated register
+version. All 299 items and their classifications are unchanged; integration and passing CI do not close Stage A,
+authorize Stage B, or supply publication approval.
 
 | State | Items |
 |---|---|

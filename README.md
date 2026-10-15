@@ -50,7 +50,7 @@ External facts stay attributed to their original publishers. CauseWay attributio
 | Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
 | Content | Complete on `main`, 10 October 2026. The annotated tag `checkpoint/2026-10-10-content-complete` marks it, or is the owner's to push ([`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §9) |
-| Stage A (evidence and Arabic) | STAGE A COMPLETE was recorded at `53dccc4d` (11 October 2026). The Stage A addendum followed on 11 October 2026 (#39 to #42: literal audit v3, CLOSE-6A to CLOSE-6C, Reading CWR-012). The Stage A final instruction v5 is being executed: CLOSE-6D (#43) and CLOSE-6E (#44) are merged; CLOSE-6F and the report follow. No new status is claimed: not DESIGN HANDOFF READY, not PUBLIC RELEASE READY, and Stage A is not declared closed |
+| Stage A (evidence and Arabic) | STAGE A COMPLETE was recorded at `53dccc4d` (11 October 2026). The Stage A addendum followed on 11 October 2026 (#39 to #42: literal audit v3, CLOSE-6A to CLOSE-6C, Reading CWR-012). The final instruction v5 changes are integrated: CLOSE-6D (#43), CLOSE-6E (#44), CLOSE-6F (#45 at `612ec146`, 13 October), and CO-G07/CLOSE-6G with the [addendum report](audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md) (#46 at `e46ff9eb`, 14 October 2026). Integration does not supply formal Stage A closure; the report leaves that decision to the owner. Stage B prerequisites and Stage C acceptance remain outstanding. No new status is claimed: not DESIGN HANDOFF READY, not PUBLIC RELEASE READY, and Stage A is not declared closed |
 | Public inventory (11 October 2026) | 151 Page Specs (306 HTML documents), 116 Evidence Records, 60 public claims, 12 Readings, 10 measurement priorities, 31 dated events, 206 source records (191 with a public locator), 522 search records |
 | Open pull requests | Only the close-out's own, merged one at a time (`audit/close_out/PROGRESS.md`). #21 (another session's alternative naming Part B, superseded by #19) and #23 (an earlier draft of this checkpoint, superseded by RIGHTS-FINAL) were closed without merge |
 
@@ -60,10 +60,12 @@ Not closed, and not claimed: design integration; integrated Arabic and English, 
 
 Remaining path: non-design v1 complete, then design / presentation integration, then final integrated QA, then release / cutover, then owner release approval. Release-time steps live in [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md). Open items live in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md). The content-pass ledger is [`audit/final_content/FINAL_CONTENT_LOG.md`](audit/final_content/FINAL_CONTENT_LOG.md).
 
-## Release readiness (10 October 2026)
+## Release readiness (post-PR #46)
 
-Content is complete and every gate passes on `main`. **Public release is not declared**, and nothing is deployed. What
-still stands between this repository and a public site, each with its owner:
+The Verify run on PR #46's merged commit `e46ff9eb` passed all nine jobs; its subsequent Cloudflare Workers build also
+succeeded. Cloudflare serves a pre-release preview, not the approved DigitalOcean production release. **Public release
+is not declared**; production hosting, the public origin and downloads remain under their existing owner controls.
+What still stands between this repository and an approved production release, each with its owner:
 
 | Blocker | Owner | Where |
 |---|---|---|
