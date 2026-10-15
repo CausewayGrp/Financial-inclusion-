@@ -53,9 +53,9 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main` — the only working copy. The last state OpenAI reviewed is commit `f726bda` (tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip`, SHA-256 `63612dea…`); its tag and the Design-handoff tag are owner actions (§7) |
 | Other copies | None is current. The pre-GitHub Drive folder and the ZIPs exchanged before 26 September 2026 are lineage: they were deliberately left as they were — neither updated nor deleted — and are never synchronised from here. `EXTERNAL_REPOSITORY_SYNC_PENDING` in `authority/AUTHORITY.json` records exactly that state; it is not a sync that is owed |
-| Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS`; 21 of 21 unit tests |
-| Build | 304 HTML documents from 151 Page Specs (302 localized + root + 404), and the two pages at the retired address /evidence/NEG-EW-011/ (RC-19) |
-| Public-literal audit | 14,983 records, 0 unresolved; identical bytes under 8 `PYTHONHASHSEED` values |
+| Generator | `scripts/generate_projections.py`; `PROJECTION CHECK PASS`; 22 of 22 unit tests |
+| Build | 306 HTML documents from 151 Page Specs (302 localized + root + 404 + the two pages at the retired address /evidence/NEG-EW-011/, RC-19) |
+| Public-literal audit | 19,847 records, 0 unresolved, 0 open; identical bytes under 8 `PYTHONHASHSEED` values |
 | Source-lineage truth test | 8 of 8 |
 | Validator | `WEBSITE REPOSITORY VALIDATION PASS`, 0 errors, 0 warnings (gates through R85-G09, RP-G06, F6-G08 and R86-G04) |
 | Browser behaviour tests | `scripts/tests/test_public_tools.py` — 35 passed, 1 not applicable to the current data |
