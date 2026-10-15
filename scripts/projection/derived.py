@@ -1668,7 +1668,7 @@ def visual_design_contracts(ctx, e):
                     lang, gov[f"title_{lang}"], gov[f"period_{lang}"], gov[f"universe_{lang}"],
                     (f"{labels['UI-VIS-SOURCE'][lang]} {credit_ar if lang == 'ar' and credit_ar else credit}" if credit else None),   # B4 review F3: the Arabic caption credits in Arabic
                     f"{labels['UI-VIS-DOES-NOT-ESTABLISH'][lang]} {gov[f'prohibited_inference_{lang}']}",
-                    f"{labels['UI-VIS-FULL-RECORD'][lang]} /{lang}{gov['canonical_route']}" if gov["canonical_route"] else None)
+                    f"{labels['UI-VIS-FULL-RECORD'][lang]} /{lang}{gov['canonical_route']}" if ev or str(gov["canonical_route"] or "").startswith("/readings/") else None)
         if spec.get("table"):
             # RC-12 (Part B B12): a text-first contract whose rationale describes a table renders it from governed rows
             # inside its text frame; never a drawing, and never on a tier that takes a data contract

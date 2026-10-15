@@ -132,7 +132,7 @@ authorize Stage B, or supply publication approval.
 | REL-07 | Optional aggregate request counts (D5) | PENDING, optional — runbook step 11; the `/privacy/` wording is applied Master-first on the day counts are switched on, never before | Owner decides; Claude Code applies |
 | OWN-03 | Public origin | PENDING — runbook steps 1 and 3; `public_origin` is null and the deploy refuses a null origin | Owner, then Claude Code |
 | X-REG-HAND3 | Currentness re-run at the release date | PENDING — runbook step 4 (`scripts/currentness_rerun.py --append`). IMF part closed by CR-07; RPW is EXT-12; the CBY Sana'a host is X-REG-LINK-AR2015 | Claude Code at release |
-| CR-17 | Stale edition label ("Edition of 3 October 2026") | PENDING — `UI-CONTENT-VERSION` moves to the release date Master-first at runbook step 4; the brief also lists the fix for W8 | Claude Code (W8 or step 4) |
+| CR-17 | Release-time edition and record-specific source-review verification | Preview chronology corrected Master-first by STAGE-A-FINAL (15 October): current edition is distinguished from publication/observation and per-record checking. Release-date currentness verification and edition update remain HOSTING work under runbook step 4; no universal checking cutoff is authorized. | Claude Code at release |
 
 ### FRONTIER — a disclosed evidence limit; each row has a verification card with its cadence
 
@@ -201,7 +201,7 @@ authorize Stage B, or supply publication approval.
 | CWR-013 | Reading CWR-013 (MSME finance stages), RESERVED, not published (v5 §6, D17 as amended) | The one new-Reading slot D9 allows went to CWR-012. CWR-013 fails the deletion test against /firms/ sections 7–9, MA-004 and CWR-008, and its stage-ladder visual would restate /firms/ section 9. Its argument is published in /firms/, CLM-059, CLM-060, CLM-062 and MA-004 (CLOSE-6D 6B-2; CLOSE-6E 6C-1, 6C-5). The specification is kept unchanged in the v5 instruction §6 | Trigger: the owner grants a second new-Reading slot |
 | RES-03 | OECD/INFE comparator averages, RESERVED (v5 §9) | Admissible, but not needed for a current answer; comparators enter only by owner decision | Trigger: an owner decision |
 | AR-FINDEX-NAME | The Arabic name of the Global Findex («المؤشر العالمي للشمول المالي», «قاعدة بيانات Global Findex» and a longer form) | Arabic-editor ruling `audit/close_out/v5_reads/V9_findex_arabic_name.md`: the first form is the World Bank's own Arabic in its 2025 Arabic blogs; «مؤشر» can read as one index but not as a ranking; the inconsistency between the three forms matters more than either form. Nothing changed in this run (v5 §9) | Owner: one Master transaction if wanted (first mention «قاعدة بيانات المؤشر العالمي للشمول المالي (Global Findex)»; retire the hybrid) |
-| SB-01 | Stage B precondition: the Stage B charter and AMENDMENTS_D16_D22.md are not in the repository | The charter exists only outside the repository and directs its own commit as `audit/close_out/STAGE_B_DESIGN_CHARTER.md`; it cites AMENDMENTS_D16_D22.md, also absent from main. Before Stage B is handed to anyone, both must be committed, the approved text of each established rather than assumed from a filename, and the authority of decisions D16 to D22 recorded. Not done in Stage A; W4 not started (v5 §9) | Owner, before Stage B |
+| SB-01 | Stage B entry: original charter/amendments and mandatory decision provenance | BLOCKED (15 October): prospective replacement `audit/close_out/STAGE_B_DESIGN_CHARTER.md` and provenance record `AMENDMENTS_D16_D22.md` exist; they are not recovered originals. D16–D18 trace to owner decisions §6; D19–D22 remain unverified. No Stage B entry or retrospective approval is inferred. | Owner: establish missing approved originals or explicit prospective replacement decisions, then separately authorize entry |
 
 ### DECIDED — a recorded decision; nothing here is open
 
@@ -345,7 +345,7 @@ authorize Stage B, or supply publication approval.
 | EXC-08 | OFAC GL 24A interpretation, exchange-company designations, MENAFATF reports | EXCLUDED (v5 §9) | — |
 | EXC-09 | OECD 12/11/68, both "70%" figures and "22 banks operating" as public figures | EXCLUDED (v5 §9): held as attributed facts, not projected (29_OECD_BENCHMARKS, CLOSE-6F) | — |
 | EXC-10 | Every "12%" restatement; fin29 printed as 0; Doing Business index scores; ISP chart-read shares | EXCLUDED (v5 §9): gate CO-G07 (G7-04) pins "12% of adults" as an account figure | — |
-| SB-02 | Stage B input: CWR-012 has no governed visual | Its visual_bindings is empty and there is no RV-CWR-012 in either visuals file, where comparable Readings carry one (CWR-008: RV-CWR-008). Deferred to Stage B for the visualisation lens; no visual is built in Stage A (v5 §9) | — |
+| SB-02 | CWR-012 visual: prospective no-new-visual decision | Counterfactual Deletion Test (15 October), `audit/close_out/STAGE_B_DESIGN_CHARTER.md`: no approved weighted channel distribution; a chart adds no established answer beyond the Reading and existing evidence, or risks mixing denominators/vintages. Keep visual_bindings empty. Reconsider only on approved evidence with material additional reader value. Stage B not begun. | — |
 
 ## The register as first built, and its history
 

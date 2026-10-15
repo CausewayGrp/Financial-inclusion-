@@ -196,10 +196,12 @@ def visual_fallback(v: dict) -> str:
         if d.get("x") is not None:
             rows.append(f'<tr><td>{esc(d["series_label"])}</td><td dir="ltr">{esc(d["x"])}</td><td dir="ltr">{esc(d["value"])}</td><td>{esc(d["unit"])} — {esc(v["labels"]["derived"])}</td><td></td></tr>')
     table = f'<table><caption>{esc(v["title"])} — {esc(v["period"])} — {esc(v["universe"])}</caption><tbody>{"".join(rows)}</tbody></table>' if rows else ""
+    record = (f' · {esc(v["labels"]["full_record"])} <a href="{v["canonical_href"]}">{esc(v["canonical_href"])}</a>'
+              if v.get("has_record_destination") else "")
     return (f'<figure data-visual-id="{esc(v["id"])}" data-image-independent="true"><figcaption><h2>{esc(v["title"])}</h2><p>{esc(v["labels"]["analytical_question"])}: {esc(v["question"])}</p>'
             f'<p>{esc(v["alt_text"])}</p><p>{esc(v["labels"]["scope"])}: {esc(v["period"])} · {esc(v["universe"])}</p>'
             f'<p><strong>{esc(v["labels"]["does_not_establish"])}</strong> {esc(v["prohibited_inference"])}</p>'
-            f'<p>{esc(v["labels"]["source"])} {esc(v.get("credit") or "")} · {esc(v["labels"]["full_record"])} <a href="{v["canonical_href"]}">{esc(v["canonical_href"])}</a></p></figcaption>{table}</figure>')
+            f'<p>{esc(v["labels"]["source"])} {esc(v.get("credit") or "")}{record}</p></figcaption>{table}</figure>')
 
 
 def reading(page: dict, shell: dict) -> str:

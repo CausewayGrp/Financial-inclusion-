@@ -50,7 +50,7 @@ External facts stay attributed to their original publishers. CauseWay attributio
 | Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
 | Content | Complete on `main`, 10 October 2026. The annotated tag `checkpoint/2026-10-10-content-complete` marks it, or is the owner's to push ([`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §9) |
-| Stage A (evidence and Arabic) | STAGE A COMPLETE was recorded at `53dccc4d` (11 October 2026). The Stage A addendum followed on 11 October 2026 (#39 to #42: literal audit v3, CLOSE-6A to CLOSE-6C, Reading CWR-012). The final instruction v5 changes are integrated: CLOSE-6D (#43), CLOSE-6E (#44), CLOSE-6F (#45 at `612ec146`, 13 October), and CO-G07/CLOSE-6G with the [addendum report](audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md) (#46 at `e46ff9eb`, 14 October 2026). Integration does not supply formal Stage A closure; the report leaves that decision to the owner. Stage B prerequisites and Stage C acceptance remain outstanding. No new status is claimed: not DESIGN HANDOFF READY, not PUBLIC RELEASE READY, and Stage A is not declared closed |
+| Stage A (evidence and Arabic) | STAGE A COMPLETE was recorded at `53dccc4d` (11 October 2026). The Stage A addendum followed on 11 October 2026 (#39 to #42: literal audit v3, CLOSE-6A to CLOSE-6C, Reading CWR-012). The final instruction v5 changes are integrated: CLOSE-6D (#43), CLOSE-6E (#44), CLOSE-6F (#45 at `612ec146`, 13 October), and CO-G07/CLOSE-6G with the [addendum report](audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md) (#46 at `e46ff9eb`, 14 October 2026). The 15 October final reconciliation and [prospective acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) supersede the remaining material interpretation and edition issues. The dated post-merge acceptance record on the reconciliation PR is the formal Stage A decision; the old report is historical, not retrospective owner approval. Stage B prerequisites and Stage C/release acceptance remain separate. Neither DESIGN HANDOFF READY nor PUBLIC RELEASE READY is claimed |
 | Public inventory (11 October 2026) | 151 Page Specs (306 HTML documents), 116 Evidence Records, 60 public claims, 12 Readings, 10 measurement priorities, 31 dated events, 206 source records (191 with a public locator), 522 search records |
 | Open pull requests | Only the close-out's own, merged one at a time (`audit/close_out/PROGRESS.md`). #21 (another session's alternative naming Part B, superseded by #19) and #23 (an earlier draft of this checkpoint, superseded by RIGHTS-FINAL) were closed without merge |
 
@@ -86,9 +86,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `87dafc6f18837ff61f032f1c93a7668c9affe9638aa104ab6ad50a2c05512975`
+Master SHA-256: `580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8`
 
-Page Specs SHA-256: `221c5e05d70d332b4867ef1f40b4e7b5a216008546c58f3d6cce347cf93b3a74`
+Page Specs SHA-256: `8dd600e940f26213c658c5f3188e8e63e16201e2e588d7379bb1db6d46b9068e`
 
 | Layer | Role |
 |---|---|

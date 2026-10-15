@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-11T23:55:00Z",
+  "generated_at": "2026-10-15T11:25:12Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -67,12 +67,21 @@
       "close_6g_and_report": "PR #46 merged 14 October 2026; audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md",
       "verification": "Verify run 38582364168: nine jobs successful on the merged commit; subsequent Workers build successful; neither result grants release approval",
       "remaining_authority": "Formal Stage A closure remains the owner's decision; SB-01 Stage B prerequisites, Stage C acceptance, hosting and publication approvals remain outstanding"
+    },
+    "stage_a_final_reconciliation": {
+      "as_of": "2026-10-15",
+      "transaction": "STAGE-A-FINAL",
+      "adjudications": "audit/stage_a_final/ADJUDICATIONS_2026-10-15.md",
+      "acceptance_scope": "audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md",
+      "decision_record": "Dated post-merge Stage A prospective content acceptance comment on the reconciliation PR, after successful final-main Verify; scope file alone does not declare closure.",
+      "stage_b": "BLOCKED: approved charter/amendment provenance and D19–D22 authority not established; separate authorization required.",
+      "public_release_authorized": false
     }
   },
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "87dafc6f18837ff61f032f1c93a7668c9affe9638aa104ab6ad50a2c05512975",
+    "sha256": "580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -86,7 +95,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "221c5e05d70d332b4867ef1f40b4e7b5a216008546c58f3d6cce347cf93b3a74",
+    "page_specs_sha256": "8dd600e940f26213c658c5f3188e8e63e16201e2e588d7379bb1db6d46b9068e",
     "page_specs": 151,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -245,7 +254,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "87dafc6f18837ff61f032f1c93a7668c9affe9638aa104ab6ad50a2c05512975",
+    "master_sha256_recorded": "580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",
