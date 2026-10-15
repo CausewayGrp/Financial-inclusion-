@@ -1,5 +1,14 @@
 # Repository Change Log
 
+## 2026-10-15 — Reconcile the operational baseline after PR #46
+
+- Record the verified CLOSE-6F and PR #46 merges in the append-only progress log; correct README and checkpoint text
+  that still implied unfinished integration or no deployed preview.
+- Name the 299-item register's integrated CLOSE-6G version and align the steward-maintained operational Context pointers.
+  Preserve every register classification, historical audit entry, generated authority binding and Production Master byte.
+- Distinguish completed integration and passing Verify/Workers checks from owner-controlled Stage A closure, Stage B
+  prerequisites, Stage C acceptance and production release. No hosting, publication or design setting changes.
+
 ## 2026-10-11 — PR-6: gate CO-G07, CLOSE-6G, and the RESERVED and EXCLUDED register (Stage A final instruction v5, §6, §8, §9)
 
 - **Gate CO-G07** (`scripts/validate.py`) pins retired assertions in their context, never as bare strings. It has 12

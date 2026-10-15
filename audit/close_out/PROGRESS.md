@@ -275,3 +275,6 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   Register 299 items (§9 RESERVED/EXCLUDED, CWR-013, SB-01/SB-02, AR-FINDEX-NAME). Arabic-editor ruling V9.
   Challenge: no state named CAUSEWAY_DERIVED_AGGREGATE exists; mapped to the CauseWay-computed aggregates (US corridor
   means; the overlap bound).
+
+- 2026-10-15 · operational reconciliation · CLOSE-6F merge recorded: PR #45 merged on 13 October 2026 at `612ec146`. The execution entry above is historical and unchanged.
+- 2026-10-15 · operational reconciliation · PR #46 merged on 14 October 2026 at `e46ff9eb`: CO-G07/CLOSE-6G and the Stage A addendum report are integrated. Verify on that merged commit passed 9/9 jobs (run `38582364168`); the subsequent Workers build succeeded. DigitalOcean deployment was skipped. The 299-item register remains CLOSED 92, HOSTING 9, FRONTIER 47, OWNER-OPTIONAL 12, DECIDED 139. This records integration, not formal Stage A closure, Stage B authorization, Stage C acceptance or publication approval; those decision rights and dependencies remain unchanged.

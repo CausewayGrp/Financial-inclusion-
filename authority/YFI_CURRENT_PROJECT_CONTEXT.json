@@ -8,7 +8,7 @@
     "organising_question": "What does the evidence mean for financial inclusion in Yemen, and how do we know?"
   },
   "programme_state": {
-    "as_of": "2026-10-10",
+    "as_of": "2026-10-15",
     "content_complete": {
       "date": "2026-10-10",
       "tag": "checkpoint/2026-10-10-content-complete (annotated; on the final main of 10 Oct 2026, or the owner pushes it: docs/HANDOVER_TO_DEVELOPER.md §9)",
@@ -17,7 +17,7 @@
       "open_pull_requests": "none at the content-complete checkpoint"
     },
     "release_readiness": {
-      "declared": "NOT DECLARED — nothing is deployed",
+      "declared": "NOT DECLARED — Cloudflare Workers pre-release preview exists; approved DigitalOcean production release is not activated",
       "blockers": [
         "DigitalOcean App Platform hosting: owner account, registry, token, repository variables; web administrator proxy route; public origin (docs/RELEASE_RUNBOOK.md steps 1–9a)",
         "public_downloads stays false, a separate owner decision (step 2); the CC BY 4.0 text is confirmed by the owner (10 Oct 2026, step 7a), so licence_text_confirmed is true",
@@ -27,7 +27,7 @@
         "The owner's release approval and tag (steps 13–14)"
       ],
       "handover": "docs/HANDOVER_TO_DEVELOPER.md",
-      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md, section \"Live status at CLOSE-6F (Stage A final instruction v5, 11 October 2026)\" at the top, kept current: 299 items, one state each — CLOSED 92, HOSTING 9, FRONTIER 47 (each with a verification card and a cadence; EXT-40 added by CLOSE-6E), OWNER-OPTIONAL 12 (CWR-013, RES-03, AR-FINDEX-NAME and SB-01 added in PR-6), DECIDED 139 (ADD5-HH added by CLOSE-6F; RES-01 to RES-18 but RES-03, EXC-01 to EXC-10 and SB-02 added in PR-6); twin audit/close_out/OPEN_ITEMS_STATES.json, gate CO-G06; nothing is PENDING outside HOSTING; sections 1–10 below it are history"
+      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md, section \"Live status at CLOSE-6G (Stage A final instruction v5; integrated 14 October 2026)\" at the top, kept current: 299 items, one state each — CLOSED 92, HOSTING 9, FRONTIER 47 (each with a verification card and a cadence; EXT-40 added by CLOSE-6E), OWNER-OPTIONAL 12 (CWR-013, RES-03, AR-FINDEX-NAME and SB-01 added in PR-6), DECIDED 139 (ADD5-HH added by CLOSE-6F; RES-01 to RES-18 but RES-03, EXC-01 to EXC-10 and SB-02 added in PR-6); twin audit/close_out/OPEN_ITEMS_STATES.json, gate CO-G06; nothing is PENDING outside HOSTING; sections 1–10 below it are history"
     },
     "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
     "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
@@ -36,7 +36,7 @@
     "not_declared": [
       "PUBLIC RELEASE READY"
     ],
-    "design_prompt_status": "SUPERSEDED (10 October 2026; owner decision D7) — not for execution. Design is executed in the repository under audit/close_out/BRIEF.md (W4); handoff/ is historical reference. Until 10 October 2026: DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; non-design v1 product is complete and merged (pull request #11, df5e2026); content complete on main at checkpoint/2026-10-10-content-complete (10 Oct 2026); current phase is design / presentation integration; C1, C2 and C3 are post-v1; public release is not declared",
+    "design_prompt_status": "SUPERSEDED (10 October 2026; owner decision D7) — not for execution. Design is executed in the repository under audit/close_out/BRIEF.md (W4); handoff/ is historical reference. Until 10 October 2026: DESIGN HANDOFF READY — executable; start path handoff/README_FIRST.md → handoff/CLAUDE_DESIGN_MASTER_PROMPT.md (tightened 27 Sep 2026 by the post-F9 correction and the design-enablement control pass); the Design package is accepted (owner's final D7 visual acceptance recorded 2 Oct 2026, audit/OWNER_DECISIONS_2026-10-02.md) and the production runtime is merged: pull request #8 (EAD-01 to EAD-11), merged into main at 38a9a97 on 2 October 2026, EAD states in FINAL_OPEN_ITEMS_REGISTER.md section 1; non-design v1 product is complete and merged (pull request #11, df5e2026); content complete on main at checkpoint/2026-10-10-content-complete (10 Oct 2026); close-out integration is through PR #46; formal Stage A closure and Stage B prerequisites remain outstanding; C1, C2 and C3 are post-v1; public release is not declared",
     "production_runtime": {
       "pull_request": 8,
       "title": "code: the production runtime — EAD-01 to EAD-11",
@@ -55,12 +55,19 @@
       "discovery_accessibility_security": "audit/F6_DISCOVERY_ACCESSIBILITY_RIGHTS_SECURITY_ACCEPTANCE.md — pre-Design contract and gates F6-G01…G08; public origin null until the owner sets it (site-src/deployment.json)",
       "sustainability": "docs/SUSTAINABILITY_METHOD.md; audit/SUSTAINABILITY_PRE_DESIGN_BASELINE.json (pre-design reference build); docs/SUSTAINABILITY_IMPLEMENTED_RUNTIME.json (the implemented runtime, remeasured 29 September 2026; the logo derivatives' effect in audit/release_candidate/page_weight/PAGE_WEIGHT_EAD-03.md); only the host remains to be measured",
       "handoff_freeze": "audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md — one start file, one Design prompt, route/content/state inventory, acceptance criteria, Design-to-Code contract; gates R86-G01…G04",
-      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md — at F9 (26–27 Sep 2026): 47 items in six classes, zero DESIGN_BLOCKER (OWN-07 and OWN-08 closed by the post-F9 correction, 27 Sep 2026); kept as history — the current state is the register's \"Live status at 876f52df\" section",
+      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md — at F9 (26–27 Sep 2026): 47 items in six classes, zero DESIGN_BLOCKER (OWN-07 and OWN-08 closed by the post-F9 correction, 27 Sep 2026); kept as history — the current state is the register's \"Live status at CLOSE-6G (Stage A final instruction v5; integrated 14 October 2026)\" section",
       "clean_room_acceptance": "audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md — three cold-recipient runs, archive test from an empty directory, final gates and scans",
       "post_f9_correction": "27 Sep 2026 — OWN-07 and OWN-08 closed in the two controlled contracts (class CONTROLLED_CONTRACT); Design handoff tightened in place (D1 competing theses on Home, CLM-003 and the flagship Reading; decision log and coverage ledger; runnable bilingual reference site required for D7; print and portable evidence; font loading; D0 board statement); no Master change; addendum in audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md",
       "design_enablement_control_pass": "27 Sep 2026 (directive D9) — the handoff checked against a quality doctrine for a cold Design recipient and strengthened in place (one start file, one brief): kernel, working loop, gate-start memory rule and Code recipient test; audience lenses and per-family outcomes; four review tests; imagery, motion, dark mode, exports, rights, inputs; decision-log fields, coverage status ladder, design-debt register; gate entry/exit/stop conditions and the last-10-percent audit; no Master, projection, contract or public-page change; second addendum in audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md"
     },
-    "directive": "audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md"
+    "directive": "audit/directives/D7_FINAL_INTEGRATION_TO_DESIGN_HANDOFF_2026-09-26.md",
+    "close_out_integration": {
+      "baseline_commit": "e46ff9eb77cf0f93882593d30c9f25a0b378db9e",
+      "close_6f": "PR #45 merged 13 October 2026 at 612ec146",
+      "close_6g_and_report": "PR #46 merged 14 October 2026; audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md",
+      "verification": "Verify run 38582364168: nine jobs successful on the merged commit; subsequent Workers build successful; neither result grants release approval",
+      "remaining_authority": "Formal Stage A closure remains the owner's decision; SB-01 Stage B prerequisites, Stage C acceptance, hosting and publication approvals remain outstanding"
+    }
   },
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
