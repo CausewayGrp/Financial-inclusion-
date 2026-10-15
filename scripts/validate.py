@@ -587,18 +587,32 @@ except Exception as _x:
     errors.append('O-01 unreadable '+repr(_x))
 
 
-# CS-01 (owner decision B-b, 9 October 2026; transaction V1B-1): the date the currentness strip and the colophon print,
-# UI-EDITION-CHECKED-DATE, is the date the Master states for the edition in /corrections/ section 3 ("… up to <date>",
-# «… حتى <date>») and the date in the edition's own label, UI-CONTENT-VERSION, in both languages.
+# CS-01: edition chronology and record-specific checking (STAGE-A-FINAL, 15 October 2026).
+# A later source cannot belong to an earlier website edition. Retrieval is not proof of substantive review.
 try:
+    import datetime as _dt
     _uics={r['ui_id']:r for r in json.load(open(C/'content/interface_copy.json',encoding='utf-8'))}
     _corr=next((r for r in json.load(open(C/'content/page_sections.json',encoding='utf-8')) if r.get('route')=='/corrections/' and r.get('section_order')==3),{})
-    for lang,_lead in (('en','up to '),('ar','حتى ')):
-        _d=_uics['UI-EDITION-CHECKED-DATE'][f'label_{lang}']
-        if not _d or _d not in _uics['UI-CONTENT-VERSION'][f'label_{lang}']:
-            errors.append(f'CS-01 the checked date is not the edition label date {lang}')
-        if _lead+_d not in str(_corr.get(f'body_{lang}') or ''):
-            errors.append(f'CS-01 the checked date is not the date /corrections/ section 3 states {lang}')
+    _en_date = re.fullmatch(r'Edition of (\d{1,2}) ([A-Za-z]+) (\d{4})', _uics['UI-CONTENT-VERSION']['label_en'])
+    if not _en_date:
+        errors.append('CS-01 unreadable edition date')
+    else:
+        _edate = _dt.datetime.strptime(' '.join(_en_date.groups()), '%d %B %Y').date()
+        _months_ar = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر']
+        if _uics['UI-CONTENT-VERSION']['label_ar'] != f'إصدار {_edate.day} {_months_ar[_edate.month-1]} {_edate.year}':
+            errors.append('CS-01 Arabic and English edition dates differ')
+        for _src in json.load(open(C/'sources/source_library.json',encoding='utf-8')):
+            _pub = str(_src.get('document_date') or '')
+            if _src.get('primary_url') and re.fullmatch(r'\d{4}-\d{2}-\d{2}', _pub) and _dt.date.fromisoformat(_pub) > _edate:
+                errors.append(f"CS-01 source publication postdates edition: {_src['source_id']}")
+    for lang,_reference in (('en','See each source record'),('ar','انظر سجل كل مصدر')):
+        if _uics['UI-EDITION-CHECKED-DATE'][f'label_{lang}'] != _reference:
+            errors.append(f'CS-01 source checking must remain record-specific {lang}')
+        if _uics['UI-CONTENT-VERSION'][f'label_{lang}'] not in str(_corr.get(f'body_{lang}') or ''):
+            errors.append(f'CS-01 correction history does not identify the current edition {lang}')
+        _strip = _uics['UI-CURRENTNESS-STRIP'][f'label_{lang}']
+        if _strip != {'en':'Source-check dates differ by record','ar':'تختلف تواريخ مراجعة المصادر بحسب السجل'}[lang]:
+            errors.append(f'CS-01 strip must not assert a universal source-check cutoff {lang}')
     # every page: the strip prints the governed line and the edition, linked to /corrections/ section 3; the colophon
     # prints the edition, the checked date and the abridged SHA-256 of the Production Master the site was built from
     _fp=hashlib.sha256((ROOT/'authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx').read_bytes()).hexdigest()[:12]
@@ -641,6 +655,17 @@ try:
                 errors.append(f'CS-02 /{lang}/data/ a source description is not under "About this source" alone'); break
 except Exception as _x:
     errors.append('CS-01 unreadable '+repr(_x))
+
+
+# SA-LINK: the four domain figures have no published Evidence Record. Keep their evidence and source actions,
+# but never call the domain route a Full record, on screen or in a detached/printed frame.
+for _vid,_route in (('VIS-MFI-DIVERGENCE','finance'),('VIS-CBY-MONETARY-SNAPSHOT','finance'),
+                    ('VIS-YER-MARKET-RATE','finance'),('VIS-ACCESS-EVIDENCE-LAYER','access')):
+    for _lang in ('en','ar'):
+        _body=(DIST/_lang/_route/'index.html').read_text(encoding='utf-8')
+        _fig=re.search(r'<figure[^>]*data-visual-id="'+re.escape(_vid)+r'"[^>]*>(.*?)</figure>',_body,re.S)
+        if not _fig or re.search(r'class="canon(?:-l|-p|-s)?"',_fig.group(1)):
+            errors.append(f'SA-LINK {_lang} {_vid}: missing figure or misleading Evidence Record link')
 
 
 # S04.1 Evidence Record family: intentional verification hierarchy and multi-entry discovery journey.
@@ -4216,6 +4241,11 @@ try:
                     errors.append(f"E2-READ {_lang}{_route} prints {_shown[0]!r} of {_rid}, whose original could not be opened, without saying so")
     # every printed date on a built page is stated
     _srcd = set()
+    # The website edition is a governed product event, not an observation or source publication.
+    # CS-01 separately checks its bilingual identity, correction-history binding and source chronology.
+    _edition_dates = set()
+    for _lang, _months in (("en", _E2_EN), ("ar", _E2_AR)):
+        _edition_dates.update(_e2_dates(_uics['UI-CONTENT-VERSION'][f'label_{_lang}'], _months))
     for _s in _sl:
         if str(_s.get("primary_url") or "").startswith(("http://", "https://")):
             if _s.get("document_date"):
@@ -4227,7 +4257,7 @@ try:
             _np += 1
             _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S))))
             for _d in sorted(set(_e2_dates(_t.replace("⁦", "").replace("⁩", ""), _months))):
-                if _d not in _stated and _d not in _srcd:
+                if _d not in _stated and _d not in _srcd and _d not in _edition_dates:
                     errors.append(f"E2-DATES {_f.relative_to(DIST).as_posix()} prints the date {_d}, which no record, event or source states")
     if _np < 280:
         errors.append(f"E2-DATES read only {_np} pages")

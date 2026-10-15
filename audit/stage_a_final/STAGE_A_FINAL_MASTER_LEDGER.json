@@ -1,0 +1,469 @@
+{
+ "transaction": "STAGE-A-FINAL",
+ "summary": "Separate edition and checking clocks; withdraw unsupported IMF missing-value and World Bank publisher-contradiction interpretations, EN/AR together. No historical values or reporting universes changed.",
+ "self_counts": {
+  "site_pages": 151,
+  "bilingual_sections": 254,
+  "questions": 11,
+  "evidence_objects": 116,
+  "public_claims": 60,
+  "readings": 12,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 31,
+  "sources": 206,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 99,
+  "remittances": 29
+ },
+ "input_master_sha256": "87dafc6f18837ff61f032f1c93a7668c9affe9638aa104ab6ad50a2c05512975",
+ "output_master_sha256": "580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8",
+ "cells_written": 49,
+ "changes": [
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 256,
+   "col": 2,
+   "field": "04_NAV_UX!R256C2",
+   "old": "Edition of 3 October 2026",
+   "new": "Edition of 15 October 2026"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 256,
+   "col": 3,
+   "field": "04_NAV_UX!R256C3",
+   "old": "إصدار 3 أكتوبر 2026",
+   "new": "إصدار 15 أكتوبر 2026"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 256,
+   "col": 4,
+   "field": "04_NAV_UX!R256C4",
+   "old": "Tranche C TC-F (VER-07/TOOL-14). Content version cited with every record; changes only with a governed release.",
+   "new": "STAGE-A-FINAL: governed pre-release evidence edition, reconciled 15 October 2026; not production-release approval."
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 592,
+   "col": 2,
+   "field": "04_NAV_UX!R592C2",
+   "old": "3 October 2026",
+   "new": "See each source record"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 592,
+   "col": 3,
+   "field": "04_NAV_UX!R592C3",
+   "old": "3 أكتوبر 2026",
+   "new": "انظر سجل كل مصدر"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 592,
+   "col": 4,
+   "field": "04_NAV_UX!R592C4",
+   "old": "Design integration V1, owner decisions of 9 October 2026, B-b. The date up to which this edition's sources were checked, as stated in /corrections/ section 3 and in UI-CONTENT-VERSION; gate CS-01 holds the three equal. Changes only with a governed release.",
+   "new": "STAGE-A-FINAL: source-check dates are record-specific. This field is a reference to dated records, not a universal source-review cutoff or the edition date."
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 593,
+   "col": 2,
+   "field": "04_NAV_UX!R593C2",
+   "old": "Sources checked up to {date}",
+   "new": "Source-check dates differ by record"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 593,
+   "col": 3,
+   "field": "04_NAV_UX!R593C3",
+   "old": "رُوجعت المصادر حتى {date}",
+   "new": "تختلف تواريخ مراجعة المصادر بحسب السجل"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 593,
+   "col": 4,
+   "field": "04_NAV_UX!R593C4",
+   "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Currentness strip on every page; {date} is UI-EDITION-CHECKED-DATE. Printed beside UI-CONTENT-VERSION and linked to /corrections/ section 3, which says what an edition is.",
+   "new": "STAGE-A-FINAL: currentness strip distinguishes record-specific checks from UI-CONTENT-VERSION. See /corrections/ section 3."
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 597,
+   "col": 2,
+   "field": "04_NAV_UX!R597C2",
+   "old": "Sources checked up to",
+   "new": "Source checking"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 597,
+   "col": 3,
+   "field": "04_NAV_UX!R597C3",
+   "old": "رُوجعت المصادر حتى",
+   "new": "مراجعة المصادر"
+  },
+  {
+   "finding": "Q-H01/S10E-TR-01/02/S11-T01",
+   "sheet": "04_NAV_UX",
+   "row": 597,
+   "col": 4,
+   "field": "04_NAV_UX!R597C4",
+   "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Evidence Colophon: label of UI-EDITION-CHECKED-DATE.",
+   "new": "STAGE-A-FINAL: colophon labels the record-specific checking reference, separately from the edition date."
+  },
+  {
+   "finding": "Q-H01/S11-T01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 63,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R63C5",
+   "old": "Material corrections are recorded against stable evidence IDs and release information so earlier citations can still be understood. Where a prior version can be retained publicly and safely, it remains identifiable; where it cannot, the correction note records enough information to explain the change.\n\nThis edition reflects what its sources showed when they were checked, up to 3 October 2026. It is not a continuous monitoring service: between editions, the resource states what it held on the edition date.",
+   "new": "Material corrections are recorded against stable evidence IDs and release information so earlier citations can still be understood. Where a prior version can be retained publicly and safely, it remains identifiable; where it cannot, the correction note records enough information to explain the change.\n\nThis is the Edition of 15 October 2026, a governed pre-release reconciliation, not a production release. The earlier edition label was 3 October 2026; later governed updates added sources and corrections. For example, the IMF programme approval was published on 7 October 2026 and recorded as retrieved on 10 October 2026. Source publication, observation period, retrieval and substantive checking are distinct: each record retains its own dates and limits, and retrieval alone does not prove a full source review. There is no universal source-check cutoff for this edition.\n\nCorrection of 15 October 2026: CWR-011 and the Finance context no longer classify the IMF table’s printed zeros as unreported observations. CWR-012 and VIS-FINDEX-FLOW-CHANNELS no longer assert that the public indicator and unweighted survey answers establish a publisher contradiction. Their reconciliation requires matching definitions, filters, denominators, weights and vintage. The Finance and Access figures retain their evidence but no longer offer a Full record link where no published Evidence Record exists. Observation dates and historical values are unchanged."
+  },
+  {
+   "finding": "Q-H01/S11-T01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 63,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R63C7",
+   "old": "تُسجل التصحيحات الجوهرية مقابل معرفات أدلة ثابتة ومعلومات الإصدار حتى تظل الاستشهادات السابقة قابلة للفهم. وعندما يمكن الاحتفاظ بنسخة سابقة علنًا وبأمان، يبقى من الممكن التعرف عليها؛ وإذا تعذر ذلك، توثق ملاحظة التصحيح ما يكفي لشرح التغيير.\n\nيعكس هذا الإصدار ما أظهرته مصادره عند مراجعتها حتى 3 أكتوبر 2026. وهو ليس خدمة رصد مستمر؛ فبين إصدار وآخر يعرض المورد ما كان لديه في تاريخ الإصدار.",
+   "new": "تُسجل التصحيحات الجوهرية مقابل معرفات أدلة ثابتة ومعلومات الإصدار حتى تظل الاستشهادات السابقة قابلة للفهم. وعندما يمكن الاحتفاظ بنسخة سابقة علنًا وبأمان، يبقى من الممكن التعرف عليها؛ وإذا تعذر ذلك، توثق ملاحظة التصحيح ما يكفي لشرح التغيير.\n\nهذا إصدار 15 أكتوبر 2026، وهو مراجعة خاضعة للحوكمة لنسخة ما قبل النشر النهائي، وليس إصدارًا للإنتاج. كان الإصدار السابق موسومًا بتاريخ 3 أكتوبر 2026؛ ثم أضافت تحديثات خاضعة للحوكمة مصادر وتصحيحات لاحقة. فمثلًا، نُشرت موافقة صندوق النقد الدولي على البرنامج في 7 أكتوبر 2026، وسُجّل استرجاع مصدرها في 10 أكتوبر 2026. ويختلف تاريخ نشر المصدر عن فترة الرصد وتاريخ الاسترجاع والمراجعة الموضوعية: إذ يحتفظ كل سجل بتواريخه وحدوده، ولا يثبت الاسترجاع وحده مراجعة المصدر كاملًا. ولا يوجد تاريخ موحد تنتهي عنده مراجعة جميع مصادر هذا الإصدار.\n\nتصحيح 15 أكتوبر 2026: لم تعد القراءة CWR-011 وسياق التمويل تصنّف الأصفار المطبوعة في جدول صندوق النقد مشاهدات غير مُبلّغ عنها. ولم تعد القراءة CWR-012 والسجل VIS-FINDEX-FLOW-CHANNELS تجزمان بأن المؤشر المنشور وإجابات المسح غير الموزونة يثبتان تناقضًا لدى الناشر. ويتطلب التوفيق بينهما مطابقة التعريفات وشروط التصفية وقواعد الاحتساب والأوزان والنسخة الزمنية. وتحتفظ رسوم التمويل والوصول بأدلتها، لكنها لم تعد تعرض رابطًا بعنوان «السجل الكامل» حين لا يوجد سجل أدلة منشور. ولم تتغير تواريخ الرصد أو القيم التاريخية."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 8,
+   "field": "06_EVIDENCE_OBJECTS!R12C8",
+   "old": "The observation or publication dates and evidence types of the evidence records in each domain, as recorded in the edition of this resource dated 3 October 2026.",
+   "new": "The observation or publication dates and evidence types of the evidence records in each domain, as recorded in the current governed edition of this resource."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 9,
+   "field": "06_EVIDENCE_OBJECTS!R12C9",
+   "old": "تواريخ الرصد أو النشر وأنواع الأدلة لسجلات الأدلة في كل مجال، كما وردت في إصدار هذا المورد المؤرخ في 3 أكتوبر 2026.",
+   "new": "تواريخ الرصد أو النشر وأنواع الأدلة لسجلات الأدلة في كل مجال، كما وردت في الإصدار الحالي الخاضع للحوكمة من هذا المورد."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 10,
+   "field": "06_EVIDENCE_OBJECTS!R12C10",
+   "old": "Edition of this resource dated 3 October 2026; each item keeps the period its source gives",
+   "new": "Current governed edition of this resource; each item keeps the period its source gives"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 11,
+   "field": "06_EVIDENCE_OBJECTS!R12C11",
+   "old": "إصدار هذا المورد المؤرخ في 3 أكتوبر 2026؛ ويحتفظ كل دليل بالفترة التي يحددها مصدره",
+   "new": "الإصدار الحالي الخاضع للحوكمة من هذا المورد؛ ويحتفظ كل دليل بالفترة التي يحددها مصدره"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 18,
+   "field": "06_EVIDENCE_OBJECTS!R12C18",
+   "old": "This comparison reflects the evidence recorded in the edition of this resource dated 3 October 2026 and changes whenever a newer record is added; each item keeps the date its source gives.",
+   "new": "This comparison reflects the evidence recorded in the current governed edition of this resource and changes whenever a newer record is added; each item keeps the date its source gives."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 12,
+   "col": 19,
+   "field": "06_EVIDENCE_OBJECTS!R12C19",
+   "old": "تعكس هذه المقارنة الأدلة الواردة في إصدار هذا المورد المؤرخ في 3 أكتوبر 2026، وتتغير كلما أُضيف سجل أحدث؛ ويحتفظ كل دليل بالتاريخ الذي يحدده مصدره.",
+   "new": "تعكس هذه المقارنة الأدلة الواردة في الإصدار الحالي الخاضع للحوكمة من هذا المورد، وتتغير كلما أُضيف سجل أحدث؛ ويحتفظ كل دليل بالتاريخ الذي يحدده مصدره."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 62,
+   "col": 18,
+   "field": "06_EVIDENCE_OBJECTS!R62C18",
+   "old": "This comparison reflects the evidence records in the edition of this resource dated 3 October 2026 and changes whenever a newer record is added. A recent administrative observation does not make older population evidence current, and older evidence is not invalid merely because it is older.",
+   "new": "This comparison reflects the evidence records in the current governed edition of this resource and changes whenever a newer record is added. A recent administrative observation does not make older population evidence current, and older evidence is not invalid merely because it is older."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 62,
+   "col": 19,
+   "field": "06_EVIDENCE_OBJECTS!R62C19",
+   "old": "تعكس هذه المقارنة سجلات الأدلة الواردة في إصدار هذا المورد المؤرخ في 3 أكتوبر 2026، وتتغير كلما أُضيف سجل أحدث. ولا تجعل المشاهدة الإدارية الحديثة الدليل السكاني الأقدم حديثًا، كما لا يصبح الدليل الأقدم غير صالح لمجرد قدمه.",
+   "new": "تعكس هذه المقارنة سجلات الأدلة الواردة في الإصدار الحالي الخاضع للحوكمة من هذا المورد، وتتغير كلما أُضيف سجل أحدث. ولا تجعل المشاهدة الإدارية الحديثة الدليل السكاني الأقدم حديثًا، كما لا يصبح الدليل الأقدم غير صالح لمجرد قدمه."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 6,
+   "field": "06_EVIDENCE_OBJECTS!R77C6",
+   "old": "The evidence gaps recorded in this resource as of the edition of this resource dated 3 October 2026 are of these types: a missing period, a missing calculation base, a missing primary file, a map layer that cannot yet be built, and an unresolved source scope. A gap can close when new evidence arrives; a blank or missing observation is not zero and is not evidence of absence.",
+   "new": "The evidence gaps recorded in this resource as of the current governed edition of this resource are of these types: a missing period, a missing calculation base, a missing primary file, a map layer that cannot yet be built, and an unresolved source scope. A gap can close when new evidence arrives; a blank or missing observation is not zero and is not evidence of absence."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 7,
+   "field": "06_EVIDENCE_OBJECTS!R77C7",
+   "old": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
+   "new": "فجوات الأدلة المسجلة في هذا المورد وفق الإصدار الحالي الخاضع للحوكمة من هذا المورد من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 10,
+   "field": "06_EVIDENCE_OBJECTS!R77C10",
+   "old": "As of the edition of this resource dated 3 October 2026",
+   "new": "As of the current governed edition of this resource"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 11,
+   "field": "06_EVIDENCE_OBJECTS!R77C11",
+   "old": "وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026",
+   "new": "وفق الإصدار الحالي الخاضع للحوكمة من هذا المورد"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 18,
+   "field": "06_EVIDENCE_OBJECTS!R77C18",
+   "old": "The gaps are those recorded as of the edition of this resource dated 3 October 2026. A gap closes when new evidence fills it, and the list changes accordingly.",
+   "new": "The gaps are those recorded as of the current governed edition of this resource. A gap closes when new evidence fills it, and the list changes accordingly."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 77,
+   "col": 19,
+   "field": "06_EVIDENCE_OBJECTS!R77C19",
+   "old": "الفجوات هي المسجلة وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026. وتُغلق الفجوة عندما يسدّها دليل جديد، وتتغير القائمة تبعًا لذلك.",
+   "new": "الفجوات هي المسجلة وفق الإصدار الحالي الخاضع للحوكمة من هذا المورد. وتُغلق الفجوة عندما يسدّها دليل جديد، وتتغير القائمة تبعًا لذلك."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 10,
+   "field": "06_EVIDENCE_OBJECTS!R79C10",
+   "old": "Edition of this resource dated 3 October 2026",
+   "new": "Current governed edition of this resource"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 11,
+   "field": "06_EVIDENCE_OBJECTS!R79C11",
+   "old": "إصدار هذا المورد المؤرخ في 3 أكتوبر 2026",
+   "new": "الإصدار الحالي الخاضع للحوكمة من هذا المورد"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 18,
+   "field": "06_EVIDENCE_OBJECTS!R79C18",
+   "old": "This record sets out evidence types and has no observation date; the assignment of records to types reflects the edition of this resource dated 3 October 2026.",
+   "new": "This record sets out evidence types and has no observation date; the assignment of records to types reflects the current governed edition of this resource."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 79,
+   "col": 19,
+   "field": "06_EVIDENCE_OBJECTS!R79C19",
+   "old": "يحدد هذا السجل أنواع الأدلة وليس له تاريخ رصد؛ ويعكس تصنيف السجلات في هذه الأنواع إصدار هذا المورد المؤرخ في 3 أكتوبر 2026.",
+   "new": "يحدد هذا السجل أنواع الأدلة وليس له تاريخ رصد؛ ويعكس تصنيف السجلات في هذه الأنواع الإصدار الحالي الخاضع للحوكمة من هذا المورد."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 6,
+   "col": 17,
+   "field": "11_VISUAL_LIBRARY!R6C17",
+   "old": "Edition of this resource dated 3 October 2026",
+   "new": "Current governed edition of this resource"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 7,
+   "col": 17,
+   "field": "11_VISUAL_LIBRARY!R7C17",
+   "old": "Edition of this resource dated 3 October 2026; each item keeps the period its source gives",
+   "new": "Current governed edition of this resource; each item keeps the period its source gives"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 17,
+   "field": "11_VISUAL_LIBRARY!R8C17",
+   "old": "As of the edition of this resource dated 3 October 2026",
+   "new": "As of the current governed edition of this resource"
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 21,
+   "field": "11_VISUAL_LIBRARY!R8C21",
+   "old": "The evidence gaps recorded in this resource as of the edition of this resource dated 3 October 2026 are of these types: a missing period, a missing calculation base, a missing primary file, a map layer that cannot yet be built, and an unresolved source scope. A gap can close when new evidence arrives; a blank or missing observation is not zero and is not evidence of absence.",
+   "new": "The evidence gaps recorded in this resource as of the current governed edition of this resource are of these types: a missing period, a missing calculation base, a missing primary file, a map layer that cannot yet be built, and an unresolved source scope. A gap can close when new evidence arrives; a blank or missing observation is not zero and is not evidence of absence."
+  },
+  {
+   "finding": "S11-T01/current-edition classifications",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 8,
+   "col": 22,
+   "field": "11_VISUAL_LIBRARY!R8C22",
+   "old": "فجوات الأدلة المسجلة في هذا المورد وفق إصدار هذا المورد المؤرخ في 3 أكتوبر 2026 من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود.",
+   "new": "فجوات الأدلة المسجلة في هذا المورد وفق الإصدار الحالي الخاضع للحوكمة من هذا المورد من الأنواع التالية: فترة مفقودة، أو قاعدة احتساب غير موثقة، أو ملف أصلي غير متاح، أو طبقة مكانية لا يمكن بناؤها بعد، أو نطاق مصدر غير محسوم. وقد تُغلق الفجوة عند وصول دليل جديد؛ والفراغ أو غياب الرصد لا يعني صفرًا ولا يدل على عدم الوجود."
+  },
+  {
+   "finding": "CWR-011/S10C-ED-12/S11-M02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 103,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R103C5",
+   "old": "The compiled monetary series provide balance-sheet context on bank deposits, credit to the private sector, bank reserves, capital and reserves, loans and advances, and foreign-currency deposits across their available reporting periods. These measures help describe intermediation capacity and structure, but they are not a complete current financial-soundness assessment: solvency, asset quality or current system-wide soundness cannot be inferred from balance-sheet aggregates alone. The IMF's 2025 Article IV staff report does publish one set of financial soundness indicators for Yemen, sourced to the Yemeni authorities and IMF staff calculations, including the ratio of non-performing loans to total gross loans at each year-end from 2014 to 2024 and at one date in 2025. For each year-end from 2014 to 2019 that ratio is printed as zero, which this resource reads as not reported, not as zero. The table does not state which banks or areas it covers; the report says that the central bank began reporting a set of these indicators in 2025 and that comprehensive data are still being compiled, and its own text gives values for two other ratios that differ from the table. One published vintage of unstated coverage is not yet a harmonized series with common definitions, so this resource does not present these ratios as a series.",
+   "new": "The compiled monetary series provide balance-sheet context on bank deposits, credit to the private sector, bank reserves, capital and reserves, loans and advances, and foreign-currency deposits across their available reporting periods. These measures help describe intermediation capacity and structure, but they are not a complete current financial-soundness assessment: solvency, asset quality or current system-wide soundness cannot be inferred from balance-sheet aggregates alone. The IMF's 2025 Article IV staff report does publish one set of financial soundness indicators for Yemen, sourced to the Yemeni authorities and IMF staff calculations, including the ratio of non-performing loans to total gross loans at each year-end from 2014 to 2024 and at one date in 2025. For each year-end from 2014 to 2019 that ratio is printed as zero, but the available table note does not explain whether these entries represent measured zeros or unavailable observations. This resource does not classify them as either. The table does not state which banks or areas it covers; the report says that the central bank began reporting a set of these indicators in 2025 and that comprehensive data are still being compiled, and its own text gives values for two other ratios that differ from the table. One published vintage of unstated coverage is not yet a harmonized series with common definitions, so this resource does not present these ratios as a series."
+  },
+  {
+   "finding": "CWR-011/S10C-ED-12/S11-M02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 374,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R374C5",
+   "old": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved. The same mechanism can run the other way: between the end of 2024 and the end of 2025 the banks’ total assets fell from 15,329.7 to 12,341.8 billion rials, while the average market rate that CBY-Aden publishes went from 2,059.2 to 1,624.45 rials per US dollar (December averages). Part of that fall is consistent with revaluation at a stronger rial, but the bulletin amended its monetary and banking data in line with the IMF’s Monetary and Financial Statistics Manual (2016) from December 2025 and publishes no line-by-line bridge, so valuation, the change of method and other movements cannot be separated.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country.\n- Asset quality. If many existing loans are not being repaid, banks may hold back new lending for that reason, and the private-sector line may include loans that are not performing. The consolidated balance sheet does not show asset quality. The IMF’s 2025 Article IV staff report prints one set of financial soundness indicators for Yemen, including the ratio of non-performing loans to total gross loans, but its table does not state which banks or areas it covers, and for its earliest years the ratio is printed as zero, which this resource reads as not reported, not as zero. One published vintage of unstated coverage is not yet a harmonized series with common definitions, so this Reading does not use the ratio.",
+   "new": "- Weak demand for credit. In an uncertain economy firms may not be asking for loans; a small loan book can reflect few applications as much as few approvals.\n- The frozen treasury-bill legacy. Before the conflict, about 45% of bank assets were held in government treasury bills; after the government stopped servicing its debt, the Central Bank of Yemen froze those holdings, as the World Bank’s appraisal document for FMIIP (May 2025) reports. Part of today’s claims on government may be that legacy rather than new investment decisions.\n- Valuation. Since December 2022 foreign-currency items have been valued at the market exchange rate, so the shares move with the rial’s exchange rate. Of loans and advances, the government’s share was 85.1% on the earlier basis in December 2022 and 59.5% when the same month was revalued at market exchange rates. That drop comes from restating the same month, not from new lending; it is consistent with valuation, and the bulletin does not split it between valuation and other effects, so nothing here says that lending to firms has or has not improved. The same mechanism can run the other way: between the end of 2024 and the end of 2025 the banks’ total assets fell from 15,329.7 to 12,341.8 billion rials, while the average market rate that CBY-Aden publishes went from 2,059.2 to 1,624.45 rials per US dollar (December averages). Part of that fall is consistent with revaluation at a stronger rial, but the bulletin amended its monetary and banking data in line with the IMF’s Monetary and Financial Statistics Manual (2016) from December 2025 and publishes no line-by-line bridge, so valuation, the change of method and other movements cannot be separated.\n- The reporting perimeter. The bulletin covers the deposit-taking institutions in its data, but it does not state which areas its figures cover, so the consolidated balance sheet may not describe every bank in every part of the country.\n- Asset quality. If many existing loans are not being repaid, banks may hold back new lending for that reason, and the private-sector line may include loans that are not performing. The consolidated balance sheet does not show asset quality. The IMF’s 2025 Article IV staff report prints one set of financial soundness indicators for Yemen, including the ratio of non-performing loans to total gross loans, but its table does not state which banks or areas it covers, and for its earliest years the ratio is printed as zero, but the available table note does not explain whether these entries represent measured zeros or unavailable observations. This resource does not classify them as either. One published vintage of unstated coverage is not yet a harmonized series with common definitions, so this Reading does not use the ratio."
+  },
+  {
+   "finding": "CWR-011/S10C-ED-12/S11-M02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 104,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R104C7",
+   "old": "تتيح السلاسل النقدية المعتمدة هنا قراءةً لسياق الميزانيات والوساطة، بما يشمل الودائع والائتمان المقدم للقطاع الخاص واحتياطيات البنوك ورأس المال والاحتياطيات والقروض والسلف والودائع بالعملات الأجنبية، كلٌّ ضمن فترته المتاحة. وتفيد هذه المؤشرات في فهم قدرة النظام على الوساطة وهيكله، لكنها لا تشكل تشخيصًا مكتملًا وحديثًا للمتانة المالية؛ فلا يُستنتج من مجاميع الميزانيات وحدها مستوى الملاءة أو جودة الأصول أو المتانة المالية الحالية للنظام ككل. ويَنشر تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 مجموعةً واحدة من مؤشرات السلامة المالية لليمن، مصدرها السلطات اليمنية وحسابات خبراء الصندوق، ومنها نسبة القروض المتعثرة إلى إجمالي القروض في نهاية كل سنة من 2014 إلى 2024 وفي تاريخ واحد من 2025. وتَرِد هذه النسبة صفرًا في نهاية كل سنة من 2014 إلى 2019، ويقرأ هذا المورد تلك القيم على أنها غير مُبلَّغ عنها، لا على أنها صفر. ولا يحدد الجدول البنوك أو المناطق التي يغطيها؛ ويذكر التقرير أن البنك المركزي بدأ الإبلاغ عن مجموعة من هذه المؤشرات في 2025 وأن البيانات الشاملة ما تزال قيد التجميع، كما يورد متنُه لنسبتين أخريين قيمًا تختلف عما في الجدول. ولا تشكّل نسخةٌ منشورة واحدة غير محددة النطاق سلسلةً منسجمة بتعريفات موحدة بعد، لذلك لا يعرض هذا المورد هذه النسب في صورة سلسلة.",
+   "new": "تتيح السلاسل النقدية المعتمدة هنا قراءةً لسياق الميزانيات والوساطة، بما يشمل الودائع والائتمان المقدم للقطاع الخاص واحتياطيات البنوك ورأس المال والاحتياطيات والقروض والسلف والودائع بالعملات الأجنبية، كلٌّ ضمن فترته المتاحة. وتفيد هذه المؤشرات في فهم قدرة النظام على الوساطة وهيكله، لكنها لا تشكل تشخيصًا مكتملًا وحديثًا للمتانة المالية؛ فلا يُستنتج من مجاميع الميزانيات وحدها مستوى الملاءة أو جودة الأصول أو المتانة المالية الحالية للنظام ككل. ويَنشر تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 مجموعةً واحدة من مؤشرات السلامة المالية لليمن، مصدرها السلطات اليمنية وحسابات خبراء الصندوق، ومنها نسبة القروض المتعثرة إلى إجمالي القروض في نهاية كل سنة من 2014 إلى 2024 وفي تاريخ واحد من 2025. وتَرِد هذه النسبة صفرًا في نهاية كل سنة من 2014 إلى 2019، لكن ملاحظة الجدول المتاحة لا توضح ما إذا كانت هذه الخانات تمثل أصفارًا مقاسة أم مشاهدات غير متاحة. ولا يصنّفها هذا المورد ضمن أيٍّ من الحالتين. ولا يحدد الجدول البنوك أو المناطق التي يغطيها؛ ويذكر التقرير أن البنك المركزي بدأ الإبلاغ عن مجموعة من هذه المؤشرات في 2025 وأن البيانات الشاملة ما تزال قيد التجميع، كما يورد متنُه لنسبتين أخريين قيمًا تختلف عما في الجدول. ولا تشكّل نسخةٌ منشورة واحدة غير محددة النطاق سلسلةً منسجمة بتعريفات موحدة بعد، لذلك لا يعرض هذا المورد هذه النسب في صورة سلسلة."
+  },
+  {
+   "finding": "CWR-011/S10C-ED-12/S11-M02",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 374,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R374C7",
+   "old": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن. ويمكن أن تعمل الآلية نفسها في الاتجاه المعاكس: فبين نهاية 2024 ونهاية 2025 انخفض إجمالي أصول البنوك من 15,329.7 إلى 12,341.8 مليار ريال، بينما انتقل متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن من 2,059.2 إلى 1,624.45 ريالًا للدولار الأمريكي (متوسط شهر ديسمبر في كل من العامين). ويتسق جزء من هذا الانخفاض مع إعادة التقييم بسعر ريال أقوى، غير أن النشرة عدّلت بياناتها النقدية والمصرفية وفق دليل الإحصاءات النقدية والمالية الصادر عن صندوق النقد الدولي (2016) ابتداءً من ديسمبر 2025، ولا تنشر جسرًا بندًا ببند، فلا يمكن الفصل بين أثر التقييم وأثر تغيير المنهجية والتحركات الأخرى.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد.\n- جودة الأصول: فإذا كان كثير من القروض القائمة لا يُسدَّد، فقد تُحجم البنوك لهذا السبب عن الإقراض الجديد، وقد يشمل بند القطاع الخاص قروضًا متعثرة. ولا تُظهر الميزانية المجمعة جودة الأصول. ويَنشر تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 مجموعةً واحدة من مؤشرات السلامة المالية لليمن، منها نسبة القروض المتعثرة إلى إجمالي القروض، لكن جدوله لا يحدد البنوك أو المناطق التي يغطيها، وتَرِد فيه هذه النسبة صفرًا في سنواته الأولى، ويقرأ هذا المورد تلك القيم على أنها غير مُبلَّغ عنها، لا على أنها صفر. ولا تشكّل نسخةٌ منشورة واحدة غير محددة النطاق سلسلةً منسجمة بتعريفات موحدة بعد، لذلك لا تستخدم هذه القراءة تلك النسبة.",
+   "new": "- ضعف الطلب على الائتمان: ففي اقتصاد غير مستقر قد لا تطلب المنشآت قروضًا، وقد يعكس صِغَر محفظة القروض قلةَ الطلبات بقدر ما يعكس قلةَ الموافقات.\n- إرث أذون الخزانة المجمدة: فقبل النزاع كان نحو 45% من أصول البنوك مستثمرًا في أذون الخزانة الحكومية، وحين توقفت خدمة الدين العام جمّد البنك المركزي اليمني تلك الأرصدة، بحسب وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025). وقد يكون جزء من الحقوق الحالية على الحكومة هو ذلك الإرث، لا حصيلة قرارات استثمار جديدة.\n- التقييم: فمنذ ديسمبر 2022 تُقيَّم البنود المقوّمة بالعملات الأجنبية بسعر الصرف السوقي، فتتحرك الحصص مع سعر صرف الريال. ومن إجمالي القروض والسلفيات، بلغت حصة الحكومة 85.1% على الأساس السابق في ديسمبر 2022 و59.5% حين أُعيد تقييم الشهر نفسه بسعر الصرف السوقي. وهذا الانخفاض ناتج عن إعادة عرض الشهر نفسه لا عن إقراض جديد؛ وهو يتسق مع أثر التقييم، ولا تفصل النشرة بينه وبين الآثار الأخرى، لذلك لا تقول هذه القراءة إن إقراض المنشآت قد تحسّن أو لم يتحسّن. ويمكن أن تعمل الآلية نفسها في الاتجاه المعاكس: فبين نهاية 2024 ونهاية 2025 انخفض إجمالي أصول البنوك من 15,329.7 إلى 12,341.8 مليار ريال، بينما انتقل متوسط سعر الصرف السوقي الذي ينشره البنك المركزي اليمني – عدن من 2,059.2 إلى 1,624.45 ريالًا للدولار الأمريكي (متوسط شهر ديسمبر في كل من العامين). ويتسق جزء من هذا الانخفاض مع إعادة التقييم بسعر ريال أقوى، غير أن النشرة عدّلت بياناتها النقدية والمصرفية وفق دليل الإحصاءات النقدية والمالية الصادر عن صندوق النقد الدولي (2016) ابتداءً من ديسمبر 2025، ولا تنشر جسرًا بندًا ببند، فلا يمكن الفصل بين أثر التقييم وأثر تغيير المنهجية والتحركات الأخرى.\n- نطاق الإبلاغ: تغطي النشرة مؤسسات قبول الودائع التي تشملها بياناتها، لكنها لا تذكر المناطق التي تغطيها أرقامها، لذلك قد لا تصف الميزانية المجمعة كل بنك في كل أنحاء البلاد.\n- جودة الأصول: فإذا كان كثير من القروض القائمة لا يُسدَّد، فقد تُحجم البنوك لهذا السبب عن الإقراض الجديد، وقد يشمل بند القطاع الخاص قروضًا متعثرة. ولا تُظهر الميزانية المجمعة جودة الأصول. ويَنشر تقرير خبراء صندوق النقد الدولي لمشاورات المادة الرابعة لعام 2025 مجموعةً واحدة من مؤشرات السلامة المالية لليمن، منها نسبة القروض المتعثرة إلى إجمالي القروض، لكن جدوله لا يحدد البنوك أو المناطق التي يغطيها، وتَرِد فيه هذه النسبة صفرًا في سنواته الأولى، لكن ملاحظة الجدول المتاحة لا توضح ما إذا كانت هذه الخانات تمثل أصفارًا مقاسة أم مشاهدات غير متاحة. ولا يصنّفها هذا المورد ضمن أيٍّ من الحالتين. ولا تشكّل نسخةٌ منشورة واحدة غير محددة النطاق سلسلةً منسجمة بتعريفات موحدة بعد، لذلك لا تستخدم هذه القراءة تلك النسبة."
+  },
+  {
+   "finding": "CWR-012/S10D-ED-01/02/S11-M01",
+   "sheet": "08_READINGS",
+   "row": 16,
+   "col": 8,
+   "field": "08_READINGS!R16C8",
+   "old": "In Yemen’s Global Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances and 11.9% of adults in those areas had an account at a financial institution. For that wave, no weighted estimate of the channel usable here is published or held (the database’s printed zero for receipt into an account conflicts with the World Bank’s own documentation and is not used); the World Bank’s published variable documentation records that recipients were asked whether they received the money using a bank or mobile-money account, and that some answered yes. That money sent between people reaches recipients more through exchange companies and other money-transfer providers than into accounts of their own remains a hypothesis: the survey counts adults, not households, and its values here cover transfers within Yemen only. Other routes, such as cash carried by hand, and humanitarian cash fit the same numbers, and survey coverage, currency and the meaning of “remittance” limit what they show.",
+   "new": "In Yemen’s Global Findex 2021 wave, 31.9% of adults in surveyed areas received domestic remittances and 11.9% of adults in those areas had an account at a financial institution. For that wave, this resource holds no verified weighted distribution of domestic-remittance receipt channels. The public indicator and survey responses have not been reconciled using matching definitions, filters, denominators, weights and vintage; no publisher contradiction or zero channel share is inferred. Separately, the World Bank’s published variable documentation records that recipients were asked whether they received the money using a bank or mobile-money account, and that some answered yes. That money sent between people reaches recipients more through exchange companies and other money-transfer providers than into accounts of their own remains a hypothesis: the survey counts adults, not households, and its values here cover transfers within Yemen only. Other routes, such as cash carried by hand, and humanitarian cash fit the same numbers, and survey coverage, currency and the meaning of “remittance” limit what they show."
+  },
+  {
+   "finding": "CWR-012/S10D-ED-01/02/S11-M01",
+   "sheet": "08_READINGS",
+   "row": 16,
+   "col": 9,
+   "field": "08_READINGS!R16C9",
+   "old": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن، تلقى 31.9% من البالغين في المناطق التي شملها المسح حوالات محلية، وكان لدى 11.9% من البالغين في تلك المناطق حساب لدى مؤسسة مالية. ولتلك الموجة لا يُنشر أي تقدير موزون للقناة صالح للاستخدام هنا ولا يُحتفظ به (فالصفر الذي تطبعه قاعدة البيانات لاستلام الأموال في حساب يتعارض مع توثيق البنك الدولي نفسه، ولا يُستخدم)؛ ويسجل توثيق المتغيرات الذي ينشره البنك الدولي أن المتلقين سُئلوا عمّا إذا كانوا قد تلقوا المال باستخدام حساب مصرفي أو حساب أموال عبر الهاتف المحمول، وأن بعضهم أجاب بنعم. ويبقى القول بأن الأموال المرسلة بين الأفراد تصل إلى متلقيها عبر شركات الصرافة وغيرها من مقدمي خدمات تحويل الأموال أكثر مما تصل إلى حسابات خاصة بهم فرضيةً: فالمسح يعدّ البالغين لا الأسر، ولا تغطي قيمه الواردة هنا إلا الحوالات داخل اليمن. وتنسجم الطرق الأخرى، كالنقد الذي يُحمل باليد، والمساعدات النقدية الإنسانية مع الأرقام نفسها، وتحدّ تغطيةُ المسح والعملةُ ومعنى «الحوالة» مما تُظهره.",
+   "new": "في موجة 2021 من المؤشر العالمي للشمول المالي (Global Findex) الخاصة باليمن، تلقى 31.9% من البالغين في المناطق التي شملها المسح حوالات محلية، وكان لدى 11.9% من البالغين في تلك المناطق حساب لدى مؤسسة مالية. ولا يحتفظ هذا المورد لتلك الموجة بتوزيع موزون متحقق منه لقنوات استلام الحوالات المحلية. ولم يُوفَّق بين المؤشر العام وإجابات المسح بمطابقة التعريفات وشروط التصفية وقواعد الاحتساب والأوزان والنسخة الزمنية؛ فلا يُستنتج تناقض لدى الناشر أو أن حصة قناة ما تساوي صفرًا. وعلى نحو منفصل، ويسجل توثيق المتغيرات الذي ينشره البنك الدولي أن المتلقين سُئلوا عمّا إذا كانوا قد تلقوا المال باستخدام حساب مصرفي أو حساب أموال عبر الهاتف المحمول، وأن بعضهم أجاب بنعم. ويبقى القول بأن الأموال المرسلة بين الأفراد تصل إلى متلقيها عبر شركات الصرافة وغيرها من مقدمي خدمات تحويل الأموال أكثر مما تصل إلى حسابات خاصة بهم فرضيةً: فالمسح يعدّ البالغين لا الأسر، ولا تغطي قيمه الواردة هنا إلا الحوالات داخل اليمن. وتنسجم الطرق الأخرى، كالنقد الذي يُحمل باليد، والمساعدات النقدية الإنسانية مع الأرقام نفسها، وتحدّ تغطيةُ المسح والعملةُ ومعنى «الحوالة» مما تُظهره."
+  },
+  {
+   "finding": "CWR-012/S11-M01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 379,
+   "col": 5,
+   "field": "03_PAGE_SECTIONS!R379C5",
+   "old": "The only weighted channel values held here are historical. The World Bank’s weighted country profile for 2014 reports that 18.3% of adults received domestic remittances; among those recipients, 31.1% received them through a money transfer operator and 2.0% through a financial institution. These are shares of recipients, not of all adults; they do not show how much money moved through each channel, and they do not describe the situation today. For the 2021 wave, no weighted estimate of the channel for domestic remittances usable here is published or held. The World Bank’s published variable documentation for that wave records that recipients were asked whether they received the money using a bank or mobile-money account and that some answered yes; these are unweighted counts of answers, not an estimate for the population, and they are not used here. The World Bank’s database prints zero for receipt into an account, with no recipient or group value; the two statements cannot both describe the same quantity, so the printed value is not used either. The World Bank publishes no mobile-money-account figure for Yemen, and its figure for an account at a financial institution is the same as its account figure.\nOn the supply side, the official 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are entries counted by the roster’s own classes, not a count of unique providers or of providers operating now. The roster covers entities licensed by CBY-Aden; this evidence base holds no list from the Central Bank of Yemen in Sana'a, so these entries are not a count for all of Yemen. Older counts do not compare with them: the World Bank’s appraisal document for FMIIP (May 2025) reports money-exchanger branches rising from 876 in 2017 to 3,244 in 2019, citing no source, while an International Growth Centre report (February 2026) presents the same pair as World Bank estimates of entities, including exchange firms and microfinance institutions.\nOn 26 June 2024, a CBY-Aden decision required the exchange companies, exchange establishments and money-transfer agents under its supervision to execute new domestic cash transfers only through the unified money-transfer network. The rule post-dates the survey’s fieldwork, and a rule is not evidence of how transfers actually move.",
+   "new": "The only weighted channel values held here are historical. The World Bank’s weighted country profile for 2014 reports that 18.3% of adults received domestic remittances; among those recipients, 31.1% received them through a money transfer operator and 2.0% through a financial institution. These are shares of recipients, not of all adults; they do not show how much money moved through each channel, and they do not describe the situation today. For the 2021 wave, this resource holds no verified weighted distribution of domestic-remittance receipt channels. The World Bank’s published variable documentation records that recipients were asked whether they received money using a bank or mobile-money account and that some answered yes. These are unweighted response counts, not a population estimate or a weighted distribution among recipients. The public indicator and these responses have not been reconciled using matching definitions, filters, denominators, weights and vintage; no publisher contradiction or zero channel share is inferred. The World Bank publishes no mobile-money-account figure for Yemen, and its figure for an account at a financial institution is the same as its account figure.\nOn the supply side, the official 2026 roster of the Central Bank of Yemen – Aden (CBY-Aden) lists 100 exchange companies, 231 individual exchange establishments and 111 remittance agents. These are entries counted by the roster’s own classes, not a count of unique providers or of providers operating now. The roster covers entities licensed by CBY-Aden; this evidence base holds no list from the Central Bank of Yemen in Sana'a, so these entries are not a count for all of Yemen. Older counts do not compare with them: the World Bank’s appraisal document for FMIIP (May 2025) reports money-exchanger branches rising from 876 in 2017 to 3,244 in 2019, citing no source, while an International Growth Centre report (February 2026) presents the same pair as World Bank estimates of entities, including exchange firms and microfinance institutions.\nOn 26 June 2024, a CBY-Aden decision required the exchange companies, exchange establishments and money-transfer agents under its supervision to execute new domestic cash transfers only through the unified money-transfer network. The rule post-dates the survey’s fieldwork, and a rule is not evidence of how transfers actually move."
+  },
+  {
+   "finding": "CWR-012/S11-M01",
+   "sheet": "03_PAGE_SECTIONS",
+   "row": 379,
+   "col": 7,
+   "field": "03_PAGE_SECTIONS!R379C7",
+   "old": "القيم الموزونة الوحيدة المتعلقة بالقنوات في قاعدة الأدلة هذه قيم تاريخية. فالملف القطري الموزون للبنك الدولي لعام 2014 يفيد بأن 18.3% من البالغين تلقوا حوالات محلية، وأن 31.1% من هؤلاء المتلقين تلقوها عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية. وهذه نسب من المتلقين لا من جميع البالغين؛ ولا تبيّن مقدار الأموال التي مرت عبر كل قناة، ولا تصف الوضع الراهن. أما موجة 2021، فلا يُنشر لها أي تقدير موزون لقناة الحوالات المحلية صالح للاستخدام هنا ولا يُحتفظ به. ويسجل توثيق المتغيرات الذي ينشره البنك الدولي لتلك الموجة أن المتلقين سُئلوا عمّا إذا كانوا قد تلقوا المال باستخدام حساب مصرفي أو حساب أموال عبر الهاتف المحمول، وأن بعضهم أجاب بنعم؛ وهذه أعداد غير موزونة من الإجابات، لا تقدير للسكان، ولا تُستخدم هنا. وتطبع قاعدة بيانات البنك الدولي صفرًا لاستلام الأموال في حساب، من دون قيمة للمتلقين أو للفئات؛ ولا يمكن أن يصف البيانان الكمية نفسها، فلا تُستخدم القيمة المطبوعة أيضًا. ولا ينشر البنك الدولي أي رقم لليمن عن حسابات الأموال عبر الهاتف المحمول، ورقمه للحساب لدى مؤسسة مالية مساوٍ لرقم ملكية الحساب.\nوعلى جانب العرض، تُدرج القائمة الرسمية لعام 2026 الصادرة عن البنك المركزي اليمني – عدن 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها، لا عدد لمقدمي خدمات فريدين ولا لمن يعمل منهم حاليًا. وتشمل القائمة الجهات المرخّصة من البنك المركزي اليمني – عدن، ولا تتضمن قاعدة الأدلة هذه قائمة صادرة عن البنك المركزي اليمني في صنعاء، فلا تمثل هذه القيود عددًا لليمن كله. ولا تقبل الأعدادُ الأقدم المقارنةَ بها: إذ تذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن فروع شركات الصرافة ارتفعت من 876 في 2017 إلى 3,244 في 2019، من دون ذكر مصدر، بينما يعرض تقرير للمركز الدولي للنمو (فبراير 2026) الزوج نفسه من الأرقام بوصفه تقديرات للبنك الدولي لعدد الكيانات، بما فيها شركات الصرافة ومؤسسات التمويل الأصغر.\nوفي 26 يونيو 2024 ألزم قرار صادر عن البنك المركزي اليمني – عدن شركات ومنشآت الصرافة ووكلاء الحوالات الخاضعين لرقابته بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية. وهذا القرار لاحق للعمل الميداني للمسح، ووجود قاعدة لا يدل بذاته على كيفية انتقال الحوالات فعليًا.",
+   "new": "القيم الموزونة الوحيدة المتعلقة بالقنوات في قاعدة الأدلة هذه قيم تاريخية. فالملف القطري الموزون للبنك الدولي لعام 2014 يفيد بأن 18.3% من البالغين تلقوا حوالات محلية، وأن 31.1% من هؤلاء المتلقين تلقوها عبر مشغل تحويل أموال، و2.0% عبر مؤسسة مالية. وهذه نسب من المتلقين لا من جميع البالغين؛ ولا تبيّن مقدار الأموال التي مرت عبر كل قناة، ولا تصف الوضع الراهن. أما موجة 2021، فلا يحتفظ هذا المورد بتوزيع موزون متحقق منه لقنوات استلام الحوالات المحلية. ويسجل توثيق المتغيرات الذي ينشره البنك الدولي أن المتلقين سُئلوا عما إذا كانوا قد تلقوا المال باستخدام حساب مصرفي أو حساب أموال عبر الهاتف المحمول، وأن بعضهم أجاب بنعم. وهذه أعداد غير موزونة من الإجابات، لا تقدير للسكان ولا توزيع موزون بين المتلقين. ولم يُوفَّق بين المؤشر العام وهذه الإجابات بمطابقة التعريفات وشروط التصفية وقواعد الاحتساب والأوزان والنسخة الزمنية؛ فلا يُستنتج تناقض لدى الناشر أو أن حصة قناة ما تساوي صفرًا. ولا ينشر البنك الدولي أي رقم لليمن عن حسابات الأموال عبر الهاتف المحمول، ورقمه للحساب لدى مؤسسة مالية مساوٍ لرقم ملكية الحساب.\nوعلى جانب العرض، تُدرج القائمة الرسمية لعام 2026 الصادرة عن البنك المركزي اليمني – عدن 100 شركة صرافة و231 منشأة صرافة فردية و111 وكيلًا للحوالات. وهذه قيود معدودة بحسب فئات القائمة نفسها، لا عدد لمقدمي خدمات فريدين ولا لمن يعمل منهم حاليًا. وتشمل القائمة الجهات المرخّصة من البنك المركزي اليمني – عدن، ولا تتضمن قاعدة الأدلة هذه قائمة صادرة عن البنك المركزي اليمني في صنعاء، فلا تمثل هذه القيود عددًا لليمن كله. ولا تقبل الأعدادُ الأقدم المقارنةَ بها: إذ تذكر وثيقة تقييم مشروع FMIIP الصادرة عن البنك الدولي (مايو 2025) أن فروع شركات الصرافة ارتفعت من 876 في 2017 إلى 3,244 في 2019، من دون ذكر مصدر، بينما يعرض تقرير للمركز الدولي للنمو (فبراير 2026) الزوج نفسه من الأرقام بوصفه تقديرات للبنك الدولي لعدد الكيانات، بما فيها شركات الصرافة ومؤسسات التمويل الأصغر.\nوفي 26 يونيو 2024 ألزم قرار صادر عن البنك المركزي اليمني – عدن شركات ومنشآت الصرافة ووكلاء الحوالات الخاضعين لرقابته بتنفيذ الحوالات النقدية الداخلية الجديدة حصرًا عبر الشبكة الموحدة للحوالات المالية. وهذا القرار لاحق للعمل الميداني للمسح، ووجود قاعدة لا يدل بذاته على كيفية انتقال الحوالات فعليًا."
+  },
+  {
+   "finding": "CWR-012/S11-M01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 45,
+   "col": 16,
+   "field": "06_EVIDENCE_OBJECTS!R45C16",
+   "old": "Each value is a share of all adults, not of recipients, and does not measure payment volumes, programme outcomes or remittance flows for the economy as a whole. The channels through which money was paid, sent or received are not shown in this table. For domestic remittances the World Bank's database prints zero for receipt into an account, with no recipient or group value. Its published variable documentation for the same wave records that the question was asked and that some recipients answered yes, as unweighted response counts. The two statements cannot both describe the same quantity, so the printed value is not used here and no reason for the difference is offered. The database publishes no cash or money-transfer-operator series. A difference between groups does not establish its cause.",
+   "new": "Each value is a share of all adults, not of recipients, and does not measure payment volumes, programme outcomes or remittance flows for the economy as a whole. The channels through which money was paid, sent or received are not shown in this table. For domestic remittances, this resource holds no verified weighted distribution of receipt channels. The World Bank’s published survey variable documentation records unweighted answers about receiving through an account. They do not establish a population estimate or a weighted distribution among recipients. Reconciliation with the public indicator requires matching definitions, filters, denominators, weights and vintage; no publisher contradiction or zero channel share is inferred. The database publishes no cash or money-transfer-operator series. A difference between groups does not establish its cause."
+  },
+  {
+   "finding": "CWR-012/S11-M01",
+   "sheet": "06_EVIDENCE_OBJECTS",
+   "row": 45,
+   "col": 17,
+   "field": "06_EVIDENCE_OBJECTS!R45C17",
+   "old": "كل قيمة نسبة من جميع البالغين لا من المتلقين، ولا تقيس أحجام المدفوعات ولا نتائج البرامج ولا تدفقات الحوالات على مستوى الاقتصاد ككل. ولا يعرض هذا الجدول القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها الأموال. ففي الحوالات المحلية تطبع قاعدة بيانات البنك الدولي صفرًا لاستلام الأموال في حساب، من دون قيمة للمتلقين أو للفئات. ويُظهر توثيق المتغيرات الذي ينشره البنك للموجة نفسها أن السؤال طُرح وأن بعض المتلقين أجابوا بنعم، في صورة أعداد غير موزونة من الإجابات. ولا يمكن أن يصف البيانان الكمية نفسها، لذلك لا تُستخدم القيمة المطبوعة هنا ولا يُقدَّم أي سبب للاختلاف. ولا تنشر القاعدة أي سلسلة للاستلام نقدًا أو عبر مشغلي تحويل الأموال. والفرق بين الفئات لا يثبت سببه.",
+   "new": "كل قيمة نسبة من جميع البالغين لا من المتلقين، ولا تقيس أحجام المدفوعات ولا نتائج البرامج ولا تدفقات الحوالات على مستوى الاقتصاد ككل. ولا يعرض هذا الجدول القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها الأموال. ولا يحتفظ هذا المورد بتوزيع موزون متحقق منه لقنوات استلام الحوالات المحلية. ويسجل توثيق متغيرات المسح الذي ينشره البنك الدولي إجابات غير موزونة عن الاستلام عبر حساب؛ وهي لا تثبت تقديرًا للسكان ولا توزيعًا موزونًا بين المتلقين. ويتطلب التوفيق بينها وبين المؤشر العام مطابقة التعريفات وشروط التصفية وقواعد الاحتساب والأوزان والنسخة الزمنية؛ فلا يُستنتج تناقض لدى الناشر أو أن حصة قناة ما تساوي صفرًا. ولا تنشر القاعدة أي سلسلة للاستلام نقدًا أو عبر مشغلي تحويل الأموال. والفرق بين الفئات لا يثبت سببه."
+  },
+  {
+   "finding": "CWR-012/S11-M01: visual boundary parity",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 43,
+   "col": 19,
+   "field": "11_VISUAL_LIBRARY!R43C19",
+   "old": "Each value is a share of all adults, not of recipients, and does not measure payment volumes, programme outcomes or remittance flows for the economy as a whole. The channels through which money was paid, sent or received are not shown in this table. For domestic remittances the World Bank's database prints zero for receipt into an account, with no recipient or group value. Its published variable documentation for the same wave records that the question was asked and that some recipients answered yes, as unweighted response counts. The two statements cannot both describe the same quantity, so the printed value is not used here and no reason for the difference is offered. The database publishes no cash or money-transfer-operator series. A difference between groups does not establish its cause.",
+   "new": "Each value is a share of all adults, not of recipients, and does not measure payment volumes, programme outcomes or remittance flows for the economy as a whole. The channels through which money was paid, sent or received are not shown in this table. For domestic remittances, this resource holds no verified weighted distribution of receipt channels. The World Bank’s published survey variable documentation records unweighted answers about receiving through an account. They do not establish a population estimate or a weighted distribution among recipients. Reconciliation with the public indicator requires matching definitions, filters, denominators, weights and vintage; no publisher contradiction or zero channel share is inferred. The database publishes no cash or money-transfer-operator series. A difference between groups does not establish its cause."
+  },
+  {
+   "finding": "CWR-012/S11-M01: visual boundary parity",
+   "sheet": "11_VISUAL_LIBRARY",
+   "row": 43,
+   "col": 20,
+   "field": "11_VISUAL_LIBRARY!R43C20",
+   "old": "كل قيمة نسبة من جميع البالغين لا من المتلقين، ولا تقيس أحجام المدفوعات ولا نتائج البرامج ولا تدفقات الحوالات على مستوى الاقتصاد ككل. ولا يعرض هذا الجدول القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها الأموال. ففي الحوالات المحلية تطبع قاعدة بيانات البنك الدولي صفرًا لاستلام الأموال في حساب، من دون قيمة للمتلقين أو للفئات. ويُظهر توثيق المتغيرات الذي ينشره البنك للموجة نفسها أن السؤال طُرح وأن بعض المتلقين أجابوا بنعم، في صورة أعداد غير موزونة من الإجابات. ولا يمكن أن يصف البيانان الكمية نفسها، لذلك لا تُستخدم القيمة المطبوعة هنا ولا يُقدَّم أي سبب للاختلاف. ولا تنشر القاعدة أي سلسلة للاستلام نقدًا أو عبر مشغلي تحويل الأموال. والفرق بين الفئات لا يثبت سببه.",
+   "new": "كل قيمة نسبة من جميع البالغين لا من المتلقين، ولا تقيس أحجام المدفوعات ولا نتائج البرامج ولا تدفقات الحوالات على مستوى الاقتصاد ككل. ولا يعرض هذا الجدول القنوات التي دُفعت أو أُرسلت أو استُلمت عبرها الأموال. ولا يحتفظ هذا المورد بتوزيع موزون متحقق منه لقنوات استلام الحوالات المحلية. ويسجل توثيق متغيرات المسح الذي ينشره البنك الدولي إجابات غير موزونة عن الاستلام عبر حساب؛ وهي لا تثبت تقديرًا للسكان ولا توزيعًا موزونًا بين المتلقين. ويتطلب التوفيق بينها وبين المؤشر العام مطابقة التعريفات وشروط التصفية وقواعد الاحتساب والأوزان والنسخة الزمنية؛ فلا يُستنتج تناقض لدى الناشر أو أن حصة قناة ما تساوي صفرًا. ولا تنشر القاعدة أي سلسلة للاستلام نقدًا أو عبر مشغلي تحويل الأموال. والفرق بين الفئات لا يثبت سببه."
+  }
+ ]
+}

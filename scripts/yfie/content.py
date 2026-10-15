@@ -276,7 +276,7 @@ class Content:
             "mobile_menu": self.nav.get("mobile_menu") or None,   # owner decisions of 3 October 2026, point 3
             "domains": domains, "domains_under": dom.get("under"),
             # B-b (owner decisions of 9 October 2026; transaction V1B-1): the currentness strip and the Evidence Colophon
-            "currentness": {"line": self.tf("UI-CURRENTNESS-STRIP", lang, date=self.t("UI-EDITION-CHECKED-DATE", lang)),
+            "currentness": {"line": self.t("UI-CURRENTNESS-STRIP", lang),
                             "href": self.href("/corrections/", lang) + "#s3"},
             "colophon": {"heading": self.t("UI-COLOPHON-H", lang), "statement": self.t("UI-COLOPHON-SINGLE-MASTER", lang),
                          "edition_label": self.t("UI-COLOPHON-EDITION", lang), "checked_label": self.t("UI-COLOPHON-CHECKED", lang),
@@ -721,6 +721,8 @@ class Content:
             "summary": (self.accessible_summary.get(vid) or {}).get(f"accessible_summary_{lang}"),
             "period": g.get(f"period_{lang}"), "universe": g.get(f"universe_{lang}"),
             "canonical_href": self.href(g.get("canonical_route"), lang),
+            # A domain location is useful for citation, but is not an Evidence Record.
+            "has_record_destination": str(g.get("canonical_route") or "").startswith(("/evidence/", "/readings/")),
             "detached_caption": v.get(f"detached_caption_{lang}"),
             "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),
             "count_unit": self.t("UI-VIS-UNIT-COUNT", lang),   # G4 item 7: an Arabic count prints in label-value form

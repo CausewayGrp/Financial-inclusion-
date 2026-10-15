@@ -221,6 +221,8 @@ def frame_foot(v: dict, cite_label: str, origin: str | None, open_label: str | N
     # carries none (no self-link); "Full record:" with the path stays in print, export and detached frames
     path = f'<span class="canon-p">{esc(L["full_record"])} <a class="canon" dir="ltr" href="{esc(v["canonical_href"])}">{esc(canon)}</a> ·\u00a0</span>'
     screen = "" if v.get("here") else f'<span class="canon-s"><a class="canon-l" href="{esc(v["canonical_href"])}">{esc(open_label or L["open_record"])}</a> ·\u00a0</span>'
+    if not v.get("has_record_destination"):
+        path = screen = ""
     return (f'<div class="foot"><p class="b"><b>{esc(L["what_not_to_conclude"])}:</b> {iso_run(v["prohibited_inference"])}</p>{credit}'
             f'<p>{path}{screen}<span class="ed">{esc(v.get("edition") or "")}</span>'
             f'<span class="cite-sep"> ·\u00a0<button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></span></p></div>')

@@ -1,0 +1,58 @@
+{
+ "stage": "STAGE-A-FINAL",
+ "staged_master_sha256": "f1dd78e5e926860024cba1d14d6fa426fd20cbe14c1383edcb08366d9e264777",
+ "installed": [],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 306 HTML files from 151 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=19737 unresolved=0 open=0 problems=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 1,
+   "tail": [
+    "║ Please run the following command to download new browsers: ║",
+    "║                                                            ║",
+    "║     playwright install                                     ║",
+    "║                                                            ║",
+    "║ <3 Playwright Team                                         ║",
+    "╚════════════════════════════════════════════════════════════╝"
+   ]
+  }
+ ],
+ "result": "ROLLED_BACK"
+}

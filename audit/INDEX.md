@@ -80,3 +80,5 @@ must not be executed: the current instructions are the repository's `README.md`,
 ## 4. Generated
 
 `PUBLIC_LITERAL_CLOSURE.json` — written by `scripts/audit_public_literals.py` on every build; never edited by hand.
+
+- `stage_a_final/` — prospective Stage A final reconciliation (15 October 2026): exact-value Master transaction, material adjudications, rollback reports, verification and delegated acceptance. It is not rights clearance or public-release approval.
