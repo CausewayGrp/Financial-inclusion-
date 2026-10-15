@@ -1,0 +1,31 @@
+name: Temporary authorized workspace transfer
+
+on:
+  push:
+    branches:
+      - work/privacy-runtime-notice-20261015
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Package exact tracked tree
+        run: |
+          git archive --format=zip --prefix=repo/ -o "$RUNNER_TEMP/repo.zip" HEAD
+          sha256sum "$RUNNER_TEMP/repo.zip" > "$RUNNER_TEMP/repo.zip.sha256"
+      - name: Upload exact tree
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: authorized-workspace-transfer
+          path: |
+            ${{ runner.temp }}/repo.zip
+            ${{ runner.temp }}/repo.zip.sha256
+          retention-days: 1
+          if-no-files-found: error
