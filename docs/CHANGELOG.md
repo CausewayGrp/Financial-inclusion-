@@ -1,5 +1,10 @@
 # Repository Change Log
 
+## 15 October 2026 — Stage A export containment
+
+Suspend the Verify workflow's `yfie-data-exports` upload while retaining its export generation, provenance checks and planted-fault test. Record the 119 existing private artifacts and preservation/access limits in the export-control record. No evidence, deployment or public-download setting changes.
+
+
 ## 2026-10-15 — Reconcile the operational baseline after PR #46
 
 - Record the verified CLOSE-6F and PR #46 merges in the append-only progress log; correct README and checkpoint text

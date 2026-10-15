@@ -105,13 +105,9 @@ jobs:
       - name: Data exports (B14 a; prepared and switched off, every value proved against the projections)
         run: python3 scripts/tests/test_exports.py --out build/exports
 
-      - name: Attach the exports as an artefact (publishing waits on the owner's licence decision)
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: yfie-data-exports
-          path: build/exports/
-          if-no-files-found: error
-          retention-days: 30
+      # Export generation above is verification only. No artifact upload: public_downloads
+      # remains false and third-party redistribution has not been cleared.
+      # See audit/close_out/STAGE_A_EXPORT_CONTROL_2026-10-15.md.
 
       - name: Gates leave the working tree clean
         run: |
