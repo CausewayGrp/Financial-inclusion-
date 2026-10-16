@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 49,
+  "BUILD_AND_GATES": 50,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 289,
@@ -7473,6 +7473,10 @@
   },
   {
    "path": "scripts/tests/test_no_javascript.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_public_path_documentation.py",
    "class": "BUILD_AND_GATES"
   },
   {

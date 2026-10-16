@@ -56,6 +56,9 @@ jobs:
       - name: Agent re-entry fixture tests (read-only Git workflows)
         run: python3 scripts/tests/test_reentry.py
 
+      - name: Public-path documentation matches governed navigation and search
+        run: python3 scripts/tests/test_public_path_documentation.py
+
       - name: Windows and POSIX path identities, deterministic writers, strict parity policy
         run: python3 scripts/tests/test_windows_portability.py
 

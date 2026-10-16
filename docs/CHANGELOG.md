@@ -1,5 +1,12 @@
 # Repository Change Log
 
+## 16 October 2026 — Correct the documented public path
+
+Correct the README and public-path diagram to show all eight governed domains and every current Search result family,
+including dated chronology events that deep-link to their Finance anchors. Add a semantic consistency test, run by the
+existing Verify workflow, that derives the domain routes, Search families, chronology count and Reading count from
+governed projections. No Production Master, public runtime, navigation, content or release state changed.
+
 ## 16 October 2026 — Clarify current programme and hosting-neutral review status
 
 Surgically update README and deployment documentation: Stage A has a bounded dated acceptance while

@@ -140,7 +140,7 @@ If the Master changes, subordinate projections are regenerated. There is no para
 
 ## Public path
 
-Home asks the question. Questions leads to people, firms, banks and microfinance, providers, payments and reforms. Evidence, Readings and Sources carry the record and the publisher. Methodology and Measurement priorities hold method and what should be measured next. Search returns pages, questions, evidence records, Readings, measurement priorities, sources and the dated events of the system chronology. Compare tests comparability before it shows values. About, Corrections, and Rights and reuse hold accountability.
+Home asks the question. Questions lead to the eight governed domains: People, Firms, Banks and microfinance, Providers, Payments, Remittances, Access and Reforms. Evidence, Readings and Sources carry the record and the publisher. Methodology and Measurement priorities hold method and what should be measured next. Search discovers existing pages, questions, Evidence Records, Readings, measurement priorities, source records and source locators, and dated chronology events that deep-link to their anchors on `/finance/`; it does not validate claims. Compare tests comparability before it shows values. About, Corrections, and Rights and reuse hold accountability.
 
 ![Public path](docs/diagrams/public-path.svg)
 
