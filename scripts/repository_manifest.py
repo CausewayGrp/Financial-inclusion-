@@ -74,7 +74,12 @@ RULES = [
                          "audit/naming/ARABIC_HOUSE_STYLE.md"]),   # D11: adopted under the Master terminology register
     ("AUDIT_HISTORY", ["audit/*", "audit/**/*", "docs/*"]),
 ]
-START_PATH = ["README.md", "handoff/README_FIRST.md", "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md"]
+# START_PATH: minimal active entrypoints for recipient tooling and agents. Keep historical handoff content out of the active start path.
+START_PATH = [
+    "README.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+]
 
 
 def sha(p):
@@ -109,9 +114,9 @@ def build():
         ("authority", OrderedDict([("production_master", MASTER), ("production_master_sha256", sha(MASTER)),
                                    ("page_specs", SPECS), ("page_specs_sha256", sha(SPECS)),
                                    ("logo", LOGO), ("logo_sha256", sha(LOGO)),
-                                   ("rule", "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections.")])),
+                                   ("rule", "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is derived from it.")])),
         ("paths", OrderedDict([
-            ("projection", "authority/…Master.xlsx -> scripts/generate_projections.py (scripts/projection/*, contracts: master_structure.json, projection_manifest.json, controlled_inputs/*) -> site-src/content/**"),
+            ("projection", "authority/…Master.xlsx -> scripts/generate_projections.py (scripts/projection/*, contracts: master_structure.json, projection_manifest.json, controlled_inputs/*) -> …"),
             ("runtime", "site-src/content/** + site-src/app.js + site-src/lang-redirect.js + site-src/assets/* + vendor/fonts/** -> scripts/yfie (the one renderer) <- scripts/build.py -> dist/**"),
             ("change", "Master transaction -> audit/tranche_b_execution/run_stage.py (generate, rebind, build, literal audit, diagrams, validate, --check) -> commit"),
             ("recipient_start", START_PATH),
