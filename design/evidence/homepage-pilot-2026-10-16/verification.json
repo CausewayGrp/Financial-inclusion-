@@ -295,7 +295,173 @@
     "image_readable_fixture": "PASS: nginx/1.24.0; 306 pages, 3190 responses, 0 problems",
     "local_pinned_binary": "PASS: 306 pages, 3194 responses, missing-X-Frame-Options negative control caught"
   },
-  "negative_controls": "Pending complete rerun after repository manifest regeneration",
-  "checksums_and_manifest": "Pending final regenerated checks",
-  "ci": "Pending homepage PR exact-head Verify"
+  "negative_controls": "Complete suite launched locally in four independent copies; clean baseline passes. Final complete exact-head result is recorded in PR #51 Verify (six shards), not inferred from partial local progress.",
+  "checksums_and_manifest": "PASS: 2283 tracked files at review checkpoint; regenerate after final evidence update.",
+  "ci": "Exact final-head Verify result is recorded in PR #51 after the final commit; no self-referential commit hash is embedded in this file.",
+  "extra_acceptance": [
+    {
+      "lang": "ar",
+      "print_disclosures": "pass",
+      "200_percent_text_menu_reflow": "pass"
+    },
+    {
+      "lang": "ar",
+      "route": "explore",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "explore",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "people",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "people",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "evidence/CLM-001",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "evidence/CLM-001",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "readings/same-year-different-number",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "readings/same-year-different-number",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "about",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "ar",
+      "route": "about",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "print_disclosures": "pass",
+      "200_percent_text_menu_reflow": "pass"
+    },
+    {
+      "lang": "en",
+      "route": "explore",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "explore",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "people",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "people",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "evidence/CLM-001",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "evidence/CLM-001",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "readings/same-year-different-number",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "readings/same-year-different-number",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "about",
+      "width": 390,
+      "baseline_pixels_identical": true
+    },
+    {
+      "lang": "en",
+      "route": "about",
+      "width": 1440,
+      "baseline_pixels_identical": true
+    }
+  ],
+  "extra_acceptance_command": "/workspace/scratch/yfie-venv/bin/python /workspace/scratch/homepage-proof/final_extra.py",
+  "extra_acceptance_conditions": "Print PDF and disclosure visibility; 200% root text size/menu at 320px; forced-colour captures; 20 first-viewport pixel comparisons in fresh browser contexts with fonts/images decoded. PDFs retained only in scratch.",
+  "prior_failed_attempts": [
+    {
+      "check": "RC-1115",
+      "cause": "Nested bdi isolation interrupted the gate-protected literal emphasis structure",
+      "disposition": "Scoped CSS direction:ltr;unicode-bidi:isolate; validator passed"
+    },
+    {
+      "check": "New Home acceptance",
+      "cause": "Test expected section-container hash to open a child disclosure; existing runtime reveals ancestor disclosures only",
+      "disposition": "Assert visible section summary and keyboard expansion; separately assert existing #system deep link auto-reveals"
+    },
+    {
+      "check": "Full negative-control clean copy",
+      "cause": "New proof/test files were not yet classified in the manifest",
+      "disposition": "Regenerated/staged manifest and checksums before complete rerun"
+    },
+    {
+      "check": "F6-G07",
+      "cause": "Generated print proof PDF was staged under design/evidence; repository forbids bundled documents",
+      "disposition": "Removed only the newly generated artifact from the PR; preserved PDF privately in scratch; validator passed"
+    },
+    {
+      "check": "Pinned nginx image",
+      "cause": "Private 0600 workspace fixture caused HTTP403",
+      "disposition": "Generated a separate identical base-path build and normalized only its temporary file permissions; image and local header checks passed"
+    },
+    {
+      "check": "Unchanged-family screenshot comparison",
+      "cause": "Reused browser page after print/forced-colour emulation intermittently omitted cached logo pixels",
+      "disposition": "Used fresh browser contexts and decoded images for both sides; all 20 comparisons passed"
+    }
+  ]
 }
