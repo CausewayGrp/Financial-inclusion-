@@ -227,11 +227,14 @@ The bullets below document the **former D0–D7 programme only** and grant no cu
 Recommended settings below are **not activated by this document**. A repository administrator must
 configure them in GitHub and independently verify enforcement; a passing CI run alone does not prevent direct pushes.
 
-- **Ruleset on `main`:** block force pushes and deletion; require linear history, pull requests, independent review,
+- **Ruleset on `main`:** block force pushes and deletion; require pull requests, independent review,
   and the three final Verify status checks: `Governance gates`, `Browser acceptance` and **`Gate negative controls`**
   (the aggregate job that fails if any of the six negative-control shards fails or is skipped unexpectedly).
   Apply the same ordinary PR requirement to stewards and all AI agents; no standing agent/provider bypass. Use an
   explicit owner-controlled break-glass process only if necessary and document any exceptional action.
+  **Do not blindly require linear history or force squash/rebase merges.** PR #49's accepted Stage A integration
+  is a normal two-parent merge commit; preserve the governed normal-merge/parentage and decision-record process
+  unless an independently authorized migration explicitly changes it.
 - **Ruleset on tags `checkpoint/*`:** block updates and deletion, so every reviewed state stays addressable.
 - **Actions:** allow only actions created by GitHub; default workflow token read-only (the checkpoint job requests write for
   itself).
