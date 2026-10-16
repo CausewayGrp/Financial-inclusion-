@@ -25,11 +25,11 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 50,
+  "BUILD_AND_GATES": 51,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 289,
-  "DESIGN_PACKAGE": 447,
+  "DESIGN_PACKAGE": 478,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
@@ -4340,6 +4340,130 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/evidence/homepage-pilot-2026-10-16/README.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/ar-1440-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/ar-1440-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/ar-390-CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/ar-390-CLM-003.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/ar-390-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/ar-390-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/en-1440-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/en-1440-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/en-390-CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/en-390-CLM-003.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/en-390-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/en-390-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/after/metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/ar-1440-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/ar-1440-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/ar-390-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/ar-390-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/en-1440-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/en-1440-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/en-390-full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/en-390-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/before/metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/capture.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/homepage-acceptance.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/reconciled/ar-1440-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/reconciled/ar-390-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/reconciled/en-1440-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/reconciled/en-390-viewport.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/reconciled/journeys.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/homepage-pilot-2026-10-16/verification.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -7465,6 +7589,10 @@
   },
   {
    "path": "scripts/tests/test_gate_negative_controls.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_homepage_editorial.py",
    "class": "BUILD_AND_GATES"
   },
   {

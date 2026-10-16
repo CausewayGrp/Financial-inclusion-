@@ -1,5 +1,9 @@
 # Repository Change Log
 
+## 16 October 2026 — Homepage editorial presentation pilot
+
+Compose the Arabic and English homepage as an evidence-led editorial gateway in the existing Python renderer. Keep the controlled proposition, three observations, mandatory boundary, questions, progressive depth and verification routes. Surface complete relevant boundary sentences from the bound records; add the existing domain links within the starting-question section. Scope typography, rules, numeric isolation and institutional close to Home. Add focused browser acceptance and before/after proof under `design/evidence/homepage-pilot-2026-10-16/`. This is a separate PR-only pilot; general Stage B and publication remain unauthorized.
+
 ## 16 October 2026 — Correct the documented public path
 
 Correct the README and public-path diagram to show all eight governed domains and every current Search result family,

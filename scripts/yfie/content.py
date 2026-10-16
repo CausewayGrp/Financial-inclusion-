@@ -901,7 +901,7 @@ class Content:
                        "scope": L("UI-DOM-SCOPE-AND-TIME"), "boundary": L("UI-DOM-WHAT-NOT-TO-CONCLUDE"),
                        "period": L("UI-EVID-WHEN-WAS-IT-MEASURED-OR"), "applies": L("UI-EVID-WHO-OR-WHAT-DOES-IT"),
                        "does_not_establish": self.grammar_labels["UI-VIS-DOES-NOT-ESTABLISH"][lang],
-                       "gaps_heading": L("UI-RELATED-MEASUREMENT"), "gaps_note": L("UI-HOME-GAPS-NOTE")},
+                       "gaps_heading": L("UI-RELATED-MEASUREMENT"), "gaps_note": L("UI-HOME-GAPS-NOTE"), "go_deeper": L("UI-EXPLORE-GO-DEEPER")},
         }
 
     # ------------------------------------------------------------------------------------------------ shared (D2)
