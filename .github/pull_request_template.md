@@ -1,33 +1,42 @@
-## Pull request template
+## What and why
 
-Use this template for PRs. Keep the scope narrow and the handover concise.
+<!-- The demonstrated problem, and what becomes more truthful, understandable, verifiable or usable. -->
 
-### Summary
+## Owner layer
 
-(One-paragraph summary of the change)
+<!-- Tick one. Content, evidence, source, rights and status changes belong to the Master. -->
+- [ ] Production Master (transaction through `audit/tranche_b_execution/run_stage.py`)
+- [ ] Generator or build code (`scripts/`)
+- [ ] Runtime (`site-src/app.js`, `scripts/yfie/theme.py`)
+- [ ] Handoff or Design package (`handoff/`, `design/`)
+- [ ] Repository, CI or documentation only
 
-### Scope and authorization
+## Master transaction (if any)
 
-(What this PR is authorized to change; reference an explicit directive or owner decision where required.)
+| Field | Value |
+|---|---|
+| Transaction | <!-- e.g. TC-J --> |
+| Master before → after | <!-- first 12 hex of each --> |
+| Run report | <!-- audit/…/runs/…_RUN_REPORT.json --> |
+| Findings closed | <!-- ledger IDs --> |
 
-### Handover (for recoverable or incomplete work)
+## Checks
 
-- Authorized task / scope:
-- Base commit (sha):
-- Head commit (sha):
-- Completed work:
-- Pending work and known limitations:
-- Tests actually run and their results (CI link if available):
-- Conflicts or unresolved dependencies:
-- Next permitted action:
-- Owner decisions still required:
+- [ ] No projection under `site-src/content/`, no file in `dist/` and no audit closure was edited by hand.
+- [ ] English and Arabic changed together; numbers, units, periods and limits are the same in both editions.
+- [ ] `python3 scripts/checksums.py` was run and `SHA256SUMS.txt` is committed with the change.
+- [ ] `docs/CHANGELOG.md` has an entry; README, checkpoint and Context agree if the programme state changed.
+- [ ] No new public number without a bound, source-traced record; no source named without a public locator.
+- [ ] Nothing declares DESIGN HANDOFF READY or PUBLIC RELEASE READY outside the R8.6 Definition of Done.
 
-### Files changed
+## Cross-agent handover (required)
 
-(Short list of key files changed)
-
-### Checklist
-
-- [ ] I have not altered the Production Master or governed artifacts.
-- [ ] I have preserved bilingual and source-reference boundaries.
-- [ ] Tests and checks were run or explicitly marked unrun in the Handover section above.
+- Authorized task and scope:
+- Base/head SHA and working branch:
+- Completed files or commits:
+- Outstanding implementation and blockers:
+- Tests **actually run** with pass/fail and run links (not inferred):
+- Unknown or unavailable checks:
+- Conflicts with other branches / PRs:
+- Next safe action:
+- Outstanding owner decisions:

@@ -164,7 +164,9 @@ reserved for the close of R8.6 and is used only after its Definition of Done is 
 
 Every session, whoever runs it:
 
-1. **Start.** `git fetch origin` and work from `origin/main` (or your branch rebased on it). Run
+1. **Start.** Before branch operations, inspect live/cached refs and task baseline with `python3 scripts/reentry.py --pr`
+   (optionally `--base SHA` for resumed work). Preserve dirty work; investigate any UNKNOWN rather than guessing.
+   Then `git fetch origin` and work from `origin/main` (or an authorized branch). Run
    `python3 scripts/checksums.py --check` and the validator before the first change. If the state differs from what you
    were told to expect, diagnose first; never restore an older state because a document names an older hash.
 2. **Work** in atomic sessions (§3, §4).

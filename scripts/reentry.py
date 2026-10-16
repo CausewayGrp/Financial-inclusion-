@@ -1,191 +1,185 @@
-"""Lightweight repository re-entry inspection tool.
+#!/usr/bin/env python3
+"""Read-only Git re-entry report for humans and AI agents.
 
-Provides a read-only view useful for an agent or human returning to the repository: local HEAD and branch,
-working-tree cleanliness, remote-main reference (where available), basic divergence/ancestor checks (best-effort),
-and a short recommended next action.
-
-Usage:
-  python3 scripts/reentry.py
-  python3 scripts/reentry.py --json
-  python3 scripts/reentry.py --base <commit-sha>
-  python3 scripts/reentry.py --offline
-
-Technical constraints:
- - Does not run 'git fetch' or change refs.
- - Uses 'git ls-remote' with a short timeout to read remote heads when network access is available.
- - Explicitly reports UNKNOWN for information that cannot be determined safely.
+Run from anywhere: python3 scripts/reentry.py [--json] [--offline] [--base SHA] [--pr]
+For synthetic tests: --repo PATH. Never fetches, checks out, changes refs or writes files.
+Repository information is separate from the Production Master's programme authority.
 """
 from __future__ import annotations
+
 import argparse
 import json
+import os
+import re
 import shutil
 import subprocess
 import sys
-import textwrap
-from datetime import datetime
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+GUIDANCE = ("README.md", "AGENTS.md", "CONTRIBUTING.md",
+            "authority/CORE_CONSTITUTION.md", "authority/YFI_CURRENT_PROJECT_CONTEXT.json",
+            "audit/close_out/STAGE_B_DESIGN_CHARTER.md")
+_SHA = re.compile(r"[0-9a-fA-F]{7,64}\Z")
 
 
-def run(cmd, timeout=5):
+def git(repo: Path, *args: str, timeout: int = 5) -> tuple[int | None, str]:
+    """Return status/stdout; no stderr disclosure (remote errors can contain credentials)."""
+    env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never", GIT_OPTIONAL_LOCKS="0")
     try:
-        p = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False, timeout=timeout, text=True)
-        return p.returncode, p.stdout.strip(), p.stderr.strip()
-    except (subprocess.SubprocessError, FileNotFoundError) as e:
-        return 127, "", str(e)
+        p = subprocess.run(["git", *args], cwd=repo, env=env, capture_output=True,
+                           encoding="utf-8", errors="replace", timeout=timeout, check=False)
+        return p.returncode, p.stdout.strip()
+    except (OSError, subprocess.TimeoutExpired):
+        return None, ""
 
 
-def in_git_repo():
-    rc, out, err = run(["git", "rev-parse", "--git-dir"])
-    return rc == 0
+def commit(repo: Path, rev: str) -> str | None:
+    code, out = git(repo, "rev-parse", "--verify", f"{rev}^{{commit}}")
+    return out if code == 0 and _SHA.fullmatch(out) else None
 
 
-def git_head():
-    rc, out, err = run(["git", "rev-parse", "HEAD"])
-    if rc != 0:
-        return None
-    return out
+def comparison(repo: Path, older: str | None, current: str | None) -> dict:
+    result: dict = {"state": "UNKNOWN", "ahead": None, "behind": None, "changed_files": []}
+    if not older or not current:
+        return result
+    code, counts = git(repo, "rev-list", "--left-right", "--count", f"{older}...{current}")
+    if code != 0:
+        return result
+    try:
+        behind, ahead = map(int, counts.split())
+    except (TypeError, ValueError):
+        return result
+    result.update(ahead=ahead, behind=behind,
+                  state="IDENTICAL" if ahead == behind == 0 else
+                        "AHEAD" if behind == 0 else "BEHIND" if ahead == 0 else "DIVERGED")
+    # Use two tips, not a triple-dot diff; suppress rename guessing so both paths survive.
+    code, changed = git(repo, "diff", "--no-renames", "--name-only", "--no-ext-diff", older, current)
+    if code == 0:
+        result["changed_files"] = changed.splitlines() if changed else []
+    return result
 
 
-def git_branch():
-    rc, out, err = run(["git", "symbolic-ref", "--quiet", "--short", "HEAD"])
-    if rc != 0:
-        # Detached or unknown
-        rc2, out2, err2 = run(["git", "describe", "--all", "--exact-match", "HEAD"])
-        return out2 or "(detached)"
-    return out
+def pr_info(repo: Path, offline: bool, enabled: bool) -> dict:
+    if offline or not enabled:
+        return {"state": "NOT_CHECKED", "reason": "offline" if offline else "use --pr to query GitHub CLI"}
+    if shutil.which("gh") is None:
+        return {"state": "UNKNOWN", "reason": "GitHub CLI unavailable"}
+    try:
+        p = subprocess.run(["gh", "pr", "view", "--json", "number,url,state,isDraft,mergedAt,headRefOid,statusCheckRollup"],
+                           cwd=repo, capture_output=True, text=True, timeout=8, check=False,
+                           env=dict(os.environ, GH_PROMPT_DISABLED="1", GIT_TERMINAL_PROMPT="0"))
+        if p.returncode:
+            return {"state": "UNKNOWN", "reason": "No accessible PR or GitHub authentication unavailable"}
+        obj = json.loads(p.stdout)
+        checks = obj.get("statusCheckRollup") or []
+        return {"state": obj.get("state") or "UNKNOWN", "number": obj.get("number"),
+                "url": obj.get("url"), "draft": obj.get("isDraft"),
+                "merged_at": obj.get("mergedAt"), "head_sha": obj.get("headRefOid"),
+                "checks": [{"name": x.get("name") or x.get("context"),
+                            "result": x.get("conclusion") or x.get("state") or "UNKNOWN"} for x in checks]}
+    except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError, TypeError):
+        return {"state": "UNKNOWN", "reason": "GitHub PR lookup failed"}
 
 
-def git_status_porcelain():
-    rc, out, err = run(["git", "status", "--porcelain"])
-    if rc != 0:
-        return "UNKNOWN"
-    return out
-
-
-def remote_main_sha(remote_name="origin", branch_name="main"):
-    # Use git ls-remote to read remote refs without fetching.
-    rc, out, err = run(["git", "ls-remote", remote_name, f"refs/heads/{branch_name}"], timeout=8)
-    if rc != 0 or not out:
-        return None
-    return out.split()[0]
-
-
-def local_has_object(sha):
-    if not sha:
-        return False
-    rc, out, err = run(["git", "cat-file", "-t", sha])
-    return rc == 0
-
-
-def is_ancestor(ancestor, descendant):
-    if not ancestor or not descendant:
-        return None
-    # git merge-base --is-ancestor returns 0 if ancestor is ancestor of descendant
-    rc, out, err = run(["git", "merge-base", "--is-ancestor", ancestor, descendant])
-    if rc == 0:
-        return True
-    if rc == 1:
-        return False
-    return None
-
-
-def recommended_next_action(state):
-    # Simple heuristic
-    if not state.get("in_git_repo"):
-        return "Start from a clone of origin/main and run scripts/reentry.py there."
-    if state.get("dirty"):
-        return "Stash or commit local changes before attempting branch operations."
-    remote_sha = state.get("remote_main_sha")
-    head = state.get("local_head")
-    if remote_sha is None:
-        return "Remote main unreachable; check network or credentials."
-    if remote_sha == head:
-        return "Working on an up-to-date main; create an isolated branch for changes."
-    # If remote is unknown locally
-    if not state.get("remote_known_locally"):
-        return "Remote main commit not present locally; fetch or inspect PRs before assuming ancestry."
-    # Diverged
-    return "Branch and remote differ; examine merge-base and consider rebase or merge per project policy."
-
-
-def build_state(args):
-    state = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
-        "in_git_repo": False,
-        "local_head": None,
-        "branch": None,
-        "dirty": None,
-        "remote_main_sha": None,
-        "remote_known_locally": None,
-        "head_is_ancestor_of_remote": None,
-        "remote_is_ancestor_of_head": None,
-        "notes": [],
-    }
-    if not shutil.which("git"):
-        state["notes"].append("git not available in PATH")
-        return state
-    if not in_git_repo():
-        state["notes"].append("not a git repository")
-        return state
-    state["in_git_repo"] = True
-    state["local_head"] = git_head()
-    state["branch"] = git_branch()
-    status = git_status_porcelain()
-    state["dirty"] = bool(status) and status != "UNKNOWN"
-    if args.base:
-        state["provided_base"] = args.base
-    # Remote inspection unless offline
-    if not args.offline:
-        sha = remote_main_sha()
-        state["remote_main_sha"] = sha
-        if sha:
-            state["remote_known_locally"] = local_has_object(sha)
-            if state["remote_known_locally"] and state["local_head"]:
-                state["head_is_ancestor_of_remote"] = is_ancestor(state["local_head"], sha)
-                state["remote_is_ancestor_of_head"] = is_ancestor(sha, state["local_head"])
+def inspect(repo: Path, *, base: str | None = None, offline: bool = False, check_pr: bool = False) -> dict:
+    info: dict = {"schema": "YFIE_REENTRY/1.0", "observed_at": datetime.now(timezone.utc).isoformat(),
+                  "repository": "UNKNOWN", "branch": "UNKNOWN", "head": None,
+                  "worktree": "UNKNOWN", "remote_main": {"sha": None, "source": "UNKNOWN"},
+                  "base": {"requested": base, "resolved": None, "comparison": None},
+                  "main_comparison": None, "pr": {"state": "NOT_CHECKED"},
+                  "guidance": list(GUIDANCE), "authority_status": "NOT_ASSESSED", "next_action": "UNKNOWN"}
+    if shutil.which("git") is None:
+        info["next_action"] = "Git unavailable: use a repository-connected environment."
+        return info
+    c, inside = git(repo, "rev-parse", "--show-toplevel")
+    if c != 0:
+        info["repository"] = "NOT_A_GIT_REPOSITORY"
+        info["next_action"] = "Select a Git checkout before inspecting task state."
+        return info
+    info["repository"] = "GIT"
+    c, head = git(repo, "rev-parse", "--verify", "HEAD")
+    if c == 0 and _SHA.fullmatch(head):
+        info["head"] = head
+    c, branch = git(repo, "symbolic-ref", "--quiet", "--short", "HEAD")
+    if c == 0:
+        info["branch"] = branch
+    elif c == 1 and info["head"]:
+        info["branch"] = "DETACHED"
+    c, status = git(repo, "status", "--porcelain=v1", "--untracked-files=normal")
+    if c == 0:
+        info["worktree"] = "DIRTY" if status else "CLEAN"
+    if base is not None:
+        if _SHA.fullmatch(base):
+            resolved = commit(repo, base)
+            info["base"]["resolved"] = resolved
+            info["base"]["comparison"] = comparison(repo, resolved, info["head"])
         else:
-            state["notes"].append("remote main not readable via ls-remote; credentials or network may be required")
+            info["base"]["comparison"] = {"state": "INVALID_BASE"}
+    if offline:
+        cached = commit(repo, "refs/remotes/origin/main")
+        info["remote_main"] = {"sha": cached, "source": "CACHED_UNVERIFIED" if cached else "UNKNOWN_OFFLINE"}
     else:
-        state["notes"].append("offline mode: remote checks skipped")
-    state["next_step"] = recommended_next_action(state)
-    return state
+        rc, value = git(repo, "ls-remote", "--heads", "origin", "refs/heads/main", timeout=6)
+        sha = value.split()[0] if rc == 0 and value else None
+        if sha and _SHA.fullmatch(sha):
+            info["remote_main"] = {"sha": sha, "source": "LIVE_REMOTE"}
+        else:
+            cached = commit(repo, "refs/remotes/origin/main")
+            info["remote_main"] = {"sha": cached, "source": "CACHED_UNVERIFIED" if cached else "UNKNOWN"}
+    live_or_cached = info["remote_main"]["sha"]
+    if live_or_cached:
+        known = commit(repo, live_or_cached)
+        info["main_comparison"] = comparison(repo, known, info["head"])
+        if not known:
+            info["main_comparison"]["reason"] = "Remote commit object unavailable locally; explicit fetch required."
+    info["pr"] = pr_info(repo, offline=offline, enabled=check_pr)
+    if info["worktree"] == "UNKNOWN":
+        info["next_action"] = "Git status unknown: stop before modifying branch or worktree."
+    elif info["worktree"] == "DIRTY":
+        info["next_action"] = "Preserve and inspect uncommitted changes; never stash or reset automatically."
+    elif info["branch"] in ("DETACHED", "UNKNOWN"):
+        info["next_action"] = "HEAD is detached or branch unknown: inspect and select an authorized branch before writing."
+    elif base is not None and info["base"]["comparison"]["state"] in ("INVALID_BASE", "UNKNOWN"):
+        info["next_action"] = "Verify task baseline or fetch missing Git objects; do not infer completed work."
+    elif info["remote_main"]["source"] != "LIVE_REMOTE":
+        info["next_action"] = "Main is cached/unverified: confirm live GitHub state before modifying this branch."
+    elif info["main_comparison"] is None or info["main_comparison"]["state"] == "UNKNOWN":
+        info["next_action"] = "Explicitly fetch missing Git objects before assuming branch state."
+    elif info["main_comparison"]["state"] == "IDENTICAL":
+        info["next_action"] = "No branch difference against inspected main; check PR and task scope before editing."
+    elif info["main_comparison"]["state"] == "BEHIND":
+        info["next_action"] = "Main advanced; inspect changes and reconcile before writing."
+    elif info["main_comparison"]["state"] == "AHEAD":
+        info["next_action"] = "Local commits are ahead of inspected main; inspect existing PR/CI before continuing."
+    else:
+        info["next_action"] = "Branch diverged; compare with main and resolve deliberately before changes."
+    return info
 
 
-def main(argv=None):
-    p = argparse.ArgumentParser(description="Repository re-entry inspection tool: read-only checks to resume work safely.")
-    p.add_argument("--json", action="store_true", help="Output machine-readable JSON")
-    p.add_argument("--base", help="A baseline commit SHA to compare against (no fetch)")
-    p.add_argument("--offline", action="store_true", help="Skip remote checks (safe for offline use)")
-    args = p.parse_args(argv)
-    state = build_state(args)
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repo", type=Path, default=ROOT, help="Git checkout (primarily for fixture testing)")
+    parser.add_argument("--json", action="store_true", help="Machine-readable JSON")
+    parser.add_argument("--base", help="Explicit prior task commit SHA; never guessed")
+    parser.add_argument("--offline", action="store_true", help="Skip all network access")
+    parser.add_argument("--pr", action="store_true", help="Query PR and checks using GitHub CLI if connected")
+    args = parser.parse_args(argv)
+    info = inspect(args.repo.resolve(), base=args.base, offline=args.offline, check_pr=args.pr)
     if args.json:
-        print(json.dumps(state, ensure_ascii=False, indent=2))
-        return
-    # Human-readable summary
-    lines = []
-    lines.append(f"Timestamp: {state['timestamp']}")
-    if not state.get("in_git_repo"):
-        lines.append("Repository: NOT A GIT REPOSITORY (or git not available)")
-        lines.extend(state.get("notes", []))
-        print("\n".join(lines))
-        return
-    lines.append(f"Local HEAD: {state.get('local_head') or 'UNKNOWN'}")
-    lines.append(f"Branch: {state.get('branch') or 'UNKNOWN'}")
-    lines.append(f"Working tree: {'dirty' if state.get('dirty') else 'clean'}")
-    if 'remote_main_sha' in state:
-        lines.append(f"Remote main (ls-remote): {state.get('remote_main_sha') or 'UNREADABLE'}")
-        if state.get('remote_main_sha') and not state.get('remote_known_locally'):
-            lines.append("Note: remote main SHA not present locally; ancestry cannot be confirmed without fetch")
-        if state.get('head_is_ancestor_of_remote') is True:
-            lines.append("Ancestry: local HEAD is an ancestor of remote main (likely behind)")
-        elif state.get('remote_is_ancestor_of_head') is True:
-            lines.append("Ancestry: remote main is an ancestor of local HEAD (local commits ahead)")
-    if state.get('notes'):
-        lines.append("Notes:")
-        lines.extend(" - " + n for n in state.get('notes'))
-    lines.append("")
-    lines.append("Next safe action: %s" % state.get('next_step'))
-    print("\n".join(lines))
+        print(json.dumps(info, ensure_ascii=False, indent=2, sort_keys=True))
+    else:
+        print(f"Repository: {info['repository']} | Branch: {info['branch']} | HEAD: {info['head'] or 'UNKNOWN'}")
+        print(f"Worktree: {info['worktree']} | main: {info['remote_main']['sha'] or 'UNKNOWN'} ({info['remote_main']['source']})")
+        if info['base']['comparison']:
+            print(f"Task baseline: {info['base']['comparison']['state']} | ahead={info['base']['comparison'].get('ahead')} behind={info['base']['comparison'].get('behind')}")
+        if info['main_comparison']:
+            print(f"Against inspected main: {info['main_comparison']['state']} | changed files: {len(info['main_comparison']['changed_files'])}")
+        print(f"PR: {info['pr']['state']} | Next: {info['next_action']}")
+        print("Programme/owner authorization: NOT_ASSESSED — consult Master, Context and dated decisions.")
+    return 0 if info["repository"] == "GIT" and info["head"] is not None else 2
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    sys.exit(main())

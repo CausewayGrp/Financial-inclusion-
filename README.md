@@ -12,6 +12,23 @@ The public path is understand, then explore, then verify. Arabic and English are
 
 CauseWay stewards the synthesis, the derivation and the corrections process. CauseWay is not the regulator, the official statistical authority, or the publisher of third-party evidence.
 
+## For developers and AI agents: start or resume here
+
+This repository uses one governed Production Master, not interchangeable handoff ZIPs or prompts.
+Read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md), then inspect your checkout with
+`python3 scripts/reentry.py --base <previous-task-sha> --pr` (omit `--base` if unknown; use `--offline` if necessary).
+This tool reports **Git repository state, not programme or owner authorization**. Unknown status stays UNKNOWN.
+
+The [Core Constitution](authority/CORE_CONSTITUTION.md) states durable principles.
+The [Current Project Context](authority/YFI_CURRENT_PROJECT_CONTEXT.json) is a validated subordinate projection of
+the sole [Production Master](authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx).
+Stage A **content acceptance**, within its stated scope, is recorded by the
+[acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) and the
+[dated decision on merged PR #49](https://github.com/CausewayGrp/Financial-inclusion-/pull/49#issuecomment-6192247588).
+Stage B remains **BLOCKED** pending a prospective owner charter decision and separate entry authorization
+([entry charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md)); D19–D22 original approvals remain unverified.
+There is no Stage C or public production-release authorization.
+
 ## What it is, and what it is not
 
 It is a decision resource for reading financial inclusion evidence. It is not a dashboard, a regulator, an official statistical authority, a general financial-system observatory, a provider directory, a reform tracker, a research blog, or a CauseWay marketing site. Broader financial-system context appears only where it changes the reading of inclusion evidence.

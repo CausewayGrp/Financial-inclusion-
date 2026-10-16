@@ -53,6 +53,9 @@ jobs:
       - name: Generator unit tests
         run: python3 -m unittest discover -s scripts/projection/tests -t .
 
+      - name: Agent re-entry fixture tests (read-only Git workflows)
+        run: python3 scripts/tests/test_reentry.py
+
       - name: Windows and POSIX path identities, deterministic writers, strict parity policy
         run: python3 scripts/tests/test_windows_portability.py
 
