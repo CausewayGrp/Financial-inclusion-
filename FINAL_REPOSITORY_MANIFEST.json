@@ -16,8 +16,8 @@
   "change": "Master transaction -> audit/tranche_b_execution/run_stage.py (generate, rebind, build, literal audit, diagrams, validate, --check) -> commit",
   "recipient_start": [
    "README.md",
-   "handoff/README_FIRST.md",
-   "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md"
+   "AGENTS.md",
+   "CONTRIBUTING.md"
   ]
  },
  "class_counts": {
@@ -25,7 +25,7 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 47,
+  "BUILD_AND_GATES": 50,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 289,
@@ -7412,6 +7412,10 @@
    "class": "PROJECTION_GENERATOR"
   },
   {
+   "path": "scripts/reentry.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/repository_manifest.py",
    "class": "BUILD_AND_GATES"
   },
@@ -7472,7 +7476,15 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/tests/test_public_path_documentation.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/tests/test_public_tools.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_reentry.py",
    "class": "BUILD_AND_GATES"
   },
   {
