@@ -1,0 +1,104 @@
+name: Verify (full)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *' # nightly run (UTC)
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: verify-full
+  cancel-in-progress: true
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-cache-full-${{ runner.os }}-${{ hashFiles('**/requirements.txt') }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+  build-and-generate:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore pip cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-cache-full-${{ runner.os }}-${{ hashFiles('**/requirements.txt') }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run full generator
+        run: |
+          python3 scripts/generate_projections.py || exit 1
+
+      - name: Build site (integration)
+        run: |
+          python3 scripts/build_site.py || exit 1
+
+  browser-acceptance:
+    needs: build-and-generate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-cache-full-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install Playwright and browsers
+        run: |
+          pip install playwright pytest-playwright
+          npx playwright install --with-deps
+
+      - name: Run full browser acceptance tests (sharded)
+        run: |
+          pytest -q tests/browser -n auto || exit 1
+
+  artifacts:
+    needs: [browser-acceptance]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload full run artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-full-failure-$GITHUB_RUN_ID
+          path: |
+            tests/reports
+            playwright-report
+            dist || true
+
+      - name: Upload baseline artifacts (success)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-full-success-$GITHUB_RUN_ID
+          path: |
+            tests/reports || true
