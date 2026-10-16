@@ -143,6 +143,9 @@ jobs:
       - name: Public tools (Search, Compare, Cite, menu, skip link, live regions)
         run: python3 scripts/tests/test_public_tools.py
 
+      - name: Homepage editorial gateway (governed copy, reading order, routes and keyboard access)
+        run: python3 scripts/tests/test_homepage_editorial.py
+
       - name: Stage A domain figures retain evidence and real navigation (EN/AR, mobile/desktop)
         run: python3 scripts/tests/test_stage_a_reconciliation.py
 

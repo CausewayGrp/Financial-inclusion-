@@ -64,7 +64,7 @@ def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str 
             f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(title)} — {esc(shell["product"])}</title>'
             f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}{lic_link}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(title, page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
-            f"{structured_data(page, shell, route)}</head><body>")
+            f'{structured_data(page, shell, route)}</head><body{" class=home-editorial" if route == "/" else ""}>')
 
 
 def licence_line(shell: dict) -> str:
@@ -401,9 +401,23 @@ def home(page: dict, shell: dict) -> str:
     recs = list(page["records"])
     demo = []
     for res, html_ in paced_groups(S[3]["body"]):
-        demo.append(fig_emph(html_))
         if recs and not res:
-            demo.append(compact(recs.pop(0), L, L["open_evidence_record"], cls="compact bound"))
+            rec = recs.pop(0)
+            # Keep each observation and its already-bound qualification in one reading unit.
+            # Use complete verbatim boundary sentences, without extracted metrics or new source relationships.
+            # Show only complete, verbatim boundary sentences relevant to this observation.
+            # The detailed account-definition and source-discrepancy discussion stays in the
+            # linked record. The homepage's own section-3 copy and section-4 boundary stay whole.
+            sentence_count = {"CLM-001": 1, "CLM-002": 1, "CLM-003": 2}[rec["id"]]
+            limit_text = " ".join(SENT.split(rec["does_not_establish"])[:sentence_count])
+            finding = fig_emph(html_)
+            limit = (f'<div class="home-limit"><h3>{esc(L["does_not_establish"])}</h3>'
+                     f'<p>{esc(limit_text)}</p></div>') if limit_text else ""
+            demo.append(f'<div class="home-observation" data-home-record="{esc(rec["id"])}">'
+                        f'<div class="home-finding">{finding}{limit}</div>'
+                        f'{compact(rec, L, L["open_evidence_record"], cls="compact bound")}</div>')
+        else:
+            demo.append(fig_emph(html_))
     def h2(sec):   # governed kicker (role) above the governed heading
         return (f'<span class="rubric">{esc(sec["role"])}</span>' if sec.get("role") else "") + f'<h2>{esc(sec["heading"])}</h2>'
     parts.append(f'<section class="qa first" id="s3"><div>{h2(S[3])}</div><div class="paced">{"".join(demo)}</div></section>')
@@ -412,7 +426,17 @@ def home(page: dict, shell: dict) -> str:
     parts.append(f'<section class="bnd" id="s4">{rubric(S[4]["role"])}<h2>{esc(S[4]["heading"])}</h2><div class="mt8">{paras(S[4]["paragraphs"])}</div></section>')
     # the governed instruction and the section's body read as one paragraph (three restatements in a row, D3 test)
     qs = "".join(f'<li><div><div class="q"><a href="{q["href"]}">{esc(q["question"])}</a></div><div class="gets small">{esc(q["gets"])}</div></div></li>' for q in page["starting_questions"])
-    parts.append(f'<section class="qa" id="s9"><div><span class="rubric">{esc(L["questions_eyebrow"])}</span><h2>{esc(S[9]["heading"])}</h2></div><div><p class="body"><b>{esc(L["questions_title"])}.</b> {esc(S[9]["body"])}</p><ol class="qlist">{qs}</ol><p class="small mt12"><a href="{page["hrefs"]["explore"]}">{esc(L["view_all"])}</a></p></div></section>')
+    # Contextual entrances reuse the same domain labels and order as the governed shell.
+    # Pairs are spacing units only: no parent categories or analytical relationships.
+    domains = shell["domains"]
+    pairs = "".join('<div class="home-domain-pair">' + "".join(
+        f'<a href="{d["href"]}">{esc(d["label"])}</a>' for d in domains[i:i + 2]) + '</div>'
+        for i in range(0, len(domains), 2))
+    domain_nav = (f'<nav class="home-domains" aria-labelledby="home-domains-title">'
+                  f'<h3 id="home-domains-title">{esc(L["go_deeper"])}</h3><div class="home-domain-grid">{pairs}</div></nav>')
+    # Secondary contextual links belong to the existing question-entry section, not a new
+    # controlled homepage section or navigation taxonomy.
+    parts.append(f'<section class="qa" id="s9"><div><span class="rubric">{esc(L["questions_eyebrow"])}</span><h2>{esc(S[9]["heading"])}</h2></div><div><p class="body"><b>{esc(L["questions_title"])}.</b> {esc(S[9]["body"])}</p><ol class="qlist">{qs}</ol><p class="small mt12"><a href="{page["hrefs"]["explore"]}">{esc(L["view_all"])}</a></p>{domain_nav}</div></section>')
     def section(o: int, id_: str, head_html: str, body_html: str) -> str:
         # Owner decision B-a (9 October 2026; presentation contract, orientation_routes): a progressive section is a
         # named disclosure; its summary holds the section's own governed kicker and heading (headings are allowed in a
@@ -440,10 +464,10 @@ def home(page: dict, shell: dict) -> str:
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
-    parts.insert(2, strip(index))   # the phone's in-page navigation after the first figure group; the foot spine keeps only the edges (DEBT-014)
+    parts.insert(3, strip(index))   # Read the mandatory boundary before the in-page navigation, at every width.
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
-    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
+    body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges, foot=True, foot_index=False)}'
     return head(page, shell, "/") + header(shell) + body + footer(shell, print_foot(shell, "/", page["title"]))
 
 

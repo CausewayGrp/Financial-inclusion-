@@ -1,0 +1,301 @@
+{
+  "browser": "Chromium 154.0.8037.57 (Debian)",
+  "python": "3.12; pinned requirements installed in scratch venv",
+  "base_sha": "19384b273720da2622223c265f3c985431e4baa4",
+  "local_governance_initial": [
+    {
+      "command": "python3 scripts/generate_projections.py --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 1.5,
+      "log": "governance-00.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s scripts/projection/tests -t .",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 5.1,
+      "log": "governance-01.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_windows_portability.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.3,
+      "log": "governance-02.log"
+    },
+    {
+      "command": "python3 scripts/build.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 1.7,
+      "log": "governance-03.log"
+    },
+    {
+      "command": "python3 scripts/audit_public_literals.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 3.6,
+      "log": "governance-04.log"
+    },
+    {
+      "command": "python3 scripts/validate.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "seconds": 48.8,
+      "log": "governance-05.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_literal_audit_determinism.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 18.2,
+      "log": "governance-06.log"
+    },
+    {
+      "command": "python3 audit/pre_tranche_c/source_lineage_truth_test.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.0,
+      "log": "governance-07.log"
+    },
+    {
+      "command": "python3 scripts/architecture_diagrams.py --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.1,
+      "log": "governance-08.log"
+    },
+    {
+      "command": "python3 scripts/social_images.py --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.4,
+      "log": "governance-09.log"
+    },
+    {
+      "command": "python3 scripts/logo_derivatives.py --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 3.8,
+      "log": "governance-10.log"
+    },
+    {
+      "command": "python3 audit/tranche_c/checks/bilingual_invariance.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 3.7,
+      "log": "governance-11.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_content_parity.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 2.7,
+      "log": "governance-12.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_cutover_parity.py",
+      "exit_code": 2,
+      "status": "PINNED",
+      "seconds": 1.1,
+      "log": "governance-13.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_exports.py --out /workspace/scratch/homepage-proof/exports",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.2,
+      "log": "governance-14.log"
+    }
+  ],
+  "local_browser": [
+    {
+      "command": "python3 scripts/tests/test_public_tools.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 48.0,
+      "log": "browser-00.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_stage_a_reconciliation.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 22.7,
+      "log": "browser-01.log"
+    },
+    {
+      "command": "python3 audit/tranche_c/checks/viewport_acceptance.py /workspace/scratch/homepage-proof/viewport-acceptance.json",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 15.7,
+      "log": "browser-02.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_security_headers.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 12.6,
+      "log": "browser-03.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_base_path.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 14.7,
+      "log": "browser-04.log"
+    },
+    {
+      "command": "python3 scripts/tests/test_no_javascript.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 6.6,
+      "log": "browser-05.log"
+    }
+  ],
+  "focused_homepage": [
+    {
+      "lang": "ar",
+      "width": 320,
+      "status": "pass"
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "status": "pass"
+    },
+    {
+      "lang": "ar",
+      "width": 768,
+      "status": "pass"
+    },
+    {
+      "lang": "ar",
+      "width": 1024,
+      "status": "pass"
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "status": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 320,
+      "status": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "status": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "status": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 1024,
+      "status": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "status": "pass"
+    }
+  ],
+  "accessibility_summary": {
+    "pages_audited": 24,
+    "routes": 12,
+    "every_route": false,
+    "widths": [
+      1440,
+      390
+    ],
+    "languages": [
+      "en",
+      "ar"
+    ],
+    "axe_rules_violated": 0,
+    "axe_wcag_violations": [],
+    "targets_measured": 4694,
+    "targets_under_24px": 32,
+    "targets_under_24px_meeting_the_inline_exception": 29,
+    "targets_under_24px_meeting_the_spacing_exception": 3,
+    "targets_under_24px_meeting_no_exception": 0,
+    "targets_meeting_no_exception": [],
+    "smallest_targets": [
+      [
+        49,
+        22,
+        "a",
+        "الأدلة"
+      ],
+      [
+        59,
+        18,
+        "a",
+        "CC BY 4.0"
+      ],
+      [
+        64,
+        22,
+        "a",
+        "CC BY 4.0"
+      ],
+      [
+        74,
+        18,
+        "a",
+        "Evidence"
+      ],
+      [
+        74,
+        18,
+        "a",
+        "Readings"
+      ],
+      [
+        112,
+        22,
+        "a",
+        "القراءات التحليلية"
+      ],
+      [
+        194,
+        22,
+        "a",
+        "office@causewaygrp.com"
+      ],
+      [
+        307,
+        22,
+        "a",
+        "A current people-side inclusio"
+      ]
+    ],
+    "interactive_without_a_name": 0,
+    "landmarks_without_a_name": 0,
+    "controls_without_a_label": 0,
+    "duplicate_landmark_names": [],
+    "pages_with_more_than_one_h1": [],
+    "heading_level_jumps": {},
+    "images_without_alt": 0,
+    "contrast_failures": [],
+    "elements_wider_than_the_viewport": {}
+  },
+  "gate_correction": {
+    "initial": "RC-1115 failure from nested isolation markup",
+    "resolution": "Scoped direction:ltr and unicode-bidi:isolate preserve emphasis markup",
+    "validator_rerun": "PASS; 306 HTML documents, 0 errors, 0 warnings"
+  },
+  "nginx": {
+    "image_initial": "FAIL: 403 from private workspace fixture permissions",
+    "image_readable_fixture": "PASS: nginx/1.24.0; 306 pages, 3190 responses, 0 problems",
+    "local_pinned_binary": "PASS: 306 pages, 3194 responses, missing-X-Frame-Options negative control caught"
+  },
+  "negative_controls": "Pending complete rerun after repository manifest regeneration",
+  "checksums_and_manifest": "Pending final regenerated checks",
+  "ci": "Pending homepage PR exact-head Verify"
+}
