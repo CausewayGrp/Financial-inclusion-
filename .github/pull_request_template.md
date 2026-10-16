@@ -7,7 +7,7 @@
 <!-- Tick one. Content, evidence, source, rights and status changes belong to the Master. -->
 - [ ] Production Master (transaction through `audit/tranche_b_execution/run_stage.py`)
 - [ ] Generator or build code (`scripts/`)
-- [ ] Runtime (`site-src/app.js`, `site-src/styles.css`)
+- [ ] Runtime (`site-src/app.js`, `scripts/yfie/theme.py`)
 - [ ] Handoff or Design package (`handoff/`, `design/`)
 - [ ] Repository, CI or documentation only
 
@@ -28,3 +28,15 @@
 - [ ] `docs/CHANGELOG.md` has an entry; README, checkpoint and Context agree if the programme state changed.
 - [ ] No new public number without a bound, source-traced record; no source named without a public locator.
 - [ ] Nothing declares DESIGN HANDOFF READY or PUBLIC RELEASE READY outside the R8.6 Definition of Done.
+
+## Cross-agent handover (required)
+
+- Authorized task and scope:
+- Base/head SHA and working branch:
+- Completed files or commits:
+- Outstanding implementation and blockers:
+- Tests **actually run** with pass/fail and run links (not inferred):
+- Unknown or unavailable checks:
+- Conflicts with other branches / PRs:
+- Next safe action:
+- Outstanding owner decisions:

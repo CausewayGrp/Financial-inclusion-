@@ -49,8 +49,8 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
   | `tx/<id>-<slug>` | A Master transaction or a set of them, e.g. `tx/tc-j-openai-corrections` |
   | `review/<reviewer>-<slug>` | Intake of an external review or package, e.g. `review/reading-package` |
   | `r8.5/<slug>`, `r8.6/<slug>` | Programme stages |
-  | `design/<gate>-<slug>` | Claude Design gates D0–D7 |
-  | `code/<slug>` | Claude Code implementation after the Design package is accepted |
+  | `pr/<slug>` | Provider-neutral isolated, reviewable work; use a draft PR for incomplete work |
+  | `design/<gate>-<slug>`, `code/<slug>` | Historical D0–D7 branch conventions, not Stage B authorization |
 
   The Master is a binary file and cannot be merged. When two branches both change it, the later one is **replayed**: its
   transaction scripts run again on the new `main` (they are exact-value-guarded, so a conflict fails loudly instead of
@@ -164,24 +164,35 @@ reserved for the close of R8.6 and is used only after its Definition of Done is 
 
 Every session, whoever runs it:
 
-1. **Start.** `git fetch origin` and work from `origin/main` (or your branch rebased on it). Run
+1. **Start.** Before branch operations, inspect live/cached refs and task baseline with `python3 scripts/reentry.py --pr`
+   (optionally `--base SHA` for resumed work). Preserve dirty work; investigate any UNKNOWN rather than guessing.
+   Then `git fetch origin` and work from `origin/main` (or an authorized branch). Run
    `python3 scripts/checksums.py --check` and the validator before the first change. If the state differs from what you
    were told to expect, diagnose first; never restore an older state because a document names an older hash.
 2. **Work** in atomic sessions (§3, §4).
 3. **Finish.** Gates green, `SHA256SUMS.txt` regenerated, changelog entry, commit, `git push`. For a state that leaves
    the repository (a review package, a Design handoff) push a checkpoint tag as well.
 
-External inputs (a reviewer's findings, a Reading package, a Design package) enter on a `review/` or `design/` branch and
-land through the same gates. Drive copies are lineage only (`EXTERNAL_REPOSITORY_SYNC_PENDING`); they are never
+External inputs (review findings, authorized research or design packages) enter on a scoped isolated branch and
+land through the same gates. A branch name never grants Stage B entry or publication authority. Drive copies are lineage only (`EXTERNAL_REPOSITORY_SYNC_PENDING`); they are never
 updated from here and never treated as current.
 
-## 8. Claude Design and Claude Code
+## 8. Historical Claude Design/Code programme — not active instructions
 
-`handoff/` is superseded (10 October 2026, owner decision D7). Do not execute any prompt in it. Design changes follow
-`design/DESIGN_INTEGRATION_V2.md` (created in W4 of the close-out brief) and the gates. Gate R86-G01 keeps the superseded
-status in agreement across `handoff/README_FIRST.md`, the two prompts, `README.md`, the checkpoint, the Context and the
-handoff manifest, and fails if the start file claims the old handoff status again. The bullets below are the rules of the
-former Design programme (D0–D7), kept as history.
+`handoff/` was superseded (10 October 2026, owner decision D7). Do not execute its prompts.
+The former reference `design/DESIGN_INTEGRATION_V2.md` **does not exist** in the present repository; do not
+treat it as the current design authority or create it simply to satisfy a historical pointer.
+Gate R86-G01 protects the superseded-handoff state across README, checkpoint, Context and old handoff records.
+
+**Current prospective boundary:** Stage A's bounded content acceptance is recorded on PR #49;
+Stage B remains **BLOCKED** under `audit/close_out/STAGE_B_DESIGN_CHARTER.md` (SB-01, missing original
+D19–D22 authority and separate owner entry authorization). A design agent must not begin Stage B merely by
+reading W4 of `audit/close_out/BRIEF.md`. When explicitly authorized, W4/G1 preserves valuable criteria,
+**not an exhaustive list of three allowable designs**. Better alternatives, hybrids, homepage and navigation
+improvements are welcome to challenge through user-value evidence and independent review; material strategic
+direction changes require prospective owner acceptance before broad adoption.
+
+The bullets below document the **former D0–D7 programme only** and grant no current provider-specific authority.
 
 - **The `design/` package** is classified `DESIGN_PACKAGE` by `scripts/repository_manifest.py` (the diagrams under
   `design/architecture/` stay `GENERATED_DIAGRAMS`); regenerate the manifest and checksums with every design commit.
@@ -213,10 +224,17 @@ former Design programme (D0–D7), kept as history.
 
 ## 10. Repository settings (administrators)
 
-Recommended settings, applied once in GitHub:
+Recommended settings below are **not activated by this document**. A repository administrator must
+configure them in GitHub and independently verify enforcement; a passing CI run alone does not prevent direct pushes.
 
-- **Ruleset on `main`:** block force pushes and deletion; require linear history; require the status checks
-  `Governance gates` and `Browser acceptance`; require pull requests for everyone except the named steward session.
+- **Ruleset on `main`:** block force pushes and deletion; require pull requests, independent review,
+  and the three final Verify status checks: `Governance gates`, `Browser acceptance` and **`Gate negative controls`**
+  (the aggregate job that fails if any of the six negative-control shards fails or is skipped unexpectedly).
+  Apply the same ordinary PR requirement to stewards and all AI agents; no standing agent/provider bypass. Use an
+  explicit owner-controlled break-glass process only if necessary and document any exceptional action.
+  **Do not blindly require linear history or force squash/rebase merges.** PR #49's accepted Stage A integration
+  is a normal two-parent merge commit; preserve the governed normal-merge/parentage and decision-record process
+  unless an independently authorized migration explicitly changes it.
 - **Ruleset on tags `checkpoint/*`:** block updates and deletion, so every reviewed state stays addressable.
 - **Actions:** allow only actions created by GitHub; default workflow token read-only (the checkpoint job requests write for
   itself).

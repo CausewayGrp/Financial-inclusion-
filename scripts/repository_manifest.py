@@ -43,7 +43,7 @@ RULES = [
     # scripts/build.py drives it into dist/; design/reference/ builds *through* it and holds no renderer of its own.
     ("PRODUCTION_RENDERER", ["scripts/yfie/*.py"]),
     ("BUILD_AND_GATES", ["scripts/build.py", "scripts/validate.py", "scripts/audit_public_literals.py",
-                         "scripts/architecture_diagrams.py", "scripts/checksums.py", "scripts/repository_manifest.py", "scripts/discovery.py", "scripts/base_path.py",
+                         "scripts/architecture_diagrams.py", "scripts/reentry.py", "scripts/checksums.py", "scripts/repository_manifest.py", "scripts/discovery.py", "scripts/base_path.py",
                          "scripts/handoff_inventory.py", "scripts/social_images.py", "scripts/logo_derivatives.py", "scripts/hosting_nginx.py", "scripts/do_deploy.py", "scripts/accessibility_audit.py",
                          "scripts/exports.py", "scripts/performance_budget.py", "scripts/currentness_rerun.py", "scripts/findex_api_snapshot.py",
                          "scripts/literal_audit_allowances.json", "scripts/literal_audit_open_traces.json", "scripts/search_canonical_probe.json", "scripts/tests/*",
@@ -74,7 +74,12 @@ RULES = [
                          "audit/naming/ARABIC_HOUSE_STYLE.md"]),   # D11: adopted under the Master terminology register
     ("AUDIT_HISTORY", ["audit/*", "audit/**/*", "docs/*"]),
 ]
-START_PATH = ["README.md", "handoff/README_FIRST.md", "handoff/CLAUDE_DESIGN_MASTER_PROMPT.md"]
+# START_PATH: minimal active entrypoints for recipient tooling and agents. Keep historical handoff content out of the active start path.
+START_PATH = [
+    "README.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+]
 
 
 def sha(p):
