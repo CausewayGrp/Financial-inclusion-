@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 16 October 2026 — Clarify current programme and hosting-neutral review status
+
+Surgically update README and deployment documentation: Stage A has a bounded dated acceptance while
+Stage B remains blocked; the earlier close-out programme is not current authorization. Distinguish the
+committed 306-HTML review build, unverified temporary Cloudflare preview and inactive future DigitalOcean
+production route. Correct obsolete 292/288 and eleven-Reading counts in deployment guidance.
+No hosting credentials, workflow, public content, Production Master or owner-release state changed.
+
 ## 16 October 2026 — Provider-neutral agent re-entry
 
 Repair the active README/AGENTS/CONTRIBUTING entrypoints while preserving sole Production Master authority,

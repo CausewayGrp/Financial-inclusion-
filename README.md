@@ -60,9 +60,9 @@ External facts stay attributed to their original publishers. CauseWay attributio
 
 | | |
 |---|---|
-| **Position** | **DESIGN HANDOFF SUPERSEDED** (10 October 2026): design is executed in this repository under the close-out brief (`audit/close_out/BRIEF.md`, W4); `handoff/` is historical reference |
+| **Position** | **DESIGN HANDOFF SUPERSEDED** (10 October 2026). `handoff/` is historical. The earlier W4 close-out design brief is a quality/reference baseline, **not** active authorization to enter Stage B; see the [prospective Stage B charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md). |
 | Non-design v1 product | Complete |
-| Current phase | Close-out (`audit/close_out/BRIEF.md`, version 5): evidence and Arabic (Stage A), structure and design (Stage B), governance and acceptance (Stage C); hosting last. Progress: `audit/close_out/PROGRESS.md` |
+| Current phase | **Stage A content accepted within its dated 15 October 2026 scope; Stage B BLOCKED** pending prospective charter approval and a separate owner entry decision (SB-01). Stage C and public production release are not authorized. The earlier close-out brief is historical programme lineage, not an active command to implement all stages. Current engineering/PR status must be checked on GitHub. |
 | Post-v1, owner decision | C1 typed difference block; C2 dedicated guarantee route; C3 public contradiction index |
 | Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
@@ -77,16 +77,21 @@ Not closed, and not claimed: design integration; integrated Arabic and English, 
 
 Remaining path: non-design v1 complete, then design / presentation integration, then final integrated QA, then release / cutover, then owner release approval. Release-time steps live in [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md). Open items live in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md). The content-pass ledger is [`audit/final_content/FINAL_CONTENT_LOG.md`](audit/final_content/FINAL_CONTENT_LOG.md).
 
-## Release readiness (post-PR #46)
+## Release boundary — production not authorized
 
-The Verify run on PR #46's merged commit `e46ff9eb` passed all nine jobs; its subsequent Cloudflare Workers build also
-succeeded. Cloudflare serves a pre-release preview, not the approved DigitalOcean production release. **Public release
-is not declared**; production hosting, the public origin and downloads remain under their existing owner controls.
-What still stands between this repository and an approved production release, each with its owner:
+PR #46's Verify and the subsequent Cloudflare Workers build passed **at that time**; that is historical
+verification, not evidence of the current temporary preview's live state. Cloudflare Workers has been used for a
+**temporary pre-release preview**; its external GitHub build status is not the Production Master's semantic authority,
+a substitute for Verify, or permission to release. The intended DigitalOcean production route is **inactive** and is
+not a present development or billing prerequisite. Do not provision, activate, or deploy either host under ordinary
+evidence/design work. The committed `dist/` is the review build, **not proof of a current live deployment**.
+
+**No public production release has been authorized**; the future release gates remain under owner control.
+The following are deferred release prerequisites, not instructions to incur hosting costs now:
 
 | Blocker | Owner | Where |
 |---|---|---|
-| Hosting: the DigitalOcean account, the App Platform app and container registry, the deploy token and repository variables, the corporate proxy route, the public origin | CauseWay (owner), then Claude Code deploys | [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14 |
+| Hosting (future release only, not required for present review): DigitalOcean account, approved app/registry/token/variables, corporate proxy route and public origin | CauseWay (owner), then authorized deploy operator | [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14 |
 | Data downloads stay off (`public_downloads: false`), a separate owner decision. The CC BY 4.0 text itself is confirmed by the owner (10 October 2026, RIGHTS-FINAL), so `licence_text_confirmed` is `true` and no longer blocks a deploy | Owner | runbook steps 2 and 7a |
 | Seven sources that need a person with a browser | A person | [`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §3 |
 | A phone check of the live site from Yemen, in Arabic | A person in Yemen | handover §4 |
