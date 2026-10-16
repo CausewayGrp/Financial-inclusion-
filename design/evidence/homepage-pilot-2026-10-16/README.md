@@ -69,3 +69,13 @@ Initial failures are retained in the verification record: nested isolation marku
 The architecture-diagram check reports CURRENT, but its renderer reads the existing full-stack SVG as input. That historical self-reference/assumption discrepancy remains a separate architecture-truth task; this check is not asserted to validate those architectural claims. No diagram file or generator was changed.
 
 No controlled-contract amendment is required by the final composition. Owner visual/merge review remains pending. No WCAG certification, native-language certification, human testing, public-release readiness, merge or deployment is claimed.
+
+## Integration with main after PR #50 — 17 October 2026
+
+`main` advanced by the normal merge of PR #50 at `274583df616a38d516b2d0f78178167235b7f755`. This branch integrates that history with a merge commit, not a rebase. Both lines are kept: the homepage renderer and this proof, and the re-entry tool, public-path correction, and their tests. The manifest and checksums were regenerated (2,292 tracked files at the merge). No Production Master, projection, navigation contract, or publication flag changed. The homepage composition was not replaced.
+
+The opening already on this branch remains the selected composition. Against the previous homepage it keeps the proposition, the three observations in their original order, and the mandatory boundary, and it places each observation’s relevant verbatim limit, period, universe, and record link in one unit. Question routes stay in section 9; the eight governed domain links sit under them, using existing labels and order. A second opening was not built.
+
+Fresh local Chromium checks on the integrated tree: `scripts/tests/test_homepage_editorial.py` passed 10/10 widths plus the no-JavaScript fallback. The four reader paths pass in Arabic and English: account ownership and its 2022/2023 survey coverage; POS growth distinguished from users; the People question to `/people/`; and CLM-001 to three original World Bank locators and back to People. Screenshots of this tree’s first viewports are in [reconciled/](reconciled/). Print keeps the observations, limits, and questions; the domain grid is hidden with the other navigation chrome. That is a print limitation, not a screen failure.
+
+Bilingual reading of the governed homepage sentences found no material defect that could be corrected without rewriting controlled copy. Figures, periods, universes, and limits were left verbatim. No native-language certification is claimed.

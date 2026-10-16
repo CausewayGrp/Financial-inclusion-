@@ -27,7 +27,7 @@
   "AUTHORITY_RULES": 1,
   "BUILD_AND_GATES": 51,
   "CONTROLLED_CONTRACT": 2,
-  "CURRENT_DOCUMENT": 15,
+  "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 289,
   "DESIGN_PACKAGE": 473,
   "GENERATED_DIAGRAMS": 9,
@@ -41,7 +41,7 @@
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
-  "REPOSITORY_ENGINEERING": 13,
+  "REPOSITORY_ENGINEERING": 11,
   "RUNTIME_SOURCE": 7,
   "STANDING_POLICY": 6,
   "VENDORED_FONTS": 27
@@ -98,14 +98,6 @@
   {
    "path": "README.md",
    "class": "CURRENT_DOCUMENT"
-  },
-  {
-   "path": "SHA256SUMS.txt",
-   "class": "REPOSITORY_ENGINEERING"
-  },
-  {
-   "path": "SHA256SUMS.txt",
-   "class": "REPOSITORY_ENGINEERING"
   },
   {
    "path": "SHA256SUMS.txt",
@@ -7121,14 +7113,6 @@
   },
   {
    "path": "docs/ACCESSIBILITY_AUDIT.md",
-   "class": "CURRENT_DOCUMENT"
-  },
-  {
-   "path": "docs/CHANGELOG.md",
-   "class": "CURRENT_DOCUMENT"
-  },
-  {
-   "path": "docs/CHANGELOG.md",
    "class": "CURRENT_DOCUMENT"
   },
   {

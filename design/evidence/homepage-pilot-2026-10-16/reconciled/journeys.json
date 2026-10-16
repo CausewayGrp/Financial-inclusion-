@@ -1,0 +1,52 @@
+{
+  "head_parent_merge": "2ca3afec4e628d88e9c829501d7dac64a396a2f0",
+  "browser": "Playwright Chromium 141.0.7390.37",
+  "homepage_editorial": "10/10 widths plus static no-JavaScript fallback",
+  "journeys": [
+    {
+      "task": "account ownership and survey coverage",
+      "result": "pass",
+      "both": "Home CLM-001 states it is not a 2026 rate; record period is World Bank reporting year 2022, Global Findex 2021, fieldwork November 2022–January 2023; universe adults 15+ in survey coverage."
+    },
+    {
+      "task": "payment infrastructure is not active users",
+      "result": "pass",
+      "both": "Home CLM-003 limit states terminal growth is not an inclusion rate and does not show merchant adoption or unique users; domain link opens /payments/."
+    },
+    {
+      "task": "domain and its question",
+      "result": "pass",
+      "both": "First starting question opens /people/ in both languages."
+    },
+    {
+      "task": "record, original publisher, return",
+      "result": "pass",
+      "detail": [
+        {
+          "lang": "en",
+          "locators": 3,
+          "publisher": [
+            "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+            "https://www.worldbank.org/en/publication/globalfindex/download-data",
+            "https://microdata.worldbank.org/catalog/5862"
+          ],
+          "people_return": 2,
+          "url": "http://127.0.0.1:41429/en/evidence/CLM-001/"
+        },
+        {
+          "lang": "ar",
+          "locators": 3,
+          "publisher": [
+            "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=YE",
+            "https://www.worldbank.org/en/publication/globalfindex/download-data",
+            "https://microdata.worldbank.org/catalog/5862"
+          ],
+          "people_return": 2,
+          "url": "http://127.0.0.1:41429/ar/evidence/CLM-001/"
+        }
+      ]
+    }
+  ],
+  "print": "Questions and observation limits remain visible. The domain grid is hidden in print, consistent with the existing rule that hides masthead navigation. Screen and no-JavaScript pages keep the eight domain links.",
+  "not_claimed": "No participant usability result, WCAG certification, native-language certification, or release readiness."
+}
