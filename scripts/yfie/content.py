@@ -273,6 +273,9 @@ class Content:
                 # RC-15 (B15 d, C-2; OWN-04): the short citation is copied by default; the long form stays beside it
                 "cite_long": self.t("UI-CITE-LONG-FORM", lang), "copy_long": self.t("UI-JS-COPY-LONG-CITATION", lang),
                 "share_record": self.t("UI-JS-SHARE-RECORD", lang),   # RC-15 (B15 e, U1)
+                # OD-1017-04(a) (B2 T): the citation format control beside the preview (plain text, APA 7, Chicago, BibTeX, RIS)
+                "cite_format": self.t("UI-CITE-FORMAT", lang),
+                "cite_formats": [(k, self.t(f"UI-CITE-FORMAT-{k.upper()}", lang)) for k in ("plain", "apa", "chicago", "bibtex", "ris")],
                 "copied": self.t("UI-HEADER-COPIED", lang),
                 "lang_switch_name": self.t("UI-LANG-SWITCH-NAME", other), "lang_switch_action": self.t("UI-LANG-SWITCH-ACTION", other),
                 "footer_strapline": self.t("UI-FOOTER-STRAPLINE", lang), "footer_rights": self.t("UI-FOOTER-PUBLISHED-EVIDENCE-REMAINS-ATTRIBUTED-TO", lang),
@@ -541,7 +544,7 @@ class Content:
             "visual": self.visual(oid, lang) if oid in self.visual_contracts else None,   # a VIS- record is its visual's canonical route (brief §12)
             "hrefs": {"evidence": self.href("/evidence/", lang), "data": self.href("/data/", lang), "methodology": self.href("/methodology/", lang),
                       "rights": self.href("/rights/", lang), "corrections": f"/{lang}/corrections/?record={quote(oid)}",
-                      "report": f"/{lang}/contact/?record={quote(oid)}"},
+                      "report": f"/{lang}/contact/?record={quote(oid)}#report"},   # B2 T: the structured form
             "labels": {
                 "family": L("UI-EVID-EVIDENCE-RECORD"), "establishes": L("UI-EVID-WHAT-DOES-THIS-EVIDENCE-ESTABLISH"), "scope": L("UI-DOM-SCOPE-AND-TIME"),
                 "measures": L("UI-EVID-WHAT-DOES-IT-MEASURE"), "applies": L("UI-EVID-WHO-OR-WHAT-DOES-IT"),
@@ -735,8 +738,11 @@ class Content:
             "has_record_destination": str(g.get("canonical_route") or "").startswith(("/evidence/", "/readings/")),
             "detached_caption": v.get(f"detached_caption_{lang}"),
             "lang": lang, "edition": self.t("UI-CONTENT-VERSION", lang),
+            # B2 T (BRIEF W4 T): every figure carries "Report an error", opening the form pre-filled with its record and figure
+            "report_href": f"/{lang}/contact/?record={quote(vid)}&figure={quote(vid)}#report",
             "count_unit": self.t("UI-VIS-UNIT-COUNT", lang),   # G4 item 7: an Arabic count prints in label-value form
             "labels": {"does_not_establish": lab("UI-VIS-DOES-NOT-ESTABLISH"), "source": lab("UI-VIS-SOURCE"), "full_record": lab("UI-VIS-FULL-RECORD"), "open_record": self.t("UI-EVID-OPEN-EVIDENCE-RECORD", lang),
+                       "report": self.t("UI-EVID-REPORT-AN-ISSUE", lang),   # B2 T
                        "same_year_revision": lab("UI-VIS-SAME-YEAR-REVISION"), "not_comparable": lab("UI-VIS-NOT-COMPARABLE"),
                        "reported": lab("UI-VIS-STATE-REPORTED"), "derived": lab("UI-VIS-STATE-DERIVED"), "unknown": lab("UI-VIS-STATE-UNKNOWN"),
                        "issuer_scope": lab("UI-VIS-ISSUER-SCOPE"),
@@ -1193,7 +1199,7 @@ class Content:
                 "next": self.journey_next("/evidence/compare/", lang),
                 "labels": {**self.common_labels(lang), "title": L("UI-COMPARE-CAN-THESE-RECORDS-ACTUALLY-BE"), "intro": L("UI-COMPARE-START-WITH-COMPARISON-LEGITIMACY-NOT"),
                            "first": L("UI-COMPARE-FIRST-RECORD"), "second": L("UI-COMPARE-SECOND-RECORD"), "third": L("UI-COMPARE-THIRD-RECORD-OPTIONAL"), "fourth": L("UI-COMPARE-FOURTH-RECORD-OPTIONAL"),
-                           "optional": L("UI-COMPARE-OPTIONAL-RECORD"), "never": L("UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED"), "copy_link": L("UI-COMPARE-COPY-LINK-TO-THIS-COMPARISON"),
+                           "optional": L("UI-COMPARE-OPTIONAL-RECORD"), "never": L("UI-COMPARE-NO-AUTO-AVERAGE-NO-PREFERRED"), "copy_link": L("UI-COMPARE-COPY-LINK-TO-THIS-COMPARISON"), "copy_summary": L("UI-COMPARE-COPY-SUMMARY"),
                            "do_not": L("UI-DOM-DO-NOT-INFER")}}
 
     # ------------------------------------------------------------------------------------------------ data & source
@@ -1345,7 +1351,30 @@ class Content:
                               "open": L("UI-ORIGIN-OPEN-THE-CURRENT-PUBLIC-RECORD"), "malformed": L("UI-ORIGIN-THE-RECORD-REFERENCE-IN-THIS"), "unknown": L("UI-ORIGIN-THIS-LINK-NAMES-A-REFERENCE"),
                               "title": L("UI-CORR-CURRENT-RECORD-AND-CORRECTION-PATH"), "intro": L("UI-CORR-THIS-RESOURCE-DOES-NOT-MANUFACTURE"), "empty": L("UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO"),
                               "write": L("UI-CONTACT-WRITE-TO-US-ABOUT-THIS"), "address": self.contact_address(), "subject": f'{self.t("UI-PRODUCT-NAME", "en")} — {L("UI-SOURCE-REFERENCE")}'}
+            if rt == "/contact":   # B2 T (BRIEF W4 T): the structured report-an-error form, its labels governed in 04
+                form = {k: L("UI-REPORT-" + k.upper().replace("_", "-")) for k in
+                        ("intro", "required_note", "url", "record", "anchor", "lang", "edition", "value", "type", "should", "evidence",
+                         "name", "email", "consent", "send", "copy", "reference", "nojs", "nojs_link")}
+                form["types"] = [(k, L(f"UI-REPORT-TYPE-{k.upper()}")) for k in ("number", "date", "source", "scope", "translation", "accessibility", "other")]
+                form["title"] = L("UI-HEADER-REPORT-AN-ISSUE")
+                form["privacy_href"] = self.href("/privacy/", lang)
+                form["edition_value"] = self.t("UI-CONTENT-VERSION", lang)
+                form["product"] = self.t("UI-PRODUCT-NAME", "en")
+                form["subject"] = f'{form["product"]} — {self.t("UI-JS-REPORT-SUBJECT", "en").replace("{ref}", "").strip()}'
+                out["context"]["form"] = form
+            if rt == "/corrections":   # B2 T: the process document, linked from the public corrections page
+                out["context"]["process"] = {"label": L("UI-CORR-PROCESS-LINK"), "href": self.repository_doc_href("docs/CORRECTIONS_PROCESS.md")}
         return out
+
+    def repository_doc_href(self, path: str) -> str:
+        """The public repository's address for a committed document (the repository is named in authority/AUTHORITY.json)."""
+        import json as _json
+        auth = _json.loads((Path(__file__).resolve().parents[2] / "authority" / "AUTHORITY.json").read_text(encoding="utf-8"))
+        cr = auth.get("canonical_repository") or {}
+        url, branch = str(cr.get("url") or "").rstrip("/"), str(cr.get("default_branch") or "main")
+        if not url:
+            raise ValueError("authority/AUTHORITY.json canonical_repository names no url")
+        return f"{url}/blob/{branch}/{path}"
 
     def not_found(self) -> dict:
         def L(k, lang):

@@ -33,6 +33,9 @@ Evidence files: `design/evidence/v2/g0/` (metrics, scoreboard, visual audit, scr
 | DL-V2-005 | 2026-10-17 | S13 scope: dates are shown in words in prose, clocks, record lines, lists and figure notes, with the ISO value kept in `<time datetime>`; a data table's period keys (2019-07, 2024) stay as the source publishes them, a machine context like a data file. Four records whose governed period text carried ISO dates were rewritten in words in the Master (CLM-012, CLM-015, CLM-018, CLM-021). | G0: 616 ISO tokens visible in 24 page×width cells; B1: 8 in 4, all on EN /providers/: the status-ledger keys "observed 2026-09-07" and "2026-01-22 event", free-text time boundaries the Master holds in English only and the renderer marks `lang="en"` (an existing D6 escalation); their worded bilingual form is a Master cell for B2. | Table columns stay narrow on phones; the E2-DATES gate reads a worded date's machine value; one EN-only time boundary remains until B2. |
 | DL-V2-006 | 2026-10-17 | D8 executed (Part 6 item 11): the masthead holds five direct hubs — Questions, Evidence, Readings, Sources, Methodology — with no numerals; Measurement priorities stays a footer destination and a /methodology/ link. The resulting masthead is the baseline for the first-click test (item 14). | Master transaction STAGE-B-S (04_NAV_UX row 10 DIRECT; UI-NAV-HUB-01…05 retired in place); steward edit of `hub_numerals` (CR-S12, commit eb072951); gates RC-NAV, R4 and PB-0422 follow the five-hub contract. | One fewer masthead destination; the owner's decision, recorded. |
 | DL-V2-007 | 2026-10-17 | F-15 / Part 6 item 14: Home gains a topics block — the eight domain answers by their governed names (UI-LAND-DOM-*), flat, under one governed heading (UI-HOME-TOPICS, transaction STAGE-B-S2) — and every page's footer gains the same eight links as its first group; Home's map lists the block first (steward edit, commit efd19111). The desktop masthead stays the five hubs of D8: no topics entry is needed. The four-family grouping of the old mockup is not adopted. | AI-simulated first-click, desktop 1440, three readers × eight tasks × two editions, judges blind to the variants: current (D8 masthead) 5/24 EN and 6/24 AR one-step; flat eight on Home 22/24 EN and 24/24 AR; four families 23/24 EN and 23/24 AR. The two candidates tie within one judgement; the flat eight matches the phone menu and needs no family labels. Material: `g0/firstclick_b1.md`. | Home grows by 0.9 AR 390 screens; its AR first screen no longer shows the figure (G0 did; EN never did) — part of the G1 first-screen hypothesis (item 32). No human testing; the judges are language models reading link labels only. |
+| DL-V2-008 | 2026-10-17 | Report an error (BRIEF W4 T): a structured form on /contact/#report — page address, record or chart ID, section, language and edition pre-filled and editable; the value in question; seven error types; what it should say; evidence; optional name and reply address; a consent line to /privacy/. Transport is static and hosting-neutral: a valid report becomes an e-mail to the governed contact address in a fixed `key: value` body under `YFIE-ERR-<record>-<yyyymmdd-hhmm>`, opened in the mail app or copied for webmail; without JavaScript the page offers a pre-addressed e-mail carrying the same field list. Nothing is posted to any endpoint; a first-party endpoint stays a hosting option, off. The process (`docs/CORRECTIONS_PROCESS.md`: triage and classification within ten working days, the Master-first fix, the public log against the stable ID and edition, the reply) is linked from /corrections/ through the canonical repository address. | Browser test `t_report_form` in both editions with three negative controls (empty form, invalid address, unknown record); gate RC-T1 with three negative controls (a link missing the form, a lost field, a form that posts); /contact/ AR 390 4.1 → 6.0 screens. | The stated times are the resource's own commitments (the owner may change them); the repository link is the site's one external link that is not a source; the reporter's mail app must handle `mailto:` bodies. |
+| DL-V2-009 | 2026-10-17 | Cite formats (OD-1017-04(a)): beside the governed plain-text preview, APA 7, Chicago, BibTeX and RIS are rendered from the page's own metadata — the governed title, the record ID, the edition, the publisher and the canonical address — with the access date; the copy action copies exactly the rendered text; machine formats keep their English keys; the Arabic edition uses the governed Arabic access phrases with Latin digits. | Browser test `t_cite_formats` parses the BibTeX and the RIS (and rejects a keyless BibTeX and a RIS without its end tag); every format carries the record ID, the edition and the address. | The access date is the reader's clock; APA and Chicago forms are house renderings of the governed metadata, not a style authority's certification. |
+| DL-V2-010 | 2026-10-17 | Compare (SIG-5; F-16, Part 6 item 16): every controlled verdict carries one reason sentence naming the dimension behind it in the governed field words (differs: … / not recorded: … / the same record / all match), and a copied summary carries the verdict, the reason, each record's title, period, population and boundary, the no-merge rule and the comparison link. The Master holds no legitimately qualified pair among the 14 comparable records (no two with identical recorded definition, population and method and a different period); the Findex 2011, 2014 and 2021 waves exist as a visual (VIS-FINDEX-OBSERVED-WAVES) and a crosswalk dataset, not as per-wave records, so no pair is admitted and none is manufactured. A one-record entry from a record keeps the prompt for a second record by design. | Scan of the built Compare data (0 candidate pairs); browser test `t_compare_reason` (reason per verdict, summary, same-record, input error). | Compare keeps returning only qualified, not-direct or unresolved verdicts until the owner adds per-wave records by a transaction; F-16 stays open as a content question. |
 
 ---
 
@@ -245,7 +248,7 @@ tool and retired tiers are recognised, and the ten table-only objects are listed
 | F-10 domain H1s repeat the lead; 4–5 lines | CLOSED for AR (every H1 ≤3 lines at 390); EN /finance/ runs to 4 lines at 390 → G2 (type size at 390; the S11 thesis stands) | §2.3 |
 | F-11 design records incomplete; ESCALATIONS and DESIGN_DEBT open | OPEN → this file exists; escalations resolved in G3 | — |
 | F-15 desktop has no direct route to the eight topics | CLOSED in B1 (DL-V2-006, DL-V2-007): one-step 21–25% → 92–100%, AI-simulated | §2.4 |
-| F-16 Compare never returns a positive verdict | OPEN → B2 | item 16 |
+| F-16 Compare never returns a positive verdict | B2: Compare explains each verdict in one sentence (DL-V2-010); no qualified pair exists in the Master and none is manufactured → OPEN as an owner content question (per-wave Findex records) | §3.4 |
 | F-18 diagrams/counts truth (304 vs 306) | OPEN → W6 | — |
 | F-19 stale skill project files | handled (craft modules only) | — |
 | G0-F01 interval on CLM-001 vs Methodology §07 | CLOSED in B1 (STAGE-B-S): the lead names the survey, the universe and the 2.8-point interval | §2.1 |
@@ -253,16 +256,16 @@ tool and retired tiers are recognised, and the ten table-only objects are listed
 | G0-F03 topics in one step (F-15) | CLOSED (DL-V2-007) | §2.4 |
 | G0-F04 TOC >6 and strip overflow | CLOSED (DL-V2-004); strip vs list stays a G1 test | §2.3 |
 | G0-F05 domain H1 and head order | S11 and S12 done; the first-screen unit stays G1/G2 | §2.3 |
-| G0-F06 citation forms | OPEN → B2 (OD-1017-04a) | — |
+| G0-F06 citation forms | CLOSED in B2 (DL-V2-009): APA 7, Chicago, BibTeX, RIS with record ID, edition and access date | §3.1 |
 | G0-F07 chain step marker; CBY-Sana'a coverage | CLOSED in B1 (Master: signal classes never reach "Operation"; one coverage sentence on /payments/ and /reforms/) | §2.1 |
 | G0-F08 /data/ and /measurement/ structure | CLOSED in B1 (S1, S2, S8, S9): AR 390 screens 70.5 → 18.7 and 44.7 → 23.4 | §2.2 |
-| G0-F09 record → MA bindings; teaser scope | OPEN → B2 (Master bindings) + G2 (unit) | — |
+| G0-F09 record → MA bindings; teaser scope | OPEN → B4b (Master bindings) + G2 (unit) | — |
 | G0-F10 CLM-001 lead and clocks | CLOSED in B1 (OD-1017-08 lead; S13 dates; no raw route in prose) | §2.1 |
 | 11 Reading link position on /remittances/ (S7) | OPEN → B2 | — |
 | 12 CLM-003 source list order | OPEN → B2 | — |
 | 13 boundary line outside the figure element (27 of 42) | → G2 (SIG-1) | — |
 | 14 the record's "Return to interpretation" label | OPEN → B2 | — |
-| 15 "Compare evidence" from a record preloads one record | → B2 | — |
+| 15 "Compare evidence" from a record preloads one record | CLOSED by decision in B2: the prompt for a second record stands; no arbitrary second record is chosen (DL-V2-010) | §3.1 |
 | 16 three fonts = 220 KB per page | → W4F | — |
 | B1-F01 tap targets under 24 px that predate B1 (the CC BY link, the contact e-mail links, the record breadcrumb, the long-cite summary) | → W4F/G3; the targets B1 introduced (topics block, measurement lists) were fixed in B1 | §2.3 |
 
@@ -444,7 +447,7 @@ the Cloudflare Workers Build check is the F-06 owner item. Root cause: S12 keeps
 232), but the RC-1115 rule only enforced an aggregate floor (at least 200 record lines with the anchor), so one page
 losing its anchor was invisible to it, and the B1 control expected that floor's message ("RC-1115 only …"). Fix, commit
 `bf9b8323`: RC-1115 fails per record page whose record line lacks the FOR WHOM clock with id q3, and the control expects that
-message. Local verification before the push: `--only RC-1115` caught 9 of 9; the full suite of 170 controls 167 of 167 caught. The earlier
+message. Local verification before the push: `--only RC-1115` caught 9 of 9; the full suite caught 167 of 167. The earlier
 wording "negative controls CAUGHT" described only the `--only` subset and is withdrawn; this PR is reported again only
 after Verify is 9/9 on its exact head. Also on record: OD-1017-14 (PR #59, merged at `3ef16ade`) prospectively selects a
 DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com (`public_origin` stays null;
@@ -459,3 +462,67 @@ items 11, 12, 14 and 15 of §1.7; fin24*/fin28-29 method note; the report-an-err
 list; the first-screen hypothesis (Home's figure in AR); PR #51 as evidence. G2: the unit at three scales; the
 boundary inside the figure element; /payments/, /finance/ and /reforms/ (EN) length (chronology fold); EN H1 size at 390. W4F: fonts;
 B1-F01 tap targets. VIS-CAPITAL-CONTEXT `public_routes`: no defect established (carried, not open).
+
+
+## 3. B2 — tools (T), 17 October 2026, branch `pr/stage-b-t` on main `8a772350` (Master `03d194a2…`, Page Specs `cf813880…`)
+
+### 3.1 Before → after, per tool (BRIEF W4 T; every behaviour tested in a real browser)
+
+| Tool | Before B2 | After B2 |
+|---|---|---|
+| Search | Arabic normalisation, aliases (46), ranking, one result per destination, typed facet, ?q= state, capped dialog with "see all", a plain empty state | The same, plus zero-result help: up to three alias terms the query resembles, the Questions hub and the same query in the other edition, each a link (`t_search_zero_help`); every result keeps its type and period line; the query-set gate P2-G01 (30 intents, EN and AR, expected destinations) is the search gate |
+| Compare | Shareable `?records=` URL, verdict title and generic copy, boundary cards, copy link, plain-word link errors | One reason sentence per verdict naming the dimension (SIG-5), "Copy summary" with the verdict, reason, each record's scope and the link; the verdict stays above the values at every width (`t_compare_reason`) |
+| Source directory (/data/) | Facets by type, publisher, year and domain; order; URL state; ?source= and #source-ID; Clear all; "Evidence records using this source" per source | The same, plus live counts on every facet option, following the term and the other facets (`t_source_facet_counts`); the per-source "used by" list is the brief's "cited by" |
+| Report an error | A `mailto:` link that appeared only with a known record; a bare address otherwise | The structured form at /contact/#report (DL-V2-008): pre-filled context, seven error types, inline validation, reference code, fixed-format body, mail app or copy, a no-JavaScript mailto with the field list; every record, Reading and figure links to it with its IDs (`t_report_form`, RC-T1) |
+| Cite | The governed short and long citations, previewed and copied | The same, plus APA 7, Chicago, BibTeX and RIS from the page's metadata (DL-V2-009; `t_cite_formats`) |
+| Corrections | /corrections/ rules and the per-record history | The same, plus the link to `docs/CORRECTIONS_PROCESS.md` (triage, fix, log, reply, times) |
+
+### 3.2 Content: transaction STAGE-B-T
+
+55 interface labels (04_NAV_UX), EN and AR together (`audit/stage_b_t/`; Master `03d194a2…`, Page Specs `cf813880…`,
+COMMITTED with idempotence): the report form (26 static labels and seven runtime messages), the citation format control and
+its five runtime phrases, the Compare reason sentences, summary head and governed list separator (seven), the search zero-result help (three) and the
+corrections process link (one). The Arabic was drafted with the English and reviewed by an AI Arabic editor against the
+existing register (16 rows changed: the house term «إمكانية الوصول», «رابط الصفحة» for a page address, «بلاغ عن خطأ»,
+«تاريخ الاطلاع», label-value forms for counts); one English ambiguity it raised ("figure" as a number) was resolved as
+"chart". No page copy, number, period or universe changed.
+
+### 3.3 Tests and gates
+
+Browser (`scripts/tests/test_public_tools.py`, 40/41 passed, 1 not applicable): `t_report_form` (both editions;
+negative controls: empty form, invalid address, unknown record; the figure link; the no-JS mailto), `t_cite_formats`
+(four formats, parsers for BibTeX and RIS with negative controls, the Arabic edition, a page without a record),
+`t_compare_reason` (reason per verdict, summary, same-record, input error, Arabic), `t_search_zero_help`,
+`t_source_facet_counts`; the old `t_report_issue` is replaced. Validator: RC-T1 (every report link opens the form with
+its IDs; the form keeps its fields and address, posts nowhere, keeps its no-JS mailto) with three negative controls
+(run locally with `--only 'T:'`: 3 of 3 caught; the full suite, 170 controls with the three B2 additions, run on this tree before the push; its first run caught 169 of 170 and found a second control that B2's markup had outdated — "a record's report link loses its record", fixed in its own commit as RC-1115 was — and the re-run caught 170 of 170 faults caught on the tree at `95554840`). The full gate set after the last change (log `gates_b2b.log`, 0 failures): validator 306 pages / 0 errors;
+literal audit 19,883 records / 0 unresolved, determinism one SHA over eight seeds; source lineage 8/8; projections PASS;
+generator unit tests 22 OK; content parity 304 documents / 0 differing; bilingual numeric invariance and number words
+0 of 152 pairs; viewport acceptance 308/308; security headers, base path, portable HTTP contract and no-JavaScript PASS;
+diagrams, social images (302) and logo derivatives current; re-entry 15 tests OK; manifest and checksums regenerated last. Re-measured with the G0 script (`g0/t1_metrics.json`):
+/contact/ AR 390 4.1 → 6.0 screens (EN 4.1 → 5.8), Compare 11.9 → 12.1, Home 9.4 → 9.5; TOC ≤6, strip overflow 0; tap targets under 24 px 64 (B1: 64).
+
+### 3.4 F-16: the honest Compare
+
+The Compare page already presents itself as a comparability checker (its governed intro: comparison legitimacy before any
+difference). The test the brief asked for — whether the Master already supports one legitimately qualified pair — was run
+on the built Compare data: of the 14 comparable records, no two share the recorded definition, population and method with
+a different period. The Findex waves of 2011, 2014 and 2021 are published as one visual and one crosswalk dataset, not as
+per-wave records, so admitting them would mean new public numbers bound by a transaction — an owner content decision,
+not a tool change. Nothing was loosened (DL-V2-010).
+
+### 3.5 Not done in B2, and where it goes
+
+Seeds 23 (machine-readable records) and 28 (figure cards) are prepared only as decisions (ask once, §1.10) → C-stage
+with the owner's answer; seed 25 ("what changed in this edition" on /corrections/ from the transaction ledgers) → B4c
+with the Master section it needs; seed 27's test set is the existing P2-G01 probe (answerable intents) plus
+`t_search_zero_help` (unanswerable and near-miss) — a committed unanswerable set in the probe file is a B4c addition;
+G0-F09 bindings → B4b; the first-party report endpoint stays a hosting option (off).
+
+**Session boundary (owner instruction, 17 October 2026).** B2 is this session's stop. B3 G1 runs in a fresh session,
+resuming from `audit/close_out/PROGRESS.md` and `design/evidence/v2/STATE.json` under §12 of the directive; PR #51
+stays as it is, conflicts included, and is closed without merging when DL-V2-001 is recorded. Everything else in
+`audit/OWNER_DIRECTIVE_2026-10-17.md` stands, including the final-line condition of §13. Hosting is settled on record
+only: the appended OD-1017-14 of 17 October 2026 (PR #59 at `3ef16ade`) selects a DigitalOcean Droplet via EasyPanel
+at `https://yemen-financial-inclusion.causewaygrp.com` prospectively, with `public_origin` still null, `pre_release`
+still true and implementation in Stage C; no build, contract, workflow or DNS state changed in B2.

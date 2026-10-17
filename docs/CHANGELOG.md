@@ -1,5 +1,19 @@
 # Repository Change Log
 
+## 17 October 2026 — Stage B tools (B2 T, transaction STAGE-B-T)
+
+Elevate the four public tools of BRIEF W4 T, every behaviour tested in a real browser with negative controls. Search:
+zero-result help (alias suggestions, the Questions hub, the same query in the other edition); the P2-G01 query set is the
+search gate. Compare: one reason sentence per verdict naming the differing dimension (SIG-5) and a copied summary that
+carries the verdict; no legitimately qualified pair exists in the Master and none is manufactured (F-16, DL-V2-010).
+Source directory: live counts on every facet option. Report an error: a structured form on `/contact/#report`, pre-filled
+from every record, Reading and figure, validated inline, prepared as a fixed-format e-mail under a reference code
+(`YFIE-ERR-<record>-<yyyymmdd-hhmm>`) for the mail app or the clipboard, with a no-JavaScript mailto; nothing is posted
+to any endpoint (DL-V2-008). Cite: APA 7, Chicago, BibTeX and RIS beside the governed plain text (OD-1017-04(a),
+DL-V2-009). `docs/CORRECTIONS_PROCESS.md` states triage, fix, log, reply and times, linked from `/corrections/`. The 55
+interface labels are governed in the Master (EN and AR together, `audit/stage_b_t/`); gate RC-T1 and three negative
+controls guard the report path. No hosting or publication state changed.
+
 ## 17 October 2026 — Stage B structure rules (B1 S, transactions STAGE-B-S and STAGE-B-S2)
 
 Implement the thirteen structure rules of BRIEF W4 (S1–S13), the owner's navigation decision D8 (five direct hubs,

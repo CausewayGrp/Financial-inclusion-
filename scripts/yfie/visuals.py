@@ -223,9 +223,12 @@ def frame_foot(v: dict, cite_label: str, origin: str | None, open_label: str | N
     screen = "" if v.get("here") else f'<span class="canon-s"><a class="canon-l" href="{esc(v["canonical_href"])}">{esc(open_label or L["open_record"])}</a> ·\u00a0</span>'
     if not v.get("has_record_destination"):
         path = screen = ""
+    # B2 T (BRIEF W4 T): a figure with its own record carries "Report an error", opening the form pre-filled with its IDs
+    rep_ = (f'<span class="rep"> ·\u00a0<a class="report-l" href="{esc(v["report_href"])}" data-report-link>{esc(L["report"])}</a></span>'
+            if v.get("report_href") and v.get("has_record_destination") else "")
     return (f'<div class="foot"><p class="b"><b>{esc(L["what_not_to_conclude"])}:</b> {iso_run(v["prohibited_inference"])}</p>{credit}'
             f'<p>{path}{screen}<span class="ed">{esc(v.get("edition") or "")}</span>'
-            f'<span class="cite-sep"> ·\u00a0<button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></span></p></div>')
+            f'<span class="cite-sep"> ·\u00a0<button type="button" class="tbtn" data-cite>{esc(cite_label)}</button></span>{rep_}</p></div>')
 
 
 def rv001_figure(v: dict, cite_label: str, origin: str | None, heading: str = "h2") -> str:

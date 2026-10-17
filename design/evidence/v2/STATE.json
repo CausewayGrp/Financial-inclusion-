@@ -2,7 +2,7 @@
  "schema": "YFIE_STAGE_B_STATE/1.0",
  "role": "Live state of the Stage B/C programme for session resume (owner directive 17 October 2026, section 12). Not an authority: the Production Master decides content; audit/close_out/PROGRESS.md is the dated ledger.",
  "updated": "2026-10-17",
- "phase": "B1 S structure rules (Stage B)",
+ "phase": "B2 T tools (Stage B)",
  "programme": {
   "brief": "audit/close_out/TAKEOVER_BRIEF_2026-10-17.md",
   "directive": "audit/OWNER_DIRECTIVE_2026-10-17.md",
@@ -26,22 +26,23 @@
   ]
  },
  "repository": {
-  "main": "3ef16ade (PR #59 merged; PR #57 at ce4ae5c8)",
-  "master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
-  "page_specs_sha256": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
-  "current_branch": "pr/stage-b-s",
-  "stacked_on": "main (ce4ae5c8, B0 merged as PR #57)",
+  "main": "8a772350 (PR #58 B1; PR #59 OD-1017-14 at 3ef16ade; PR #57 B0 at ce4ae5c8)",
+  "master_sha256": "03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e",
+  "page_specs_sha256": "cf8138806a4e43be3947e6e460d9e498f5a854ef0adc3813fe161d1d750be328",
+  "current_branch": "pr/stage-b-t",
+  "stacked_on": "main (8a772350: PR #58 merged; merged into this branch at 47e71084)",
   "merged_prs": {
    "PR-A": "#52 a7c7bf8a",
    "PR-B": "#54 a03e99a2",
    "PR-C": "#55 12c90654",
    "PR-D": "#56 d36a51bb",
    "B0": "#57 ce4ae5c8",
-   "OD-1017-14": "#59 3ef16ade (hosting selection, prospective)"
+   "OD-1017-14": "#59 3ef16ade (hosting selection, prospective)",
+   "B1": "#58 8a772350 (after the RC-1115 fix bf9b8323; Verify 9/9 on its exact head)"
   },
   "open_prs": {
    "#51": "draft; G1 challenger evidence; left as it is, conflicts included; to be closed without merging after DL-V2-001",
-   "#58": "OPEN, not merged: pr/stage-b-s -> main; CI at 2509d22d failed Gate negative controls shard 5/6 (RC-1115 / S12 control NOT CAUGHT, 27 of 28); fixed at bf9b8323 (RC-1115 per-page q3 check); local --only RC-1115 caught 9 of 9; full suite 167 of 167 caught; Verify 9/9 on the exact head pending until CI confirms it"
+   "B2": "pr/stage-b-t -> pr/stage-b-s; opened after this commit (see PROGRESS.md)"
   }
  },
  "baseline": {
@@ -109,7 +110,10 @@
   "DL-V2-004 S10 grouped TOC <=6, none under six phone screens",
   "DL-V2-005 S13 scope: words in prose, ISO in <time datetime>, table keys unchanged",
   "DL-V2-006 D8 executed: five direct hubs",
-  "DL-V2-007 Home topics block, flat eight, footer topics group (F-15)"
+  "DL-V2-007 Home topics block, flat eight, footer topics group (F-15)",
+  "DL-V2-008 report-an-error form and process",
+  "DL-V2-009 citation formats",
+  "DL-V2-010 Compare reason, summary; no qualified pair"
  ],
  "reserved": [
   "DL-V2-001 G1 direction"
@@ -133,22 +137,7 @@
    "boundary part inside every <figure> (27 of 42; /access/, /firms/, /measurement/ have none)"
   ],
   "B1": [],
-  "B2": [
-   "G0-F06 citation forms (OD-1017-04a)",
-   "item 16 Compare qualified pair",
-   "seed 23 machine-readable records (ask once)",
-   "seed 25 what changed in this edition",
-   "seed 27 search test set",
-   "seed 28 figure cards (ask once)",
-   "Compare preload from a record",
-   "report-an-error form",
-   "G0-F09 record->MA bindings",
-   "EN-only time boundaries on /providers/ (DL-V2-005)",
-   "Readings link position on /remittances/ (S7)",
-   "CLM-003 source list order",
-   "Return-to-interpretation label",
-   "fin24*/fin28-29 method note (Master data binding)"
-  ],
+  "B2": [],
   "G1": [
    "DL-V2-001",
    "PR #51 as evidence",
@@ -173,7 +162,10 @@
   ],
   "owner": [
    "F-12 visibility",
-   "F-06 Workers check"
+   "F-06 Workers check",
+   "F-16: per-wave Findex records for a qualified Compare pair (content decision)",
+   "seeds 23 and 28: machine-readable records and figure cards (ask once)",
+   "CORRECTIONS_PROCESS.md times (10 working days; 60 days)"
   ],
   "B1_closed": [
    "G0-F01",
@@ -188,6 +180,27 @@
    "OD-1017-08",
    "OBS-00090 marker",
    "VIS-FIRM-FINANCE-SEVERITY form"
+  ],
+  "B2_closed": [
+   "G0-F06 (DL-V2-009)",
+   "item 15 Compare preload (by decision)",
+   "report-an-error form",
+   "cite formats",
+   "search zero-result help",
+   "/data/ live counts",
+   "docs/CORRECTIONS_PROCESS.md"
+  ],
+  "B4b": [
+   "G0-F09 record->MA bindings (Master)",
+   "EN-only time boundaries on /providers/ (DL-V2-005)",
+   "CLM-003 source list order",
+   "Return-to-interpretation label",
+   "fin24*/fin28-29 method note (Master data binding)"
+  ],
+  "B4c": [
+   "seed 25 what changed in this edition (Master section)",
+   "seed 27 committed unanswerable query set in the probe file",
+   "Readings link position on /remittances/ (S7)"
   ]
  },
  "not_run_in_g0": [
@@ -199,7 +212,7 @@
   "cite button state (INCONCLUSIVE)",
   "JS Compare table verdict per field"
  ],
- "next": "B2 T — text and tools (G0-F06 citation forms OD-1017-04a; seed 25 what changed; seed 27 Arabic search test set; seeds 23 and 28 prepared, asked once; Compare preload; report-an-error form; G0-F09 bindings; DL-V2-005 residual cells), Master-first, EN and AR together; then B3 G1",
+ "next": "B3 G1 — direction challenge: three candidate compositions as isolated CSS layers on Home, /payments/, CLM-001 and /data/ (AR 390, EN 1440), AI judges, DL-V2-001; PR #51 stays as it is and is closed without merging. Owner instruction of 17 October 2026: G1 runs in a FRESH SESSION; B2 is this session's stop. Resume from audit/close_out/PROGRESS.md and this file; everything else in audit/OWNER_DIRECTIVE_2026-10-17.md stands.",
  "transactions": {
   "STAGE-B-S": {
    "master_after": "5b2004068c0c2cfd8aae0f7b3b1c2f2c53cab4609fbe9e9a53366d96f1323b20",
@@ -212,6 +225,12 @@
    "page_specs_after": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
    "cells": 1,
    "record": "audit/stage_b_s2/"
+  },
+  "STAGE-B-T": {
+   "master_after": "03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e",
+   "page_specs_after": "cf8138806a4e43be3947e6e460d9e498f5a854ef0adc3813fe161d1d750be328",
+   "cells": 55,
+   "record": "audit/stage_b_t/"
   }
  },
  "s1": {
@@ -277,10 +296,37 @@
   }
  },
  "owner_decisions_on_record": [
-  "OD-1017-14 (PR #59, 3ef16ade): DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com, prospective; public_origin stays null; implementation stays Stage C"
+  "OD-1017-14 appended 17 October 2026 18:10 Riyadh (PR #59, 3ef16ade): (a) DigitalOcean Droplet via EasyPanel, runbook Route 3, no App Platform, no proxy, no subpath; (b) public origin https://yemen-financial-inclusion.causewaygrp.com, public_origin still null and pre_release still true until Stage C; (c) <country>-<topic>.causewaygrp.com, one repository = one site = one origin, evidence.causewaygrp.com reserved; (d) the yfie DNS name is replaced before Stage C; (e) the owner disconnects Cloudflare Workers Builds (F-06). Prospective: nothing in the build, deployment.json, workflows or DNS changes under it; implementation is Stage C."
  ],
  "negative_controls_local_coverage": {
   "B1": "--only: RC-S10 (3), RC-NAV/D8 controls; base-path and no-JS built-in controls; the full suite was not run before the first push (corrected 17 October 2026)",
   "B1 fix": "--only RC-1115 caught 9 of 9; full suite 167 of 167 caught"
+ },
+ "t1": {
+  "label": "t1",
+  "metrics": "design/evidence/v2/g0/t1_metrics.json",
+  "scoreboard": "design/evidence/v2/g0/t1_scoreboard.md",
+  "contact_ar390": [
+   4.1,
+   6.0
+  ],
+  "compare_ar390": [
+   11.9,
+   12.1
+  ],
+  "home_ar390": [
+   9.4,
+   9.5
+  ],
+  "tap_targets_under_24px": 64,
+  "negative_controls_local_coverage": "full suite before the push: 170 of 170 faults caught (8 workers, 3,942 s; the clean copies passed first, so no expected message was already present), on the tree at 95554840; first run 169 of 170, which found one control whose selector B2's markup had outdated (a record's report link), fixed at 95554840; plus --only 'T:' 3 of 3 caught while developing. No run is reported as CAUGHT for a subset.",
+  "tools": {
+   "search": "zero-result help; P2-G01 probe set is the gate",
+   "compare": "reason sentence per verdict; copy summary; no qualified pair in the Master (DL-V2-010)",
+   "data": "live facet counts",
+   "report": "structured form /contact/#report, mailto + copy, no endpoint (DL-V2-008)",
+   "cite": "APA 7, Chicago, BibTeX, RIS (DL-V2-009)",
+   "corrections": "docs/CORRECTIONS_PROCESS.md linked"
+  }
  }
 }

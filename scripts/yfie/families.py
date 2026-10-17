@@ -11,6 +11,7 @@ every document build and the repository suites run, Reading Index · Measurement
 from __future__ import annotations
 
 import json
+from urllib.parse import quote
 import re
 from pathlib import Path
 
@@ -358,7 +359,7 @@ def comparison(page: dict, shell: dict) -> str:
     prompt_html = f'<p class="small compare-prompt" data-compare-prompt>{esc(prompt)}</p>' if prompt else ""
     tool = (f'<section class="qa first compare" id="compare" data-comparison-family="Comparison"><div>{rubric(L["intro"])}<h2>{esc(L["title"])}</h2></div><div>'
             + (f'<p class="st">{esc(text_alt(v))}</p>' if v else "") + boundary + prompt_html   # A3: the summary; the boundary prints once
-            + f'<div class="controls-grid">{controls}</div><div class="actions"><button type="button" class="tbtn" data-compare-copy>{esc(L["copy_link"])}</button></div>'
+            + f'<div class="controls-grid">{controls}</div><div class="actions"><button type="button" class="tbtn" data-compare-copy>{esc(L["copy_link"])}</button><button type="button" class="tbtn" data-compare-summary disabled>{esc(L["copy_summary"])}</button></div>'
             f'<p class="small never">{esc(L["never"])}</p><div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="compare-output"></div>'
             f'<script type="application/json" id="yfie-compare">{data}</script><script type="application/json" id="yfie-compare-dimensions">{dims}</script></div></section>')
     parts = [head_block(page, shell, SL["understand_explore_verify"], lead=lead), tool]
@@ -581,6 +582,51 @@ def measurement(page: dict, shell: dict) -> str:
 
 
 # ------------------------------------------------------------------------------------------------ Reference / Trust (family rule; composed at D3)
+def report_form(ctx: dict, shell: dict, origin_html: str) -> str:
+    """B2 T (BRIEF W4 T, report an error): a structured form on /contact/#report — a form landmark of controls, not a form
+    element, because the public build forbids one (F6-G05: nothing is ever posted). Static and hosting-neutral: the runtime
+    prepares a fixed "key: value" e-mail under a reference code and opens the mail app or copies it; without JavaScript
+    the page offers a pre-addressed e-mail with the same field list as instructions. Every label is governed (04)."""
+    f = ctx["form"]
+    addr = ctx["address"]
+    priv = next((t for t in shell.get("trust") or [] if "/privacy/" in str(t.get("href") or "")), None)
+    priv_html = f' <a href="{esc(priv["href"])}">{esc(priv["label"])}</a>' if priv else f' <a href="{esc(f["privacy_href"])}">{esc(f["privacy_href"])}</a>'
+    def field(key: str, control: str, required: bool = False, err: bool = False) -> str:
+        star = ' <span class="req" aria-hidden="true">*</span>' if required else ""
+        e = f'<span class="rf-err" id="rf-err-{key}" data-rf-err="{key}" hidden></span>' if err else ""
+        return f'<label class="rf rf-{key}"><span>{esc(f[key])}{star}</span>{control}{e}</label>'
+    inp = lambda key, extra="": f'<input name="{key}" data-rf="{key}"{extra}>'   # noqa: E731
+    types = "".join(f'<option value="{k}">{esc(v)}</option>' for k, v in f["types"])
+    nojs_lines = ["Reference:", "Page:", "Record:", "Section:", "Language:", "Edition:", "Error type:", "In question:", "Should say:", "Evidence:", "Name:", "Reply to:"]
+    nojs_href = f'mailto:{esc(addr)}?subject={quote(f["subject"])}&amp;body={quote(chr(10).join(nojs_lines))}'
+    return (f'<section class="qa first ctx report" id="report" data-correction-context data-context-mode="contact" data-report-form>'
+            f'<div><h2 id="report-h">{esc(f["title"])}</h2></div><div>{origin_html}<p class="small">{esc(f["intro"])}</p><p class="small">{esc(f["required_note"])}</p>'
+            f'<div class="report-form" role="form" aria-labelledby="report-h" data-report data-address="{esc(addr)}" data-product="{esc(f["product"])}">'
+            f'<div class="rf-errors small" data-report-errors role="alert" hidden></div>'
+            f'<div class="rf-grid">{field("url", inp("url", " type=\"url\" inputmode=\"url\" dir=\"ltr\" autocomplete=\"url\""))}{field("record", inp("record", " dir=\"ltr\""))}'
+            f'{field("anchor", inp("anchor", " dir=\"ltr\""))}{field("lang", inp("lang", " dir=\"ltr\""))}{field("edition", inp("edition"))}</div>'
+            f'{field("value", "<textarea name=\"value\" data-rf=\"value\" rows=\"3\"></textarea>", err=True)}'
+            f'{field("type", f"<select name=\"type\" data-rf=\"type\" required><option value=\"\">—</option>{types}</select>", required=True, err=True)}'
+            f'{field("should", "<textarea name=\"should\" data-rf=\"should\" rows=\"3\"></textarea>", err=True)}'
+            f'{field("evidence", inp("evidence"))}{field("name", inp("name", " autocomplete=\"name\""))}'
+            f'{field("email", inp("email", " type=\"email\" autocomplete=\"email\" dir=\"ltr\" inputmode=\"email\""), err=True)}'
+            f'<p class="small rf-consent">{esc(f["consent"])}{priv_html}</p>'
+            f'<div class="actions"><button type="button" class="button" data-report-send>{esc(f["send"])}</button><button type="button" class="tbtn" data-report-copy>{esc(f["copy"])}</button></div>'
+            f'<p class="small" data-report-status role="status" aria-live="polite"></p>'
+            f'<p class="small rf-ref" data-report-ref hidden><b>{esc(f["reference"])}:</b> <bdi dir="ltr" data-report-ref-code></bdi></p></div>'
+            f'<p class="small" data-report-nojs>{esc(f["nojs"])} <a class="mail" data-correction-mail href="{nojs_href}">{esc(f["nojs_link"])}</a></p>'
+            f'</div></section>')
+
+
+def process_link(ctx: dict, shell: dict) -> str:
+    """B2 T: the /corrections/ link to docs/CORRECTIONS_PROCESS.md in the public repository (opens in a new tab)."""
+    pr = ctx.get("process")
+    if not pr:
+        return ""
+    return (f'<p class="small" data-corrections-process><a href="{esc(pr["href"])}" rel="noopener noreferrer" target="_blank">{esc(pr["label"])}'
+            f'<span class="sr-only"> {esc(shell["labels"]["new_tab"])}</span></a></p>')
+
+
 def reference(page: dict, shell: dict) -> str:
     L = page["labels"]
     parts = [head_block(page, shell, L["flow"], lead=page["lead"])]
@@ -596,11 +642,11 @@ def reference(page: dict, shell: dict) -> str:
                        f'<a data-correction-link href="#">{esc(ctx["open"])}</a></div>'
                        f'<div class="correction-link-error empty small" data-correction-error hidden role="alert" data-msg-malformed="{esc(ctx["malformed"])}" data-msg-unknown="{esc(ctx["unknown"])}"></div>'
                        f'<script type="application/json" id="yfie-record-ids">{ids}</script>')
-        if ctx["mode"] == "contact":
-            mail = f'<a class="mail" data-correction-mail hidden href="mailto:{esc(ctx["address"])}" data-mail-address="{esc(ctx["address"])}" data-mail-subject="{esc(ctx["subject"])}">{esc(ctx["write"])}</a>'
-            parts.append(f'<section class="qa first ctx" data-correction-context data-context-mode="contact"><div></div><div>{origin_html}<div class="actions">{mail}</div></div></section>')
+        if ctx["mode"] == "contact":   # B2 T (BRIEF W4 T): the structured report-an-error form at #report
+            parts.append(report_form(ctx, shell, origin_html))
+            index.append(("report", ctx["form"]["title"]))
         else:
-            parts.append(f'<section class="qa first ctx" id="record" data-correction-context><div><h2>{esc(ctx["title"])}</h2></div><div><p class="small">{esc(ctx["intro"])}</p><div class="small" data-correction-empty>{esc(ctx["empty"])}</div>{origin_html}</div></section>')
+            parts.append(f'<section class="qa first ctx" id="record" data-correction-context><div><h2>{esc(ctx["title"])}</h2></div><div><p class="small">{esc(ctx["intro"])}</p><div class="small" data-correction-empty>{esc(ctx["empty"])}</div>{origin_html}{process_link(ctx, shell)}</div></section>')
             index.append(("record", ctx["title"]))
     if page.get("reading_rule"):   # owner instructions of 3 October 2026, 09:50, C5: printed once, here
         rr = page["reading_rule"]

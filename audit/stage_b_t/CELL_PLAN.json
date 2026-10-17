@@ -1,0 +1,362 @@
+[
+  {
+    "kind": "ui_insert",
+    "finding": "T-REPORT-FORM",
+    "rows": [
+      [
+        "UI-REPORT-INTRO",
+        "Use this form to report a wrong number, date, source, scope, translation or accessibility problem. It prepares an e-mail to the contact address below in a fixed format with a reference code; nothing is sent until you send it from your mail app.",
+        "استخدم هذا النموذج للإبلاغ عن خطأ في رقم أو تاريخ أو مصدر أو نطاق أو ترجمة، أو عن مشكلة في إمكانية الوصول. يُعِدّ النموذج رسالة بريد إلكتروني إلى عنوان التواصل أدناه بصيغة ثابتة مع رمز مرجعي، ولا يُرسَل شيء حتى ترسلها أنت من تطبيق البريد لديك.",
+        "Stage B B2 T (17 October 2026; BRIEF W4 T, report-an-error): the intro of the structured report form on /contact/#report; rendered by scripts/yfie/families.py reference() (contact mode). The address itself is the page's governed contact address, never repeated in a label."
+      ],
+      [
+        "UI-REPORT-REQUIRED-NOTE",
+        "Fields marked * are required.",
+        "الحقول المعلَّمة بعلامة * مطلوبة.",
+        "B2 T: the required-fields note above the report form."
+      ],
+      [
+        "UI-REPORT-URL",
+        "Page address",
+        "رابط الصفحة",
+        "B2 T: report form field label (auto-filled from the originating page, editable)."
+      ],
+      [
+        "UI-REPORT-RECORD",
+        "Record or chart ID",
+        "معرّف السجل أو الشكل",
+        "B2 T: report form field label (auto-filled from ?record=, editable)."
+      ],
+      [
+        "UI-REPORT-ANCHOR",
+        "Section or chart within the page",
+        "القسم أو الشكل داخل الصفحة",
+        "B2 T: report form field label (auto-filled from ?figure= or the originating anchor, editable)."
+      ],
+      [
+        "UI-REPORT-LANG",
+        "Language",
+        "اللغة",
+        "B2 T: report form field label (auto-filled from the edition, editable)."
+      ],
+      [
+        "UI-REPORT-EDITION",
+        "Edition",
+        "الإصدار",
+        "B2 T: report form field label (auto-filled from the governed edition label, editable)."
+      ],
+      [
+        "UI-REPORT-VALUE",
+        "The value or sentence in question",
+        "القيمة أو الجملة محل الاعتراض",
+        "B2 T: report form field label; one of this field and 'What it should say' is required."
+      ],
+      [
+        "UI-REPORT-TYPE",
+        "Type of error",
+        "نوع الخطأ",
+        "B2 T: report form select label (required)."
+      ],
+      [
+        "UI-REPORT-TYPE-NUMBER",
+        "Number",
+        "رقم",
+        "B2 T: report form error type."
+      ],
+      [
+        "UI-REPORT-TYPE-DATE",
+        "Date or period",
+        "تاريخ أو فترة",
+        "B2 T: report form error type."
+      ],
+      [
+        "UI-REPORT-TYPE-SOURCE",
+        "Source or link",
+        "مصدر أو رابط",
+        "B2 T: report form error type."
+      ],
+      [
+        "UI-REPORT-TYPE-SCOPE",
+        "Scope or definition",
+        "نطاق أو تعريف",
+        "B2 T: report form error type."
+      ],
+      [
+        "UI-REPORT-TYPE-TRANSLATION",
+        "Translation",
+        "ترجمة",
+        "B2 T: report form error type."
+      ],
+      [
+        "UI-REPORT-TYPE-ACCESSIBILITY",
+        "Accessibility",
+        "إمكانية الوصول",
+        "B2 T: report form error type."
+      ],
+      [
+        "UI-REPORT-TYPE-OTHER",
+        "Other",
+        "غير ذلك",
+        "B2 T: report form error type."
+      ],
+      [
+        "UI-REPORT-SHOULD",
+        "What it should say",
+        "ما ينبغي أن يرد",
+        "B2 T: report form field label; one of this field and 'The value or sentence in question' is required."
+      ],
+      [
+        "UI-REPORT-EVIDENCE",
+        "Evidence for the correction (a link or a citation)",
+        "الدليل على التصحيح (رابط أو استشهاد)",
+        "B2 T: report form field label (optional)."
+      ],
+      [
+        "UI-REPORT-NAME",
+        "Your name (optional)",
+        "اسمك (اختياري)",
+        "B2 T: report form field label."
+      ],
+      [
+        "UI-REPORT-EMAIL",
+        "Your e-mail, if you want a reply (optional)",
+        "بريدك الإلكتروني إن أردت ردًّا (اختياري)",
+        "B2 T: report form field label; validated as an address when given."
+      ],
+      [
+        "UI-REPORT-CONSENT",
+        "By sending this report you agree that its content is handled as described on the privacy page.",
+        "بإرسال هذا البلاغ توافق على التعامل مع محتواه كما هو موضَّح في صفحة الخصوصية.",
+        "B2 T: the consent line under the form; the privacy page link follows it (governed trust label)."
+      ],
+      [
+        "UI-REPORT-SEND",
+        "Send by e-mail",
+        "أرسل بالبريد الإلكتروني",
+        "B2 T: report form primary action (opens the mail app with the fixed-format body)."
+      ],
+      [
+        "UI-REPORT-COPY",
+        "Copy report",
+        "انسخ البلاغ",
+        "B2 T: report form secondary action for webmail users (copies the fixed-format body)."
+      ],
+      [
+        "UI-REPORT-REFERENCE",
+        "Reference code",
+        "الرمز المرجعي",
+        "B2 T: the label of the reference code shown after a report is prepared (YFIE-ERR-<record>-<yyyymmdd-hhmm>)."
+      ],
+      [
+        "UI-REPORT-NOJS",
+        "Without JavaScript, send an e-mail to the contact address with the fields above as its lines.",
+        "من دون JavaScript، أرسل رسالة بريد إلكتروني إلى عنوان التواصل تتضمن الحقول أعلاه، كلُّ حقل في سطر.",
+        "B2 T: the no-JavaScript instruction under the form (always rendered; the runtime hides it)."
+      ],
+      [
+        "UI-REPORT-NOJS-LINK",
+        "Open a pre-addressed e-mail with the field list",
+        "افتح رسالة بريد إلكتروني معنونة مسبقًا تتضمن قائمة الحقول",
+        "B2 T: the plain mailto link under the form (no-JavaScript transport)."
+      ],
+      [
+        "UI-JS-REPORT-REQUIRED",
+        "Complete this field.",
+        "أكمل هذا الحقل.",
+        "B2 T runtime: inline validation message on a required field."
+      ],
+      [
+        "UI-JS-REPORT-NEED-ONE",
+        "Say what is in question or what it should say.",
+        "اذكر ما هو محل الاعتراض أو ما ينبغي أن يرد.",
+        "B2 T runtime: inline validation when both free-text fields are empty."
+      ],
+      [
+        "UI-JS-REPORT-EMAIL-INVALID",
+        "This e-mail address is not valid.",
+        "عنوان البريد الإلكتروني هذا غير صالح.",
+        "B2 T runtime: inline validation of the optional reply address."
+      ],
+      [
+        "UI-JS-REPORT-ERRORS",
+        "The report is not complete: {n} field(s) need attention.",
+        "البلاغ غير مكتمل. عدد الحقول التي تحتاج إلى مراجعة: {n}.",
+        "B2 T runtime: the announced summary of validation errors (label-value form in Arabic, RC-3)."
+      ],
+      [
+        "UI-JS-REPORT-PREPARED",
+        "Report {ref} is ready. Your mail app should open; if it does not, use Copy report.",
+        "البلاغ {ref} جاهز. ينبغي أن يُفتح تطبيق البريد لديك؛ وإن لم يُفتح فاستخدم «انسخ البلاغ».",
+        "B2 T runtime: the status after a valid submit."
+      ],
+      [
+        "UI-JS-REPORT-COPIED",
+        "Report copied",
+        "تم نسخ البلاغ",
+        "B2 T runtime: the announced status after Copy report."
+      ],
+      [
+        "UI-JS-REPORT-SUBJECT",
+        "Error report {ref}",
+        "بلاغ عن خطأ {ref}",
+        "B2 T runtime: the e-mail subject after the product name."
+      ]
+    ]
+  },
+  {
+    "kind": "ui_insert",
+    "finding": "T-CITE-FORMATS",
+    "rows": [
+      [
+        "UI-CITE-FORMAT",
+        "Citation format",
+        "صيغة الاستشهاد",
+        "OD-1017-04(a) (Stage B B2 T): the label of the format control beside the citation preview; rendered by scripts/yfie/render.py cite_tools()."
+      ],
+      [
+        "UI-CITE-FORMAT-PLAIN",
+        "Plain text",
+        "نص عادي",
+        "OD-1017-04(a): format option (the governed citation as previewed)."
+      ],
+      [
+        "UI-CITE-FORMAT-APA",
+        "APA 7",
+        "APA 7",
+        "OD-1017-04(a): format option."
+      ],
+      [
+        "UI-CITE-FORMAT-CHICAGO",
+        "Chicago",
+        "شيكاغو",
+        "OD-1017-04(a): format option."
+      ],
+      [
+        "UI-CITE-FORMAT-BIBTEX",
+        "BibTeX",
+        "BibTeX",
+        "OD-1017-04(a): format option (machine format, English keys)."
+      ],
+      [
+        "UI-CITE-FORMAT-RIS",
+        "RIS",
+        "RIS",
+        "OD-1017-04(a): format option (machine format, English tags)."
+      ],
+      [
+        "UI-JS-CITE-RETRIEVED",
+        "Retrieved {date}, from {url}",
+        "استُرجع بتاريخ {date} من {url}",
+        "OD-1017-04(a) runtime: the APA 7 retrieval statement; {date} is the access date in words, {url} the canonical address."
+      ],
+      [
+        "UI-JS-CITE-ACCESSED",
+        "Accessed {date}.",
+        "تاريخ الاطلاع: {date}.",
+        "OD-1017-04(a) runtime: the Chicago access statement (label-value form in Arabic)."
+      ],
+      [
+        "UI-JS-CITE-RECORD",
+        "Evidence Record {id}",
+        "سجل الدليل {id}",
+        "OD-1017-04(a) runtime: the record designation inside the formatted citations."
+      ],
+      [
+        "UI-JS-CITE-TYPE-RECORD",
+        "[Evidence record]",
+        "[سجل دليل]",
+        "OD-1017-04(a) runtime: the APA 7 bracketed description of a record page."
+      ],
+      [
+        "UI-JS-CITE-TYPE-PAGE",
+        "[Web page]",
+        "[صفحة ويب]",
+        "OD-1017-04(a) runtime: the APA 7 bracketed description of a page that is not a record."
+      ]
+    ]
+  },
+  {
+    "kind": "ui_insert",
+    "finding": "T-COMPARE-REASON",
+    "rows": [
+      [
+        "UI-JS-COMPARE-REASON-DIFFERS",
+        "Differs between these records: {fields}.",
+        "ما يختلف بين هذه السجلات: {fields}.",
+        "Stage B B2 T (SIG-5, BRIEF W4 T Compare): the one-sentence reason under the verdict naming the differing dimensions; {fields} lists the governed field labels."
+      ],
+      [
+        "UI-JS-COMPARE-REASON-MISSING",
+        "Not recorded on at least one record: {fields}.",
+        "غير مسجَّل في سجل واحد على الأقل: {fields}.",
+        "B2 T (SIG-5): the reason when a required field is missing."
+      ],
+      [
+        "UI-JS-COMPARE-REASON-SAME-RECORD",
+        "The same record is selected more than once.",
+        "اختير السجل نفسه أكثر من مرة.",
+        "B2 T (SIG-5): the reason for the same-record verdict."
+      ],
+      [
+        "UI-JS-COMPARE-REASON-ALIGNED",
+        "Definition, population, method, period and currentness match as recorded.",
+        "يتطابق التعريف والمجتمع والطريقة والفترة وحداثة الدليل كما هي مسجَّلة.",
+        "B2 T (SIG-5): the reason for the aligned verdict."
+      ],
+      [
+        "UI-COMPARE-COPY-SUMMARY",
+        "Copy summary",
+        "انسخ الملخص",
+        "B2 T: the Compare action that copies the verdict, its reason and each record's title, period, population and boundary with the comparison link; rendered by scripts/yfie/families.py."
+      ],
+      [
+        "UI-JS-COMPARE-SUMMARY-HEAD",
+        "Comparison of {n} records",
+        "عدد السجلات المقارَنة: {n}",
+        "B2 T runtime: the first line of the copied summary (label-value form in Arabic, RC-3)."
+      ],
+      [
+        "UI-JS-LIST-SEPARATOR",
+        ",",
+        "،",
+        "B2 T runtime (R85-G01): the separator between the items of a generated list — the Compare reason's field names; the Arabic comma is governed here, never written in code. A space follows it in both editions."
+      ]
+    ]
+  },
+  {
+    "kind": "ui_insert",
+    "finding": "T-SEARCH-ZERO",
+    "rows": [
+      [
+        "UI-JS-SEARCH-TRY",
+        "Try:",
+        "جرّب:",
+        "Stage B B2 T (BRIEF W4 T Search, zero-result help): precedes up to three alias suggestions offered as links."
+      ],
+      [
+        "UI-JS-SEARCH-OTHER-EDITION",
+        "Search the Arabic edition for this",
+        "ابحث عن هذا في النسخة الإنجليزية",
+        "B2 T: zero-result help link carrying the query to the other edition's Evidence directory (each edition names the other)."
+      ],
+      [
+        "UI-JS-SEARCH-QUESTIONS",
+        "Start from the questions",
+        "ابدأ من الأسئلة",
+        "B2 T: zero-result help link to the Questions hub (/explore/)."
+      ]
+    ]
+  },
+  {
+    "kind": "ui_insert",
+    "finding": "T-CORRECTIONS-PROCESS",
+    "rows": [
+      [
+        "UI-CORR-PROCESS-LINK",
+        "How reports are triaged, fixed and logged (process document)",
+        "كيف تُفرَز البلاغات وتُصحَّح وتُسجَّل (وثيقة الإجراءات)",
+        "Stage B B2 T (BRIEF W4 T): the /corrections/ link to docs/CORRECTIONS_PROCESS.md in the public repository; rendered by scripts/yfie/families.py reference()."
+      ]
+    ]
+  }
+]

@@ -3682,5 +3682,335 @@
     "label_en": "Topics",
     "label_ar": "الموضوعات",
     "use_rule": "DL-V2-007 (17 October 2026; takeover brief Part 6 item 14, finding F-15/G0-F03; first-click test in design/DESIGN_INTEGRATION_V2.md §2.4): the heading of Home's topics block (the eight domain answers in one step) and of the footer's topics group; scripts/yfie/render.py home(), scripts/yfie/content.py shell()"
+  },
+  {
+    "ui_id": "UI-REPORT-INTRO",
+    "label_en": "Use this form to report a wrong number, date, source, scope, translation or accessibility problem. It prepares an e-mail to the contact address below in a fixed format with a reference code; nothing is sent until you send it from your mail app.",
+    "label_ar": "استخدم هذا النموذج للإبلاغ عن خطأ في رقم أو تاريخ أو مصدر أو نطاق أو ترجمة، أو عن مشكلة في إمكانية الوصول. يُعِدّ النموذج رسالة بريد إلكتروني إلى عنوان التواصل أدناه بصيغة ثابتة مع رمز مرجعي، ولا يُرسَل شيء حتى ترسلها أنت من تطبيق البريد لديك.",
+    "use_rule": "Stage B B2 T (17 October 2026; BRIEF W4 T, report-an-error): the intro of the structured report form on /contact/#report; rendered by scripts/yfie/families.py reference() (contact mode). The address itself is the page's governed contact address, never repeated in a label."
+  },
+  {
+    "ui_id": "UI-REPORT-REQUIRED-NOTE",
+    "label_en": "Fields marked * are required.",
+    "label_ar": "الحقول المعلَّمة بعلامة * مطلوبة.",
+    "use_rule": "B2 T: the required-fields note above the report form."
+  },
+  {
+    "ui_id": "UI-REPORT-URL",
+    "label_en": "Page address",
+    "label_ar": "رابط الصفحة",
+    "use_rule": "B2 T: report form field label (auto-filled from the originating page, editable)."
+  },
+  {
+    "ui_id": "UI-REPORT-RECORD",
+    "label_en": "Record or chart ID",
+    "label_ar": "معرّف السجل أو الشكل",
+    "use_rule": "B2 T: report form field label (auto-filled from ?record=, editable)."
+  },
+  {
+    "ui_id": "UI-REPORT-ANCHOR",
+    "label_en": "Section or chart within the page",
+    "label_ar": "القسم أو الشكل داخل الصفحة",
+    "use_rule": "B2 T: report form field label (auto-filled from ?figure= or the originating anchor, editable)."
+  },
+  {
+    "ui_id": "UI-REPORT-LANG",
+    "label_en": "Language",
+    "label_ar": "اللغة",
+    "use_rule": "B2 T: report form field label (auto-filled from the edition, editable)."
+  },
+  {
+    "ui_id": "UI-REPORT-EDITION",
+    "label_en": "Edition",
+    "label_ar": "الإصدار",
+    "use_rule": "B2 T: report form field label (auto-filled from the governed edition label, editable)."
+  },
+  {
+    "ui_id": "UI-REPORT-VALUE",
+    "label_en": "The value or sentence in question",
+    "label_ar": "القيمة أو الجملة محل الاعتراض",
+    "use_rule": "B2 T: report form field label; one of this field and 'What it should say' is required."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE",
+    "label_en": "Type of error",
+    "label_ar": "نوع الخطأ",
+    "use_rule": "B2 T: report form select label (required)."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE-NUMBER",
+    "label_en": "Number",
+    "label_ar": "رقم",
+    "use_rule": "B2 T: report form error type."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE-DATE",
+    "label_en": "Date or period",
+    "label_ar": "تاريخ أو فترة",
+    "use_rule": "B2 T: report form error type."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE-SOURCE",
+    "label_en": "Source or link",
+    "label_ar": "مصدر أو رابط",
+    "use_rule": "B2 T: report form error type."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE-SCOPE",
+    "label_en": "Scope or definition",
+    "label_ar": "نطاق أو تعريف",
+    "use_rule": "B2 T: report form error type."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE-TRANSLATION",
+    "label_en": "Translation",
+    "label_ar": "ترجمة",
+    "use_rule": "B2 T: report form error type."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE-ACCESSIBILITY",
+    "label_en": "Accessibility",
+    "label_ar": "إمكانية الوصول",
+    "use_rule": "B2 T: report form error type."
+  },
+  {
+    "ui_id": "UI-REPORT-TYPE-OTHER",
+    "label_en": "Other",
+    "label_ar": "غير ذلك",
+    "use_rule": "B2 T: report form error type."
+  },
+  {
+    "ui_id": "UI-REPORT-SHOULD",
+    "label_en": "What it should say",
+    "label_ar": "ما ينبغي أن يرد",
+    "use_rule": "B2 T: report form field label; one of this field and 'The value or sentence in question' is required."
+  },
+  {
+    "ui_id": "UI-REPORT-EVIDENCE",
+    "label_en": "Evidence for the correction (a link or a citation)",
+    "label_ar": "الدليل على التصحيح (رابط أو استشهاد)",
+    "use_rule": "B2 T: report form field label (optional)."
+  },
+  {
+    "ui_id": "UI-REPORT-NAME",
+    "label_en": "Your name (optional)",
+    "label_ar": "اسمك (اختياري)",
+    "use_rule": "B2 T: report form field label."
+  },
+  {
+    "ui_id": "UI-REPORT-EMAIL",
+    "label_en": "Your e-mail, if you want a reply (optional)",
+    "label_ar": "بريدك الإلكتروني إن أردت ردًّا (اختياري)",
+    "use_rule": "B2 T: report form field label; validated as an address when given."
+  },
+  {
+    "ui_id": "UI-REPORT-CONSENT",
+    "label_en": "By sending this report you agree that its content is handled as described on the privacy page.",
+    "label_ar": "بإرسال هذا البلاغ توافق على التعامل مع محتواه كما هو موضَّح في صفحة الخصوصية.",
+    "use_rule": "B2 T: the consent line under the form; the privacy page link follows it (governed trust label)."
+  },
+  {
+    "ui_id": "UI-REPORT-SEND",
+    "label_en": "Send by e-mail",
+    "label_ar": "أرسل بالبريد الإلكتروني",
+    "use_rule": "B2 T: report form primary action (opens the mail app with the fixed-format body)."
+  },
+  {
+    "ui_id": "UI-REPORT-COPY",
+    "label_en": "Copy report",
+    "label_ar": "انسخ البلاغ",
+    "use_rule": "B2 T: report form secondary action for webmail users (copies the fixed-format body)."
+  },
+  {
+    "ui_id": "UI-REPORT-REFERENCE",
+    "label_en": "Reference code",
+    "label_ar": "الرمز المرجعي",
+    "use_rule": "B2 T: the label of the reference code shown after a report is prepared (YFIE-ERR-<record>-<yyyymmdd-hhmm>)."
+  },
+  {
+    "ui_id": "UI-REPORT-NOJS",
+    "label_en": "Without JavaScript, send an e-mail to the contact address with the fields above as its lines.",
+    "label_ar": "من دون JavaScript، أرسل رسالة بريد إلكتروني إلى عنوان التواصل تتضمن الحقول أعلاه، كلُّ حقل في سطر.",
+    "use_rule": "B2 T: the no-JavaScript instruction under the form (always rendered; the runtime hides it)."
+  },
+  {
+    "ui_id": "UI-REPORT-NOJS-LINK",
+    "label_en": "Open a pre-addressed e-mail with the field list",
+    "label_ar": "افتح رسالة بريد إلكتروني معنونة مسبقًا تتضمن قائمة الحقول",
+    "use_rule": "B2 T: the plain mailto link under the form (no-JavaScript transport)."
+  },
+  {
+    "ui_id": "UI-JS-REPORT-REQUIRED",
+    "label_en": "Complete this field.",
+    "label_ar": "أكمل هذا الحقل.",
+    "use_rule": "B2 T runtime: inline validation message on a required field."
+  },
+  {
+    "ui_id": "UI-JS-REPORT-NEED-ONE",
+    "label_en": "Say what is in question or what it should say.",
+    "label_ar": "اذكر ما هو محل الاعتراض أو ما ينبغي أن يرد.",
+    "use_rule": "B2 T runtime: inline validation when both free-text fields are empty."
+  },
+  {
+    "ui_id": "UI-JS-REPORT-EMAIL-INVALID",
+    "label_en": "This e-mail address is not valid.",
+    "label_ar": "عنوان البريد الإلكتروني هذا غير صالح.",
+    "use_rule": "B2 T runtime: inline validation of the optional reply address."
+  },
+  {
+    "ui_id": "UI-JS-REPORT-ERRORS",
+    "label_en": "The report is not complete: {n} field(s) need attention.",
+    "label_ar": "البلاغ غير مكتمل. عدد الحقول التي تحتاج إلى مراجعة: {n}.",
+    "use_rule": "B2 T runtime: the announced summary of validation errors (label-value form in Arabic, RC-3)."
+  },
+  {
+    "ui_id": "UI-JS-REPORT-PREPARED",
+    "label_en": "Report {ref} is ready. Your mail app should open; if it does not, use Copy report.",
+    "label_ar": "البلاغ {ref} جاهز. ينبغي أن يُفتح تطبيق البريد لديك؛ وإن لم يُفتح فاستخدم «انسخ البلاغ».",
+    "use_rule": "B2 T runtime: the status after a valid submit."
+  },
+  {
+    "ui_id": "UI-JS-REPORT-COPIED",
+    "label_en": "Report copied",
+    "label_ar": "تم نسخ البلاغ",
+    "use_rule": "B2 T runtime: the announced status after Copy report."
+  },
+  {
+    "ui_id": "UI-JS-REPORT-SUBJECT",
+    "label_en": "Error report {ref}",
+    "label_ar": "بلاغ عن خطأ {ref}",
+    "use_rule": "B2 T runtime: the e-mail subject after the product name."
+  },
+  {
+    "ui_id": "UI-CITE-FORMAT",
+    "label_en": "Citation format",
+    "label_ar": "صيغة الاستشهاد",
+    "use_rule": "OD-1017-04(a) (Stage B B2 T): the label of the format control beside the citation preview; rendered by scripts/yfie/render.py cite_tools()."
+  },
+  {
+    "ui_id": "UI-CITE-FORMAT-PLAIN",
+    "label_en": "Plain text",
+    "label_ar": "نص عادي",
+    "use_rule": "OD-1017-04(a): format option (the governed citation as previewed)."
+  },
+  {
+    "ui_id": "UI-CITE-FORMAT-APA",
+    "label_en": "APA 7",
+    "label_ar": "APA 7",
+    "use_rule": "OD-1017-04(a): format option."
+  },
+  {
+    "ui_id": "UI-CITE-FORMAT-CHICAGO",
+    "label_en": "Chicago",
+    "label_ar": "شيكاغو",
+    "use_rule": "OD-1017-04(a): format option."
+  },
+  {
+    "ui_id": "UI-CITE-FORMAT-BIBTEX",
+    "label_en": "BibTeX",
+    "label_ar": "BibTeX",
+    "use_rule": "OD-1017-04(a): format option (machine format, English keys)."
+  },
+  {
+    "ui_id": "UI-CITE-FORMAT-RIS",
+    "label_en": "RIS",
+    "label_ar": "RIS",
+    "use_rule": "OD-1017-04(a): format option (machine format, English tags)."
+  },
+  {
+    "ui_id": "UI-JS-CITE-RETRIEVED",
+    "label_en": "Retrieved {date}, from {url}",
+    "label_ar": "استُرجع بتاريخ {date} من {url}",
+    "use_rule": "OD-1017-04(a) runtime: the APA 7 retrieval statement; {date} is the access date in words, {url} the canonical address."
+  },
+  {
+    "ui_id": "UI-JS-CITE-ACCESSED",
+    "label_en": "Accessed {date}.",
+    "label_ar": "تاريخ الاطلاع: {date}.",
+    "use_rule": "OD-1017-04(a) runtime: the Chicago access statement (label-value form in Arabic)."
+  },
+  {
+    "ui_id": "UI-JS-CITE-RECORD",
+    "label_en": "Evidence Record {id}",
+    "label_ar": "سجل الدليل {id}",
+    "use_rule": "OD-1017-04(a) runtime: the record designation inside the formatted citations."
+  },
+  {
+    "ui_id": "UI-JS-CITE-TYPE-RECORD",
+    "label_en": "[Evidence record]",
+    "label_ar": "[سجل دليل]",
+    "use_rule": "OD-1017-04(a) runtime: the APA 7 bracketed description of a record page."
+  },
+  {
+    "ui_id": "UI-JS-CITE-TYPE-PAGE",
+    "label_en": "[Web page]",
+    "label_ar": "[صفحة ويب]",
+    "use_rule": "OD-1017-04(a) runtime: the APA 7 bracketed description of a page that is not a record."
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-REASON-DIFFERS",
+    "label_en": "Differs between these records: {fields}.",
+    "label_ar": "ما يختلف بين هذه السجلات: {fields}.",
+    "use_rule": "Stage B B2 T (SIG-5, BRIEF W4 T Compare): the one-sentence reason under the verdict naming the differing dimensions; {fields} lists the governed field labels."
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-REASON-MISSING",
+    "label_en": "Not recorded on at least one record: {fields}.",
+    "label_ar": "غير مسجَّل في سجل واحد على الأقل: {fields}.",
+    "use_rule": "B2 T (SIG-5): the reason when a required field is missing."
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-REASON-SAME-RECORD",
+    "label_en": "The same record is selected more than once.",
+    "label_ar": "اختير السجل نفسه أكثر من مرة.",
+    "use_rule": "B2 T (SIG-5): the reason for the same-record verdict."
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-REASON-ALIGNED",
+    "label_en": "Definition, population, method, period and currentness match as recorded.",
+    "label_ar": "يتطابق التعريف والمجتمع والطريقة والفترة وحداثة الدليل كما هي مسجَّلة.",
+    "use_rule": "B2 T (SIG-5): the reason for the aligned verdict."
+  },
+  {
+    "ui_id": "UI-COMPARE-COPY-SUMMARY",
+    "label_en": "Copy summary",
+    "label_ar": "انسخ الملخص",
+    "use_rule": "B2 T: the Compare action that copies the verdict, its reason and each record's title, period, population and boundary with the comparison link; rendered by scripts/yfie/families.py."
+  },
+  {
+    "ui_id": "UI-JS-COMPARE-SUMMARY-HEAD",
+    "label_en": "Comparison of {n} records",
+    "label_ar": "عدد السجلات المقارَنة: {n}",
+    "use_rule": "B2 T runtime: the first line of the copied summary (label-value form in Arabic, RC-3)."
+  },
+  {
+    "ui_id": "UI-JS-LIST-SEPARATOR",
+    "label_en": ",",
+    "label_ar": "،",
+    "use_rule": "B2 T runtime (R85-G01): the separator between the items of a generated list — the Compare reason's field names; the Arabic comma is governed here, never written in code. A space follows it in both editions."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-TRY",
+    "label_en": "Try:",
+    "label_ar": "جرّب:",
+    "use_rule": "Stage B B2 T (BRIEF W4 T Search, zero-result help): precedes up to three alias suggestions offered as links."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-OTHER-EDITION",
+    "label_en": "Search the Arabic edition for this",
+    "label_ar": "ابحث عن هذا في النسخة الإنجليزية",
+    "use_rule": "B2 T: zero-result help link carrying the query to the other edition's Evidence directory (each edition names the other)."
+  },
+  {
+    "ui_id": "UI-JS-SEARCH-QUESTIONS",
+    "label_en": "Start from the questions",
+    "label_ar": "ابدأ من الأسئلة",
+    "use_rule": "B2 T: zero-result help link to the Questions hub (/explore/)."
+  },
+  {
+    "ui_id": "UI-CORR-PROCESS-LINK",
+    "label_en": "How reports are triaged, fixed and logged (process document)",
+    "label_ar": "كيف تُفرَز البلاغات وتُصحَّح وتُسجَّل (وثيقة الإجراءات)",
+    "use_rule": "Stage B B2 T (BRIEF W4 T): the /corrections/ link to docs/CORRECTIONS_PROCESS.md in the public repository; rendered by scripts/yfie/families.py reference()."
   }
 ]
