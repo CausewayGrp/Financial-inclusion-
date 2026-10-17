@@ -1,5 +1,11 @@
 # Repository Change Log
 
+## 17 October 2026 — Neutralize missing D19–D22
+
+No approved text for D19–D22 exists in the authority records or Git history. The owner neutralized those four
+identifiers: they are not recovered, not blockers, and they grant nothing. Stage B entry remains unauthorized.
+No Production Master, public page, hosting or publication state changed.
+
 ## 16 October 2026 — Correct the documented public path
 
 Correct the README and public-path diagram to show all eight governed domains and every current Search result family,

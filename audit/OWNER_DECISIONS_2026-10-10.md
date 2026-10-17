@@ -221,3 +221,21 @@ What the instruction also records with these decisions (§0): the steward's earl
 is withdrawn; the single new-Reading slot under D9 is spent on CWR-012; CWR-013 is RESERVED, not published. Recording
 D16 here does not run anything: the aggregate is used only when the owner supplies the file its script produces
 (instruction §5, 6C-6).
+
+## 7. Neutralization of missing D19–D22 (17 October 2026)
+
+The owner instructed this session to recover D19–D22 or neutralize them. No approved text for D19, D20, D21 or D22
+exists in this file, the 11 October Stage A instruction, `audit/close_out/AMENDMENTS_D16_D22.md`, the Stage B charter,
+or Git history of those paths. The 11 October instruction required the authority of D16 to D22 to be recorded before
+Stage B. It supplied text only for D16–D18. D19–D22 were names in an amendments file that was not in the repository.
+Nothing above is rewritten. No original approval is inferred.
+
+Prospective neutralization:
+
+- D19, D20, D21 and D22 are neutralized. They are not recovered and not approved.
+- They impose no hidden obligation and grant no permission, design rule, publication right or Stage B entry.
+- They are no longer an SB-01 blocker.
+- Stage B entry is not authorized by this section. A separate owner instruction is still required.
+- The current defaults already listed in `audit/close_out/AMENDMENTS_D16_D22.md` stay in force under their own records.
+  They are not renamed D19–D22.
+
