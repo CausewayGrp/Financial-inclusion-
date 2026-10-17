@@ -83,6 +83,8 @@ must not be executed: the current instructions are the repository's `README.md`,
 
 `OWNER_DECISIONS_2026-10-17.md`, `close_out/TAKEOVER_BRIEF_2026-10-17.md` (F-12 redacted while the repository is public) and `close_out/STAGE_B_DESIGN_CHARTER_v3_2.md` — the owner's takeover brief of 17 October 2026 (Claude Code as the only writing agent), its decisions OD-1017-01 to OD-1017-14 (Stage B and Stage C authorized; hosting unselected; no release authorization) and the operative Stage B charter.
 
+`OWNER_DIRECTIVE_2026-10-17.md` — the owner's directive of 17 October 2026 for Phases 2 and 3 (Stage B and Stage C), received after PR-B, PR-C and PR-D merged: mandate, authority, settled items, outcomes, the evidence unit, language rules, seeds 23–32, never-build list, method, operations and the final-line rule. Verbatim; the resume point for every later session.
+
 - `stage_a_residue/` — transaction STAGE-A-RESIDUE (17 October 2026, OD-1017-12): the Appendix 2 content defects of the takeover brief that were still true on main, corrected Master-first, EN and AR together (exact-value cell plan, ledger and run report). Not a reopening of Stage A.
 
 `PUBLIC_LITERAL_CLOSURE.json` — written by `scripts/audit_public_literals.py` on every build; never edited by hand.

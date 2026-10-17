@@ -1,5 +1,13 @@
 # Repository Change Log
 
+## 17 October 2026 — Stage B G0 baseline (B0)
+
+Commit the owner directive of 17 October 2026 for Phases 2 and 3 (`audit/OWNER_DIRECTIVE_2026-10-17.md`), the G0
+measurement script and visual audit (`design/evidence/v2/`), their outputs (metrics, scoreboard, 42-contract audit,
+136 WebP screenshots, 8.35 MB), the Stage B design record `design/DESIGN_INTEGRATION_V2.md` (created under `AGENTS.md`
+rule 7 as amended on 17 October 2026) and `design/evidence/v2/STATE.json`. Read-only for the site: no Production
+Master, projection, page, hosting or publication state changed.
+
 ## 17 October 2026 — Stage A residue (PR-D, transaction STAGE-A-RESIDUE)
 
 Correct the Appendix 2 content defects of the takeover brief that were still true on main (OD-1017-12), Master-first,

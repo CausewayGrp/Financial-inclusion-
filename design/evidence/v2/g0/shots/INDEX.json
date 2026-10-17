@@ -1,0 +1,1093 @@
+{
+ "source": "design/evidence/v2/g0_measure.py --shots <scratch>, converted with Pillow to WebP (desktop views resized to 1100 px wide): first screens at 390 and 1440 for 23 routes x 2 languages, 320 and 768 for the four proving pages, full phone pages for Home, /payments/ and CLM-001, and the 11 interaction states per language. The remaining captures (320/768 first screens of other routes, 1440 and /data/ full pages) stay in scratch; their dimensions are in g0_metrics.json.",
+ "files": [
+  {
+   "file": "ar/about_390_first.webp",
+   "bytes": 35828,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/about_1440_first.webp",
+   "bytes": 45052,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/access_390_first.webp",
+   "bytes": 41730,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/access_1440_first.webp",
+   "bytes": 48210,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/contact_390_first.webp",
+   "bytes": 34926,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/contact_1440_first.webp",
+   "bytes": 34148,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/corrections_390_first.webp",
+   "bytes": 32350,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/corrections_1440_first.webp",
+   "bytes": 37218,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/data_390_first.webp",
+   "bytes": 38476,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/data_1440_first.webp",
+   "bytes": 44142,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/data_320_first.webp",
+   "bytes": 24044,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "ar/data_768_first.webp",
+   "bytes": 53202,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "ar/evidence_390_first.webp",
+   "bytes": 21498,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/evidence_1440_first.webp",
+   "bytes": 30270,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/evidence_CLM-001_390_first.webp",
+   "bytes": 38924,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/evidence_CLM-001_1440_first.webp",
+   "bytes": 49006,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/evidence_CLM-001_320_first.webp",
+   "bytes": 21370,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "ar/evidence_CLM-001_768_first.webp",
+   "bytes": 71684,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "ar/evidence_CLM-001_390_full.webp",
+   "bytes": 297648,
+   "px": [
+    390,
+    7575
+   ]
+  },
+  {
+   "file": "ar/evidence_CLM-003_390_first.webp",
+   "bytes": 41742,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/evidence_CLM-003_1440_first.webp",
+   "bytes": 51444,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/evidence_compare_390_first.webp",
+   "bytes": 40140,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/evidence_compare_1440_first.webp",
+   "bytes": 40952,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/evidence_VIS-POS-TERMINALS_390_first.webp",
+   "bytes": 39774,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/evidence_VIS-POS-TERMINALS_1440_first.webp",
+   "bytes": 45032,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/explore_390_first.webp",
+   "bytes": 32074,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/explore_1440_first.webp",
+   "bytes": 34106,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/finance_390_first.webp",
+   "bytes": 46342,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/finance_1440_first.webp",
+   "bytes": 52492,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/firms_390_first.webp",
+   "bytes": 44394,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/firms_1440_first.webp",
+   "bytes": 51824,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/home_390_first.webp",
+   "bytes": 37380,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/home_1440_first.webp",
+   "bytes": 46316,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/home_320_first.webp",
+   "bytes": 18914,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "ar/home_768_first.webp",
+   "bytes": 66416,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "ar/home_390_full.webp",
+   "bytes": 238412,
+   "px": [
+    390,
+    7190
+   ]
+  },
+  {
+   "file": "ar/measurement_390_first.webp",
+   "bytes": 37384,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/measurement_1440_first.webp",
+   "bytes": 47074,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/methodology_390_first.webp",
+   "bytes": 46792,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/methodology_1440_first.webp",
+   "bytes": 52532,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/payments_390_first.webp",
+   "bytes": 43694,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/payments_1440_first.webp",
+   "bytes": 49232,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/payments_320_first.webp",
+   "bytes": 22702,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "ar/payments_768_first.webp",
+   "bytes": 65974,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "ar/payments_390_full.png",
+   "bytes": 570502,
+   "px": [
+    390,
+    22609
+   ]
+  },
+  {
+   "file": "ar/people_390_first.webp",
+   "bytes": 40838,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/people_1440_first.webp",
+   "bytes": 45674,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/providers_390_first.webp",
+   "bytes": 43580,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/providers_1440_first.webp",
+   "bytes": 48440,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/readings_390_first.webp",
+   "bytes": 33022,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/readings_1440_first.webp",
+   "bytes": 40118,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/readings_how-money-reaches-households_390_first.webp",
+   "bytes": 41914,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/readings_how-money-reaches-households_1440_first.webp",
+   "bytes": 53946,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/reforms_390_first.webp",
+   "bytes": 45098,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/reforms_1440_first.webp",
+   "bytes": 50386,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "ar/remittances_390_first.webp",
+   "bytes": 37248,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "ar/remittances_1440_first.webp",
+   "bytes": 42054,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/about_390_first.webp",
+   "bytes": 42794,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/about_1440_first.webp",
+   "bytes": 50940,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/access_390_first.webp",
+   "bytes": 45476,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/access_1440_first.webp",
+   "bytes": 51116,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/contact_390_first.webp",
+   "bytes": 37688,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/contact_1440_first.webp",
+   "bytes": 45068,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/corrections_390_first.webp",
+   "bytes": 40098,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/corrections_1440_first.webp",
+   "bytes": 47640,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/data_390_first.webp",
+   "bytes": 45152,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/data_1440_first.webp",
+   "bytes": 56272,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/data_320_first.webp",
+   "bytes": 26062,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "en/data_768_first.webp",
+   "bytes": 68168,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "en/evidence_390_first.webp",
+   "bytes": 32376,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/evidence_1440_first.webp",
+   "bytes": 39940,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/evidence_CLM-001_390_first.webp",
+   "bytes": 49908,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/evidence_CLM-001_1440_first.webp",
+   "bytes": 61682,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/evidence_CLM-001_320_first.webp",
+   "bytes": 24770,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "en/evidence_CLM-001_768_first.webp",
+   "bytes": 91614,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "en/evidence_CLM-001_390_full.webp",
+   "bytes": 332228,
+   "px": [
+    390,
+    7081
+   ]
+  },
+  {
+   "file": "en/evidence_CLM-003_390_first.webp",
+   "bytes": 49960,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/evidence_CLM-003_1440_first.webp",
+   "bytes": 62118,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/evidence_compare_390_first.webp",
+   "bytes": 46344,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/evidence_compare_1440_first.webp",
+   "bytes": 42936,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/evidence_VIS-POS-TERMINALS_390_first.webp",
+   "bytes": 51446,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/evidence_VIS-POS-TERMINALS_1440_first.webp",
+   "bytes": 56264,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/explore_390_first.webp",
+   "bytes": 43438,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/explore_1440_first.webp",
+   "bytes": 47114,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/finance_390_first.webp",
+   "bytes": 51446,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/finance_1440_first.webp",
+   "bytes": 56692,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/firms_390_first.webp",
+   "bytes": 49798,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/firms_1440_first.webp",
+   "bytes": 56378,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/home_390_first.webp",
+   "bytes": 39036,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/home_1440_first.webp",
+   "bytes": 60800,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/home_320_first.webp",
+   "bytes": 24034,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "en/home_768_first.webp",
+   "bytes": 84190,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "en/home_390_full.webp",
+   "bytes": 294730,
+   "px": [
+    390,
+    7117
+   ]
+  },
+  {
+   "file": "en/measurement_390_first.webp",
+   "bytes": 44124,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/measurement_1440_first.webp",
+   "bytes": 57124,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/methodology_390_first.webp",
+   "bytes": 57536,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/methodology_1440_first.webp",
+   "bytes": 68562,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/payments_390_first.webp",
+   "bytes": 51030,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/payments_1440_first.webp",
+   "bytes": 61504,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/payments_320_first.webp",
+   "bytes": 26742,
+   "px": [
+    320,
+    568
+   ]
+  },
+  {
+   "file": "en/payments_768_first.webp",
+   "bytes": 80116,
+   "px": [
+    768,
+    1024
+   ]
+  },
+  {
+   "file": "en/payments_390_full.png",
+   "bytes": 548454,
+   "px": [
+    390,
+    21686
+   ]
+  },
+  {
+   "file": "en/people_390_first.webp",
+   "bytes": 46906,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/people_1440_first.webp",
+   "bytes": 54744,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/providers_390_first.webp",
+   "bytes": 52736,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/providers_1440_first.webp",
+   "bytes": 57866,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/readings_390_first.webp",
+   "bytes": 39730,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/readings_1440_first.webp",
+   "bytes": 47766,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/readings_how-money-reaches-households_390_first.webp",
+   "bytes": 50970,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/readings_how-money-reaches-households_1440_first.webp",
+   "bytes": 68700,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/reforms_390_first.webp",
+   "bytes": 51912,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/reforms_1440_first.webp",
+   "bytes": 58422,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "en/remittances_390_first.webp",
+   "bytes": 46820,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "en/remittances_1440_first.webp",
+   "bytes": 52096,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/ar/cite_open_390.webp",
+   "bytes": 35314,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/compare_verdict_390.webp",
+   "bytes": 36178,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/disclosure_open_390.webp",
+   "bytes": 47388,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/menu_open_390.webp",
+   "bytes": 13498,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/nojs_data_390.webp",
+   "bytes": 34576,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/nojs_evidence_CLM-001_390.webp",
+   "bytes": 34640,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/nojs_home_390.webp",
+   "bytes": 33690,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/report_link_390.webp",
+   "bytes": 35314,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/search_results_390.webp",
+   "bytes": 19842,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/source_facet_390.webp",
+   "bytes": 34906,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/ar/source_filter_390.webp",
+   "bytes": 30126,
+   "px": [
+    390,
+    844
+   ]
+  },
+  {
+   "file": "states/en/cite_open_1440.webp",
+   "bytes": 63432,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/compare_verdict_1440.webp",
+   "bytes": 44576,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/disclosure_open_1440.webp",
+   "bytes": 93216,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/menu_open_1440.webp",
+   "bytes": 62696,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/nojs_data_1440.webp",
+   "bytes": 61460,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/nojs_evidence_CLM-001_1440.webp",
+   "bytes": 62348,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/nojs_home_1440.webp",
+   "bytes": 63732,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/report_link_1440.webp",
+   "bytes": 63432,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/search_results_1440.webp",
+   "bytes": 57402,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/source_facet_1440.webp",
+   "bytes": 58208,
+   "px": [
+    1100,
+    687
+   ]
+  },
+  {
+   "file": "states/en/source_filter_1440.webp",
+   "bytes": 44152,
+   "px": [
+    1100,
+    687
+   ]
+  }
+ ]
+}

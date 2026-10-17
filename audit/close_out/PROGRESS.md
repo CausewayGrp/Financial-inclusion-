@@ -315,3 +315,21 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   line), COMMITTED on the third run. Local gates all PASS (validator 306/0; literal audit 19,813 records, 0 unresolved; content parity 304/0;
   bilingual invariance 0; browser suites; HTTP contract; negative control CO-G07 1/1 caught; manifest and checksums current). Branch
   `pr/stage-a-residue`, stacked on PR-C; PR opened by the owner. Phase 1 complete pending the three merges (PR-B, PR-C, PR-D in order).
+- 2026-10-17 · Phase 1 · merged by the owner, in order: PR-B as #54 at `a03e99a2` (08:58 UTC), PR-C as #55 at `12c90654` (09:36 UTC), PR-D as
+  #56 at `d36a51bb` (09:46 UTC). Main `d36a51bb`: Master `d1807346…`, Page Specs `0fe9340c…`; re-entry IDENTICAL, checksums, projections and
+  validator PASS locally. #53 closed. #51 stays draft as G1 challenger evidence. PHASE 1 COMPLETE.
+- 2026-10-17 · owner acceptance · The owner accepted all three PR-D items on 17 October 2026: "derive both" for the POS month-on-month rule
+  (item 6, superseding the 3 October 2026 withholding), the reforms event relabel (item 4) and the Methodology sentence (item 7). No veto.
+- 2026-10-17 · Phase 2 · The owner's directive of 17 October 2026 for Phases 2 and 3 is committed verbatim as `audit/OWNER_DIRECTIVE_2026-10-17.md`
+  (B0 PR). It wins over the brief where they differ; the charter where both are silent. Resume point for every later session.
+- 2026-10-17 · Phase 2 · B0 G0 · branch `pr/stage-b-g0` on main `d36a51bb`. Committed measurement script `design/evidence/v2/g0_measure.py`
+  (reproduces Part 2's table exactly: Home 8.5 · /data/ 70.5 · /measurement/ 44.7 · /payments/ 26.8 AR 390 screens), visual audit
+  `g0_visuals.py` (42 contracts + 10 table-only objects), `g0/` metrics, scoreboard, 136 WebP screenshots (8.35 MB), `design/DESIGN_INTEGRATION_V2.md`
+  (§1 G0: method, scoreboard, first-screen P1 proxies, six AI-simulated personas, Home contract, top-10 frictions G0-F01…F10, visual
+  judgement with 7 escalations, dispositions of Part 6 items 13–22 and seeds 23–32, findings ledger, memos per family, edition-2 list)
+  and `design/evidence/v2/STATE.json`. Decisions DL-V2-000, -002, -003; DL-V2-001 reserved for G1. Persona outcomes: 1 PASS, 2 PASS with
+  frictions, 3 PASS (naming partly), 4 INCONCLUSIVE, 5 PASS marginal, 6 FAIL (no interval on CLM-001 while Methodology §07 promises one).
+  Confirmed by browser: 5 of 8 topics have no visible link from Home on desktop (F-15); the TOC strip overflows on all 23 routes at 390;
+  no domain page meets P1 in its first screen; /corrections/ contradicts itself; the reforms chain marks "Operation reached" on a
+  statement labelled "not evidence of operation". Withdrawn: an Arabic-search zero-result reading (timing artefact; «حوالات» finds 89).
+  Not run in G0: axe, zoom, screen-reader order, throttled timing (G3/W4F); no human testing by decision. Next: B1 S.
