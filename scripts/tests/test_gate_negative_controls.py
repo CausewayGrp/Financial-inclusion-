@@ -134,7 +134,7 @@ def edit_states(oid: str, edit):
 # The text must be a substring of the real message: several gates interpolate a route or a visual id into the middle of
 # theirs, so a control that names the gate and then the wording would never match (found by running these).
 # Source contracts and audit records are rooted in the repository; other paths are under dist/.
-SOURCE_PREFIXES = ("site-src/", "scripts/", "audit/", "handoff/")   # audit/: the generated literal closure (E2-DIFF)
+SOURCE_PREFIXES = ("site-src/", "scripts/", "audit/", "handoff/", ".github/")   # audit/: the generated literal closure (E2-DIFF)
 
 
 def visual_title(vid: str, lang: str) -> str:
@@ -611,6 +611,12 @@ CONTROLS = [
     # RC-19 (independent review of 70398d1; owner decision of 3 October 2026, 23:54 Aden): FMIIP is never dated to July
     # 2025; a retired record address leads on to its record and nothing links it or keeps its social image; the language
     # switch and the menu are links; only the first sentence's figures are emphasised.
+    ("RC-19: deployment guard is enabled", ".github/workflows/deploy.yml",
+     replace("if: ${{ false }}", "if: ${{ true }}"),
+     "RC-19 deployment must remain unconditionally disabled while hosting is unselected"),
+    ("RC-19: deployment job with numeric suffix escapes guard", ".github/workflows/deploy.yml",
+     lambda t: t + "\n  publish2:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo unsafe\n",
+     "RC-19 deployment must remain unconditionally disabled while hosting is unselected"),
     ("RC-19: FMIIP is dated to July 2025 again", "en/reforms/index.html",
      sub_once(r'(<main[^>]*>)', r'\1<p>The FMIIP, which started in July 2025, has three components.</p>'),
      "RC-19 en/reforms/index.html dates FMIIP to July 2025"),

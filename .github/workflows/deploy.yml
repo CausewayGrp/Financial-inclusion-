@@ -11,7 +11,9 @@
 #   variable  YFIE_DO_REGISTRY            the DigitalOcean Container Registry name
 #   variable  YFIE_DO_APP_ID              the App Platform app id (the first run creates the app and prints it)
 #   secret    DIGITALOCEAN_ACCESS_TOKEN   a token with write access to that registry and to App Platform
-name: Deploy to DigitalOcean (inactive until the owner switches it on)
+# 16 October 2026: historical adapter only. Hosting is unselected; no variable can enable these jobs.
+# See audit/OWNER_DECISIONS_2026-10-16.md. A future deployment needs a separately reviewed code change.
+name: Deployment disabled — hosting unselected
 
 # R-04 (independent review of 70398d1): nothing deploys before the full verification has passed on the commit being
 # deployed — governance gates, browser acceptance and every negative-control shard (workflow "Verify"). A push to main
@@ -35,7 +37,7 @@ jobs:
   verify:
     # A manual run proves its own commit first, with every job of Verify (browser and controls included).
     name: Full verification (manual runs)
-    if: ${{ github.event_name == 'workflow_dispatch' && vars.YFIE_DEPLOY_ENABLED == 'true' }}
+    if: ${{ false }}
     uses: ./.github/workflows/verify.yml
 
   deploy:
@@ -43,7 +45,8 @@ jobs:
     needs: verify
     # Runs only when deployment is switched on, and only on a verified commit: after Verify succeeded on a push to main,
     # or after the verification job above succeeded on a manual run. A skipped or failed verification never deploys.
-    if: ${{ always() && vars.YFIE_DEPLOY_ENABLED == 'true' && ((github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'main') || (github.event_name == 'workflow_dispatch' && needs.verify.result == 'success')) }}
+    # Both jobs are now unconditionally disabled, including manual dispatch.
+    if: ${{ false }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     environment: production

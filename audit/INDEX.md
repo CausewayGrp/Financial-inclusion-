@@ -79,6 +79,8 @@ must not be executed: the current instructions are the repository's `README.md`,
 
 ## 4. Generated
 
+`OWNER_DECISIONS_2026-10-16.md` and `hosting_neutral/` — prospective hosting-neutral owner decision, exact-value privacy transaction and verification receipts; no release authorization.
+
 `PUBLIC_LITERAL_CLOSURE.json` — written by `scripts/audit_public_literals.py` on every build; never edited by hand.
 
 - `stage_a_final/` — prospective Stage A final reconciliation (15 October 2026): exact-value Master transaction, material adjudications, rollback reports, verification and delegated acceptance. It is not rights clearance or public-release approval.

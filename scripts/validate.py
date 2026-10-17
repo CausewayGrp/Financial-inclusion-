@@ -3732,14 +3732,13 @@ try:
             errors.append(f"RC-19 {_where}: a figure after the first sentence is emphasised like the finding")
     if len(_blocks) < 100:
         errors.append(f"RC-19 read only {len(_blocks)} figure blocks")
-    # (5) R-04: the deploy workflow deploys only a commit the full Verify workflow proved (no push trigger of its own;
-    #     a manual run calls the reusable Verify first); (6) R-17: the image's nginx is pinned by digest.
+    # (5) R-04, prospective owner decision 16 October 2026: deployment is unconditionally disabled.
+    # (6) R-17: the retained optional adapter's nginx image remains pinned by digest.
     _dy = (ROOT / ".github/workflows/deploy.yml").read_text(encoding="utf-8")
-    _on = _dy.split("\non:", 1)[1].split("\njobs:", 1)[0] if "\non:" in _dy else ""
-    if re.search(r"^\s+push:", _on, re.M) or "workflows: [Verify]" not in _on or "uses: ./.github/workflows/verify.yml" not in _dy \
-            or "needs: verify" not in _dy or "github.event.workflow_run.conclusion == 'success'" not in _dy \
-            or "needs.verify.result == 'success'" not in _dy:
-        errors.append("RC-19 the deploy workflow can deploy a commit the full verification has not passed")
+    _jobs = re.findall(r"^  ([A-Za-z_][A-Za-z0-9_-]*):\n(.*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:|\Z)", _dy.split("\njobs:", 1)[1], re.M | re.S)
+    if {j for j, _ in _jobs} != {"verify", "deploy"} or any(
+            re.findall(r"^    if: (.*)$", body, re.M) != ["${{ false }}"] for _, body in _jobs):
+        errors.append("RC-19 deployment must remain unconditionally disabled while hosting is unselected")
     _dk = (ROOT / "site-src/hosting/digitalocean/Dockerfile").read_text(encoding="utf-8")
     if not re.search(r"^FROM nginx:[\w.\-]+@sha256:[0-9a-f]{64}$", _dk, re.M):
         errors.append("RC-19 the App Platform image's nginx base is not pinned by digest")

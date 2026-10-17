@@ -1,5 +1,24 @@
 # Deployment
 
+## Current operational boundary — 16 October 2026
+
+Hosting and the public address are unselected. See `audit/OWNER_DECISIONS_2026-10-16.md`.
+The DigitalOcean and corporate-proxy instructions below document the previous selection and
+are inactive. Cloudflare's temporary preview is pending verified account-side retirement;
+neither its existence nor its retirement is established by the committed build. No deployment
+is authorized. `deploy.yml` has unconditional false job guards; `do_deploy.py` refuses execution.
+Setting old secrets or variables cannot activate them. A future release needs a reviewed change.
+
+Required Verify uses local servers and the reserved metadata fixture `https://yfie.example/financial-inclusion-evidence`.
+It needs no Cloudflare/DigitalOcean credentials, DNS, live origin or deploy account. `_headers` is
+the portable response contract. `test_http_contract.py` checks it on a local server, including
+redirects, MIME, cache/security headers, full browser acceptance and missing-header rejection.
+The nginx/App Platform image checks are retained in the optional manual host-adapter workflow.
+The corporate proxy test remains a conditional adapter check, not a current release prerequisite.
+No source exports are uploaded or published; `public_downloads` remains false.
+
+The earlier host-specific procedure below is retained as history and cannot override this boundary.
+
 **Status:** nothing is deployed. The public site is not released (the programme never declares PUBLIC RELEASE READY);
 this page states how the build in `dist/` would be served. It is the header, discovery and privacy contract that the
 implementation keeps; it is not a claim of any live security test. Since EAD-01 `dist/` is the production runtime's

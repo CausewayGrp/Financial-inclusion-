@@ -1,7 +1,7 @@
 {
   "schema": "YFI_CURRENT_PROJECT_CONTEXT/1.0",
   "role": "COMPACT_PROJECTION_NOT_AUTHORITY",
-  "generated_at": "2026-10-15T11:25:12Z",
+  "generated_at": "2026-10-16T19:00:21Z",
   "system": {
     "name_en": "Yemen Financial Inclusion Evidence",
     "name_ar": "أدلة الشمول المالي في اليمن",
@@ -17,9 +17,9 @@
       "open_pull_requests": "none at the content-complete checkpoint"
     },
     "release_readiness": {
-      "declared": "NOT DECLARED — Cloudflare Workers pre-release preview exists; approved DigitalOcean production release is not activated",
+      "declared": "NOT DECLARED — hosting and public address unselected; Cloudflare retirement authorized but account-side completion unverified (owner decision 16 October 2026)",
       "blockers": [
-        "DigitalOcean App Platform hosting: owner account, registry, token, repository variables; web administrator proxy route; public origin (docs/RELEASE_RUNBOOK.md steps 1–9a)",
+        "Future host/address selection, verified privacy/response contract and separate owner release approval; no provider account is required for development or PR acceptance (audit/OWNER_DECISIONS_2026-10-16.md)",
         "public_downloads stays false, a separate owner decision (step 2); the CC BY 4.0 text is confirmed by the owner (10 Oct 2026, step 7a), so licence_text_confirmed is true",
         "Seven sources need a person with a browser (docs/HANDOVER_TO_DEVELOPER.md §4)",
         "A phone check of the live site from Yemen (handover §5)",
@@ -76,12 +76,19 @@
       "decision_record": "Dated post-merge Stage A prospective content acceptance comment on the reconciliation PR, after successful final-main Verify; scope file alone does not declare closure.",
       "stage_b": "BLOCKED: approved charter/amendment provenance and D19–D22 authority not established; separate authorization required.",
       "public_release_authorized": false
+    },
+    "hosting_decision": {
+      "date": "2026-10-16",
+      "record": "audit/OWNER_DECISIONS_2026-10-16.md",
+      "host": "UNSELECTED",
+      "deployment_authorized": false,
+      "cloudflare_retirement": "AUTHORIZED_PENDING_ACCOUNT_VERIFICATION"
     }
   },
   "production_master": {
     "path": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
     "drive_id": "1xAbdDHJd5bYo0Pzo_a6dR6HsZ056LzJU",
-    "sha256": "580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8",
+    "sha256": "620f3368eaf34b100418410928df3a779c6e5fed180711593dc7122099930637",
     "is_sole_authority": true,
     "authority_dimensions": [
       "semantic",
@@ -95,7 +102,7 @@
   },
   "controlled_projection": {
     "page_specs_path": "site-src/content/page_specs.json",
-    "page_specs_sha256": "8dd600e940f26213c658c5f3188e8e63e16201e2e588d7379bb1db6d46b9068e",
+    "page_specs_sha256": "e97880df59284be90199628ceba2dd8b715fb1ba2f670b2e8149ae4f45a341f5",
     "page_specs": 151,
     "all_page_specs_master_hash_match": true,
     "page_specs_index_master_hash_match": true
@@ -254,7 +261,7 @@
     ]
   },
   "validation": {
-    "master_sha256_recorded": "580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8",
+    "master_sha256_recorded": "620f3368eaf34b100418410928df3a779c6e5fed180711593dc7122099930637",
     "projection_hash_binding": "PASS",
     "schema_required_keys": [
       "schema",

@@ -1,5 +1,15 @@
 # Repository Change Log
 
+## 16 October 2026 — Prospective hosting neutrality
+
+Record the owner's withdrawal of the DigitalOcean selection and bounded Cloudflare retirement
+authorization. Disable deploy jobs and CLI, retain historical adapters in an optional lane, and
+require the portable local HTTP response contract with a missing-header negative control.
+Use a reserved origin fixture. HOST-NEUTRAL corrects the bilingual privacy hosting and cookie-route
+assertions in the Production Master, then regenerates consumers. Origin remains null, pre-release
+true, downloads false. Cloudflare account operations and Actions startup resolution remain blocked
+by unavailable account/admin access; no retirement, deployment or release is claimed.
+
 ## 15 October 2026 — Stage A material reconciliation
 
 STAGE-A-FINAL separates the pre-release edition from per-record source checking, withdraws unsupported IMF missing-value and World Bank publisher-contradiction interpretations, and regenerates both editions without changing historical values or universes. Correct domain-figure record actions from Master-derived destination existence; retain evidence and source citations. Strengthen chronology/link validation and browser/negative controls. Record prospective Stage B constraints and the D19–D22 provenance gap; Stage B remains blocked. Formal content acceptance is a separate post-merge decision, excluding rights/release approval.

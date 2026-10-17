@@ -152,16 +152,11 @@ jobs:
       - name: Security headers (B14 b; every page served under dist/_headers, no policy violation)
         run: python3 scripts/tests/test_security_headers.py
 
-      - name: Base path (owner B2; built for https://causewaygrp.com/financial-inclusion-evidence, served under the path; negative control included)
+      - name: Base path (reserved origin fixture, local HTTP, negative control included)
         run: python3 scripts/tests/test_base_path.py
 
-      - name: DigitalOcean route (owner decision of 3 October 2026; the nginx block of _headers in a real nginx, every page under the header test; negative control included)
-        run: |
-          command -v nginx || sudo apt-get install -y -q nginx-light
-          python3 scripts/tests/test_digitalocean_hosting.py
-
-      - name: DigitalOcean image (R-17; the pinned nginx image of site-src/hosting/digitalocean/Dockerfile, every page under the header test)
-        run: python3 scripts/tests/test_digitalocean_hosting.py --image
+      - name: Portable HTTP response contract (local fixture, missing-header negative control)
+        run: python3 scripts/tests/test_http_contract.py
 
       - name: No JavaScript (R-05; the note, the language switch and the menu with JavaScript off; negative control included)
         run: python3 scripts/tests/test_no_javascript.py

@@ -4,6 +4,13 @@
 
 Developed and maintained by CauseWay.
 
+**Hosting decision, 16 October 2026:** hosting and the public address are unselected.
+The [prospective owner decision](audit/OWNER_DECISIONS_2026-10-16.md) supersedes the 3 October
+DigitalOcean selection. Cloudflare retirement is authorized but account-side completion must be
+verified separately. Neither provider is required for development or PR acceptance. Deployment is
+disabled; the origin remains null and the site remains pre-release. Older hosting instructions below
+are historical context, not instructions to activate a provider.
+
 Yemen Financial Inclusion Evidence is a governed bilingual evidence resource. It starts from a consequential question about financial inclusion in Yemen and gives the strongest answer the controlled evidence can support. It then shows what that answer means, what it does not establish, the wider system context that changes its reading, what remains unknown, and what should be measured next. The record, the method and the original source stay attached.
 
 It exists because financial inclusion in Yemen cannot be read from one number, one institution or one moment. The available evidence covers different populations, institutions, units, methods, periods, geographies and publishing authorities. An ordinary dashboard collapses those differences. This resource keeps them visible.
@@ -86,9 +93,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8`
+Master SHA-256: `620f3368eaf34b100418410928df3a779c6e5fed180711593dc7122099930637`
 
-Page Specs SHA-256: `8dd600e940f26213c658c5f3188e8e63e16201e2e588d7379bb1db6d46b9068e`
+Page Specs SHA-256: `e97880df59284be90199628ceba2dd8b715fb1ba2f670b2e8149ae4f45a341f5`
 
 | Layer | Role |
 |---|---|

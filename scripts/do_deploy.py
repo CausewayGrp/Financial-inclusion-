@@ -45,6 +45,7 @@ def update_tag(spec: dict, tag: str, service: str = "site") -> dict:
 
 
 def main() -> int:
+    sys.exit("Deployment disabled: hosting is unselected (owner decision 16 October 2026). A reviewed release change is required.")
     ap = argparse.ArgumentParser()
     ap.add_argument("--tag", required=True)
     ap.add_argument("--app-id", default="")

@@ -1,0 +1,80 @@
+{
+ "stage": "HOST-NEUTRAL",
+ "staged_master_sha256": "6d60252dc60333cd53d01d3c5540a040c08c7cbdf1100ce2413490cf93bda5d8",
+ "installed": [
+  "authority/YFI_CURRENT_PROJECT_CONTEXT.json"
+ ],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 306 HTML files from 151 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=19737 unresolved=0 open=0 problems=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 151 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 2263 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 1,
+   "tail": [
+    "HTML=306 ERRORS=4 WARN=0",
+    "FAIL R85-G09 audit record not listed in audit/INDEX.md: OWNER_DECISIONS_2026-10-16.md",
+    "FAIL R85-G09 audit record not listed in audit/INDEX.md: hosting_neutral/",
+    "FAIL F6-G01 description empty or over 200 characters en/privacy",
+    "FAIL F6-G01 description empty or over 200 characters ar/privacy"
+   ]
+  }
+ ],
+ "result": "ROLLED_BACK"
+}
