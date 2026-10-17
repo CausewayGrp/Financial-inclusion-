@@ -618,7 +618,7 @@ CONTROLS = [
      "RC-1115 en/evidence/CLM-019/index.html record line is not between its h1 and its page tools"),
     ("RC-1115 / S12: the FOR WHOM clock loses its q3 anchor", "en/evidence/CLM-019/index.html",
      replace('<div class="clock" id="q3">', '<div class="clock">', 0),
-     "RC-1115 only"),
+     "RC-1115 en/evidence/CLM-019/index.html record line has no FOR WHOM clock (id q3)"),
     ("RC-1115: Home section 6 loses the drawn payment chain", "ar/index.html",
      replace('href="/ar/evidence/VIS-PAYMENT-RAILS/"', 'href="/ar/evidence/"', 0),
      "RC-1115 /ar/ Home section 6 does not link the drawn payment chain"),

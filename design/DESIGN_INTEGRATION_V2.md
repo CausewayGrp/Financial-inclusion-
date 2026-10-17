@@ -428,12 +428,28 @@ difference is already present in `d36a51bb` and belongs to Stage A's recorded ch
 ### 2.6 Gates (the full set, after the last change)
 
 Validator 306 pages / 0 errors (RC-S10, RC-NAV, R4, PB-0422, RC-A1, E2-DATES, E2-PREC, S04.1, P2-G01, P4-G01, R85-G09,
-R86-G02, RP-G06); negative controls CAUGHT; literal audit 19,883 records, 0 unresolved, determinism one SHA over eight
+R86-G02, RP-G06); gate negative controls run locally with `--only`: the three RC-S10 controls and the RC-NAV/D8 controls
+(caught), plus the built-in controls of the base-path and no-JavaScript suites — not the full suite (see the correction
+below); literal audit 19,883 records, 0 unresolved, determinism one SHA over eight
 seeds; source lineage truth 8/8; projections check PASS; generator unit tests 22 OK; content parity 304 documents, 0
 differing; bilingual numeric invariance and number words 0 of 152 pairs; viewport acceptance 308/308; public tools
 36/37 (one not applicable to the current data); security headers, base path, portable HTTP contract and no-JavaScript
 PASS; diagrams, social images (302) and logo derivatives current; re-entry 15 tests OK; manifest and checksums
 regenerated last. Idempotence held after each transaction.
+
+**Correction, 17 October 2026 (owner directive in conversation).** PR #58 (`pr/stage-b-s` → main) is OPEN, not merged. CI on
+its head `2509d22d` failed Gate negative controls shard 5/6 — "RC-1115 / S12: the FOR WHOM clock loses its q3 anchor" NOT
+CAUGHT (27 of 28) — and therefore the aggregate check; Browser acceptance, Governance gates and shards 1–4 and 6 passed;
+the Cloudflare Workers Build check is the F-06 owner item. Root cause: S12 keeps the q3 anchor on every record line (232 of
+232), but the RC-1115 rule only enforced an aggregate floor (at least 200 record lines with the anchor), so one page
+losing its anchor was invisible to it, and the B1 control expected that floor's message ("RC-1115 only …"). Fix, commit
+`bf9b8323`: RC-1115 fails per record page whose record line lacks the FOR WHOM clock with id q3, and the control expects that
+message. Local verification before the push: `--only RC-1115` caught 9 of 9; the full suite of 170 controls 167 of 167 caught. The earlier
+wording "negative controls CAUGHT" described only the `--only` subset and is withdrawn; this PR is reported again only
+after Verify is 9/9 on its exact head. Also on record: OD-1017-14 (PR #59, merged at `3ef16ade`) prospectively selects a
+DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com (`public_origin` stays null;
+implementation stays Stage C); PR #51 stays as it is, conflicts included, as G1 design evidence to be closed without
+merging.
 
 ### 2.7 Open after B1 → B2 / G1 / G2
 
