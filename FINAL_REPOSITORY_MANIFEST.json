@@ -21,7 +21,7 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 381,
+  "AUDIT_HISTORY": 382,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 291,
-  "DESIGN_PACKAGE": 447,
+  "DESIGN_PACKAGE": 592,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
@@ -237,6 +237,10 @@
   },
   {
    "path": "audit/OWNER_DECISIONS_2026-10-17.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/OWNER_DIRECTIVE_2026-10-17.md",
    "class": "AUDIT_HISTORY"
   },
   {
@@ -2772,6 +2776,10 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/DESIGN_INTEGRATION_V2.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/ESCALATIONS.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -4397,6 +4405,582 @@
   },
   {
    "path": "design/evidence/d7/trust-terms-en-390.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/STATE.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/g0_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/g0_scoreboard.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/g0_visuals.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/g0_visuals.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/INDEX.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/about_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/about_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/access_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/access_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/contact_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/contact_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/corrections_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/corrections_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/data_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/data_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/data_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/data_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_CLM-001_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_CLM-001_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_CLM-001_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_CLM-001_390_full.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_CLM-001_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_CLM-003_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_CLM-003_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_VIS-POS-TERMINALS_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_VIS-POS-TERMINALS_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_compare_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/evidence_compare_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/explore_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/explore_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/finance_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/finance_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/firms_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/firms_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/home_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/home_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/home_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/home_390_full.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/home_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/measurement_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/measurement_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/methodology_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/methodology_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/payments_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/payments_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/payments_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/payments_390_full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/payments_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/people_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/people_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/providers_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/providers_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/readings_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/readings_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/readings_how-money-reaches-households_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/readings_how-money-reaches-households_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/reforms_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/reforms_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/remittances_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/ar/remittances_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/about_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/about_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/access_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/access_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/contact_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/contact_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/corrections_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/corrections_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/data_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/data_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/data_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/data_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_CLM-001_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_CLM-001_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_CLM-001_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_CLM-001_390_full.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_CLM-001_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_CLM-003_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_CLM-003_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_VIS-POS-TERMINALS_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_VIS-POS-TERMINALS_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_compare_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/evidence_compare_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/explore_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/explore_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/finance_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/finance_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/firms_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/firms_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/home_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/home_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/home_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/home_390_full.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/home_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/measurement_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/measurement_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/methodology_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/methodology_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/payments_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/payments_320_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/payments_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/payments_390_full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/payments_768_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/people_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/people_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/providers_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/providers_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/readings_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/readings_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/readings_how-money-reaches-households_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/readings_how-money-reaches-households_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/reforms_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/reforms_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/remittances_1440_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/en/remittances_390_first.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/cite_open_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/compare_verdict_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/disclosure_open_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/menu_open_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/nojs_data_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/nojs_evidence_CLM-001_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/nojs_home_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/report_link_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/search_results_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/source_facet_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/ar/source_filter_390.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/cite_open_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/compare_verdict_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/disclosure_open_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/menu_open_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/nojs_data_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/nojs_evidence_CLM-001_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/nojs_home_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/report_link_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/search_results_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/source_facet_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/shots/states/en/source_filter_1440.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0_measure.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0_visuals.py",
    "class": "DESIGN_PACKAGE"
   },
   {
