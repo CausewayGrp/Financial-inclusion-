@@ -19,6 +19,23 @@ The public path is understand, then explore, then verify. Arabic and English are
 
 CauseWay stewards the synthesis, the derivation and the corrections process. CauseWay is not the regulator, the official statistical authority, or the publisher of third-party evidence.
 
+## For developers and AI agents: start or resume here
+
+This repository uses one governed Production Master, not interchangeable handoff ZIPs or prompts.
+Read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md), then inspect your checkout with
+`python3 scripts/reentry.py --base <previous-task-sha> --pr` (omit `--base` if unknown; use `--offline` if necessary).
+This tool reports **Git repository state, not programme or owner authorization**. Unknown status stays UNKNOWN.
+
+The [Core Constitution](authority/CORE_CONSTITUTION.md) states durable principles.
+The [Current Project Context](authority/YFI_CURRENT_PROJECT_CONTEXT.json) is a validated subordinate projection of
+the sole [Production Master](authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx).
+Stage A **content acceptance**, within its stated scope, is recorded by the
+[acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) and the
+[dated decision on merged PR #49](https://github.com/CausewayGrp/Financial-inclusion-/pull/49#issuecomment-6192247588).
+Stage B remains **BLOCKED** pending a prospective owner charter decision and separate entry authorization
+([entry charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md)); D19–D22 original approvals remain unverified.
+There is no Stage C or public production-release authorization.
+
 ## What it is, and what it is not
 
 It is a decision resource for reading financial inclusion evidence. It is not a dashboard, a regulator, an official statistical authority, a general financial-system observatory, a provider directory, a reform tracker, a research blog, or a CauseWay marketing site. Broader financial-system context appears only where it changes the reading of inclusion evidence.
@@ -50,16 +67,16 @@ External facts stay attributed to their original publishers. CauseWay attributio
 
 | | |
 |---|---|
-| **Position** | **DESIGN HANDOFF SUPERSEDED** (10 October 2026): design is executed in this repository under the close-out brief (`audit/close_out/BRIEF.md`, W4); `handoff/` is historical reference |
+| **Position** | **DESIGN HANDOFF SUPERSEDED** (10 October 2026). `handoff/` is historical. The earlier W4 close-out design brief is a quality/reference baseline, **not** active authorization to enter Stage B; see the [prospective Stage B charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md). |
 | Non-design v1 product | Complete |
-| Current phase | Close-out (`audit/close_out/BRIEF.md`, version 5): evidence and Arabic (Stage A), structure and design (Stage B), governance and acceptance (Stage C); hosting last. Progress: `audit/close_out/PROGRESS.md` |
+| Current phase | **Stage A content accepted within its dated 15 October 2026 scope; Stage B BLOCKED** pending prospective charter approval and a separate owner entry decision (SB-01). Stage C and public production release are not authorized. The earlier close-out brief is historical programme lineage, not an active command to implement all stages. Current engineering/PR status must be checked on GitHub. |
 | Post-v1, owner decision | C1 typed difference block; C2 dedicated guarantee route; C3 public contradiction index |
 | Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
 | Content | Complete on `main`, 10 October 2026. The annotated tag `checkpoint/2026-10-10-content-complete` marks it, or is the owner's to push ([`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §9) |
 | Stage A (evidence and Arabic) | STAGE A COMPLETE was recorded at `53dccc4d` (11 October 2026). The Stage A addendum followed on 11 October 2026 (#39 to #42: literal audit v3, CLOSE-6A to CLOSE-6C, Reading CWR-012). The final instruction v5 changes are integrated: CLOSE-6D (#43), CLOSE-6E (#44), CLOSE-6F (#45 at `612ec146`, 13 October), and CO-G07/CLOSE-6G with the [addendum report](audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md) (#46 at `e46ff9eb`, 14 October 2026). The 15 October final reconciliation and [prospective acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) supersede the remaining material interpretation and edition issues. The dated post-merge acceptance record on the reconciliation PR is the formal Stage A decision; the old report is historical, not retrospective owner approval. Stage B prerequisites and Stage C/release acceptance remain separate. Neither DESIGN HANDOFF READY nor PUBLIC RELEASE READY is claimed |
 | Public inventory (11 October 2026) | 151 Page Specs (306 HTML documents), 116 Evidence Records, 60 public claims, 12 Readings, 10 measurement priorities, 31 dated events, 206 source records (191 with a public locator), 522 search records |
-| Open pull requests | Only the close-out's own, merged one at a time (`audit/close_out/PROGRESS.md`). #21 (another session's alternative naming Part B, superseded by #19) and #23 (an earlier draft of this checkpoint, superseded by RIGHTS-FINAL) were closed without merge |
+| Open pull requests | [Check GitHub's live PR list](https://github.com/CausewayGrp/Financial-inclusion-/pulls). Current branch, PR and CI state must be inspected live; historic close-out decisions remain in `audit/close_out/PROGRESS.md`, not this changing-status field. |
 
 Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; the 31 dated events of the system chronology are indexed in search, each deep-linking to its own anchor on /finance/ (the analytical rule is not a dated event and is not indexed); the reuse licence for CauseWay's own content (CC BY 4.0, [`audit/OWNER_DECISIONS_2026-10-10.md`](audit/OWNER_DECISIONS_2026-10-10.md)) — a reuse licence is not regulatory licensing, and CauseWay neither holds nor claims the status of a licensed financial institution.
 
@@ -67,16 +84,21 @@ Not closed, and not claimed: design integration; integrated Arabic and English, 
 
 Remaining path: non-design v1 complete, then design / presentation integration, then final integrated QA, then release / cutover, then owner release approval. Release-time steps live in [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md). Open items live in [`FINAL_OPEN_ITEMS_REGISTER.md`](FINAL_OPEN_ITEMS_REGISTER.md). The content-pass ledger is [`audit/final_content/FINAL_CONTENT_LOG.md`](audit/final_content/FINAL_CONTENT_LOG.md).
 
-## Release readiness (post-PR #46)
+## Release boundary — production not authorized
 
-The Verify run on PR #46's merged commit `e46ff9eb` passed all nine jobs; its subsequent Cloudflare Workers build also
-succeeded. Cloudflare serves a pre-release preview, not the approved DigitalOcean production release. **Public release
-is not declared**; production hosting, the public origin and downloads remain under their existing owner controls.
-What still stands between this repository and an approved production release, each with its owner:
+PR #46's Verify and the subsequent Cloudflare Workers build passed **at that time**; that is historical
+verification, not evidence of the current temporary preview's live state. Cloudflare Workers has been used for a
+**temporary pre-release preview**; its external GitHub build status is not the Production Master's semantic authority,
+a substitute for Verify, or permission to release. The intended DigitalOcean production route is **inactive** and is
+not a present development or billing prerequisite. Do not provision, activate, or deploy either host under ordinary
+evidence/design work. The committed `dist/` is the review build, **not proof of a current live deployment**.
+
+**No public production release has been authorized**; the future release gates remain under owner control.
+The following are deferred release prerequisites, not instructions to incur hosting costs now:
 
 | Blocker | Owner | Where |
 |---|---|---|
-| Hosting: the DigitalOcean account, the App Platform app and container registry, the deploy token and repository variables, the corporate proxy route, the public origin | CauseWay (owner), then Claude Code deploys | [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14 |
+| Hosting (future release only, not required for present review): DigitalOcean account, approved app/registry/token/variables, corporate proxy route and public origin | CauseWay (owner), then authorized deploy operator | [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14 |
 | Data downloads stay off (`public_downloads: false`), a separate owner decision. The CC BY 4.0 text itself is confirmed by the owner (10 October 2026, RIGHTS-FINAL), so `licence_text_confirmed` is `true` and no longer blocks a deploy | Owner | runbook steps 2 and 7a |
 | Seven sources that need a person with a browser | A person | [`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §3 |
 | A phone check of the live site from Yemen, in Arabic | A person in Yemen | handover §4 |
@@ -125,7 +147,7 @@ If the Master changes, subordinate projections are regenerated. There is no para
 
 ## Public path
 
-Home asks the question. Questions leads to people, firms, banks and microfinance, providers, payments and reforms. Evidence, Readings and Sources carry the record and the publisher. Methodology and Measurement priorities hold method and what should be measured next. Search returns pages, questions, evidence records, Readings, measurement priorities, sources and the dated events of the system chronology. Compare tests comparability before it shows values. About, Corrections, and Rights and reuse hold accountability.
+Home asks the question. Questions lead to the eight governed domains: People, Firms, Banks and microfinance, Providers, Payments, Remittances, Access and Reforms. Evidence, Readings and Sources carry the record and the publisher. Methodology and Measurement priorities hold method and what should be measured next. Search discovers existing pages, questions, Evidence Records, Readings, measurement priorities, source records and source locators, and dated chronology events that deep-link to their anchors on `/finance/`; it does not validate claims. Compare tests comparability before it shows values. About, Corrections, and Rights and reuse hold accountability.
 
 ![Public path](docs/diagrams/public-path.svg)
 

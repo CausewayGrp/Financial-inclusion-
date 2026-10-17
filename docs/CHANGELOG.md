@@ -10,6 +10,29 @@ assertions in the Production Master, then regenerates consumers. Origin remains 
 true, downloads false. Cloudflare account operations and Actions startup resolution remain blocked
 by unavailable account/admin access; no retirement, deployment or release is claimed.
 
+## 16 October 2026 — Correct the documented public path
+
+Correct the README and public-path diagram to show all eight governed domains and every current Search result family,
+including dated chronology events that deep-link to their Finance anchors. Add a semantic consistency test, run by the
+existing Verify workflow, that derives the domain routes, Search families, chronology count and Reading count from
+governed projections. No Production Master, public runtime, navigation, content or release state changed.
+
+## 16 October 2026 — Clarify current programme and hosting-neutral review status
+
+Surgically update README and deployment documentation: Stage A has a bounded dated acceptance while
+Stage B remains blocked; the earlier close-out programme is not current authorization. Distinguish the
+committed 306-HTML review build, unverified temporary Cloudflare preview and inactive future DigitalOcean
+production route. Correct obsolete 292/288 and eleven-Reading counts in deployment guidance.
+No hosting credentials, workflow, public content, Production Master or owner-release state changed.
+
+## 16 October 2026 — Provider-neutral agent re-entry
+
+Repair the active README/AGENTS/CONTRIBUTING entrypoints while preserving sole Production Master authority,
+accepted bounded Stage A and blocked Stage B. Introduce a read-only Git/PR-state inspection helper with
+15 local Git-fixture regression tests in the existing Verify governance job. Restore the PR's existing
+governance checklist and add transferable cross-agent handover. No evidence, rights, public content,
+release state or deployment changes.
+
 ## 15 October 2026 — Stage A material reconciliation
 
 STAGE-A-FINAL separates the pre-release edition from per-record source checking, withdraws unsupported IMF missing-value and World Bank publisher-contradiction interpretations, and regenerates both editions without changing historical values or universes. Correct domain-figure record actions from Master-derived destination existence; retain evidence and source citations. Strengthen chronology/link validation and browser/negative controls. Record prospective Stage B constraints and the D19–D22 provenance gap; Stage B remains blocked. Formal content acceptance is a separate post-merge decision, excluding rights/release approval.
