@@ -1,6 +1,6 @@
 {
  "stage": "STAGE-B-T",
- "staged_master_sha256": "8ac589d0f1a0b665649a575607fd8e5c353216b19d328c4b6e70c586a835e95a",
+ "staged_master_sha256": "03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e",
  "installed": [],
  "steps": [
   {
@@ -64,16 +64,26 @@
   },
   {
    "step": "validate",
-   "exit": 1,
+   "exit": 0,
    "tail": [
-    "HTML=306 ERRORS=5 WARN=0",
-    "FAIL R85-G01 bilingual public copy held in app.js (isAr ? literal); move it to 04 interface copy",
-    "FAIL F6-G05 form in ar/contact/index.html",
-    "FAIL F6-G05 form in en/contact/index.html",
-    "FAIL RC-T1 ar/evidence/MF-ORIG-001+002/index.html record MF-ORIG-001+002 has no report link carrying its ID",
-    "FAIL RC-T1 en/evidence/MF-ORIG-001+002/index.html record MF-ORIG-001+002 has no report link carrying its ID"
+    "HTML=306 ERRORS=0 WARN=0",
+    "WEBSITE REPOSITORY VALIDATION PASS"
+   ]
+  },
+  {
+   "step": "generator_idempotence",
+   "exit": 0,
+   "tail": [
+    " \"master_sha256\": \"03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e\",",
+    " \"outputs\": 40,",
+    " \"differences\": [],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTION CHECK PASS"
    ]
   }
  ],
- "result": "ROLLED_BACK"
+ "result": "COMMITTED",
+ "master_sha256": "03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e",
+ "page_specs_sha256": "cf8138806a4e43be3947e6e460d9e498f5a854ef0adc3813fe161d1d750be328"
 }

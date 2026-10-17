@@ -1,7 +1,7 @@
 {
  "transaction": "STAGE-B-T",
  "decision": "audit/OWNER_DIRECTIVE_2026-10-17.md (Phase 2, B2 T); takeover brief Part 6 items 16 and 17; OD-1017-04(a); BRIEF W4 T (search, Compare, source directory, report an error); design/DESIGN_INTEGRATION_V2.md §3",
- "summary": "54 interface labels (EN and AR): the structured report-an-error form on /contact/#report (fields, error types, actions, validation and status messages, the no-JavaScript instruction), the citation format control and its runtime phrases (plain text, APA 7, Chicago, BibTeX, RIS), the Compare verdict reason and copied summary, the search zero-result help and the /corrections/ process-document link.",
+ "summary": "55 interface labels (EN and AR): the structured report-an-error form on /contact/#report (fields, error types, actions, validation and status messages, the no-JavaScript instruction), the citation format control and its runtime phrases (plain text, APA 7, Chicago, BibTeX, RIS), the Compare verdict reason and copied summary, the search zero-result help and the /corrections/ process-document link.",
  "self_counts": {
   "site_pages": 151,
   "bilingual_sections": 254,
@@ -22,8 +22,8 @@
   "remittances": 29
  },
  "input_master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
- "output_master_sha256": "8ac589d0f1a0b665649a575607fd8e5c353216b19d328c4b6e70c586a835e95a",
- "cells_written": 54,
+ "output_master_sha256": "03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e",
+ "cells_written": 55,
  "changes": [
   {
    "finding": "STAGE-B-T:T-REPORT-FORM",
@@ -474,6 +474,15 @@
    "field": "UI-JS-COMPARE-SUMMARY-HEAD",
    "old": null,
    "new": "Comparison of {n} records || عدد السجلات المقارَنة: {n}"
+  },
+  {
+   "finding": "STAGE-B-T:T-COMPARE-REASON",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-LIST-SEPARATOR",
+   "old": null,
+   "new": ", || ،"
   },
   {
    "finding": "STAGE-B-T:T-SEARCH-ZERO",
