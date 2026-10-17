@@ -293,4 +293,25 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
 - 2026-10-17 · Phase 1 · PR-C: `pr/takeover-inputs` (stacked on PR-B): the brief (F-12 redacted), the OD-1017 record, charter v3.2, pointers,
   the F-05 addendum, SB-01 → CLOSED (93/9/47/11/139 = 299), front doors (F-09), AGENTS rules 2 and 7, CONTRIBUTING §2/§8/§10, re-entry guidance.
   Open findings carried here, not in the register: F-03, F-04, F-06 (owner: retire the Workers check), F-07, F-08, F-10, F-11, F-12 (owner:
-  visibility), F-13, F-14 (PR-D), F-15, F-16, F-18, F-19.
+  visibility), F-13, F-14 (PR-D), F-15, F-16, F-18, F-19. Committed `d7ae0286`, branch pushed.
+- 2026-10-17 · Phase 1 · PR-D · STAGE-A-RESIDUE (Master 620f3368 → d1807346, 58 cells; `audit/stage_a_residue/`; OD-1017-12). Appendix 2
+  items, each re-verified in the Master before the change: 1 CLOSED (CWR-010 thesis: "a count reported by the programme" / «عدد أفاد به
+  البرنامج»); 2 CLOSED (Arabic editor ruling: the World Bank's own «مدفوعات رقمية أو تلقيها», merchant «مدفوعات رقمية للتجار»; 7 cells);
+  3 CLOSED; 4 CLOSED (event label UI-VIS-CAT-EVT-EXHIBITION no longer implies operation; the chain step and the event stay); 5 CLOSED
+  (CLM-006 universe_en/ar); 6 CLOSED by one stated rule — derive wherever two consecutive totals are published, keep beside the displayed
+  percentage, correct neither — applied to transactions (+18.46% vs +9.9%) and terminals (+3.35% vs +2.4%) in CLM-003, VIS-POS-TERMINALS,
+  VIS-POS-TRANSACTIONS, the passport and the two observations; decision line: "derive both" chosen over "withhold both" because the raw
+  totals are held and read, and withholding would delete the January derivations the records already carry; it supersedes the 3 October
+  2026 owner note's withholding under OD-1017-12 (owner may veto); 7 CLOSED (records do not print a read/derived state, so the
+  Methodology now says what is bound and that computed figures carry their calculation); 8 CLOSED. 9 STAYS NOT_ASSESSED: the World
+  Bank data catalogue entry 0037898 states "Creative Commons Attribution 4.0", classification Public (read 17 October 2026), but the
+  export-control record of 15 October notes the RPW workbook's own "Restricted Data" terms; the two must be reconciled in the original
+  before any rights promotion (W7/W8 FRONTIER re-attempt). 10 STAYS: /people/ already carries CWR-004 and CWR-007, which answer the
+  people question directly, and /finance/ carries CWR-002 and CWR-006; the two-Reading cap and the CWR-011 placement are kept by
+  OD-1017-01; CWR-012's domain is remittances. 16 CARRIED TO T (Part 6 item 17): SRC-WB-FINDEX-AGG-2022 already links the
+  FX.OWN.TOTL.* per-indicator pages; saving, borrowing and digital-payment indicators have no stable per-indicator World Bank page
+  besides the Findex DataBank, to be bound Master-first with the series codes. 11–15 and 17 go to S, T and W6 as marked. Methodology
+  social cards redrawn in the same commit. Runner: rolled back twice on the Windows host (no `python3` on PATH, then R85-G09 index
+  line), COMMITTED on the third run. Local gates all PASS (validator 306/0; literal audit 19,813 records, 0 unresolved; content parity 304/0;
+  bilingual invariance 0; browser suites; HTTP contract; negative control CO-G07 1/1 caught; manifest and checksums current). Branch
+  `pr/stage-a-residue`, stacked on PR-C; PR opened by the owner. Phase 1 complete pending the three merges (PR-B, PR-C, PR-D in order).

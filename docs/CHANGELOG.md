@@ -1,5 +1,20 @@
 # Repository Change Log
 
+## 17 October 2026 — Stage A residue (PR-D, transaction STAGE-A-RESIDUE)
+
+Correct the Appendix 2 content defects of the takeover brief that were still true on main (OD-1017-12), Master-first,
+EN and AR together (58 cells, `audit/stage_a_residue/`): the 45,460 pilot recipients are stated as a programme-reported
+count in Reading CWR-010's thesis (item 1); the Findex "made or received a digital payment" Arabic uses the World Bank's
+own form «مدفوعات رقمية» on seven cells, Arabic editor's ruling (item 2); the stray conjunction in CWR-012's Arabic thesis
+(item 3); the reforms chain event is relabelled "Digital-payment exhibition; CBY-Aden statement on unified-network
+activity (not evidence of operation)" (item 4); CLM-006's universe names the filtered denominator behind 91.84%
+(item 5); one month-on-month rule for the POS series: the change is derived wherever two consecutive totals are
+published and kept beside the displayed percentage, so April→May 2026 is now derived like December→January
+(terminals +3.35% beside +2.4%; transactions +18.46% beside +9.9%), superseding the withholding of the 3 October 2026
+owner note (item 6); Methodology says what is bound and what is computed instead of "every figure is checked" (item 7);
+Terms describe the per-source reuse-terms state instead of "no item-level terms" (item 8). Items 9, 10 and 16 are
+recorded without a Master change in `audit/close_out/PROGRESS.md`. The two methodology social cards are redrawn.
+
 ## 17 October 2026 — Takeover inputs (PR-C)
 
 Commit the owner's takeover brief of 17 October 2026 (`audit/close_out/TAKEOVER_BRIEF_2026-10-17.md`, finding F-12
