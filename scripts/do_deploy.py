@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Point the DigitalOcean App Platform app at one pushed image and wait until it is live (the release route,
+"""INACTIVE historical adapter: main refuses execution while hosting is unselected (16 October 2026).
+
+Historical behaviour: point the DigitalOcean App Platform app at one pushed image and wait until it is live (the release route,
 docs/RELEASE_RUNBOOK.md, "Hosting"; owner decision of 3 October 2026). Run by .github/workflows/deploy.yml only, after
 every gate and after the image has been pushed to the DigitalOcean Container Registry.
 

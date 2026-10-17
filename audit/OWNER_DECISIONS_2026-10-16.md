@@ -52,3 +52,20 @@ live endpoint identity and dependencies remain UNVERIFIED; retirement remains BL
 No check enforcement or account setting was changed. Owner/admin access is needed to inspect
 the Actions rejection annotation and permitted runner configuration, and Cloudflare access is
 needed to verify dependencies and perform retirement. Do not infer a billing cause.
+
+### Refreshed receipt — 17 October 2026
+
+The preceding access results describe the initial inspection, not the final GitHub state.
+PR #50 subsequently completed Verify run 38946392754, all nine jobs on head `29075c47`,
+and merged as `274583df`. PR #51 advanced to `64dca58b` with successful run 38972997743.
+This branch preserves its implementation in `18ed4f3f` and merges current main normally.
+Separate PR #52 records the owner's prospective neutralization of missing D19–D22;
+this hosting change does not duplicate or override that authority work.
+
+Independent integrity review found and resolved a stale privacy-column assumption,
+a deployment job-name edge case, and omitted portable response cases. The corrected transaction
+changes exactly four privacy body cells and passed regeneration, validation and idempotence.
+Both deployment fault controls were caught. The portable HTTP browser sweep passed all
+306 pages and rejected a missing required header. No human participant testing is claimed.
+Local browser is Debian Chromium 154.0.8037.57, substituted for Playwright's pinned download;
+GitHub browser acceptance remains necessary. Cloudflare account access remains unavailable.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""The DigitalOcean release route serves the header contract (owner decision of 3 October 2026: production hosting is
-DigitalOcean, at https://causewaygrp.com/financial-inclusion-evidence/).
+"""Optional historical DigitalOcean adapter compatibility; no host is selected (16 October 2026).
+The former 3 October selection is retained as history. This test uses a reserved origin fixture.
 
   python3 scripts/tests/test_digitalocean_hosting.py               # build, serve in nginx, header test, negative control
   python3 scripts/tests/test_digitalocean_hosting.py --site DIR    # a site already built with the decided origin
@@ -45,7 +45,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-ORIGIN = "https://causewaygrp.com/financial-inclusion-evidence"
+ORIGIN = "https://yfie.example/financial-inclusion-evidence"
 BASE = "/financial-inclusion-evidence"
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "scripts" / "tests"))
