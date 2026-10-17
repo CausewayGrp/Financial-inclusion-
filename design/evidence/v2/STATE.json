@@ -319,7 +319,7 @@
    9.5
   ],
   "tap_targets_under_24px": 64,
-  "negative_controls_local_coverage": "--only 'T:' 3 of 3 caught; full suite of 167 controls: run on this tree before the push, its result in the record line that follows",
+  "negative_controls_local_coverage": "--only 'T:' 3 of 3 caught; the full suite of 170 controls (167 plus the three B2 additions) run on this tree before the push: the first run caught 169 of 170 and found one control whose selector B2 had outdated (a record's report link), fixed in its own commit; the re-run's result is recorded in audit/close_out/PROGRESS.md",
   "tools": {
    "search": "zero-result help; P2-G01 probe set is the gate",
    "compare": "reason sentence per verdict; copy summary; no qualified pair in the Master (DL-V2-010)",

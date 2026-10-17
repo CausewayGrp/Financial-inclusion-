@@ -384,8 +384,10 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   Arabic editor (16 rows changed). F-16 tested as the brief asked: no legitimately qualified pair exists among the 14 comparable records
   (the Findex waves are a visual and a crosswalk, not per-wave records); none manufactured (DL-V2-010); an owner content question.
   Tests: five new browser tests with negative controls (40/41 passed); gate RC-T1 with three negative controls (run locally with
-  `--only 'T:'`, 3 of 3 caught; the full suite of 167 controls: run on this tree before the push, its result in the
-  record line that follows). Gates after the last
+  `--only 'T:'`, 3 of 3 caught; the full suite, 170 controls with the three B2 additions, run on this tree before the
+  push — its first run caught 169 of 170 and found a second control whose selector B2 had outdated, "a record's report
+  link loses its record" (the link now carries `#report` and `data-report-link`), fixed in its own commit like RC-1115;
+  the result of the re-run is the record line that follows). Gates after the last
   change: validator 306/0; literal audit 19,883 records / 0 unresolved; content parity 304/0; invariance 0 of 152; viewport
   308/308; security headers, base path, HTTP contract and no-JS PASS;
   manifest and checksums regenerated last. Re-measured (`g0/t1_metrics.json`): /contact/ AR 390 4.1 → 6.0 screens; Home 9.5;

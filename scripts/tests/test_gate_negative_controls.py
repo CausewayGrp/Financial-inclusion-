@@ -500,8 +500,9 @@ CONTROLS = [
      replace('<div class="controls"><button type="button" class="tbtn" data-search-open', '<div class="controls"><button type="button" class="tbtn cite" data-cite>x</button><button type="button" class="tbtn" data-search-open'),
      "RC-NAV ar/readings/index.html the header's controls are not search, language and menu"),
     ("a record's report link loses its record", "en/evidence/CLM-010/index.html",
-     replace('<a class="report" href="/en/contact/?record=CLM-010">', '<a class="report" href="/en/contact/">'),
-     "RC-NAV en/evidence/CLM-010/index.html the page-tools report link is /en/contact/"),
+     replace('<a class="report" href="/en/contact/?record=CLM-010#report" data-report-link>',
+             '<a class="report" href="/en/contact/#report" data-report-link>'),
+     "RC-NAV en/evidence/CLM-010/index.html the page-tools report link is /en/contact/#report"),
     # STAGE-A-FINAL: source-review dates and website edition are separate clocks.
     ("Stage A: the source checking reference becomes a universal cutoff", "site-src/content/content/interface_copy.json",
      replace('"label_en": "See each source record"', '"label_en": "3 October 2026"'),
