@@ -161,3 +161,52 @@ material held non-public (F-12), and decides visibility in the GitHub settings. 
   - Record the change in CONTRIBUTING §5.
 - **If it stays public:** CI is free. Leave the workflow as it is, keep working, and repeat F-12 in each phase report
   until the owner decides.
+
+---
+
+## Appended 17 October 2026, 18:10 Asia/Riyadh — OD-1017-14: prospective hosting selection and the public-address convention
+
+Recorded by the steward from the owner's decision given in conversation on 17 October 2026 (17:33–18:10 Riyadh), after
+PR #57 merged at `ce4ae5c8`. This decision is **prospective**: nothing in the build, `site-src/deployment.json`, the
+workflows or DNS changes under it. Implementation is Stage C work (BRIEF W8, `docs/RELEASE_RUNBOOK.md`) and happens
+only when that stage reaches it. The directive's final-line condition (`audit/OWNER_DIRECTIVE_2026-10-17.md`, §13) is
+unchanged.
+
+**OD-1017-14(a) — Host.** Production hosting is DigitalOcean: the Droplet that already serves `causewaygrp.com`,
+managed through EasyPanel. This supersedes, prospectively, the 16 October "hosting unselected" decision
+(`audit/OWNER_DECISIONS_2026-10-16.md`). It re-selects DigitalOcean but **not** the 3 October route: no App Platform
+app, no corporate proxy, no subpath. The applicable shape is the runbook's Route 3: the product on its own subdomain
+at the root, our nginx serving the header contract of `_headers` (`scripts/hosting_nginx.py`,
+`site-src/hosting/digitalocean/Dockerfile`, proven by `scripts/tests/test_digitalocean_hosting.py` and
+`test_security_headers.py --base`), TLS terminated by the Droplet's front proxy, and nothing set or served by the
+corporate application.
+
+**OD-1017-14(b) — Public origin.** `https://yemen-financial-inclusion.causewaygrp.com`, with no path.
+`public_origin` stays `null`, `pre_release` stays `true` and `public_downloads` stays `false` until the Stage C release
+steps set them under the runbook. The name is decided now so that no Stage B or Stage C work designs for a subpath,
+and so that social cards, canonical URLs and citation strings have one target.
+
+**OD-1017-14(c) — Convention for CauseWay evidence products.** Every evidence product is its own static site on its
+own subdomain at the root, named `<country>-<topic>.causewaygrp.com`: lowercase English words, hyphenated, no
+acronyms, no internal project names. One repository, one site, one origin; origins are never shared between products.
+`evidence.causewaygrp.com` is reserved for a later static index of the family and is used by no product. A product's
+name is fixed before its `public_origin` is set and is never changed after its first external citation, because the
+cite tool and every published citation depend on it.
+
+**OD-1017-14(d) — DNS.** The owner holds an A record `yfie.causewaygrp.com` pointing at the Droplet. It is to be
+replaced by `yemen-financial-inclusion.causewaygrp.com` at the owner's convenience, before Stage C. `yfie` is an
+internal acronym and appears in no public copy, metadata or address.
+
+**OD-1017-14(e) — F-06.** With DigitalOcean selected, the owner disconnects the Cloudflare "Workers Builds" app from
+the repository in the Cloudflare dashboard. Until then the check stays ignored and is never made required.
+
+**OD-1017-14(f) — Precondition for Stage C, for the web administrator.** The corporate application's `session`
+cookie must be host-only (no `Domain=.causewaygrp.com` attribute). A parent-domain cookie would be sent by browsers
+to the evidence subdomain, which sets no cookie and promises none on its privacy page. This is checked before the
+first deployment.
+
+**OD-1017-14(g) — Corporate CMS.** The corporate content system on the same Droplet is outside this product. The
+Production Master remains the sole authority; no CMS sits in the publication path.
+
+**Not decided here:** repository visibility (F-12, OD-1017-13), public downloads, release timing. These remain open
+owner items and are repeated in each phase report.
