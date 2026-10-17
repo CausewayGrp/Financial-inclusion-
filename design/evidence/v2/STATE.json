@@ -26,7 +26,7 @@
   ]
  },
  "repository": {
-  "main": "ce4ae5c8",
+  "main": "3ef16ade (PR #59 merged; PR #57 at ce4ae5c8)",
   "master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
   "page_specs_sha256": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
   "current_branch": "pr/stage-b-s",
@@ -36,11 +36,12 @@
    "PR-B": "#54 a03e99a2",
    "PR-C": "#55 12c90654",
    "PR-D": "#56 d36a51bb",
-   "B0": "#57 ce4ae5c8"
+   "B0": "#57 ce4ae5c8",
+   "OD-1017-14": "#59 3ef16ade (hosting selection, prospective)"
   },
   "open_prs": {
-   "#51": "draft; G1 challenger evidence; close after DL-V2-001",
-   "B1": "pr/stage-b-s -> main; see PROGRESS.md for its number"
+   "#51": "draft; G1 challenger evidence; left as it is, conflicts included; to be closed without merging after DL-V2-001",
+   "#58": "OPEN, not merged: pr/stage-b-s -> main; CI at 2509d22d failed Gate negative controls shard 5/6 (RC-1115 / S12 control NOT CAUGHT, 27 of 28); fixed at bf9b8323 (RC-1115 per-page q3 check); local --only RC-1115 caught 9 of 9; full suite 167 of 167 caught; Verify 9/9 on the exact head pending until CI confirms it"
   }
  },
  "baseline": {
@@ -274,5 +275,12 @@
    "vs_b0_d36a51bb": "305 pages; gone edge-fN (S4, re-hosted), data-hub-num (D8); new shows, topics, record-line, fig-data, toc-grouped, boundary-more, home-topics, ma-more",
    "vs_2ddbfb61": "291 pages, 14 new pages; other differences predate B0"
   }
+ },
+ "owner_decisions_on_record": [
+  "OD-1017-14 (PR #59, 3ef16ade): DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com, prospective; public_origin stays null; implementation stays Stage C"
+ ],
+ "negative_controls_local_coverage": {
+  "B1": "--only: RC-S10 (3), RC-NAV/D8 controls; base-path and no-JS built-in controls; the full suite was not run before the first push (corrected 17 October 2026)",
+  "B1 fix": "--only RC-1115 caught 9 of 9; full suite 167 of 167 caught"
  }
 }

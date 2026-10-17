@@ -358,3 +358,17 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   content parity 304/0; invariance 0/152; viewport 308/308; public tools 36/37 (1 n/a); security headers, base path, HTTP contract, no-JS
   PASS; diagrams, social (302), logo current; re-entry 15 OK; manifest and checksums regenerated last. Decisions DL-V2-004…007. Open owner
   items unchanged: F-12 visibility, F-06 Workers check; 19 Dependabot alerts noted. Next: B2 T on `pr/stage-b-t`, stacked on `pr/stage-b-s`.
+
+- 2026-10-17 · Phase 2 · B1 S correction · PR #58 (`pr/stage-b-s` → main) is OPEN, not merged. CI on its head `2509d22d` failed Gate negative
+  controls shard 5/6 — "RC-1115 / S12: the FOR WHOM clock loses its q3 anchor" NOT CAUGHT (27 of 28) — and therefore the aggregate; Browser
+  acceptance, Governance gates and shards 1–4 and 6 passed; the Cloudflare Workers Build check is the F-06 owner item. Root cause: the S12
+  record line keeps the q3 anchor on every record (232 of 232); the RC-1115 rule only enforced an aggregate floor (≥200 record lines with
+  the anchor), so one page losing it was invisible, and the B1 control expected the floor's message. Fix in its own commit `bf9b8323`: RC-1115
+  fails per record page whose record line lacks the FOR WHOM clock with id q3; the control expects that message. Local verification:
+  `--only RC-1115` caught 9 of 9; the full suite (170 controls) 167 of 167 caught. Correction of the B1 record: the local B1 run covered only the `--only`
+  subset (RC-S10 ×3, RC-NAV/D8) and the built-in controls of the base-path and no-JS suites — "negative controls CAUGHT" is withdrawn
+  for the full suite; #58 is reported again only after Verify 9/9 on its exact head. Also on record: OD-1017-14 (PR #59, merged at
+  `3ef16ade`, 15:46 UTC) prospectively selects a DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com;
+  `public_origin` stays null; implementation stays Stage C. PR #51 stays as it is, conflicts included (G1 design evidence; closed without
+  merging later). B2 is held unpushed until #58 is green; then `pr/stage-b-s` is merged (not rebased) into `pr/stage-b-t` and B2's PR
+  targets `pr/stage-b-s`.
