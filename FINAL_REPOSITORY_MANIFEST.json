@@ -3,9 +3,9 @@
  "purpose": "What every tracked file is. One authority -> one projection path -> one runtime content path -> one current recipient start path. Hashes: SHA256SUMS.txt.",
  "authority": {
   "production_master": "authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx",
-  "production_master_sha256": "580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8",
+  "production_master_sha256": "620f3368eaf34b100418410928df3a779c6e5fed180711593dc7122099930637",
   "page_specs": "site-src/content/page_specs.json",
-  "page_specs_sha256": "8dd600e940f26213c658c5f3188e8e63e16201e2e588d7379bb1db6d46b9068e",
+  "page_specs_sha256": "e97880df59284be90199628ceba2dd8b715fb1ba2f670b2e8149ae4f45a341f5",
   "logo": "site-src/assets/CauseWay_Master_Logo.png",
   "logo_sha256": "5830163d50f9badbef3227ec44e7705548e2fcc8a06b2d6ae33d56ade60c6a90",
   "rule": "The Production Master is the only semantic authority. Everything under site-src/content, dist, design/architecture and audit/PUBLIC_LITERAL_CLOSURE.json is generated from it and never edited by hand, except the two CONTROLLED_CONTRACT files, which the programme steward maintains in place and the generator validates against the Master's projections."
@@ -21,11 +21,11 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 369,
+  "AUDIT_HISTORY": 376,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 50,
+  "BUILD_AND_GATES": 51,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 289,
@@ -41,7 +41,7 @@
   "PROJECTION_CONTRACT": 11,
   "PROJECTION_GENERATOR": 13,
   "RECIPIENT_HANDOFF": 11,
-  "REPOSITORY_ENGINEERING": 11,
+  "REPOSITORY_ENGINEERING": 12,
   "RUNTIME_SOURCE": 7,
   "STANDING_POLICY": 6,
   "VENDORED_FONTS": 27
@@ -65,6 +65,10 @@
   },
   {
    "path": ".github/workflows/deploy.yml",
+   "class": "REPOSITORY_ENGINEERING"
+  },
+  {
+   "path": ".github/workflows/optional-host-adapter.yml",
    "class": "REPOSITORY_ENGINEERING"
   },
   {
@@ -225,6 +229,10 @@
   },
   {
    "path": "audit/OWNER_DECISIONS_2026-10-10.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/OWNER_DECISIONS_2026-10-16.md",
    "class": "AUDIT_HISTORY"
   },
   {
@@ -1397,6 +1405,30 @@
   },
   {
    "path": "audit/generator_baseline/GATE_RUN_2_ENTRY_MASTER_PLUS_AIR001.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/hosting_neutral/ATTEMPT_1_ROLLED_BACK.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/hosting_neutral/ATTEMPT_2_BROWSER_SANDBOX.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/hosting_neutral/CELL_LEDGER.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/hosting_neutral/PRIVACY_CELL_PLAN.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/hosting_neutral/RUN_REPORT.json",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/hosting_neutral/privacy_transaction.py",
    "class": "AUDIT_HISTORY"
   },
   {
@@ -7465,6 +7497,10 @@
   },
   {
    "path": "scripts/tests/test_gate_negative_controls.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_http_contract.py",
    "class": "BUILD_AND_GATES"
   },
   {

@@ -6,6 +6,21 @@ No approved text for D19–D22 exists in the authority records or Git history. T
 identifiers: they are not recovered, not blockers, and they grant nothing. Stage B entry remains unauthorized.
 No Production Master, public page, hosting or publication state changed.
 
+## 16 October 2026 — Prospective hosting neutrality
+
+Record the owner's withdrawal of the DigitalOcean selection and bounded Cloudflare retirement
+authorization. Disable deploy jobs and CLI, retain historical adapters in an optional lane, and
+require the portable local HTTP response contract with a missing-header negative control.
+Use a reserved origin fixture. HOST-NEUTRAL corrects the bilingual privacy hosting and cookie-route
+assertions in the Production Master, then regenerates consumers. Origin remains null, pre-release
+true, downloads false. Cloudflare account operations and Actions startup resolution remain blocked
+by unavailable account/admin access; no retirement, deployment or release is claimed.
+
+Finished on 17 October 2026 (PR-B of the takeover brief, `pr/hosting-neutral-finish`): README, the release runbook
+and the deployment contract now say "unselected" consistently; the runbook's DigitalOcean procedure sits under a dated
+"historical adapter" heading; the Master transaction HOSTING-NEUTRAL-PRIVACY (580d2dc19054 → 620f3368eaf3, four
+cells) is recorded with its trailers. Nothing else changed.
+
 ## 16 October 2026 — Correct the documented public path
 
 Correct the README and public-path diagram to show all eight governed domains and every current Search result family,

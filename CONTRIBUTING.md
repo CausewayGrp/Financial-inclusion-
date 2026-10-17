@@ -105,6 +105,12 @@ allowances) is edited directly and survives a rollback.
 
 ## 5. The gates
 
+Hosting update (16 October 2026): `test_http_contract.py` is required local response acceptance.
+DigitalOcean/nginx image tests below are now optional compatibility checks via
+`.github/workflows/optional-host-adapter.yml`; corporate proxy acceptance applies only if that
+adapter is selected later. No hosting account is required by Verify. See
+`audit/OWNER_DECISIONS_2026-10-16.md`; the earlier platform selection is historical.
+
 CI (`.github/workflows/verify.yml`) runs all of these on every push to `main` and every pull request. Run them locally
 before you commit; together they take about a minute.
 

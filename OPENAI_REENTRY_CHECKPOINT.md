@@ -17,7 +17,7 @@ Neither Stage C nor public release is authorized. Dated narrative below is linea
 
 
 **Release readiness, 10 October 2026.** Every gate passes on `main`. What still stands between the repository and a public site is in `docs/HANDOVER_TO_DEVELOPER.md` §1–7, and each item has an owner:
-- DigitalOcean App Platform hosting: the owner's account, registry, token and repository variables, the web administrator's proxy route and the public origin (`docs/RELEASE_RUNBOOK.md` steps 1–9a).
+- Hosting: the host and the public origin are unselected (owner decision of 16 October 2026, `audit/OWNER_DECISIONS_2026-10-16.md`); the DigitalOcean steps in `docs/RELEASE_RUNBOOK.md` (steps 1–9a) are a historical adapter, not a current prerequisite.
 - `public_downloads` stays `false`, a separate owner decision. (The CC BY 4.0 text is confirmed by the owner, 10 October 2026: `licence_text_confirmed` is `true`.)
 - Seven sources need a person with a browser.
 - A phone check of the live site from Yemen.
@@ -56,8 +56,8 @@ so that a cold Design recipient can run D0–D7 from the repository alone.
 
 | Item | Value |
 |---|---|
-| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `580d2dc19054658d906585104b957a0fe9f4f3ce4758e6bc19b1cae28fb28bc8` |
-| Page Specs | `site-src/content/page_specs.json` — SHA-256 `8dd600e940f26213c658c5f3188e8e63e16201e2e588d7379bb1db6d46b9068e` |
+| Production Master | `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx` — SHA-256 `620f3368eaf34b100418410928df3a779c6e5fed180711593dc7122099930637` |
+| Page Specs | `site-src/content/page_specs.json` — SHA-256 `e97880df59284be90199628ceba2dd8b715fb1ba2f670b2e8149ae4f45a341f5` |
 | Entry state recorded with the Drive IDs (lineage, not current) | Master `e69804106e04d093098688f2d01cea51e13191f255d774a090f3e5dd8dec9bc7`; Page Specs `ff2b0f559cde5fede3fe31d7dfb2539a00921e8b00b816c2863790cd9de49007` |
 | Master lineage in D7 | `f0150122…` (entry) → `caabff47…` (RP-F2) → `0e8730c2…` / `69899ae2…` (RL-F3, RL-F3b) → `2a7fd52b…` / `440614d7…` (R85-A, R85-B) → `168a0ad8…` / `ed3c5796…` (RF5, RF5b) |
 | Canonical repository | GitHub `CausewayGrp/Financial-inclusion-`, branch `main` — the only working copy. The last state OpenAI reviewed is commit `f726bda` (tree byte-identical to `…TRANCHE_C_COMPLETE_READING_HOLD.zip`, SHA-256 `63612dea…`); its tag and the Design-handoff tag are owner actions (§7) |

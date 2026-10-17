@@ -1,5 +1,26 @@
 # Release runbook — from "the owner has a hosting account and a domain" to "live"
 
+## Prospective supersession — 16 October 2026
+
+Do not execute the provider-selection, provisioning or deployment steps below. They record the
+3 October DigitalOcean decision, prospectively replaced by `audit/OWNER_DECISIONS_2026-10-16.md`.
+Hosting and the public address are now unselected; development, PR acceptance and current release
+preparation require no provider account. The deploy workflow and CLI are disabled regardless of
+old variables/secrets. Origin stays null, pre-release true, downloads false. No release is authorized.
+
+Current preparation: run the required Verify suite locally/CI using its local HTTP fixtures;
+verify evidence, bilingual, accessibility-support, security-header and path invariants; record
+remaining human and live-service acceptance. After a future owner host selection, review its
+adapter and privacy facts, run optional compatibility tests, then obtain separate release approval
+and a reviewed reactivation change. Historical adapter examples below do not select a host.
+
+## Historical adapter — DigitalOcean App Platform behind the corporate route (selected 3 October 2026; superseded 16 October 2026)
+
+Everything from this heading to the end of the file is the procedure written for the superseded selection. It is kept
+unchanged as the worked example of one host adapter and as lineage; it is not executed, it selects nothing, and its
+addresses, accounts, secrets and variables are not current prerequisites. The host-neutral runbook that replaces it is
+Stage C work (takeover brief of 17 October 2026, Part 8).
+
 **Status, 10 October 2026 (content complete, `checkpoint/2026-10-10-content-complete`):** prepared, not started; unchanged since the independent review of 70398d1 (4 October 2026). Nothing here has been executed. The site is not released; this
 repository never declares PUBLIC RELEASE READY, and only the owner releases it (step 14). Each step names who does it.
 Every step except the account, the domain, the owner's confirmation of the CC BY 4.0 licence text, the release acceptance

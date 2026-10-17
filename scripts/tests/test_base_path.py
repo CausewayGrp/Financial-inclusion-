@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""The site works under the decided address, and nothing escapes its path (owner decision B2, 3 October 2026).
+"""The site works under a reserved origin fixture, and nothing escapes its path.
 
   python3 scripts/tests/test_base_path.py                # build, sweep, browser, metadata, negative control
   python3 scripts/tests/test_base_path.py --no-browser   # the static parts only (sweep, metadata, negative control)
   python3 scripts/tests/test_base_path.py --site DIR     # check a site already built with the same origin
 
-Builds the site with public_origin https://causewaygrp.com/financial-inclusion-evidence into a temporary directory
+Builds the site with public_origin https://yfie.example/financial-inclusion-evidence into a temporary directory
 (`scripts/build.py --origin … --out …`; site-src/deployment.json and dist/ are not touched) and serves it from a local
 HTTP server so that it lives under /financial-inclusion-evidence/, with the host headers of its own `_headers` file
-applied by full request path, and a missing page answered by its 404 page with status 404, as Cloudflare Pages does.
+applied by full request path, and a missing page answered by its 404 page with status 404.
 Anything requested outside the path gets a bare 404. Then:
 
 (a) Sweep. Every HTML, CSS, JS and JSON file, `_headers`, robots.txt and sitemap.xml: every internal address (an
@@ -55,7 +55,8 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
-ORIGIN = "https://causewaygrp.com/financial-inclusion-evidence"
+# Reserved test hostname: metadata fixture only; all requests use the local HTTP server.
+ORIGIN = "https://yfie.example/financial-inclusion-evidence"
 LANGS = ("ar", "en")
 NEGATIVE_PAGE = "en/payments/index.html"
 NEGATIVE_LINK = '<p><a id="yfie-negative-control" href="/en/about/">about</a></p>'
@@ -372,6 +373,9 @@ def serve(site: Site):
     not_found = site.root / "404.html"
 
     class H(http.server.BaseHTTPRequestHandler):
+        def version_string(self):
+            return "YFIE-local"
+
         def log_message(self, *a):
             pass
 
@@ -396,7 +400,7 @@ def serve(site: Site):
             if not path.startswith(site.base + "/"):
                 return self._send(404, b"outside the base path")      # what the corporate site would answer
             f = site.file_for(path)
-            if f is None and (site.root / path[len(site.base) + 1:]).is_dir() and not path.endswith("/"):
+            if (site.root / path[len(site.base) + 1:]).is_dir() and not path.endswith("/"):
                 return self._send(301, extra={"Location": path + "/"})
             if f is None:
                 return self._send(404, not_found.read_bytes(), "text/html; charset=utf-8", path)

@@ -1,0 +1,34 @@
+[
+  {
+    "route": "/privacy/",
+    "section": 3,
+    "lang": "en",
+    "field": "body",
+    "old": "This resource is hosted on DigitalOcean App Platform. Readers reach it through causewaygrp.com, CauseWay's own website, which passes each request for these pages on to it. The causewaygrp.com website therefore receives the technical details that come with every request, such as the page address, the time of the request, the IP address and the browser type; if the browser holds the cookie that the causewaygrp.com website sets, that cookie is sent to the website with each request. App Platform, including the content-delivery network it serves through, receives each request as it is passed on. Either may keep such details in logs. Which details are kept, for what purpose, for how long and by which provider has not yet been confirmed; it will be stated here once it is.",
+    "new": "The hosting provider and public address for this resource have not been selected. Before public release, this notice must identify the confirmed hosting and delivery services, the request information they process or log, the purposes and retention periods, and any relevant processors. These operational details have not yet been confirmed."
+  },
+  {
+    "route": "/privacy/",
+    "section": 3,
+    "lang": "ar",
+    "field": "body",
+    "old": "يُستضاف هذا المورد على خدمة App Platform من DigitalOcean، ويصل إليه القرّاء عبر causewaygrp.com، وهو موقع CauseWay الإلكتروني الذي يمرّر إليه كل طلب لهذه الصفحات. ولذلك يتلقى موقع causewaygrp.com البيانات التقنية المصاحبة لكل طلب، مثل رابط الصفحة ووقت الطلب وعنوان IP ونوع المتصفح؛ وإذا كان المتصفح يحتفظ بملف تعريف الارتباط الذي يضعه موقع causewaygrp.com، فإنه يرسله إلى ذلك الموقع مع كل طلب. وتتلقى App Platform، بما فيها شبكة توصيل المحتوى التي تقدّم الصفحات عبرها، كل طلب كما يُمرَّر إليها. وقد يحتفظ أيٌّ منهما بهذه البيانات في سجلات. ولم يُؤكَّد بعدُ أيّ البيانات تُحفظ، ولا الغرض من حفظها، ولا مدة حفظها، ولا الجهة التي تحفظها؛ وسيُذكر ذلك هنا عند تأكيده.",
+    "new": "لم تُحدَّد بعد جهة استضافة هذا المورد أو عنوانه العام. وقبل النشر العام، يجب أن يبيّن هذا الإشعار خدمات الاستضافة وتوصيل المحتوى المؤكدة، وبيانات الطلبات التي تعالجها أو تسجلها، وأغراض المعالجة ومدد الاحتفاظ، وأي جهات معالجة ذات صلة. ولم تُؤكَّد هذه التفاصيل التشغيلية بعد."
+  },
+  {
+    "route": "/privacy/",
+    "section": 4,
+    "lang": "en",
+    "field": "body",
+    "old": "Core evidence browsing, on-site search and navigation do not require third-party analytics or advertising trackers. If non-essential analytics, cookies or identifiers are enabled later, they must be disclosed before activation and included in any choice or consent mechanism that applies. This resource sets no cookies; at its public address on causewaygrp.com, browsers may also send a cookie that the causewaygrp.com website sets for all its pages, and this resource does not read it.",
+    "new": "Core evidence browsing, on-site search and navigation do not require third-party analytics or advertising trackers. If non-essential analytics, cookies or identifiers are enabled later, they must be disclosed before activation and included in any choice or consent mechanism that applies. This resource sets no cookies. Any cookies or other processing introduced by the eventual hosting or delivery arrangement must be verified and disclosed before public release."
+  },
+  {
+    "route": "/privacy/",
+    "section": 4,
+    "lang": "ar",
+    "field": "body",
+    "old": "لا يتطلب تصفح الأدلة أو البحث داخل الموقع أو التنقل الأساسي تحليلات من طرف ثالث أو أدوات تتبع إعلانية. وإذا فُعّلت لاحقًا تحليلات غير ضرورية أو ملفات ارتباط أو معرفات، فيجب الإفصاح عنها قبل التفعيل وإدراجها في أي آلية للاختيار أو الموافقة تنطبق عليها. ولا يضع هذا المورد أي ملف ارتباط؛ وفي عنوانه العام على causewaygrp.com قد ترسل المتصفحات أيضًا ملف ارتباط يضعه موقع causewaygrp.com لجميع صفحاته، ولا يقرؤه هذا المورد.",
+    "new": "لا يتطلب تصفح الأدلة أو البحث داخل الموقع أو التنقل الأساسي تحليلات من طرف ثالث أو أدوات تتبع إعلانية. وإذا فُعّلت لاحقًا تحليلات غير ضرورية أو ملفات ارتباط أو معرفات، فيجب الإفصاح عنها قبل التفعيل وإدراجها في أي آلية للاختيار أو الموافقة تنطبق عليها. ولا يضع هذا المورد أي ملف ارتباط. ويجب التحقق من أي ملفات ارتباط أو معالجة أخرى يضيفها ترتيب الاستضافة أو توصيل المحتوى الذي سيُعتمد، والإفصاح عنها قبل النشر العام."
+  }
+]
