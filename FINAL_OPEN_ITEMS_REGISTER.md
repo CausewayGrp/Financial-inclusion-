@@ -14,12 +14,17 @@ CO-G07/CLOSE-6G and the addendum report at `e46ff9eb` on 14 October. This headin
 version. All 299 items and their classifications are unchanged; integration and passing CI do not close Stage A,
 authorize Stage B, or supply publication approval.
 
+Takeover, 17 October 2026 (PR-C of `audit/close_out/TAKEOVER_BRIEF_2026-10-17.md`): SB-01 moves OWNER-OPTIONAL → CLOSED
+under OD-1017-01 (CLOSED 93, OWNER-OPTIONAL 11; total 299 unchanged). Open findings of the takeover brief are not
+register items: they live in `design/DESIGN_INTEGRATION_V2.md` (design) and `audit/close_out/PROGRESS.md` (the rest)
+and enter here only when CLOSED or DECIDED.
+
 | State | Items |
 |---|---|
-| CLOSED | 92 |
+| CLOSED | 93 |
 | HOSTING | 9 |
 | FRONTIER | 47 |
-| OWNER-OPTIONAL | 12 |
+| OWNER-OPTIONAL | 11 |
 | DECIDED | 139 |
 | **Total** | **299** |
 
@@ -119,6 +124,7 @@ authorize Stage B, or supply publication approval.
 | ADD3-4 | Reading CWR-012 "How money reaches households" | Published on 11 October 2026 in CLOSE-6C. The steward's instruction to keep it retired was withdrawn the same day: the three grounds for retirement — a marginal-shares inference, an unreviewed Arabic text, and the Cash Consortium findings not held as records — were each met in the transaction. The retirement was never caused by a ban on microdata. Repaired and kept in CLOSE-6D (#43; domain and Arabic lenses KEEP) | — |
 | ADD3-ALIAS-001 | Search alias 001 said the evidence base holds no law | CLOSE-6C (11 Oct 2026): the note names the one law held (Bank Deposit Insurance Institution) and the one Sana'a circular, EN and AR | — |
 | OWN-13 | A twelfth Reading (RD8, CWR-012) | CLOSE-6C (11 Oct 2026): published as /readings/how-money-reaches-households/ with its two source records and the review pair (audit/close_out/addendum/) | — |
+| SB-01 | Stage B entry | CLOSED 17 October 2026 by owner decision OD-1017-01 (`audit/OWNER_DECISIONS_2026-10-17.md`): Stage A acceptance effective (PR #49, Master `580d2dc1…`), D19–D22 neutralized (PR #52), and the owner's takeover brief is the separate entry instruction. Operative charter `audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md`; Stage C follows (OD-1017-02). The 15 October charter's constraints (SB-02, CWR-013, two-Reading rule, CWR-011 placement) stay in force | — |
 
 ### HOSTING — done at or after deployment
 
@@ -201,7 +207,6 @@ authorize Stage B, or supply publication approval.
 | CWR-013 | Reading CWR-013 (MSME finance stages), RESERVED, not published (v5 §6, D17 as amended) | The one new-Reading slot D9 allows went to CWR-012. CWR-013 fails the deletion test against /firms/ sections 7–9, MA-004 and CWR-008, and its stage-ladder visual would restate /firms/ section 9. Its argument is published in /firms/, CLM-059, CLM-060, CLM-062 and MA-004 (CLOSE-6D 6B-2; CLOSE-6E 6C-1, 6C-5). The specification is kept unchanged in the v5 instruction §6 | Trigger: the owner grants a second new-Reading slot |
 | RES-03 | OECD/INFE comparator averages, RESERVED (v5 §9) | Admissible, but not needed for a current answer; comparators enter only by owner decision | Trigger: an owner decision |
 | AR-FINDEX-NAME | The Arabic name of the Global Findex («المؤشر العالمي للشمول المالي», «قاعدة بيانات Global Findex» and a longer form) | Arabic-editor ruling `audit/close_out/v5_reads/V9_findex_arabic_name.md`: the first form is the World Bank's own Arabic in its 2025 Arabic blogs; «مؤشر» can read as one index but not as a ranking; the inconsistency between the three forms matters more than either form. Nothing changed in this run (v5 §9) | Owner: one Master transaction if wanted (first mention «قاعدة بيانات المؤشر العالمي للشمول المالي (Global Findex)»; retire the hybrid) |
-| SB-01 | Stage B entry | BLOCKED on separate entry authorization only. On 17 October 2026 the owner neutralized missing D19–D22 (`audit/OWNER_DECISIONS_2026-10-10.md` §7): no approved text was found, and those identifiers are not blockers and confer nothing. The 15 October charter and amendments file remain prospective records, not historical approvals. | Owner: a separate instruction to enter Stage B, if entry is wanted |
 
 ### DECIDED — a recorded decision; nothing here is open
 
@@ -873,3 +878,4 @@ and the twin agree, that nothing outside HOSTING says PENDING, and that every FR
 - 11 October 2026, CLOSE-6E (Stage A final instruction v5): item 6C-6 is EXT-40 (FRONTIER): the owner's aggregate file for the 2021-wave domestic transfer channels has not arrived (D16). Card in `audit/close_out/FRONTIER_CARDS.md`. Total 266.
 - 11 October 2026, CLOSE-6F (Stage A final instruction v5, 7d): ADD3-4 records the facts of CWR-012's publication (v3's planned retirement record was never written); ADD5-HH (DECIDED) records the "households" slug decision of PR-3. Total 267.
 - 11 October 2026, PR-6 (Stage A final instruction v5, §6 and §9): the RESERVED and EXCLUDED items of §9 are recorded — CWR-013, RES-03, AR-FINDEX-NAME and the Stage B precondition SB-01 as OWNER-OPTIONAL (owner-triggered); RES-01 to RES-18 (but RES-03), EXC-01 to EXC-10 and the Stage B input SB-02 as DECIDED; ADD3-O1 carries the owner's 11 October note. Total 299.
+- 17 October 2026, PR-C (takeover brief of 17 October 2026, OD-1017-01): SB-01 OWNER-OPTIONAL → CLOSED; Stage B is authorized and the operative charter is `audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md`. CLOSED 93, OWNER-OPTIONAL 11. Total 299.

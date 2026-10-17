@@ -278,3 +278,19 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
 
 - 2026-10-15 · operational reconciliation · CLOSE-6F merge recorded: PR #45 merged on 13 October 2026 at `612ec146`. The execution entry above is historical and unchanged.
 - 2026-10-15 · operational reconciliation · PR #46 merged on 14 October 2026 at `e46ff9eb`: CO-G07/CLOSE-6G and the Stage A addendum report are integrated. Verify on that merged commit passed 9/9 jobs (run `38582364168`); the subsequent Workers build succeeded. DigitalOcean deployment was skipped. The 299-item register remains CLOSED 92, HOSTING 9, FRONTIER 47, OWNER-OPTIONAL 12, DECIDED 139. This records integration, not formal Stage A closure, Stage B authorization, Stage C acceptance or publication approval; those decision rights and dependencies remain unchanged.
+
+- 2026-10-17 · takeover · The owner's brief of 17 October 2026 (`audit/close_out/TAKEOVER_BRIEF_2026-10-17.md`) hands the repository to Claude
+  Code as the only writing agent (OD-1017-11; Codex and Grok archived). Stage B authorized (OD-1017-01), Stage C follows (OD-1017-02), hosting
+  unselected (OD-1017-05). Verified at handover: main `274583df`, Master `580d2dc1…`, Page Specs `8dd600e9…`, PRs #51 (draft), #52 (ready, 9/9),
+  #53 (draft, 9/9); repository public (F-12/F-13 open, owner decision pending); Python 3.11 absent locally, 3.12.10 used and recorded; gates on
+  `274583df` all PASS locally.
+- 2026-10-17 · Phase 1 · PR-A: #52 (`d5f78137`) reviewed, exact-head Verify 9/9; merged by the owner at `a7c7bf8a` (17 October 2026,
+  05:29 UTC). This session's tooling refuses merges and PR creation, so branches are pushed and the PR texts handed to the owner.
+- 2026-10-17 · Phase 1 · PR-B: `pr/hosting-neutral-finish` at `3306e152` (from #53 head `6fa672f3`, #52 merged in). Master diff re-run cell by
+  cell: exactly 4 cells (03_PAGE_SECTIONS rows 212–213, body_en/body_ar), 580d2dc19054 → 620f3368eaf3, trailers recorded; README, checkpoint,
+  DEPLOYMENT and runbook say "unselected"; the runbook's DigitalOcean procedure sits under a dated historical-adapter heading; full local gates
+  PASS (HTTP contract negative control caught; RC-19 controls 8/8). Pushed; the PR is opened by the owner; #53 is closed pointing to it.
+- 2026-10-17 · Phase 1 · PR-C: `pr/takeover-inputs` (stacked on PR-B): the brief (F-12 redacted), the OD-1017 record, charter v3.2, pointers,
+  the F-05 addendum, SB-01 → CLOSED (93/9/47/11/139 = 299), front doors (F-09), AGENTS rules 2 and 7, CONTRIBUTING §2/§8/§10, re-entry guidance.
+  Open findings carried here, not in the register: F-03, F-04, F-06 (owner: retire the Workers check), F-07, F-08, F-10, F-11, F-12 (owner:
+  visibility), F-13, F-14 (PR-D), F-15, F-16, F-18, F-19.

@@ -18,10 +18,14 @@ its recorded Master hash/schema rather than treating it as an independent author
 Git commits, PRs, checks and this re-entry script describe engineering state; they cannot grant owner approval.
 
 `handoff/` retains historical material (D7, 10 October 2026); do not execute its superseded instructions.
-Stage A content acceptance is scoped and recorded after PR #49. Stage B remains blocked until a separate
-owner entry decision. D19–D22 were neutralized on 17 October 2026: no approved text exists, and none is inferred.
+Stage A content acceptance is scoped and recorded after PR #49. Stage B authorized 17 October 2026 (OD-1017-01) and
+Stage C follows it (OD-1017-02): `audit/OWNER_DECISIONS_2026-10-17.md`, executed under
+`audit/close_out/TAKEOVER_BRIEF_2026-10-17.md` with `audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md` as the operative
+charter. Claude Code, run by the owner locally, is the only agent that writes to the repository (OD-1017-11); Codex and
+Grok are archived. D19–D22 were neutralized on 17 October 2026: no approved text exists, none is inferred, and they are
+never cited again.
 
-When Stage B is separately authorized, design exploration may challenge the old three example compositions and
+In Stage B, design exploration may challenge the old three example compositions and
 offer better alternatives against W4/G1 quality criteria and real user journeys, without unapproved semantic,
 rights, publication, or framework changes. Provider-specific skills remain optional specialist capabilities:
 `CLAUDE.md` may invoke `multi-agent-m` where available, without making it a universal dependency.
@@ -38,15 +42,19 @@ No agent should rewrite another agent's branch or local work. Reconcile UNKNOWN 
    the finding it closes, and runs every gate. Owner decision D14 (10 October 2026) designates the Claude Code run of the
    close-out brief as steward for scoped changes only: in navigation_interaction.json, `hub_numerals` and the phone-menu
    presentation (D8, CR-S12) and new detail-route entries (D9); in presentation_priority.json, the measurement-link limit
-   (RD9) and tier groupings the table-of-contents rule needs (S10). Each such edit is its own commit naming its finding.
-   Any other agent, and any other change to them, escalates.
+   (RD9) and tier groupings the table-of-contents rule needs (S10). Owner decision OD-1017-03 (17 October 2026) extends
+   that steward scope to the Claude Code takeover run: in navigation_interaction.json, the edits the S rules, CR-S12/D8
+   and recorded DL-V2 decisions require; in presentation_priority.json, the TOC tiers and caps (S5, S10). Each such edit
+   is its own commit naming its finding and runs every gate. Any other agent, and any other change to them, escalates.
 3. English and Arabic are co-authoritative: change both together; numbers, units, periods, universes and limits never drift.
 4. Keep the semantic firewall: people ≠ accounts, access ≠ use, infrastructure ≠ outcome, target ≠ result, licence ≠
    operation, observed ≠ estimated ≠ projected, missing ≠ zero, chronology ≠ causality.
 5. No public number without a bound, source-traced record; no source named publicly without a public locator.
 6. Never declare DESIGN HANDOFF READY before the R8.6 Definition of Done is met, and never declare PUBLIC RELEASE READY.
-7. Do not execute any old prompt in `handoff/`. The referenced `design/DESIGN_INTEGRATION_V2.md` is absent;
-   never assume it exists. Follow current authorizations and the existing W4/G1 criteria only after Stage B entry approval.
+7. Do not execute any old prompt in `handoff/`. `design/DESIGN_INTEGRATION_V2.md` did not exist before Stage B; it is
+   created in Stage B G0 as the design record (memos, DL-V2 decisions, the findings ledger, before/after evidence) and is
+   never a second content authority. Follow the current authorizations (OD-1017-01, OD-1017-02), the charter v3.2 and
+   the existing W4/G1 criteria.
 8. Never run `audit/tranche_b_execution/post_execution_acceptance.py`; never rewrite historical audit records (append).
 9. Never force-push, never rewrite `main` or a `checkpoint/*` tag, never commit ZIPs, caches or scratch files.
 10. Do not claim WCAG conformance, legal review, rights clearance, native-language certification or security guarantees.

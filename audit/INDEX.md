@@ -81,6 +81,8 @@ must not be executed: the current instructions are the repository's `README.md`,
 
 `OWNER_DECISIONS_2026-10-16.md` and `hosting_neutral/` — prospective hosting-neutral owner decision, exact-value privacy transaction and verification receipts; no release authorization.
 
+`OWNER_DECISIONS_2026-10-17.md`, `close_out/TAKEOVER_BRIEF_2026-10-17.md` (F-12 redacted while the repository is public) and `close_out/STAGE_B_DESIGN_CHARTER_v3_2.md` — the owner's takeover brief of 17 October 2026 (Claude Code as the only writing agent), its decisions OD-1017-01 to OD-1017-14 (Stage B and Stage C authorized; hosting unselected; no release authorization) and the operative Stage B charter.
+
 `PUBLIC_LITERAL_CLOSURE.json` — written by `scripts/audit_public_literals.py` on every build; never edited by hand.
 
 - `stage_a_final/` — prospective Stage A final reconciliation (15 October 2026): exact-value Master transaction, material adjudications, rollback reports, verification and delegated acceptance. It is not rights clearance or public-release approval.

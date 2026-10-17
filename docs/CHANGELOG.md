@@ -1,5 +1,15 @@
 # Repository Change Log
 
+## 17 October 2026 — Takeover inputs (PR-C)
+
+Commit the owner's takeover brief of 17 October 2026 (`audit/close_out/TAKEOVER_BRIEF_2026-10-17.md`, finding F-12
+redacted while the repository is public), its Part 1 as `audit/OWNER_DECISIONS_2026-10-17.md` (OD-1017-01 to -14) and
+its Appendix 1 as the operative `audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md` (F-02). Stage B is authorized and Stage C
+follows; Claude Code is the only writing agent. Front doors (README, AGENTS, CONTRIBUTING §2/§8/§10, Context, checkpoint,
+`scripts/reentry.py` guidance) say so together (F-09); SB-01 moves OWNER-OPTIONAL → CLOSED in the register and its twin
+(F-17); F-05 is appended to the export-control record; pointers are appended to the 15 October charter and the amendments
+file. No Production Master, public page, hosting or publication state changed.
+
 ## 17 October 2026 — Neutralize missing D19–D22
 
 No approved text for D19–D22 exists in the authority records or Git history. The owner neutralized those four
