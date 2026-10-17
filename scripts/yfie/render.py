@@ -246,8 +246,9 @@ def fig_emph(html_text: str) -> str:
     return "".join(out)
 
 
-def clock(label, value_escaped: str) -> str:
-    return f'<div class="clock"><span class="k">{esc(label)}</span><span class="v">{iso(value_escaped)}</span></div>'
+def clock(label, value_escaped: str, id_: str = "") -> str:
+    attr = f' id="{id_}"' if id_ else ""
+    return f'<div class="clock"{attr}><span class="k">{esc(label)}</span><span class="v">{iso(value_escaped)}</span></div>'
 
 
 def crumb(bc: dict | None, shell: dict) -> str:
@@ -319,6 +320,81 @@ def strip(index: list) -> str:
     return '<nav class="strip" aria-labelledby="page-title">' + "".join(f'<a href="#{a}"><span class="n">{i+1:02d}</span><span>{esc(t)}</span></a>' for i, (a, t) in enumerate(index)) + "</nav>"
 
 
+# ------------------------------------------------------------------------------------------------ table of contents (S10)
+def _toc_member(members: list, anchor: str, m: dict) -> bool:
+    for x in members:
+        if isinstance(x, int):
+            if m.get("kind") == "section" and m.get("order") == x:
+                return True
+            continue
+        k = x.get("kind")
+        if k == "band" and m.get("kind") == "band":
+            return True
+        if k == "section" and m.get("kind") == "section" and m.get("order") == x.get("section_order"):
+            return True
+        if k == "role" and m.get("kind") == "section" and (m.get("role") or "") == x.get("role"):
+            return True
+        if k == "block" and m.get("kind") == "block" and anchor == x.get("id"):
+            return True
+        if k == "reading" and m.get("kind") == "reading":
+            if x.get("section"):
+                if m.get("section") == x["section"]:
+                    return True
+            elif m.get("section") not in set(x.get("except") or []):
+                return True
+    return False
+
+
+def toc_strip(shell: dict, route: str, family: str, index: list, meta: dict | None = None) -> str:
+    """Brief S10 (W4 Appendix F, 17 October 2026; finding G0-F04): the in-page table of contents holds at most the
+    contract's `max_entries`. Where the presentation contract's toc_rule groups the page (by route, else by family),
+    each group links to the first index entry it covers, in page order, under its governed label (UI-TOC-*) or, when
+    the group has no label, under that entry's own heading. Elsewhere the index is used as it is, minus the
+    `drop_first` anchors when it is too long. The desktop spine keeps the full numbered index, so the section rubrics
+    and the spine still agree (DEBT-019). `meta` says what each anchor is: {"kind": "band"|"section"|"block"|"reading",
+    "order": n, "role": role_en, "section": reading section id}."""
+    rule = shell.get("toc_rule") or {}
+    mx = int(rule.get("max_entries") or 0)
+    groups = (rule.get("groups") or {}).get(route) or (rule.get("groups") or {}).get(family)
+    meta = meta or {}
+    if groups:
+        labels = (shell.get("labels") or {}).get("toc") or {}
+        entries = []
+        for g in groups:
+            first = next(((a, t) for a, t in index if _toc_member(g.get("members") or [], a, meta.get(a) or {})), None)
+            if not first:
+                continue
+            key = g.get("label")
+            if key and key not in labels:
+                raise KeyError(f"toc_rule label {key!r} has no governed interface copy")
+            entries.append((first[0], labels[key] if key else first[1]))
+        if mx and len(entries) > mx:
+            raise ValueError(f"{route}: table of contents has {len(entries)} entries; S10 allows {mx}")
+        return '<nav class="strip" aria-labelledby="page-title" data-toc-grouped>' + "".join(f'<a href="#{a}"><span>{esc(t)}</span></a>' for a, t in entries) + "</nav>"
+    entries = list(index)
+    if mx and len(entries) > mx:
+        drop = set(rule.get("drop_first") or [])
+        entries = [e for e in entries if e[0] not in drop]
+    if mx and len(entries) > mx:
+        raise ValueError(f"{route}: table of contents has {len(entries)} entries; S10 allows {mx}")
+    return strip(entries)
+
+
+def main_words(html_: str) -> int:
+    """S10: the words of a built page's main text (between the site header and the footer, strip and spines excluded),
+    the length a page is judged by against the contract's `min_main_words` (six phone screens, G0 calibration)."""
+    import html as _html
+    main = html_.split("</header>", 1)[1].split("<footer", 1)[0] if "</header>" in html_ else html_
+    main = re.sub(r'<nav class="strip".*?</nav>', " ", main, flags=re.S)
+    main = re.sub(r'<aside class="spine.*?</aside>', " ", main, flags=re.S)
+    return len(_html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", main, flags=re.S))).split())
+
+
+def drop_strip(html_: str) -> str:
+    """S10: a page under six phone screens renders no table of contents (build.py decides per route, both editions)."""
+    return re.sub(r'<nav class="strip".*?</nav>', "", html_, count=1, flags=re.S)
+
+
 def paced_groups(text: str) -> list[tuple[bool, str]]:
     """The governed paragraph paced as figure groups (a new group at each governed connective that introduces another
     measure; the last group is the resolution). Words and order intact. Falls back to the whole paragraph when no
@@ -343,17 +419,19 @@ def paced_groups(text: str) -> list[tuple[bool, str]]:
 def evidence_record(page: dict, shell: dict) -> str:
     L = page["labels"]
     meta = f'<meta name="yfie-citation" content="{esc(page["citation"])}"><meta name="yfie-record-id" content="{esc(page["id"])}">'
-    index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q3", L["applies"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
-    for_whom = clock(L["applies"], esc(page["universe"])) if page.get("universe") else ""   # 4.1: WHEN, then FOR WHOM, before the claim
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{clock(L["period"], esc(page["period"]))}{for_whom}<h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell, (page.get("hrefs") or {}).get("report", ""))}'
+    # S12 (W4 Appendix F): crumb → rubric → h1 → one record line "When · For whom" → tools → q1. The For-whom clock carries
+    # id="q3" (its section is dropped: its body was the same governed universe), so the anchor survives.
+    index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
+    for_whom = clock(L["applies"], esc(page["universe"]), "q3") if page.get("universe") else ""
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}<h1 id="page-title">{esc(page["title"])}</h1>'
+             f'<div class="record-line" data-record-line>{clock(L["period"], esc(page["period"]))}{for_whom}</div>{page_tools(shell, (page.get("hrefs") or {}).get("report", ""))}'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
     own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure({**page["visual"], "here": True}, shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
-    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{fig_emph(iso(esc(page["summary"])))}</p></div>{own_fig}</div>' + strip(index),
+    qa = [f'<div class="qa first" id="q1">{rubric(L["establishes"], 1, "h2")}<div class="st"><p>{fig_emph(iso(esc(page["summary"])))}</p></div>{own_fig}</div>' + toc_strip(shell, page["route"], "Evidence Record", index),
           f'<div class="qa" id="q2">{rubric(L["measures"], 2, "h2")}<div class="body"><p>{esc(page["definition"])}</p></div></div>',
-          f'<div class="qa" id="q3">{rubric(L["applies"], 3, "h2")}<div class="body"><p>{esc(page["universe"])}</p></div></div>',
-          f'<div class="qa" id="q4">{rubric(L["currentness"], 4, "h2")}<div class="body"><p>{esc(page["currentness"])}</p></div></div>']
+          f'<div class="qa" id="q4">{rubric(L["currentness"], 3, "h2")}<div class="body"><p>{esc(page["currentness"])}</p></div></div>']
     limits = f'<h3>{esc(L["measurement_limits"])}</h3><p>{esc(page["measurement_limits"])}</p>' if page["measurement_limits"] else ""
-    qa.append(f'<section class="bnd" id="q5" data-evidence-boundary-first-load data-boundary-part="does-not-establish">{rubric(L["does_not_establish"], 5, "h2")}<p>{esc(page["does_not_establish"])}</p>{limits}</section>')
+    qa.append(f'<section class="bnd" id="q5" data-evidence-boundary-first-load data-boundary-part="does-not-establish">{rubric(L["does_not_establish"], 4, "h2")}<p>{esc(page["does_not_establish"])}</p>{limits}</section>')
     chips = "".join(f'<a class="chip" href="/{shell["lang"]}/data/?source={esc(sid)}#source-{esc(sid)}">{bdi(sid)}</a>' for sid in page["trace_ids"])
     src_extra = ""
     if page["sources_without_locator_note"]:
@@ -371,11 +449,11 @@ def evidence_record(page: dict, shell: dict) -> str:
     # to open, and the D7 cold reader read the promise followed by its own denial as the page breaking (DL-D7-011).
     # The record still answers question 6 — with its lineage statement or its no-locator statement, in the body voice.
     intro = f'<p class="small">{esc(L["source_intro"])}</p>' if page["sources"] else ""
-    qa.append(f'<section class="qa" id="q6"><div>{rubric(L["source"], 6, "h2")}<span id="source"></span></div><div>{intro}<div class="mt10">{"".join(source_card(s) for s in page["sources"])}</div>{src_extra}{trace}</div></section>')
+    qa.append(f'<section class="qa" id="q6"><div>{rubric(L["source"], 5, "h2")}<span id="source"></span></div><div>{intro}<div class="mt10">{"".join(source_card(s) for s in page["sources"])}</div>{src_extra}{trace}</div></section>')
     more = "".join(f'<div class="qa"><h3 class="rubric">{esc(L[k])}</h3><div class="body"><p>{esc(page[k])}</p></div></div>' for k in ("method", "change_trigger", "verification") if page[k])
     if page["reading_guidance"]:
         more += f'<div class="qa"><h3 class="rubric">{esc(L["reading_guidance"])}</h3><div class="body">{paras(page["reading_guidance"]["paragraphs"])}</div></div>'
-    qa.append(f'<div class="qa" id="q7">{rubric(L["more"], 7, "h2")}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
+    qa.append(f'<div class="qa" id="q7">{rubric(L["more"], 6, "h2")}<details class="more"><summary>{esc(L["more_intro"])}</summary>{more}</details></div>')
     util = (f'<section class="util" data-record-id="{esc(page["id"])}" id="cite-tools"><div class="ref"><b>{esc(L["reference"])}</b> {bdi(page["id"])}</div>'
             f'<div class="actions">{cite_tools(shell, page["route"], page["citation_short"], record=True, long_form=page["citation"])}'
             f'<button type="button" class="tbtn" data-share data-share-text="{esc(isolate_plain(page["share_text"]) if shell["lang"] == "ar" else page["share_text"])}">{esc(shell["labels"]["share_record"])}</button>'
@@ -392,12 +470,16 @@ def evidence_record(page: dict, shell: dict) -> str:
 
 def home(page: dict, shell: dict) -> str:
     L = page["labels"]; S = {s["order"]: s for s in page["sections"]}
-    index = [("s3", S[3]["heading"]), ("s4", S[4]["heading"]), ("s9", S[9]["heading"]), ("s5", S[5]["heading"]), ("s6", S[6]["heading"]), ("s7", S[7]["heading"]), ("s8", S[8]["heading"]), ("sf", L["featured"])]
+    index = [("topics", shell["labels"]["topics"]), ("s3", S[3]["heading"]), ("s4", S[4]["heading"]), ("s9", S[9]["heading"]), ("s5", S[5]["heading"]), ("s6", S[6]["heading"]), ("s7", S[7]["heading"]), ("s8", S[8]["heading"]), ("sf", L["featured"])]
     # The product's statement (section 1) and its two governed actions sit in the head, under the headline and before
     # the first figure: four cold readers (EN/AR × 390/1440, D3) reached the third screen before learning what the
     # product is. The product rubric is kept for the wide head; the masthead already names the product on a phone.
     parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell)}<div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
              f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div>']
+    # DL-V2-007 (F-15, first-click test of 17 October 2026: 21-25% one-step before, 92-100% after): the eight domain
+    # answers by their governed names, one step from Home, right under the product statement
+    topics = "".join(f'<li><a href="{d["href"]}">{esc(d["label"])}</a></li>' for d in shell.get("domains") or [])
+    parts.append(f'<section class="qa topics" id="topics" data-home-topics><div><h2>{esc(shell["labels"]["topics"])}</h2></div><nav aria-label="{esc(shell["labels"]["topics"])}"><ul class="rlist">{topics}</ul></nav></section>')
     recs = list(page["records"])
     demo = []
     for res, html_ in paced_groups(S[3]["body"]):
@@ -440,7 +522,7 @@ def home(page: dict, shell: dict) -> str:
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
-    parts.insert(2, strip(index))   # the phone's in-page navigation after the first figure group; the foot spine keeps only the edges (DEBT-014)
+    parts.insert(3, toc_strip(shell, "/", "Orientation", index, {**{f"s{o}": {"kind": "section", "order": o} for o in (3, 4, 9, 5, 6, 7, 8)}, "sf": {"kind": "block"}, "topics": {"kind": "block"}}))   # S10; after the topics block and the first figure group (DEBT-014)
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
     body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
@@ -489,7 +571,9 @@ def reading(page: dict, shell: dict) -> str:
     from .families import measure_obj   # noqa: PLC0415  (families imports this module)
     measure = (f'<section class="qa" id="measure" data-reading-measurement><h2>{esc(L["measurement"])}</h2><div><p class="small">{esc(L["measurement_note"])}</p><div class="objs">'
                f'{"".join(measure_obj(m) for m in page["measurement"])}</div></div></section>') if page.get("measurement") else ""   # B6
-    body = f'<article class="obj page-obj">{head_}{bnd}{strip(index)}<div class="essay">{"".join(essay)}</div>{trace}{sources}{measure}{related}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
+    toc = toc_strip(shell, page["route"], "Reading", index, {**{f's-{s["section_id"]}': {"kind": "reading", "section": s["section_id"]} for s in page["sections"] if s["heading"]},
+                                                              **{a: {"kind": "block"} for a in ("trace", "sources", "measure", "related")}})   # S10
+    body = f'<article class="obj page-obj">{head_}{bnd}{toc}<div class="essay">{"".join(essay)}</div>{trace}{sources}{measure}{related}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'   # the strip after the boundary is the phone's map of the essay (DEBT-014)
     return head(page, shell, page["route"], kind="article") + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"]))
 
 
@@ -577,6 +661,8 @@ def mark_new_tab(html: str, cue: str) -> str:
 
 
 def render(page: dict, shell: dict, variant: str = "") -> str:
+    from . import text as _text
+    _text.set_lang(shell["lang"])   # S13: the date words follow the page's language
     _COMPACT_N[0] = 0   # ids restart per page (deterministic output whatever the route order)
     if page["family"] in RENDERERS:
         return mark_new_tab(isolate_document(RENDERERS[page["family"]](page, shell)), shell["labels"].get("new_tab", ""))

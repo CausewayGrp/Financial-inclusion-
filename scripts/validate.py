@@ -1543,10 +1543,12 @@ if nav_contract:
         for k in kids:
             if not k.get('route'): errors.append('PB-0424 navigation child without route '+str(k))
             else: global_routes.add(str(k['route']))
-    if global_routes!={'/explore/','/evidence/','/readings/','/data/','/methodology/','/measurement/'}:
+    # D8 (owner decision of 17 October 2026): five direct hubs, Methodology the fifth; Measurement priorities stays a
+    # footer destination and a /methodology/ link, no longer a masthead family
+    if global_routes!={'/explore/','/evidence/','/readings/','/data/','/methodology/'}:
         errors.append('R4 global navigation spine mismatch '+str(sorted(global_routes)))
-    mm=[x for x in gnav if {'/methodology/','/measurement/'}<= {str(k.get('route')) for k in (x.get('children') or [])}]
-    if len(mm)!=1: errors.append('PB-0422 Method & Measurement family must hold both destinations')
+    if '/measurement/' not in {str(l.get('route')) for g in nav_contract.get('footer_groups',[]) for l in (g.get('links') or [])}:
+        errors.append('PB-0422 (D8) Measurement priorities must stay reachable from the footer')
     trust_routes=[str(x.get('route')) for x in nav_contract.get('trust_navigation',[])]
     if trust_routes[:1]!=['/about/'] or set(trust_routes)!={'/about/','/corrections/','/rights/','/accessibility/','/privacy/','/terms/','/contact/'}:
         errors.append('PB-0423 trust navigation must lead with About and hold the six trust routes '+str(trust_routes))
@@ -2788,7 +2790,7 @@ try:
         _d=(DIST/_lang/'data/index.html').read_text(encoding='utf-8')
         _lab=lambda k: _html.escape(_uiB[k][f'label_{_lang}'],quote=False)
         if f'<p class="small reuse-once" data-reuse-terms>{_uiB["UI-DATA-REUSE-TERMS-ONCE"][f"label_{_lang}"]}</p>' not in _html.unescape(_d): errors.append(f'RC-GB B8 the reuse terms are not stated above the source list {_lang}')
-        _m=re.search(r'<details class="source-locator-details source-regulatory-details grp" id="regulatory" open><summary>([^<]*) <span class="count">\(<bdi dir="ltr">(\d+)</bdi>\)',_d)
+        _m=re.search(r'<details class="source-locator-details source-regulatory-details grp" id="regulatory"(?: open)?><summary>([^<]*) <span class="count">\(<bdi dir="ltr">(\d+)</bdi>\)',_d)   # S1: closed by default
         # close-out CLOSE-6B: the count is the cards the group renders; cards + links to curated cards hold every regulatory source
         _gB=_d[_d.find('id="regulatory"'):] if _m else ''
         _gB=_gB[:_gB.find('<details class="source-locator-details',10)] if '<details class="source-locator-details' in _gB[10:] else _gB
@@ -2873,6 +2875,7 @@ try:
                         continue
                     _na1 += 1
                     _drawn = set(re.findall(r'<bdi dir="ltr" class="nw">(\d{4}-\d{2}-\d{2})</bdi>', _fig.replace(_alt.group(0), "")))
+                    _drawn |= set(re.findall(r'<time datetime="(\d{4}-\d{2}-\d{2})">', _fig.replace(_alt.group(0), "")))   # S13: dates shown in words keep ISO in datetime
                     _text = _html.unescape(re.sub(r"<[^>]+>", "", _alt.group(1)))
                     for _d, _mo, _y in _DAY_DATE.findall(_text):
                         _iso = f"{_y}-{_MONTHS[_mo]:02d}-{int(_d):02d}"
@@ -3400,8 +3403,56 @@ try:
 except Exception as _x:
     errors.append("RC-ADD2 unreadable " + repr(_x))
 
-# RC-NAV (owner decisions of 3 October 2026, point 3, findings A-12, C-6, C-8; and of 9 October 2026, B-c): below 900 px
-# the opened menu holds the five hubs with their governed numerals, the eight domain answers under Explore by their
+# RC-S10 (W4 Appendix F, brief S10; Stage B B1, 17 October 2026; finding G0-F04): the in-page table of contents
+# (nav.strip) holds at most the contract's max_entries, every entry resolves to an id on its page, and a page whose main
+# text is under min_main_words (six phone screens, calibrated on the G0 baseline) renders none. Read from the
+# presentation contract's `toc_rule` and the built pages.
+try:
+    _tr = json.loads((C / "presentation_priority.json").read_text(encoding="utf-8")).get("toc_rule") or {}
+    _tmx, _tmn = int(_tr.get("max_entries") or 0), int(_tr.get("min_main_words") or 0)
+    if not _tmx or not _tmn:
+        errors.append("RC-S10 the presentation contract has no toc_rule (max_entries, min_main_words)")
+    _nts = 0
+    _tpages = {}
+    for _f in sorted(DIST.rglob("index.html")):
+        _rel = _f.relative_to(DIST).parts
+        if not _rel or _rel[0] not in ("en", "ar"):
+            continue
+        _h = _f.read_text(encoding="utf-8")
+        _main = _h.split("</header>", 1)[1].split("<footer", 1)[0] if "</header>" in _h else _h
+        _main = re.sub(r'<nav class="strip".*?</nav>', " ", _main, flags=re.S)
+        _main = re.sub(r'<aside class="spine.*?</aside>', " ", _main, flags=re.S)
+        _w = len(_html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _main, flags=re.S))).split())
+        _tpages[_f.relative_to(DIST).as_posix()] = (_h, _w)
+    # the shorter edition decides for both, so the two editions of a route always agree
+    _tshort = {}
+    for _p, (_h, _w) in _tpages.items():
+        _k = _p.split("/", 1)[1]
+        _tshort[_k] = min(_tshort.get(_k, _w), _w)
+    for _p, (_h, _w) in _tpages.items():
+        _m = re.search(r'<nav class="strip"[^>]*>(.*?)</nav>', _h, re.S)
+        if _tmn and _tshort[_p.split("/", 1)[1]] < _tmn:
+            if _m:
+                errors.append(f"RC-S10 {_p} carries a table of contents on a page of {_w} main words (under {_tmn})")
+            continue
+        if not _m:
+            errors.append(f"RC-S10 {_p} has no table of contents")
+            continue
+        _nts += 1
+        _ents = re.findall(r'<a href="#([^"]+)">', _m.group(1))
+        if _tmx and len(_ents) > _tmx:
+            errors.append(f"RC-S10 {_p} table of contents has {len(_ents)} entries (limit {_tmx})")
+        for _a in _ents:
+            if f'id="{_a}"' not in _h:
+                errors.append(f"RC-S10 {_p} table of contents links #{_a}, which the page lacks")
+    if _nts < 250:
+        errors.append(f"RC-S10 read only {_nts} tables of contents")
+except Exception as _x:
+    errors.append("RC-S10 unreadable " + repr(_x))
+
+# RC-NAV (owner decisions of 3 October 2026, point 3, findings A-12, C-6, C-8; of 9 October 2026, B-c; and D8 of
+# 17 October 2026): below 900 px the opened menu holds the five direct hubs (Methodology the fifth; no numerals), the
+# eight domain answers under Explore by their
 # governed names in the contract's order, the governed trust links (About first, in the contract's order), the language
 # switch and the governed "Cite this page" control. Cite and report sit in one page-tools row directly under the h1 of
 # every page (an Evidence Record's report link carries its record); the header keeps search, language and menu only.
@@ -3420,16 +3471,18 @@ try:
         errors.append("RC-NAV the contract's trust links do not start with About")
     _ucite = {l: next(u[f"label_{l}"] for u in _nv.get("utilities", []) if u.get("id") == "cite") for l in ("en", "ar")}
     _urep = {l: _uin[next(u["label_ui_id"] for u in _nv.get("utilities", []) if u.get("id") == "report_issue")][f"label_{l}"] for l in ("en", "ar")}
+    # D8 (owner decision of 17 October 2026; takeover brief Part 6 item 11): five direct hubs, Methodology the fifth,
+    # and no hub numerals (the numerals of 9 October 2026, B-b/B-c, are retired)
     _hubs = []
-    _hn = {tuple(x.get("routes") or []): x.get("numeral_ui_id") for x in (_nv.get("hub_numerals") or {}).get("items") or []}
     for _g in _nv.get("global_navigation", []):
-        _key = tuple([_g["route"]] if _g.get("route") else [k.get("route") for k in _g.get("children") or []])
-        _num = (_uin.get(_hn.get(_key) or "") or {})
-        if not _num.get("label_en") or _num.get("label_en") != _num.get("label_ar"):
-            errors.append(f"RC-NAV hub {_g.get('label_en')} has no governed numeral")
-        _hubs.append((_g.get("route"), {l: _html.escape(_g.get(f"label_{l}") or "", quote=False) for l in ("en", "ar")}, _num.get("label_en") or ""))
-    if [h[2] for h in _hubs] != [f"{i:02d}" for i in range(1, 6)]:
-        errors.append(f"RC-NAV the hub numerals are not 01-05 in navigation order: {[h[2] for h in _hubs]}")
+        if not _g.get("route"):
+            errors.append(f"RC-NAV the masthead still carries the grouping node {_g.get('label_en')!r} (D8: five direct hubs)")
+            continue
+        _hubs.append((_g["route"], {l: _html.escape(_g.get(f"label_{l}") or "", quote=False) for l in ("en", "ar")}))
+    if [h[0] for h in _hubs] != ["/explore/", "/evidence/", "/readings/", "/data/", "/methodology/"]:
+        errors.append(f"RC-NAV the masthead hubs are not the five of D8: {[h[0] for h in _hubs]}")
+    if (_nv.get("hub_numerals") or {}).get("items"):
+        errors.append("RC-NAV the navigation contract still binds hub numerals (retired by D8)")
     _dm = _mm.get("domains") or {}
     _droutes = list(_dm.get("routes") or [])
     _pdom = [r["route"] for r in json.loads((C / "presentation_priority.json").read_text(encoding="utf-8"))["routes"] if r.get("page_family") == "Domain Answer"]
@@ -3450,10 +3503,11 @@ try:
         _mc = re.search(r'<button[^>]*data-menu-cite[^>]*>([^<]*)</button>', _nav)
         if not _mc or _html.unescape(_mc.group(1)) != _ucite[_l]:
             errors.append(f"RC-NAV {_p} the opened menu lacks the governed cite control")
-        for _route, _lab, _num in _hubs:
-            _tok = (f'<a href="/{_l}{_route}" data-hub-num="{_num}"' if _route else f'<span class="glabel" data-hub-num="{_num}">{_lab[_l]}</span>')
-            if _tok not in _nav:
-                errors.append(f"RC-NAV {_p} hub {_route or _lab['en']} lacks its numeral {_num}")
+        for _route, _lab in _hubs:
+            if f'<a href="/{_l}{_route}"' not in _nav:
+                errors.append(f"RC-NAV {_p} the opened menu lacks the hub {_route}")
+        if "data-hub-num" in _h:
+            errors.append(f"RC-NAV {_p} prints a hub numeral (retired by D8)")
         _dg = re.search(r'data-menu-domains>(.*?)</span>', _nav, re.S)
         _want = [(f"/{_l}{r}", _uin[u][f"label_{_l}"]) for r, u in zip(_droutes, _dm.get("label_ui_ids") or [])]
         _got = [(a, _html.unescape(b)) for a, b in re.findall(r'<a href="([^"]+)"[^>]*>([^<]*)</a>', _dg.group(1))] if _dg else []
@@ -3466,7 +3520,7 @@ try:
         _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
         if "data-cite" in _ctl or 'class="report"' in _ctl or not all(t in _ctl for t in ("data-search-open", "data-lang=", "data-menu ")):
             errors.append(f"RC-NAV {_p} the header's controls are not search, language and menu")
-        _pts = re.findall(r'</h1><div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>([^<]*)</button><a class="report" href="([^"]+)">([^<]*)</a></div>', _h)
+        _pts = re.findall(r'</h1>(?:<div class="record-line" data-record-line>.*?</div></div>)?<div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>([^<]*)</button><a class="report" href="([^"]+)">([^<]*)</a></div>', _h, re.S)   # S12: the record line between
         if len(_pts) != 1 or _h.count("data-page-tools") != 1 or _h.count("<h1") != 1:
             errors.append(f"RC-NAV {_p} has no single page-tools row under its h1")
         else:
@@ -3614,18 +3668,22 @@ try:
                       for _d in [re.search(r'<p data-ma-dimensions><b>[^<]*</b>(.*?)</p>', _b)] if _d}
     if not _ma["en"] or _ma["en"] != _ma["ar"]:
         errors.append(f"RC-1115 /measurement/ does not print the dimensions on the same cards with equal counts: en {_ma['en']} ar {_ma['ar']}")
+    # (2) S12 (W4 Appendix F, 17 October 2026): the record head reads crumb → rubric → h1 → one record line (WHEN, then
+    #     FOR WHOM, carrying id="q3") → the page tools → q1; nothing of the record line precedes the h1.
     _nq3 = 0
     for _f in sorted(DIST.glob("*/evidence/*/index.html")):
         _h = _f.read_text(encoding="utf-8")
-        _q3 = re.search(r'id="q3"><h2 class="rubric"><span class="n">03</span>([^<]*)</h2><div class="body"><p>(.*?)</p>', _h)
-        if not _q3 or not _q3.group(2).strip():
+        if "data-record-line" not in _h:
             continue
-        _nq3 += 1
+        _rl = re.search(r'</h1><div class="record-line" data-record-line>(.*?)</div><div class="page-tools"', _h, re.S)
         _head = _h.split('<div class="head">', 1)[1].split('<h1', 1)[0] if '<div class="head">' in _h else ""
-        if f'<div class="clock"><span class="k">{_q3.group(1)}</span><span class="v">{_q3.group(2)}</span></div>' not in _head:
-            errors.append(f"RC-1115 {_f.relative_to(DIST).as_posix()} has a q3 section but no FOR WHOM clock before its h1")
+        if not _rl or 'class="clock"' in _head:
+            errors.append(f"RC-1115 {_f.relative_to(DIST).as_posix()} record line is not between its h1 and its page tools")
+            continue
+        if '<div class="clock" id="q3">' in _rl.group(1):
+            _nq3 += 1
     if _nq3 < 200:
-        errors.append(f"RC-1115 only {_nq3} records with a q3 section")
+        errors.append(f"RC-1115 only {_nq3} records carry the FOR WHOM clock (id q3) in their record line")
 except Exception as _x:
     errors.append("RC-1115 unreadable " + repr(_x))
 
@@ -3753,7 +3811,7 @@ except Exception as _x:
 #     no number prints with two or more decimal places;
 # (2) on every page, no number with two or more decimal places lies within 0.05 of a governed 2022 Findex share or of a
 #     same-dimension gap between two of them (this reaches Home, /measurement/, Readings and search-led pages).
-_PREC_ANY = re.compile(r"(?<![\d.,])\d+\.\d{2,}(?![\d])")
+_PREC_ANY = re.compile(r"(?<![\d.,])\d+\.\d{2,}(?![\d])(?!\.\d)")   # S (B1, 17 October 2026): a dotted indicator number ("SDG indicator 8.10.2") is not a share
 def _visible(_p):
     _h = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _p.read_text(encoding="utf-8"), flags=re.S)
     return re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", _h)))
@@ -4254,8 +4312,15 @@ try:
     for _lang, _months in (("en", _E2_EN), ("ar", _E2_AR)):
         for _f in sorted((DIST / _lang).rglob("index.html")):
             _np += 1
-            _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _f.read_text(encoding="utf-8"), flags=re.S))))
-            for _d in sorted(set(_e2_dates(_t.replace("⁦", "").replace("⁩", ""), _months))):
+            # S13 (17 October 2026): a date shown in words carries its ISO value in <time datetime>; the gate reads that
+            # value and removes the element, so a neighbouring table cell ("54" before "June 2024") is never read as a
+            # day. A data table's period keys stay as the source publishes them and are outside this scan, as before.
+            _src = _f.read_text(encoding="utf-8")
+            _timed = set(re.findall(r'<time datetime="(\d{4}-\d{2}(?:-\d{2})?)">[^<]*</time>', _src))
+            _src = re.sub(r'<time datetime="\d{4}-\d{2}(?:-\d{2})?">[^<]*</time>', " ", _src)
+            _t = re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", _src, flags=re.S))))
+            _t = _t.replace("⁦", "").replace("⁩", "")
+            for _d in sorted(set(_e2_dates(_t, _months)) | _timed):
                 if _d not in _stated and _d not in _srcd and _d not in _edition_dates:
                     errors.append(f"E2-DATES {_f.relative_to(DIST).as_posix()} prints the date {_d}, which no record, event or source states")
     if _np < 280:

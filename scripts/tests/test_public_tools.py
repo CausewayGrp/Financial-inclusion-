@@ -457,7 +457,9 @@ def t_share_record(page, base):
 def t_cite_source(page, base):
     page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
     page.goto(base + "/en/data/")
-    btn = page.query_selector(".source-locator [data-source-cite]")
+    sid = page.evaluate("document.querySelector('.source-locator[data-source-record]').id.replace('source-','')")
+    page.goto(f"{base}/en/data/?source={sid}#source-{sid}")   # S1: the group renders closed; the deep link opens it
+    btn = page.query_selector(f"#source-{sid} [data-source-cite]")
     btn.scroll_into_view_if_needed(); btn.click()
     page.wait_for_function("document.querySelector('#utility-status').textContent.length>0")
     parts = page.evaluate("navigator.clipboard.readText()").split(" · ")
@@ -505,7 +507,20 @@ def t_menu(page, base):
     assert page.get_attribute("[data-menu]", "aria-expanded") == "true"
     page.keyboard.press("Escape")
     assert page.get_attribute("[data-menu]", "aria-expanded") == "false"
-    assert page.evaluate("document.activeElement.matches('[data-menu]')")
+    page.focus("[data-menu]"); page.keyboard.press(" ")   # ported (Mohammed Waleed): Space opens the menu like Enter
+    assert page.get_attribute("[data-menu]", "aria-expanded") == "true"
+    page.keyboard.press("Escape")
+
+
+@test("a11y: the opened menu's language link keeps a Compare selection (query and anchor) across the switch")
+def t_menu_lang_keeps_query(page, base):
+    page.set_viewport_size({"width": 390, "height": 844})
+    page.goto(base + "/en/evidence/compare/?records=CLM-001,CLM-003#verdict")
+    page.click("[data-menu]")
+    page.click("[data-menu-lang]")
+    page.wait_for_url("**/ar/evidence/compare/?records=CLM-001,CLM-003#verdict")
+    assert page.evaluate("document.documentElement.lang") == "ar"   # the other edition, same selection and anchor (item 11)
+    assert page.get_attribute("[data-menu]", "aria-expanded") == "false"   # a fresh page: the menu starts closed
 
 
 def tab_to(page, selector: str, limit: int = 900) -> bool:

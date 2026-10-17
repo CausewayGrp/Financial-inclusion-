@@ -247,6 +247,10 @@ def date_or_identifier(token,context,start,end):
         return 'STABLE_ID_OR_TECHNICAL_STANDARD'     # a document reference or decision number is an identifier, not a quantity
     if re.search(r'(?:SDG|ODD|الهدف)\s*\d+\.$',pre) or re.match(r'\.\d',post) and re.search(r'(?:SDG|indicator|المؤشر)\s*$',pre):
         return 'STABLE_ID_OR_TECHNICAL_STANDARD'
+    # Stage B B1 (OD-1017-04(b), 17 October 2026): a whole dotted indicator number after "indicator" or the SDG phrase
+    # ("SDG indicator 8.10.1", «مؤشر أهداف التنمية المستدامة 8.10.2») is the indicator's identifier, not a quantity
+    if re.fullmatch(r'\d{1,2}\.\d{1,2}(?:\.\d{1,2})?',bare) and re.search(r'(?:SDG|indicator|المؤشر|أهداف التنمية المستدامة)\s*$',pre):
+        return 'STABLE_ID_OR_TECHNICAL_STANDARD'
     return None
 
 def allowed(route,obj,token,text):

@@ -1095,7 +1095,7 @@ def navigation_contract(ctx, e):
     _align_navigation_contract(n)
     # B-b/B-c (owner decisions of 9 October 2026): each hub carries exactly one governed numeral, matched by its route or,
     # for a grouping node, by its children's routes
-    if n.get("hub_numerals"):
+    if (n.get("hub_numerals") or {}).get("items"):   # D8 (17 October 2026): an empty list is the retired state
         ui = {r.get("ui_id") for r in ctx.out["content/interface_copy.json"]}
         keys = [tuple([it["route"]] if it.get("route") else [c["route"] for c in it.get("children") or []]) for it in nav]
         got = [tuple(x.get("routes") or []) for x in n["hub_numerals"].get("items") or []]
