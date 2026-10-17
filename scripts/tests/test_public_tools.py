@@ -9,7 +9,7 @@ Serves dist/ (or the directory named by YFIE_SITE_DIR, relative to the repositor
 Exit code 0 = all tests pass; 1 = a behaviour regressed; 2 = the browser harness is unavailable.
 """
 import functools, http.server, json, os, re, socket, sys, threading, traceback
-from urllib.parse import quote, urljoin, urlsplit
+from urllib.parse import quote, unquote, urljoin, urlsplit
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DIST = os.path.join(ROOT, os.environ.get("YFIE_SITE_DIR") or "dist")   # F9: the reference implementation is tested unchanged
@@ -392,22 +392,6 @@ def t_record_context(page, base):
     assert not page.is_visible("[data-correction-origin]")
 
 
-@test("evidence record: Report issue link carries the record into Contact and into the message subject")
-def t_report_issue(page, base):
-    for lang in ("en", "ar"):
-        page.goto(f"{base}/{lang}/evidence/CLM-010/")
-        href = page.get_attribute("a[href*='/contact/?record=']", "href")
-        page.goto(urljoin(base, href))
-        assert "CLM-010" in page.inner_text("[data-correction-record]")
-        assert page.is_visible("[data-correction-mail]")
-        mail = page.get_attribute("[data-correction-mail]", "href")
-        assert mail.startswith("mailto:") and "subject=" in mail and "CLM-010" in mail, mail
-    page.goto(base + "/en/contact/")
-    assert not page.is_visible("[data-correction-mail]"), "mail action must not appear without a record"
-    page.goto(base + "/en/contact/?record=CLM-999")
-    assert not page.is_visible("[data-correction-mail]"), "mail action must not carry an unknown reference"
-
-
 @test("cite: an Evidence Record copies its short citation plus the record link, and its governed long form on request, in both languages")
 def t_cite_record(page, base):
     """RC-15 (B15 d, C-2; OWN-04): the short citation (title, record ID, edition, original source and locator) is the
@@ -566,6 +550,208 @@ def t_announce(page, base):
     assert page.get_attribute("#utility-status", "role") == "status"
 
 
+# ------------------------------------------------------------------------------------------------ B2 T (BRIEF W4 T; OD-1017-04(a)): the tools
+@test("report: a record's link opens the form pre-filled; a valid report prepares a fixed-format e-mail under a reference code; the invalid states are caught")
+def t_report_form(page, base):
+    """BRIEF W4 T (report an error): every record carries 'Report an error' → /contact/?record=ID#report; the form
+    pre-fills page, record, language and edition; a valid report becomes a mailto whose body is the fixed key: value
+    list under YFIE-ERR-<record>-<yyyymmdd-hhmm>; the copy action copies the same body. Negative controls: an empty
+    form, an invalid address and an unknown record never produce a report."""
+    page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
+    keys = ["Reference", "Page", "Record", "Section", "Language", "Edition", "Error type", "In question", "Should say", "Evidence", "Name", "Reply to"]
+    for lang in ("en", "ar"):
+        page.goto(f"{base}/{lang}/evidence/CLM-010/")
+        href = page.get_attribute("[data-page-tools] [data-report-link]", "href")
+        assert href.endswith("?record=CLM-010#report"), href
+        page.goto(urljoin(base, href))
+        page.wait_for_selector("[data-report]")
+        assert page.input_value('[data-rf="record"]') == "CLM-010"
+        assert page.input_value('[data-rf="url"]').endswith(f"/{lang}/evidence/CLM-010/"), page.input_value('[data-rf="url"]')
+        assert page.input_value('[data-rf="lang"]') == lang and page.input_value('[data-rf="edition"]') != ""
+        assert page.evaluate("document.querySelector('[data-report-nojs]').hidden") is True
+        assert "CLM-010" in page.inner_text("[data-correction-record]")
+    # negative control 1: an empty form reports its missing fields and prepares nothing
+    page.evaluate("document.querySelector('[data-report]').dataset.noMail='1'")
+    page.click("[data-report-send]")
+    errs = page.inner_text("[data-report-errors]")
+    assert page.is_visible("[data-report-errors]") and "2" in errs, errs
+    assert page.evaluate("document.querySelector('[data-report]').dataset.mailto") is None
+    assert page.evaluate("document.activeElement.getAttribute('data-rf')") == "value"
+    # negative control 2: an invalid reply address
+    page.fill('[data-rf="value"]', "11.9%")
+    page.select_option('[data-rf="type"]', "number")
+    page.fill('[data-rf="email"]', "not-an-address")
+    page.click("[data-report-send]")
+    assert page.is_visible('[data-rf-err="email"]') and page.evaluate("document.querySelector('[data-report]').dataset.mailto") is None
+    # a valid report
+    page.fill('[data-rf="email"]', "reader@example.org")
+    page.fill('[data-rf="should"]', "11.8%")
+    page.click("[data-report-send]")
+    page.wait_for_function("!!document.querySelector('[data-report]').dataset.mailto")
+    mailto = page.evaluate("document.querySelector('[data-report]').dataset.mailto")
+    address = page.get_attribute("[data-report]", "data-address")
+    assert mailto.startswith(f"mailto:{address}?subject=") and "&body=" in mailto, mailto[:90]
+    subject = unquote(mailto.split("subject=", 1)[1].split("&body=", 1)[0])
+    body = unquote(mailto.split("&body=", 1)[1])
+    lines = body.split("\n")
+    assert [l.split(":", 1)[0] for l in lines] == keys, lines
+    ref = lines[0].split(": ", 1)[1]
+    assert re.fullmatch(r"YFIE-ERR-CLM-010-\d{8}-\d{4}", ref), ref
+    assert ref in subject and subject.startswith(page.get_attribute("[data-report]", "data-product") + " — "), subject
+    assert "Record: CLM-010" in lines and "Error type: number" in lines and "In question: 11.9%" in lines and "Should say: 11.8%" in lines and "Reply to: reader@example.org" in lines and "Language: ar" in lines, lines
+    assert page.inner_text("[data-report-ref-code]").strip() == ref
+    assert ref in page.inner_text("[data-report-status]")
+    # the copy action copies the same body
+    page.evaluate("navigator.clipboard.writeText('')")
+    page.click("[data-report-copy]")
+    page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+    assert page.evaluate("navigator.clipboard.readText()").replace("\r\n", "\n") == body
+    # negative control 3: an unknown record is a link error, not a pre-filled report
+    page.goto(base + "/en/contact/?record=CLM-999#report")
+    page.wait_for_selector("[data-report]")
+    assert page.input_value('[data-rf="record"]') == "" and page.is_visible("[data-correction-error]")
+    # a figure's link carries its record and figure
+    page.goto(base + "/en/people/")
+    fig = page.get_attribute("figure .report-l[data-report-link]", "href")
+    assert re.search(r"/en/contact/\?record=VIS-[A-Z0-9-]+&figure=VIS-[A-Z0-9-]+#report$", fig), fig
+    page.goto(urljoin(base, fig))
+    page.wait_for_selector("[data-report]")
+    vid = re.search(r"record=([^&]+)", fig).group(1)
+    assert page.input_value('[data-rf="record"]') == vid and page.input_value('[data-rf="anchor"]') == vid
+    # without a record, the form still opens from any page (the util link) and the no-JS mailto carries the field list
+    page.goto(base + "/en/methodology/")
+    href = page.get_attribute("#cite-tools [data-report-link]", "href")
+    assert href.endswith("/en/contact/#report"), href
+    page.goto(base + "/en/contact/")
+    page.wait_for_selector("[data-report]")
+    nojs = page.get_attribute("[data-report-nojs] a[data-correction-mail]", "href")
+    assert nojs.startswith(f"mailto:{address}?subject=") and all(k + ":" in unquote(nojs) for k in keys), nojs[:120]
+
+
+@test("cite: APA 7, Chicago, BibTeX and RIS carry the record ID, the edition and the access date; BibTeX and RIS parse")
+def t_cite_formats(page, base):
+    """OD-1017-04(a): the format control renders the citation from the page's governed metadata; the copy action copies
+    exactly the rendered text; a parser accepts the BibTeX and the RIS and rejects a broken one."""
+    page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
+    bib_rx = re.compile(r"@misc\{([A-Za-z0-9_]+),\n((?:  [a-z]+ = \{[^\n]*\},?\n)+)\}")
+    page.goto(base + "/en/evidence/CLM-001/")
+    edition = page.evaluate("document.querySelector('meta[name=\"yfie-edition\"]').content")
+    assert edition
+    for fmt in ("apa", "chicago", "bibtex", "ris"):
+        page.select_option("[data-cite-format]", fmt)
+        out = page.inner_text("[data-cite-out]")
+        assert "CLM-001" in out and edition in out and "/en/evidence/CLM-001/" in out, (fmt, out[:160])
+        page.evaluate("navigator.clipboard.writeText('')")
+        page.click("section.util [data-cite]")
+        page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+        copied = page.evaluate("navigator.clipboard.readText()").replace("\r\n", "\n")
+        assert copied.strip() == out.strip(), (fmt, copied[:100], out[:100])
+        if fmt == "bibtex":
+            m = bib_rx.fullmatch(copied.strip())
+            assert m, copied[:200]
+            fields = dict(re.findall(r"  ([a-z]+) = \{([^\n]*)\},?\n", m.group(2)))
+            assert {"author", "title", "howpublished", "note", "year", "url"} <= set(fields), sorted(fields)
+            assert fields["year"].isdigit() and re.search(r"Accessed \d{4}-\d{2}-\d{2}", fields["note"]) and "CLM-001" in fields["howpublished"], fields
+        if fmt == "ris":
+            lines = copied.strip("\r\n").split("\n")   # "ER  - " keeps its trailing space
+            assert all(re.fullmatch(r"[A-Z][A-Z0-9]  - ?.*", l) for l in lines), lines
+            tags = [l[:2] for l in lines]
+            assert tags[0] == "TY" and tags[-1] == "ER" and {"AU", "TI", "T2", "PY", "ET", "ID", "UR", "Y2"} <= set(tags), tags
+            ris = {l[:2]: l[6:] for l in lines}
+            assert ris["ID"] == "CLM-001" and re.fullmatch(r"\d{4}/\d{2}/\d{2}", ris["Y2"]) and ris["PY"].isdigit(), ris
+        if fmt == "apa":
+            assert re.search(r"\(\d{4}\)\. .*\(Evidence Record CLM-001\) \[Evidence record\]\. .*Retrieved \w+ \d{1,2}, \d{4}, from ", out), out
+    page.select_option("[data-cite-format]", "plain")
+    assert page.evaluate("document.querySelector('[data-cite-out]').hidden") is True
+    # negative controls for the parsers: a keyless BibTeX and a RIS without its end tag are rejected
+    assert not bib_rx.fullmatch("@misc{,\n  title = {x},\n}")
+    assert [l[:2] for l in ["TY  - ELEC", "TI  - x"]][-1] != "ER"
+    # the Arabic edition: the Arabic access phrase, Latin digits, the same machine formats
+    page.goto(base + "/ar/evidence/CLM-001/")
+    page.select_option("[data-cite-format]", "chicago")
+    out = page.inner_text("[data-cite-out]")
+    assert "تاريخ الاطلاع" in out and "CLM-001" in out and not re.search(r"[٠-٩]", out), out[:160]
+    page.select_option("[data-cite-format]", "ris")
+    assert page.inner_text("[data-cite-out]").startswith("TY  - ELEC\nAU  - CauseWay\n")
+    # a page without a record cites as a page
+    page.goto(base + "/en/methodology/")
+    page.select_option("[data-cite-format]", "apa")
+    out = page.inner_text("[data-cite-out]")
+    assert "[Web page]" in out and "Evidence Record" not in out, out[:160]
+
+
+@test("compare: the verdict carries a one-sentence reason naming the dimension behind it; the summary copies with the verdict")
+def t_compare_reason(page, base):
+    """SIG-5 / BRIEF W4 T (Compare): each controlled verdict has its one reason, in the governed field words; the copied
+    summary carries the verdict, the reason, each record's scope and the comparison link; an input error disables it."""
+    page.context.grant_permissions(["clipboard-read", "clipboard-write"], origin=base)
+    page.goto(base + "/en/evidence/compare/")
+    page.wait_for_selector("[data-compare-reason]")
+    v = verdict(page)
+    reason = page.inner_text("[data-compare-reason]").strip()
+    starts = {"not-direct": "Differs between these records:", "qualified": "Differs between these records:", "unresolved": "Not recorded on at least one record:",
+              "aligned": "Definition, population, method, period and currentness match", "same-record": "The same record is selected"}
+    assert reason.startswith(starts[v]), (v, reason)
+    assert page.evaluate("document.querySelector('[data-compare-summary]').disabled") is False
+    page.click("[data-compare-summary]")
+    page.wait_for_function("navigator.clipboard.readText().then(t=>t.length>0)")
+    text = page.evaluate("navigator.clipboard.readText()").replace("\r\n", "\n")
+    title = page.inner_text("[data-compare-verdict] h3").strip()
+    lines = text.split("\n")
+    assert lines[0] == "Comparison of 2 records" and lines[1] == f"{title}. {reason}", lines[:2]
+    assert sum(1 for l in lines if l.startswith("— ")) == 2 and "?records=" in lines[-1], lines
+    ids = page.evaluate("[...document.querySelectorAll('#compare-a option')].map(o=>o.value).filter(Boolean)")
+    page.goto(f"{base}/en/evidence/compare/?records={ids[0]},{ids[0]}")
+    page.wait_for_selector("[data-compare-reason]")
+    assert page.inner_text("[data-compare-reason]").strip() == "The same record is selected more than once."
+    page.goto(base + "/en/evidence/compare/?records=NOT-A-RECORD,ALSO-NOT")
+    page.wait_for_selector("[data-compare-url-error]")
+    assert page.evaluate("document.querySelector('[data-compare-summary]').disabled") is True
+    page.goto(base + "/ar/evidence/compare/")
+    page.wait_for_selector("[data-compare-reason]")
+    assert page.inner_text("[data-compare-reason]").strip().endswith(".") and re.search(r"[؀-ۿ]", page.inner_text("[data-compare-reason]"))
+
+
+@test("search: an unanswerable query offers the questions hub and the same query in the other edition, and no false hit")
+def t_search_zero_help(page, base):
+    """BRIEF W4 T (Search, zero-result help): the empty state links the Questions hub and the other edition's directory
+    with the query; a near-miss offers the alias term it resembles; nonsense never produces a hit."""
+    page.goto(base + "/en/evidence/?q=" + quote("zxqv quantum"))
+    page.wait_for_selector("#search-results [data-search-empty]")
+    assert page.query_selector("#search-results .search-hit") is None
+    other = page.get_attribute("[data-search-other-edition]", "href")
+    assert other == urlsplit(base).path + "/ar/evidence/?q=zxqv%20quantum" and page.get_attribute("[data-search-other-edition]", "hreflang") == "ar", other
+    assert page.get_attribute("[data-search-help] a", "href").endswith("/en/explore/")
+    page.goto(urljoin(base, other))
+    page.wait_for_selector("#search-results [data-search-empty]")
+    assert page.get_attribute("[data-search-other-edition]", "hreflang") == "en" and page.get_attribute("[data-search-other-edition]", "href").endswith("/en/evidence/?q=zxqv%20quantum")
+    page.goto(base + "/en/evidence/?q=lawyers")
+    page.wait_for_selector("#search-results .search-hit, #search-results [data-search-empty]")
+    if page.query_selector("#search-results [data-search-empty]"):
+        tries = page.evaluate("[...document.querySelectorAll('[data-search-suggest]')].map(a=>a.textContent)")
+        assert "law" in tries, tries
+
+
+@test("sources: facet options carry live counts that follow the term and the other facets")
+def t_source_facet_counts(page, base):
+    """BRIEF W4 T (source directory): each option says how many sources it would leave; the counts move with the other
+    facets and return after Clear all."""
+    page.goto(base + "/en/data/")
+    page.wait_for_selector("[data-source-facets]:not([hidden])")
+    read = "[...document.querySelector('[data-source-facet=\"publisher\"]').options].filter(o=>o.value).map(o=>o.textContent)"
+    first = page.evaluate(read)
+    assert first and all(re.search(r"\((\d+)\)$", t) for t in first), first[:3]
+    total = sum(int(re.search(r"\((\d+)\)$", t).group(1)) for t in first)
+    shown = int(re.search(r"\d+", page.inner_text("[data-source-filter-status]")).group(0))
+    assert total == shown, (total, shown)
+    page.select_option('[data-source-facet="type"]', index=1)
+    after = page.evaluate(read)
+    assert after != first and sum(int(re.search(r"\((\d+)\)$", t).group(1)) for t in after) < total, after[:3]
+    page.click("[data-source-facets-clear]")
+    assert page.evaluate(read) == first
+
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -577,6 +763,8 @@ def main():
     live = os.environ.get("YFIE_BASE_URL", "").rstrip("/")
     httpd, base = (None, live) if live else serve()
     tests = [v for v in globals().values() if callable(v) and hasattr(v, "__test_name__")]
+    only = os.environ.get("YFIE_TOOL_TESTS")   # B2 T: run the tests whose name contains this text (development aid)
+    tests = [t for t in tests if not only or only in t.__test_name__]
     failed = 0
     with sync_playwright() as pw:
         exe = os.environ.get("YFIE_CHROMIUM")

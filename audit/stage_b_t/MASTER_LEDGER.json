@@ -1,0 +1,515 @@
+{
+ "transaction": "STAGE-B-T",
+ "decision": "audit/OWNER_DIRECTIVE_2026-10-17.md (Phase 2, B2 T); takeover brief Part 6 items 16 and 17; OD-1017-04(a); BRIEF W4 T (search, Compare, source directory, report an error); design/DESIGN_INTEGRATION_V2.md §3",
+ "summary": "54 interface labels (EN and AR): the structured report-an-error form on /contact/#report (fields, error types, actions, validation and status messages, the no-JavaScript instruction), the citation format control and its runtime phrases (plain text, APA 7, Chicago, BibTeX, RIS), the Compare verdict reason and copied summary, the search zero-result help and the /corrections/ process-document link.",
+ "self_counts": {
+  "site_pages": 151,
+  "bilingual_sections": 254,
+  "questions": 11,
+  "evidence_objects": 116,
+  "public_claims": 60,
+  "readings": 12,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 31,
+  "sources": 208,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 99,
+  "remittances": 29
+ },
+ "input_master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
+ "output_master_sha256": "8ac589d0f1a0b665649a575607fd8e5c353216b19d328c4b6e70c586a835e95a",
+ "cells_written": 54,
+ "changes": [
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-INTRO",
+   "old": null,
+   "new": "Use this form to report a wrong number, date, source, scope, translation or accessibility problem. It prepares an e-mail to the contact address below in a fixed format with a reference code; nothing is sent until you send it from your mail app. || استخدم هذا النموذج للإبلاغ عن خطأ في رقم أو تاريخ أو مصدر أو نطاق أو ترجمة، أو عن مشكلة في إمكانية الوصول. يُعِدّ النموذج رسالة بريد إلكتروني إلى عنوان التواصل أدناه بصيغة ثابتة مع رمز مرجعي، ولا يُرسَل شيء حتى ترسلها أنت من تطبيق البريد لديك."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-REQUIRED-NOTE",
+   "old": null,
+   "new": "Fields marked * are required. || الحقول المعلَّمة بعلامة * مطلوبة."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-URL",
+   "old": null,
+   "new": "Page address || رابط الصفحة"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-RECORD",
+   "old": null,
+   "new": "Record or chart ID || معرّف السجل أو الشكل"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-ANCHOR",
+   "old": null,
+   "new": "Section or chart within the page || القسم أو الشكل داخل الصفحة"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-LANG",
+   "old": null,
+   "new": "Language || اللغة"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-EDITION",
+   "old": null,
+   "new": "Edition || الإصدار"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-VALUE",
+   "old": null,
+   "new": "The value or sentence in question || القيمة أو الجملة محل الاعتراض"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE",
+   "old": null,
+   "new": "Type of error || نوع الخطأ"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE-NUMBER",
+   "old": null,
+   "new": "Number || رقم"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE-DATE",
+   "old": null,
+   "new": "Date or period || تاريخ أو فترة"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE-SOURCE",
+   "old": null,
+   "new": "Source or link || مصدر أو رابط"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE-SCOPE",
+   "old": null,
+   "new": "Scope or definition || نطاق أو تعريف"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE-TRANSLATION",
+   "old": null,
+   "new": "Translation || ترجمة"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE-ACCESSIBILITY",
+   "old": null,
+   "new": "Accessibility || إمكانية الوصول"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-TYPE-OTHER",
+   "old": null,
+   "new": "Other || غير ذلك"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-SHOULD",
+   "old": null,
+   "new": "What it should say || ما ينبغي أن يرد"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-EVIDENCE",
+   "old": null,
+   "new": "Evidence for the correction (a link or a citation) || الدليل على التصحيح (رابط أو استشهاد)"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-NAME",
+   "old": null,
+   "new": "Your name (optional) || اسمك (اختياري)"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-EMAIL",
+   "old": null,
+   "new": "Your e-mail, if you want a reply (optional) || بريدك الإلكتروني إن أردت ردًّا (اختياري)"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-CONSENT",
+   "old": null,
+   "new": "By sending this report you agree that its content is handled as described on the privacy page. || بإرسال هذا البلاغ توافق على التعامل مع محتواه كما هو موضَّح في صفحة الخصوصية."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-SEND",
+   "old": null,
+   "new": "Send by e-mail || أرسل بالبريد الإلكتروني"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-COPY",
+   "old": null,
+   "new": "Copy report || انسخ البلاغ"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-REFERENCE",
+   "old": null,
+   "new": "Reference code || الرمز المرجعي"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-NOJS",
+   "old": null,
+   "new": "Without JavaScript, send an e-mail to the contact address with the fields above as its lines. || من دون JavaScript، أرسل رسالة بريد إلكتروني إلى عنوان التواصل تتضمن الحقول أعلاه، كلُّ حقل في سطر."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-REPORT-NOJS-LINK",
+   "old": null,
+   "new": "Open a pre-addressed e-mail with the field list || افتح رسالة بريد إلكتروني معنونة مسبقًا تتضمن قائمة الحقول"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-REPORT-REQUIRED",
+   "old": null,
+   "new": "Complete this field. || أكمل هذا الحقل."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-REPORT-NEED-ONE",
+   "old": null,
+   "new": "Say what is in question or what it should say. || اذكر ما هو محل الاعتراض أو ما ينبغي أن يرد."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-REPORT-EMAIL-INVALID",
+   "old": null,
+   "new": "This e-mail address is not valid. || عنوان البريد الإلكتروني هذا غير صالح."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-REPORT-ERRORS",
+   "old": null,
+   "new": "The report is not complete: {n} field(s) need attention. || البلاغ غير مكتمل. عدد الحقول التي تحتاج إلى مراجعة: {n}."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-REPORT-PREPARED",
+   "old": null,
+   "new": "Report {ref} is ready. Your mail app should open; if it does not, use Copy report. || البلاغ {ref} جاهز. ينبغي أن يُفتح تطبيق البريد لديك؛ وإن لم يُفتح فاستخدم «انسخ البلاغ»."
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-REPORT-COPIED",
+   "old": null,
+   "new": "Report copied || تم نسخ البلاغ"
+  },
+  {
+   "finding": "STAGE-B-T:T-REPORT-FORM",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-REPORT-SUBJECT",
+   "old": null,
+   "new": "Error report {ref} || بلاغ عن خطأ {ref}"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-FORMAT",
+   "old": null,
+   "new": "Citation format || صيغة الاستشهاد"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-FORMAT-PLAIN",
+   "old": null,
+   "new": "Plain text || نص عادي"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-FORMAT-APA",
+   "old": null,
+   "new": "APA 7 || APA 7"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-FORMAT-CHICAGO",
+   "old": null,
+   "new": "Chicago || شيكاغو"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-FORMAT-BIBTEX",
+   "old": null,
+   "new": "BibTeX || BibTeX"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CITE-FORMAT-RIS",
+   "old": null,
+   "new": "RIS || RIS"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-CITE-RETRIEVED",
+   "old": null,
+   "new": "Retrieved {date}, from {url} || استُرجع بتاريخ {date} من {url}"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-CITE-ACCESSED",
+   "old": null,
+   "new": "Accessed {date}. || تاريخ الاطلاع: {date}."
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-CITE-RECORD",
+   "old": null,
+   "new": "Evidence Record {id} || سجل الدليل {id}"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-CITE-TYPE-RECORD",
+   "old": null,
+   "new": "[Evidence record] || [سجل دليل]"
+  },
+  {
+   "finding": "STAGE-B-T:T-CITE-FORMATS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-CITE-TYPE-PAGE",
+   "old": null,
+   "new": "[Web page] || [صفحة ويب]"
+  },
+  {
+   "finding": "STAGE-B-T:T-COMPARE-REASON",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-REASON-DIFFERS",
+   "old": null,
+   "new": "Differs between these records: {fields}. || ما يختلف بين هذه السجلات: {fields}."
+  },
+  {
+   "finding": "STAGE-B-T:T-COMPARE-REASON",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-REASON-MISSING",
+   "old": null,
+   "new": "Not recorded on at least one record: {fields}. || غير مسجَّل في سجل واحد على الأقل: {fields}."
+  },
+  {
+   "finding": "STAGE-B-T:T-COMPARE-REASON",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-REASON-SAME-RECORD",
+   "old": null,
+   "new": "The same record is selected more than once. || اختير السجل نفسه أكثر من مرة."
+  },
+  {
+   "finding": "STAGE-B-T:T-COMPARE-REASON",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-REASON-ALIGNED",
+   "old": null,
+   "new": "Definition, population, method, period and currentness match as recorded. || يتطابق التعريف والمجتمع والطريقة والفترة وحداثة الدليل كما هي مسجَّلة."
+  },
+  {
+   "finding": "STAGE-B-T:T-COMPARE-REASON",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-COMPARE-COPY-SUMMARY",
+   "old": null,
+   "new": "Copy summary || انسخ الملخص"
+  },
+  {
+   "finding": "STAGE-B-T:T-COMPARE-REASON",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-COMPARE-SUMMARY-HEAD",
+   "old": null,
+   "new": "Comparison of {n} records || عدد السجلات المقارَنة: {n}"
+  },
+  {
+   "finding": "STAGE-B-T:T-SEARCH-ZERO",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-TRY",
+   "old": null,
+   "new": "Try: || جرّب:"
+  },
+  {
+   "finding": "STAGE-B-T:T-SEARCH-ZERO",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-OTHER-EDITION",
+   "old": null,
+   "new": "Search the Arabic edition for this || ابحث عن هذا في النسخة الإنجليزية"
+  },
+  {
+   "finding": "STAGE-B-T:T-SEARCH-ZERO",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-JS-SEARCH-QUESTIONS",
+   "old": null,
+   "new": "Start from the questions || ابدأ من الأسئلة"
+  },
+  {
+   "finding": "STAGE-B-T:T-CORRECTIONS-PROCESS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-CORR-PROCESS-LINK",
+   "old": null,
+   "new": "How reports are triaged, fixed and logged (process document) || كيف تُفرَز البلاغات وتُصحَّح وتُسجَّل (وثيقة الإجراءات)"
+  }
+ ]
+}

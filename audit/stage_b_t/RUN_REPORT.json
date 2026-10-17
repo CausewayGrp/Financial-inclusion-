@@ -1,0 +1,79 @@
+{
+ "stage": "STAGE-B-T",
+ "staged_master_sha256": "8ac589d0f1a0b665649a575607fd8e5c353216b19d328c4b6e70c586a835e95a",
+ "installed": [],
+ "steps": [
+  {
+   "step": "generate",
+   "exit": 0,
+   "tail": [
+    "  \"presentation_priority.json\",",
+    "  \"visuals/visual_design_contracts.json\"",
+    " ],",
+    " \"output_sha256\": 40",
+    "}",
+    "PROJECTIONS GENERATED"
+   ]
+  },
+  {
+   "step": "rebind",
+   "exit": 0,
+   "tail": [
+    "  \"README.md\",",
+    "  \"OPENAI_REENTRY_CHECKPOINT.md\",",
+    "  \"handoff/README_FIRST.md\",",
+    "  \"handoff/CLAUDE_DESIGN_MASTER_PROMPT.md\"",
+    " ]",
+    "}"
+   ]
+  },
+  {
+   "step": "build",
+   "exit": 0,
+   "tail": [
+    "Built 306 HTML files from 151 controlled page specs."
+   ]
+  },
+  {
+   "step": "public_literal_audit",
+   "exit": 0,
+   "tail": [
+    "PUBLIC_LITERAL_CLOSURE records=19883 unresolved=0 open=0 problems=0"
+   ]
+  },
+  {
+   "step": "architecture_diagrams",
+   "exit": 0,
+   "tail": [
+    "ARCHITECTURE DIAGRAMS WRITTEN: YFIE_PUBLIC_SITE_MAP.svg, YFIE_PAGE_FAMILY_STATE_MAP.svg, YFIE_FULL_STACK_SYSTEM_ARCHITECTURE.svg"
+   ]
+  },
+  {
+   "step": "handoff_inventory",
+   "exit": 0,
+   "tail": [
+    "HANDOFF INVENTORY WRITTEN: 151 routes"
+   ]
+  },
+  {
+   "step": "repository_manifest",
+   "exit": 0,
+   "tail": [
+    "REPOSITORY MANIFEST WRITTEN: 2439 files in 24 classes"
+   ]
+  },
+  {
+   "step": "validate",
+   "exit": 1,
+   "tail": [
+    "HTML=306 ERRORS=5 WARN=0",
+    "FAIL R85-G01 bilingual public copy held in app.js (isAr ? literal); move it to 04 interface copy",
+    "FAIL F6-G05 form in ar/contact/index.html",
+    "FAIL F6-G05 form in en/contact/index.html",
+    "FAIL RC-T1 ar/evidence/MF-ORIG-001+002/index.html record MF-ORIG-001+002 has no report link carrying its ID",
+    "FAIL RC-T1 en/evidence/MF-ORIG-001+002/index.html record MF-ORIG-001+002 has no report link carrying its ID"
+   ]
+  }
+ ],
+ "result": "ROLLED_BACK"
+}
