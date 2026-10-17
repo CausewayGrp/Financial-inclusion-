@@ -20,7 +20,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GUIDANCE = ("README.md", "AGENTS.md", "CONTRIBUTING.md",
             "authority/CORE_CONSTITUTION.md", "authority/YFI_CURRENT_PROJECT_CONTEXT.json",
-            "audit/close_out/STAGE_B_DESIGN_CHARTER.md")
+            "audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md", "audit/OWNER_DECISIONS_2026-10-17.md",
+            "audit/close_out/TAKEOVER_BRIEF_2026-10-17.md")
 _SHA = re.compile(r"[0-9a-fA-F]{7,64}\Z")
 
 

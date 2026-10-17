@@ -27,7 +27,7 @@
         "The owner's release approval and tag (steps 13–14)"
       ],
       "handover": "docs/HANDOVER_TO_DEVELOPER.md",
-      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md, section \"Live status at CLOSE-6G (Stage A final instruction v5; integrated 14 October 2026)\" at the top, kept current: 299 items, one state each — CLOSED 92, HOSTING 9, FRONTIER 47 (each with a verification card and a cadence; EXT-40 added by CLOSE-6E), OWNER-OPTIONAL 12 (CWR-013, RES-03, AR-FINDEX-NAME and SB-01 added in PR-6), DECIDED 139 (ADD5-HH added by CLOSE-6F; RES-01 to RES-18 but RES-03, EXC-01 to EXC-10 and SB-02 added in PR-6); twin audit/close_out/OPEN_ITEMS_STATES.json, gate CO-G06; nothing is PENDING outside HOSTING; sections 1–10 below it are history"
+      "open_items": "FINAL_OPEN_ITEMS_REGISTER.md, section \"Live status at CLOSE-6G (Stage A final instruction v5; integrated 14 October 2026)\" at the top, kept current: 299 items, one state each — CLOSED 93 (SB-01 closed 17 October 2026 by OD-1017-01), HOSTING 9, FRONTIER 47 (each with a verification card and a cadence; EXT-40 added by CLOSE-6E), OWNER-OPTIONAL 11 (CWR-013, RES-03 and AR-FINDEX-NAME added in PR-6; SB-01 closed 17 October 2026), DECIDED 139 (ADD5-HH added by CLOSE-6F; RES-01 to RES-18 but RES-03, EXC-01 to EXC-10 and SB-02 added in PR-6); twin audit/close_out/OPEN_ITEMS_STATES.json, gate CO-G06; nothing is PENDING outside HOSTING; sections 1–10 below it are history"
     },
     "r_programme": "R0–R8.3 CLOSED / PASS; R8.4 CLOSED / PASS including the Evidence Readings (F2); R8.5 CLOSED (F4, audit/R8_5_REPOSITORY_SUBTRACTION_CLOSURE.md); R8.6 CLOSED — DESIGN HANDOFF READY (F8 freeze, audit/R8_6_DESIGN_HANDOFF_FREEZE_CLOSURE.md; F9 clean-room acceptance, audit/FINAL_CLEAN_ROOM_ACCEPTANCE.md)",
     "tranches": "Tranche A CLOSED; Tranche B specification CLOSED; Tranche B execution CLOSED; Tranche C COMPLETE and accepted by OpenAI (26 Sep 2026, recipient verification 31/31); final integration F0–F9 CLOSED (R8.5 closed; whole public corpus accepted; discovery, accessibility, rights and security contract in place; sustainability baseline recorded; Design handoff frozen; clean-room accepted by three cold recipients)",
@@ -66,7 +66,7 @@
       "close_6f": "PR #45 merged 13 October 2026 at 612ec146",
       "close_6g_and_report": "PR #46 merged 14 October 2026; audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md",
       "verification": "Verify run 38582364168: nine jobs successful on the merged commit; subsequent Workers build successful; neither result grants release approval",
-      "remaining_authority": "Formal Stage A closure remains the owner's decision; SB-01 Stage B prerequisites, Stage C acceptance, hosting and publication approvals remain outstanding"
+      "remaining_authority": "Stage A content acceptance recorded on PR #49 (15 October 2026); Stage B authorized 17 October 2026 (OD-1017-01) and Stage C follows it (OD-1017-02), audit/OWNER_DECISIONS_2026-10-17.md; hosting is unselected and publication approval remains outstanding"
     },
     "stage_a_final_reconciliation": {
       "as_of": "2026-10-15",
@@ -74,7 +74,7 @@
       "adjudications": "audit/stage_a_final/ADJUDICATIONS_2026-10-15.md",
       "acceptance_scope": "audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md",
       "decision_record": "Dated post-merge Stage A prospective content acceptance comment on the reconciliation PR, after successful final-main Verify; scope file alone does not declare closure.",
-      "stage_b": "BLOCKED on separate entry authorization only. D19–D22 neutralized 17 October 2026: no approved text found; they are not blockers and confer nothing.",
+      "stage_b": "AUTHORIZED: Stage B authorized 17 October 2026 (OD-1017-01, audit/OWNER_DECISIONS_2026-10-17.md); SB-01 CLOSED; operative charter audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md; executed by Claude Code under audit/close_out/TAKEOVER_BRIEF_2026-10-17.md; Stage C follows (OD-1017-02). D19–D22 neutralized 17 October 2026 and confer nothing. No hosting or release authorization.",
       "public_release_authorized": false
     },
     "hosting_decision": {

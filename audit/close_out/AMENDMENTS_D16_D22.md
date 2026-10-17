@@ -17,3 +17,7 @@ The owner's current defaults apply prospectively: CWR-013 reserved; two-Reading 
 Next executable Stage B entry action: the owner separately authorizes entry. D19–D22 were neutralized on 17 October 2026
 (`audit/OWNER_DECISIONS_2026-10-10.md` §7). That neutralization does not recover their text, does not adopt unknown
 rules, and does not authorize Stage B. SB-02 remains the prospective no-new-visual ruling in `STAGE_B_DESIGN_CHARTER.md`.
+
+---
+
+*17 October 2026:* read with `audit/OWNER_DECISIONS_2026-10-17.md` (OD-1017-01 to OD-1017-14). SB-01 is CLOSED by OD-1017-01; the operative charter is `STAGE_B_DESIGN_CHARTER_v3_2.md`. D19–D22 confer nothing and are never cited again (finding F-01: two incompatible D16–D22 lineages existed). Nothing above is rewritten.

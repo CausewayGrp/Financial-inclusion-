@@ -1,0 +1,163 @@
+# Owner decisions — 17 October 2026 (takeover brief, Part 1)
+
+Recorded verbatim from the owner's takeover brief of 17 October 2026 (`audit/close_out/TAKEOVER_BRIEF_2026-10-17.md`), under its Part 1 instruction: "In PR-C (Part 5), commit Part 1 verbatim as `audit/OWNER_DECISIONS_2026-10-17.md`." Sending the brief is the owner's dated decision. Nothing below is rewritten; later decisions are appended as dated sections.
+
+---
+
+## PART 1 — OWNER DECISIONS CARRIED BY THIS BRIEF (17 October 2026)
+
+The owner sends this brief. Sending it is the owner's dated decision.
+
+In PR-C (Part 5), commit Part 1 verbatim as `audit/OWNER_DECISIONS_2026-10-17.md`. These decisions use new
+identifiers, `OD-1017-nn`.
+
+They do **not** recover or reuse D19–D22. Two incompatible "D16–D22" lineages exist (finding F-01): an advisor message
+of 10 October used D16–D22 for different things than the repository's D16–D18. Never cite D19–D22 again.
+
+**OD-1017-01 — Stage B entry is authorized now.** The SB-01 conditions are met:
+1. Stage A content acceptance is effective. The dated decision comment is on PR #49: accepted main `19384b27`,
+   Master `580d2dc1…`.
+2. D19–D22 are neutralized (PR #52).
+3. This decision is the separate owner entry instruction.
+
+Stage B scope:
+- `audit/close_out/BRIEF.md`: W4 (G0 → S → T → G1 → G2 → W4F → G3), Appendix F (S1–S13, CR-S12) and Appendix G.
+- The Stage B Design Charter v3.2 in Appendix 1, as the operative charter. Commit it as
+  `audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md`.
+
+To the 15 October prospective charter (`audit/close_out/STAGE_B_DESIGN_CHARTER.md`), append one dated line pointing
+to v3.2 and to this decision. Rewrite nothing in it.
+
+Its substantive constraints remain in force:
+- SB-02: no new CWR-012 channel visual on current evidence;
+- CWR-013 stays reserved;
+- the two-Reading domain rule and the CWR-011 placement stay;
+- no new route families, no new Reading, no new research section.
+
+**OD-1017-02 — Stage C entry is authorized to follow Stage B without a further owner message.** Scope: BRIEF W5, W6,
+W6S, W7 and W8, as amended in Part 7.
+
+**OD-1017-03 — Steward scope for this run.** D14 is extended to this run for the following edits:
+- `navigation_interaction.json`: the edits required by S rules, CR-S12/D8 and recorded DL-V2 decisions;
+- `presentation_priority.json`: the TOC tiers and caps (S5, S10).
+
+Each such edit is its own commit, names its finding, and runs every gate.
+
+**OD-1017-04 — Provisions re-adopted under new IDs.** These were drafted by the advisor on 10 October and never
+entered the repository. They are re-adopted prospectively as follows:
+- **(a) Cite tool.** Formats: plain text, APA 7, Chicago, BibTeX and RIS. Each carries the record ID, the edition and
+  the access date. A test parses the BibTeX and the RIS. Stage B, T.
+- **(b) SDG correspondence.**
+  - Name an SDG indicator only where the record's indicator is definitionally identical to the UN metadata, with the
+    UN metadata locator in the record's method note. Today that means 8.10.2 on CLM-001, and 10.c.1 where it is
+    already stated.
+  - On CLM-001, state what the World Bank's 8.10.2 value for Yemen covers. Establish this by SOURCE → VERIFY:
+    - the DDI/fixture shows valid=0 only for some mobile-money usage variables (`fin13a`, `fin17a1`, `fin34b`,
+      `fin39b`, `fin43b`), while `fin5` has 153 valid cases;
+    - CO-G04 allows "did not ask" only where DDI valid==0 for that variable;
+    - CLM-001 already says no mobile-money value is published.
+
+    Write the sentence the evidence supports. Do not use a pre-decided text.
+  - 8.10.1: record in the Measurement Agenda's access dimension that no value is held after 2015 (missing ≠ zero),
+    after verifying it against the IMF FAS / WDI series. A 2015 value appears only as dated history.
+  - Master-first, EN and AR. Stage B, S.
+- **(c) README pair.** `README.ar.md` is written first, as Arabic, in the 17-section order of Part 7. `README.md`
+  follows the same order, written for English readers. Stage C, W6.
+- **(d) Social cards.**
+  - Add a template fingerprint (frame CSS, font files, logo bytes) to the social-image index, compare it in
+    `--check`, and add one negative control.
+  - Generation becomes incremental; `--all` forces a full redraw.
+  - Redraw stale cards in the same commit that made them stale.
+  - Full redraws happen only at the Stage B freeze (G3) and at hosting. Record the repository size before and after
+    each.
+- **(e) Audience task suite.** Ten persona walkthroughs on the final build, in Playwright, AR and EN, at 390 and 1440,
+  recording success, clicks, time and a screenshot. A failed task is a finding. Stage C, W8. Personas and tasks are
+  in Part 7.
+- **(f) CODEOWNERS.** Notification only. `REPOSITORY_SETTINGS.md` must never require code-owner review: with a single
+  maintainer, that would block every merge.
+
+**OD-1017-05 — Hosting stays unselected.** The owner decision of 16 October 2026 (`audit/OWNER_DECISIONS_2026-10-16.md`,
+in PR #53) stands.
+- No deployment, cloud account, registry, DNS change, purchase or corporate-site change.
+- `public_origin` stays null, `pre_release` stays true, `public_downloads` stays false.
+- "Hosting-ready" means Part 8.
+
+**OD-1017-06 — Merge authority.** You may merge a PR yourself by a normal merge, only when all of these hold:
+- exact-head Verify shows all nine required jobs green;
+- the PR body carries the scope review and the gate list;
+- nothing is overridden or weakened.
+
+You may never use an admin override, never merge another agent's PR without the review in Part 3, and never merge a
+PR whose Verify jobs are red, pending or cancelled.
+
+**If GitHub CI cannot run** (billing refused, F-13), the evidence for a merge is a full local gate run, recorded in
+the PR body with each command's last line:
+- CONTRIBUTING §5;
+- all negative controls (`test_gate_negative_controls.py` without `--only`);
+- the browser suites.
+
+Tell the owner once. Re-run CI on `main` when it is available again, and fix forward if anything fails. Working
+locally and pushing a branch when its gates pass is the normal rhythm: pushing is how work becomes safe.
+
+**Only Verify's nine jobs count.** The external "Workers Builds: financial-inclusion" check fails on every commit (F-06).
+It is not required. Ignore it. If the platform refuses the merge, comment "READY TO MERGE — exact head
+<sha>, Verify 9/9", tell the owner, and continue with work that does not depend on it.
+
+**OD-1017-07 — Dispositions of other agents' work.** As set out in Part 3.
+
+PR #52 edits two audit records in place: the D19–D22 rows of `AMENDMENTS_D16_D22.md`, and the status line and
+condition 2 of the 15 October charter. The owner accepts those in-place edits as the owner's own act of 17 October
+2026, an explicit exception to append-only. Record that in `audit/OWNER_DECISIONS_2026-10-17.md`. No other record is
+rewritten.
+
+**OD-1017-08 — Plain-language page leads (repository D18).** Delivered in Stage B S, through Master transactions, with
+the persona checks in G0/G3. Not a new route or layer.
+
+**OD-1017-09 — Owner defaults that stay in force unless the owner says otherwise:**
+- the Cash Consortium of Yemen keeps its qualified current Arabic name (ADD3-O1 stays OWNER-OPTIONAL);
+- downloads off and request counts off;
+- no analytics or cookies;
+- D16 aggregates stay unpublished without an approved aggregate input;
+- the FRONTIER evidence states are retained;
+- cosmetic font work deferred;
+- manual AR/EN accessibility acceptance stays release work.
+
+**OD-1017-10 — Stops are only those in Part 10.** Stage reports are informational; the owner can veto after the fact.
+
+**OD-1017-14 — Decide; do not ask.** When a question arises, answer it in this order of priority:
+1. truth and evidence safety (the semantic firewall, Master-first);
+2. the reader's success on the task;
+3. reversibility;
+4. the smallest change that achieves it.
+
+Then record the decision in one line and proceed. Never ask the owner something the repository, this brief or a
+dated owner decision answers. Ask only the Part 10 owner-only items, each with your recommended default.
+
+**OD-1017-11 — Single writer.** Codex and Grok are archived (17 October 2026). Claude Code, run by the owner locally,
+is the only agent that writes to the repository.
+
+Divergence means **a commit on `main` or an open PR that this session did not create**. Authorship cannot tell writers
+apart: all agents used the owner's identities. Exceptions:
+- **Dependabot PRs** are not divergence. Close them with a one-line note, or merge them after Verify if they only bump
+  pinned Actions.
+- The owner's own merges of your PRs are not divergence.
+
+**OD-1017-12 — Stage A residue is authorized.** The verified content defects in Appendix 2 that are still true on
+main are corrected by Master transactions before Stage B's G0. This is not a reopening of Stage A: each fix is an
+adjudicated defect with evidence, EN and AR together, and the Stage A acceptance scope otherwise stands.
+
+**OD-1017-13 — Repository visibility and CI economy.** The repository is public. The owner is told that this exposes
+material held non-public (F-12), and decides visibility in the GitHub settings. CI billing failed on 16 October (F-13).
+- **If the repository is private when you start** (`gh repo view --json visibility`, or ask the owner):
+  - The owner's preferred fix is to repair billing or the spending limit. Then CI stays exactly as it is.
+  - If the owner instead asks you to cut CI cost, the only acceptable change keeps every control before `main` moves:
+    - the negative-control shards run on non-draft PRs and on `main`;
+    - draft PR pushes run Governance and Browser only;
+    - `controls-result` treats "skipped because draft" as neutral **only on draft events**;
+    - add a negative control proving a ready PR cannot pass with skipped shards.
+  - Work in draft PRs until ready, run `test_gate_negative_controls.py` locally first, paste the result line into the
+    PR body, then mark it ready.
+  - `verify.yml` already has a `concurrency` block; keep it.
+  - Record the change in CONTRIBUTING §5.
+- **If it stays public:** CI is free. Leave the workflow as it is, keep working, and repeat F-12 in each phase report
+  until the owner decides.

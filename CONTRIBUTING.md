@@ -25,7 +25,7 @@ unpushed clone does not exist yet. ZIPs are *outputs* of checkpoint tags (§6), 
 | `authority/CORE_CONSTITUTION.md` | Durable principles | Rarely, by explicit decision; never mutable state |
 | `authority/AUTHORITY.json`, `authority/YFI_CURRENT_PROJECT_CONTEXT.json` | Current-state pointers | Hashes and counts by `scripts/rebind_authority.py` (the runner calls it); programme state by the steward |
 | `site-src/content/**` | Controlled projections | Never by hand; `scripts/generate_projections.py` writes them from the Master — except the two controlled contracts below |
-| `site-src/content/presentation_priority.json`, `site-src/content/content/navigation_interaction.json` | Controlled contracts (presentation depth; navigation and interaction), class `CONTROLLED_CONTRACT` | Maintained in place by the programme steward only, in a commit naming the finding it closes; the generator validates them against the Master's projections (and writes the navigation labels, counts and bindings it owns); otherwise never edited by Claude Design or Claude Code, who escalate. Owner decision D14 (10 October 2026) makes the Claude Code run of the close-out brief steward for its scoped changes only (`AGENTS.md` rule 2) |
+| `site-src/content/presentation_priority.json`, `site-src/content/content/navigation_interaction.json` | Controlled contracts (presentation depth; navigation and interaction), class `CONTROLLED_CONTRACT` | Maintained in place by the programme steward only, in a commit naming the finding it closes; the generator validates them against the Master's projections (and writes the navigation labels, counts and bindings it owns); otherwise never edited by Claude Design or Claude Code, who escalate. Owner decision D14 (10 October 2026) makes the Claude Code run of the close-out brief steward for its scoped changes only (`AGENTS.md` rule 2); owner decision OD-1017-03 (17 October 2026) extends it to the Claude Code takeover run for the S-rule, CR-S12/D8 and DL-V2 navigation edits and the S5/S10 TOC tiers and caps |
 | `dist/**` | Generated static site | Never by hand; `scripts/build.py`; committed so every public change is reviewable |
 | `audit/PUBLIC_LITERAL_CLOSURE.json` | Generated audit | Never by hand; `scripts/audit_public_literals.py` |
 | `scripts/` (including the renderer `scripts/yfie/`, which holds the stylesheet), `site-src/app.js` | Generator, build, gates, runtime | Directly, with the full gate run |
@@ -186,14 +186,15 @@ updated from here and never treated as current.
 ## 8. Historical Claude Design/Code programme — not active instructions
 
 `handoff/` was superseded (10 October 2026, owner decision D7). Do not execute its prompts.
-The former reference `design/DESIGN_INTEGRATION_V2.md` **does not exist** in the present repository; do not
-treat it as the current design authority or create it simply to satisfy a historical pointer.
+`design/DESIGN_INTEGRATION_V2.md` did not exist before Stage B. Since 17 October 2026 it is created in Stage B G0 as the
+design record (`AGENTS.md` rule 7); it is never a content authority.
 Gate R86-G01 protects the superseded-handoff state across README, checkpoint, Context and old handoff records.
 
-**Current prospective boundary:** Stage A's bounded content acceptance is recorded on PR #49;
-Stage B remains **BLOCKED** under `audit/close_out/STAGE_B_DESIGN_CHARTER.md` until a separate owner
-entry instruction. D19–D22 were neutralized on 17 October 2026 and are not an entry blocker. A design agent must not begin Stage B merely by
-reading W4 of `audit/close_out/BRIEF.md`. When explicitly authorized, W4/G1 preserves valuable criteria,
+**Current boundary:** Stage A's bounded content acceptance is recorded on PR #49. Stage B authorized 17 October 2026
+(OD-1017-01), `audit/OWNER_DECISIONS_2026-10-17.md`; Stage C follows it (OD-1017-02). The operative charter is
+`audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md`, read with the 15 October charter's constraints; the execution programme
+is `audit/close_out/TAKEOVER_BRIEF_2026-10-17.md` (Part 5), run by Claude Code as the only writing agent (OD-1017-11).
+D19–D22 were neutralized on 17 October 2026 and confer nothing. W4/G1 preserves valuable criteria,
 **not an exhaustive list of three allowable designs**. Better alternatives, hybrids, homepage and navigation
 improvements are welcome to challenge through user-value evidence and independent review; material strategic
 direction changes require prospective owner acceptance before broad adoption.
@@ -245,5 +246,7 @@ configure them in GitHub and independently verify enforcement; a passing CI run 
 - **Actions:** allow only actions created by GitHub; default workflow token read-only (the checkpoint job requests write for
   itself).
 - **Security:** Dependabot alerts and security updates on; secret scanning on where available.
-- **Visibility:** private. Audit records name withheld sources and material without a public locator; the repository must
-  not become public without a publication review.
+- **Visibility:** recommended private; **actually public since about 16 October 2026**, after private-repository Actions
+  billing failed (takeover brief findings F-12, F-13). Audit records name withheld sources and material without a public
+  locator, so material held non-public is exposed; the owner's visibility decision is pending (OD-1017-13). The repository
+  must not be made public deliberately without a publication review.

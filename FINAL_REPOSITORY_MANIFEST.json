@@ -21,14 +21,14 @@
   ]
  },
  "class_counts": {
-  "AUDIT_HISTORY": 376,
+  "AUDIT_HISTORY": 377,
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
   "BUILD_AND_GATES": 51,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
-  "CURRENT_PROGRAMME_RECORD": 289,
+  "CURRENT_PROGRAMME_RECORD": 291,
   "DESIGN_PACKAGE": 447,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
@@ -233,6 +233,10 @@
   },
   {
    "path": "audit/OWNER_DECISIONS_2026-10-16.md",
+   "class": "AUDIT_HISTORY"
+  },
+  {
+   "path": "audit/OWNER_DECISIONS_2026-10-17.md",
    "class": "AUDIT_HISTORY"
   },
   {
@@ -517,6 +521,14 @@
   },
   {
    "path": "audit/close_out/STAGE_B_DESIGN_CHARTER.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md",
+   "class": "CURRENT_PROGRAMME_RECORD"
+  },
+  {
+   "path": "audit/close_out/TAKEOVER_BRIEF_2026-10-17.md",
    "class": "CURRENT_PROGRAMME_RECORD"
   },
   {

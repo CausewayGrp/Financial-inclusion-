@@ -32,10 +32,11 @@ the sole [Production Master](authority/Yemen_Financial_Inclusion_Evidence_Master
 Stage A **content acceptance**, within its stated scope, is recorded by the
 [acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) and the
 [dated decision on merged PR #49](https://github.com/CausewayGrp/Financial-inclusion-/pull/49#issuecomment-6192247588).
-Stage B remains **BLOCKED** until a separate entry instruction
-([entry charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md)). Missing D19–D22 texts were neutralized on
-17 October 2026; they were not recovered and they authorize nothing.
-There is no Stage C or public production-release authorization.
+**Stage B authorized 17 October 2026 (OD-1017-01)**, by the [owner decisions of 17 October 2026](audit/OWNER_DECISIONS_2026-10-17.md);
+the operative charter is the [Stage B Design Charter v3.2](audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md), executed by
+Claude Code, the only writing agent, under the [takeover brief](audit/close_out/TAKEOVER_BRIEF_2026-10-17.md). Stage C
+follows without a further owner message (OD-1017-02). Missing D19–D22 texts were neutralized on 17 October 2026; they
+authorize nothing. Hosting is unselected and there is no public production-release authorization.
 
 ## What it is, and what it is not
 
@@ -68,9 +69,9 @@ External facts stay attributed to their original publishers. CauseWay attributio
 
 | | |
 |---|---|
-| **Position** | **DESIGN HANDOFF SUPERSEDED** (10 October 2026). `handoff/` is historical. The earlier W4 close-out design brief is a quality/reference baseline, **not** active authorization to enter Stage B; see the [prospective Stage B charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md). |
+| **Position** | **DESIGN HANDOFF SUPERSEDED** (10 October 2026). `handoff/` is historical. Stage B authorized 17 October 2026 (OD-1017-01); the operative charter is [v3.2](audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md) and the [15 October charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md) keeps its constraints. |
 | Non-design v1 product | Complete |
-| Current phase | **Stage A content accepted within its dated 15 October 2026 scope; Stage B BLOCKED** pending prospective charter approval and a separate owner entry decision (SB-01). Stage C and public production release are not authorized. The earlier close-out brief is historical programme lineage, not an active command to implement all stages. Current engineering/PR status must be checked on GitHub. |
+| Current phase | **Stage A content accepted within its dated 15 October 2026 scope; Stage B authorized 17 October 2026 (OD-1017-01)**, Stage C to follow (OD-1017-02), both executed under the takeover brief of 17 October 2026 ([`audit/close_out/TAKEOVER_BRIEF_2026-10-17.md`](audit/close_out/TAKEOVER_BRIEF_2026-10-17.md); Claude Code is the only writing agent). Hosting is unselected (16 October 2026) and public production release is not authorized. [`audit/close_out/PROGRESS.md`](audit/close_out/PROGRESS.md) carries the stage state; current engineering/PR status must be checked on GitHub. |
 | Post-v1, owner decision | C1 typed difference block; C2 dedicated guarantee route; C3 public contradiction index |
 | Reuse rights | Decided: CC BY 4.0 for CauseWay's own content (adopted 3 October 2026, closed 10 October 2026). The owner confirmed the licence text on 10 October 2026 (RIGHTS-FINAL; no legal review is claimed); the rights question is closed permanently |
 | Public release ready | No |
