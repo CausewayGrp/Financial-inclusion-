@@ -395,3 +395,9 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   F-12 visibility, F-06 Workers check; 19 Dependabot alerts noted; new: the CORRECTIONS_PROCESS.md times. Next: B3 G1 on
   `pr/stage-b-g1`, in a fresh session by the owner's instruction of 17 October 2026 (B2 is the stop: this session does not
   start G1); it resumes from this file and `design/evidence/v2/STATE.json` under the §12 resume message.
+
+- 2026-10-17 · Phase 2 · B2 T · gate negative controls, full suite, before the push: **170 of 170 faults caught (8 workers, 3,942 s; the clean copies passed first, so no expected message was already present)**, run on the tree at `95554840`
+  (the commit that carries the code, the Master transaction, the records and this fix set). The record line you are reading, and the
+  manifest and checksums it regenerates, are the only difference between that tree and the pushed head. First run on the B2 tree: 169
+  of 170, which found one control whose selector B2's markup had outdated ("a record's report link loses its record"); fixed at
+  `95554840` and caught on the re-run. Scope stated in full, as the owner required: no run is reported as CAUGHT for a subset.

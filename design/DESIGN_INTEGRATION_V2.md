@@ -495,7 +495,7 @@ negative controls: empty form, invalid address, unknown record; the figure link;
 `t_compare_reason` (reason per verdict, summary, same-record, input error, Arabic), `t_search_zero_help`,
 `t_source_facet_counts`; the old `t_report_issue` is replaced. Validator: RC-T1 (every report link opens the form with
 its IDs; the form keeps its fields and address, posts nowhere, keeps its no-JS mailto) with three negative controls
-(run locally with `--only 'T:'`: 3 of 3 caught; the full suite, 170 controls with the three B2 additions, run on this tree before the push; its first run caught 169 of 170 and found a second control that B2's markup had outdated — "a record's report link loses its record", fixed in its own commit as RC-1115 was — and the re-run's result is the record line in `PROGRESS.md`). The full gate set after the last change (log `gates_b2b.log`, 0 failures): validator 306 pages / 0 errors;
+(run locally with `--only 'T:'`: 3 of 3 caught; the full suite, 170 controls with the three B2 additions, run on this tree before the push; its first run caught 169 of 170 and found a second control that B2's markup had outdated — "a record's report link loses its record", fixed in its own commit as RC-1115 was — and the re-run caught 170 of 170 faults caught on the tree at `95554840`). The full gate set after the last change (log `gates_b2b.log`, 0 failures): validator 306 pages / 0 errors;
 literal audit 19,883 records / 0 unresolved, determinism one SHA over eight seeds; source lineage 8/8; projections PASS;
 generator unit tests 22 OK; content parity 304 documents / 0 differing; bilingual numeric invariance and number words
 0 of 152 pairs; viewport acceptance 308/308; security headers, base path, portable HTTP contract and no-JavaScript PASS;
