@@ -1,1 +1,17 @@
 old_key,new_key,change,PR
+section#q3 (record For-whom section),div.clock#q3 in div.record-line[data-record-line],S12: the For-whom clock carries the anchor on the record line; the section is dropped (its body equalled the universe),B1
+details#regulatory[open],details#regulatory,S1: the regulatory source group renders closed; a ?source= deep link opens it,B1
+p.rights and the dependency list of a source row,details.about[data-source-about] > p.rights[data-rights-state] + list,S2: rights state and dependencies fold under About this source; the boundary line stays outside,B1
+figure data table (chart data region),details.fig-data[data-fig-data] > table,S3: the chart's data table folds under its caption; print and a hash target open it,B1
+section.qa.figs (first primary figure group on a domain page),section.qa.figs#shows,S10: the first figure group gains an anchor for the map entry What the evidence shows,B1
+nav.strip a > span.n + span (numbered entries),nav.strip[data-toc-grouped] a > span (at most six grouped entries),S10: the phone map is grouped and unnumbered; aside.spine keeps the full numbered index,B1
+nav.strip (pages under six phone screens),none,S10: no map on /contact/ /corrections/ /privacy/ /rights/ /terms/ /accessibility/ and on records under 700 main words in either edition,B1
+article.prio > p (dimensions missing decisions blocked evidence sources examined kv),article.prio > details.more[data-ma-more] > the same elements,S8: a measurement card folds everything after current and unlocked; the data-ma-* hooks keep their names,B1
+section#s4 … section#s7 (/data/ boundary sections),section.bnd#s3 > details.more[data-boundary-more] > div#s4 … div#s7,S9: the boundary group folds under the first boundary heading; the anchors keep their ids,B1
+section#s10 (/data/ resource library),details.more#s10,S9: the resource library folds under the curated shelf,B1
+"bdi.nw (an ISO date in prose, clocks, record lines, lists)",time[datetime] (the date in words),S13: dates in words; the ISO value stays in the datetime attribute; data-table period keys unchanged,B1
+aside.foot-spine #edge-f0 … #edge-f3 (domain pages),section#verify section#readings section#related section#measure,"S4: no foot spine on a page that renders Verify, Readings and Related; the sections host the edges",B1
+a[data-hub-num] and span.glabel[data-hub-num] (masthead),"a (five direct hubs, no numeral)",D8: hub numerals retired (navigation_interaction.json hub_numerals.items empty),B1
+span.group[aria-label=Method and measurement] > a /methodology/ + a /measurement/,a[href=/methodology/] (masthead); /measurement/ in the footer group,D8: one Methodology link; Measurement priorities stays a footer destination,B1
+none,section#topics[data-home-topics] (Home) and the footer's first group Topics,DL-V2-007: the eight domain answers in one step from Home and from every footer,B1
+a.m-only.mlang[data-menu-lang],a.m-only.mlang[data-menu-lang] (bound by app.js like [data-lang]),item 11: the opened menu's language switch keeps the query and the anchor,B1

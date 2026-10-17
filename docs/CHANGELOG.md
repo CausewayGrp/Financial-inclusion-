@@ -1,5 +1,24 @@
 # Repository Change Log
 
+## 17 October 2026 — Stage B structure rules (B1 S, transactions STAGE-B-S and STAGE-B-S2)
+
+Implement the thirteen structure rules of BRIEF W4 (S1–S13), the owner's navigation decision D8 (five direct hubs,
+no numerals; DL-V2-006) and the F-15 topics decision (a Home topics block and a footer topics group listing the eight
+domain answers; DL-V2-007), with the Master changes they need, EN and AR together (75 cells, `audit/stage_b_s/` and
+`audit/stage_b_s2/`): the masthead row and hub labels; seven domain theses (S11); nine period texts in words (S13);
+CLM-001's lead with survey, universe and the 2.8-point interval (OD-1017-08); SDG indicator 8.10.2 bound on CLM-001 and
+8.10.1 stated on MA-005, with the UN metadata as two new source records (OD-1017-04(b)); the /corrections/ empty state;
+one CBY-Sana'a coverage sentence on /payments/ and /reforms/ and the chain step classes; the UI-TOC-* and UI-HOME-TOPICS
+labels. Phones get a grouped table of contents of at most six entries (none on pages under six screens), dates in words
+with the ISO value kept in `<time datetime>`, closed source groups, folded chart data and rights statements, a record
+line on every evidence page, and the /data/ and /measurement/ orders. Steward edits under OD-1017-03, each its own
+commit: S10 tiers and caps, D8 hub numerals, Home's map. Ported by hand from `code/navbar-disclosures-integration`,
+credited to Mohammed Waleed: the Space key on the menu control, the menu-close threshold at 900 px, and the
+viewport-acceptance widths and checks (`audit/tranche_c/checks/viewport_acceptance.py`). Gates: a new RC-S10 rule and
+negative controls; RC-NAV, R4, PB-0422, RC-A1, E2-DATES and E2-PREC follow the new forms. Re-measured against G0 in
+`design/evidence/v2/g0/s1_metrics.json` (record §2; misses recorded with reasons). No hosting or publication state
+changed.
+
 ## 17 October 2026 — Stage B G0 baseline (B0)
 
 Commit the owner directive of 17 October 2026 for Phases 2 and 3 (`audit/OWNER_DIRECTIVE_2026-10-17.md`), the G0

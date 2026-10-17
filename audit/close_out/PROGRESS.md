@@ -332,4 +332,29 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   Confirmed by browser: 5 of 8 topics have no visible link from Home on desktop (F-15); the TOC strip overflows on all 23 routes at 390;
   no domain page meets P1 in its first screen; /corrections/ contradicts itself; the reforms chain marks "Operation reached" on a
   statement labelled "not evidence of operation". Withdrawn: an Arabic-search zero-result reading (timing artefact; «حوالات» finds 89).
-  Not run in G0: axe, zoom, screen-reader order, throttled timing (G3/W4F); no human testing by decision. Next: B1 S.
+  Not run in G0: axe, zoom, screen-reader order, throttled timing (G3/W4F); no human testing by decision. Committed `52dabc7f`,
+  pushed, PR #57 opened (gates: validator 306/0, manifest and checksums 2,423 files, R86 controls 2/2). Next: B1 S on `pr/stage-b-s`,
+  stacked on `pr/stage-b-g0`; an unmerged parent is never reported as integrated.
+
+- 2026-10-17 · Phase 2 · B1 S · branch `pr/stage-b-s` stacked on `pr/stage-b-g0` (PR #57, unmerged; an unmerged parent is never reported as
+  integrated). The thirteen structure rules S1–S13, CR-S12/D8 (DL-V2-006), the F-15 topics decision (DL-V2-007), OD-1017-04(b) and
+  OD-1017-08 implemented in the renderer, build and gates (RC-S10 new; RC-NAV, R4, PB-0422, RC-A1, E2-DATES, E2-PREC follow; negative
+  controls for each). Two Master transactions, EN and AR together: STAGE-B-S (`audit/stage_b_s/`, 74 cells, Master `5b200406…`,
+  Page Specs `7fa18f0f…`) and STAGE-B-S2 (`audit/stage_b_s2/`, one label UI-HOME-TOPICS, Master `6a851a14…`, Page Specs `b3197c66…`);
+  both COMMITTED with idempotence; the Context projection validates against the new Master hash. Three steward edits under OD-1017-03,
+  each its own commit: S10 tiers and caps (`0ef6cd01`), D8 hub numerals (`eb072951`), Home's map starts with the topics block (`efd19111`).
+  Ported by hand from `code/navbar-disclosures-integration` (Mohammed Waleed, credited in the CHANGELOG): the Space key on the menu
+  control, the 900 px menu-close threshold, the viewport-acceptance widths and checks. Re-measured with the G0 script (`g0/s1_metrics.json`,
+  `s1_scoreboard.md`): AR 390 screens /data/ 70.5 → 18.7, /evidence/ EN 29.1 → 13.7, /measurement/ 44.7 → 23.4, /people/ 20.1 → 13.9,
+  /remittances/ 24.4 → 17.3, /firms/ 20.3 → 13.9, /providers/ 25.6 → 17.0, /reforms/ 28.9 → 21.6, /methodology/ 25.6 → 15.9; TOC ≤6 on every
+  route, strip overflow 0 (G0 134); every AR H1 ≤3 lines at 390; ISO dates in prose 0 (8 status-ledger keys remain on EN /providers/, DL-V2-005).
+  Misses recorded with reasons (record §2.2): Home +0.9 screens by decision; /payments/ -24%, /finance/ -21%, /access/ -15% and /reforms/ EN -24% (AR -25%) against −25%;
+  EN H1 at 4 lines on /finance/, CLM-001 and /about/ (G2). First-click test (AI-simulated, blind, `g0/firstclick_b1.md`): one-step 5/24 EN
+  and 6/24 AR before; 22/24 and 24/24 with the flat topics block; 23/24 and 23/24 with four families → flat eight adopted. Preservation
+  check against B0 `d36a51bb` (305 pages: gone `edge-fN` re-hosted under S4 and `data-hub-num` under D8; nothing else) and against
+  `2ddbfb61` (291 pages, 14 new since; other differences predate B0); 16 B1 rows in `KEY_MIGRATION.csv`. Tap targets B1 introduced under
+  24 px (topics block, measurement lists) fixed before the final run; pre-existing ones recorded as B1-F01 → W4F/G3. Gates after the last
+  change: validator 306/0; literal audit 19,883 / 0 unresolved, determinism PASS; lineage 8/8; projections PASS; generator tests 22 OK;
+  content parity 304/0; invariance 0/152; viewport 308/308; public tools 36/37 (1 n/a); security headers, base path, HTTP contract, no-JS
+  PASS; diagrams, social (302), logo current; re-entry 15 OK; manifest and checksums regenerated last. Decisions DL-V2-004…007. Open owner
+  items unchanged: F-12 visibility, F-06 Workers check; 19 Dependabot alerts noted. Next: B2 T on `pr/stage-b-t`, stacked on `pr/stage-b-s`.
