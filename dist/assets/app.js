@@ -192,7 +192,7 @@ function markTerms(text,tokens){
 // the same query in the other edition — each a link, so the help works from the dialog and from the directory alike
 function zeroHelp(help){
   if(!help)return '';
-  const other=prefix==='/en'?'/ar':'/en', toks=help.tokens||[], sugg=[];
+  const other=prefix.slice(0,-2)+(prefix.endsWith('en')?'ar':'en'), toks=help.tokens||[], sugg=[];   // the other edition under the same base path
   for(const a of (help.aliases||[])){
     const terms=String((isAr?a.terms_ar:a.terms_en)||'').split(';').map(x=>x.trim()).filter(Boolean);
     for(const t of terms){const nt=normalize(t);if(nt&&toks.some(k=>k.length>=3&&nt.length>=3&&(nt.startsWith(k.slice(0,3))||k.startsWith(nt.slice(0,3))))&&!sugg.includes(t)){sugg.push(t);break;}}
@@ -515,7 +515,7 @@ function formatCitation(fmt,m){
     const b=s=>String(s).replace(/[{}]/g,'');
     return `@misc{${key},\n  author = {${b(m.pub)}},\n  title = {{${b(m.title)}}},\n  howpublished = {${b(m.site)}${rec?', '+b(rec):''}},\n  note = {${b(m.ed)}. Accessed ${m.iso}},\n  year = {${m.year}},\n  url = {${m.url}}\n}`;
   }
-  if(fmt==='ris')return ['TY  - ELEC',`AU  - ${m.pub}`,`TI  - ${m.title}`,`T2  - ${m.site}`,`PY  - ${m.year}`,`ET  - ${m.ed}`,m.id?`ID  - ${m.id}`:'',`UR  - ${m.url}`,`Y2  - ${m.iso.replace(/-/g,'/')}`,'ER  - '].filter(Boolean).join('\n');
+  if(fmt==='ris')return ['TY  - ELEC',`AU  - ${m.pub}`,`TI  - ${m.title}`,`T2  - ${m.site}`,`PY  - ${m.year}`,`ET  - ${m.ed}`,m.id?`ID  - ${m.id}`:'',`UR  - ${m.url}`,`Y2  - ${m.iso.slice(0,4)}/${m.iso.slice(5,7)}/${m.iso.slice(8,10)}`,'ER  - '].filter(Boolean).join('\n');
   return '';
 }
 $$('[data-cite-format]').forEach(sel=>{
@@ -535,7 +535,7 @@ if(rform){
   const refUrl=(()=>{try{const u=new URL(document.referrer);return u.origin===location.origin?u:null;}catch(e){return null;}})();
   const known=new Set(DATA('yfie-record-ids')||[]);
   const record=(P.get('record')||'').trim(), figure=(P.get('figure')||'').trim();
-  if(/^[A-Za-z0-9._+-]+$/.test(record)&&known.has(record)){setv('record',record);setv('url',location.origin+prefix+'/evidence/'+encodeURIComponent(record)+'/');}
+  if(/^[A-Za-z0-9._+-]+$/.test(record)&&known.has(record)){setv('record',record);setv('url',`${location.origin}${prefix}/evidence/${encodeURIComponent(record)}/`);}
   else if(refUrl){setv('url',refUrl.href.split('#')[0]);if(refUrl.hash)setv('anchor',refUrl.hash);}
   if(/^[A-Za-z0-9._+-]+$/.test(figure)&&known.has(figure))setv('anchor',figure);
   setv('lang',document.documentElement.lang); setv('edition',$('meta[name="yfie-edition"]')?.content||'');
