@@ -1,14 +1,14 @@
 # Prospective Stage B entry charter — 15 October 2026
 
-**Status: prospective replacement; Stage B entry BLOCKED.** Prepared under the owner's delegated Stage A reconciliation mandate of 15 October. This is not a recovered original, retrospective approval, or authorization to begin Stage B.
+**Status: prospective charter; Stage B entry still BLOCKED.** Prepared under the owner's delegated Stage A reconciliation mandate of 15 October, with the D19–D22 gap neutralized on 17 October 2026. This is not a recovered original, retrospective approval, or authorization to begin Stage B.
 
 The original external charter and its approved amendments were not found in the current checkout, the named authority records, or Git history of their specified paths. The historical instruction `STAGE_A_FINAL_INSTRUCTION_v5_2026-10-11.md` §9 and final report §7 expressly record their absence. Those historical statements remain unchanged.
 
 ## Entry conditions (SB-01)
 
 1. A dated prospective Stage A content acceptance is effective, naming the accepted Master and verification conditions.
-2. The owner establishes the approved charter/amendment text and mandatory decision provenance. `AMENDMENTS_D16_D22.md` records what is verifiable and what is absent. D19–D22 are not approved by this replacement or inferred from filenames.
-3. A separate owner instruction authorizes Stage B, in a later session. No design work begins merely because this document exists.
+2. The missing D19–D22 texts are neutralized, not recovered. The owner so instructed on 17 October 2026 (`audit/OWNER_DECISIONS_2026-10-10.md` §7). `AMENDMENTS_D16_D22.md` records the search and the neutralization. Those four identifiers impose nothing and permit nothing. This charter is not thereby approved as an entry warrant.
+3. A separate owner instruction must still authorize Stage B. No design work begins because this document exists, or because D19–D22 were neutralized.
 
 ## Bounded future scope
 

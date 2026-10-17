@@ -32,8 +32,9 @@ the sole [Production Master](authority/Yemen_Financial_Inclusion_Evidence_Master
 Stage A **content acceptance**, within its stated scope, is recorded by the
 [acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) and the
 [dated decision on merged PR #49](https://github.com/CausewayGrp/Financial-inclusion-/pull/49#issuecomment-6192247588).
-Stage B remains **BLOCKED** pending a prospective owner charter decision and separate entry authorization
-([entry charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md)); D19–D22 original approvals remain unverified.
+Stage B remains **BLOCKED** until a separate entry instruction
+([entry charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md)). Missing D19–D22 texts were neutralized on
+17 October 2026; they were not recovered and they authorize nothing.
 There is no Stage C or public production-release authorization.
 
 ## What it is, and what it is not
@@ -89,8 +90,9 @@ Remaining path: non-design v1 complete, then design / presentation integration, 
 PR #46's Verify and the subsequent Cloudflare Workers build passed **at that time**; that is historical
 verification, not evidence of the current temporary preview's live state. Cloudflare Workers has been used for a
 **temporary pre-release preview**; its external GitHub build status is not the Production Master's semantic authority,
-a substitute for Verify, or permission to release. The intended DigitalOcean production route is **inactive** and is
-not a present development or billing prerequisite. Do not provision, activate, or deploy either host under ordinary
+a substitute for Verify, or permission to release. The DigitalOcean production route selected on 3 October 2026 is
+**historical**: hosting and the public address are **unselected** (owner decision of 16 October 2026), and neither host
+is a development or billing prerequisite. Do not provision, activate, or deploy any host under ordinary
 evidence/design work. The committed `dist/` is the review build, **not proof of a current live deployment**.
 
 **No public production release has been authorized**; the future release gates remain under owner control.
@@ -98,7 +100,7 @@ The following are deferred release prerequisites, not instructions to incur host
 
 | Blocker | Owner | Where |
 |---|---|---|
-| Hosting (future release only, not required for present review): DigitalOcean account, approved app/registry/token/variables, corporate proxy route and public origin | CauseWay (owner), then authorized deploy operator | [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md) steps 1–14 |
+| Hosting (future release only, not required for present review): the host and the public origin are unselected ([owner decision of 16 October 2026](audit/OWNER_DECISIONS_2026-10-16.md)); the owner selects them at release, and the earlier DigitalOcean procedure is a historical adapter | CauseWay (owner), then authorized deploy operator | [`docs/RELEASE_RUNBOOK.md`](docs/RELEASE_RUNBOOK.md), "Prospective supersession"; steps 1–14 are the historical adapter |
 | Data downloads stay off (`public_downloads: false`), a separate owner decision. The CC BY 4.0 text itself is confirmed by the owner (10 October 2026, RIGHTS-FINAL), so `licence_text_confirmed` is `true` and no longer blocks a deploy | Owner | runbook steps 2 and 7a |
 | Seven sources that need a person with a browser | A person | [`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §3 |
 | A phone check of the live site from Yemen, in Arabic | A person in Yemen | handover §4 |

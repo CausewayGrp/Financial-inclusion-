@@ -62,8 +62,8 @@ One implementation, `scripts/discovery.py`, used by the build and checked by the
 
 | Item | Contract |
 |---|---|
-| Public origin | `site-src/deployment.json` → `public_origin`: **null** until release (owner decision B8, 3 October 2026). Never guessed. It may carry a path: the decided address is `https://causewaygrp.com/financial-inclusion-evidence` (B1), and its path is the base path (below) |
-| Base path | The origin's path (`/financial-inclusion-evidence`; empty when there is none). `dist/`, the review build every gate reads, keeps root-relative links; the published site, `scripts/build.py --out DIR`, carries every link, asset, stylesheet, runtime fetch, language prefix, root redirect and `_headers` path pattern under it (`scripts/base_path.py`). Proved by `scripts/tests/test_base_path.py`, which builds the decided origin, serves it under the path and fails on any request that leaves it |
+| Public origin | `site-src/deployment.json` → `public_origin`: **null** until release (owner decision B8, 3 October 2026). Never guessed. It may carry a path. The address decided on 3 October 2026, `https://causewaygrp.com/financial-inclusion-evidence` (B1), is historical: no address is selected (16 October 2026). The gates build the reserved fixture `https://yfie.example/financial-inclusion-evidence`; its path is the base path (below) |
+| Base path | The origin's path (`/financial-inclusion-evidence`; empty when there is none). `dist/`, the review build every gate reads, keeps root-relative links; the published site, `scripts/build.py --out DIR`, carries every link, asset, stylesheet, runtime fetch, language prefix, root redirect and `_headers` path pattern under it (`scripts/base_path.py`). Proved by `scripts/tests/test_base_path.py`, which builds the reserved fixture origin, serves it under the path and fails on any request that leaves it |
 | Canonical | Self-canonical in the page's own language |
 | hreflang | Every page lists `en`, `ar` and `x-default` (→ `/`); the pair is reciprocal |
 | Pre-release | `site-src/deployment.json` → `pre_release`: **true** until release (owner decision B3). Every page, the root entry and the 404 included, carries `<meta name="robots" content="noindex, nofollow">`; at release it goes false and the 404 keeps its own `noindex` (gate RC-NOINDEX) |
@@ -97,11 +97,12 @@ font, image or frame, no form (gate F6-G05). The host should send:
 
 `site-src/hosting/_headers` holds the headers above, plus cache rules: five minutes, revalidated, for HTML and the
 search data; an hour for assets whose names are not fingerprinted; thirty days for the canonical fonts.
-`scripts/build.py` copies it unchanged to `dist/_headers`. The release host is DigitalOcean (owner decision of 3 October
-2026): an App Platform static-site component cannot send these headers, so the site runs as an nginx service, and
-`scripts/hosting_nginx.py` writes the file into its nginx server block (`docs/RELEASE_RUNBOOK.md`, "Hosting";
-proved by `scripts/tests/test_digitalocean_hosting.py`). Cloudflare Pages and Netlify would read the file itself. Its
-path rules never overlap, because such hosts would join two values of one header.
+`scripts/build.py` copies it unchanged to `dist/_headers`. No host is selected (owner decision of 16 October 2026); the
+file is the single portable response policy, proved on a local server by `scripts/tests/test_http_contract.py`. The
+historical DigitalOcean adapter (3 October 2026) ran the site as an nginx service because an App Platform static-site
+component cannot send these headers: `scripts/hosting_nginx.py` translates the file into an nginx server block, and
+`scripts/tests/test_digitalocean_hosting.py` proves it in the optional manual workflow. Cloudflare Pages and Netlify
+would read the file itself. Its path rules never overlap, because such hosts would join two values of one header.
 
 `Strict-Transport-Security` stays commented out until HTTPS is confirmed on the release domain (`docs/RELEASE_RUNBOOK.md`).
 
