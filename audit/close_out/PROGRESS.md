@@ -336,8 +336,8 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   pushed, PR #57 opened (gates: validator 306/0, manifest and checksums 2,423 files, R86 controls 2/2). Next: B1 S on `pr/stage-b-s`,
   stacked on `pr/stage-b-g0`; an unmerged parent is never reported as integrated.
 
-- 2026-10-17 · Phase 2 · B1 S · branch `pr/stage-b-s` stacked on `pr/stage-b-g0` (PR #57, unmerged; an unmerged parent is never reported as
-  integrated). The thirteen structure rules S1–S13, CR-S12/D8 (DL-V2-006), the F-15 topics decision (DL-V2-007), OD-1017-04(b) and
+- 2026-10-17 · Phase 2 · B1 S · branch `pr/stage-b-s`, started on `pr/stage-b-g0` at `52dabc7f`; the owner merged B0 as PR #57 at `ce4ae5c8`
+  (14:21 UTC) while B1 ran, so the B1 PR targets main (the branch contains only the B1 commits). The thirteen structure rules S1–S13, CR-S12/D8 (DL-V2-006), the F-15 topics decision (DL-V2-007), OD-1017-04(b) and
   OD-1017-08 implemented in the renderer, build and gates (RC-S10 new; RC-NAV, R4, PB-0422, RC-A1, E2-DATES, E2-PREC follow; negative
   controls for each). Two Master transactions, EN and AR together: STAGE-B-S (`audit/stage_b_s/`, 74 cells, Master `5b200406…`,
   Page Specs `7fa18f0f…`) and STAGE-B-S2 (`audit/stage_b_s2/`, one label UI-HOME-TOPICS, Master `6a851a14…`, Page Specs `b3197c66…`);

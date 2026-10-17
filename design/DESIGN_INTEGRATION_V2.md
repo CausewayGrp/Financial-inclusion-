@@ -317,7 +317,7 @@ evidence" preloads one record; verdict reasons per field NOT_TESTED. Choice: B2 
 self-contradiction (G0-F02); /contact/ report context needs JS. Choice: B1 (Master) + B2 (form).
 
 
-## 2. B1 — structure rules (S), 17 October 2026, branch `pr/stage-b-s` on `pr/stage-b-g0` (Master `6a851a14…`, Page Specs `b3197c66…`)
+## 2. B1 — structure rules (S), 17 October 2026, branch `pr/stage-b-s` on main `ce4ae5c8` (B0 merged as PR #57; Master `6a851a14…`, Page Specs `b3197c66…`)
 
 ### 2.1 What changed
 

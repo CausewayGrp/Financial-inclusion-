@@ -26,21 +26,21 @@
   ]
  },
  "repository": {
-  "main": "d36a51bb",
+  "main": "ce4ae5c8",
   "master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
   "page_specs_sha256": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
   "current_branch": "pr/stage-b-s",
-  "stacked_on": "pr/stage-b-g0 (PR #57, unmerged)",
+  "stacked_on": "main (ce4ae5c8, B0 merged as PR #57)",
   "merged_prs": {
    "PR-A": "#52 a7c7bf8a",
    "PR-B": "#54 a03e99a2",
    "PR-C": "#55 12c90654",
-   "PR-D": "#56 d36a51bb"
+   "PR-D": "#56 d36a51bb",
+   "B0": "#57 ce4ae5c8"
   },
   "open_prs": {
    "#51": "draft; G1 challenger evidence; close after DL-V2-001",
-   "#57": "B0 G0 baseline on pr/stage-b-g0; awaiting the owner's merge",
-   "B1": "pr/stage-b-s -> pr/stage-b-g0; opened after this commit (see PROGRESS.md)"
+   "B1": "pr/stage-b-s -> main; see PROGRESS.md for its number"
   }
  },
  "baseline": {
