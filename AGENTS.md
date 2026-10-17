@@ -18,8 +18,8 @@ its recorded Master hash/schema rather than treating it as an independent author
 Git commits, PRs, checks and this re-entry script describe engineering state; they cannot grant owner approval.
 
 `handoff/` retains historical material (D7, 10 October 2026); do not execute its superseded instructions.
-Stage A content acceptance is scoped and recorded after PR #49. Stage B remains blocked by SB-01 and a separate
-owner entry decision; original D19–D22 approved text is not independently verified. Do not infer approval.
+Stage A content acceptance is scoped and recorded after PR #49. Stage B remains blocked until a separate
+owner entry decision. D19–D22 were neutralized on 17 October 2026: no approved text exists, and none is inferred.
 
 When Stage B is separately authorized, design exploration may challenge the old three example compositions and
 offer better alternatives against W4/G1 quality criteria and real user journeys, without unapproved semantic,

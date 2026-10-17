@@ -25,8 +25,9 @@ the sole [Production Master](authority/Yemen_Financial_Inclusion_Evidence_Master
 Stage A **content acceptance**, within its stated scope, is recorded by the
 [acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) and the
 [dated decision on merged PR #49](https://github.com/CausewayGrp/Financial-inclusion-/pull/49#issuecomment-6192247588).
-Stage B remains **BLOCKED** pending a prospective owner charter decision and separate entry authorization
-([entry charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md)); D19–D22 original approvals remain unverified.
+Stage B remains **BLOCKED** until a separate entry instruction
+([entry charter](audit/close_out/STAGE_B_DESIGN_CHARTER.md)). Missing D19–D22 texts were neutralized on
+17 October 2026; they were not recovered and they authorize nothing.
 There is no Stage C or public production-release authorization.
 
 ## What it is, and what it is not

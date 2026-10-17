@@ -185,8 +185,8 @@ treat it as the current design authority or create it simply to satisfy a histor
 Gate R86-G01 protects the superseded-handoff state across README, checkpoint, Context and old handoff records.
 
 **Current prospective boundary:** Stage A's bounded content acceptance is recorded on PR #49;
-Stage B remains **BLOCKED** under `audit/close_out/STAGE_B_DESIGN_CHARTER.md` (SB-01, missing original
-D19–D22 authority and separate owner entry authorization). A design agent must not begin Stage B merely by
+Stage B remains **BLOCKED** under `audit/close_out/STAGE_B_DESIGN_CHARTER.md` until a separate owner
+entry instruction. D19–D22 were neutralized on 17 October 2026 and are not an entry blocker. A design agent must not begin Stage B merely by
 reading W4 of `audit/close_out/BRIEF.md`. When explicitly authorized, W4/G1 preserves valuable criteria,
 **not an exhaustive list of three allowable designs**. Better alternatives, hybrids, homepage and navigation
 improvements are welcome to challenge through user-value evidence and independent review; material strategic
