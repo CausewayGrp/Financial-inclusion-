@@ -2047,8 +2047,8 @@
   },
   {
     "ui_id": "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO",
-    "label_en": "No material corrections have been recorded yet.",
-    "label_ar": "لم تُسجَّل أي تصحيحات جوهرية حتى الآن.",
+    "label_en": "No record is selected. Open a record's corrections link to see the entries that concern it.",
+    "label_ar": "لم يُختَر أي سجل. افتح رابط التصحيحات في أي سجل لعرض الإدخالات المتعلقة به.",
     "use_rule": "build.py corrections_context_block()"
   },
   {
@@ -3147,31 +3147,31 @@
     "ui_id": "UI-NAV-HUB-01",
     "label_en": "01",
     "label_ar": "01",
-    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /explore/ (Questions), bound by navigation_interaction.json."
+    "use_rule": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
   },
   {
     "ui_id": "UI-NAV-HUB-02",
     "label_en": "02",
     "label_ar": "02",
-    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /evidence/ (Evidence), bound by navigation_interaction.json."
+    "use_rule": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
   },
   {
     "ui_id": "UI-NAV-HUB-03",
     "label_en": "03",
     "label_ar": "03",
-    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /readings/ (Readings), bound by navigation_interaction.json."
+    "use_rule": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
   },
   {
     "ui_id": "UI-NAV-HUB-04",
     "label_en": "04",
     "label_ar": "04",
-    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /data/ (Sources), bound by navigation_interaction.json."
+    "use_rule": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
   },
   {
     "ui_id": "UI-NAV-HUB-05",
     "label_en": "05",
     "label_ar": "05",
-    "use_rule": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub Method and measurement (/methodology/, /measurement/), bound by navigation_interaction.json."
+    "use_rule": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
   },
   {
     "ui_id": "UI-FOOTER-LICENCE",
@@ -3592,5 +3592,95 @@
     "label_en": "United States",
     "label_ar": "الولايات المتحدة الأمريكية",
     "use_rule": "Close-out CLOSE-6E (6C-3). Chart label: corridor value 'United States'."
+  },
+  {
+    "ui_id": "UI-TOC-ANSWER",
+    "label_en": "Answer and limits",
+    "label_ar": "الإجابة وحدودها",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-EVIDENCE",
+    "label_en": "What the evidence shows",
+    "label_ar": "ما تُظهره الأدلة",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-READ",
+    "label_en": "How to read it",
+    "label_ar": "كيف تُقرأ الأدلة",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-MORE",
+    "label_en": "More evidence",
+    "label_ar": "مزيد من الأدلة",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-FURTHER",
+    "label_en": "Go further",
+    "label_ar": "للتعمّق",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-VERIFY",
+    "label_en": "Verify",
+    "label_ar": "تحقّق",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-M-MEASURED",
+    "label_en": "What is measured",
+    "label_ar": "ما الذي يُقاس",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-M-ACCEPTED",
+    "label_en": "How evidence is accepted",
+    "label_ar": "كيف تُقبل الأدلة",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-M-UNCERTAINTY",
+    "label_en": "Uncertainty and derivation",
+    "label_ar": "عدم اليقين والاشتقاق",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-M-COMPARISON",
+    "label_en": "Comparison and composites",
+    "label_ar": "المقارنة والمؤشرات المركّبة",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-M-NOT-CLAIMED",
+    "label_en": "What the method does not claim",
+    "label_ar": "ما لا تدّعيه المنهجية",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-M-CORRECTIONS",
+    "label_en": "Corrections and challenge",
+    "label_ar": "التصحيحات والاعتراض",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-R-READING",
+    "label_en": "The reading",
+    "label_ar": "نص القراءة",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-TOC-R-TRACE",
+    "label_en": "Trace and sources",
+    "label_ar": "التتبّع والمصادر",
+    "use_rule": "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+  },
+  {
+    "ui_id": "UI-HOME-TOPICS",
+    "label_en": "Topics",
+    "label_ar": "الموضوعات",
+    "use_rule": "DL-V2-007 (17 October 2026; takeover brief Part 6 item 14, finding F-15/G0-F03; first-click test in design/DESIGN_INTEGRATION_V2.md §2.4): the heading of Home's topics block (the eight domain answers in one step) and of the footer's topics group; scripts/yfie/render.py home(), scripts/yfie/content.py shell()"
   }
 ]

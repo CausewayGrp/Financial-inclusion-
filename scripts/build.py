@@ -123,6 +123,17 @@ def main(argv: list[str] | None = None) -> int:
             d = out / lang / route.strip("/")
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html, encoding="utf-8", newline="\n")
+    # S10 (W4 Appendix F, 17 October 2026): no table of contents on a page under six phone screens — the contract's
+    # min_main_words, decided per route on both editions together (the shorter edition decides), so the two editions
+    # always agree (RP-G06)
+    min_words = int((content.presentation.get("toc_rule") or {}).get("min_main_words") or 0)
+    if min_words:
+        for route in routes:
+            files = [out / lang / route.strip("/") / "index.html" for lang in ("ar", "en")]
+            texts = [f.read_text(encoding="utf-8") for f in files]
+            if min(render.main_words(t) for t in texts) < min_words:
+                for f, t in zip(files, texts):
+                    f.write_text(render.drop_strip(t), encoding="utf-8", newline="\n")
     extra = render.render_site_files(out, content)   # the root entry, the bilingual 404, robots.txt, sitemap.xml with an origin
     # B14 a: the data exports are published only when the owner turns the switch on (site-src/deployment.json)
     if discovery.deployment().get("public_downloads") is True:

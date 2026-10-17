@@ -2,22 +2,47 @@
  "schema": "YFIE_STAGE_B_STATE/1.0",
  "role": "Live state of the Stage B/C programme for session resume (owner directive 17 October 2026, section 12). Not an authority: the Production Master decides content; audit/close_out/PROGRESS.md is the dated ledger.",
  "updated": "2026-10-17",
- "phase": "B0 G0 baseline (Stage B)",
+ "phase": "B1 S structure rules (Stage B)",
  "programme": {
   "brief": "audit/close_out/TAKEOVER_BRIEF_2026-10-17.md",
   "directive": "audit/OWNER_DIRECTIVE_2026-10-17.md",
   "charter": "audit/close_out/STAGE_B_DESIGN_CHARTER_v3_2.md",
   "record": "design/DESIGN_INTEGRATION_V2.md",
-  "rows": ["B0 G0", "B1 S", "B2 T", "B3 G1", "B4a G2 shell/Home/domain", "B4b G2 record//data//Reading/Methodology", "B4c G2 propagation", "B5 W4F", "B6 G3", "C1 W5", "C2 W6", "C3 W6S", "C4 W7", "C5 W8"]
+  "rows": [
+   "B0 G0",
+   "B1 S",
+   "B2 T",
+   "B3 G1",
+   "B4a G2 shell/Home/domain",
+   "B4b G2 record//data//Reading/Methodology",
+   "B4c G2 propagation",
+   "B5 W4F",
+   "B6 G3",
+   "C1 W5",
+   "C2 W6",
+   "C3 W6S",
+   "C4 W7",
+   "C5 W8"
+  ]
  },
  "repository": {
-  "main": "d36a51bb",
-  "master_sha256": "d1807346021996866cb595cb5db89c2c575a2ec290d1727ce65ae6761a14f50b",
-  "page_specs_sha256": "0fe9340c2c8bff8c81ef48fa69ea2c0adfffd5b934a45406cd622e5ca68bf372",
-  "current_branch": "pr/stage-b-g0",
-  "stacked_on": "main",
-  "merged_prs": {"PR-A": "#52 a7c7bf8a", "PR-B": "#54 a03e99a2", "PR-C": "#55 12c90654", "PR-D": "#56 d36a51bb"},
-  "open_prs": {"#51": "draft; G1 challenger evidence; close after DL-V2-001"}
+  "main": "3ef16ade (PR #59 merged; PR #57 at ce4ae5c8)",
+  "master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
+  "page_specs_sha256": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
+  "current_branch": "pr/stage-b-s",
+  "stacked_on": "main (ce4ae5c8, B0 merged as PR #57)",
+  "merged_prs": {
+   "PR-A": "#52 a7c7bf8a",
+   "PR-B": "#54 a03e99a2",
+   "PR-C": "#55 12c90654",
+   "PR-D": "#56 d36a51bb",
+   "B0": "#57 ce4ae5c8",
+   "OD-1017-14": "#59 3ef16ade (hosting selection, prospective)"
+  },
+  "open_prs": {
+   "#51": "draft; G1 challenger evidence; left as it is, conflicts included; to be closed without merging after DL-V2-001",
+   "#58": "OPEN, not merged: pr/stage-b-s -> main; CI at 2509d22d failed Gate negative controls shard 5/6 (RC-1115 / S12 control NOT CAUGHT, 27 of 28); fixed at bf9b8323 (RC-1115 per-page q3 check); local --only RC-1115 caught 9 of 9; full suite 167 of 167 caught; Verify 9/9 on the exact head pending until CI confirms it"
+  }
  },
  "baseline": {
   "label": "g0",
@@ -26,25 +51,236 @@
   "visuals": "design/evidence/v2/g0/g0_visuals.json",
   "shots": "design/evidence/v2/g0/shots/INDEX.json",
   "script": "design/evidence/v2/g0_measure.py",
-  "phone_screens_ar390": {"/": 8.5, "/explore/": 14.5, "/people/": 20.1, "/payments/": 26.8, "/remittances/": 24.4, "/firms/": 20.3, "/finance/": 17.0, "/providers/": 25.6, "/access/": 11.6, "/reforms/": 28.9, "/evidence/": 29.5, "/evidence/CLM-001/": 9.0, "/evidence/CLM-003/": 9.6, "/evidence/VIS-POS-TERMINALS/": 16.8, "/evidence/compare/": 11.0, "/readings/": 7.7, "/readings/how-money-reaches-households/": 37.2, "/data/": 70.5, "/methodology/": 25.6, "/measurement/": 44.7, "/about/": 6.6, "/corrections/": 4.8, "/contact/": 3.8},
-  "targets": {"/data/": "<=20", "/evidence/": "EN <=14", "/measurement/": "-40%", "domains": "-25% or better", "toc_entries": "<=6", "h1_lines": "<=3", "iso_dates_in_prose": 0, "fonts_per_page": "<=4", "ar_data_cold_bytes": "<=350 KB"},
-  "cold_bytes_ar390_kb": {"min": 259, "max": 317, "fonts_kb": 220, "font_files": 3},
-  "first_screen_p1_pass": {"home": "partial (figure, evidence link)", "domains": "0 of 8", "records": "partial (figure, clock, evidence link)", "data": "no", "reading": "no", "measurement": "no"}
+  "phone_screens_ar390": {
+   "/": 8.5,
+   "/explore/": 14.5,
+   "/people/": 20.1,
+   "/payments/": 26.8,
+   "/remittances/": 24.4,
+   "/firms/": 20.3,
+   "/finance/": 17.0,
+   "/providers/": 25.6,
+   "/access/": 11.6,
+   "/reforms/": 28.9,
+   "/evidence/": 29.5,
+   "/evidence/CLM-001/": 9.0,
+   "/evidence/CLM-003/": 9.6,
+   "/evidence/VIS-POS-TERMINALS/": 16.8,
+   "/evidence/compare/": 11.0,
+   "/readings/": 7.7,
+   "/readings/how-money-reaches-households/": 37.2,
+   "/data/": 70.5,
+   "/methodology/": 25.6,
+   "/measurement/": 44.7,
+   "/about/": 6.6,
+   "/corrections/": 4.8,
+   "/contact/": 3.8
+  },
+  "targets": {
+   "/data/": "<=20",
+   "/evidence/": "EN <=14",
+   "/measurement/": "-40%",
+   "domains": "-25% or better",
+   "toc_entries": "<=6",
+   "h1_lines": "<=3",
+   "iso_dates_in_prose": 0,
+   "fonts_per_page": "<=4",
+   "ar_data_cold_bytes": "<=350 KB"
+  },
+  "cold_bytes_ar390_kb": {
+   "min": 259,
+   "max": 317,
+   "fonts_kb": 220,
+   "font_files": 3
+  },
+  "first_screen_p1_pass": {
+   "home": "partial (figure, evidence link)",
+   "domains": "0 of 8",
+   "records": "partial (figure, clock, evidence link)",
+   "data": "no",
+   "reading": "no",
+   "measurement": "no"
+  }
  },
- "decisions": ["DL-V2-000 G0 method", "DL-V2-002 the evidence unit is the method; composition tested in G1", "DL-V2-003 G0 dispositions of Part 6 items 13-22 and seeds 23-32"],
- "reserved": ["DL-V2-001 G1 direction"],
- "test_in_g1": ["13 unit composition", "19/32 Home first-screen hypothesis", "21 Arabic heading weight 600 vs 700 and one OFL pairing", "29 audience entry (inside one candidate)", "TOC strip vs list (G0-F04)"],
+ "decisions": [
+  "DL-V2-000 G0 method",
+  "DL-V2-002 the evidence unit is the method; composition tested in G1",
+  "DL-V2-003 G0 dispositions of Part 6 items 13-22 and seeds 23-32",
+  "DL-V2-004 S10 grouped TOC <=6, none under six phone screens",
+  "DL-V2-005 S13 scope: words in prose, ISO in <time datetime>, table keys unchanged",
+  "DL-V2-006 D8 executed: five direct hubs",
+  "DL-V2-007 Home topics block, flat eight, footer topics group (F-15)"
+ ],
+ "reserved": [
+  "DL-V2-001 G1 direction"
+ ],
+ "test_in_g1": [
+  "13 unit composition",
+  "19/32 Home first-screen hypothesis",
+  "21 Arabic heading weight 600 vs 700 and one OFL pairing",
+  "29 audience entry (inside one candidate)",
+  "TOC strip vs list (G0-F04)"
+ ],
  "open_findings": {
-  "B1_visual_escalations": ["OBS-00090 comparability marker (19) so both contradicted POS pairs are marked", "bind WB-published fin24* main-source series (25/26) and revise VIS-FINDEX-RESILIENCE boundary", "method note on API fin28/fin29 = 0", "Master 11 public_routes VIS-CAPITAL-CONTEXT and visual_form/encoding_contract VIS-FIRM-FINANCE-SEVERITY stale", "VIS-PAYMENT-RAILS 'Operation reached' step binding (G0-F07)", "typed gap field only with seed 24", "VIS-ACCESS-EVIDENCE-LAYER record page or link"],
-  "G2_visual": ["boundary part inside every <figure> (27 of 42; /access/, /firms/, /measurement/ have none)"],
-  "B1": ["G0-F01 interval on CLM-001 vs Methodology 07", "G0-F02 /corrections/ self-contradiction", "G0-F03 topics one-step (F-15) + D8", "G0-F04 TOC >6 and strip overflow (S10)", "G0-F05 domain H1 and head order (S11, S12)", "G0-F07 reforms chain step marker; CBY-Sana'a coverage sentence", "G0-F08 /data/ and /measurement/ structure (S1, S2, S8, S9)", "G0-F09 record->MA bindings", "G0-F10 CLM-001 lead and clocks (OD-1017-08, S13)", "OD-1017-04(b) SDG 8.10.2 / 8.10.1", "Readings link position on /remittances/ (S7)", "CLM-003 source list order", "Return-to-interpretation label"],
-  "B2": ["G0-F06 citation forms (OD-1017-04a)", "item 16 Compare qualified pair", "seed 23 machine-readable records (ask once)", "seed 25 what changed in this edition", "seed 27 search test set", "seed 28 figure cards (ask once)", "Compare preload from a record", "report-an-error form"],
-  "G1": ["DL-V2-001", "PR #51 as evidence", "font test", "first-screen hypothesis", "strip vs list"],
-  "G2": ["unit at three scales", "boundary inside the figure element (27 of 42)", "teaser scope (G0-F09)"],
-  "W4F": ["fonts 220 KB per page"],
-  "W6": ["F-18 counts and diagrams"],
-  "owner": ["F-12 visibility", "F-06 Workers check"]
+  "B1_visual_escalations": [
+   "bind WB-published fin24* main-source series (25/26) and revise VIS-FINDEX-RESILIENCE boundary (B2)",
+   "method note on API fin28/fin29 = 0 (B2)",
+   "VIS-CAPITAL-CONTEXT public_routes: no defect established (carried)",
+   "typed gap field only with seed 24",
+   "VIS-ACCESS-EVIDENCE-LAYER record page or link (G2)"
+  ],
+  "G2_visual": [
+   "boundary part inside every <figure> (27 of 42; /access/, /firms/, /measurement/ have none)"
+  ],
+  "B1": [],
+  "B2": [
+   "G0-F06 citation forms (OD-1017-04a)",
+   "item 16 Compare qualified pair",
+   "seed 23 machine-readable records (ask once)",
+   "seed 25 what changed in this edition",
+   "seed 27 search test set",
+   "seed 28 figure cards (ask once)",
+   "Compare preload from a record",
+   "report-an-error form",
+   "G0-F09 record->MA bindings",
+   "EN-only time boundaries on /providers/ (DL-V2-005)",
+   "Readings link position on /remittances/ (S7)",
+   "CLM-003 source list order",
+   "Return-to-interpretation label",
+   "fin24*/fin28-29 method note (Master data binding)"
+  ],
+  "G1": [
+   "DL-V2-001",
+   "PR #51 as evidence",
+   "font test",
+   "first-screen hypothesis",
+   "strip vs list",
+   "Home first screen: the figure out of view in AR after the topics block"
+  ],
+  "G2": [
+   "unit at three scales",
+   "boundary inside the figure element (27 of 42)",
+   "teaser scope (G0-F09)",
+   "/payments/, /finance/ and /reforms/ (EN) length (chronology fold)",
+   "EN H1 size at 390 (/finance/, CLM-001, /about/ run to 4 lines)"
+  ],
+  "W4F": [
+   "fonts 220 KB per page",
+   "B1-F01 tap targets under 24 px that predate B1"
+  ],
+  "W6": [
+   "F-18 counts and diagrams"
+  ],
+  "owner": [
+   "F-12 visibility",
+   "F-06 Workers check"
+  ],
+  "B1_closed": [
+   "G0-F01",
+   "G0-F02",
+   "G0-F03/F-15",
+   "G0-F04",
+   "G0-F05 (S11, S12)",
+   "G0-F07",
+   "G0-F08",
+   "G0-F10",
+   "OD-1017-04(b)",
+   "OD-1017-08",
+   "OBS-00090 marker",
+   "VIS-FIRM-FINANCE-SEVERITY form"
+  ]
  },
- "not_run_in_g0": ["axe", "zoom 200/400", "screen-reader order", "throttled timing", "human testing (none by decision)", "cite button state (INCONCLUSIVE)", "JS Compare table verdict per field"],
- "next": "B1 S — structure (S1-S13, CR-S12, D8), Master transactions for G0-F01/F02/F07/F10 and OD-1017-04(b), KEY_MIGRATION rows, ID and data-hook preservation check against 2ddbfb61"
+ "not_run_in_g0": [
+  "axe",
+  "zoom 200/400",
+  "screen-reader order",
+  "throttled timing",
+  "human testing (none by decision)",
+  "cite button state (INCONCLUSIVE)",
+  "JS Compare table verdict per field"
+ ],
+ "next": "B2 T — text and tools (G0-F06 citation forms OD-1017-04a; seed 25 what changed; seed 27 Arabic search test set; seeds 23 and 28 prepared, asked once; Compare preload; report-an-error form; G0-F09 bindings; DL-V2-005 residual cells), Master-first, EN and AR together; then B3 G1",
+ "transactions": {
+  "STAGE-B-S": {
+   "master_after": "5b2004068c0c2cfd8aae0f7b3b1c2f2c53cab4609fbe9e9a53366d96f1323b20",
+   "page_specs_after": "7fa18f0f271eb0e429b222f7efe6819d5cae2b6dfcb3d74fb89a1ea4c152a4c2",
+   "cells": 74,
+   "record": "audit/stage_b_s/"
+  },
+  "STAGE-B-S2": {
+   "master_after": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
+   "page_specs_after": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
+   "cells": 1,
+   "record": "audit/stage_b_s2/"
+  }
+ },
+ "s1": {
+  "label": "s1",
+  "metrics": "design/evidence/v2/g0/s1_metrics.json",
+  "scoreboard": "design/evidence/v2/g0/s1_scoreboard.md",
+  "first_click": "design/evidence/v2/g0/firstclick_b1.md",
+  "phone_screens_ar390": {
+   "/": 9.4,
+   "/explore/": 8.6,
+   "/people/": 13.9,
+   "/payments/": 20.3,
+   "/remittances/": 17.3,
+   "/firms/": 13.9,
+   "/finance/": 13.4,
+   "/providers/": 17.0,
+   "/access/": 9.9,
+   "/reforms/": 21.6,
+   "/evidence/": 13.6,
+   "/evidence/CLM-001/": 10.4,
+   "/evidence/CLM-003/": 10.0,
+   "/evidence/VIS-POS-TERMINALS/": 16.1,
+   "/evidence/compare/": 11.9,
+   "/readings/": 8.1,
+   "/readings/how-money-reaches-households/": 36.1,
+   "/data/": 18.7,
+   "/methodology/": 15.9,
+   "/measurement/": 23.4,
+   "/about/": 7.3,
+   "/corrections/": 5.2,
+   "/contact/": 4.1
+  },
+  "targets_met": [
+   "/data/ <=20",
+   "/evidence/ EN <=14",
+   "/measurement/ -40%",
+   "/people/ /remittances/ /firms/ /providers/ -25% (both editions); /reforms/ -25% in AR",
+   "TOC <=6 everywhere, 0 strip overflow",
+   "H1 <=3 lines AR 390 on every route",
+   "ISO dates in prose 0"
+  ],
+  "misses_recorded": {
+   "/": "longer by decision DL-V2-007",
+   "/payments/": "-24% (governed signal tables; G2)",
+   "/finance/": "-21% (figure groups; chronology fold is a G2 lever)",
+   "/reforms/": "EN -24% (AR -25%): EN chain and event list run longer; G2",
+   "/access/": "-15% (shortest domain; chrome floor); H1 met",
+   "EN H1 > 3 lines at 390": [
+    "en:/finance/",
+    "en:/evidence/CLM-001/",
+    "en:/about/"
+   ],
+   "ISO keys EN /providers/": "2 status-ledger time boundaries, lang=en (DL-V2-005) -> B2 Master cell"
+  },
+  "first_click_one_step": {
+   "A current": "5/24 EN, 6/24 AR",
+   "B flat eight": "22/24 EN, 24/24 AR",
+   "C four families": "23/24 EN, 23/24 AR"
+  },
+  "preservation": {
+   "vs_b0_d36a51bb": "305 pages; gone edge-fN (S4, re-hosted), data-hub-num (D8); new shows, topics, record-line, fig-data, toc-grouped, boundary-more, home-topics, ma-more",
+   "vs_2ddbfb61": "291 pages, 14 new pages; other differences predate B0"
+  }
+ },
+ "owner_decisions_on_record": [
+  "OD-1017-14 (PR #59, 3ef16ade): DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com, prospective; public_origin stays null; implementation stays Stage C"
+ ],
+ "negative_controls_local_coverage": {
+  "B1": "--only: RC-S10 (3), RC-NAV/D8 controls; base-path and no-JS built-in controls; the full suite was not run before the first push (corrected 17 October 2026)",
+  "B1 fix": "--only RC-1115 caught 9 of 9; full suite 167 of 167 caught"
+ }
 }

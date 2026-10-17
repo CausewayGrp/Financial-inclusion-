@@ -91,6 +91,7 @@ def _arval(tok, table):
 
 def ar_words(t):
     t = t.replace("ـ", "")                              # tatweel: «لـسـتة» is «لستة»
+    t = re.sub(r"[،؛؟]", " ", t)                       # S (17 Oct 2026): Arabic punctuation sits inside the Arabic block, so «خمسة،» must not become one token
     out, i = set(), 0
     t = re.sub(r"الاثني عشر", " ", t)                       # the definite form is converted to 12 by AR_WORDS and checked as a digit
     for pat, v in ((r"(?:و|ف)?(?:اثنا|اثني|اثنتا|اثنتي) ?عشر(?:ة)?", 12), (r"(?:و|ف)?(?:ال)?(?:أحد|إحدى|الحادي|الحادية) ?عشر(?:ة)?", 11)):

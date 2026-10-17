@@ -226,6 +226,10 @@ class Content:
         dom = mm.get("domains") or {}
         domains = [{"label": self.t(u, lang), "href": self.href(rt, lang), "active": self._active(rt, route)}
                    for rt, u in zip(dom.get("routes") or [], dom.get("label_ui_ids") or [])]
+        # DL-V2-007 (F-15, 17 October 2026): the footer's first group is the eight domain answers under the governed
+        # topics label, so every page offers the one-step route that Home's topics block offers
+        if domains:
+            footer.insert(0, {"label": self.t("UI-HOME-TOPICS", lang), "links": [{"label": d["label"], "href": d["href"]} for d in domains]})
         # NB-1 (owner brief of 10 October 2026, Part B, B3.10): a hub's or a domain answer's <title> and og:title carry its
         # stable governed name (the navigation label; the domain's UI-LAND-DOM-* name), so tabs, search results and shares
         # do not go stale; the dated thesis stays the page's h1. Readings, records and policy pages keep their own titles.
@@ -247,11 +251,15 @@ class Content:
                         "name": self.t("UI-LICENCE-NAME", lang), "url": self.t("UI-LICENCE-DEED-URL", lang),
                         "rights_href": self.href("/rights/", lang)},
             "lang": lang, "dir": "rtl" if lang == "ar" else "ltr", "other_lang": other,
+            "toc_rule": self.presentation.get("toc_rule") or {},   # S10 (W4 Appendix F): the table-of-contents rule of the presentation contract
             "other_href": self.href(route, other),   # R-05: the language switch is a link to the same route in the other edition
             "product": self.t("UI-PRODUCT-NAME", lang), "edition": self.t("UI-CONTENT-VERSION", lang),
             # B9: the governed citation line of a page that is not an Evidence Record (UI-CITE-PAGE-LINE)
             "cite_page_line": self.tf("UI-CITE-PAGE-LINE", lang, product=self.t("UI-PRODUCT-NAME", lang), version=self.t("UI-CONTENT-VERSION", lang)),
             "labels": {
+                # S10: the governed group labels of the table of contents (UI-TOC-*), keyed as the contract's toc_rule names them
+                "toc": {k: self.t(u, lang) for k, u in ((self.presentation.get("toc_rule") or {}).get("group_labels") or {}).items()},
+                "topics": self.t("UI-HOME-TOPICS", lang),   # DL-V2-007: Home's topics block and the footer's topics group
                 "skip": self.t("UI-HEADER-SKIP-TO-CONTENT", lang), "primary_nav": self.t("UI-HEADER-PRIMARY-NAVIGATION", lang),
                 "trust_nav": self.t("UI-HEADER-TRUST-LINKS", lang), "menu": self.t("UI-HEADER-MENU", lang),
                 "search": self.t("UI-SEARCH-SEARCH", lang), "search_title": self.t("UI-SEARCH-SEARCH-THE-PUBLIC-EVIDENCE", lang),
@@ -306,10 +314,12 @@ class Content:
     def sections(self, spec: dict, lang: str) -> list[dict]:
         """Localized sections in numeric order; split-language rows are merged by section_order (brief §2)."""
         rows: dict[int, dict] = {}
+        # S10: the English section role is the grouping key of the table of contents on both editions
+        roles_en = {int(s["section_order"]): s.get("section_role") for s in spec.get("sections", []) if s.get("heading_en") or s.get("body_en")}
         for s in spec.get("sections", []):
             if not (s.get(f"heading_{lang}") or s.get(f"body_{lang}")):
                 continue
-            rows.setdefault(int(s["section_order"]), {"order": int(s["section_order"]), "role": s.get("section_role"),
+            rows.setdefault(int(s["section_order"]), {"order": int(s["section_order"]), "role": s.get("section_role"), "role_en": roles_en.get(int(s["section_order"])),
                                                      "heading": s.get(f"heading_{lang}") or "", "body": s.get(f"body_{lang}") or "",
                                                      "paragraphs": [p.strip() for p in str(s.get(f"body_{lang}") or "").split("\n") if p.strip()]})
         return [rows[k] for k in sorted(rows)]

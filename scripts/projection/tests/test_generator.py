@@ -124,7 +124,12 @@ class Generation(unittest.TestCase):
             if not item.get("route"):
                 self.assertGreaterEqual(len(kids), 2)
             routes |= {k["route"] for k in kids}
-        self.assertEqual(routes, {"/explore/", "/evidence/", "/readings/", "/data/", "/methodology/", "/measurement/"})
+        # D8 (owner decision of 17 October 2026): five direct hubs, Methodology the fifth; Measurement priorities is a
+        # footer destination, no longer a masthead family
+        self.assertEqual(routes, {"/explore/", "/evidence/", "/readings/", "/data/", "/methodology/"})
+        self.assertTrue(all(item.get("route") for item in nav["global_navigation"]), "D8: no grouping node in the masthead")
+        self.assertFalse((nav.get("hub_numerals") or {}).get("items"), "D8: no hub numerals are bound")
+        self.assertIn("/measurement/", {l.get("route") for g in nav.get("footer_groups", []) for l in g.get("links", [])})
         self.assertEqual(nav["trust_navigation"][0]["route"], "/about/")
 
     def test_full_copy_is_derived(self):

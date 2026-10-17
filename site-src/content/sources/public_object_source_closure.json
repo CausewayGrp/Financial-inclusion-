@@ -11,17 +11,20 @@
     "dependency_ids": [
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA"
     ],
     "direct_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -40,6 +43,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -5451,12 +5459,14 @@
     "direct_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA"
     ],
     "resolved_source_ids": [
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
-      "SRC-WB-FINDEX-001"
+      "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA"
     ],
     "resolved_via_object_ids": [],
     "context_reference_ids": [],
@@ -5475,6 +5485,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       }
     ],
@@ -8560,6 +8575,7 @@
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-UN-SDG-8102-METADATA",
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
@@ -8602,6 +8618,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -8687,6 +8708,7 @@
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
       "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA",
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
@@ -8732,6 +8754,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -9023,6 +9050,7 @@
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-UN-SDG-8102-METADATA",
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-WB-FSD-2024-001",
@@ -9057,6 +9085,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -11159,6 +11192,7 @@
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-UN-SDG-8102-METADATA",
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
@@ -11201,6 +11235,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -11286,6 +11325,7 @@
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-2025-EDITION",
       "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA",
       "SRC-CBY-POS-2025-03",
       "SRC-CBY-POS-2025-12",
       "SRC-CBY-POS-2026-01",
@@ -11331,6 +11371,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -11612,6 +11657,7 @@
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
       "SRC-WB-FINDEX-2025-EDITION",
+      "SRC-UN-SDG-8102-METADATA",
       "SRC-WB-FINDEX-LDB-2015-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-WB-FSD-2024-001",
@@ -11646,6 +11692,11 @@
       {
         "source_id": "SRC-WB-FINDEX-2025-EDITION",
         "primary_url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -12218,6 +12269,7 @@
       "SRC-CCY-SAM-2024",
       "SRC-WB-FINDEX-AGG-2022",
       "SRC-WB-FINDEX-001",
+      "SRC-UN-SDG-8102-METADATA",
       "SRC-UNICEF-MICS-YEM-2022-001",
       "SRC-WB-YMPS-R1-2022-001",
       "SRC-WB-G2PX-YEM-UCT-2024-001",
@@ -12260,6 +12312,11 @@
       {
         "source_id": "SRC-WB-FINDEX-001",
         "primary_url": "https://microdata.worldbank.org/catalog/5862",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8102-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {
@@ -12508,6 +12565,8 @@
     "lineage_state": null,
     "dependency_ids": [
       "SRC-CCY-PRESSURE-2026",
+      "SRC-WB-WDI-FAS-YEM-001",
+      "SRC-UN-SDG-8101-METADATA",
       "FAS-YEM-2015",
       "CLM-008",
       "CLM-009",
@@ -12516,11 +12575,14 @@
       "CLM-045"
     ],
     "direct_source_ids": [
-      "SRC-CCY-PRESSURE-2026"
+      "SRC-CCY-PRESSURE-2026",
+      "SRC-WB-WDI-FAS-YEM-001",
+      "SRC-UN-SDG-8101-METADATA"
     ],
     "resolved_source_ids": [
       "SRC-CCY-PRESSURE-2026",
       "SRC-WB-WDI-FAS-YEM-001",
+      "SRC-UN-SDG-8101-METADATA",
       "SRC-CBY-BANKLIST-AR-2026-001",
       "SRC-WB-FMIIP-P180708",
       "SRC-IGC-AIDDATA-REMIT-YEM-2026",
@@ -12567,6 +12629,11 @@
       {
         "source_id": "SRC-WB-WDI-FAS-YEM-001",
         "primary_url": "https://data.worldbank.org/indicator/FB.ATM.TOTL.P5?locations=YE",
+        "metadata_state": "DISPLAY_READY"
+      },
+      {
+        "source_id": "SRC-UN-SDG-8101-METADATA",
+        "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-01.pdf",
         "metadata_state": "DISPLAY_READY"
       },
       {

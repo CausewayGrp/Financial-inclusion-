@@ -82,6 +82,11 @@ p{margin:0 0 .85em}p:last-child{margin-bottom:0}
 .strip{display:grid;grid-template-columns:minmax(0,1fr);gap:0;padding:12px 0 4px;border-top:1px solid var(--rule)}
 .strip a{display:flex;gap:10px;align-items:baseline;padding:11px 0;font-size:var(--fs-src);line-height:var(--lh-src);text-decoration:none;border-bottom:1px solid var(--rule)}
 .strip a .n{color:var(--mute);font-weight:600;min-width:1.6em}
+.vlist li{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}.vlist .when,.vlist .rref{color:var(--mute);font-size:var(--fs-clock);line-height:var(--lh-clock)}
+.record-line{display:flex;flex-wrap:wrap;gap:4px 18px;margin:8px 0 2px}.record-line .clock{margin:0}
+.mlist li{padding:4px 0}
+details.fig-data>summary{cursor:pointer;list-style:none;font-size:var(--fs-clock);line-height:var(--lh-clock);font-weight:600;color:var(--ink-2);padding:8px 0}
+details.fig-data>summary::-webkit-details-marker{display:none}details.fig-data>summary::before{content:"+ ";color:var(--ochre)}details.fig-data[open]>summary::before{content:"− "}
 .compact{display:flex;flex-direction:column;gap:6px;padding:14px 0;border-top:1px solid var(--rule)}
 .compact:first-child{border-top:0}
 .compact .q{font-size:calc(var(--fs-q) - 1px)}
@@ -293,7 +298,7 @@ CSS_D2 = r"""/* ---- D2: families, figures, tools (same tokens; maintained with 
 .chain .source-locator,.hublist a,.src .source-url,.chron a,.deps a,[data-evidence-landscape] a{display:inline-block;padding:3px 0;min-height:24px}
 /* 2.5.8, measured at EAD-02: these three sat 1–2 px under the 24 px minimum with neighbours closer than 24 px, so
    neither the inline nor the spacing exception carried them. The rule is the one above, applied where it was missed. */
-.groups a,details.more>summary,details.more .rlist a{display:inline-block;padding:3px 0;min-height:24px}
+.groups a,details.more>summary,details.more .rlist a,details.fold .rlist a,.topics .rlist a,.mlist a{display:inline-block;padding:3px 0;min-height:24px}
 .head .q{font-size:var(--fs-q);line-height:var(--lh-q);color:var(--ink-2);margin:0}
 .crumb+.rubric{margin-top:4px}
 .unit-l{display:block;font-weight:500;color:var(--ink-2);font-size:var(--fs-rubric);letter-spacing:0;text-transform:none;margin-top:2px}
@@ -839,6 +844,9 @@ details.grp>summary{display:flex;align-items:center;min-height:48px;box-sizing:b
 details.fold>.multiple,details.fold>figure{margin-top:16px}
 details.chron-fold>p.small{margin:14px 0 4px}
 .qa.fold-sec{display:block}
+/* Home's topics block (DL-V2-007, F-15): the eight domain answers in one step, as a compact grid */
+.topics ul.rlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px}
+@media (min-width:600px){.topics ul.rlist{grid-template-columns:repeat(4,minmax(0,1fr))}}
 /* Home's named disclosures (owner decision B-a): the control beside the section's own kicker and heading */
 details.home-fold{margin-top:6px}
 details.home-fold>summary{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 16px}
@@ -849,10 +857,11 @@ details.home-fold>.fold-body{padding:16px 0 4px}
 /* the chronology as a dated list: the period as the line's key, the event as its text */
 ol.chron>li.compact{padding:14px 0}
 ol.chron .clock .v{color:var(--green-900)}
-/* phone and small tablet: the in-page index becomes one row of chips under the head — the same links, in order */
+/* phone and small tablet: the in-page index becomes a wrapped row of chips under the head — the same links, in order;
+   S10 (17 October 2026, G0-F04): at most six entries, wrapping instead of scrolling sideways, so none is hidden */
 @media (max-width:899px){
-.strip{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:10px 0 12px;border-top:0;border-bottom:1px solid var(--rule);scrollbar-width:thin}
-.strip a{flex:0 0 auto;max-width:15rem;scroll-snap-align:start;align-items:center;gap:8px;padding:8px 12px;min-height:44px;box-sizing:border-box;background:var(--white);border:1px solid var(--rule);border-radius:2px;font-size:var(--fs-clock);line-height:1.3}
+.strip{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0 12px;border-top:0;border-bottom:1px solid var(--rule)}
+.strip a{flex:0 0 auto;max-width:100%;align-items:center;gap:8px;padding:8px 12px;min-height:44px;box-sizing:border-box;background:var(--white);border:1px solid var(--rule);border-radius:2px;font-size:var(--fs-clock);line-height:1.3}
 .strip a .n{min-width:0}
 .strip a span:last-child{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .strip a:hover{border-color:var(--green-700)}
@@ -878,9 +887,6 @@ ol.objs.chron,.curated .objs,.source-locator-details .objs{display:flex;flex-dir
    h1, the full phone menu. The numeral is the hub's own attribute (UI-NAV-HUB-0n), printed with empty alternative
    text so a link's accessible name stays its navigation label. ---- */
 @media screen{
-[data-hub-num]::before{content:attr(data-hub-num);content:attr(data-hub-num) / "";display:inline-block;margin-inline-end:.5em;font-size:.8em;font-weight:600;line-height:1;color:var(--brass-700);font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.nav a[aria-current=page][data-hub-num]::before,.nav a[data-hub-num]:hover::before{color:var(--green-700)}
-.nav .glabel[data-hub-num]::before{font-size:1em}
 /* the page's own tools, one quiet row under its title, at every width */
 .page-tools{display:flex;flex-wrap:wrap;gap:8px 10px;margin:12px 0 2px}
 .page-tools>.tbtn,.page-tools>a{display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:0 14px;border:1px solid var(--sage-400);border-radius:2px;background:var(--white);color:var(--green-900);text-decoration:none;font-size:var(--fs-src);font-weight:500;line-height:1.2}
@@ -888,13 +894,12 @@ ol.objs.chron,.curated .objs,.source-locator-details .objs{display:flex;flex-dir
 .head .page-tools+.st,.head .page-tools+p.st{margin-top:14px}
 /* the full phone menu: five numbered hubs, the eight domain answers under Explore, trust, language and cite */
 .nav.open{max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain}
-.nav.open>a[data-hub-num]{font-weight:600}
 .nav.open .group.mdoms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px;padding:2px 0 8px;padding-inline-start:1.9em;border-bottom:1px solid var(--rule)}
 .nav.open .group.mdoms a{border-bottom:0;padding:9px 0;min-height:24px;font-size:.94em;color:var(--ink-2)}
 .nav.open .group.mdoms a[aria-current=page]{color:var(--green-700);text-decoration:underline;text-underline-offset:3px}
 .nav.open .mlang{display:block;margin-top:6px}
 }
-@media print{.page-tools{display:none!important}[data-hub-num]::before{content:none}}
+@media print{.page-tools{display:none!important}}
 /* ---- V1 Phase B (owner decision B-b): the currentness strip and the Evidence Colophon ---- */
 @media screen{
 .cstrip{border-top:1px solid var(--rule);background:var(--sage-100)}

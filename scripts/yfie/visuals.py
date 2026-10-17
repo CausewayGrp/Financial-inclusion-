@@ -6,7 +6,7 @@ left to right in both languages (governed contract rule); labels, legends and pa
 The text alternative (alt text plus the contract's tables) ships visibly with the chart."""
 from __future__ import annotations
 
-from .text import ISO_DATE, bdi, esc, iso as iso_run  # noqa: F401  (one text layer for every renderer, D6)
+from .text import ISO_DATE, bdi, esc, key as pkey, iso as iso_run  # noqa: F401  (one text layer for every renderer, D6)
 
 
 def plain_num(x, year: bool = False) -> str:
@@ -452,7 +452,13 @@ def table_region(v: dict, tables: str) -> str:
     """The named region a fallback table sits in; focusable only when the table is declared wide and can scroll (a
     table that fits its column is never an idle tab stop)."""
     tab = ' tabindex="0"' if 'class="rvtab wide"' in tables else ""
-    return f'<div class="table-wrap"{tab} role="region" aria-label="{esc(v["labels"]["text_alternative"])}: {esc(v["title"])}">{tables}</div>'
+    region = f'<div class="table-wrap"{tab} role="region" aria-label="{esc(v["labels"]["text_alternative"])}: {esc(v["title"])}">{tables}</div>'
+    # S3 (W4 Appendix F): the data table sits in a disclosure named by its own governed caption; rendered open, so it is
+    # complete without JavaScript and in print, and the runtime closes it on screen (app.js) — what the view shows and
+    # what not to conclude stay visible beside the figure
+    m = __import__("re").search(r"<caption>(.*?)</caption>", tables, __import__("re").S)
+    summary = m.group(1) if m else esc(v["title"])
+    return f'<details class="fig-data" data-fig-data open><summary>{summary}</summary>{region}</details>'
 
 
 # ------------------------------------------------------------------------------------------------ bars (VIS-FINDEX-GAPS)
@@ -714,10 +720,10 @@ def ts_table(v: dict, series: dict, unit: str) -> str:
     for x in xs:
         r = by_x.get(x)
         if r is None:
-            rows.append([bdi(x), esc(marker_label(v, missing[x] or "MISSING"))])
+            rows.append([pkey(x), esc(marker_label(v, missing[x] or "MISSING"))])
             continue
         marks = sep(v).join(marker_label(v, m) for m in r["markers"] if m not in shared and marker_label(v, m))
-        rows.append([bdi(x), qual(num(r["y"]), esc(marks), "" if state else esc(state_label(v, r["state"])),
+        rows.append([pkey(x), qual(num(r["y"]), esc(marks), "" if state else esc(state_label(v, r["state"])),
                                   f'<span dir="auto">{esc(r["series_label"])}</span>' if r.get("series_label") and not doc else "")])
     caption = caption_of(v, qual(esc(unit), esc(state_label(v, state)) if state else "", f'<span dir="auto">{esc(doc)}</span>' if doc else "",
                                  esc(sep(v).join(marker_label(v, m) for m in sorted(shared) if marker_label(v, m)))))
@@ -773,7 +779,7 @@ def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str =
             for r in lane:
                 shape = shapes.setdefault(r.get("group"), ["circle", "square", "diamond"][len(shapes) % 3])
                 x = _pct(r["y"], vmax=vmax)
-                label = bdi(str(r["x"])) if yearly else esc(r["group_text"])
+                label = pkey(str(r["x"])) if yearly else esc(r["group_text"])
                 rows.append(f'<div class="row"><div class="rl">{label}</div><svg class="trk" width="100%" height="34" aria-hidden="true" focusable="false" direction="ltr">'
                             f'<line class="stem" x1="1%" y1="22" x2="{x:.2f}%" y2="22"/>{svg_mark(shape, f"{x:.2f}%", 22, 6)}<text class="val" x="{x:.2f}%" y="9" text-anchor="middle">{plain_num(r["y"])}</text></svg></div>')
             html_.append('<div class="lane">' + (f'<h3>{esc(c)}</h3>' if c else "") + f'<div class="p1">{"".join(rows)}</div></div>')
@@ -781,7 +787,7 @@ def remittance_cost(v: dict, cite_label: str, origin: str | None, heading: str =
         panels.append("".join(html_))
         state = uniform(vals, lambda r: r["state"])
         if yearly:
-            rows = [[bdi(str(r["x"])), qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
+            rows = [[pkey(str(r["x"])), qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
             head = [esc(th(v, "period")), esc(vals[0]["unit"])]
         else:
             rows = [[f'{esc(r["x_text"])} — {esc(r["group_text"])}', qual(num(r["y"]), "" if state else esc(state_label(v, r["state"])))] for r in vals]
@@ -843,7 +849,10 @@ def chain_steps(chain_src: dict, include_activity: bool) -> list[dict]:
     for st in CHAIN_STEPS:
         evs = sorted([e for e in events if CLASS_STEP.get(e.get("class")) == st], key=lambda e: str(e.get("date")))
         acts = [a for a in activity if ACTIVITY_STEP.get(a["id"]) == st]
-        steps.append({"step": st, "events": evs, "activity": acts, "evidenced": bool(evs or acts)})
+        # G0-F07 (17 Oct 2026): an attributed activity signal (event class *_SIGNAL) is listed under its step, but only a
+        # dated event of another class or an administrative activity row makes the step evidenced (licence ≠ operation)
+        hard = [e for e in evs if not str(e.get("class") or "").endswith("_SIGNAL")]
+        steps.append({"step": st, "events": evs, "activity": acts, "evidenced": bool(hard or acts)})
     return steps
 
 
@@ -1176,8 +1185,8 @@ def dated_lanes(v: dict, cite_label: str, origin: str | None, heading: str = "h2
              f'<div class="lane outcome"><{sub}>{esc(CL["OUTCOME"])}</{sub}><span class="st-state">{esc(CL["OPEN"])}</span>{lane4}</div>'
              f'{axis_svg}</div></div>')
     groups = [(esc(FL[0]), [[period_txt, esc(f'{p0["series_label_text"]} · {val_unit_plain(p0["y"], p0["unit_text"], v)} · {p0["group_text"]} · {state_label(v, "MEASURED")}')]]),
-              (esc(FL[1]), [[bdi(r["x"]), esc(f'{r["label_text"]}{(" · " + scope) if scope else ""} · {val_unit_plain(r["y"], r["unit_text"], v)} · {state_label(v, "ADMINISTRATIVE")}')] for r in vals]),
-              (esc(FL[2]), [[bdi(e["date"]), esc(e["label_text"])] for e in inst]),
+              (esc(FL[1]), [[pkey(r["x"]), esc(f'{r["label_text"]}{(" · " + scope) if scope else ""} · {val_unit_plain(r["y"], r["unit_text"], v)} · {state_label(v, "ADMINISTRATIVE")}')] for r in vals]),
+              (esc(FL[2]), [[pkey(e["date"]), esc(e["label_text"])] for e in inst]),
               (None, [[esc(CL["OUTCOME"]), esc(CL["OPEN"])]])]
     tbl = grouped_table(caption_of(v), [esc(th(v, "date")), esc(v["labels"]["what_it_shows"])], groups)
     return frame_open(v, heading) + panel + frame_close(v, cite_label, origin, tbl, heading=heading)

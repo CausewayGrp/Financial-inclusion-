@@ -1231,6 +1231,337 @@
     }
   ],
   "p1_3_band_rule": "Pre-Tranche-C P1.3: supporting (the always-visible boundary band), primary and progressive section tiers are disjoint and together cover every non-lead section; a band section renders once, in full, under its own governed heading.",
+  "toc_rule": {
+    "decided_by": "Brief S10 (W4 Appendix F; Stage B B1, 17 October 2026; finding G0-F04; steward designation OD-1017-03): the in-page table of contents (nav.strip) holds at most six entries and is omitted on a page under six phone screens. Its entries are the page's governed sections grouped by the tiers of this contract and the Master's section roles (03_PAGE_SECTIONS section_role); a group's label is governed interface copy (UI-TOC-*, Master transaction STAGE-B-S) and links to the group's first existing anchor in page order; a group without a label shows its first entry's own heading. The desktop spine keeps the full numbered index, so section rubrics and the spine still agree (DEBT-019). Checked by scripts/validate.py RC-S10; rendered by scripts/yfie/render.py toc_strip() and toc_length(). DL-V2-007 (17 October 2026): Home's map starts with the topics block (the eight domain answers in one step).",
+    "max_entries": 6,
+    "min_main_words": 700,
+    "length_rule": "A page whose main text (between the site header and the footer, strip and spines excluded, in the page's own language) has fewer than min_main_words words renders no table of contents. Calibration, 390 px, G0 baseline and B1 re-measurement of 17 October 2026: /contact/ 238-250 words = 3.8 screens; /corrections/ 434-469 = 4.8-4.9; /rights/ 607-652 = 5.9-6.0; /about/ 744-828 = 6.6-7.2; /readings/ 767-823 = 7.0-7.6. Six screens fall between /rights/ and /about/ in both languages; 700 keeps the two editions of every page on the same side.",
+    "drop_first": [
+      "next"
+    ],
+    "group_labels": {
+      "answer": "UI-TOC-ANSWER",
+      "evidence": "UI-TOC-EVIDENCE",
+      "read": "UI-TOC-READ",
+      "more": "UI-TOC-MORE",
+      "further": "UI-TOC-FURTHER",
+      "verify": "UI-TOC-VERIFY",
+      "m_measured": "UI-TOC-M-MEASURED",
+      "m_accepted": "UI-TOC-M-ACCEPTED",
+      "m_uncertainty": "UI-TOC-M-UNCERTAINTY",
+      "m_comparison": "UI-TOC-M-COMPARISON",
+      "m_not_claimed": "UI-TOC-M-NOT-CLAIMED",
+      "m_corrections": "UI-TOC-M-CORRECTIONS",
+      "r_reading": "UI-TOC-R-READING",
+      "r_trace": "UI-TOC-R-TRACE"
+    },
+    "member_kinds": "band = a supporting-tier (always-visible boundary) section; role = a primary section whose Master section_role (English) is the one named; an integer or {kind: section, section_order} = that section; block = the rendered block with that id (shows = the first primary figure group, views = the folded views, more = the progressive tier, chronology, readings, related, measure, verify, agenda, blk-records, trace, sources, sf); reading = a Reading's section by its section_id, or every section except those listed.",
+    "groups": {
+      "Domain Answer": [
+        {
+          "label": "answer",
+          "members": [
+            {
+              "kind": "band"
+            },
+            {
+              "kind": "role",
+              "role": "Evidence"
+            },
+            {
+              "kind": "role",
+              "role": "Analysis"
+            },
+            {
+              "kind": "role",
+              "role": "Regulatory evidence"
+            },
+            {
+              "kind": "role",
+              "role": "Other people-side evidence (2023)"
+            }
+          ]
+        },
+        {
+          "label": "evidence",
+          "members": [
+            {
+              "kind": "block",
+              "id": "shows"
+            },
+            {
+              "kind": "block",
+              "id": "views"
+            }
+          ]
+        },
+        {
+          "label": "read",
+          "members": [
+            {
+              "kind": "role",
+              "role": "What it means"
+            },
+            {
+              "kind": "role",
+              "role": "Method"
+            },
+            {
+              "kind": "role",
+              "role": "System context"
+            }
+          ]
+        },
+        {
+          "label": "more",
+          "members": [
+            {
+              "kind": "block",
+              "id": "more"
+            },
+            {
+              "kind": "block",
+              "id": "chronology"
+            }
+          ]
+        },
+        {
+          "label": "further",
+          "members": [
+            {
+              "kind": "block",
+              "id": "readings"
+            },
+            {
+              "kind": "block",
+              "id": "related"
+            },
+            {
+              "kind": "block",
+              "id": "measure"
+            }
+          ]
+        },
+        {
+          "label": "verify",
+          "members": [
+            {
+              "kind": "block",
+              "id": "verify"
+            }
+          ]
+        }
+      ],
+      "/methodology/": [
+        {
+          "label": "m_measured",
+          "members": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "m_accepted",
+          "members": [
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "label": "m_uncertainty",
+          "members": [
+            7,
+            8
+          ]
+        },
+        {
+          "label": "m_comparison",
+          "members": [
+            9,
+            14
+          ]
+        },
+        {
+          "label": "m_not_claimed",
+          "members": [
+            11
+          ]
+        },
+        {
+          "label": "m_corrections",
+          "members": [
+            12,
+            13
+          ]
+        }
+      ],
+      "/measurement/": [
+        {
+          "label": "read",
+          "members": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            6
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            7
+          ]
+        },
+        {
+          "label": "verify",
+          "members": [
+            8,
+            9
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            {
+              "kind": "block",
+              "id": "agenda"
+            }
+          ]
+        },
+        {
+          "label": "more",
+          "members": [
+            {
+              "kind": "block",
+              "id": "blk-records"
+            }
+          ]
+        }
+      ],
+      "/": [
+        {
+          "label": null,
+          "members": [
+            {
+              "kind": "block",
+              "id": "topics"
+            }
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            3
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            4
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            9
+          ]
+        },
+        {
+          "label": "read",
+          "members": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            {
+              "kind": "block",
+              "id": "sf"
+            }
+          ]
+        }
+      ],
+      "Reading": [
+        {
+          "label": "r_reading",
+          "members": [
+            {
+              "kind": "reading",
+              "except": [
+                "boundary",
+                "use",
+                "what_would_change"
+              ]
+            }
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            {
+              "kind": "reading",
+              "section": "boundary"
+            }
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            {
+              "kind": "reading",
+              "section": "use"
+            }
+          ]
+        },
+        {
+          "label": null,
+          "members": [
+            {
+              "kind": "reading",
+              "section": "what_would_change"
+            }
+          ]
+        },
+        {
+          "label": "r_trace",
+          "members": [
+            {
+              "kind": "block",
+              "id": "trace"
+            },
+            {
+              "kind": "block",
+              "id": "sources"
+            }
+          ]
+        },
+        {
+          "label": "further",
+          "members": [
+            {
+              "kind": "block",
+              "id": "measure"
+            },
+            {
+              "kind": "block",
+              "id": "related"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "tranche_c_notes": [
     "JRN-22: /payments/ historical e-money section and /reforms/ rule-versus-implementation section move to the primary tier; they hold the only answer to part of the governed question.",
     "OWN-07 (27 Sep 2026): /remittances/ shows one Measurement card. Its Page Spec binds MA-001 (the people-side baseline, which since Tranche B names household remittance receipt, channel and frequency as missing evidence); the page's macro remittance series answer a different question, which the card's own text keeps separate."

@@ -29,6 +29,10 @@ Evidence files: `design/evidence/v2/g0/` (metrics, scoreboard, visual audit, scr
 | DL-V2-001 | — | Reserved: the G1 direction (scorecard, judges, phone screens, bytes, source-owner test). | — | — |
 | DL-V2-002 | 2026-10-17 | The evidence unit (directive §5) is the design method for Stage B: value · unit · universe · period · publisher · evidence class · what it does not establish · what would settle it · verification trail, composed at Home, domain, record, Reading, Compare, /data/ and Measurement scale. Its composition is tested in G1, not pre-decided here. | G0 shows no family carries a marked figure, clock and boundary together in its first phone screen (§1.4); personas 4 and 6 fail or stall exactly where a unit field is missing (interval, measurement link, citation). | One shared order across families costs some editorial freedom; it buys the one repeated experience the owner named. |
 | DL-V2-003 | 2026-10-17 | G0 dispositions of Part 6 items 13–22 and seeds 23–32 (§1.10): each is ADOPT, ADAPT, DROP or TEST IN G1 with the measure that decides it. | §1.10 cites the G0 measurement or audit line for each. | Items marked TEST IN G1 add candidate scope to G1; the proving pages stay four. |
+| DL-V2-004 | 2026-10-17 | S10 executed: the phone table of contents is a grouped map of at most six entries, grouped by the contract's tiers and the Master's section roles (`presentation_priority.json` `toc_rule`, steward edit under OD-1017-03) with governed labels UI-TOC-* (transaction STAGE-B-S); a page under six phone screens (`min_main_words` 700, calibrated on G0 and the B1 re-measurement of the short pages in both editions) renders none, decided per route on both editions together. The desktop spine keeps the full numbered index (DEBT-019). | G0: the strip overflowed in 134 page×width cells (every route at 390, both editions) and exceeded six entries on 17 routes; B1: at most 6 entries on every route and width, 0 overflow (`g0/s1_metrics.json`). | Grouped entries lose the section-level jump on phones; the spine keeps it on desktop. Pages with their own grouping are the eight domains, /methodology/, /measurement/, Home and the Readings; /about/ and /data/ drop "Continue from here" from the map. |
+| DL-V2-005 | 2026-10-17 | S13 scope: dates are shown in words in prose, clocks, record lines, lists and figure notes, with the ISO value kept in `<time datetime>`; a data table's period keys (2019-07, 2024) stay as the source publishes them, a machine context like a data file. Four records whose governed period text carried ISO dates were rewritten in words in the Master (CLM-012, CLM-015, CLM-018, CLM-021). | G0: 616 ISO tokens visible in 24 page×width cells; B1: 8 in 4, all on EN /providers/: the status-ledger keys "observed 2026-09-07" and "2026-01-22 event", free-text time boundaries the Master holds in English only and the renderer marks `lang="en"` (an existing D6 escalation); their worded bilingual form is a Master cell for B2. | Table columns stay narrow on phones; the E2-DATES gate reads a worded date's machine value; one EN-only time boundary remains until B2. |
+| DL-V2-006 | 2026-10-17 | D8 executed (Part 6 item 11): the masthead holds five direct hubs — Questions, Evidence, Readings, Sources, Methodology — with no numerals; Measurement priorities stays a footer destination and a /methodology/ link. The resulting masthead is the baseline for the first-click test (item 14). | Master transaction STAGE-B-S (04_NAV_UX row 10 DIRECT; UI-NAV-HUB-01…05 retired in place); steward edit of `hub_numerals` (CR-S12, commit eb072951); gates RC-NAV, R4 and PB-0422 follow the five-hub contract. | One fewer masthead destination; the owner's decision, recorded. |
+| DL-V2-007 | 2026-10-17 | F-15 / Part 6 item 14: Home gains a topics block — the eight domain answers by their governed names (UI-LAND-DOM-*), flat, under one governed heading (UI-HOME-TOPICS, transaction STAGE-B-S2) — and every page's footer gains the same eight links as its first group; Home's map lists the block first (steward edit, commit efd19111). The desktop masthead stays the five hubs of D8: no topics entry is needed. The four-family grouping of the old mockup is not adopted. | AI-simulated first-click, desktop 1440, three readers × eight tasks × two editions, judges blind to the variants: current (D8 masthead) 5/24 EN and 6/24 AR one-step; flat eight on Home 22/24 EN and 24/24 AR; four families 23/24 EN and 23/24 AR. The two candidates tie within one judgement; the flat eight matches the phone menu and needs no family labels. Material: `g0/firstclick_b1.md`. | Home grows by 0.9 AR 390 screens; its AR first screen no longer shows the figure (G0 did; EN never did) — part of the G1 first-screen hypothesis (item 32). No human testing; the judges are language models reading link labels only. |
 
 ---
 
@@ -236,15 +240,31 @@ tool and retired tiers are recognised, and the ten table-only objects are listed
 
 | ID | State | Note |
 |---|---|---|
-| F-03 phone pages long and getting longer | OPEN → B1 targets | §1.2 |
+| F-03 phone pages long and getting longer | B1: /data/, /evidence/, /measurement/ and four domains meet their targets; /payments/, /finance/, /access/, /reforms/ (EN) and Home recorded with reasons (§2.2) → G2 | §2.2 |
 | F-04 PR #51 adds phone length and pre-empts G1 | OPEN → G1 (challenger evidence) | assessed in DL-V2-001 |
-| F-10 domain H1s repeat the lead; 4–5 lines | OPEN → B1 (S11) | §1.3 |
+| F-10 domain H1s repeat the lead; 4–5 lines | CLOSED for AR (every H1 ≤3 lines at 390); EN /finance/ runs to 4 lines at 390 → G2 (type size at 390; the S11 thesis stands) | §2.3 |
 | F-11 design records incomplete; ESCALATIONS and DESIGN_DEBT open | OPEN → this file exists; escalations resolved in G3 | — |
-| F-15 desktop has no direct route to the eight topics | CONFIRMED (5 of 8) → B1 | G0-F03 |
+| F-15 desktop has no direct route to the eight topics | CLOSED in B1 (DL-V2-006, DL-V2-007): one-step 21–25% → 92–100%, AI-simulated | §2.4 |
 | F-16 Compare never returns a positive verdict | OPEN → B2 | item 16 |
 | F-18 diagrams/counts truth (304 vs 306) | OPEN → W6 | — |
 | F-19 stale skill project files | handled (craft modules only) | — |
-| G0-F01 … G0-F10 and 11–16 | OPEN with destinations | §1.7 |
+| G0-F01 interval on CLM-001 vs Methodology §07 | CLOSED in B1 (STAGE-B-S): the lead names the survey, the universe and the 2.8-point interval | §2.1 |
+| G0-F02 /corrections/ self-contradiction | CLOSED in B1 (Master: the empty state names the selected record); seed 25 stays B2 | §2.1 |
+| G0-F03 topics in one step (F-15) | CLOSED (DL-V2-007) | §2.4 |
+| G0-F04 TOC >6 and strip overflow | CLOSED (DL-V2-004); strip vs list stays a G1 test | §2.3 |
+| G0-F05 domain H1 and head order | S11 and S12 done; the first-screen unit stays G1/G2 | §2.3 |
+| G0-F06 citation forms | OPEN → B2 (OD-1017-04a) | — |
+| G0-F07 chain step marker; CBY-Sana'a coverage | CLOSED in B1 (Master: signal classes never reach "Operation"; one coverage sentence on /payments/ and /reforms/) | §2.1 |
+| G0-F08 /data/ and /measurement/ structure | CLOSED in B1 (S1, S2, S8, S9): AR 390 screens 70.5 → 18.7 and 44.7 → 23.4 | §2.2 |
+| G0-F09 record → MA bindings; teaser scope | OPEN → B2 (Master bindings) + G2 (unit) | — |
+| G0-F10 CLM-001 lead and clocks | CLOSED in B1 (OD-1017-08 lead; S13 dates; no raw route in prose) | §2.1 |
+| 11 Reading link position on /remittances/ (S7) | OPEN → B2 | — |
+| 12 CLM-003 source list order | OPEN → B2 | — |
+| 13 boundary line outside the figure element (27 of 42) | → G2 (SIG-1) | — |
+| 14 the record's "Return to interpretation" label | OPEN → B2 | — |
+| 15 "Compare evidence" from a record preloads one record | → B2 | — |
+| 16 three fonts = 220 KB per page | → W4F | — |
+| B1-F01 tap targets under 24 px that predate B1 (the CC BY link, the contact e-mail links, the record breadcrumb, the long-cite summary) | → W4F/G3; the targets B1 introduced (topics block, measurement lists) were fixed in B1 | §2.3 |
 
 ### 1.12 Edition 2 (not built in this programme)
 
@@ -295,3 +315,147 @@ evidence" preloads one record; verdict reasons per field NOT_TESTED. Choice: B2 
 
 **Trust pages.** Obvious: CauseWay's role, corrections, accessibility, rights, footprint. Failure: /corrections/
 self-contradiction (G0-F02); /contact/ report context needs JS. Choice: B1 (Master) + B2 (form).
+
+
+## 2. B1 — structure rules (S), 17 October 2026, branch `pr/stage-b-s` on main `ce4ae5c8` (B0 merged as PR #57; Master `6a851a14…`, Page Specs `b3197c66…`)
+
+### 2.1 What changed
+
+The thirteen structure rules of BRIEF W4 (S1 source groups closed; S2 one rights statement per list; S3 figure data
+tables behind a disclosure; S4 no phone foot-spine where Verify, Readings and Related already render; S5 curated lists
+capped at six; S6 Verify as a link list; S7 teasers as a title plus one line; S8 measurement priority cards; S9 /data/
+order; S10 a table of contents of at most six entries and none under six phone screens; S11 domain H1 as a short thesis;
+S12 record head order; S13 human dates in public text), CR-S12/D8 (DL-V2-006), the F-15 topics decision (DL-V2-007),
+OD-1017-04(b) and OD-1017-08 were implemented in the renderer (`scripts/yfie/`), the build (`scripts/build.py`) and the
+gates (`scripts/validate.py`: RC-S10 new; RC-NAV, R4, PB-0422, RC-A1, E2-DATES and E2-PREC follow the new forms;
+negative controls for each). Content went through two Master transactions, EN and AR together: **STAGE-B-S**
+(`audit/stage_b_s/`, Master `5b200406…`, Page Specs `7fa18f0f…`, 74 cells: the D8 masthead row and the five hub labels
+retired in place; seven domain theses (S11); nine period texts in words (S13); the CLM-001 lead with survey, universe
+and interval (OD-1017-08; G0-F01, G0-F10); SDG 8.10.2 bound on CLM-001 and 8.10.1 stated on MA-005, with the UN
+metadata as two new source records (OD-1017-04(b)); the /corrections/ empty state (G0-F02); the CBY-Sana'a coverage
+sentence on /payments/ and /reforms/ and the chain step classes (G0-F07); the /people/ route in prose replaced by the
+page's name; the POS comparability marker and the firm-finance severity form; the UI-TOC-* labels) and **STAGE-B-S2**
+(`audit/stage_b_s2/`, Master `6a851a14…`, one label, UI-HOME-TOPICS). Three steward edits under OD-1017-03, each its own
+commit: S10 tiers and caps (`0ef6cd01`), D8 hub numerals (`eb072951`), Home's map starting with the topics block
+(`efd19111`). Ported from `code/navbar-disclosures-integration` by hand, credited to Mohammed Waleed in the CHANGELOG:
+the Space key on the menu control, the menu-close threshold at 900 px, and the viewport-acceptance widths and checks.
+Part 6 item 11 (the opened menu's language link keeps query and anchor) is in `site-src/app.js` with its browser test.
+`audit/close_out/KEY_MIGRATION.csv` carries 16 B1 rows.
+
+### 2.2 The scoreboard, G0 → S1 (the same script, routes, widths and states as §1.2)
+
+| Route | AR 390 G0 → S1 | EN 390 G0 → S1 | EN 1440 | TOC (AR) | H1 lines AR 390 | ISO dates AR 390 | Target · result |
+|---|---|---|---|---|---|---|---|
+| / | 8.5 → **9.4** (+11%) | 8.4 → 9.4 (+12%) | 5.5 → 5.8 | 8 → 6 | 2 → 2 | 0 → 0 | P1 first screen; shorter · MISS by decision (DL-V2-007) |
+| /explore/ | 14.5 → **8.6** (-41%) | 14.1 → 8.7 (-38%) | 11.4 → 5.6 | 6 → 6 | 1 → 1 | 0 → 0 | S7 · met |
+| /people/ | 20.1 → **13.9** (-31%) | 18.8 → 13.3 (-29%) | 13.4 → 8.7 | 11 → 6 | 2 → 2 | 0 → 0 | −25% · met |
+| /payments/ | 26.8 → **20.3** (-24%) | 25.7 → 19.8 (-23%) | 17.7 → 13.1 | 13 → 6 | 4 → 3 | 0 → 0 | −25%; TOC ≤6; H1 ≤3 · MISS (length); TOC and H1 met |
+| /remittances/ | 24.4 → **17.3** (-29%) | 22.0 → 16.1 (-27%) | 15.0 → 10.0 | 12 → 5 | 3 → 3 | 0 → 0 | −25% · met |
+| /firms/ | 20.3 → **13.9** (-32%) | 18.8 → 13.2 (-30%) | 13.4 → 8.2 | 12 → 6 | 3 → 2 | 0 → 0 | −25% · met |
+| /finance/ | 17.0 → **13.4** (-21%) | 16.3 → 13.0 (-20%) | 10.9 → 8.0 | 14 → 6 | 3 → 3 | 0 → 0 | −25% (directive: every domain) · MISS (length) |
+| /providers/ | 25.6 → **17.0** (-34%) | 24.5 → 16.6 (-32%) | 16.5 → 10.8 | 11 → 5 | 4 → 2 | 42 → 0 | −25%; ISO dates (S13) · met; ISO met |
+| /access/ | 11.6 → **9.9** (-15%) | 11.3 → 9.7 (-14%) | 7.5 → 6.1 | 11 → 5 | 5 → 3 | 0 → 0 | H1 ≤3 lines; −25% (directive) · met (H1); MISS (length) |
+| /reforms/ | 28.9 → **21.6** (-25%) | 28.4 → 21.6 (-24%) | 18.7 → 13.1 | 12 → 6 | 2 → 2 | 26 → 0 | −25%; ISO dates · MISS (length); ISO met |
+| /evidence/ | 29.5 → **13.6** (-54%) | 29.1 → 13.7 (-53%) | 25.1 → 9.8 | 6 → 6 | 2 → 2 | 7 → 0 | EN ≤14 (S5) · met |
+| /evidence/CLM-001/ | 9.0 → **10.4** (+16%) | 8.4 → 9.7 (+15%) | 4.8 → 5.2 | 7 → 6 | 3 → 3 | 0 → 0 | P1 holds · — |
+| /evidence/CLM-003/ | 9.6 → **10.0** (+4%) | 9.5 → 9.9 (+4%) | 5.3 → 5.3 | 7 → 6 | 1 → 1 | 0 → 0 | — · — |
+| /evidence/VIS-POS-TERMINALS/ | 16.8 → **16.1** (-4%) | 16.3 → 15.8 (-3%) | 10.0 → 9.3 | 7 → 6 | 2 → 2 | 0 → 0 | — · — |
+| /evidence/compare/ | 11.0 → **11.9** (+8%) | 10.3 → 11.1 (+8%) | 6.2 → 6.7 | 3 → 3 | 2 → 2 | 0 → 0 | — · — |
+| /readings/ | 7.7 → **8.1** (+5%) | 7.0 → 7.4 (+6%) | 4.4 → 4.5 | 3 → 3 | 1 → 1 | 0 → 0 | — · — |
+| /readings/how-money-reaches-households/ | 37.2 → **36.1** (-3%) | 35.6 → 34.6 (-3%) | 23.6 → 22.2 | 11 → 6 | 2 → 2 | 0 → 0 | chrome and tables only · — |
+| /data/ | 70.5 → **18.7** (-73%) | 68.1 → 18.3 (-73%) | 53.9 → 15.6 | 12 → 6 | 2 → 2 | 0 → 0 | ≤20 (S1, S2, S9) · met |
+| /methodology/ | 25.6 → **15.9** (-38%) | 25.5 → 16.5 (-35%) | 18.9 → 10.1 | 16 → 6 | 2 → 2 | 0 → 0 | TOC ≤6 · met |
+| /measurement/ | 44.7 → **23.4** (-48%) | 43.5 → 23.8 (-45%) | 29.1 → 15.5 | 11 → 6 | 2 → 2 | 0 → 0 | −40% (S8) · met |
+| /about/ | 6.6 → **7.3** (+11%) | 7.2 → 7.8 (+8%) | 4.1 → 4.3 | 7 → 6 | 2 → 2 | 0 → 0 | — · — |
+| /corrections/ | 4.8 → **5.2** (+8%) | 4.9 → 5.2 (+6%) | 2.9 → 3.1 | 6 → 0 | 1 → 1 | 0 → 0 | — · — |
+| /contact/ | 3.8 → **4.1** (+8%) | 3.8 → 4.1 (+8%) | 2.2 → 2.4 | 5 → 0 | 1 → 1 | 0 → 0 | — · — |
+
+Targets met: /data/ (≤20 in both editions), /evidence/ (EN ≤14), /measurement/ (−40% or better), /explore/ (S7),
+/methodology/ (TOC ≤6), and the domains /people/, /remittances/, /firms/ and /providers/ at −25% or better in both
+editions, /reforms/ in AR;
+TOC ≤6 and H1 ≤3 lines on /payments/ and /access/ (AR 390); ISO dates on /providers/ and /reforms/ gone.
+Recorded misses, each with its reason:
+
+- **Home** grows from 8.5 to 9.4 AR 390 screens by decision (DL-V2-007: the topics block and the footer's topics group);
+  the first-screen hypothesis (item 32) is G1's.
+- **/payments/** 26.8 → 20.3 (-24%) against −25%: the remaining length is governed content — three signal
+  groups with their text-first tables and the POS series — which S3 does not fold (it folds chart data only; the
+  text-first table is the no-JS and print reading surface); the footer's topics group adds about 0.3 screens to every
+  page. A further cut is a G2 composition decision, not a structure rule.
+- **/finance/** 17.0 → 13.4 (-21%): four figure groups whose figures and boundary lines stay in view (S3 folds
+  only their data); the chronology fold already noted as a G2 lever would take it past −25%.
+- **/access/** 11.6 → 9.9 (-15%): the shortest domain; about 3.6 of its screens are the chrome every page shares
+  (masthead, record line, map, footer). Its named target (H1 ≤3 lines, from 5) is met.
+- **/reforms/** EN 28.4 → 21.6 (−24%) against −25% while AR meets it (28.9 → 21.6, −25%): the EN chain and event list
+  run a few lines longer than the AR; the same G2 lever as /payments/ applies.
+- Records and trust pages grow by 0.3–1.4 screens without a target: governed additions on CLM-001 (the OD-1017-08
+  lead, the interval sentence, the SDG binding, the record line) and the footer's topics group on every page.
+
+### 2.3 Chrome and structure facts after S (OBSERVED_BROWSER, High)
+
+- Table of contents: at most 6 entries on every route and width; strip overflow 0 (G0: 134 cells); none on /corrections/, /contact/,
+  /privacy/, /rights/, /terms/, /accessibility/ and the shorter records, decided per route on both editions.
+- ISO dates visible: 8 tokens in 4 cells (G0: 616 in 24), all the two EN /providers/ status-ledger keys of DL-V2-005; 0 in prose.
+- H1 at 390: every AR H1 ≤3 lines; over three lines in EN only: en /finance/ (4 lines, 84 characters); en /evidence/CLM-001/ (4 lines, 78 characters); en /about/ (4 lines, 84 characters) → G2 (type size at 390; theses unchanged).
+- Tap targets under 24 px: 64 in 48 page×width cells (G0: 70 in 51); the ones B1 introduced (the topics block's links and the
+  compact measurement lists) were fixed in B1 by the 24 px rule; the rest predate B1 (B1-F01 → W4F/G3).
+- No horizontal overflow on any page or width; cold transfer at 390 is 231–318 KB per page with three font files (unchanged; W4F).
+- /data/ renders with 0 open disclosures at 390 (G0: 2); its main text is 2628 words (G0: 10479); /measurement/ 3604 (G0: 7211).
+- Journeys: every one of the 14 targets is at most 2 clicks from Home in both editions; Compare and the Reading now route through /remittances/.
+- Home's first screen at 390: the figure is no longer in view in AR (G0: yes); EN unchanged (no); the evidence link stays in view in both.
+
+### 2.4 First-click test (F-15, Part 6 item 14; `g0/firstclick_b1.md`)
+
+| Variant | EN desktop | AR desktop |
+|---|---|---|
+| A — the built page after D8 | 5 / 24 (21%) | 6 / 24 (25%) |
+| B — Home topics block, flat eight | 22 / 24 (92%) | 24 / 24 (100%) |
+| C — Home topics block, four families | 23 / 24 (96%) | 23 / 24 (96%) |
+
+Three AI-simulated first-time readers × eight tasks, judges blind to the variants, link labels and headings only.
+B and C tie within one judgement; the flat eight is adopted (DL-V2-007). Not a usability study; no human testing.
+
+### 2.5 Preservation check (IDs and data-* hooks)
+
+Against B0 `d36a51bb`: 305 pages compared, none missing, none new. Gone: `edge-fN` (64; S4 — the link blocks are
+re-hosted on `#verify`, `#readings`, `#related` and `#measure`) and `data-hub-num` (304; D8). New: `#shows` (16),
+`#topics` (2), two source-record anchors (the UN metadata records), `data-record-line` (232), `data-fig-data` (56),
+`data-toc-grouped` (46), `data-boundary-more`, `data-home-topics`, `data-ma-more` (2 each). Against the brief's
+reference `2ddbfb61`: 291 pages compared, 14 pages new since (six source records and the Reading); every further
+difference is already present in `d36a51bb` and belongs to Stage A's recorded changes. Deliberate changes are the
+16 B1 rows of `KEY_MIGRATION.csv`.
+
+### 2.6 Gates (the full set, after the last change)
+
+Validator 306 pages / 0 errors (RC-S10, RC-NAV, R4, PB-0422, RC-A1, E2-DATES, E2-PREC, S04.1, P2-G01, P4-G01, R85-G09,
+R86-G02, RP-G06); gate negative controls run locally with `--only`: the three RC-S10 controls and the RC-NAV/D8 controls
+(caught), plus the built-in controls of the base-path and no-JavaScript suites — not the full suite (see the correction
+below); literal audit 19,883 records, 0 unresolved, determinism one SHA over eight
+seeds; source lineage truth 8/8; projections check PASS; generator unit tests 22 OK; content parity 304 documents, 0
+differing; bilingual numeric invariance and number words 0 of 152 pairs; viewport acceptance 308/308; public tools
+36/37 (one not applicable to the current data); security headers, base path, portable HTTP contract and no-JavaScript
+PASS; diagrams, social images (302) and logo derivatives current; re-entry 15 tests OK; manifest and checksums
+regenerated last. Idempotence held after each transaction.
+
+**Correction, 17 October 2026 (owner directive in conversation).** PR #58 (`pr/stage-b-s` → main) is OPEN, not merged. CI on
+its head `2509d22d` failed Gate negative controls shard 5/6 — "RC-1115 / S12: the FOR WHOM clock loses its q3 anchor" NOT
+CAUGHT (27 of 28) — and therefore the aggregate check; Browser acceptance, Governance gates and shards 1–4 and 6 passed;
+the Cloudflare Workers Build check is the F-06 owner item. Root cause: S12 keeps the q3 anchor on every record line (232 of
+232), but the RC-1115 rule only enforced an aggregate floor (at least 200 record lines with the anchor), so one page
+losing its anchor was invisible to it, and the B1 control expected that floor's message ("RC-1115 only …"). Fix, commit
+`bf9b8323`: RC-1115 fails per record page whose record line lacks the FOR WHOM clock with id q3, and the control expects that
+message. Local verification before the push: `--only RC-1115` caught 9 of 9; the full suite of 170 controls 167 of 167 caught. The earlier
+wording "negative controls CAUGHT" described only the `--only` subset and is withdrawn; this PR is reported again only
+after Verify is 9/9 on its exact head. Also on record: OD-1017-14 (PR #59, merged at `3ef16ade`) prospectively selects a
+DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com (`public_origin` stays null;
+implementation stays Stage C); PR #51 stays as it is, conflicts included, as G1 design evidence to be closed without
+merging.
+
+### 2.7 Open after B1 → B2 / G1 / G2
+
+B2 (T): G0-F06 citation forms (OD-1017-04a); seed 25 "what changed in this edition"; seed 27 Arabic search test set;
+seeds 23 and 28 (ask once); G0-F09 record → MA bindings; the two EN-only time boundaries on /providers/ (DL-V2-005);
+items 11, 12, 14 and 15 of §1.7; fin24*/fin28-29 method note; the report-an-error form. G1: DL-V2-001; strip vs
+list; the first-screen hypothesis (Home's figure in AR); PR #51 as evidence. G2: the unit at three scales; the
+boundary inside the figure element; /payments/, /finance/ and /reforms/ (EN) length (chronology fold); EN H1 size at 390. W4F: fonts;
+B1-F01 tap targets. VIS-CAPITAL-CONTEXT `public_routes`: no defect established (carried, not open).

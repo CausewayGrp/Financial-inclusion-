@@ -35,12 +35,58 @@ def bdi(x) -> str:
     """A governed token isolated left-to-right (HTML text only). A whole ISO date or numeric range never breaks; an
     identifier breaks only at its own hyphens, so a 37-character source id still fits a 288 px column."""
     s = esc(x)
+    if FULL_ISO.fullmatch(s) or ISO_RANGE.fullmatch(s):
+        return _run(s)   # S13: a date token shown in words, ISO kept in datetime
     return f'<bdi dir="ltr" class="nw">{s}</bdi>' if LTR_RUN.fullmatch(s) else f'<bdi dir="ltr">{s}</bdi>'
 
 
+def key(x) -> str:
+    """A data table's period key (2019-07, 2024, 2024-07-23) as the source publishes it: a machine context under S13
+    (W4 Appendix F), like a data file; isolated left-to-right, never shown in words."""
+    s = esc(x)
+    return f'<bdi dir="ltr" class="nw">{s}</bdi>' if LTR_RUN.fullmatch(s) else f'<bdi dir="ltr">{s}</bdi>'
+
+
+LANG = {"value": "en"}
+MONTHS = {"en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+          "ar": ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"]}
+FULL_ISO = re.compile(r"\d{4}-\d{2}(?:-\d{2})?")
+
+
+def set_lang(lang: str) -> None:
+    LANG["value"] = "ar" if lang == "ar" else "en"
+
+
+def human_date(token: str) -> str:
+    """S13 (W4 Appendix F): a display form for an ISO date — "7 November 2022" / «7 نوفمبر 2022», "October 2025" for
+    YYYY-MM — in a <time> element that keeps the ISO value for machines. Identifiers and ranges are left as they are."""
+    if not FULL_ISO.fullmatch(token):
+        return f'<bdi dir="ltr" class="nw">{token}</bdi>'
+    parts = token.split("-")
+    y, mo = parts[0], int(parts[1])
+    if not 1 <= mo <= 12:
+        return f'<bdi dir="ltr" class="nw">{token}</bdi>'
+    name = MONTHS[LANG["value"]][mo - 1]
+    text = f"{int(parts[2])} {name} {y}" if len(parts) == 3 else f"{name} {y}"
+    return f'<time datetime="{token}">{text}</time>'
+
+
+ISO_RANGE = re.compile(r"(\d{4}-\d{2}-\d{2})([–-])(\d{4}-\d{2}-\d{2})")
+
+
+def _run(token: str) -> str:
+    if FULL_ISO.fullmatch(token):
+        return human_date(token)
+    m = ISO_RANGE.fullmatch(token)
+    if m:   # S13: a range of two dates, each shown in words, the dash kept
+        return human_date(m.group(1)) + m.group(2) + human_date(m.group(3))
+    return f'<bdi dir="ltr" class="nw">{token}</bdi>'
+
+
 def isolate_iso(escaped: str) -> str:
-    """Every ISO date and numeric range inside already-escaped text isolated as an unbroken left-to-right run."""
-    return LTR_RUN.sub(lambda m: f'<bdi dir="ltr" class="nw">{m.group(0)}</bdi>', escaped)
+    """Every ISO date and numeric range inside already-escaped text isolated as an unbroken left-to-right run; a plain
+    ISO date or a range of two dates is shown in words (S13) with the ISO values kept in datetime attributes."""
+    return LTR_RUN.sub(lambda m: _run(m.group(0)), escaped)
 
 
 def iso(x) -> str:

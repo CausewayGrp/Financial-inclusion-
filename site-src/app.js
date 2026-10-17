@@ -20,6 +20,12 @@ function closeMenu(returnFocus=false){
 }
 // R-05: the menu is a link to the footer navigation, so it works without JavaScript; here it becomes the disclosure button.
 $$('[data-menu]').forEach(b=>{if(b.tagName==='A')b.setAttribute('role','button');});
+// Ported from code/navbar-disclosures-integration (Mohammed Waleed): a link with role=button must open on Space as well as Enter.
+$$('[data-menu]').forEach(b=>b.addEventListener('keydown',e=>{
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  e.preventDefault();
+  b.click();
+}));
 $$('[data-menu]').forEach(b=>b.addEventListener('click',e=>{
   const n=$('#primary-nav'); if(!n)return;
   e.preventDefault();
@@ -34,13 +40,18 @@ $$('#primary-nav a').forEach(a=>a.addEventListener('click',()=>closeMenu(false))
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#primary-nav')?.classList.contains('open'))closeMenu(true);});
 // TOOL-04: the open menu closes when focus leaves it and its button.
 document.addEventListener('focusin',e=>{const n=$('#primary-nav'),b=$('[data-menu]');if(!n?.classList.contains('open'))return;if(n.contains(e.target)||b?.contains(e.target))return;closeMenu(false);});
-window.addEventListener('resize',()=>{if(window.innerWidth>960)closeMenu(false);});
+window.addEventListener('resize',()=>{if(window.innerWidth>=900)closeMenu(false);});   // ported (Mohammed Waleed): the desktop breakpoint
 document.addEventListener('click',e=>{const n=$('#primary-nav'),b=$('[data-menu]');if(!n?.classList.contains('open'))return;if(n.contains(e.target)||b?.contains(e.target))return;closeMenu(false);});
 
+// S3 (W4 Appendix F): a figure's data table is rendered open (no-JS and print complete) and folded on screen; a hash
+// target inside it keeps it open, and printing opens every table again.
+$$('details[data-fig-data]').forEach(d=>{if(!(location.hash&&d.querySelector(location.hash.replace(/[^\w#-]/g,''))))d.open=false;});
+window.addEventListener('beforeprint',()=>$$('details[data-fig-data]').forEach(d=>d.open=true));
 // R-05: the switch is a link to the same route in the other edition; here it also keeps the query and the anchor
 // (a Compare selection, a section) and stores the choice.
-$$('[data-lang]').forEach(b=>b.addEventListener('click',()=>{
-  const target=b.dataset.lang; try{localStorage.setItem('yfie-lang',target);}catch(e){}   // TOOL-07: storage may be blocked
+// S (Appendix 2 item 11, 17 Oct 2026): the opened menu's language link keeps the query and the anchor too.
+$$('[data-lang],[data-menu-lang]').forEach(b=>b.addEventListener('click',()=>{
+  const target=b.dataset.lang||b.getAttribute('hreflang'); try{localStorage.setItem('yfie-lang',target);}catch(e){}   // TOOL-07: storage may be blocked
   if(b.href){const u=new URL(b.href,location.href); u.search=location.search; u.hash=location.hash; b.href=u.toString();}
 }));
 
