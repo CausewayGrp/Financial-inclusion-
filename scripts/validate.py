@@ -3682,6 +3682,8 @@ try:
             continue
         if '<div class="clock" id="q3">' in _rl.group(1):
             _nq3 += 1
+        else:   # S12 (B1, 17 October 2026): every record line carries the FOR WHOM clock with its q3 anchor; the floor below cannot see one page
+            errors.append(f"RC-1115 {_f.relative_to(DIST).as_posix()} record line has no FOR WHOM clock (id q3)")
     if _nq3 < 200:
         errors.append(f"RC-1115 only {_nq3} records carry the FOR WHOM clock (id q3) in their record line")
 except Exception as _x:
