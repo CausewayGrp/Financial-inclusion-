@@ -1,0 +1,38 @@
+{
+ "transaction": "STAGE-B-S2",
+ "decision": "design/DESIGN_INTEGRATION_V2.md DL-V2-007 (17 October 2026): the F-15 first-click test; takeover brief Part 6 item 14; audit/OWNER_DIRECTIVE_2026-10-17.md (Phase 2, B1)",
+ "summary": "One interface label, UI-HOME-TOPICS (Topics / الموضوعات): the heading of Home's topics block and of the footer's topics group, which give every reader a one-step route to the eight domain answers (first-click: 21-25% before, 92-100% after, AI-simulated).",
+ "self_counts": {
+  "site_pages": 151,
+  "bilingual_sections": 254,
+  "questions": 11,
+  "evidence_objects": 116,
+  "public_claims": 60,
+  "readings": 12,
+  "measurement": 10,
+  "visuals": 42,
+  "relationships": 26,
+  "dated_events": 31,
+  "sources": 208,
+  "datasets": 211,
+  "indicators": 217,
+  "cby_monetary": 696,
+  "payments": 97,
+  "firm_finance": 99,
+  "remittances": 29
+ },
+ "input_master_sha256": "5b2004068c0c2cfd8aae0f7b3b1c2f2c53cab4609fbe9e9a53366d96f1323b20",
+ "output_master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
+ "cells_written": 1,
+ "changes": [
+  {
+   "finding": "STAGE-B-S2:DL-V2-007-TOPICS",
+   "sheet": "04_NAV_UX",
+   "row": null,
+   "col": null,
+   "field": "UI-HOME-TOPICS",
+   "old": null,
+   "new": "Topics || الموضوعات"
+  }
+ ]
+}

@@ -4,8 +4,8 @@
   "authority_scope": "NAVIGATION_AND_INTERACTION_ONLY",
   "semantic_authority": "Production Master via current Page Specs; this contract cannot alter facts, claims, values, units, universes, periods, methods, sources, rights, evidence class or publication state.",
   "authority_binding": {
-    "master_sha256": "d1807346021996866cb595cb5db89c2c575a2ec290d1727ce65ae6761a14f50b",
-    "page_specs_sha256": "0fe9340c2c8bff8c81ef48fa69ea2c0adfffd5b934a45406cd622e5ca68bf372",
+    "master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
+    "page_specs_sha256": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
     "page_spec_count": 151
   },
   "experience_principle": "UNDERSTAND → EXPLORE → VERIFY",
@@ -31,20 +31,9 @@
       "label_ar": "المصادر"
     },
     {
-      "label_en": "Method and measurement",
-      "label_ar": "المنهج والقياس",
-      "children": [
-        {
-          "route": "/methodology/",
-          "label_en": "Methodology",
-          "label_ar": "المنهجية"
-        },
-        {
-          "route": "/measurement/",
-          "label_en": "Measurement priorities",
-          "label_ar": "أولويات القياس"
-        }
-      ]
+      "route": "/methodology/",
+      "label_en": "Methodology",
+      "label_ar": "المنهجية"
     }
   ],
   "hub_numerals": {
@@ -473,7 +462,7 @@
         "footer",
         "search"
       ],
-      "search_record_count": 192,
+      "search_record_count": 194,
       "unique_value_role": "SOURCE_AND_DATA_DIRECTORY",
       "value_basis": "CURRENT_PAGE_SPEC_AND_BOUND_GOVERNED_OBJECTS",
       "next_action_policy": "SOURCE_TO_DEPENDENT_EVIDENCE",
@@ -3911,7 +3900,7 @@
       "No archive factual proposition changes current controlled evidence in R4."
     ]
   },
-  "public_search_record_count": 522,
+  "public_search_record_count": 524,
   "r6_information_design_contract": {
     "status": "R6_CLOSED",
     "principle": "ONE_TRUTH__MULTIPLE_DEPTHS__TASK_LED_ENTRY__VERIFICATION_ALWAYS_AVAILABLE",

@@ -77,7 +77,7 @@ External facts stay attributed to their original publishers. CauseWay attributio
 | Public release ready | No |
 | Content | Complete on `main`, 10 October 2026. The annotated tag `checkpoint/2026-10-10-content-complete` marks it, or is the owner's to push ([`docs/HANDOVER_TO_DEVELOPER.md`](docs/HANDOVER_TO_DEVELOPER.md) §9) |
 | Stage A (evidence and Arabic) | STAGE A COMPLETE was recorded at `53dccc4d` (11 October 2026). The Stage A addendum followed on 11 October 2026 (#39 to #42: literal audit v3, CLOSE-6A to CLOSE-6C, Reading CWR-012). The final instruction v5 changes are integrated: CLOSE-6D (#43), CLOSE-6E (#44), CLOSE-6F (#45 at `612ec146`, 13 October), and CO-G07/CLOSE-6G with the [addendum report](audit/close_out/STAGE_A_ADDENDUM_REPORT_v5_2026-10-13.md) (#46 at `e46ff9eb`, 14 October 2026). The 15 October final reconciliation and [prospective acceptance scope](audit/stage_a_final/ACCEPTANCE_SCOPE_2026-10-15.md) supersede the remaining material interpretation and edition issues. The dated post-merge acceptance record on the reconciliation PR is the formal Stage A decision; the old report is historical, not retrospective owner approval. Stage B prerequisites and Stage C/release acceptance remain separate. Neither DESIGN HANDOFF READY nor PUBLIC RELEASE READY is claimed |
-| Public inventory (11 October 2026) | 151 Page Specs (306 HTML documents), 116 Evidence Records, 60 public claims, 12 Readings, 10 measurement priorities, 31 dated events, 206 source records (191 with a public locator), 522 search records |
+| Public inventory (17 October 2026) | 151 Page Specs (306 HTML documents), 116 Evidence Records, 60 public claims, 12 Readings, 10 measurement priorities, 31 dated events, 208 source records (193 with a public locator), 522 search records |
 | Open pull requests | [Check GitHub's live PR list](https://github.com/CausewayGrp/Financial-inclusion-/pulls). Current branch, PR and CI state must be inspected live; historic close-out decisions remain in `audit/close_out/PROGRESS.md`, not this changing-status field. |
 
 Closed in this product state: governed evidence and content for v1; Used on reaches every source, including those with no domain use recorded; a single valid Compare entry loads the reader's record and still requires two records for a verdict; the 31 dated events of the system chronology are indexed in search, each deep-linking to its own anchor on /finance/ (the analytical rule is not a dated event and is not indexed); the reuse licence for CauseWay's own content (CC BY 4.0, [`audit/OWNER_DECISIONS_2026-10-10.md`](audit/OWNER_DECISIONS_2026-10-10.md)) — a reuse licence is not regulatory licensing, and CauseWay neither holds nor claims the status of a licensed financial institution.
@@ -118,9 +118,9 @@ This is the single production repository. The Production Master is the sole sema
 
 `authority/Yemen_Financial_Inclusion_Evidence_Master.xlsx`
 
-Master SHA-256: `d1807346021996866cb595cb5db89c2c575a2ec290d1727ce65ae6761a14f50b`
+Master SHA-256: `6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260`
 
-Page Specs SHA-256: `0fe9340c2c8bff8c81ef48fa69ea2c0adfffd5b934a45406cd622e5ca68bf372`
+Page Specs SHA-256: `b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3`
 
 | Layer | Role |
 |---|---|

@@ -1,0 +1,676 @@
+[
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 10,
+  "col": 2,
+  "old": "Method and measurement",
+  "new": "Methodology"
+ },
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 10,
+  "col": 3,
+  "old": "المنهج والقياس",
+  "new": "المنهجية"
+ },
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 10,
+  "col": 4,
+  "old": "{\"id\":\"NAV-METHOD-MEASUREMENT\",\"label\":{\"en\":\"Method and measurement\",\"ar\":\"المنهج والقياس\"},\"kind\":\"GROUP\",\"children\":[{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\"},{\"id\":\"NAV-MEASUREMENT\",\"label\":{\"en\":\"Measurement priorities\",\"ar\":\"أولويات القياس\"},\"route\":\"/measurement\"}]}",
+  "new": "{\"id\":\"NAV-METHODOLOGY\",\"label\":{\"en\":\"Methodology\",\"ar\":\"المنهجية\"},\"route\":\"/methodology\",\"kind\":\"DIRECT\"}"
+ },
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 600,
+  "col": 4,
+  "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /explore/ (Questions), bound by navigation_interaction.json.",
+  "new": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
+ },
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 601,
+  "col": 4,
+  "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /evidence/ (Evidence), bound by navigation_interaction.json.",
+  "new": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
+ },
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 602,
+  "col": 4,
+  "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /readings/ (Readings), bound by navigation_interaction.json.",
+  "new": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
+ },
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 603,
+  "col": 4,
+  "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub /data/ (Sources), bound by navigation_interaction.json.",
+  "new": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
+ },
+ {
+  "kind": "cell",
+  "finding": "D8-NAV",
+  "sheet": "04_NAV_UX",
+  "row": 604,
+  "col": 4,
+  "old": "Design integration V1, owner decisions of 9 October 2026, B-b. Numeral of the hub Method and measurement (/methodology/, /measurement/), bound by navigation_interaction.json.",
+  "new": "Retired by owner decision D8 (17 October 2026; takeover brief Part 6 item 11): the masthead and the opened menu carry no hub numerals (navigation_interaction.json hub_numerals.items is empty). The label stays as the record of the owner decisions of 9 October 2026, B-b (V1B-1); nothing binds it."
+ },
+ {
+  "kind": "set",
+  "finding": "S11-H1",
+  "sheet": "02_SITE_MAP",
+  "key": "/payments/",
+  "field": "title_en",
+  "old": "Payments: reported POS terminals rose between March 2025 and June 2026; how many people use them is not measured",
+  "new": "Payments: more reported terminals, use not measured",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S11-H1",
+  "sheet": "02_SITE_MAP",
+  "key": "/payments/",
+  "field": "title_ar",
+  "old": "المدفوعات: ارتفع عدد أجهزة نقاط البيع المُبلَّغ عنها بين مارس 2025 ويونيو 2026، أما عدد مستخدميها فغير مقيس",
+  "new": "المدفوعات: تزايد الأجهزة المُبلَّغ عنها، والاستخدام غير مقيس",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S11-H1",
+  "sheet": "02_SITE_MAP",
+  "key": "/providers/",
+  "field": "title_en",
+  "old": "Providers: official lists show formal status on a date; operation needs other evidence",
+  "new": "Providers: listed is not the same as operating",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S11-H1",
+  "sheet": "02_SITE_MAP",
+  "key": "/providers/",
+  "field": "title_ar",
+  "old": "مقدمو الخدمات المالية: تثبت القوائم الرسمية وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+  "new": "مقدمو الخدمات المالية: الإدراج في القائمة ليس تشغيلًا",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S11-H1",
+  "sheet": "02_SITE_MAP",
+  "key": "/firms/",
+  "field": "title_en",
+  "old": "Firms: how much finance matters depends on the question and the firms asked",
+  "new": "Firms: the answer depends on the question asked",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S11-H1",
+  "sheet": "02_SITE_MAP",
+  "key": "/firms/",
+  "field": "title_ar",
+  "old": "المنشآت: مدى أهمية التمويل يتوقف على السؤال وعلى المنشآت التي سُئلت",
+  "new": "المنشآت: الإجابة تتوقف على السؤال المطروح",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S11-H1",
+  "sheet": "02_SITE_MAP",
+  "key": "/access/",
+  "field": "title_ar",
+  "old": "الوصول إلى الخدمات: نعرف أجزاءً من شبكة الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+  "new": "الوصول إلى الخدمات: أماكن الحصول عليها لم تُرسم خريطتها إلا جزئيًا",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-012",
+  "field": "period_en",
+  "old": "2023-08-09 base instrument; 2025-07-09 signed amendment",
+  "new": "Base instrument of 9 August 2023; signed amendment of 9 July 2025",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-012",
+  "field": "period_ar",
+  "old": "الأداة الأساسية بتاريخ 2023-08-09؛ والتعديل الموقّع بتاريخ 2025-07-09",
+  "new": "الأداة الأساسية بتاريخ 9 أغسطس 2023؛ والتعديل الموقّع بتاريخ 9 يوليو 2025",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-018",
+  "field": "period_en",
+  "old": "2026-06-17 to 2026-08-04",
+  "new": "17 June 2026 to 4 August 2026",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-018",
+  "field": "period_ar",
+  "old": "من 2026-06-17 إلى 2026-08-04",
+  "new": "من 17 يونيو 2026 إلى 4 أغسطس 2026",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-021",
+  "field": "period_en",
+  "old": "2015-03-31 to 2015-12-31",
+  "new": "31 March 2015 to 31 December 2015",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-021",
+  "field": "period_ar",
+  "old": "من 2015-03-31 إلى 2015-12-31",
+  "new": "من 31 مارس 2015 إلى 31 ديسمبر 2015",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-015",
+  "field": "period_en",
+  "old": "2024-06-26",
+  "new": "26 June 2024",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-015",
+  "field": "period_ar",
+  "old": "2024-06-26",
+  "new": "26 يونيو 2024",
+  "header_row": 4
+ },
+ {
+  "kind": "vs_add",
+  "finding": "S13-PERIOD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-021",
+  "add": [
+   {
+    "t": "31 March 2015",
+    "k": "d",
+    "s": "READ",
+    "src": "SRC-SFD-Q1-2015-001",
+    "loc": "Newsletter Edition No. 69 (Jan–Mar 2015), p. 13 (PDF p. 13), table \"Microfinance Programs Supported by SFD as of 31 March 2015\", row Total, col Borrowers Total; narrative p. 12 (PDF p. 12)"
+   }
+  ]
+ },
+ {
+  "kind": "replace",
+  "finding": "G0-F01-F10-LEAD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "field": "summary_en",
+  "old": "The latest survey estimate published by the World Bank puts account ownership at 11.9% of adults in the areas covered by Yemen's survey.",
+  "new": "In the World Bank's Global Findex 2021 survey of Yemen (fieldwork November 2022 to January 2023), 11.9% of adults aged 15 and over in the areas the survey covered had an account; with the design effect the World Bank publishes for the survey, the margin of error on this figure is about 2.8 percentage points at the 95% level, computed by CauseWay.",
+  "header_row": 4
+ },
+ {
+  "kind": "replace",
+  "finding": "G0-F01-F10-LEAD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "field": "summary_en",
+  "old": "World Bank Data reports it for 2022; it comes from the Yemen Global Findex 2021 study, fielded from November 2022 to January 2023.",
+  "new": "World Bank Data reports it for 2022.",
+  "header_row": 4
+ },
+ {
+  "kind": "replace",
+  "finding": "G0-F01-F10-LEAD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "field": "summary_ar",
+  "old": "بحسب أحدث تقدير مسحي ينشره البنك الدولي، بلغت نسبة امتلاك الحساب 11.9% بين البالغين في المناطق التي شملها مسح اليمن.",
+  "new": "في مسح Global Findex 2021 الذي أجراه البنك الدولي في اليمن (نُفذ العمل الميداني من نوفمبر 2022 إلى يناير 2023)، بلغت نسبة امتلاك الحساب بين البالغين بعمر 15 سنة فأكثر في المناطق التي شملها المسح 11.9%؛ وبأثر التصميم الذي ينشره البنك الدولي للمسح، يبلغ هامش الخطأ في هذا الرقم نحو 2.8 نقطة مئوية عند مستوى ثقة 95%، من احتساب CauseWay.",
+  "header_row": 4
+ },
+ {
+  "kind": "replace",
+  "finding": "G0-F01-F10-LEAD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "field": "summary_ar",
+  "old": "ويعرضها موقع بيانات البنك الدولي لسنة 2022، وهي مستمدة من دراسة اليمن ضمن موجة Global Findex 2021 التي نُفذت ميدانيًا من نوفمبر 2022 إلى يناير 2023.",
+  "new": "ويعرضها موقع بيانات البنك الدولي لسنة 2022.",
+  "header_row": 4
+ },
+ {
+  "kind": "replace",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "field": "method_en",
+  "old": "ial institution equals its account-ownership series (11.9%).",
+  "new": "ial institution equals its account-ownership series (11.9%). SDG indicator 8.10.2 ('proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider', UN SDG metadata, last updated 27 March 2026; custodian agency the World Bank) is defined as this indicator is and is sourced from the Global Findex Database; for Yemen that figure is this one, and it covers accounts at financial institutions: the public data for the study hold no valid answers to the mobile-money account questions, while the question on using a mobile phone or the internet to access an account was answered.",
+  "header_row": 4
+ },
+ {
+  "kind": "replace",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "field": "method_ar",
+  "old": "بالحساب لدى مؤسسة مالية مساوية لسلسلة امتلاك الحساب (11.9%).",
+  "new": "بالحساب لدى مؤسسة مالية مساوية لسلسلة امتلاك الحساب (11.9%). ويُعرَّف مؤشر أهداف التنمية المستدامة 8.10.2 («نسبة البالغين (15 سنة فأكثر) الذين لديهم حساب لدى مصرف أو مؤسسة مالية أخرى أو لدى مقدم خدمات الأموال عبر الهاتف المحمول»، البيانات الوصفية لأهداف التنمية المستدامة لدى الأمم المتحدة، آخر تحديث في 27 مارس 2026؛ والوكالة الراعية لهذا المؤشر هي البنك الدولي) بالتعريف نفسه الذي يُعرَّف به هذا المؤشر، ومصدره قاعدة بيانات Global Findex؛ ورقم اليمن فيها هو هذا الرقم، وهو يغطي الحسابات لدى المؤسسات المالية: إذ لا تتضمن البيانات المتاحة للعموم من الدراسة إجابات صالحة عن أسئلة حسابات الأموال عبر الهاتف المحمول، بينما أُجيب عن سؤال استخدام الهاتف المحمول أو الإنترنت للوصول إلى حساب.",
+  "header_row": 4
+ },
+ {
+  "kind": "vs_add",
+  "finding": "G0-F01-F10-LEAD",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "add": [
+   {
+    "t": "2.8",
+    "k": "v",
+    "s": "DERIVED",
+    "src": "SRC-WB-FINDEX-AGG-2022",
+    "loc": "CauseWay computation, close-out CR-02 (10 October 2026): the World Bank's published unrounded value p (api.worldbank.org/v2, source 28) +/- 1.96 x sqrt(1.9) x sqrt(p(1-p)/1,000), the World Bank's own margin-of-error formula with its published design effect for the survey (Findex 2021 Appendix A, Table A.1, footnote c); 25_FINDEX_BASELINE row CW-FINDEX-MOE-2022-001; no respondent-level data used"
+   },
+   {
+    "t": "95%",
+    "k": "v",
+    "s": "SITE"
+   },
+   {
+    "t": "8.10.2",
+    "k": "v",
+    "s": "LOCATOR"
+   },
+   {
+    "t": "27 March 2026",
+    "k": "d",
+    "s": "READ",
+    "src": "SRC-UN-SDG-8102-METADATA",
+    "loc": "unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf, page 1, 'Last updated: 2026-03-27'; read 17 October 2026"
+   }
+  ]
+ },
+ {
+  "kind": "list_add",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "key": "CLM-001",
+  "field": "source_dependencies",
+  "add": [
+   "SRC-UN-SDG-8102-METADATA"
+  ],
+  "form": "semi"
+ },
+ {
+  "kind": "replace",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "10_MEASUREMENT_AGENDA",
+  "key": "MA-005",
+  "field": "current_evidence_en",
+  "old": "and funds released only in denominations of YER 100 and 200.",
+  "new": "and funds released only in denominations of YER 100 and 200. The series behind SDG indicator 8.10.1 (commercial bank branches and automated teller machines relative to the adult population, from the IMF Financial Access Survey as published in World Development Indicators) hold no Yemen value after 2015 (in the series as published on 8 October 2026); the 2015 values appear only as dated history, and missing is not zero.",
+  "header_row": 4
+ },
+ {
+  "kind": "replace",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "10_MEASUREMENT_AGENDA",
+  "key": "MA-005",
+  "field": "current_evidence_ar",
+  "old": "واحدة مع مدير برنامج)، وصرف الأموال بفئتي 100 و200 ريال فقط.",
+  "new": "واحدة مع مدير برنامج)، وصرف الأموال بفئتي 100 و200 ريال فقط. ولا تتضمن السلاسل التي يستند إليها مؤشر أهداف التنمية المستدامة 8.10.1 (فروع البنوك التجارية وأجهزة الصراف الآلي نسبةً إلى السكان البالغين، من مسح الوصول المالي لصندوق النقد الدولي كما تنشرها مؤشرات التنمية العالمية) أي قيمة لليمن بعد عام 2015 (في صيغتها المنشورة في 8 أكتوبر 2026)؛ ولا تظهر قيم 2015 إلا بوصفها قيمًا تاريخية مؤرخة، وغياب القيمة لا يعني صفرًا.",
+  "header_row": 4
+ },
+ {
+  "kind": "list_add",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "10_MEASUREMENT_AGENDA",
+  "key": "MA-005",
+  "field": "source_bindings",
+  "add": [
+   "SRC-WB-WDI-FAS-YEM-001",
+   "SRC-UN-SDG-8101-METADATA"
+  ],
+  "form": "json"
+ },
+ {
+  "kind": "set",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "15_SOURCE_LIBRARY",
+  "key": "SRC-WB-WDI-FAS-YEM-001",
+  "field": "retrieval_date",
+  "old": "2026-10-11",
+  "new": "2026-10-17",
+  "header_row": 4
+ },
+ {
+  "kind": "ui",
+  "finding": "G0-F02-CORR",
+  "ui_id": "UI-CORR-THIS-PAGE-CURRENTLY-HAS-NO",
+  "old_en": "No material corrections have been recorded yet.",
+  "new_en": "No record is selected. Open a record's corrections link to see the entries that concern it.",
+  "old_ar": "لم تُسجَّل أي تصحيحات جوهرية حتى الآن.",
+  "new_ar": "لم يُختَر أي سجل. افتح رابط التصحيحات في أي سجل لعرض الإدخالات المتعلقة به."
+ },
+ {
+  "kind": "cell",
+  "finding": "G0-F07-SANAA",
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 185,
+  "col": 5,
+  "old": "l cash delivery or opening an account is not proof of durable post-transfer use.",
+  "new": "l cash delivery or opening an account is not proof of durable post-transfer use. The payment-system figures here are reported by the Central Bank of Yemen – Aden; this evidence base holds no payment-system statistics from the Central Bank of Yemen – Sana'a."
+ },
+ {
+  "kind": "cell",
+  "finding": "G0-F07-SANAA",
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 186,
+  "col": 7,
+  "old": " التحويل النقدي أو فتح حساب لا يثبت استمرار الاستخدام بعد صرف التحويلات النقدية.",
+  "new": " التحويل النقدي أو فتح حساب لا يثبت استمرار الاستخدام بعد صرف التحويلات النقدية. والأرقام المتعلقة بنظام المدفوعات هنا يُبلغ عنها البنك المركزي اليمني – عدن؛ ولا تضم قاعدة الأدلة هذه أي إحصاءات لنظام المدفوعات من البنك المركزي اليمني – صنعاء."
+ },
+ {
+  "kind": "cell",
+  "finding": "G0-F07-SANAA",
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 315,
+  "col": 5,
+  "old": " And missing downstream outcome evidence is not evidence that the reform failed.",
+  "new": " And missing downstream outcome evidence is not evidence that the reform failed. The payment-system figures here are reported by the Central Bank of Yemen – Aden; this evidence base holds no payment-system statistics from the Central Bank of Yemen – Sana'a."
+ },
+ {
+  "kind": "cell",
+  "finding": "G0-F07-SANAA",
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 316,
+  "col": 7,
+  "old": "دف لا يثبت الإنجاز. كما أن غياب دليل النتيجة اللاحقة ليس دليلًا على فشل الإصلاح.",
+  "new": "دف لا يثبت الإنجاز. كما أن غياب دليل النتيجة اللاحقة ليس دليلًا على فشل الإصلاح. والأرقام المتعلقة بنظام المدفوعات هنا يُبلغ عنها البنك المركزي اليمني – عدن؛ ولا تضم قاعدة الأدلة هذه أي إحصاءات لنظام المدفوعات من البنك المركزي اليمني – صنعاء."
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "03_PAGE_SECTIONS",
+  "row": 378,
+  "col": 7,
+  "old": "ي قوة العمل، وتُعرض في الجدول في صفحة /people/",
+  "new": "ي قوة العمل، وتُعرض في الجدول في صفحة الأفراد"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 40,
+  "col": 7,
+  "old": " الأخرى في جدول أموال الطوارئ في صفحة /people/",
+  "new": " الأخرى في جدول أموال الطوارئ في صفحة الأفراد"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 40,
+  "col": 9,
+  "old": "حسب الفئة، في الجداول الثلاثة في صفحة /people/",
+  "new": "حسب الفئة، في الجداول الثلاثة في صفحة الأفراد"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 41,
+  "col": 7,
+  "old": "د. والقيم المعروضة لموجة 2021 في صفحة /people/",
+  "new": "د. والقيم المعروضة لموجة 2021 في صفحة الأفراد"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 47,
+  "col": 19,
+  "old": "ex 2021، وتُعرض في هذا المورد على صفحة /people/",
+  "new": "ex 2021، وتُعرض في هذا المورد في صفحة الأفراد"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 48,
+  "col": 19,
+  "old": "ex 2021، وتُعرض في هذا المورد على صفحة /people/",
+  "new": "ex 2021، وتُعرض في هذا المورد في صفحة الأفراد"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "06_EVIDENCE_OBJECTS",
+  "row": 53,
+  "col": 19,
+  "old": "ex 2021، وتُعرض في هذا المورد على صفحة /people/",
+  "new": "ex 2021، وتُعرض في هذا المورد في صفحة الأفراد"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "10_MEASUREMENT_AGENDA",
+  "row": 5,
+  "col": 8,
+  "old": " received them, also by group (shown on /people/)",
+  "new": " received them, also by group (shown on the People page)"
+ },
+ {
+  "kind": "cell",
+  "finding": "PEOPLE-ROUTE",
+  "sheet": "10_MEASUREMENT_AGENDA",
+  "row": 5,
+  "col": 9,
+  "old": ".9%، مع قيم بحسب الفئة (تُعرض في صفحة /people/",
+  "new": ".9%، مع قيم بحسب الفئة (تُعرض في صفحة الأفراد"
+ },
+ {
+  "kind": "set",
+  "finding": "G0-VIS-POS",
+  "sheet": "19_PAYMENTS_DATA",
+  "key": "OBS-00090",
+  "field": "comparability_state",
+  "old": "DIRECTLY_COMPARABLE",
+  "new": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "G0-VIS-FIRM",
+  "sheet": "11_VISUAL_LIBRARY",
+  "key": "VIS-FIRM-FINANCE-SEVERITY",
+  "field": "visual_form",
+  "old": "STACKED_BAR",
+  "new": "TABLE_TEXT_FIRST",
+  "header_row": 4
+ },
+ {
+  "kind": "set",
+  "finding": "G0-VIS-FIRM",
+  "sheet": "11_VISUAL_LIBRARY",
+  "key": "VIS-FIRM-FINANCE-SEVERITY",
+  "field": "encoding_contract",
+  "old": "Stacked bar with denominator and filter definition adjacent to percentages.",
+  "new": "Text first: the two shares stated in one sentence with the report's filtered calculation base beside them; no stacked bar, because the base is not all surveyed firms (Stage A design decision B12: a sentence carries them better than a bar).",
+  "header_row": 4
+ },
+ {
+  "kind": "row_insert",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "15_SOURCE_LIBRARY",
+  "header_row": 4,
+  "values": {
+   "source_id": "SRC-UN-SDG-8102-METADATA",
+   "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-02.pdf",
+   "datasets_or_use": "RESOURCE_LIBRARY_ONLY__REFERENCE_TARGET",
+   "row_count": 0,
+   "display_title": "SDG indicator metadata 8.10.2: proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider (last updated 27 March 2026)",
+   "publisher": "United Nations Statistics Division",
+   "public_card_state": "CITATION_CARD",
+   "display_title_ar": "البيانات الوصفية لمؤشر أهداف التنمية المستدامة 8.10.2: نسبة البالغين (15 سنة فأكثر) الذين لديهم حساب لدى مصرف أو مؤسسة مالية أخرى أو لدى مقدم خدمات الأموال عبر الهاتف المحمول (آخر تحديث في 27 مارس 2026)",
+   "issuer": "World Bank (custodian agency of indicator 8.10.2)",
+   "rights_state": "NOT_ASSESSED",
+   "retrieval_date": "2026-10-17",
+   "publisher_ar": "الشعبة الإحصائية للأمم المتحدة",
+   "document_label": "Method or standard",
+   "document_label_ar": "منهج أو معيار",
+   "document_date": "2026-03-27"
+  }
+ },
+ {
+  "kind": "row_insert",
+  "finding": "OD-1017-04B-SDG",
+  "sheet": "15_SOURCE_LIBRARY",
+  "header_row": 4,
+  "values": {
+   "source_id": "SRC-UN-SDG-8101-METADATA",
+   "primary_url": "https://unstats.un.org/sdgs/metadata/files/Metadata-08-10-01.pdf",
+   "datasets_or_use": "RESOURCE_LIBRARY_ONLY__REFERENCE_TARGET",
+   "row_count": 0,
+   "display_title": "SDG indicator metadata 8.10.1: number of commercial bank branches and of automated teller machines (ATMs) per 100,000 adults (last updated 31 March 2023)",
+   "publisher": "United Nations Statistics Division",
+   "public_card_state": "CITATION_CARD",
+   "display_title_ar": "البيانات الوصفية لمؤشر أهداف التنمية المستدامة 8.10.1: عدد فروع البنوك التجارية وعدد أجهزة الصراف الآلي لكل 100,000 بالغ (آخر تحديث في 31 مارس 2023)",
+   "issuer": "International Monetary Fund (custodian agency of indicator 8.10.1)",
+   "rights_state": "NOT_ASSESSED",
+   "retrieval_date": "2026-10-17",
+   "publisher_ar": "الشعبة الإحصائية للأمم المتحدة",
+   "document_label": "Method or standard",
+   "document_label_ar": "منهج أو معيار",
+   "document_date": "2023-03-31"
+  }
+ },
+ {
+  "kind": "ui_insert",
+  "finding": "S10-TOC",
+  "rows": [
+   [
+    "UI-TOC-ANSWER",
+    "Answer and limits",
+    "الإجابة وحدودها",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-EVIDENCE",
+    "What the evidence shows",
+    "ما تُظهره الأدلة",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-READ",
+    "How to read it",
+    "كيف تُقرأ الأدلة",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-MORE",
+    "More evidence",
+    "مزيد من الأدلة",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-FURTHER",
+    "Go further",
+    "للتعمّق",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-VERIFY",
+    "Verify",
+    "تحقّق",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-M-MEASURED",
+    "What is measured",
+    "ما الذي يُقاس",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-M-ACCEPTED",
+    "How evidence is accepted",
+    "كيف تُقبل الأدلة",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-M-UNCERTAINTY",
+    "Uncertainty and derivation",
+    "عدم اليقين والاشتقاق",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-M-COMPARISON",
+    "Comparison and composites",
+    "المقارنة والمؤشرات المركّبة",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-M-NOT-CLAIMED",
+    "What the method does not claim",
+    "ما لا تدّعيه المنهجية",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-M-CORRECTIONS",
+    "Corrections and challenge",
+    "التصحيحات والاعتراض",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-R-READING",
+    "The reading",
+    "نص القراءة",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ],
+   [
+    "UI-TOC-R-TRACE",
+    "Trace and sources",
+    "التتبّع والمصادر",
+    "W4 Appendix F S10 (Stage B B1, 17 October 2026): table-of-contents group label; bound by presentation_priority.json toc_rule.group_labels; rendered by scripts/yfie/render.py toc_strip()"
+   ]
+  ]
+ }
+]

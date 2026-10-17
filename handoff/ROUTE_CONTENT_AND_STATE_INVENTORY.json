@@ -2,23 +2,23 @@
  "schema": "YFIE_ROUTE_CONTENT_AND_STATE_INVENTORY/1.3",
  "purpose": "Design recipient's map of every route, its family, bindings, collections, next actions and the states Design must cover. Derived; not authority.",
  "generated_from": {
-  "production_master_sha256": "d1807346021996866cb595cb5db89c2c575a2ec290d1727ce65ae6761a14f50b",
-  "page_specs_sha256": "0fe9340c2c8bff8c81ef48fa69ea2c0adfffd5b934a45406cd622e5ca68bf372",
+  "production_master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
+  "page_specs_sha256": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
   "generator": "scripts/handoff_inventory.py"
  },
  "counts": {
   "evidence_records": 116,
   "public_claims": 60,
   "chronology_events": 31,
-  "sources": 206,
-  "public_locators": 191,
+  "sources": 208,
+  "public_locators": 193,
   "curated_resources": 28,
   "readings": 12,
   "measurement_priorities": 10,
   "entry_questions": 11,
   "visual_contracts": 42,
   "evidence_passports": 55,
-  "search_records": 522,
+  "search_records": 524,
   "page_specs": 151
  },
  "projection_roles": {
@@ -193,7 +193,7 @@
     "MA-005"
    ],
    "source_ids": [],
-   "source_references": 41,
+   "source_references": 43,
    "next_actions": [],
    "next_action_policy": "TASK_OR_QUESTION",
    "collection": {
@@ -250,7 +250,7 @@
     "ar": "dist/ar/access/index.html"
    },
    "title_en": "Access: where services can be reached is only partly mapped",
-   "title_ar": "الوصول إلى الخدمات: نعرف أجزاءً من شبكة الخدمات المالية، لكننا لا نملك بعد خريطة وطنية موثوقة لما يعمل فعليًا على الأرض.",
+   "title_ar": "الوصول إلى الخدمات: أماكن الحصول عليها لم تُرسم خريطتها إلا جزئيًا",
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -273,7 +273,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 51,
+   "source_references": 53,
    "next_actions": [
     "/evidence/"
    ],
@@ -585,7 +585,9 @@
      "SRC-UNICEF-UCT-2024-12",
      "SRC-WB-RPW-US-YEM-2025Q3-001",
      "SRC-WB-DB2020-YEM-001",
-     "SRC-IFAD-CPE-YEM-2011"
+     "SRC-IFAD-CPE-YEM-2011",
+     "SRC-UN-SDG-8102-METADATA",
+     "SRC-UN-SDG-8101-METADATA"
     ],
     "displayed_sources_without_document_type": [
      "SRC-SFD-MF-HISTORY-TOR-2012-001"
@@ -949,12 +951,12 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 3,
+   "source_references": 4,
    "next_actions": [],
    "next_action_policy": "SOURCE_RELATED_CORRECTION_OR_REUSE",
    "lineage_state": "BOUND_EXACT",
    "verification_state": "SOURCES_LISTED",
-   "public_sources_listed": 3,
+   "public_sources_listed": 4,
    "structured_data": [
     "BreadcrumbList"
    ],
@@ -4525,7 +4527,7 @@
    "reading_ids": [],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 22,
+   "source_references": 23,
    "next_actions": [
     "/evidence/",
     "/data/",
@@ -4585,7 +4587,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 55,
+   "source_references": 57,
    "next_actions": [],
    "next_action_policy": "DOMAIN_ANSWER",
    "collection": {
@@ -4724,8 +4726,8 @@
     "en": "dist/en/firms/index.html",
     "ar": "dist/ar/firms/index.html"
    },
-   "title_en": "Firms: how much finance matters depends on the question and the firms asked",
-   "title_ar": "المنشآت: مدى أهمية التمويل يتوقف على السؤال وعلى المنشآت التي سُئلت",
+   "title_en": "Firms: the answer depends on the question asked",
+   "title_ar": "المنشآت: الإجابة تتوقف على السؤال المطروح",
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -4878,8 +4880,8 @@
     "en": "dist/en/payments/index.html",
     "ar": "dist/ar/payments/index.html"
    },
-   "title_en": "Payments: reported POS terminals rose between March 2025 and June 2026; how many people use them is not measured",
-   "title_ar": "المدفوعات: ارتفع عدد أجهزة نقاط البيع المُبلَّغ عنها بين مارس 2025 ويونيو 2026، أما عدد مستخدميها فغير مقيس",
+   "title_en": "Payments: more reported terminals, use not measured",
+   "title_ar": "المدفوعات: تزايد الأجهزة المُبلَّغ عنها، والاستخدام غير مقيس",
    "sections": 9,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -4999,7 +5001,7 @@
     "MA-010"
    ],
    "source_ids": [],
-   "source_references": 52,
+   "source_references": 53,
    "next_actions": [
     "/evidence/CLM-001/"
    ],
@@ -5049,8 +5051,8 @@
     "en": "dist/en/providers/index.html",
     "ar": "dist/ar/providers/index.html"
    },
-   "title_en": "Providers: official lists show formal status on a date; operation needs other evidence",
-   "title_ar": "مقدمو الخدمات المالية: تثبت القوائم الرسمية وضعًا رسميًا في تاريخ محدد، لكنها لا تثبت التشغيل بذاتها.",
+   "title_en": "Providers: listed is not the same as operating",
+   "title_ar": "مقدمو الخدمات المالية: الإدراج في القائمة ليس تشغيلًا",
    "sections": 10,
    "section_rows_split_by_language": true,
    "evidence_ids": [
@@ -5076,7 +5078,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 50,
+   "source_references": 51,
    "next_actions": [
     "/evidence/CLM-009/"
    ],
@@ -5119,7 +5121,7 @@
    ],
    "measurement_ids": [],
    "source_ids": [],
-   "source_references": 70,
+   "source_references": 71,
    "next_actions": [
     "/measurement/",
     "/evidence/"
@@ -5268,7 +5270,7 @@
    "source_ids": [
     "SRC-WB-FINDEX-001"
    ],
-   "source_references": 14,
+   "source_references": 15,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5434,7 +5436,7 @@
     "MA-007"
    ],
    "source_ids": [],
-   "source_references": 10,
+   "source_references": 11,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5580,7 +5582,7 @@
    "source_ids": [
     "SRC-IMF-YEM-SMP-2026"
    ],
-   "source_references": 18,
+   "source_references": 19,
    "next_actions": [],
    "next_action_policy": "VERIFY_BOUND_EVIDENCE_RECORDS",
    "structured_data": [
@@ -5787,7 +5789,7 @@
     "MA-001"
    ],
    "source_ids": [],
-   "source_references": 51,
+   "source_references": 52,
    "next_actions": [
     "/evidence/CLM-007/"
    ],

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract_id": "VISUAL-DESIGN-CONTRACT",
-  "authority_master_sha256": "d1807346021996866cb595cb5db89c2c575a2ec290d1727ce65ae6761a14f50b",
+  "authority_master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
   "rule": "Design-layer controlled input. It assigns every governed visual contract (Master 11) a design tier and, for SIGNATURE and CORE_ANALYTICAL visuals, declares which governed rows a chart binds to and how they are drawn. It never carries a fact, number, label or sentence: values come from Master data rows, text from Master contract/evidence fields, and legend labels from the governed interface copy (UI-VIS-*). The generator resolves every binding and fails on any unresolved ID, any value that disagrees with its guard, or any visual left untiered.",
   "tiers": {
     "SIGNATURE": "Distinctive to this product, decision-useful, drawable from governed rows and safe when detached. Designed first; gets a full data contract.",
@@ -3298,11 +3298,13 @@
                 "id": "OBS-00090",
                 "x": "2026-04",
                 "unit": "count",
-                "flag": "DIRECTLY_COMPARABLE",
+                "flag": "DIRECTLY_COMPARABLE_WITH_SOURCE_INTERNAL_PERCENT_CONTRADICTION",
                 "source": "SRC-CBY-POS-2026-04",
                 "y": 30559,
                 "grammar_state": "ADMINISTRATIVE",
-                "markers": [],
+                "markers": [
+                  "DISAGREEMENT"
+                ],
                 "unit_label": {
                   "en": "Number",
                   "ar": "العدد",
