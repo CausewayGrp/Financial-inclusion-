@@ -48,41 +48,9 @@
     }
   ],
   "hub_numerals": {
-    "decided_by": "Owner decisions of 9 October 2026, B-b and B-c (audit/OWNER_DECISIONS_2026-10-09.md): the numerals 01-05 bound to the five hubs; labels from the Master (transaction V1B-1)",
-    "rule": "each hub of global_navigation (generated from 04_NAV_UX) is matched by its route, or a grouping node by its children routes, to exactly one governed numeral; the generator validates the match",
-    "items": [
-      {
-        "routes": [
-          "/explore/"
-        ],
-        "numeral_ui_id": "UI-NAV-HUB-01"
-      },
-      {
-        "routes": [
-          "/evidence/"
-        ],
-        "numeral_ui_id": "UI-NAV-HUB-02"
-      },
-      {
-        "routes": [
-          "/readings/"
-        ],
-        "numeral_ui_id": "UI-NAV-HUB-03"
-      },
-      {
-        "routes": [
-          "/data/"
-        ],
-        "numeral_ui_id": "UI-NAV-HUB-04"
-      },
-      {
-        "routes": [
-          "/methodology/",
-          "/measurement/"
-        ],
-        "numeral_ui_id": "UI-NAV-HUB-05"
-      }
-    ]
+    "decided_by": "Owner decision D8 (17 October 2026; takeover brief Part 6 item 11; steward designation OD-1017-03, CR-S12): the hub numerals 01-05 of the owner decisions of 9 October 2026 (B-b, B-c; transaction V1B-1) are removed from the masthead and the opened menu. The labels UI-NAV-HUB-01…05 stay in the Master as the record of that decision; nothing binds them.",
+    "rule": "no numeral is bound to any hub; the generator and scripts/validate.py RC-NAV treat an empty items list as the retired state",
+    "items": []
   },
   "utilities": [
     {
