@@ -426,3 +426,18 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   first). The same suite had passed 170 of 170 on 3.12 before the interpreter gap was found, which is why that result proved
   nothing; this one does. The record line you are reading, with its manifest and checksums, is the only difference between the
   tree these ran on and the pushed head.
+
+- 2026-10-18 · Phase 2 · B3 G1 · branch `pr/stage-b-g1` on main `8c78fa0e` (B2 merged as PR #60). The direction challenge of charter §10
+  run as the directive's §9 requires: five candidates as CSS deltas over the shipped stylesheet in scratch copies of dist/
+  (`design/exploration/v2/`, HTML and JS byte-identical to dist/), rendered on the four proving pages in both editions at 390 and
+  1440, scored blind by three AI judges on the nine charter criteria with the label map decoded afterwards, then phone screens,
+  first-answer position, cold bytes, the §10.3 disqualifiers and the §3.5 source-owner test on five records (PASS, both editions,
+  every candidate). Result: A · Register 108, B · Argument 106, C · Compact 102, E · hybrid 102, the incumbent 93 and last for every
+  judge. Item 21 run in full: a specimen of the real H1s in Plex Arabic 600 and 700, Noto Naskh Arabic, Markazi Text and Amiri; the
+  one pairing (Markazi Text 600 / IBM Plex Serif 600, OFL) built into B, E and a second-round F that corrected the first round's
+  two defects; rejected on evidence (Arabic quality 10 → 9 against 12 for Plex, all three judges, both rounds); weight 600 kept
+  (blind crop test). **DL-V2-001 recorded: A · Register**, with the G2 levers taken from the judges' notes (`design/DESIGN_INTEGRATION_V2.md`
+  §4, `design/evidence/v2/g1/`). PR #51 assessed as evidence (§4.4): text-link tools, link secondary action, limit beside each
+  observation survive as G2 composition questions; to be closed without merging by the owner (the harness refuses PR state
+  changes from this session). No Master, projection, page, stylesheet or hosting state changed; nothing hidden, no JavaScript
+  added. Next: B4a G2 shell/Home/domain on this branch, continuing without an owner stop (veto window open on this PR).

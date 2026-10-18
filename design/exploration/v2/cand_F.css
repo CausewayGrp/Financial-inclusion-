@@ -1,0 +1,102 @@
+/* A · Register — quiet official-statistical. Led by the data professional. Plex only; the type scale steps down one
+   notch, the head becomes a two-column register on wide screens (title | statement + actions), the page tools are
+   text links, the rail is lighter and narrower, the boundary and the record unit lose their fills and keep their
+   rules. Phone: the topics block is one compact line so the first figure group enters sooner. */
+@media screen{
+:root{--fs-display:30px;--lh-display:1.15;--fs-q:19px;--lh-q:1.35}
+html[dir=rtl]{--fs-display:28px;--lh-display:1.4;--fs-q:20px;--lh-q:1.6}
+h1{font-weight:600}[dir=ltr] h1{letter-spacing:-.018em}
+.page-tools{margin:4px 0 0;gap:2px 18px}
+.page-tools>.tbtn,.page-tools>a{min-height:28px;padding:0;border:0;border-radius:0;background:none;color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--sage-400);font-size:var(--fs-clock);font-weight:500}
+.page-tools>.tbtn:hover,.page-tools>a:hover{background:none;color:var(--green-700)}
+.head .page-tools+.st,.head .page-tools+p.st{margin-top:8px}
+.head .st{font-weight:400;color:var(--ink)}
+.head .actions,.head-rule .actions{margin-top:8px;gap:8px 10px}
+.head .actions a,.head-rule .actions a{min-height:40px;padding:0 16px;border-width:1px;font-size:var(--fs-src)}
+.head .actions a:first-child,.head-rule .actions a:first-child{background:var(--green-700);border-color:var(--green-700)}
+.head-rule{border-top:1px solid var(--rule);padding-top:4px}
+.qa .rubric .n{font-size:1em;vertical-align:0;letter-spacing:.02em;color:var(--mute)}
+.qa .rubric{font-size:11.5px;letter-spacing:.12em}
+[dir=rtl] .qa .rubric{font-size:13.5px;letter-spacing:0}
+.bnd,.compare-verdict,.compare-boundaries{background:none;border-top:3px double var(--brass-700);padding:12px 0 0}
+.bnd p{font-weight:400;color:var(--ink)}
+.bnd h2{color:var(--ink)}
+.paced .compact.bound{background:none;border:0;border-top:1px solid var(--rule-2);border-inline-start:0;padding:12px 0 2px;margin:6px 0 18px;border-radius:0}
+[dir=rtl] .paced .compact.bound{padding:12px 0 2px;border-radius:0}
+.paced .compact.bound .q{font-weight:500}
+.paced .sent b.fnum,.qa.first .st b.fnum{font-size:1.1em}
+.compact .clock .k{font-weight:500}
+.fig{border-left:0;border-right:0;border-bottom:0;border-radius:0;padding:16px 0 12px}
+.rvtab thead th{background:none;border-top:2px solid var(--green-900);border-bottom:1px solid var(--rule-2)}
+/* the topics block: one compact register line */
+.topics ul.rlist{display:flex;flex-wrap:wrap;gap:2px 18px;list-style:none;padding:0;margin:0}
+.topics ul.rlist li{display:inline}
+.topics ul.rlist a{font-size:var(--fs-src);padding:2px 0;min-height:24px;display:inline-block}
+.topics h2{font-size:var(--fs-rubric);color:var(--brass-700);font-weight:600;line-height:1.4}
+[dir=ltr] .topics h2{text-transform:uppercase;letter-spacing:.1em}
+.topics{padding-top:10px;gap:4px}
+/* the phone index: a plain numbered list of rows, not chips */
+@media (max-width:899px){
+.strip{display:block;padding:0;border-top:1px solid var(--rule-2);border-bottom:0}
+.strip a{display:flex;gap:10px;align-items:baseline;padding:9px 0;min-height:40px;background:none;border:0;border-bottom:1px solid var(--rule);border-radius:0;font-size:var(--fs-src);line-height:1.35}
+.strip a .n{min-width:1.8em;color:var(--mute)}
+.strip a span:last-child{display:inline;-webkit-line-clamp:unset;overflow:visible}
+}
+@media (min-width:900px){
+:root{--fs-display:42px;--fs-q:22px;--fs-st:20px}
+html[dir=rtl]{--fs-display:38px;--lh-display:1.35;--fs-q:23px;--fs-st:21px}
+.page{grid-template-columns:minmax(0,1fr) 236px;column-gap:56px}
+.page>.obj{max-width:820px}
+.spine{border-inline-start:0;padding:4px 0 0}
+[dir=rtl] .spine{padding:4px 0 0}
+.spine h3{font-size:11px;margin-bottom:6px}
+.spine li{font-size:13.5px;line-height:1.4;border-top:0}
+.spine li a,.spine .index li a{padding:5px 0}
+.spine .index .n{min-width:1.9em;color:var(--mute);font-weight:500}
+.spine .edges li{border-top:1px solid var(--rule)}
+.spine .edges li:first-child{border-top:0}
+/* the register head: the title on the left, the statement and its actions on the right */
+.obj .head:has(> .st){display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);column-gap:48px;row-gap:6px;align-items:start}
+.obj .head:has(> .st)>.rubric,.obj .head:has(> .st)>.crumb{grid-column:1 / -1}
+.obj .head:has(> .st)>h1{grid-column:1;grid-row:2 / span 3;max-width:none}
+.obj .head:has(> .st)>.st{grid-column:2;grid-row:2;margin-top:6px}
+.obj .head:has(> .st)>.actions{grid-column:2;grid-row:3}
+.obj .head:has(> .st)>.page-tools{grid-column:2;grid-row:4;margin-top:6px}
+.obj .head:has(> .st)>.head-rule{grid-column:1 / -1}
+.head-rule{border-top:0;padding-top:0}
+.paced .sent{font-size:20px;line-height:1.5}
+[dir=rtl] .paced .sent{font-size:21px;line-height:1.75}
+}
+}
+/* F · Register with the pairing — A's grammar unchanged, plus the one heading pairing of item 21 with its two
+   defects from the first blind round corrected: the Latin inside an Arabic heading is set from the same Markazi
+   file through a second face scoped by unicode-range and reduced with size-adjust, so "Global Findex 2021" sits at
+   the Arabic's optical size; the serif deck never exceeds its section heading. */
+@font-face{font-family:'Markazi Text';font-style:normal;font-weight:600;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+060C,U+061B,U+061F,U+066A-066D;src:url('/assets/fonts/candidates/MarkaziText-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'Markazi Text';font-style:normal;font-weight:600;font-display:swap;unicode-range:U+0020-007E,U+00A0-00FF,U+2010-2027,U+2030-205E;size-adjust:84%;src:url('/assets/fonts/candidates/MarkaziText-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'IBM Plex Serif';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/candidates/IBMPlexSerif-SemiBold-Latin1.woff2') format('woff2')}
+@media screen{
+:root{--font-h:'IBM Plex Serif',Georgia,'Times New Roman',serif;--fs-display:34px;--lh-display:1.1;--fs-q:21px;--lh-q:1.3}
+html[dir=rtl]{--font-h:'Markazi Text','IBM Plex Sans Arabic',serif;--fs-display:38px;--lh-display:1.28;--fs-q:26px;--lh-q:1.45}
+h1,h2:not(.rubric),h3:not(.rubric):not(.alt-h):not(.ph),.q,.qlist .q,.compact .q,.fig-t,details.fold>summary>h2{font-family:var(--font-h);font-weight:600}
+[dir=ltr] h1{letter-spacing:-.01em}
+[dir=rtl] h1{letter-spacing:0}
+h2{font-size:var(--fs-q);line-height:var(--lh-q)}
+h3{font-size:calc(var(--fs-body) + 2px);line-height:1.35}
+[dir=rtl] h3{font-size:calc(var(--fs-body) + 5px);line-height:1.5}
+[dir=rtl] .q,[dir=rtl] .compact .q{font-size:calc(var(--fs-q) - 2px);line-height:1.5}
+[dir=rtl] h2.rubric,[dir=rtl] h3.rubric,.rubric,.topics h2{font-family:var(--font)}
+.paced .sent.lead{font-family:var(--font-h);font-weight:600;font-size:calc(var(--fs-q) - 1px);line-height:1.35;color:var(--ink)}
+[dir=rtl] .paced .sent.lead{line-height:1.5}
+.paced .sent.res{font-family:var(--font-h);font-weight:600;font-size:calc(var(--fs-q) - 1px);line-height:1.4}
+.qa .rubric .n{font-family:var(--font-h);font-size:1.35em;color:var(--brass-700)}
+.qlist li::before{font-family:var(--font-h);font-size:22px;color:var(--brass-700)}
+@media (min-width:900px){
+:root{--fs-display:46px;--lh-display:1.06;--fs-q:25px}
+html[dir=rtl]{--fs-display:52px;--lh-display:1.22;--fs-q:30px}
+h1{max-width:20ch}
+.qa:not(.topics)>div:first-child h2{font-size:22px;line-height:1.3}
+[dir=rtl] .qa:not(.topics)>div:first-child h2{font-size:26px;line-height:1.45}
+.spine .index .n{font-family:var(--font-h);font-size:1.1em;color:var(--brass-700);font-weight:600}
+}
+}

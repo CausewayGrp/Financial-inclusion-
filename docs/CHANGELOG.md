@@ -1,5 +1,15 @@
 # Repository Change Log
 
+## 18 October 2026 — Stage B direction challenge (B3 G1, DL-V2-001)
+
+Records the G1 direction decision without changing any page: five candidates built as CSS deltas over the shipped
+stylesheet in scratch copies of `dist/` (`design/exploration/v2/`), rendered on the four proving pages in both editions,
+scored blind by three AI judges, measured (screens, first-answer position, cold bytes, disqualifiers, the source-owner
+test) and recorded in `design/evidence/v2/g1/`. Decision DL-V2-001: A · Register (quiet official-statistical); the one
+heading pairing of Part 6 item 21 was tested twice and rejected on Arabic readability evidence; the Arabic heading weight
+stays 600. `design/DESIGN_INTEGRATION_V2.md` §4 carries the scorecard, the PR #51 assessment and the G2 levers;
+`STATE.json` and `PROGRESS.md` move to B3. No Master, projection, page, font or hosting state changed.
+
 ## 17 October 2026 — Stage B tools (B2 T, transaction STAGE-B-T)
 
 Elevate the four public tools of BRIEF W4 T, every behaviour tested in a real browser with negative controls. Search:
