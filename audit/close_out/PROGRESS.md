@@ -441,3 +441,24 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   observation survive as G2 composition questions; to be closed without merging by the owner (the harness refuses PR state
   changes from this session). No Master, projection, page, stylesheet or hosting state changed; nothing hidden, no JavaScript
   added. Next: B4a G2 shell/Home/domain on this branch, continuing without an owner stop (veto window open on this PR).
+
+- 2026-10-18 · Phase 2 · B4 G2, B5 W4F, B6 G3 · branch `pr/stage-b-g1` (PR #61 → main). DL-V2-001 implemented in the shipped
+  stylesheet, edited in place (no parallel system, no obsolete block): the type scale one notch down with a length-aware title
+  (`render.h1`), the register head where the statement is short (`render.head_class`), the domain head actions inside the head,
+  text-link tools after the actions, rules instead of fills (boundary, record unit, figures, table heads, folds), the phone index
+  as a numbered list, a lighter rail with its numerals, Home's topics as one line with figures first on phones, a one-line
+  edition strip. Two refinement passes on the proving families; memos and class-C decisions in the design record §5. W4F: three
+  font files per edition unchanged (pairing rejected on evidence; Medium kept); tap targets closed on measurement (0 fail both
+  exceptions); the social template fingerprint with a negative control (cards byte-identical, only INDEX.json changed); the
+  performance before/after (+0.7 KB per page, no JS, image or font delta). New gate `test_rendered_visibility.py` (charter
+  §12.1) with two negative controls, in CI. G3: an independent visual review (improved in both editions; two defects corrected
+  once — the register head scoped to short statements, the rail numerals unclipped — one recorded decision), the P9 editors'
+  reading (0 material, 7 minor), the six-persona audit re-run (6 of 6 PASS or PASS with frictions; G0 had a FAIL and an
+  INCONCLUSIVE), the accessibility audit (0 axe violations, 0 contrast failures; a measurement). Phone screens shorter on every
+  route (Home AR 390 9.5 → 8.9; /payments/ 20.4 → 19.6; /reforms/ 21.7 → 20.3); first figure in Home's AR first screen. Gates
+  on the pushed head: the standing chain and the W4 gates green, the full gate negative-control suite run before the push (its
+  result is the next record line). Carried to Stage C (content): the 45,460 teaser scope, sample n on CLM-001, record → MA-001,
+  the Reading correction note, the two Arabic dual forms (p9), fin24*/fin28-29, /providers/ EN-only boundaries; hosting: the
+  path-only canonical until `public_origin`. Open owner items unchanged: F-12 visibility, F-06 Workers check, F-16, seeds 23
+  and 28, the CORRECTIONS_PROCESS.md times; plus: close PR #51 without merging. Never claimed: accessibility conformance, live
+  performance, release readiness. Stage B ends with this PR's report.

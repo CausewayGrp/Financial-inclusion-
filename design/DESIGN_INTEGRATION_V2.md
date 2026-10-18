@@ -684,3 +684,96 @@ the desktop rail and vice versa, print-only identity, the no-script note, region
 width-dependent tick labels, the phone-hidden product rubric the masthead already carries); every closed disclosure
 has a visible summary. Two negative controls (`--self-check`: a hidden boundary; a clamped paragraph) are caught by
 their own code. 44 page views PASS.
+
+### 5.5 Pass two on the proving families
+
+- **Home on a phone: figures before topics.** Under 900 px the three-figure section, then the index, then the topics
+  line, then the boundary; on a wide screen the register keeps the topics line first (G1: the figure-first candidates
+  scored 15 and 12 of 15 on first-screen comprehension against 12 for topics-first; the topics stay one step from Home
+  at every width, so DL-V2-007 holds). Home AR 390: 9.5 (t1) → 8.9 screens; the first figure at 0.8 screens.
+- **Disclosures as ruled rows.** The named bars of the folds (`details.fold`, `details.more`, Home's folds) lose
+  their white boxes and sage fills and become ruled rows with the boxed +/− control, consistent with the direction.
+- **Compact source rows** (class C): kept as they are — the source card's two-column grid from 1200 px and the stacked
+  row on phones; the Arabic reader scored /data/'s single column highest on calm (G1). Decided: accepted as is.
+- **The figure boundary inside the figure element** (G2 open item, 27 of 42 in G0): measured on this build, 67 of 67
+  figures in the English edition carry the boundary part inside `<figure>` (closed by the B1/B2 frame work; recorded).
+- **The English title tracking** stays at the V1 value (−.02 em): a nudge to −.018 em reached the social-card title
+  through the generic heading rule and changed all 151 English cards for no visible benefit (fingerprint, §6).
+
+---
+
+## 6. B5 — W4F, 18 October 2026
+
+- **Fonts.** Three files per edition stay (Regular, Medium, SemiBold of the text face): no face added (DL-V2-001),
+  none removed. The Medium weight carries the statement, the clocks' labels, the controls and the source kinds; two
+  weights would flatten the clock against its value and the kind against the title on the record family, so it earns
+  its file. AR /data/ cold bytes 331 KB, within the ≤ 350 KB target; Home AR 274 KB (`g2/w4f_performance.md`).
+- **Tap targets (B1-F01).** The accessibility audit on this build measures 5,126 targets, 30 under 24 × 24 px, of
+  which 29 meet the inline exception and 1 the spacing exception: 0 meet neither. Closed on measurement
+  (`docs/ACCESSIBILITY_AUDIT.md`, a measurement and never a conformance claim).
+- **Social cards (charter §12.3).** `scripts/social_images.py --check` now compares a template fingerprint — the
+  stylesheet rules the frame uses (token lines and every `social-doc` / `.soc-` rule), the `@font-face` block, the
+  shipped font bytes and the logo — recorded in `INDEX.json` as `template_sha256`, with a negative control
+  (`--check --control`: one byte of the frame CSS changed in memory reads as stale; CAUGHT). The cards were regenerated
+  on the final stylesheet and compared byte for byte with the committed set (§5.5): the frame's own rules are
+  untouched by G2, so the images are unchanged and only `INDEX.json` carries the fingerprint.
+- **Performance before/after (P6).** `g2/w4f_performance.md` and `g2/perf_g2.json`: the only persistent bytes added
+  are stylesheet rules (+1.7 KB gzip on every page); no JavaScript, image or font delta; first paint with the system
+  fallback and no layout jump (font-display: swap, the preloads unchanged).
+- **The chronology fold** on the long domains already exists (V1B-1); /payments/ 19.6 and /reforms/ 20.3 AR 390
+  screens are governed signal tables and event lists (S-stage decisions), carried to the stage report as recorded misses.
+
+---
+
+## 7. B6 — G3 acceptance, 18 October 2026
+
+### 7.1 The independent visual review (one fresh AI reviewer, Fable 5.1, before/after pairs of twelve views, both editions)
+
+Verdict: English improved (calmer rail, demoted tools, better headline breaks); Arabic improved (tighter phone heads,
+the boundary on the first phone screen of /payments/, nothing less readable); shaping and diacritics fine everywhere.
+Three defects named, most severe first, and their disposition — corrected once, then the affected surfaces rechecked:
+
+| # | Finding (view, region) | Disposition |
+|---|---|---|
+| 1 | The two-column head with a long statement leaves a blank title column (/data/, /methodology/, the Reading at 1440) and on /payments/ pushes the boundary section below the fold | **Corrected.** The register head is now applied by the renderer only where the statement is short enough to sit beside the title (`render.head_class`: ≤ 420 characters EN, ≤ 360 AR): Home, Explore, /about/, /measurement/. The domains, /data/, /methodology/ and the Readings keep the stacked head at the reading measure. /payments/ EN 1440: the boundary heading is back in the first screen (12.9 screens; before the fix 13.1) |
+| 2 | The rail lost its numerals while the sections keep "01, 02 …", so the index no longer maps; the section numeral demoted to label size | **Corrected.** The numerals had hung 21 px into a rail padding the lighter rail no longer has and were clipped by the rail's scroll box; the hang is removed and the numerals are back in the primary green. The section numeral returns to 1.3 em in green as the anchor |
+| 3 | Home's topics line absent from the Arabic phone first screen though present on desktop at that point | **Not a defect: a recorded decision** (§5.5, figures before topics under 900 px; the topics stay one step from Home at every width). Recorded here so the reviewer's reading is answered |
+
+Reviewer's preferences, not taken: a lighter group-label weight in the rail's lower groups; the record family's
+single column (right as it is, in the reviewer's own words). Also noted and carried: a Reading's figures in prose are
+plain weight while the record marks them (`b.fnum` is a record and Home device by design, D3); the long Arabic titles
+no longer step down (the `long` rule now applies from 72 Arabic characters).
+
+### 7.2 The editors' reading (P9, charter v3.2): `g2/p9_editors.md`
+
+PRESENTATION VARIANCE ACCEPTED: 0 material, 7 minor differences in hedging, causality or scope across CLM-001 (01, 04),
+Home's clocks section, two Reading theses; the Compare verdict is not static. Two Arabic dual forms are correct only
+if the Master holds exactly two figures and two reports — a content question for the owner's Arabic editor, not a
+presentation item. An AI editorial reviewer; not a native-language certification.
+
+### 7.3 The six-persona reader-job audit, re-run (charter §13): `g2/persona_audit_g3.md`
+
+G0 → G3 outcomes: 1 PASS → PASS; 2 PASS with frictions → PASS; 3 PASS (naming partly met) → PASS (naming met);
+4 INCONCLUSIVE → PASS with frictions; 5 PASS (marginal) → PASS; 6 FAIL → PASS with frictions. Closed since G0: the
+interval on CLM-001, BibTeX/RIS, SDG 8.10.2 on the record, the Payments route and topics on Home, the definition at
+zero clicks, the stage-row tag, CBY-Sana'a named, /corrections/ consistent, the Reading path one click shorter. What
+persists is content (Master cells: the 45,460 teaser scope, sample n on CLM-001, the record → MA-001 binding, the
+Reading's correction note) or a recorded structure decision (the priorities' fold, the Reading link position with the
+index jump); two hosting-stage items (the path-only canonical and no-JS citation address until `public_origin` is set).
+
+### 7.4 P1 on AR 390 per family (charter §13) and the recorded exceptions
+
+Records: figure, clock and evidence link in the first screen (CLM-001, CLM-003, VIS-POS-TERMINALS). Home: the first
+figure and the evidence link; the clock is the first record's, one screen down (exception recorded: the statement and
+the two actions come first by the Home contract, item 19). Domains: the evidence link; the figure is governed prose on
+every domain and the boundary section follows the head (exception recorded: a domain's first screen is its question,
+title and statement by S11; the boundary at 1.0–1.2 screens on every domain). /data/, Readings, /methodology/,
+/measurement/, trust pages: no figure in the contract; the evidence link where the family has one. Phone screens per
+family, before and after: `g2/final_before_after.md`.
+
+### 7.5 Gates on the accepted build
+
+See §5.3 and the PROGRESS line of this PR: every standing gate and the four W4 gates (rendered visibility with its
+two controls; the drift of `site-src/content/**` and the route list is zero — no transaction in this PR; the social
+fingerprint with its control; the performance before/after) green on the exact tree pushed; the gate negative
+controls run in full before the push. Never claimed: accessibility conformance, live performance, release readiness.

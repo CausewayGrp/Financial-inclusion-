@@ -1,5 +1,16 @@
 # Repository Change Log
 
+## 18 October 2026 — Stage B G2 complete, W4F and G3 acceptance (B4–B6)
+
+Pass two and the G3 correction pass on the A · Register direction: the register head only where the statement is
+short (`render.head_class`; the domains, /data/, /methodology/ and the Readings keep the stacked head at the reading
+measure), the rail numerals restored, the section numeral as the anchor, the folds as ruled rows, Home's figures before
+the topics line on phones, the Arabic long-title threshold at 72 characters. W4F: the social template fingerprint in
+`scripts/social_images.py --check` (charter §12.3; `--control` negative control; the cards are byte-identical, only
+`INDEX.json` changed), the performance before/after, the fonts decision (three files per edition unchanged), tap targets
+closed on measurement. G3: independent visual review, the P9 editors' reading, the six-persona audit re-run, the
+accessibility audit; design record §5.5–§7 and `design/evidence/v2/g2/`. No Master, projection or hosting state changed.
+
 ## 18 October 2026 — Stage B G2 shell, pass one (B4a; DL-V2-001 implemented)
 
 The A · Register direction in the shipped stylesheet (`scripts/yfie/theme.py`, edited in place): the type scale one

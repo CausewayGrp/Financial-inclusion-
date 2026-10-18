@@ -214,8 +214,20 @@ def h1(title: str) -> str:
     """The page title. G2 (DL-V2-001): a title over 56 characters carries `long`, and the stylesheet steps its display
     size down a fifth, so a governed title never runs past three lines in the register head at 1440 or four at 390;
     the wording is the Master's and is never shortened."""
-    cls = ' class="long"' if len(title) > 56 else ""
+    arabic = any("؀" <= ch <= "ۿ" for ch in title)
+    cls = ' class="long"' if len(title) > (72 if arabic else 56) else ""   # Arabic runs narrower per character
     return f'<h1 id="page-title"{cls}>{esc(title)}</h1>'
+
+
+def head_class(statement: str) -> str:
+    """G2 (G3 review, defect 1): the register head (title beside the statement on a wide screen) only where the
+    statement is short enough to sit beside the title — about 420 characters in English, 360 in Arabic; a longer
+    statement (the domains' leads, /data/, /methodology/, a Reading's thesis) stays stacked at the reading measure."""
+    text = re.sub(r"<[^>]+>", "", statement or "")
+    arabic = any("؀" <= ch <= "ۿ" for ch in text)
+    # the marker sits on the statement element, not on the head: the validator's S03 order check anchors on the literal
+    # `<div class="head">`; the stylesheet selects `.head:has(> .st[data-register])`
+    return ' data-register=""' if text and len(text) <= (360 if arabic else 420) else ""
 
 
 def rubric(t, n: int | None = None, tag: str = "span", cls: str = "rubric") -> str:
@@ -492,7 +504,7 @@ def home(page: dict, shell: dict) -> str:
     # The product's statement (section 1) and its two governed actions sit in the head, under the headline and before
     # the first figure: four cold readers (EN/AR × 390/1440, D3) reached the third screen before learning what the
     # product is. The product rubric is kept for the wide head; the masthead already names the product on a phone.
-    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}{h1(page["title"])}{page_tools(shell)}<div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
+    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}{h1(page["title"])}{page_tools(shell)}<div class="st" id="s1"{head_class(" ".join(S[1]["paragraphs"]))}>{paras(S[1]["paragraphs"])}</div>'
              f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div>']
     # DL-V2-007 (F-15, first-click test of 17 October 2026: 21-25% one-step before, 92-100% after): the eight domain
     # answers by their governed names, one step from Home, right under the product statement
@@ -552,7 +564,7 @@ def reading(page: dict, shell: dict) -> str:
     origin = DISC.origin()
     index = ([(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"])]
              + ([("measure", L["measurement"])] if page.get("measurement") else []) + [("related", L["related"])])
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p>{h1(page["title"])}{page_tools(shell, report_for(shell, page))}<div class="st"><p>{esc(page["thesis"])}</p></div>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p>{h1(page["title"])}{page_tools(shell, report_for(shell, page))}<div class="st"{head_class(page["thesis"])}><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
     essay = []

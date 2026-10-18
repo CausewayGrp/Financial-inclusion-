@@ -2,7 +2,16 @@
  "schema": "YFIE_STAGE_B_STATE/1.0",
  "role": "Live state of the Stage B/C programme for session resume (owner directive 17 October 2026, section 12). Not an authority: the Production Master decides content; audit/close_out/PROGRESS.md is the dated ledger.",
  "updated": "2026-10-18",
- "phase": "B3 G1 recorded (DL-V2-001); B4a G2 shell/Home/domain next, same branch",
+ "phase": "Stage B done on pr/stage-b-g1: B3 G1 (DL-V2-001), B4 G2 (shell and every family), B5 W4F, B6 G3 accepted after one correction pass; next C1 W5 (Stage C) after the PR merges",
+ "g2_g3": {
+  "record": "design/DESIGN_INTEGRATION_V2.md sections 5-7",
+  "evidence": "design/evidence/v2/g2/ (final_before_after.md, w4f_performance.md, perf_g2.json, p9_editors.md, persona_audit_g3.md, shots/before_* and after_*); design/evidence/v2/g0/g2_metrics.json and g2_scoreboard.md",
+  "implemented": ["type scale one notch down, length-aware title (render.h1)", "register head only for short statements (render.head_class: Home, Explore, /about/, /measurement/)", "domain head actions inside the head", "tools as text links after the actions", "rules not fills: boundary, record unit, figures, table heads, folds", "phone index as a numbered list", "lighter rail with numerals", "Home topics one line; figures before topics on phones", "one-line edition strip at 390"],
+  "new_gates": ["scripts/tests/test_rendered_visibility.py (charter 12.1, two negative controls; CI browser job)", "social template fingerprint in scripts/social_images.py --check (charter 12.3, --control)"],
+  "g3": {"visual_review": "improved in both editions; 2 defects corrected (register head scope, rail numerals), 1 recorded decision", "editors_p9": "0 material, 7 minor", "personas": "6 of 6 PASS or PASS with frictions (G0: 1 FAIL, 1 INCONCLUSIVE)", "accessibility_audit": "0 axe violations, 0 contrast failures, 0 targets failing both exceptions (a measurement, not a claim)"},
+  "fonts": "3 files per edition unchanged; pairing rejected (DL-V2-001); Medium kept",
+  "carried": ["Master content items: 45,460 teaser scope (G0-F09), sample n on CLM-001, record->MA-001 binding, Reading correction note (seed 25), the two Arabic dual forms (p9), fin24*/fin28-29 method note, EN-only /providers/ time boundaries", "structure decisions: priorities fold (S8), Reading link position (S7, index jump)", "hosting: path-only canonical and no-JS citation address until public_origin (Stage C); /corrections/ '#' link without JS (C-stage finding)", "Compare table JS-only NOT_TESTED", "/payments/ and /reforms/ length (governed tables and lists)"]
+ },
  "programme": {
   "brief": "audit/close_out/TAKEOVER_BRIEF_2026-10-17.md",
   "directive": "audit/OWNER_DIRECTIVE_2026-10-17.md",
@@ -219,7 +228,7 @@
   "cite button state (INCONCLUSIVE)",
   "JS Compare table verdict per field"
  ],
- "next": "B4a G2 shell/Home/domain on pr/stage-b-g1: implement DL-V2-001 (A Register) in scripts/yfie/theme.py with the G2 levers of design record 4.3 and 4.6; memos per family; two refinement passes on the proving pages; then B4b record//data//Reading/Methodology, B4c propagation, B5 W4F, B6 G3. Owner veto window on the G1 PR; no stop.",
+ "next": "Owner: Verify 9/9 on the exact head of PR #61, merge; close PR #51 without merging. Then Stage C (C1 W5 ...) from a fresh session, resuming from PROGRESS.md and this file. The Master content items listed under g2_g3.carried go into the first Stage C content transaction.",
  "g1": {
   "label": "g1",
   "record": "design/DESIGN_INTEGRATION_V2.md section 4",

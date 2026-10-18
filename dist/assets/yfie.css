@@ -267,7 +267,8 @@ html[dir=rtl]{--fs-display:38px;--lh-display:1.35;--fs-q:23px;--fs-st:21px;--fs-
 .spine h3{font-size:11px;margin-bottom:6px}
 .spine li{font-size:13.5px;line-height:1.4;border-top:0}
 .spine li a,.spine .index li a{padding:5px 0}
-.spine .index .n{min-width:1.9em;color:var(--mute);font-weight:500}
+.spine .index .n{min-width:1.9em;color:var(--green-700);font-weight:500}
+.spine .index li a{margin-inline-start:0}   /* G3 review: the numerals no longer hang into a padding the lighter rail does not have */
 .spine .edges li{border-top:1px solid var(--rule)}
 .spine .edges li:first-child{border-top:0}
 .spine .index{display:block}
@@ -730,7 +731,7 @@ button:disabled,.tbtn:disabled{color:var(--ink-2);cursor:not-allowed;text-decora
 .head .rubric{color:var(--brass-700)}
 .head .st{color:var(--ink-2)}
 .head .st b{color:var(--ink)}
-[dir=ltr] h1{letter-spacing:-.018em}
+[dir=ltr] h1{letter-spacing:-.02em}
 /* G2: two calls to action, one filled and one outlined at one pixel; the register head on a wide screen */
 .head .actions,.head-rule .actions{margin-top:8px;gap:8px 10px}
 .head .actions a,.head-rule .actions a{display:inline-flex;align-items:center;min-height:40px;box-sizing:border-box;padding:0 16px;border:1px solid var(--green-700);border-radius:2px;color:var(--green-700);background:var(--white);text-decoration:none;font-size:var(--fs-src)}
@@ -739,14 +740,14 @@ button:disabled,.tbtn:disabled{color:var(--ink-2);cursor:not-allowed;text-decora
 .head-rule{border-top:1px solid var(--rule);padding-top:4px}
 .head .st{font-weight:400;color:var(--ink)}
 @media (min-width:900px){
-.obj .head:has(> .st){display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:44px;row-gap:0;align-items:start}
-.obj .head:has(> .st)>.crumb{grid-column:1 / -1;grid-row:1;margin-bottom:8px}
-.obj .head:has(> .st)>.rubric{grid-column:1 / -1;grid-row:2;margin-bottom:8px}
-.obj .head:has(> .st)>.q{grid-column:1 / -1;grid-row:3;max-width:var(--measure);margin-bottom:10px}
-.obj .head:has(> .st)>h1{grid-column:1;grid-row:4 / span 3;max-width:none}
-.obj .head:has(> .st)>.st{grid-column:2;grid-row:4;margin-top:6px}
-.obj .head:has(> .st)>.actions{grid-column:2;grid-row:5;margin-top:14px}
-.obj .head:has(> .st)>.page-tools{grid-column:2;grid-row:6;margin-top:12px}
+.obj .head:has(> .st[data-register]){display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:44px;row-gap:0;align-items:start}
+.obj .head:has(> .st[data-register])>.crumb{grid-column:1 / -1;grid-row:1;margin-bottom:8px}
+.obj .head:has(> .st[data-register])>.rubric{grid-column:1 / -1;grid-row:2;margin-bottom:8px}
+.obj .head:has(> .st[data-register])>.q{grid-column:1 / -1;grid-row:3;max-width:var(--measure);margin-bottom:10px}
+.obj .head:has(> .st[data-register])>h1{grid-column:1;grid-row:4 / span 3;max-width:none}
+.obj .head:has(> .st[data-register])>.st{grid-column:2;grid-row:4;margin-top:6px}
+.obj .head:has(> .st[data-register])>.actions{grid-column:2;grid-row:5;margin-top:14px}
+.obj .head:has(> .st[data-register])>.page-tools{grid-column:2;grid-row:6;margin-top:12px}
 .head-rule{border-top:0;padding-top:0}
 }
 /* page tools: the existing cite, print, share and report controls as one quiet row of tool buttons */
@@ -761,7 +762,7 @@ svg .bar,.mark.a{fill:var(--green-900)}.lane-svg .span,.mark.b,.path{stroke:var(
 .obj,.spine,.cluster h3,h3.grp,details.grp summary,.obj.prio:first-child,.prow,.fig{border-top-color:var(--green-900)}
 .qa .rubric,.spine h3,.cat h3,.kv dt,.prow .dim,.inst .trust h3{color:var(--brass-700)}
 .rubric .n,.strip a .n,.spine .index .n{color:var(--green-700)}
-.qa .rubric .n{display:inline-block;min-width:1.6em;font-size:1em;line-height:1;letter-spacing:.02em;vertical-align:0;color:var(--mute)}
+.qa .rubric .n{display:inline-block;min-width:1.6em;font-size:1.3em;line-height:1;letter-spacing:.02em;vertical-align:-.08em;color:var(--green-700)}
 .qa .rubric{font-size:11.5px;letter-spacing:.12em}
 [dir=rtl] .qa .rubric{font-size:13.5px;letter-spacing:0}
 .qlist{counter-reset:q}
@@ -847,18 +848,19 @@ body.export-doc .exp{border-top-color:var(--green-900)}
    every governed region keeps its place, and nothing is hidden that a disclosure does not name. ---- */
 @media screen{
 /* one disclosure pattern: a named bar with a + / − control; the governed summary is the whole hit area */
-details.fold{border-top:3px solid var(--green-900);margin-top:4px}
-details.fold>summary{display:flex;align-items:center;gap:12px;min-height:48px;box-sizing:border-box;padding:10px 14px;cursor:pointer;list-style:none;background:var(--white);border:1px solid var(--rule);border-top:0;font-weight:600;font-size:var(--fs-body);line-height:1.35;color:var(--ink)}
+/* G2 pass two (DL-V2-001, rules not fills): the named bar is a ruled row, not a white box; the control keeps its box */
+details.fold{border-top:2px solid var(--green-900);margin-top:4px}
+details.fold>summary{display:flex;align-items:center;gap:12px;min-height:48px;box-sizing:border-box;padding:10px 0;cursor:pointer;list-style:none;background:none;border:0;border-bottom:1px solid var(--rule);font-weight:600;font-size:var(--fs-body);line-height:1.35;color:var(--ink)}
 details.fold>summary::-webkit-details-marker,details.more>summary::-webkit-details-marker,details.hub>summary::-webkit-details-marker,details.grp>summary::-webkit-details-marker{display:none}
 details.fold>summary .count{color:var(--ink-2);font-weight:500}
-details.fold>summary:hover{background:var(--sage-100);color:var(--green-900)}
-details.fold[open]>summary{background:var(--sage-100)}
+details.fold>summary:hover{color:var(--green-900)}
+details.fold[open]>summary{border-bottom-color:var(--rule-2)}
 details.fold>summary::before,details.more>summary::before,details.hub>summary::before,details.grp>summary::before{content:"+";content:"+" / "";flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;box-sizing:border-box;border:1.5px solid var(--green-700);border-radius:2px;color:var(--green-700);font-weight:600;font-size:16px;line-height:1;margin-inline-end:10px;vertical-align:-4px;background:var(--white)}
 details.fold>summary::before{margin-inline-end:0}
 details.fold[open]>summary::before,details.more[open]>summary::before,details.hub[open]>summary::before,details.grp[open]>summary::before{content:"−";content:"−" / "";background:var(--green-700);color:var(--white)}
 details.more>summary,details.hub>summary{display:flex;align-items:center;min-height:44px;box-sizing:border-box}
-details.more>summary{min-height:48px;padding:10px 14px;background:var(--white);border:1px solid var(--rule);font-size:var(--fs-src)}
-details.more>summary:hover,details.more[open]>summary{background:var(--sage-100);color:var(--green-900)}
+details.more>summary{min-height:48px;padding:10px 0;background:none;border:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-size:var(--fs-src)}
+details.more>summary:hover,details.more[open]>summary{color:var(--green-900)}
 details.more[open]>summary{margin-bottom:6px}
 details.grp>summary{display:flex;align-items:center;min-height:48px;box-sizing:border-box}
 details.fold>.multiple,details.fold>figure{margin-top:16px}
@@ -887,7 +889,13 @@ details.chron-fold>p.small{margin:14px 0 4px}
 .cite-out{white-space:pre-wrap;word-break:break-word;font:inherit;font-size:var(--fs-src);background:var(--paper);border:1px solid var(--rule);padding:8px 12px;margin:8px 0;direction:ltr;text-align:left}.cite-out[hidden]{display:none}
 .compare-reason{margin-top:4px;font-weight:600}
 details.home-fold{margin-top:6px}
-details.home-fold>summary{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 16px}
+details.home-fold>summary{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 0}
+/* G2 pass two: on a phone Home's figures come before the topics line (G1: the figure-first candidates scored 15 and 12
+   of 15 on first-screen comprehension against 12 for topics-first); on a wide screen the register keeps topics first */
+@media (max-width:899px){
+.obj.page-obj:has(> #topics)>*{order:10}
+.obj.page-obj:has(> #topics)>.head{order:0}.obj.page-obj:has(> #topics)>#s3{order:1}.obj.page-obj:has(> #topics)>.strip{order:2}.obj.page-obj:has(> #topics)>#topics{order:3}.obj.page-obj:has(> #topics)>#s4{order:4}
+}
 details.home-fold>summary::before{grid-row:1 / span 2;align-self:center}
 details.home-fold>summary>.rubric,details.home-fold>summary>h2{grid-column:2;margin:0}
 details.home-fold>summary>h2{font-size:var(--fs-q);line-height:var(--lh-q)}

@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 291,
-  "DESIGN_PACKAGE": 679,
+  "DESIGN_PACKAGE": 695,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
@@ -4480,11 +4480,11 @@
    "class": "DESIGN_PACKAGE"
   },
   {
-   "path": "design/evidence/v2/g0/g2a_metrics.json",
+   "path": "design/evidence/v2/g0/g2_metrics.json",
    "class": "DESIGN_PACKAGE"
   },
   {
-   "path": "design/evidence/v2/g0/g2a_scoreboard.md",
+   "path": "design/evidence/v2/g0/g2_scoreboard.md",
    "class": "DESIGN_PACKAGE"
   },
   {
@@ -5276,7 +5276,67 @@
    "class": "DESIGN_PACKAGE"
   },
   {
-   "path": "design/evidence/v2/g2/pass1_before_after.md",
+   "path": "design/evidence/v2/g2/final_before_after.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/p9_editors.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/perf_g2.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/persona_audit_g3.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_ar390_methodology.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_ar390_readings_how-money-reaches-households.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_en1440_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_en1440_methodology.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_en1440_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/after_en1440_readings_how-money-reaches-households.png",
    "class": "DESIGN_PACKAGE"
   },
   {
@@ -5349,6 +5409,10 @@
   },
   {
    "path": "design/evidence/v2/g2/shots/pass1_en1440_reading.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/w4f_performance.md",
    "class": "DESIGN_PACKAGE"
   },
   {

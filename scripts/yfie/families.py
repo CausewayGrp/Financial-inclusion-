@@ -144,7 +144,7 @@ def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "
     # and the phone order (title, statement, actions, then the tools) hold for every family that has a statement
     return (f'<div class="head">{crumb_html}' + (f'<span class="rubric">{esc(rubric_text)}</span>' if rubric_text else "")
             + (f'<p class="q">{esc(question)}</p>' if question else "") + f'{R.h1(page["title"])}{page_tools(shell)}'
-            + (f'<div class="st">{lead_paragraphs(lead)}</div>' if lead else "") + actions_html + "</div>")   # B7 review: a blank line starts a paragraph
+            + (f'<div class="st"{R.head_class(lead)}>{lead_paragraphs(lead)}</div>' if lead else "") + actions_html + "</div>")   # B7 review: a blank line starts a paragraph
 
 
 def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True, foot_spine: bool = True) -> str:

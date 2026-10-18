@@ -1,8 +1,8 @@
 {
- "label": "g2a",
- "commit": "5ee0758137a09c615b7ab3e0ca0faad044c8390b",
+ "label": "g2",
+ "commit": "520a42f8f5731cfdf4fb1ca4a0705c75e78443f8",
  "site": "dist",
- "measured_at_utc": "2026-10-18T06:39:18Z",
+ "measured_at_utc": "2026-10-18T07:11:28Z",
  "method": "Chromium (Playwright), gzip static server as dist/_headers declares; screens = scrollHeight / viewport height (320x568, 390x844, 768x1024, 1440x900); cold bytes = transferSize of the navigation and every resource in a fresh context at 390; journeys = shortest click path over the built HTML link graph from Home; automated, not human timing",
  "routes": [
   "/",
@@ -42,7 +42,7 @@
    "widths": {
     "320": {
      "screens": 14.9,
-     "px": 8473,
+     "px": 8437,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 40,
@@ -57,24 +57,24 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 55,
+      "words": 56,
       "figure": false,
       "clock": false,
       "boundary": false,
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 912,
-       "clock": 1471,
-       "boundary": 1466,
+       "figure": 756,
+       "clock": 1315,
+       "boundary": 1310,
        "evidence_link": 382,
        "source_link": null
       }
      }
     },
     "390": {
-     "screens": 9.0,
-     "px": 7560,
+     "screens": 8.9,
+     "px": 7524,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 40,
@@ -89,26 +89,26 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 86,
+      "words": 72,
       "figure": true,
       "clock": false,
       "boundary": false,
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 823,
-       "clock": 1281,
-       "boundary": 1276,
+       "figure": 667,
+       "clock": 1125,
+       "boundary": 1120,
        "evidence_link": 361,
        "source_link": null
       }
      },
      "h1_text": "الشمول المالي في اليمن ليس رقمًا واحدًا.",
-     "cold_bytes": 273876,
+     "cold_bytes": 274288,
      "requests": 7,
      "bytes_by_type": {
-      "html": 11141,
-      "css": 18251,
+      "html": 11148,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -117,7 +117,7 @@
     },
     "768": {
      "screens": 5.8,
-     "px": 5894,
+     "px": 5890,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 40,
@@ -139,9 +139,9 @@
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 660,
-       "clock": 913,
-       "boundary": 908,
+       "figure": 539,
+       "clock": 793,
+       "boundary": 788,
        "evidence_link": 299,
        "source_link": null
       }
@@ -149,7 +149,7 @@
     },
     "1440": {
      "screens": 5.6,
-     "px": 5017,
+     "px": 5039,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 40,
@@ -171,10 +171,10 @@
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 685,
-       "clock": 1032,
-       "boundary": 1027,
-       "evidence_link": 356,
+       "figure": 711,
+       "clock": 1058,
+       "boundary": 1053,
+       "evidence_link": 388,
        "source_link": null
       }
      }
@@ -249,11 +249,11 @@
       }
      },
      "h1_text": "ابدأ بالسؤال، لا بالبيانات.",
-     "cold_bytes": 271583,
+     "cold_bytes": 271996,
      "requests": 7,
      "bytes_by_type": {
-      "html": 8848,
-      "css": 18251,
+      "html": 8856,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -293,8 +293,8 @@
      }
     },
     "1440": {
-     "screens": 5.6,
-     "px": 5066,
+     "screens": 5.7,
+     "px": 5085,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 27,
@@ -317,9 +317,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 3670,
+       "clock": 3690,
        "boundary": null,
-       "evidence_link": 2340,
+       "evidence_link": 2360,
        "source_link": null
       }
      }
@@ -332,7 +332,7 @@
    "widths": {
     "320": {
      "screens": 22.6,
-     "px": 12853,
+     "px": 12852,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 49,
@@ -355,7 +355,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7292,
+       "clock": 7291,
        "boundary": null,
        "evidence_link": 853,
        "source_link": null
@@ -364,7 +364,7 @@
     },
     "390": {
      "screens": 13.4,
-     "px": 11317,
+     "px": 11316,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 49,
@@ -387,18 +387,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6228,
+       "clock": 6227,
        "boundary": null,
        "evidence_link": 702,
        "source_link": null
       }
      },
      "h1_text": "الأفراد: مجتمع سكاني واحد، وأدلة من تواريخ مختلفة",
-     "cold_bytes": 282255,
+     "cold_bytes": 282660,
      "requests": 7,
      "bytes_by_type": {
       "html": 19520,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -407,7 +407,7 @@
     },
     "768": {
      "screens": 7.6,
-     "px": 7803,
+     "px": 7802,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 49,
@@ -430,7 +430,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4385,
+       "clock": 4384,
        "boundary": null,
        "evidence_link": 509,
        "source_link": null
@@ -438,8 +438,8 @@
      }
     },
     "1440": {
-     "screens": 9.2,
-     "px": 8312,
+     "screens": 9.1,
+     "px": 8176,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 49,
@@ -454,7 +454,7 @@
      "figures": 5,
      "tables": 4,
      "first_screen": {
-      "words": 266,
+      "words": 277,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -462,7 +462,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4553,
+       "clock": 4417,
        "boundary": null,
        "evidence_link": 602,
        "source_link": null
@@ -477,7 +477,7 @@
    "widths": {
     "320": {
      "screens": 33.7,
-     "px": 19160,
+     "px": 19159,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 60,
@@ -500,7 +500,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 13592,
+       "clock": 13591,
        "boundary": 4232,
        "evidence_link": 763,
        "source_link": null
@@ -509,7 +509,7 @@
     },
     "390": {
      "screens": 19.6,
-     "px": 16560,
+     "px": 16559,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 60,
@@ -532,18 +532,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 11668,
+       "clock": 11667,
        "boundary": 3573,
        "evidence_link": 642,
        "source_link": null
       }
      },
      "h1_text": "المدفوعات: تزايد الأجهزة المُبلَّغ عنها، والاستخدام غير مقيس",
-     "cold_bytes": 284408,
+     "cold_bytes": 284813,
      "requests": 7,
      "bytes_by_type": {
       "html": 21673,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -552,7 +552,7 @@
     },
     "768": {
      "screens": 11.7,
-     "px": 12009,
+     "px": 12008,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 60,
@@ -575,7 +575,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 8683,
+       "clock": 8682,
        "boundary": 2641,
        "evidence_link": 473,
        "source_link": null
@@ -583,10 +583,10 @@
      }
     },
     "1440": {
-     "screens": 13.7,
-     "px": 12320,
+     "screens": 13.6,
+     "px": 12256,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 60,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -607,9 +607,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 8818,
-       "boundary": 2629,
-       "evidence_link": 650,
+       "clock": 8753,
+       "boundary": 2565,
+       "evidence_link": 584,
        "source_link": null
       }
      }
@@ -621,8 +621,8 @@
    "route": "/remittances/",
    "widths": {
     "320": {
-     "screens": 28.2,
-     "px": 15990,
+     "screens": 28.1,
+     "px": 15989,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 63,
@@ -645,7 +645,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 11434,
+       "clock": 11433,
        "boundary": null,
        "evidence_link": 700,
        "source_link": null
@@ -654,7 +654,7 @@
     },
     "390": {
      "screens": 16.4,
-     "px": 13865,
+     "px": 13864,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 63,
@@ -677,18 +677,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 9833,
+       "clock": 9832,
        "boundary": null,
        "evidence_link": 618,
        "source_link": null
       }
      },
      "h1_text": "الحوالات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
-     "cold_bytes": 281249,
+     "cold_bytes": 281660,
      "requests": 7,
      "bytes_by_type": {
-      "html": 18514,
-      "css": 18251,
+      "html": 18520,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -697,7 +697,7 @@
     },
     "768": {
      "screens": 9.4,
-     "px": 9673,
+     "px": 9672,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 63,
@@ -720,7 +720,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6590,
+       "clock": 6589,
        "boundary": null,
        "evidence_link": 480,
        "source_link": null
@@ -729,7 +729,7 @@
     },
     "1440": {
      "screens": 10.7,
-     "px": 9623,
+     "px": 9651,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 63,
@@ -752,9 +752,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6748,
+       "clock": 6776,
        "boundary": null,
-       "evidence_link": 578,
+       "evidence_link": 613,
        "source_link": null
       }
      }
@@ -767,7 +767,7 @@
    "widths": {
     "320": {
      "screens": 23.1,
-     "px": 13149,
+     "px": 13148,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 41,
@@ -790,7 +790,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 8129,
+       "clock": 8128,
        "boundary": null,
        "evidence_link": 953,
        "source_link": null
@@ -799,7 +799,7 @@
     },
     "390": {
      "screens": 13.6,
-     "px": 11510,
+     "px": 11509,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 41,
@@ -822,18 +822,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7074,
+       "clock": 7073,
        "boundary": null,
        "evidence_link": 778,
        "source_link": null
       }
      },
      "h1_text": "المنشآت: الإجابة تتوقف على السؤال المطروح",
-     "cold_bytes": 278262,
+     "cold_bytes": 278667,
      "requests": 7,
      "bytes_by_type": {
       "html": 15527,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -842,7 +842,7 @@
     },
     "768": {
      "screens": 7.6,
-     "px": 7761,
+     "px": 7760,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 41,
@@ -865,7 +865,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4701,
+       "clock": 4700,
        "boundary": null,
        "evidence_link": 594,
        "source_link": null
@@ -873,8 +873,8 @@
      }
     },
     "1440": {
-     "screens": 8.8,
-     "px": 7961,
+     "screens": 8.6,
+     "px": 7754,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 41,
@@ -889,7 +889,7 @@
      "figures": 3,
      "tables": 2,
      "first_screen": {
-      "words": 255,
+      "words": 314,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -897,7 +897,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4839,
+       "clock": 4632,
        "boundary": null,
        "evidence_link": 669,
        "source_link": null
@@ -911,10 +911,10 @@
    "route": "/finance/",
    "widths": {
     "320": {
-     "screens": 22.3,
-     "px": 12686,
+     "screens": 22.2,
+     "px": 12621,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 76,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -935,18 +935,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7999,
+       "clock": 7934,
        "boundary": null,
-       "evidence_link": 957,
+       "evidence_link": 894,
        "source_link": null
       }
      }
     },
     "390": {
      "screens": 12.9,
-     "px": 10904,
+     "px": 10847,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 76,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -967,18 +967,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6649,
+       "clock": 6592,
        "boundary": null,
-       "evidence_link": 742,
+       "evidence_link": 687,
        "source_link": null
       }
      },
      "h1_text": "البنوك والتمويل الأصغر: أرقام المقترضين والمدخرين والأرصدة تقيس أشياء مختلفة",
-     "cold_bytes": 297126,
+     "cold_bytes": 297537,
      "requests": 7,
      "bytes_by_type": {
-      "html": 34391,
-      "css": 18251,
+      "html": 34397,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -987,9 +987,9 @@
     },
     "768": {
      "screens": 7.4,
-     "px": 7585,
+     "px": 7536,
      "overflow_x": false,
-     "h1_lines": 2,
+     "h1_lines": 1,
      "h1_chars": 76,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -1002,7 +1002,7 @@
      "figures": 3,
      "tables": 2,
      "first_screen": {
-      "words": 194,
+      "words": 200,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -1010,18 +1010,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4577,
+       "clock": 4527,
        "boundary": null,
-       "evidence_link": 580,
+       "evidence_link": 533,
        "source_link": null
       }
      }
     },
     "1440": {
-     "screens": 8.3,
-     "px": 7501,
+     "screens": 8.2,
+     "px": 7420,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 76,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -1034,7 +1034,7 @@
      "figures": 3,
      "tables": 2,
      "first_screen": {
-      "words": 283,
+      "words": 294,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -1042,9 +1042,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4529,
+       "clock": 4448,
        "boundary": null,
-       "evidence_link": 746,
+       "evidence_link": 676,
        "source_link": null
       }
      }
@@ -1119,11 +1119,11 @@
       }
      },
      "h1_text": "مقدمو الخدمات المالية: الإدراج في القائمة ليس تشغيلًا",
-     "cold_bytes": 279159,
+     "cold_bytes": 279564,
      "requests": 7,
      "bytes_by_type": {
       "html": 16424,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -1163,10 +1163,10 @@
      }
     },
     "1440": {
-     "screens": 11.2,
-     "px": 10086,
+     "screens": 11.1,
+     "px": 10023,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 53,
      "toc_entries": 5,
      "toc_strip_overflows": false,
@@ -1187,10 +1187,10 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7528,
+       "clock": 7464,
        "boundary": null,
        "evidence_link": 602,
-       "source_link": 5564
+       "source_link": 5500
       }
      }
     }
@@ -1201,8 +1201,8 @@
    "route": "/access/",
    "widths": {
     "320": {
-     "screens": 16.3,
-     "px": 9246,
+     "screens": 16.2,
+     "px": 9219,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 66,
@@ -1264,11 +1264,11 @@
       }
      },
      "h1_text": "الوصول إلى الخدمات: أماكن الحصول عليها لم تُرسم خريطتها إلا جزئيًا",
-     "cold_bytes": 273821,
+     "cold_bytes": 274226,
      "requests": 7,
      "bytes_by_type": {
       "html": 11086,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -1309,7 +1309,7 @@
     },
     "1440": {
      "screens": 6.2,
-     "px": 5564,
+     "px": 5552,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 66,
@@ -1332,7 +1332,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 3086,
+       "clock": 3074,
        "boundary": null,
        "evidence_link": 584,
        "source_link": null
@@ -1409,11 +1409,11 @@
       }
      },
      "h1_text": "الإصلاحات: قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة.",
-     "cold_bytes": 280905,
+     "cold_bytes": 281310,
      "requests": 7,
      "bytes_by_type": {
       "html": 18170,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -1453,8 +1453,8 @@
      }
     },
     "1440": {
-     "screens": 13.5,
-     "px": 12113,
+     "screens": 13.3,
+     "px": 11978,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 52,
@@ -1469,7 +1469,7 @@
      "figures": 4,
      "tables": 2,
      "first_screen": {
-      "words": 293,
+      "words": 304,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -1477,10 +1477,10 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4466,
+       "clock": 4330,
        "boundary": null,
        "evidence_link": 650,
-       "source_link": 4466
+       "source_link": 4330
       }
      }
     }
@@ -1554,11 +1554,11 @@
       }
      },
      "h1_text": "افحص الدليل الذي تستند إليه الإجابة",
-     "cold_bytes": 285445,
+     "cold_bytes": 285850,
      "requests": 7,
      "bytes_by_type": {
       "html": 22710,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -1637,7 +1637,7 @@
    "widths": {
     "320": {
      "screens": 17.3,
-     "px": 9847,
+     "px": 9820,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 55,
@@ -1699,11 +1699,11 @@
       }
      },
      "h1_text": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
-     "cold_bytes": 274522,
+     "cold_bytes": 274927,
      "requests": 7,
      "bytes_by_type": {
       "html": 11787,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -1782,7 +1782,7 @@
    "widths": {
     "320": {
      "screens": 17.2,
-     "px": 9791,
+     "px": 9764,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 31,
@@ -1844,11 +1844,11 @@
       }
      },
      "h1_text": "توسع البنية التحتية لنقاط البيع",
-     "cold_bytes": 273691,
+     "cold_bytes": 274096,
      "requests": 7,
      "bytes_by_type": {
       "html": 10956,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -1927,7 +1927,7 @@
    "widths": {
     "320": {
      "screens": 27.7,
-     "px": 15747,
+     "px": 15720,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 35,
@@ -1989,11 +1989,11 @@
       }
      },
      "h1_text": "أجهزة نقاط البيع المبلغ عنها شهريًا",
-     "cold_bytes": 276937,
+     "cold_bytes": 277342,
      "requests": 7,
      "bytes_by_type": {
       "html": 14202,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -2134,11 +2134,11 @@
       }
      },
      "h1_text": "قارن الأدلة من دون وضع ما لا يتماثل على مقياس واحد",
-     "cold_bytes": 282880,
+     "cold_bytes": 283285,
      "requests": 7,
      "bytes_by_type": {
       "html": 20145,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -2178,8 +2178,8 @@
      }
     },
     "1440": {
-     "screens": 7.0,
-     "px": 6336,
+     "screens": 6.9,
+     "px": 6226,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 50,
@@ -2279,11 +2279,11 @@
       }
      },
      "h1_text": "القراءات التحليلية",
-     "cold_bytes": 271753,
+     "cold_bytes": 272166,
      "requests": 7,
      "bytes_by_type": {
-      "html": 9018,
-      "css": 18251,
+      "html": 9026,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -2323,8 +2323,8 @@
      }
     },
     "1440": {
-     "screens": 5.1,
-     "px": 4615,
+     "screens": 5.2,
+     "px": 4635,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 18,
@@ -2347,9 +2347,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 430,
+       "clock": 450,
        "boundary": null,
-       "evidence_link": 3440,
+       "evidence_link": 3460,
        "source_link": null
       }
      }
@@ -2424,11 +2424,11 @@
       }
      },
      "h1_text": "الحوالات المحلية والحسابات: ما الذي تثبته الأدلة؟",
-     "cold_bytes": 283755,
+     "cold_bytes": 284160,
      "requests": 7,
      "bytes_by_type": {
       "html": 21020,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -2468,10 +2468,10 @@
      }
     },
     "1440": {
-     "screens": 24.8,
-     "px": 22307,
+     "screens": 24.3,
+     "px": 21902,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 49,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -2484,7 +2484,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 194,
+      "words": 365,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -2492,10 +2492,10 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 1191,
+       "clock": 907,
        "boundary": null,
        "evidence_link": 516,
-       "source_link": 12987
+       "source_link": 12581
       }
      }
     }
@@ -2569,11 +2569,11 @@
       }
      },
      "h1_text": "اعثر على المصدر الأصلي الذي يستند إليه كل دليل",
-     "cold_bytes": 331382,
+     "cold_bytes": 331787,
      "requests": 7,
      "bytes_by_type": {
       "html": 68647,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -2613,8 +2613,8 @@
      }
     },
     "1440": {
-     "screens": 16.2,
-     "px": 14557,
+     "screens": 16.1,
+     "px": 14484,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 46,
@@ -2629,7 +2629,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 198,
+      "words": 211,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -2640,7 +2640,7 @@
        "clock": null,
        "boundary": null,
        "evidence_link": 382,
-       "source_link": 2264
+       "source_link": 2190
       }
      }
     }
@@ -2714,11 +2714,11 @@
       }
      },
      "h1_text": "حافظ على معنى الدليل قبل أن تقارن الأرقام.",
-     "cold_bytes": 276740,
+     "cold_bytes": 277145,
      "requests": 7,
      "bytes_by_type": {
       "html": 14005,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -2758,8 +2758,8 @@
      }
     },
     "1440": {
-     "screens": 10.4,
-     "px": 9332,
+     "screens": 10.1,
+     "px": 9079,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 42,
@@ -2774,7 +2774,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 243,
+      "words": 281,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -2782,7 +2782,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 5056,
+       "clock": 4804,
        "boundary": null,
        "evidence_link": 661,
        "source_link": null
@@ -2859,11 +2859,11 @@
       }
      },
      "h1_text": "تكتسب فجوة الدليل أهميتها عندما يمكن أن تغيّر قرارًا.",
-     "cold_bytes": 293900,
+     "cold_bytes": 294305,
      "requests": 7,
      "bytes_by_type": {
       "html": 31165,
-      "css": 18251,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -2903,10 +2903,10 @@
      }
     },
     "1440": {
-     "screens": 16.0,
-     "px": 14362,
+     "screens": 15.9,
+     "px": 14324,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 53,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -2919,7 +2919,7 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 285,
+      "words": 286,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -2927,10 +2927,10 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 2163,
+       "clock": 2125,
        "boundary": null,
-       "evidence_link": 3563,
-       "source_link": 3916
+       "evidence_link": 3525,
+       "source_link": 3878
       }
      }
     }
@@ -3004,11 +3004,11 @@
       }
      },
      "h1_text": "مورد عام ثنائي اللغة لفهم أدلة الشمول المالي في اليمن.",
-     "cold_bytes": 271400,
+     "cold_bytes": 271812,
      "requests": 7,
      "bytes_by_type": {
-      "html": 8665,
-      "css": 18251,
+      "html": 8672,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -3049,9 +3049,9 @@
     },
     "1440": {
      "screens": 4.1,
-     "px": 3699,
+     "px": 3718,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 54,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -3064,7 +3064,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 248,
+      "words": 199,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -3149,11 +3149,11 @@
       }
      },
      "h1_text": "التصحيحات وسجل الإصدارات",
-     "cold_bytes": 271535,
+     "cold_bytes": 271947,
      "requests": 7,
      "bytes_by_type": {
-      "html": 8800,
-      "css": 18251,
+      "html": 8807,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -3194,9 +3194,9 @@
     },
     "1440": {
      "screens": 3.3,
-     "px": 2970,
+     "px": 2954,
      "overflow_x": false,
-     "h1_lines": 2,
+     "h1_lines": 1,
      "h1_chars": 24,
      "toc_entries": 0,
      "toc_strip_overflows": false,
@@ -3220,7 +3220,7 @@
        "clock": null,
        "boundary": null,
        "evidence_link": 353,
-       "source_link": 616
+       "source_link": 600
       }
      }
     }
@@ -3294,11 +3294,11 @@
       }
      },
      "h1_text": "التواصل والإبلاغ عن خطأ",
-     "cold_bytes": 271727,
+     "cold_bytes": 272139,
      "requests": 7,
      "bytes_by_type": {
-      "html": 8992,
-      "css": 18251,
+      "html": 8999,
+      "css": 18656,
       "font": 225148,
       "image": 2109,
       "js": 17227
@@ -3339,7 +3339,7 @@
     },
     "1440": {
      "screens": 3.9,
-     "px": 3503,
+     "px": 3523,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 23,
@@ -3354,7 +3354,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 152,
+      "words": 151,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -3376,8 +3376,8 @@
    "route": "/",
    "widths": {
     "320": {
-     "screens": 14.8,
-     "px": 8426,
+     "screens": 14.7,
+     "px": 8371,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 47,
@@ -3399,9 +3399,9 @@
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 1045,
-       "clock": 1609,
-       "boundary": 1596,
+       "figure": 901,
+       "clock": 1465,
+       "boundary": 1452,
        "evidence_link": 545,
        "source_link": null
       }
@@ -3409,7 +3409,7 @@
     },
     "390": {
      "screens": 8.8,
-     "px": 7435,
+     "px": 7431,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 47,
@@ -3424,26 +3424,26 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 95,
-      "figure": false,
+      "words": 85,
+      "figure": true,
       "clock": false,
       "boundary": false,
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 876,
-       "clock": 1355,
-       "boundary": 1342,
+       "figure": 732,
+       "clock": 1211,
+       "boundary": 1198,
        "evidence_link": 404,
        "source_link": null
       }
      },
      "h1_text": "Financial inclusion in Yemen is not one number.",
-     "cold_bytes": 245108,
+     "cold_bytes": 245518,
      "requests": 7,
      "bytes_by_type": {
-      "html": 9801,
-      "css": 18251,
+      "html": 9806,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -3452,7 +3452,7 @@
     },
     "768": {
      "screens": 5.5,
-     "px": 5626,
+     "px": 5622,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 47,
@@ -3467,16 +3467,16 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 249,
+      "words": 258,
       "figure": true,
       "clock": true,
       "boundary": true,
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 640,
-       "clock": 862,
-       "boundary": 849,
+       "figure": 560,
+       "clock": 782,
+       "boundary": 769,
        "evidence_link": 312,
        "source_link": null
       }
@@ -3484,7 +3484,7 @@
     },
     "1440": {
      "screens": 5.5,
-     "px": 4934,
+     "px": 4950,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 47,
@@ -3499,17 +3499,17 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 225,
+      "words": 223,
       "figure": true,
       "clock": false,
       "boundary": false,
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 724,
-       "clock": 1077,
-       "boundary": 1064,
-       "evidence_link": 422,
+       "figure": 744,
+       "clock": 1097,
+       "boundary": 1084,
+       "evidence_link": 448,
        "source_link": null
       }
      }
@@ -3554,7 +3554,7 @@
     },
     "390": {
      "screens": 8.2,
-     "px": 6937,
+     "px": 6938,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 41,
@@ -3584,11 +3584,11 @@
       }
      },
      "h1_text": "Start with the question, not the dataset.",
-     "cold_bytes": 243171,
+     "cold_bytes": 243581,
      "requests": 7,
      "bytes_by_type": {
-      "html": 7864,
-      "css": 18251,
+      "html": 7869,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -3620,7 +3620,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 3509,
+       "clock": 3510,
        "boundary": null,
        "evidence_link": 1859,
        "source_link": null
@@ -3629,9 +3629,9 @@
     },
     "1440": {
      "screens": 5.5,
-     "px": 4928,
+     "px": 4942,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 41,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -3652,9 +3652,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 3620,
+       "clock": 3634,
        "boundary": null,
-       "evidence_link": 2353,
+       "evidence_link": 2367,
        "source_link": null
       }
      }
@@ -3666,8 +3666,8 @@
    "route": "/people/",
    "widths": {
     "320": {
-     "screens": 21.9,
-     "px": 12434,
+     "screens": 21.8,
+     "px": 12410,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 53,
@@ -3690,7 +3690,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7122,
+       "clock": 7098,
        "boundary": null,
        "evidence_link": 829,
        "source_link": null
@@ -3722,18 +3722,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6085,
+       "clock": 6084,
        "boundary": null,
        "evidence_link": 672,
        "source_link": null
       }
      },
      "h1_text": "People: one population, evidence from different dates",
-     "cold_bytes": 251950,
+     "cold_bytes": 252355,
      "requests": 7,
      "bytes_by_type": {
       "html": 16643,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -3742,7 +3742,7 @@
     },
     "768": {
      "screens": 7.2,
-     "px": 7342,
+     "px": 7341,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 53,
@@ -3765,7 +3765,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4116,
+       "clock": 4115,
        "boundary": null,
        "evidence_link": 460,
        "source_link": null
@@ -3773,10 +3773,10 @@
      }
     },
     "1440": {
-     "screens": 8.8,
-     "px": 7906,
+     "screens": 8.6,
+     "px": 7773,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 53,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -3789,7 +3789,7 @@
      "figures": 5,
      "tables": 4,
      "first_screen": {
-      "words": 280,
+      "words": 270,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -3797,9 +3797,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4227,
+       "clock": 4095,
        "boundary": null,
-       "evidence_link": 632,
+       "evidence_link": 564,
        "source_link": null
       }
      }
@@ -3812,7 +3812,7 @@
    "widths": {
     "320": {
      "screens": 33.1,
-     "px": 18821,
+     "px": 18797,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 51,
@@ -3835,7 +3835,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 13675,
+       "clock": 13651,
        "boundary": 4371,
        "evidence_link": 906,
        "source_link": null
@@ -3844,7 +3844,7 @@
     },
     "390": {
      "screens": 19.4,
-     "px": 16346,
+     "px": 16345,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 51,
@@ -3867,18 +3867,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 11744,
+       "clock": 11743,
        "boundary": 3694,
        "evidence_link": 723,
        "source_link": null
       }
      },
      "h1_text": "Payments: more reported terminals, use not measured",
-     "cold_bytes": 254209,
+     "cold_bytes": 254614,
      "requests": 7,
      "bytes_by_type": {
       "html": 18902,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -3887,7 +3887,7 @@
     },
     "768": {
      "screens": 10.9,
-     "px": 11207,
+     "px": 11206,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 51,
@@ -3910,7 +3910,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 8135,
+       "clock": 8134,
        "boundary": 2554,
        "evidence_link": 485,
        "source_link": null
@@ -3918,10 +3918,10 @@
      }
     },
     "1440": {
-     "screens": 13.1,
-     "px": 11752,
+     "screens": 12.9,
+     "px": 11650,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 51,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -3942,9 +3942,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 8430,
-       "boundary": 2529,
-       "evidence_link": 697,
+       "clock": 8328,
+       "boundary": 2427,
+       "evidence_link": 594,
        "source_link": null
       }
      }
@@ -3956,10 +3956,10 @@
    "route": "/remittances/",
    "widths": {
     "320": {
-     "screens": 26.7,
-     "px": 15175,
+     "screens": 26.6,
+     "px": 15096,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 67,
      "toc_entries": 5,
      "toc_strip_overflows": false,
@@ -3980,16 +3980,16 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 11030,
+       "clock": 10951,
        "boundary": null,
-       "evidence_link": 863,
+       "evidence_link": 808,
        "source_link": null
       }
      }
     },
     "390": {
      "screens": 15.4,
-     "px": 13016,
+     "px": 12994,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 67,
@@ -4004,7 +4004,7 @@
      "figures": 3,
      "tables": 4,
      "first_screen": {
-      "words": 113,
+      "words": 119,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -4012,18 +4012,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 9296,
+       "clock": 9274,
        "boundary": null,
-       "evidence_link": 646,
+       "evidence_link": 626,
        "source_link": null
       }
      },
      "h1_text": "Remittances: each figure depends on its source, concept and edition",
-     "cold_bytes": 251155,
+     "cold_bytes": 251566,
      "requests": 7,
      "bytes_by_type": {
-      "html": 15848,
-      "css": 18251,
+      "html": 15854,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -4032,9 +4032,9 @@
     },
     "768": {
      "screens": 8.7,
-     "px": 8924,
+     "px": 8881,
      "overflow_x": false,
-     "h1_lines": 2,
+     "h1_lines": 1,
      "h1_chars": 67,
      "toc_entries": 5,
      "toc_strip_overflows": false,
@@ -4055,18 +4055,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6145,
+       "clock": 6103,
        "boundary": null,
-       "evidence_link": 491,
+       "evidence_link": 450,
        "source_link": null
       }
      }
     },
     "1440": {
-     "screens": 10.0,
-     "px": 8961,
+     "screens": 9.9,
+     "px": 8908,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 67,
      "toc_entries": 5,
      "toc_strip_overflows": false,
@@ -4087,9 +4087,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6406,
+       "clock": 6353,
        "boundary": null,
-       "evidence_link": 637,
+       "evidence_link": 583,
        "source_link": null
       }
      }
@@ -4102,7 +4102,7 @@
    "widths": {
     "320": {
      "screens": 21.9,
-     "px": 12458,
+     "px": 12434,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 47,
@@ -4125,7 +4125,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7874,
+       "clock": 7850,
        "boundary": null,
        "evidence_link": 880,
        "source_link": null
@@ -4134,7 +4134,7 @@
     },
     "390": {
      "screens": 12.8,
-     "px": 10804,
+     "px": 10803,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 47,
@@ -4157,18 +4157,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6755,
+       "clock": 6754,
        "boundary": null,
        "evidence_link": 723,
        "source_link": null
       }
      },
      "h1_text": "Firms: the answer depends on the question asked",
-     "cold_bytes": 248620,
+     "cold_bytes": 249025,
      "requests": 7,
      "bytes_by_type": {
       "html": 13313,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -4177,7 +4177,7 @@
     },
     "768": {
      "screens": 7.1,
-     "px": 7249,
+     "px": 7248,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 47,
@@ -4208,10 +4208,10 @@
      }
     },
     "1440": {
-     "screens": 8.2,
-     "px": 7413,
+     "screens": 8.1,
+     "px": 7281,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 47,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4224,7 +4224,7 @@
      "figures": 3,
      "tables": 2,
      "first_screen": {
-      "words": 290,
+      "words": 296,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -4232,9 +4232,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4553,
+       "clock": 4420,
        "boundary": null,
-       "evidence_link": 718,
+       "evidence_link": 594,
        "source_link": null
       }
      }
@@ -4246,10 +4246,10 @@
    "route": "/finance/",
    "widths": {
     "320": {
-     "screens": 21.7,
-     "px": 12324,
+     "screens": 21.5,
+     "px": 12203,
      "overflow_x": false,
-     "h1_lines": 6,
+     "h1_lines": 4,
      "h1_chars": 84,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4270,18 +4270,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7917,
+       "clock": 7796,
        "boundary": null,
-       "evidence_link": 983,
+       "evidence_link": 887,
        "source_link": null
       }
      }
     },
     "390": {
-     "screens": 12.5,
-     "px": 10550,
+     "screens": 12.4,
+     "px": 10493,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 84,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4302,18 +4302,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6511,
+       "clock": 6454,
        "boundary": null,
-       "evidence_link": 757,
+       "evidence_link": 702,
        "source_link": null
       }
      },
      "h1_text": "Banks and microfinance: borrower, saver and balance figures measure different things",
-     "cold_bytes": 265022,
+     "cold_bytes": 265433,
      "requests": 7,
      "bytes_by_type": {
-      "html": 29715,
-      "css": 18251,
+      "html": 29721,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -4322,7 +4322,7 @@
     },
     "768": {
      "screens": 7.0,
-     "px": 7145,
+     "px": 7129,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 84,
@@ -4345,18 +4345,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4310,
+       "clock": 4295,
        "boundary": null,
-       "evidence_link": 520,
+       "evidence_link": 506,
        "source_link": null
       }
      }
     },
     "1440": {
-     "screens": 8.0,
-     "px": 7185,
+     "screens": 7.9,
+     "px": 7140,
      "overflow_x": false,
-     "h1_lines": 6,
+     "h1_lines": 4,
      "h1_chars": 84,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4369,7 +4369,7 @@
      "figures": 3,
      "tables": 2,
      "first_screen": {
-      "words": 275,
+      "words": 257,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -4377,9 +4377,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4347,
+       "clock": 4301,
        "boundary": null,
-       "evidence_link": 697,
+       "evidence_link": 652,
        "source_link": null
       }
      }
@@ -4391,8 +4391,8 @@
    "route": "/providers/",
    "widths": {
     "320": {
-     "screens": 27.4,
-     "px": 15557,
+     "screens": 27.3,
+     "px": 15534,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 46,
@@ -4415,7 +4415,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 11635,
+       "clock": 11612,
        "boundary": null,
        "evidence_link": 905,
        "source_link": 8055
@@ -4454,11 +4454,11 @@
       }
      },
      "h1_text": "Providers: listed is not the same as operating",
-     "cold_bytes": 249449,
+     "cold_bytes": 249854,
      "requests": 7,
      "bytes_by_type": {
       "html": 14142,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -4498,10 +4498,10 @@
      }
     },
     "1440": {
-     "screens": 10.7,
-     "px": 9634,
+     "screens": 10.6,
+     "px": 9503,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 46,
      "toc_entries": 5,
      "toc_strip_overflows": false,
@@ -4514,7 +4514,7 @@
      "figures": 1,
      "tables": 5,
      "first_screen": {
-      "words": 283,
+      "words": 289,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -4522,10 +4522,10 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 7121,
+       "clock": 6990,
        "boundary": null,
-       "evidence_link": 689,
-       "source_link": 5178
+       "evidence_link": 594,
+       "source_link": 5046
       }
      }
     }
@@ -4536,10 +4536,10 @@
    "route": "/access/",
    "widths": {
     "320": {
-     "screens": 16.3,
-     "px": 9247,
+     "screens": 16.1,
+     "px": 9169,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 59,
      "toc_entries": 5,
      "toc_strip_overflows": false,
@@ -4560,59 +4560,16 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 5611,
+       "clock": 5533,
        "boundary": null,
-       "evidence_link": 863,
+       "evidence_link": 808,
        "source_link": null
       }
      }
     },
     "390": {
      "screens": 9.4,
-     "px": 7956,
-     "overflow_x": false,
-     "h1_lines": 3,
-     "h1_chars": 59,
-     "toc_entries": 5,
-     "toc_strip_overflows": false,
-     "iso_dates_visible": 0,
-     "words": 1178,
-     "targets": 35,
-     "targets_under_24px": 3,
-     "details": 2,
-     "details_open": 0,
-     "figures": 1,
-     "tables": 0,
-     "first_screen": {
-      "words": 114,
-      "figure": false,
-      "clock": false,
-      "boundary": false,
-      "evidence_link": true,
-      "source_link": false,
-      "positions_px": {
-       "figure": null,
-       "clock": 4702,
-       "boundary": null,
-       "evidence_link": 646,
-       "source_link": null
-      }
-     },
-     "h1_text": "Access: where services can be reached is only partly mapped",
-     "cold_bytes": 244810,
-     "requests": 7,
-     "bytes_by_type": {
-      "html": 9503,
-      "css": 18251,
-      "font": 197720,
-      "image": 2109,
-      "js": 17227
-     },
-     "font_files": 3
-    },
-    "768": {
-     "screens": 5.6,
-     "px": 5741,
+     "px": 7908,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 59,
@@ -4627,7 +4584,7 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 190,
+      "words": 122,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -4635,18 +4592,61 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 3195,
+       "clock": 4654,
        "boundary": null,
-       "evidence_link": 491,
+       "evidence_link": 598,
+       "source_link": null
+      }
+     },
+     "h1_text": "Access: where services can be reached is only partly mapped",
+     "cold_bytes": 245221,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 9509,
+      "css": 18656,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.6,
+     "px": 5700,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 59,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1178,
+     "targets": 35,
+     "targets_under_24px": 3,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 240,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3154,
+       "boundary": null,
+       "evidence_link": 450,
        "source_link": null
       }
      }
     },
     "1440": {
      "screens": 6.1,
-     "px": 5499,
+     "px": 5447,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 59,
      "toc_entries": 5,
      "toc_strip_overflows": false,
@@ -4667,9 +4667,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 3157,
+       "clock": 3105,
        "boundary": null,
-       "evidence_link": 637,
+       "evidence_link": 583,
        "source_link": null
       }
      }
@@ -4681,8 +4681,8 @@
    "route": "/reforms/",
    "widths": {
     "320": {
-     "screens": 36.0,
-     "px": 20462,
+     "screens": 35.9,
+     "px": 20418,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 58,
@@ -4705,18 +4705,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 8144,
+       "clock": 8124,
        "boundary": null,
-       "evidence_link": 982,
-       "source_link": 8164
+       "evidence_link": 961,
+       "source_link": 8143
       }
      }
     },
     "390": {
      "screens": 20.3,
-     "px": 17170,
+     "px": 17121,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 58,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4729,7 +4729,7 @@
      "figures": 4,
      "tables": 2,
      "first_screen": {
-      "words": 123,
+      "words": 129,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -4737,18 +4737,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 6739,
+       "clock": 6691,
        "boundary": null,
-       "evidence_link": 799,
-       "source_link": 6759
+       "evidence_link": 751,
+       "source_link": 6711
       }
      },
      "h1_text": "Reforms: a reform can be real before its outcome is known.",
-     "cold_bytes": 250726,
+     "cold_bytes": 251136,
      "requests": 7,
      "bytes_by_type": {
-      "html": 15419,
-      "css": 18251,
+      "html": 15424,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -4757,9 +4757,9 @@
     },
     "768": {
      "screens": 10.8,
-     "px": 11069,
+     "px": 11028,
      "overflow_x": false,
-     "h1_lines": 2,
+     "h1_lines": 1,
      "h1_chars": 58,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4780,18 +4780,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4366,
+       "clock": 4324,
        "boundary": null,
-       "evidence_link": 577,
-       "source_link": 4363
+       "evidence_link": 536,
+       "source_link": 4321
       }
      }
     },
     "1440": {
-     "screens": 13.0,
-     "px": 11727,
+     "screens": 12.8,
+     "px": 11547,
      "overflow_x": false,
-     "h1_lines": 3,
+     "h1_lines": 2,
      "h1_chars": 58,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4804,7 +4804,7 @@
      "figures": 4,
      "tables": 2,
      "first_screen": {
-      "words": 269,
+      "words": 286,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -4812,10 +4812,10 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4467,
+       "clock": 4286,
        "boundary": null,
-       "evidence_link": 737,
-       "source_link": 4464
+       "evidence_link": 634,
+       "source_link": 4283
       }
      }
     }
@@ -4889,11 +4889,11 @@
       }
      },
      "h1_text": "Inspect the evidence behind the answer",
-     "cold_bytes": 254161,
+     "cold_bytes": 254566,
      "requests": 7,
      "bytes_by_type": {
       "html": 18854,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -4972,9 +4972,9 @@
    "widths": {
     "320": {
      "screens": 16.7,
-     "px": 9506,
+     "px": 9460,
      "overflow_x": false,
-     "h1_lines": 5,
+     "h1_lines": 4,
      "h1_chars": 78,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -4987,26 +4987,26 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 50,
+      "words": 57,
       "figure": false,
       "clock": true,
       "boundary": false,
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 734,
-       "clock": 429,
-       "boundary": 2796,
+       "figure": 672,
+       "clock": 367,
+       "boundary": 2734,
        "evidence_link": 188,
-       "source_link": 4093
+       "source_link": 4047
       }
      }
     },
     "390": {
-     "screens": 9.6,
-     "px": 8090,
+     "screens": 9.5,
+     "px": 8035,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 78,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -5026,19 +5026,19 @@
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 604,
-       "clock": 362,
-       "boundary": 2359,
+       "figure": 549,
+       "clock": 307,
+       "boundary": 2304,
        "evidence_link": 155,
-       "source_link": 3359
+       "source_link": 3304
       }
      },
      "h1_text": "Account ownership: the representative measure from the Global Findex 2021 wave",
-     "cold_bytes": 245123,
+     "cold_bytes": 245533,
      "requests": 7,
      "bytes_by_type": {
-      "html": 9816,
-      "css": 18251,
+      "html": 9821,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -5046,8 +5046,8 @@
      "font_files": 3
     },
     "768": {
-     "screens": 5.5,
-     "px": 5588,
+     "screens": 5.4,
+     "px": 5575,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 78,
@@ -5069,17 +5069,17 @@
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 477,
-       "clock": 281,
-       "boundary": 1587,
+       "figure": 463,
+       "clock": 267,
+       "boundary": 1573,
        "evidence_link": 136,
-       "source_link": 2204
+       "source_link": 2191
       }
      }
     },
     "1440": {
      "screens": 5.3,
-     "px": 4759,
+     "px": 4730,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 78,
@@ -5101,11 +5101,11 @@
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
-       "figure": 564,
-       "clock": 384,
-       "boundary": 1617,
+       "figure": 535,
+       "clock": 355,
+       "boundary": 1588,
        "evidence_link": 164,
-       "source_link": 2237
+       "source_link": 2208
       }
      }
     }
@@ -5116,8 +5116,8 @@
    "route": "/evidence/CLM-003/",
    "widths": {
     "320": {
-     "screens": 17.7,
-     "px": 10081,
+     "screens": 17.8,
+     "px": 10097,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 27,
@@ -5143,13 +5143,13 @@
        "clock": 326,
        "boundary": 2094,
        "evidence_link": 188,
-       "source_link": 3014
+       "source_link": 3030
       }
      }
     },
     "390": {
      "screens": 9.8,
-     "px": 8306,
+     "px": 8307,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 27,
@@ -5175,15 +5175,15 @@
        "clock": 293,
        "boundary": 1791,
        "evidence_link": 155,
-       "source_link": 2503
+       "source_link": 2504
       }
      },
      "h1_text": "POS infrastructure expanded",
-     "cold_bytes": 244673,
+     "cold_bytes": 245078,
      "requests": 7,
      "bytes_by_type": {
       "html": 9366,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -5216,7 +5216,7 @@
       "positions_px": {
        "figure": 461,
        "clock": 246,
-       "boundary": 1288,
+       "boundary": 1289,
        "evidence_link": 136,
        "source_link": 1729
       }
@@ -5262,7 +5262,7 @@
    "widths": {
     "320": {
      "screens": 28.5,
-     "px": 16186,
+     "px": 16203,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 31,
@@ -5288,7 +5288,7 @@
        "clock": 326,
        "boundary": 4345,
        "evidence_link": 188,
-       "source_link": 5444
+       "source_link": 5460
       }
      }
     },
@@ -5318,17 +5318,17 @@
       "positions_px": {
        "figure": 573,
        "clock": 293,
-       "boundary": 3743,
+       "boundary": 3744,
        "evidence_link": 155,
        "source_link": 4607
       }
      },
      "h1_text": "Reported POS terminals, monthly",
-     "cold_bytes": 247644,
+     "cold_bytes": 248049,
      "requests": 7,
      "bytes_by_type": {
       "html": 12337,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -5406,10 +5406,10 @@
    "route": "/evidence/compare/",
    "widths": {
     "320": {
-     "screens": 19.1,
-     "px": 10828,
+     "screens": 19.0,
+     "px": 10772,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 63,
      "toc_entries": 3,
      "toc_strip_overflows": false,
@@ -5422,7 +5422,7 @@
      "figures": 0,
      "tables": 1,
      "first_screen": {
-      "words": 15,
+      "words": 67,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -5432,14 +5432,14 @@
        "figure": null,
        "clock": null,
        "boundary": null,
-       "evidence_link": 7348,
+       "evidence_link": 7293,
        "source_link": null
       }
      }
     },
     "390": {
-     "screens": 11.0,
-     "px": 9258,
+     "screens": 10.9,
+     "px": 9237,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 63,
@@ -5464,16 +5464,16 @@
        "figure": null,
        "clock": null,
        "boundary": null,
-       "evidence_link": 6148,
+       "evidence_link": 6127,
        "source_link": null
       }
      },
      "h1_text": "Compare evidence without forcing unlike measures onto one scale",
-     "cold_bytes": 251908,
+     "cold_bytes": 252319,
      "requests": 7,
      "bytes_by_type": {
-      "html": 16601,
-      "css": 18251,
+      "html": 16607,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -5481,10 +5481,10 @@
      "font_files": 3
     },
     "768": {
-     "screens": 6.8,
-     "px": 6933,
+     "screens": 6.7,
+     "px": 6891,
      "overflow_x": false,
-     "h1_lines": 2,
+     "h1_lines": 1,
      "h1_chars": 63,
      "toc_entries": 3,
      "toc_strip_overflows": false,
@@ -5497,7 +5497,7 @@
      "figures": 0,
      "tables": 1,
      "first_screen": {
-      "words": 217,
+      "words": 244,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -5507,16 +5507,16 @@
        "figure": null,
        "clock": null,
        "boundary": null,
-       "evidence_link": 4522,
+       "evidence_link": 4480,
        "source_link": null
       }
      }
     },
     "1440": {
-     "screens": 6.9,
-     "px": 6198,
+     "screens": 6.8,
+     "px": 6076,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 63,
      "toc_entries": 3,
      "toc_strip_overflows": false,
@@ -5529,7 +5529,7 @@
      "figures": 0,
      "tables": 1,
      "first_screen": {
-      "words": 150,
+      "words": 156,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -5614,11 +5614,11 @@
       }
      },
      "h1_text": "Readings",
-     "cold_bytes": 243095,
+     "cold_bytes": 243506,
      "requests": 7,
      "bytes_by_type": {
-      "html": 7788,
-      "css": 18251,
+      "html": 7794,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -5659,7 +5659,7 @@
     },
     "1440": {
      "screens": 4.6,
-     "px": 4117,
+     "px": 4101,
      "overflow_x": false,
      "h1_lines": 1,
      "h1_chars": 8,
@@ -5682,9 +5682,9 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 436,
+       "clock": 420,
        "boundary": null,
-       "evidence_link": 2999,
+       "evidence_link": 2983,
        "source_link": null
       }
      }
@@ -5696,10 +5696,10 @@
    "route": "/readings/how-money-reaches-households/",
    "widths": {
     "320": {
-     "screens": 62.0,
-     "px": 35205,
+     "screens": 61.9,
+     "px": 35149,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 64,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -5720,16 +5720,16 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 1430,
+       "clock": 1375,
        "boundary": null,
-       "evidence_link": 14509,
-       "source_link": 19656
+       "evidence_link": 14454,
+       "source_link": 19601
       }
      }
     },
     "390": {
      "screens": 34.3,
-     "px": 28957,
+     "px": 28936,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 64,
@@ -5752,18 +5752,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 1184,
+       "clock": 1163,
        "boundary": null,
-       "evidence_link": 11755,
-       "source_link": 16259
+       "evidence_link": 11734,
+       "source_link": 16238
       }
      },
      "h1_text": "Domestic remittances and accounts: what the evidence establishes",
-     "cold_bytes": 252977,
+     "cold_bytes": 253387,
      "requests": 7,
      "bytes_by_type": {
-      "html": 17670,
-      "css": 18251,
+      "html": 17675,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -5772,9 +5772,9 @@
     },
     "768": {
      "screens": 18.3,
-     "px": 18732,
+     "px": 18691,
      "overflow_x": false,
-     "h1_lines": 2,
+     "h1_lines": 1,
      "h1_chars": 64,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -5795,18 +5795,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 753,
+       "clock": 712,
        "boundary": null,
-       "evidence_link": 6887,
-       "source_link": 9796
+       "evidence_link": 6845,
+       "source_link": 9755
       }
      }
     },
     "1440": {
-     "screens": 22.6,
-     "px": 20342,
+     "screens": 22.1,
+     "px": 19883,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 64,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -5819,18 +5819,18 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 182,
+      "words": 349,
       "figure": false,
-      "clock": false,
+      "clock": true,
       "boundary": false,
       "evidence_link": true,
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 1242,
+       "clock": 857,
        "boundary": null,
        "evidence_link": 536,
-       "source_link": 11837
+       "source_link": 11378
       }
      }
     }
@@ -5904,11 +5904,11 @@
       }
      },
      "h1_text": "Find the original source behind each piece of evidence",
-     "cold_bytes": 298570,
+     "cold_bytes": 298975,
      "requests": 7,
      "bytes_by_type": {
       "html": 63263,
-      "css": 18251,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -5948,8 +5948,8 @@
      }
     },
     "1440": {
-     "screens": 17.1,
-     "px": 15370,
+     "screens": 17.0,
+     "px": 15277,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 54,
@@ -5964,7 +5964,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 202,
+      "words": 216,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -5974,8 +5974,8 @@
        "figure": null,
        "clock": null,
        "boundary": null,
-       "evidence_link": 401,
-       "source_link": 2270
+       "evidence_link": 420,
+       "source_link": 2177
       }
      }
     }
@@ -5986,10 +5986,10 @@
    "route": "/methodology/",
    "widths": {
     "320": {
-     "screens": 28.7,
-     "px": 16283,
+     "screens": 28.5,
+     "px": 16194,
      "overflow_x": false,
-     "h1_lines": 5,
+     "h1_lines": 3,
      "h1_chars": 66,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -6010,16 +6010,16 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 10586,
+       "clock": 10497,
        "boundary": null,
-       "evidence_link": 10689,
+       "evidence_link": 10599,
        "source_link": null
       }
      }
     },
     "390": {
      "screens": 16.2,
-     "px": 13700,
+     "px": 13680,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 66,
@@ -6034,7 +6034,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 15,
+      "words": 175,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -6042,18 +6042,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 8571,
+       "clock": 8551,
        "boundary": null,
-       "evidence_link": 8673,
+       "evidence_link": 8653,
        "source_link": null
       }
      },
      "h1_text": "Preserve the meaning of the evidence before comparing the numbers.",
-     "cold_bytes": 247107,
+     "cold_bytes": 247517,
      "requests": 7,
      "bytes_by_type": {
-      "html": 11800,
-      "css": 18251,
+      "html": 11805,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -6062,7 +6062,7 @@
     },
     "768": {
      "screens": 8.7,
-     "px": 8904,
+     "px": 8891,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 66,
@@ -6085,18 +6085,18 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 5461,
+       "clock": 5447,
        "boundary": null,
-       "evidence_link": 5544,
+       "evidence_link": 5531,
        "source_link": null
       }
      }
     },
     "1440": {
-     "screens": 10.6,
-     "px": 9582,
+     "screens": 10.3,
+     "px": 9280,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 66,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -6109,7 +6109,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 131,
+      "words": 329,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -6117,7 +6117,7 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 5478,
+       "clock": 5176,
        "boundary": null,
        "evidence_link": 737,
        "source_link": null
@@ -6131,10 +6131,10 @@
    "route": "/measurement/",
    "widths": {
     "320": {
-     "screens": 40.5,
-     "px": 23023,
+     "screens": 40.4,
+     "px": 22969,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 57,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -6155,59 +6155,16 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 4235,
+       "clock": 4180,
        "boundary": null,
-       "evidence_link": 6799,
-       "source_link": 7375
+       "evidence_link": 6744,
+       "source_link": 7320
       }
      }
     },
     "390": {
-     "screens": 23.3,
-     "px": 19628,
-     "overflow_x": false,
-     "h1_lines": 3,
-     "h1_chars": 57,
-     "toc_entries": 6,
-     "toc_strip_overflows": false,
-     "iso_dates_visible": 0,
-     "words": 3770,
-     "targets": 194,
-     "targets_under_24px": 1,
-     "details": 10,
-     "details_open": 0,
-     "figures": 1,
-     "tables": 0,
-     "first_screen": {
-      "words": 104,
-      "figure": false,
-      "clock": false,
-      "boundary": false,
-      "evidence_link": false,
-      "source_link": false,
-      "positions_px": {
-       "figure": null,
-       "clock": 3743,
-       "boundary": null,
-       "evidence_link": 5847,
-       "source_link": 6342
-      }
-     },
-     "h1_text": "Missing evidence matters when it could change a decision.",
-     "cold_bytes": 260188,
-     "requests": 7,
-     "bytes_by_type": {
-      "html": 24881,
-      "css": 18251,
-      "font": 197720,
-      "image": 2109,
-      "js": 17227
-     },
-     "font_files": 3
-    },
-    "768": {
-     "screens": 12.7,
-     "px": 12986,
+     "screens": 23.2,
+     "px": 19580,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 57,
@@ -6222,7 +6179,7 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 171,
+      "words": 106,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -6230,16 +6187,59 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 2562,
+       "clock": 3695,
        "boundary": null,
-       "evidence_link": 3858,
-       "source_link": 4080
+       "evidence_link": 5799,
+       "source_link": 6294
+      }
+     },
+     "h1_text": "Missing evidence matters when it could change a decision.",
+     "cold_bytes": 260602,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 24890,
+      "css": 18656,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 12.6,
+     "px": 12945,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 57,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3770,
+     "targets": 194,
+     "targets_under_24px": 1,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 197,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 2521,
+       "boundary": null,
+       "evidence_link": 3817,
+       "source_link": 4039
       }
      }
     },
     "1440": {
-     "screens": 15.8,
-     "px": 14259,
+     "screens": 15.9,
+     "px": 14273,
      "overflow_x": false,
      "h1_lines": 3,
      "h1_chars": 57,
@@ -6254,7 +6254,7 @@
      "figures": 1,
      "tables": 0,
      "first_screen": {
-      "words": 268,
+      "words": 263,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -6262,10 +6262,10 @@
       "source_link": false,
       "positions_px": {
        "figure": null,
-       "clock": 2360,
+       "clock": 2374,
        "boundary": null,
-       "evidence_link": 3788,
-       "source_link": 4091
+       "evidence_link": 3803,
+       "source_link": 4105
       }
      }
     }
@@ -6276,10 +6276,10 @@
    "route": "/about/",
    "widths": {
     "320": {
-     "screens": 13.4,
-     "px": 7634,
+     "screens": 13.3,
+     "px": 7572,
      "overflow_x": false,
-     "h1_lines": 5,
+     "h1_lines": 4,
      "h1_chars": 84,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -6308,10 +6308,10 @@
      }
     },
     "390": {
-     "screens": 7.8,
-     "px": 6559,
+     "screens": 7.7,
+     "px": 6504,
      "overflow_x": false,
-     "h1_lines": 4,
+     "h1_lines": 3,
      "h1_chars": 84,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -6339,11 +6339,11 @@
       }
      },
      "h1_text": "A bilingual public evidence resource for understanding financial inclusion in Yemen.",
-     "cold_bytes": 242979,
+     "cold_bytes": 243394,
      "requests": 7,
      "bytes_by_type": {
-      "html": 7672,
-      "css": 18251,
+      "html": 7682,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -6352,7 +6352,7 @@
     },
     "768": {
      "screens": 4.5,
-     "px": 4616,
+     "px": 4603,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 84,
@@ -6384,9 +6384,9 @@
     },
     "1440": {
      "screens": 4.3,
-     "px": 3896,
+     "px": 3910,
      "overflow_x": false,
-     "h1_lines": 5,
+     "h1_lines": 3,
      "h1_chars": 84,
      "toc_entries": 6,
      "toc_strip_overflows": false,
@@ -6484,11 +6484,11 @@
       }
      },
      "h1_text": "Corrections and release history",
-     "cold_bytes": 243137,
+     "cold_bytes": 243549,
      "requests": 7,
      "bytes_by_type": {
-      "html": 7830,
-      "css": 18251,
+      "html": 7837,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -6529,7 +6529,7 @@
     },
     "1440": {
      "screens": 3.3,
-     "px": 2969,
+     "px": 2983,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 31,
@@ -6555,7 +6555,7 @@
        "clock": null,
        "boundary": null,
        "evidence_link": 354,
-       "source_link": 639
+       "source_link": 653
       }
      }
     }
@@ -6567,7 +6567,7 @@
    "widths": {
     "320": {
      "screens": 9.1,
-     "px": 5180,
+     "px": 5181,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 27,
@@ -6592,14 +6592,14 @@
        "figure": null,
        "clock": null,
        "boundary": null,
-       "evidence_link": 3153,
+       "evidence_link": 3154,
        "source_link": null
       }
      }
     },
     "390": {
      "screens": 5.7,
-     "px": 4806,
+     "px": 4807,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 27,
@@ -6629,11 +6629,11 @@
       }
      },
      "h1_text": "Contact and report an error",
-     "cold_bytes": 243441,
+     "cold_bytes": 243852,
      "requests": 7,
      "bytes_by_type": {
-      "html": 8134,
-      "css": 18251,
+      "html": 8140,
+      "css": 18656,
       "font": 197720,
       "image": 2109,
       "js": 17227
@@ -6667,14 +6667,14 @@
        "figure": null,
        "clock": null,
        "boundary": null,
-       "evidence_link": 2215,
+       "evidence_link": 2216,
        "source_link": null
       }
      }
     },
     "1440": {
-     "screens": 3.6,
-     "px": 3278,
+     "screens": 3.7,
+     "px": 3292,
      "overflow_x": false,
      "h1_lines": 2,
      "h1_chars": 27,
@@ -6689,7 +6689,7 @@
      "figures": 0,
      "tables": 0,
      "first_screen": {
-      "words": 152,
+      "words": 146,
       "figure": false,
       "clock": false,
       "boundary": false,
@@ -6754,7 +6754,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/evidence/CLM-001/",
+     "/remittances/",
      "/evidence/compare/"
     ],
     "external_links_on_target": 0
@@ -6779,7 +6779,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/data/",
+     "/remittances/",
      "/readings/how-money-reaches-households/"
     ],
     "external_links_on_target": 29
@@ -6870,7 +6870,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/evidence/CLM-001/",
+     "/remittances/",
      "/evidence/compare/"
     ],
     "external_links_on_target": 1
@@ -6895,7 +6895,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/data/",
+     "/remittances/",
      "/readings/how-money-reaches-households/"
     ],
     "external_links_on_target": 30
@@ -6986,7 +6986,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/evidence/CLM-001/",
+     "/remittances/",
      "/evidence/compare/"
     ],
     "external_links_on_target": 0
@@ -7011,7 +7011,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/data/",
+     "/remittances/",
      "/readings/how-money-reaches-households/"
     ],
     "external_links_on_target": 29
@@ -7102,7 +7102,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/evidence/CLM-001/",
+     "/remittances/",
      "/evidence/compare/"
     ],
     "external_links_on_target": 1
@@ -7127,7 +7127,7 @@
     "clicks": 2,
     "path": [
      "/",
-     "/data/",
+     "/remittances/",
      "/readings/how-money-reaches-households/"
     ],
     "external_links_on_target": 30
@@ -7174,5 +7174,5 @@
    }
   }
  },
- "duration_s": 210.8
+ "duration_s": 194.9
 }
