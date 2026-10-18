@@ -2117,6 +2117,19 @@ for _f in sorted(DIST.rglob('*.html')):
     # Nothing may draw outside a figure bound to a governed visual: that was this gate's original job and it keeps it.
     _outside=_raw
     for _fig in _figs: _outside=_outside.replace(_fig,'')
+    # OD-1018 D4 (the owner's exception to directive §5, 18 October 2026; Home only): the canvas's hero illustration — one
+    # aria-hidden block that holds no text — and one aria-hidden stroke icon per topic card inside the topics section (at
+    # most eight) are the only graphics admitted outside a governed figure, and only on the two Home pages.
+    if _rel in ('ar/index.html','en/index.html'):
+        _ha=re.findall(r'<div class="hero-art" aria-hidden="true"><svg\b.*?</svg></div>',_outside,re.S)
+        if len(_ha)==1 and not re.search(r'<(?:text|foreignObject|image|a)\b',_ha[0]): _outside=_outside.replace(_ha[0],'')
+        _tp=re.search(r'<section class="qa topics" id="topics" data-home-topics>.*?</section>',_outside,re.S)
+        if _tp:
+            _ti=re.findall(r'<svg class="ticon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">(?:(?!</svg>).)*</svg>',_tp.group(0),re.S)
+            if len(_ti)<=8 and not any(re.search(r'<(?:text|foreignObject|image|a)\b',_t) for _t in _ti):
+                _sec=_tp.group(0)
+                for _t in _ti: _sec=_sec.replace(_t,'',1)
+                _outside=_outside.replace(_tp.group(0),_sec)
     if re.search(r'<(svg|canvas)\b',_outside):
         errors.append(f'P3-G02 graphic outside a governed visual figure in {_rel}')
     for _fig in _figs:
@@ -3286,8 +3299,9 @@ try:
     _budget = 350 * 1024
     _gzs = lambda p: len(_gz.compress(p.read_bytes(), 6, mtime=0))  # noqa: E731
     _shared = _gzs(DIST / "assets" / "yfie.css") + _gzs(DIST / "assets" / "app.js") + (DIST / "assets" / "logo" / "CauseWay_logo_40.png").stat().st_size
-    _faces = {"en": sum(f.stat().st_size for f in (DIST / "assets" / "fonts" / "ibm-plex-sans").glob("*.woff2")),
-              "ar": sum(f.stat().st_size for f in (DIST / "assets" / "fonts" / "ibm-plex-sans-arabic").glob("*.woff2"))}
+    # OD-1018 D2: each edition's body faces and its own display face (the other edition's is never requested)
+    _faces = {"en": sum(f.stat().st_size for d in ("ibm-plex-sans", "ibm-plex-serif") for f in (DIST / "assets" / "fonts" / d).glob("*.woff2")),
+              "ar": sum(f.stat().st_size for d in ("ibm-plex-sans-arabic", "noto-naskh-arabic") for f in (DIST / "assets" / "fonts" / d).glob("*.woff2"))}
     for _r in ("", "explore", "people", "evidence", "evidence/CLM-001", "evidence/compare", "data", "readings",
                "readings/same-year-different-number", "methodology", "measurement", "about"):
         for _lang in ("en", "ar"):

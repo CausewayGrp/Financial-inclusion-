@@ -25,16 +25,16 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 53,
+  "BUILD_AND_GATES": 55,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 291,
-  "DESIGN_PACKAGE": 699,
+  "DESIGN_PACKAGE": 712,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
   "GENERATED_PROJECTION": 38,
-  "GENERATED_PUBLIC_BUILD": 631,
+  "GENERATED_PUBLIC_BUILD": 635,
   "GENERATED_SOCIAL_IMAGES": 303,
   "LOGO_AUTHORITY": 1,
   "PRODUCTION_RENDERER": 9,
@@ -44,7 +44,7 @@
   "REPOSITORY_ENGINEERING": 12,
   "RUNTIME_SOURCE": 7,
   "STANDING_POLICY": 6,
-  "VENDORED_FONTS": 27
+  "VENDORED_FONTS": 32
  },
  "files": [
   {
@@ -5432,6 +5432,58 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/evidence/v2/p1/base_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/base_scoreboard.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/before_after.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/first_unit_ar390_base.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/first_unit_ar390_p1.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/p1_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/p1_scoreboard.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/shots/home_ar1440_after.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/shots/home_ar1440_before.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/shots/home_ar390_after.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/shots/home_ar390_before.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/shots/home_en1440_after.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/p1/shots/home_en1440_before.webp",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -6249,6 +6301,22 @@
   },
   {
    "path": "dist/assets/fonts/ibm-plex-sans/LICENSE.txt",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-serif/IBMPlexSerif-SemiBold-Latin1.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/ibm-plex-serif/LICENSE.txt",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/noto-naskh-arabic/NotoNaskhArabic-SemiBold-subset.woff2",
+   "class": "GENERATED_PUBLIC_BUILD"
+  },
+  {
+   "path": "dist/assets/fonts/noto-naskh-arabic/OFL.txt",
    "class": "GENERATED_PUBLIC_BUILD"
   },
   {
@@ -8392,6 +8460,10 @@
    "class": "BUILD_AND_GATES"
   },
   {
+   "path": "scripts/font_subset.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
    "path": "scripts/generate_projections.py",
    "class": "PROJECTION_GENERATOR"
   },
@@ -8581,6 +8653,10 @@
   },
   {
    "path": "scripts/tests/test_digitalocean_hosting.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_display_font_coverage.py",
    "class": "BUILD_AND_GATES"
   },
   {
@@ -10124,6 +10200,10 @@
    "class": "VENDORED_FONTS"
   },
   {
+   "path": "vendor/fonts/display_coverage.json",
+   "class": "VENDORED_FONTS"
+  },
+  {
    "path": "vendor/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Bold.woff2",
    "class": "VENDORED_FONTS"
   },
@@ -10225,6 +10305,22 @@
   },
   {
    "path": "vendor/fonts/ibm-plex-sans/LICENSE.txt",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-serif/IBMPlexSerif-SemiBold-Latin1.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/ibm-plex-serif/LICENSE.txt",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/noto-naskh-arabic/NotoNaskhArabic-SemiBold-subset.woff2",
+   "class": "VENDORED_FONTS"
+  },
+  {
+   "path": "vendor/fonts/noto-naskh-arabic/OFL.txt",
    "class": "VENDORED_FONTS"
   }
  ]

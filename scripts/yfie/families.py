@@ -149,11 +149,12 @@ def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "
     # keyboard-focus walk of 18 October 2026 found them tabbed before the actions and above them visually)
 
 
-def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True, foot_spine: bool = True) -> str:
+def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True, foot_spine: bool = True, hub: str = "") -> str:
     # S4 (W4 Appendix F): no phone foot-spine on a page that already renders its Verify, Readings and Related sections
     foot = spine(index, edges, foot=True, foot_index=foot_index) if foot_spine else ""
+    hub_ = f' data-hub="{esc(hub)}"' if hub else ""   # OD-1018 D3: a domain's masthead band takes its hub tint (decorative, no meaning)
     return (head(page, shell, page["route"], kind=kind, extra=extra) + header(shell)
-            + f'<article class="obj page-obj">{body}{page_util(shell, page)}</article>{spine(index, edges)}{foot}'
+            + f'<article class="obj page-obj"{hub_}>{body}{page_util(shell, page)}</article>{spine(index, edges)}{foot}'
             + footer(shell, print_foot(shell, page["route"], page["title"])))
 
 
@@ -294,7 +295,7 @@ def domain(page: dict, shell: dict) -> str:
              (L["readings"], [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["readings"]]),
              (page["related"]["heading"] if page["related"] else "", [f'<a href="{l["href"]}">{esc(l["label"])}</a>' for l in (page["related"] or {}).get("links", [])]),
              (L["method"], [f'<a href="{page["hrefs"]["reading_rule"]}" data-reading-rule>{esc(L["reading_rule"])}</a>'])]   # 09:50 C5: under the governed "Methodology" heading
-    return page_html(page, shell, "".join(parts), index, edges, foot_index=False, foot_spine=False)
+    return page_html(page, shell, "".join(parts), index, edges, foot_index=False, foot_spine=False, hub=route.strip("/"))
 
 
 def chronology_block(ch: dict, L: dict, id_: str) -> str:

@@ -37,6 +37,12 @@ Evidence files: `design/evidence/v2/g0/` (metrics, scoreboard, visual audit, scr
 | DL-V2-009 | 2026-10-17 | Cite formats (OD-1017-04(a)): beside the governed plain-text preview, APA 7, Chicago, BibTeX and RIS are rendered from the page's own metadata — the governed title, the record ID, the edition, the publisher and the canonical address — with the access date; the copy action copies exactly the rendered text; machine formats keep their English keys; the Arabic edition uses the governed Arabic access phrases with Latin digits. | Browser test `t_cite_formats` parses the BibTeX and the RIS (and rejects a keyless BibTeX and a RIS without its end tag); every format carries the record ID, the edition and the address. | The access date is the reader's clock; APA and Chicago forms are house renderings of the governed metadata, not a style authority's certification. |
 | DL-V2-010 | 2026-10-17 | Compare (SIG-5; F-16, Part 6 item 16): every controlled verdict carries one reason sentence naming the dimension behind it in the governed field words (differs: … / not recorded: … / the same record / all match), and a copied summary carries the verdict, the reason, each record's title, period, population and boundary, the no-merge rule and the comparison link. The Master holds no legitimately qualified pair among the 14 comparable records (no two with identical recorded definition, population and method and a different period); the Findex 2011, 2014 and 2021 waves exist as a visual (VIS-FINDEX-OBSERVED-WAVES) and a crosswalk dataset, not as per-wave records, so no pair is admitted and none is manufactured. A one-record entry from a record keeps the prompt for a second record by design. | Scan of the built Compare data (0 candidate pairs); browser test `t_compare_reason` (reason per verdict, summary, same-record, input error). | Compare keeps returning only qualified, not-direct or unresolved verdicts until the owner adds per-wave records by a transaction; F-16 stays open as a content question. |
 | DL-V2-011 | 2026-10-18 | G2 refinement (the owner's visual-quality clarification of 18 October 2026, §8): **the brass anchor under every page title** — a 36 × 2 px rule in brass-300 at the start edge, 12 px under the title (8 px on phones) — and **the head statement in the secondary ink** (`--ink-2`), its figures staying in the primary ink. The owner's references were read for their qualities (a dominant title, a parted statement, subtle brass detailing, confident hierarchy), not their elements: no display face, no card, no illustration, no new text, route or font. The only two of three candidate shortcomings that earned a change; the third (a product rubric on the phone head) stays as recorded (the masthead carries it). | `design/evidence/v2/g2/shots/after_*` (re-rendered on the final tree; the committed `before_*` and `pass1_*` unchanged), the live candidate test on four views (v0 none · v1 anchor · v2 anchor + ink-2; v2 chosen on both editions), `g2/refinement_head_390.md` (head, boundary-heading and first-figure positions at 390 on the final tree). | +14 px (desktop) / +8 px (phone) in every head on `cd3e951a`; on the final tree the markup-order fix of §8.4 removed the 8 px the tools' spacing rule had added, so a phone head with a statement is the height it was before the anchor and the AR 390 /payments/ boundary heading ends at 843 px against an 844 px viewport, inside the first screen (851 on `cd3e951a`; the domain exception of §7.4, boundary at 1.0–1.2 screens, holds either way). |
+| DL-V2-012 | 2026-10-18 | **OD-1018 D1 (owner decision, not a G1 result): the canvas "Yemen FI Evidence Home" is the visual language of every family**, replacing A · Register's styling (DL-V2-001's visual language) and keeping its information hierarchy, the order rules and the evidence unit's composition. Implemented in place in `scripts/yfie/theme.py`: the screen layer that held the V1 palette and A · Register's G2 rules is now the canvas layer; the base rules the print system reads are unchanged. | §9; `design/evidence/v2/p1/` (base and p1 metrics, both editions, four widths). | The register head, the plate-less figure and the double-ruled boundary give way to cards and bands; the desktop pages grow where a band or card adds padding, the phone pages shrink with the canvas body size. |
+| DL-V2-013 | 2026-10-18 | **OD-1018 D2: one display face per edition** — Noto Naskh Arabic 600 (subset without Latin, notofonts v2.021, `scripts/font_subset.py`) and IBM Plex Serif 600 (IBM's Latin-1 split, `@ibm/plex-serif@2.0.0`) for titles, section headings and the featured Reading's title; body and interface in Plex Sans / Plex Sans Arabic; figures in Western tabular digits from a loaded face (`--font-fig`). Each edition loads only its own display face and preloads it; four font files per page. | `vendor/fonts/README.md`, `vendor/fonts/display_coverage.json`; gate `scripts/tests/test_display_font_coverage.py` (every heading of 304 pages, with its control); `design/08_ASSET_MAP.md` §2.1. | +12.6 KB (AR) / +24.0 KB (EN) of font per cold page; Latin inside an Arabic title falls back to Plex Sans Arabic by design. |
+| DL-V2-014 | 2026-10-18 | **OD-1018 D3: colour by nearest token** — each canvas colour mapped to its nearest shipped V1 token by CIEDE2000; a band takes the nearest token that differs from its ground (caution and verify bands on `--sage-100`; the caution rule `--gold-300`, tied with `--white` within 0.1); roles kept where the nearest collides (body ink `--ink`, display ink `--green-900`); input boundaries keep `--sage-600` (3 : 1 against the paper). The eight hub tints are the only new tokens: Home's topic cards and each domain's masthead band. | §9.2 mapping table. | The caution band loses the canvas's warm cream (its nearest token is the page's own paper); it is told apart by its rule and its mark. |
+| DL-V2-015 | 2026-10-18 | **OD-1018 D4: Home in the canvas composition** — the hero (eyebrow, display title, brass rule, statement, two calls to action; the illustration from 1200 px), the search band, the topic cards (governed name, S11 thesis, one icon, hub tint), the figure cards (each paced group with its bound record, figures emphasised in place), the caution band, the question cards, the gaps card and verify band (folds 07 and 08), the reading panel; on phones the figures before the topics, in DOM and visual order. | §9.3; P3-G02 narrowed to the owner's exception, with three new negative controls. | The canvas's separate display numeral is not drawn (no figure is repeated or lifted out of its sentence); the illustration is dropped below 1200 px. |
+| DL-V2-016 | 2026-10-18 | **OD-1018 D5: the canvas extended to every family** by its nearest component — evidence card for every figure, caution band for every boundary, verify band for every source and verification block, question cards on the Questions hub, the reading panel for the featured Reading and every Reading's head, eyebrows for section labels, the interior heading scale one step below Home's; lists stay ruled rows. | §9.1 (one line per family, written before building). | No new pattern; long lists keep their rows. |
+| DL-V2-017 | 2026-10-18 | **OD-1018 D6: the logo stays the approved derivative set**; nothing from the canvas runtime, export or logo crop ships. | `scripts/logo_derivatives.py --check`. | The canvas's wordmark lockup is not reproduced; the header keeps the mark with the governed product name. |
 
 ---
 
@@ -854,3 +860,129 @@ side effect: the spacing rule that had followed the tools no longer applies, so 
 RC-NAV rule, which read the tools row as the h1's immediate successor, now admits the statement and the two calls to action
 between them and nothing else; its negative control (a stray paragraph after the h1, before the row's allowed companions)
 has its selector updated to the new markup and is caught.
+
+---
+
+## 9. The presentation interlude — the canvas "Yemen FI Evidence Home" on every family (owner decision OD-1018, 18 October 2026), branch `pr/presentation-canvas` on main `886a8160`
+
+The owner's direction of 18 October 2026 (recorded as OD-1018 in `audit/OWNER_DECISIONS_2026-10-17.md`; DL-V2-012…017)
+gives the whole site the visual direction of the owner's Claude Design canvas, which draws Home only. It changes how
+the site looks, not what it says or how it is organised. The boards were read as a look: their section order, layout,
+sizes, radii and colours were extracted (one summary agent, no copy kept), their strings and numbers were not used,
+and every word and number on the built pages is the generator's. Draft PR #63 (the Folio proof) is superseded; its
+Naskh subset design and recipe are reused (rebuilt from the same upstream release), its treatment is not.
+
+### 9.1 Family by family: the canvas components each family uses
+
+(The per-family plan below was fixed in the session's working notes before the first build; it is committed here
+after the first build pass, unchanged except where §9.4 records a deviation.)
+
+| Family | Canvas components |
+|---|---|
+| Every page (shell) | the canvas header (one paper row on a hairline, 64 px on a phone and 84 px wide; search and menu marks; the language link plain), the canvas footer (deep-green field, the brand block first, the link groups in columns, the edition colophon and legal lines across), eyebrows, buttons (filled and outlined, 10 px corners, the arrow in the reading direction), the search field (white pill) |
+| Home | hero (eyebrow, display title, brass rule, statement, two buttons; the illustration from 1200 px), search band, topic cards 4 × 2 (2 × 4 on a phone), figure cards, caution band (section 03), question cards (section 04), sections 05 and 06 as generated folds, the gaps card and verify band (folds 07 and 08), the reading panel (featured Reading) |
+| Questions hub (/explore/) | head, search field, question cards in their clusters under eyebrow group labels, caution band for the sections that state limits, priorities as a ruled title list, the next-actions links with arrows |
+| Domain answers (eight) | masthead band on the hub tint (eyebrow, question, display title, brass rule, statement, buttons, tools), caution bands for the always-visible boundaries, sections with eyebrow and display heading (heading over 4 of 12 columns wide), every figure as the evidence card, the views fold, readings, related and measurement as ruled rows, the verify band |
+| Evidence Record | head (breadcrumb, eyebrow, display title, brass rule, the record line as the card's foot: period and population under a hairline with brass labels), the finding with its figure emphasised and its own figure as the evidence card, caution band (what it does not establish), verify band (where it comes from), the page tools as outlined buttons |
+| Evidence directory (/evidence/) | head, search field, the hub disclosures and their record lists as ruled rows |
+| Compare | head, the canvas selects, the verdict as a white card, the record boundaries as a caution band, the comparison table ruled |
+| Readings index | head, the featured Reading as the reading panel, every Reading as a ruled row on one white card |
+| Reading | head as the reading panel (deep green; display title on it, gold rule), caution band (what not to infer), the essay under display section headings, the trace and sources as verify bands, related Readings as ruled rows |
+| Sources (/data/) | head, the filter field and facets panel, group headings over a hairline, source rows and the inventory as ruled rows |
+| Measurement | head, the priorities as ruled rows under hairline group heads |
+| Methodology | head, sections with eyebrow and display heading, caution bands where a section states a limit, ruled rows |
+| About and trust pages, contact and the report form | head, sections, the form's fields in the canvas form (10 px corners, the `--sage-600` boundary), the outlined button |
+| 404 (bilingual) | the two editions' display titles, the search control |
+| Search dialog | a card-shaped dialog with the pill field; results as ruled rows |
+
+### 9.2 Colour: canvas colour → shipped token (CIEDE2000; DL-V2-014)
+
+| Canvas role | Canvas | Token | ΔE₀₀ | Note |
+|---|---|---|---|---|
+| page | #F6F3EC | `--paper` | 1.0 | |
+| header band | #FBF9F4 | `--paper` | 0.8 | |
+| card surface | #FFFFFF | `--white` | 0.0 | |
+| display ink | #10382B | `--green-900` | 1.3 | |
+| body ink | #24302B | `--ink` | 11.3 | nearest is `--green-900` (10.4), already the display ink's token; the canvas keeps the two roles apart |
+| secondary ink | #4A5752 | `--ink-2` | 10.6 | |
+| muted ink | #5C6963 | `--mute` | 9.8 | `--sage-600` 9.7: a tie within 0.1, the role token kept |
+| primary | #0E4D3A | `--green-700` | 4.4 | |
+| brass | #B48E3D | `--brass-300` | 4.6 | |
+| brass text | #8C6D28 | `--brass-700` | 7.2 | |
+| brass light | #D9C58F | `--gold-300` | 6.1 | |
+| rule, card border | #E2DDD2 | `--sage-100` | 5.5 | |
+| search border | #D9D3C6 | `--sage-600` | — | nearest is `--sage-100` (7.4); an input's boundary keeps `--sage-600` (3 : 1 against the paper) |
+| caution band | #FBF5E8 on #E9DDBE | `--sage-100` on `--gold-300` | 5.6 / 14.2 | nearest fill is `--paper` (3.6), the ground itself; the rule's nearest distinct tokens tie (`--white` 14.1, `--gold-300` 14.2), the warm one kept |
+| verify band | #EEF3F1 on #D5E0DA | `--sage-100` | 3.3 / 3.9 | |
+| dark-panel texts | #E6ECE9, #F0F3F1, #CFD8D3 | `--sage-100`, `--paper`, `--sage-100` | 2.3–5.0 | `--mute` would fail on the panel; the breadcrumb takes `--sage-100` |
+| illustration dots, ground, nodes | #B6C2BC, #E8E2D4, #0E4D3A, #B48E3D | `--rule-2`, `--sage-100`, `--green-700`, `--brass-300` | 8.1, 5.6, 4.4, 4.6 | |
+| topic icon strokes | #2F4A8A, #5A4A8A, #1F5F7A / #B4642A, #8C6D28 / #0E4D3A | `--ink-2` / `--brass-700` / `--green-700` | 11.9–16.3 | decorative |
+| hub tints (eight) | as the canvas | `--hub-*` (new) | — | Home's topic cards and the domains' masthead bands only |
+
+The dark panel's call to action takes `--gold-300` text on the deep green (6.5 : 1); white on `--brass-300` would be 2.6 : 1.
+
+### 9.3 Deviations from the canvas, with the reason
+
+1. **No separate display numeral in the figure cards.** The canvas sets each figure as a large number above its
+   sentence; here the governed sentence group is the card's statement and its figures are emphasised in place (1.4 em,
+   the figure face — the largest size RC-1115 admits: an emphasised figure's line box stays within 1.25 lines, so it
+   never covers the line above; 1.6 em failed it in Arabic on wide screens). Lifting or repeating a figure out of its
+   sentence would change what the page says.
+2. **The survey-coverage limit in full.** The canvas trims "areas holding about 23% of the population were not surveyed";
+   the card prints the whole governed sentence group, limit included.
+3. **No inverted third card and no bars in it.** An inverted card would mark one figure as different by colour alone;
+   the POS bars are not the governed contract of VIS-POS-TERMINALS (the contract wins).
+4. **Figure cards on a wide screen: one beside two.** The governed groups differ in length (the first is about four
+   times the second), so the first card runs beside the other two stacked; the markup order is kept.
+5. **The rail stays.** The canvas has none; the contents navigation is kept on every family, so the hero runs over
+   8 of 12 columns and the illustration over 4, and the illustration is shown from 1200 px only (dropped below it; on
+   AR 390 it would push the first figure card below the first screen).
+6. **No header call to action and no topics menu.** Both would add navigation entries the governed navigation contract
+   does not hold (D8, five direct hubs); the header keeps its controls, restyled.
+7. **The search band is a button, not a form.** The security policy's `form-action 'none'` refuses a form; the band opens
+   the existing search, like the header's control, and carries the governed placeholder.
+8. **Featured Reading after the verify band.** The canvas places it before the gaps; Home's section order is the
+   generator's and is kept.
+9. **Phone calls to action stay on one row where they fit.** The canvas stacks them full width; one row keeps the first
+   figure card's value in the AR 390 first screen.
+10. **Topic-card blurbs are the domains' S11 theses whole**, which begin with the hub's name (the canvas trims the text
+    before the colon; trimming governed text is not allowed).
+11. **Colour**: the caution band's warm fill and the search field's pale border do not survive the token mapping (§9.2).
+12. **Type**: the canvas's Source Serif 4 and Naskh 700 are not used (D2); figures are set in the edition's loaded face.
+13. **Phone spacing one step tighter on Home** (section rhythm 22 px, a 50 px search band, 16 px above the first card's
+    sentence): with the canvas's own spacing the first figure's value ended at 862 px, past the AR 390 first screen.
+14. **At 320 px the header shows its labels without the search and menu marks**: with them it overflowed every page.
+
+### 9.4 Measured (`design/evidence/v2/p1/`: `base_metrics.json` on main `886a8160` before any change, `p1_metrics.json` on the final build; `before_after.md`)
+
+- **Guard (AR 390 length ≤ 1.10 × g2r): every family passes.** Home grows from 8.9 to 9.2 screens (ceiling 9.79);
+  every other family is shorter than before, by the canvas body size (16 px on phones): /payments/ 19.6 → 17.6,
+  /reforms/ 20.3 → 18.6, /data/ 18.6 → 16.9, /measurement/ 23.1 → 20.2, /methodology/ 15.8 → 13.5, CLM-001 10.2 → 9.2,
+  the long Reading 35.8 → 32.1.
+- English: at 390 Home grows 8.8 → 9.8 (the topic cards carry the theses; not a guarded value), the other families move by
+  −1.1 to +0.6; at 1440 Home 5.5 → 5.8 and the others −1.3 to +0.3. Arabic 1440: every family the same or shorter.
+- No horizontal overflow at 320, 390, 768 or 1440 in either edition; H1 at most 3 lines (AR 390 and EN 1440); four font
+  files on every page, each edition requesting only its own display face (the bilingual 404: three).
+- First figure (`.fnum`) at AR 390: Home 669 → 787 px (the whole value inside the 844 px first screen), CLM-001 715 → 616.
+- **The first evidence unit at AR 390 × 844** (`first_unit_ar390_*.json`): Home — the value is visible, its scope,
+  period, limit and verification link are not (the same as before); CLM-001 — value, scope and period visible, the limit
+  and the source link not (the same as before); /payments/ — none of the five (before: none), because the governed
+  always-visible boundaries and answers come first and the first figure starts at 3.8 screens. All five together on the
+  first screen: no page, before or after.
+- Bytes, cold at 390: about +17,360 bytes on every Arabic page (the 12,616-byte display face and the larger
+  stylesheet), Home +18,725 (its markup grew too); AR /data/ 332,040 → 349,402 bytes against the 358,400 limit.
+- Keyboard: zero upward focus jumps on every phone view (13 families, AR 390); on the wide screen the patterns of §8.4
+  plus one, column-wise, inside Home's figure cards; every focused element shows its indicator; the Home search band
+  opens the search with its field focused and returns focus on Escape, in both editions.
+
+### 9.5 Verification on the final tree (the pinned interpreter, Python 3.11.9)
+
+The standing chain (compileall; projections; generator tests; build; literal audit 19,883 / 0; validator; literal
+determinism; lineage; diagrams; social images, regenerated and byte-identical on a second run; logo; bilingual
+invariance; content parity; the cutover oracle pinned and release parity; the new display-face coverage gate with its
+control; public tools; viewport acceptance; security headers; base path; no-JavaScript; rendered visibility with both
+controls; exports; HTTP contract; Stage A; re-entry; portability; public-path documentation) and the accessibility audit
+(axe 4.10.2, 24 pages × 2 widths: 0 rule violations, 0 contrast failures, 30 targets under 24 px, as in G2 — a
+measurement, not a conformance claim) — results in this branch's PROGRESS line. Print emulated on Home, CLM-001, a
+Reading and /payments/: no card radius or band fill reaches print, and the illustration and the search band are not
+printed. Never claimed: accessibility conformance, live performance, release readiness.

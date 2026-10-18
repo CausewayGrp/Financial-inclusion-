@@ -60,6 +60,9 @@ from yfie import content as C, render  # noqa: E402
 FONT_FILES = {
     "ibm-plex-sans": ["IBMPlexSans-Regular.woff2", "IBMPlexSans-Medium.woff2", "IBMPlexSans-SemiBold.woff2", "LICENSE.txt"],
     "ibm-plex-sans-arabic": ["IBMPlexSansArabic-Regular.woff2", "IBMPlexSansArabic-Medium.woff2", "IBMPlexSansArabic-SemiBold.woff2", "LICENSE.txt"],
+    # OD-1018 D2: one display face per edition, titles and section headings only (vendor/fonts/README.md, display_coverage.json)
+    "noto-naskh-arabic": ["NotoNaskhArabic-SemiBold-subset.woff2", "OFL.txt"],
+    "ibm-plex-serif": ["IBMPlexSerif-SemiBold-Latin1.woff2", "LICENSE.txt"],
 }
 
 

@@ -911,7 +911,7 @@
  "rule": "frame_sha256 is the SHA-256 of the template's HTML at the time the image was made. --check rebuilds the templates and compares, so a governed text change is caught without rendering anything.",
  "schema": "YFIE_SOCIAL_IMAGES/1.0",
  "template_rule": "template_sha256 is the SHA-256 of the stylesheet rules the social frame uses, the @font-face block, the shipped font files and the logo at the time the images were made (Stage B charter 12.3); --check recomputes it, so a presentation change marks every card stale without rendering anything.",
- "template_sha256": "1e06f206500e9685524240ac10bb1f20e41a6ba3abf2ccb1303290710cfbefe7",
+ "template_sha256": "4aa76954eb5d7a03dafec9bbbc162e0d19f65780da4d6b2b9a8e6dbbeb4a0a8b",
  "what": "One 1200x630 PNG per route and language, rasterised from the governed social template (scripts/yfie/frames.py social_document). Regenerate with python3 scripts/social_images.py.",
  "width": 1200
 }
