@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 291,
-  "DESIGN_PACKAGE": 699,
+  "DESIGN_PACKAGE": 748,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
@@ -5432,6 +5432,178 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/evidence/v2/proof/D_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/T0_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/T1_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/T2_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/assessment.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/critique_T1_round1.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/metrics_table.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar1440_home_full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar390_methodology.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_ar390_readings_how-money-reaches-households.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en1440_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en1440_home_full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en1440_methodology.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en1440_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en1440_readings_how-money-reaches-households.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/D_en390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T0_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T0_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar1440_home_full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar390_methodology.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_ar390_readings_how-money-reaches-households.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en1440_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en1440_home_full.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en1440_methodology.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en1440_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en1440_readings_how-money-reaches-households.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T1_en390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T2_ar1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/proof/shots/T2_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -5561,6 +5733,30 @@
   },
   {
    "path": "design/exploration/v2/cand_F.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v3/README.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v3/build_proof.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v3/faces_T1.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v3/faces_T2.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v3/folio.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v3/fonts/NotoNaskhArabic-SemiBold-subset.woff2",
    "class": "DESIGN_PACKAGE"
   },
   {

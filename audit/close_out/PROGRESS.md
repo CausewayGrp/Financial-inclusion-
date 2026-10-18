@@ -492,3 +492,14 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   screen, 811–843 px). The gate negative controls on the fixed head are the six CI shards on its exact head (the local suite
   on `cd3e951a` covers a tree that differs only in markup order and the three rules). No Master, projection or hosting state
   changed. Never claimed: accessibility conformance, live performance, release readiness.
+
+- 2026-10-18 · Phase 2 · PR #62 merged · main `886a8160` (Verify 9 of 9 on the exact head `b5ca7ba6`; the Workers check
+  excluded, OD-1017-06). Stage B's design programme is integrated: G1 (PR #61), G2, W4F, G3, DL-V2-011 and the markup-order
+  fix (PR #62). Then the owner's Decision 2 of 18 October 2026: one isolated, presentation-only visual proof ("Folio") on
+  branch `pr/visual-proof-folio` from `886a8160` — CSS over a scratch copy of `dist/` with HTML and JavaScript byte-identical,
+  the three owner references read for their qualities, a narrowly controlled display-face challenge (two licensed, locally
+  hosted faces against the incumbent; Markazi not retested; body faces unchanged), one independent critique and one revision,
+  before/after at identical viewports, the metrics of every variant (`design/exploration/v3/`, `design/evidence/v2/proof/`,
+  design record §9). Recommendation: adopt T1 subject to the owner's review, as a Stage C presentation transaction. Opened as a
+  draft PR; **not merged before the owner's review**; no DL-V2 decision recorded; nothing deployed. No Master, projection,
+  page, shipped stylesheet or hosting state changed.

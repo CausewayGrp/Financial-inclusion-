@@ -1,0 +1,9 @@
+/* ---- Folio T2: display faces — Amiri 700 (OFL) for Arabic titles and section headings, IBM Plex Serif 600 (OFL) for English;
+   body, controls, clocks and numerals stay in IBM Plex Sans / Plex Sans Arabic ---- */
+@font-face{font-family:'Amiri';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/candidates/Amiri-Bold.woff2') format('woff2')}
+@font-face{font-family:'IBM Plex Serif';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/candidates/IBMPlexSerif-SemiBold-Latin1.woff2') format('woff2')}
+[dir=ltr] h1,[dir=ltr] .qa h2:not(.rubric),[dir=ltr] .bnd h2,[dir=ltr] .essay h2{font-family:'IBM Plex Serif',Georgia,serif;font-weight:600;letter-spacing:-.012em}
+[dir=rtl] h1,[dir=rtl] .qa h2:not(.rubric),[dir=rtl] .bnd h2,[dir=rtl] .essay h2{font-family:'Amiri','IBM Plex Sans Arabic',sans-serif;font-weight:700}
+html[dir=rtl]{--fs-display:38px;--lh-display:1.55}
+@media (min-width:900px){html[dir=rtl]{--fs-display:58px;--lh-display:1.42}}
+[dir=rtl] .qa:not(.topics) h2:not(.rubric),[dir=rtl] .bnd h2,[dir=rtl] .essay h2{font-size:calc(var(--fs-q) + 8px);line-height:1.6}

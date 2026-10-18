@@ -1,0 +1,645 @@
+{
+ "variant": "T2",
+ "html_identical_to_dist": true,
+ "js_identical": true,
+ "pages": {
+  "ar:390:/": {
+   "scrollHeight": 7985,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": true,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": 1,
+   "firstBoundaryScreens": 1.6,
+   "hiddenGoverned": [],
+   "screens": 9.5,
+   "overflow": false
+  },
+  "ar:390:/payments/": {
+   "scrollHeight": 16942,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 3,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 1,
+   "hiddenGoverned": [],
+   "screens": 20.1,
+   "overflow": false
+  },
+  "ar:390:/evidence/CLM-001/": {
+   "scrollHeight": 8734,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 3,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": true,
+    "clock": true,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": 1,
+   "firstBoundaryScreens": 3.1,
+   "hiddenGoverned": [],
+   "screens": 10.3,
+   "overflow": false
+  },
+  "ar:390:/data/": {
+   "scrollHeight": 15802,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": 2,
+   "firstBoundaryScreens": 15.3,
+   "hiddenGoverned": [],
+   "screens": 18.7,
+   "overflow": false
+  },
+  "ar:390:/readings/how-money-reaches-households/": {
+   "scrollHeight": 30506,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 1.9,
+   "hiddenGoverned": [],
+   "screens": 36.1,
+   "overflow": false
+  },
+  "ar:390:/methodology/": {
+   "scrollHeight": 13668,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": null,
+   "hiddenGoverned": [],
+   "screens": 16.2,
+   "overflow": false
+  },
+  "en:1440:/": {
+   "scrollHeight": 3990,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": true,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": 0.5,
+   "firstBoundaryScreens": 1,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 4.4,
+   "overflow": false
+  },
+  "en:1440:/payments/": {
+   "scrollHeight": 12149,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": true,
+    "evidence": true
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 0.9,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 13.5,
+   "overflow": false
+  },
+  "en:1440:/evidence/CLM-001/": {
+   "scrollHeight": 5087,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 5,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": true,
+    "clock": true,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": 0.8,
+   "firstBoundaryScreens": 2.1,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 5.7,
+   "overflow": false
+  },
+  "en:1440:/data/": {
+   "scrollHeight": 15567,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": 1.4,
+   "firstBoundaryScreens": 15.5,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 17.3,
+   "overflow": false
+  },
+  "en:1440:/readings/how-money-reaches-households/": {
+   "scrollHeight": 20564,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 4,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 1.3,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 22.8,
+   "overflow": false
+  },
+  "en:1440:/methodology/": {
+   "scrollHeight": 9853,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 4,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": null,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 10.9,
+   "overflow": false
+  },
+  "ar:1440:/": {
+   "scrollHeight": 4179,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": true,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": 0.5,
+   "firstBoundaryScreens": 1.1,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 4.6,
+   "overflow": false
+  },
+  "ar:1440:/payments/": {
+   "scrollHeight": 12905,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 3,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 1,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 14.3,
+   "overflow": false
+  },
+  "ar:1440:/evidence/CLM-001/": {
+   "scrollHeight": 5525,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 3,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": true,
+    "clock": true,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": 0.9,
+   "firstBoundaryScreens": 2.3,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 6.1,
+   "overflow": false
+  },
+  "ar:1440:/data/": {
+   "scrollHeight": 14827,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": 1.4,
+   "firstBoundaryScreens": 14.5,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 16.5,
+   "overflow": false
+  },
+  "ar:1440:/readings/how-money-reaches-households/": {
+   "scrollHeight": 22607,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 1.5,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 25.1,
+   "overflow": false
+  },
+  "ar:1440:/methodology/": {
+   "scrollHeight": 9741,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "h1Lines": 2,
+   "fonts": [
+    "Amiri 700",
+    "IBM Plex Sans Arabic 400",
+    "IBM Plex Sans Arabic 500",
+    "IBM Plex Sans Arabic 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": true
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": null,
+   "hiddenGoverned": [
+    "strip"
+   ],
+   "screens": 10.8,
+   "overflow": false
+  },
+  "en:390:/": {
+   "scrollHeight": 7808,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": 1,
+   "firstBoundaryScreens": 1.6,
+   "hiddenGoverned": [],
+   "screens": 9.3,
+   "overflow": false
+  },
+  "en:390:/payments/": {
+   "scrollHeight": 16423,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 1,
+   "hiddenGoverned": [],
+   "screens": 19.5,
+   "overflow": false
+  },
+  "en:390:/evidence/CLM-001/": {
+   "scrollHeight": 8170,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 4,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": true,
+    "clock": true,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": 0.8,
+   "firstBoundaryScreens": 2.9,
+   "hiddenGoverned": [],
+   "screens": 9.7,
+   "overflow": false
+  },
+  "en:390:/data/": {
+   "scrollHeight": 15355,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": 2,
+   "firstBoundaryScreens": 14.9,
+   "hiddenGoverned": [],
+   "screens": 18.2,
+   "overflow": false
+  },
+  "en:390:/readings/how-money-reaches-households/": {
+   "scrollHeight": 29028,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": 1.8,
+   "hiddenGoverned": [],
+   "screens": 34.4,
+   "overflow": false
+  },
+  "en:390:/methodology/": {
+   "scrollHeight": 13820,
+   "scrollWidth": 390,
+   "clientWidth": 390,
+   "h1Lines": 3,
+   "fonts": [
+    "IBM Plex Sans 400",
+    "IBM Plex Sans 500",
+    "IBM Plex Sans 600",
+    "IBM Plex Serif 600"
+   ],
+   "p1": {
+    "figure": false,
+    "clock": false,
+    "boundary": false,
+    "evidence": false
+   },
+   "firstAnswerScreens": null,
+   "firstBoundaryScreens": null,
+   "hiddenGoverned": [],
+   "screens": 16.4,
+   "overflow": false
+  }
+ },
+ "cold_bytes_390": {
+  "ar:/": {
+   "total": 402335,
+   "font": 352496,
+   "font_files": 4
+  },
+  "ar:/payments/": {
+   "total": 412859,
+   "font": 352496,
+   "font_files": 4
+  },
+  "ar:/evidence/CLM-001/": {
+   "total": 402976,
+   "font": 352496,
+   "font_files": 4
+  },
+  "ar:/data/": {
+   "total": 459836,
+   "font": 352496,
+   "font_files": 4
+  },
+  "ar:/readings/how-money-reaches-households/": {
+   "total": 412209,
+   "font": 352496,
+   "font_files": 4
+  },
+  "ar:/methodology/": {
+   "total": 405200,
+   "font": 352496,
+   "font_files": 4
+  },
+  "en:/": {
+   "total": 269075,
+   "font": 220576,
+   "font_files": 4
+  },
+  "en:/payments/": {
+   "total": 278172,
+   "font": 220576,
+   "font_files": 4
+  },
+  "en:/evidence/CLM-001/": {
+   "total": 269090,
+   "font": 220576,
+   "font_files": 4
+  },
+  "en:/data/": {
+   "total": 322532,
+   "font": 220576,
+   "font_files": 4
+  },
+  "en:/readings/how-money-reaches-households/": {
+   "total": 276944,
+   "font": 220576,
+   "font_files": 4
+  },
+  "en:/methodology/": {
+   "total": 271078,
+   "font": 220576,
+   "font_files": 4
+  }
+ }
+}

@@ -1,5 +1,14 @@
 # Repository Change Log
 
+## 18 October 2026 — the Folio visual proof (owner-authorized Decision 2; a draft, not merged before owner review)
+
+One isolated, presentation-only treatment over the merged G2 build (PR #62, main `886a8160`): `design/exploration/v3/`
+(the treatment as CSS over a scratch copy of `dist/`, HTML and JavaScript byte-identical; two display-face deltas; the
+build-and-measure script; a 13 KB Noto Naskh Arabic SemiBold subset with its provenance) and `design/evidence/v2/proof/`
+(before/after shots at identical viewports, the metrics of every variant, the independent critique and the change and
+impact assessment with the recommendation). Design record §9. No Master, projection, page, shipped stylesheet or hosting
+state changed; nothing deployed.
+
 ## 18 October 2026 — Stage B G2 refinement (B4c; DL-V2-011) and the G2 integration branch
 
 The owner's visual-quality clarification of 18 October 2026, applied as one small, coherent adjustment to the shipped

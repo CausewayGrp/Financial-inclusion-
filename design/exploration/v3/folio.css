@@ -1,0 +1,82 @@
+/* ---- Folio: one premium editorial treatment over the accepted G2 build (DL-V2-001 kept; the owner's references read
+   for their qualities). CSS over the shipped stylesheet; the HTML and JavaScript are byte-identical to dist/. ---- */
+
+/* 1. Scale and voice: a dominant title, the statement one step quieter, the anchor heavier; nothing else louder */
+:root{--fs-display:32px;--lh-display:1.1;--fs-st:19px;--lh-st:1.55;--rule-2:#A6AFB7}
+html[dir=rtl]{--fs-display:30px;--lh-display:1.38;--fs-st:20px;--lh-st:1.75}
+@media (min-width:900px){
+:root{--fs-display:52px;--lh-display:1.06;--fs-st:21px;--fs-q:22px}
+html[dir=rtl]{--fs-display:46px;--lh-display:1.3;--fs-st:22px;--fs-q:23px}
+h1{max-width:21ch}
+}
+[dir=ltr] h1{letter-spacing:-.028em}
+h1.long{font-size:calc(var(--fs-display) * .74)}   /* a governed title over 56 EN / 72 AR characters: four lines at most at 1440, nothing shortened */
+.head h1::after{width:56px;height:2px;background:var(--brass-700);margin-top:18px}
+@media (max-width:599px){.head h1::after{margin-top:12px}}
+.head .rubric{color:var(--brass-700)}
+[dir=ltr] .head .rubric{letter-spacing:.16em}
+.head .q{color:var(--ink-2);font-weight:400}
+.head .st{color:var(--ink-2)}
+[dir=rtl] .head .st{color:var(--ink)}   /* revision: the secondary ink thins Plex Sans Arabic at the statement size; the Arabic thesis keeps the primary ink */
+.head .st b{color:var(--ink);font-weight:600}
+
+/* 2. The register head on a wide screen: the title column wider, the statement set a little lower so the two columns converse */
+@media (min-width:900px){
+.obj .head:has(> .st[data-register]){grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:60px}
+.obj .head:has(> .st[data-register])>.st{margin-top:12px}
+}
+
+/* 3. Calls to action and tools: square, quiet, institutional */
+.head .actions a,.head-rule .actions a{border-radius:0;min-height:42px;padding:0 18px;font-weight:500;letter-spacing:.01em}
+.page-tools>.tbtn,.page-tools>a{color:var(--mute)}
+
+/* 4. Sections: more air between them, darker hairlines, brass numerals, headings one step up */
+.obj{border-top-color:var(--ink)}
+.qa{border-top-color:var(--rule-2)}
+.rubric .n{color:var(--brass-700);font-weight:600}
+.qa:not(.topics) h2:not(.rubric){font-size:calc(var(--fs-q) + 2px);line-height:1.28}
+[dir=rtl] .qa:not(.topics) h2:not(.rubric){line-height:1.5}
+@media (min-width:900px){.obj.page-obj{gap:32px}.qa{padding-top:24px}}
+@media (min-width:1200px){.qa{padding-top:28px;gap:4px 44px}}
+
+/* 5. The boundary: a bounded band in the counter colour, its rubric spaced, the rule single and firm */
+.bnd{border-top:2px solid var(--counter);padding-top:16px}
+[dir=ltr] .bnd .rubric{letter-spacing:.16em}
+
+/* 6. Home's three figures as one evidence register: bounded by rules, not a box (revision: the frame cramped the measure
+   and read as a callout; the register now opens under a firm ink rule and keeps the reading measure) */
+#s3{border-top:2px solid var(--ink);padding-top:18px}
+#s3 .compact{border-top-color:var(--rule)}
+
+/* 7. The record head: the clocks as a ruled register, labels in brass, values firm */
+.record-line{display:grid;grid-template-columns:1fr;gap:10px 40px;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule-2);padding:14px 0;margin-top:20px}
+@media (min-width:600px){.record-line{grid-template-columns:1fr 1fr}}
+.record-line .clock .k{color:var(--brass-700);font-weight:600;font-size:var(--fs-rubric)}
+[dir=ltr] .record-line .clock .k{text-transform:uppercase;letter-spacing:.12em}
+.record-line .clock .v{font-weight:500;color:var(--ink)}
+
+/* 8. The masthead and the rail: one ink hairline under the masthead, brass for the current hub, a brass top rule on the rail */
+.bar{border-bottom:1px solid var(--ink)}
+.brand-name{font-size:14px;letter-spacing:-.005em}
+@media (min-width:900px){.brand-name{font-size:15px}.nav a[aria-current=page]{border-bottom-color:var(--brass-700)}
+.spine{border-top:2px solid var(--brass-700);padding-top:12px}.spine .index .n{color:var(--brass-700)}.spine h3{color:var(--brass-700)}}
+
+/* 9. Long reading: a slightly larger measure and more air between sections */
+@media (min-width:900px){.read{font-size:20px}[dir=rtl] .read{font-size:21px}.essay section{padding:12px 0 36px}}
+
+/* 10. Home on a wide screen: an asymmetric spread — the thesis, the topics, the boundary and the starting questions on the
+   start side; the bounded evidence register beside them. The markup order (figures first) is the reading order; the
+   phone keeps its single column; the rail stays. */
+@media (min-width:1200px){
+.page{max-width:1360px}
+.page>.obj.page-obj:has(> #topics){max-width:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);column-gap:64px;row-gap:0;align-items:start}
+.page>.obj.page-obj:has(> #topics)>*{grid-column:1 / -1}
+.page>.obj.page-obj:has(> #topics)>.head{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:10px}
+.page>.obj.page-obj:has(> #topics)>#topics{grid-column:1;grid-row:2;display:flex;flex-direction:column;gap:8px;padding-top:22px}
+.page>.obj.page-obj:has(> #topics)>#s4{grid-column:1;grid-row:3;margin-top:26px}
+.page>.obj.page-obj:has(> #topics)>#s9{grid-column:1;grid-row:4;display:flex;flex-direction:column;gap:10px}
+.page>.obj.page-obj:has(> #topics)>#s3{grid-column:2;grid-row:1 / span 4;display:flex;flex-direction:column;gap:10px;margin-top:72px}   /* revision: the register starts a line below the title, so the thesis is the one entry point */
+.page>.obj.page-obj:has(> #topics)>.head .actions{margin-top:18px}
+.page>.obj.page-obj:has(> #topics)>#s3 .paced .sent{font-size:19px;line-height:1.55}
+[dir=rtl] .page>.obj.page-obj:has(> #topics)>#s3 .paced .sent{font-size:20px;line-height:1.8}
+}

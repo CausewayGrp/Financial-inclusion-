@@ -854,3 +854,30 @@ side effect: the spacing rule that had followed the tools no longer applies, so 
 RC-NAV rule, which read the tools row as the h1's immediate successor, now admits the statement and the two calls to action
 between them and nothing else; its negative control (a stray paragraph after the h1, before the row's allowed companions)
 has its selector updated to the new markup and is caught.
+
+---
+
+## 9. The Folio visual proof (owner-authorized, Decision 2 of 18 October 2026), branch `pr/visual-proof-folio` on main `886a8160` (PR #62 merged)
+
+The owner's finding that the accepted G2 design is functionally improved but has not met the visual-quality ambition,
+and the authorization of one isolated, presentation-only proof over current main with the three references as quality
+references. Built as the G1 candidates were (charter §10): CSS appended to a scratch copy of `dist/`, HTML and
+JavaScript byte-identical, nothing in the Master, the projections, the pages' words or the shipped stylesheet changed.
+Folder `design/exploration/v3/` (the treatment `folio.css` in ten blocks, the display-face deltas, the build script, the
+subset font with its provenance); evidence `design/evidence/v2/proof/` (`assessment.md`, `critique_T1_round1.md`,
+`metrics_table.md`, the metrics of every variant, the before/after shots at identical viewports).
+
+- **Variants.** D the baseline (`b5ca7ba6`); T0 the treatment on the incumbent faces; T1 the treatment with Noto Naskh
+  Arabic 600 (subset, no Latin) and IBM Plex Serif 600 for titles and section headings; T2 with Amiri 700, built and
+  viewed, not taken further. The narrowly controlled display-face challenge the owner allowed: two licensed, locally
+  hosted alternatives against the incumbent on real text at 390 and 1440 in both editions; G1 is not reopened (the
+  Markazi pairing is not retested; the body faces are unchanged).
+- **The independent critique** (one fresh reviewer, the eight pairs, the criteria in order) found T1 better on identity
+  and English type, better on Arabic type on the desktop and worse on the phone, and named nine defects, the Home
+  evidence box first. One revision, as the owner allowed: eight of nine fixed or reduced, one accepted (§3 of the
+  assessment). After it: Home desktop 5.5 → 4.3 screens with the first figure at 0.5; the Arabic phone titles back to
+  two lines (/payments/ three); +37 KB per page in T1, AR /data/ 346 KB cold (target ≤ 350), four font files (limit 4).
+- **Recommendation:** adopt T1 subject to the owner's review of the rendered pairs, as a Stage C presentation transaction
+  (the blocks folded into `theme.py` in place, the fonts recorded in `08_ASSET_MAP.md`, every gate on the shipped build);
+  T0 if no new font file is wanted; D if the phone's first-screen numbers outrank the dominant title. **Not merged before
+  the owner's review**; no DL-V2 decision is recorded until the owner decides.
