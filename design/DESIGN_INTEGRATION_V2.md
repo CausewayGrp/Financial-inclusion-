@@ -267,6 +267,7 @@ tool and retired tiers are recognised, and the ten table-only objects are listed
 | 14 the record's "Return to interpretation" label | OPEN → B2 | — |
 | 15 "Compare evidence" from a record preloads one record | CLOSED by decision in B2: the prompt for a second record stands; no arbitrary second record is chosen (DL-V2-010) | §3.1 |
 | 16 three fonts = 220 KB per page | → W4F | — |
+| B2-F02 local gate results were not predictive of CI: the local environment ran Python 3.12 while `requirements.txt` and CI pin 3.11, so PEP 701 f-strings compiled locally and the CI build failed | CLOSED in B2: the report form's fragments hoisted out of the f-string expression parts (rendered HTML byte-identical); `scripts/tests/test_python311_syntax.py` added as the guard and `compileall` added to CI; the repository's own pin is Python 3.11 (`requirements.txt`: "Pinned Python 3.11 toolchain … CI installs exactly this"), so the local environment was aligned to it rather than excused: Python 3.11.9 installed and a second virtual environment built from `requirements.txt` with Chromium, and the local gate chain now runs on it, interpreter version printed first. The 3.12 environment is left in place, unused by the gates, so no earlier result silently changes meaning. | §3.6 |
 | B1-F01 tap targets under 24 px that predate B1 (the CC BY link, the contact e-mail links, the record breadcrumb, the long-cite summary) | → W4F/G3; the targets B1 introduced (topics block, measurement lists) were fixed in B1 | §2.3 |
 
 ### 1.12 Edition 2 (not built in this programme)
@@ -518,6 +519,33 @@ with the owner's answer; seed 25 ("what changed in this edition" on /corrections
 with the Master section it needs; seed 27's test set is the existing P2-G01 probe (answerable intents) plus
 `t_search_zero_help` (unanswerable and near-miss) — a committed unanswerable set in the probe file is a B4c addition;
 G0-F09 bindings → B4b; the first-party report endpoint stays a hosting option (off).
+
+### 3.6 The interpreter-version finding (B2-F02)
+
+The first CI run of this branch failed at the build step: `scripts/yfie/families.py` raised "f-string expression part
+cannot include a backslash" on Python 3.11. The report form built its input attributes inside f-string expression parts
+(`f'{field("url", inp("url", " type=\"url\""))}'`), which PEP 701 legalised in 3.12 and 3.11 rejects. One cause, four
+symptoms: Governance gates died at the build, Browser acceptance and the six negative-control shards were skipped
+because they depend on it, and the aggregate failed in two seconds.
+
+Why the local gates did not catch it. The local environment ran Python 3.12.10 while `requirements.txt` is titled
+"Pinned Python 3.11 toolchain … (CI installs exactly this)" and all three CI jobs set up 3.11. Every local result,
+including the 170-of-170 negative-control run, was therefore produced by an interpreter that accepts syntax CI rejects.
+`CONTRIBUTING.md` §9 already stated the rule; nothing enforced it, and the newer interpreter hid the breach.
+
+The closure has three parts. **The fix:** every fragment is hoisted into a local and only the local is interpolated;
+the rendered contact pages are byte-identical in both editions, so no behaviour changed. **The guard:**
+`scripts/tests/test_python311_syntax.py` reads every tracked Python file's f-strings and rejects a backslash in an
+expression part or a nested string that reuses the f-string's own delimiter — the two PEP 701 relaxations a renderer
+reaches for. It is textual by necessity: `ast.parse(..., feature_version=(3, 11))` does not re-impose the restriction,
+which was verified before relying on it, and the detector was itself tested against five cases, including the
+triple-quoted f-strings in the hosting tests that must not be flagged. CI gains `compileall` over `scripts`, `site-src`,
+`audit` and `design` as the first governance step, so a syntax breach fails in seconds instead of after the build.
+**The toolchain:** the repository's own pin is Python 3.11 (`requirements.txt`: "Pinned Python 3.11 toolchain … CI installs exactly this"), so the local environment was aligned to it rather than excused: Python 3.11.9 installed and a second virtual environment built from `requirements.txt` with Chromium, and the local gate chain now runs on it, interpreter version printed first. The 3.12 environment is left in place, unused by the gates, so no earlier result silently changes meaning.
+
+What this says about the earlier gate reports: they were honest about what ran, but a pass on the wrong interpreter is
+not evidence about CI. The B1 lesson (a control whose selector a structure change outdated) and this one share a shape:
+a gate that cannot see the thing it is believed to cover. Both are now mechanically closed.
 
 **Session boundary (owner instruction, 17 October 2026).** B2 is this session's stop. B3 G1 runs in a fresh session,
 resuming from `audit/close_out/PROGRESS.md` and `design/evidence/v2/STATE.json` under §12 of the directive; PR #51

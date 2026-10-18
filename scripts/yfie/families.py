@@ -599,17 +599,24 @@ def report_form(ctx: dict, shell: dict, origin_html: str) -> str:
     types = "".join(f'<option value="{k}">{esc(v)}</option>' for k, v in f["types"])
     nojs_lines = ["Reference:", "Page:", "Record:", "Section:", "Language:", "Edition:", "Error type:", "In question:", "Should say:", "Evidence:", "Name:", "Reply to:"]
     nojs_href = f'mailto:{esc(addr)}?subject={quote(f["subject"])}&amp;body={quote(chr(10).join(nojs_lines))}'
+    # CONTRIBUTING.md §9: on Python 3.11 an f-string expression part cannot hold a backslash, so every attribute
+    # fragment and control is built here and only the local is interpolated below (CI pins 3.11; PEP 701 is 3.12).
+    ltr = ' dir="ltr"'
+    url_attrs = ' type="url" inputmode="url" dir="ltr" autocomplete="url"'
+    email_attrs = ' type="email" autocomplete="email" dir="ltr" inputmode="email"'
+    name_attrs = ' autocomplete="name"'
+    area = lambda key: f'<textarea name="{key}" data-rf="{key}" rows="3"></textarea>'   # noqa: E731
+    type_select = f'<select name="type" data-rf="type" required><option value="">—</option>{types}</select>'
+    grid = (field("url", inp("url", url_attrs)) + field("record", inp("record", ltr)) + field("anchor", inp("anchor", ltr))
+            + field("lang", inp("lang", ltr)) + field("edition", inp("edition")))
+    rows = (field("value", area("value"), err=True) + field("type", type_select, required=True, err=True)
+            + field("should", area("should"), err=True) + field("evidence", inp("evidence"))
+            + field("name", inp("name", name_attrs)) + field("email", inp("email", email_attrs), err=True))
     return (f'<section class="qa first ctx report" id="report" data-correction-context data-context-mode="contact" data-report-form>'
             f'<div><h2 id="report-h">{esc(f["title"])}</h2></div><div>{origin_html}<p class="small">{esc(f["intro"])}</p><p class="small">{esc(f["required_note"])}</p>'
             f'<div class="report-form" role="form" aria-labelledby="report-h" data-report data-address="{esc(addr)}" data-product="{esc(f["product"])}">'
             f'<div class="rf-errors small" data-report-errors role="alert" hidden></div>'
-            f'<div class="rf-grid">{field("url", inp("url", " type=\"url\" inputmode=\"url\" dir=\"ltr\" autocomplete=\"url\""))}{field("record", inp("record", " dir=\"ltr\""))}'
-            f'{field("anchor", inp("anchor", " dir=\"ltr\""))}{field("lang", inp("lang", " dir=\"ltr\""))}{field("edition", inp("edition"))}</div>'
-            f'{field("value", "<textarea name=\"value\" data-rf=\"value\" rows=\"3\"></textarea>", err=True)}'
-            f'{field("type", f"<select name=\"type\" data-rf=\"type\" required><option value=\"\">—</option>{types}</select>", required=True, err=True)}'
-            f'{field("should", "<textarea name=\"should\" data-rf=\"should\" rows=\"3\"></textarea>", err=True)}'
-            f'{field("evidence", inp("evidence"))}{field("name", inp("name", " autocomplete=\"name\""))}'
-            f'{field("email", inp("email", " type=\"email\" autocomplete=\"email\" dir=\"ltr\" inputmode=\"email\""), err=True)}'
+            f'<div class="rf-grid">{grid}</div>{rows}'
             f'<p class="small rf-consent">{esc(f["consent"])}{priv_html}</p>'
             f'<div class="actions"><button type="button" class="button" data-report-send>{esc(f["send"])}</button><button type="button" class="tbtn" data-report-copy>{esc(f["copy"])}</button></div>'
             f'<p class="small" data-report-status role="status" aria-live="polite"></p>'

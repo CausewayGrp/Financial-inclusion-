@@ -401,3 +401,18 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   manifest and checksums it regenerates, are the only difference between that tree and the pushed head. First run on the B2 tree: 169
   of 170, which found one control whose selector B2's markup had outdated ("a record's report link loses its record"); fixed at
   `95554840` and caught on the re-run. Scope stated in full, as the owner required: no run is reported as CAUGHT for a subset.
+
+- 2026-10-18 · Phase 2 · B2 T · finding B2-F02, interpreter version. The first CI run of `pr/stage-b-t` failed at the build step:
+  `scripts/yfie/families.py` raised "f-string expression part cannot include a backslash" on Python 3.11, because the report form
+  built its input attributes inside f-string expression parts — legal from 3.12 under PEP 701, rejected by 3.11. One cause, four
+  symptoms: Governance gates died at the build, Browser acceptance and the six negative-control shards were skipped because they
+  depend on it, and the aggregate failed in two seconds. The local environment ran Python 3.12.10 while `requirements.txt` and all
+  three CI jobs pin 3.11, so every local result — including the 170-of-170 negative-control run — came from an interpreter that
+  accepts syntax CI rejects; `CONTRIBUTING.md` §9 stated the rule and nothing enforced it. Closed three ways: the fragments are
+  hoisted into locals and the rendered contact pages are byte-identical in both editions (no behaviour change);
+  `scripts/tests/test_python311_syntax.py` is the guard, reading every tracked file's f-strings for a backslash in an expression
+  part or a nested string reusing the f-string's delimiter (textual by necessity — `ast.parse(..., feature_version=(3, 11))` does
+  not re-impose the rule, verified before relying on it; the detector was tested on five cases, including the triple-quoted
+  f-strings in the hosting tests that must not be flagged), and `compileall` over `scripts`, `site-src`, `audit` and `design` is
+  now CI's first governance step; and the local toolchain: the repository's own pin is Python 3.11 (`requirements.txt`: "Pinned Python 3.11 toolchain … CI installs exactly this"), so the local environment was aligned to it rather than excused: Python 3.11.9 installed and a second virtual environment built from `requirements.txt` with Chromium, and the local gate chain now runs on it, interpreter version printed first. The 3.12 environment is left in place, unused by the gates, so no earlier result silently changes meaning. `CONTRIBUTING.md` §5 and §9 record both the interpreter
+  requirement and the guard. No Master, projection, page or hosting state changed.

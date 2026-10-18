@@ -188,7 +188,8 @@
    "cite formats",
    "search zero-result help",
    "/data/ live counts",
-   "docs/CORRECTIONS_PROCESS.md"
+   "docs/CORRECTIONS_PROCESS.md",
+   "B2-F02 interpreter-version gap: fix, guard and toolchain alignment (§3.6)"
   ],
   "B4b": [
    "G0-F09 record->MA bindings (Master)",
@@ -328,5 +329,11 @@
    "cite": "APA 7, Chicago, BibTeX, RIS (DL-V2-009)",
    "corrections": "docs/CORRECTIONS_PROCESS.md linked"
   }
+ },
+ "toolchain": {
+  "ci_pins": "Python 3.11 (.github/workflows/verify.yml, three jobs; requirements.txt)",
+  "local": "Python 3.11.9 with a virtual environment built from requirements.txt and Chromium, under the user's .venvs/yfie311; the local gate chain runs on it and prints the interpreter version first. The earlier 3.12 environment stays in place but no gate uses it.",
+  "guard": "scripts/tests/test_python311_syntax.py (local, any interpreter) and compileall over scripts/site-src/audit/design (CI, first governance step)",
+  "lesson": "B2-F02: a local pass on Python 3.12 proved nothing about CI, because PEP 701 legalised backslashes in f-string expression parts"
  }
 }
