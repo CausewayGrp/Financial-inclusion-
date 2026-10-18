@@ -541,6 +541,8 @@ reaches for. It is textual by necessity: `ast.parse(..., feature_version=(3, 11)
 which was verified before relying on it, and the detector was itself tested against five cases, including the
 triple-quoted f-strings in the hosting tests that must not be flagged. CI gains `compileall` over `scripts`, `site-src`,
 `audit` and `design` as the first governance step, so a syntax breach fails in seconds instead of after the build.
+**The evidence after it.** The full chain and all 170 negative controls were re-run on Python 3.11.9 at `d819e4a7`: 0 failures and 170 of 170 faults caught. The identical 170-of-170 result on 3.12 is superseded, because an interpreter that accepts what CI rejects cannot speak for CI.
+
 **The toolchain:** the repository's own pin is Python 3.11 (`requirements.txt`: "Pinned Python 3.11 toolchain … CI installs exactly this"), so the local environment was aligned to it rather than excused: Python 3.11.9 installed and a second virtual environment built from `requirements.txt` with Chromium, and the local gate chain now runs on it, interpreter version printed first. The 3.12 environment is left in place, unused by the gates, so no earlier result silently changes meaning.
 
 What this says about the earlier gate reports: they were honest about what ran, but a pass on the wrong interpreter is

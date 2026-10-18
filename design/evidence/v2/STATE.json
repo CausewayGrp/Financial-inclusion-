@@ -334,6 +334,7 @@
   "ci_pins": "Python 3.11 (.github/workflows/verify.yml, three jobs; requirements.txt)",
   "local": "Python 3.11.9 with a virtual environment built from requirements.txt and Chromium, under the user's .venvs/yfie311; the local gate chain runs on it and prints the interpreter version first. The earlier 3.12 environment stays in place but no gate uses it.",
   "guard": "scripts/tests/test_python311_syntax.py (local, any interpreter) and compileall over scripts/site-src/audit/design (CI, first governance step)",
-  "lesson": "B2-F02: a local pass on Python 3.12 proved nothing about CI, because PEP 701 legalised backslashes in f-string expression parts"
+  "lesson": "B2-F02: a local pass on Python 3.12 proved nothing about CI, because PEP 701 legalised backslashes in f-string expression parts",
+  "gates_on_pinned_interpreter": "Python 3.11.9 at d819e4a7: full chain 0 failures; gate negative controls 170 of 170 caught (3,524 s). The earlier 170 of 170 on 3.12 is superseded as evidence, because that interpreter accepts syntax CI rejects."
  }
 }

@@ -416,3 +416,13 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   f-strings in the hosting tests that must not be flagged), and `compileall` over `scripts`, `site-src`, `audit` and `design` is
   now CI's first governance step; and the local toolchain: the repository's own pin is Python 3.11 (`requirements.txt`: "Pinned Python 3.11 toolchain … CI installs exactly this"), so the local environment was aligned to it rather than excused: Python 3.11.9 installed and a second virtual environment built from `requirements.txt` with Chromium, and the local gate chain now runs on it, interpreter version printed first. The 3.12 environment is left in place, unused by the gates, so no earlier result silently changes meaning. `CONTRIBUTING.md` §5 and §9 record both the interpreter
   requirement and the guard. No Master, projection, page or hosting state changed.
+
+- 2026-10-18 · Phase 2 · B2 T · gates re-run on the pinned interpreter, Python 3.11.9, at `d819e4a7` — the first local run that is
+  evidence about CI. Full chain: 0 failures (compileall; the f-string guard, which reports NOT APPLICABLE on 3.11 because the
+  interpreter enforces the rule; projections; generator tests 22; build 306 pages; literal audit 19,883 records / 0 unresolved;
+  validator 306/0; determinism; lineage 8/8; diagrams, social 302, logo current; invariance 0 of 152; content parity 304/0;
+  re-entry 15; public tools 40/41 with 1 not applicable; viewport 308/308; security headers; base path; portable HTTP contract;
+  no-JavaScript). Gate negative controls, full suite: **170 of 170 faults caught** (8 workers, 3,524 s; the clean copies passed
+  first). The same suite had passed 170 of 170 on 3.12 before the interpreter gap was found, which is why that result proved
+  nothing; this one does. The record line you are reading, with its manifest and checksums, is the only difference between the
+  tree these ran on and the pushed head.
