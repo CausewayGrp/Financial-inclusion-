@@ -36,6 +36,7 @@ Evidence files: `design/evidence/v2/g0/` (metrics, scoreboard, visual audit, scr
 | DL-V2-008 | 2026-10-17 | Report an error (BRIEF W4 T): a structured form on /contact/#report — page address, record or chart ID, section, language and edition pre-filled and editable; the value in question; seven error types; what it should say; evidence; optional name and reply address; a consent line to /privacy/. Transport is static and hosting-neutral: a valid report becomes an e-mail to the governed contact address in a fixed `key: value` body under `YFIE-ERR-<record>-<yyyymmdd-hhmm>`, opened in the mail app or copied for webmail; without JavaScript the page offers a pre-addressed e-mail carrying the same field list. Nothing is posted to any endpoint; a first-party endpoint stays a hosting option, off. The process (`docs/CORRECTIONS_PROCESS.md`: triage and classification within ten working days, the Master-first fix, the public log against the stable ID and edition, the reply) is linked from /corrections/ through the canonical repository address. | Browser test `t_report_form` in both editions with three negative controls (empty form, invalid address, unknown record); gate RC-T1 with three negative controls (a link missing the form, a lost field, a form that posts); /contact/ AR 390 4.1 → 6.0 screens. | The stated times are the resource's own commitments (the owner may change them); the repository link is the site's one external link that is not a source; the reporter's mail app must handle `mailto:` bodies. |
 | DL-V2-009 | 2026-10-17 | Cite formats (OD-1017-04(a)): beside the governed plain-text preview, APA 7, Chicago, BibTeX and RIS are rendered from the page's own metadata — the governed title, the record ID, the edition, the publisher and the canonical address — with the access date; the copy action copies exactly the rendered text; machine formats keep their English keys; the Arabic edition uses the governed Arabic access phrases with Latin digits. | Browser test `t_cite_formats` parses the BibTeX and the RIS (and rejects a keyless BibTeX and a RIS without its end tag); every format carries the record ID, the edition and the address. | The access date is the reader's clock; APA and Chicago forms are house renderings of the governed metadata, not a style authority's certification. |
 | DL-V2-010 | 2026-10-17 | Compare (SIG-5; F-16, Part 6 item 16): every controlled verdict carries one reason sentence naming the dimension behind it in the governed field words (differs: … / not recorded: … / the same record / all match), and a copied summary carries the verdict, the reason, each record's title, period, population and boundary, the no-merge rule and the comparison link. The Master holds no legitimately qualified pair among the 14 comparable records (no two with identical recorded definition, population and method and a different period); the Findex 2011, 2014 and 2021 waves exist as a visual (VIS-FINDEX-OBSERVED-WAVES) and a crosswalk dataset, not as per-wave records, so no pair is admitted and none is manufactured. A one-record entry from a record keeps the prompt for a second record by design. | Scan of the built Compare data (0 candidate pairs); browser test `t_compare_reason` (reason per verdict, summary, same-record, input error). | Compare keeps returning only qualified, not-direct or unresolved verdicts until the owner adds per-wave records by a transaction; F-16 stays open as a content question. |
+| DL-V2-011 | 2026-10-18 | G2 refinement (the owner's visual-quality clarification of 18 October 2026, §8): **the brass anchor under every page title** — a 36 × 2 px rule in brass-300 at the start edge, 12 px under the title (8 px on phones) — and **the head statement in the secondary ink** (`--ink-2`), its figures staying in the primary ink. The owner's references were read for their qualities (a dominant title, a parted statement, subtle brass detailing, confident hierarchy), not their elements: no display face, no card, no illustration, no new text, route or font. The only two of three candidate shortcomings that earned a change; the third (a product rubric on the phone head) stays as recorded (the masthead carries it). | `design/evidence/v2/g2/shots/after_*` (re-rendered on the final tree; the committed `before_*` and `pass1_*` unchanged), the live candidate test on four views (v0 none · v1 anchor · v2 anchor + ink-2; v2 chosen on both editions), `g2/refinement_head_390.md` (head, boundary-heading and first-figure positions at 390 on the final tree). | +14 px (desktop) / +8 px (phone) in every head on `cd3e951a`; on the final tree the markup-order fix of §8.4 removed the 8 px the tools' spacing rule had added, so a phone head with a statement is the height it was before the anchor and the AR 390 /payments/ boundary heading ends at 843 px against an 844 px viewport, inside the first screen (851 on `cd3e951a`; the domain exception of §7.4, boundary at 1.0–1.2 screens, holds either way). |
 
 ---
 
@@ -623,3 +624,233 @@ Shell on the proving pages (the register head, the text-link tools after the act
 list index, the rail) → Home (memo: the first screen; the limit beside each observation; the question entry) → domain →
 record → /data/ → Reading → Methodology → propagation. Two refinement passes on each proving family; every class-C
 candidate decided with evidence (the masthead treatment, the desktop TOC presentation, compact source rows, display scale).
+
+---
+
+## 5. B4a — G2, the shell on every family, 18 October 2026, branch `pr/stage-b-g1`
+
+### 5.1 What changed (DL-V2-001 implemented in `scripts/yfie/theme.py`, edited in place; no parallel stylesheet)
+
+- **Type scale** one notch down at every width: display 32/30 → 30/28 px on phones (EN/AR), 52/44 → 42/38 at 900 px and
+  above; question headings 20/21 → 19/20 and 23/24 → 22/23; the paced lead 22/23 → 20/21. A governed title over 56
+  characters carries `class="long"` (renderer helper `render.h1`, used by every family) and steps down a fifth, so the
+  84-character titles of /finance/ and /about/ run to four lines at 1440 instead of six and five; nothing is shortened.
+- **The register head** at 900 px and above for every head that has a statement (Home, the eight domains, /data/,
+  Readings, /methodology/, /measurement/, the trust pages): title on the left, statement, the two calls to action and
+  the tools on the right; the crumb, the family rubric and the governed question stay full-width above. Record heads
+  (no statement) keep the stacked order with the clocks under the title.
+- **The head actions inside the head** for the domain family (`families.head_block` takes the actions; the
+  `.head-rule` wrapper is gone from domains), so the phone order is title, statement, actions, then the tools, and the
+  register grid holds. Content parity, the cutover oracle and the literal audit are unchanged (the strings are the same).
+- **The tools** (cite, report) are quiet underlined text links, after the actions on phones and in the register's
+  right column on wide screens; the record family keeps them under the record line.
+- **Rules, not fills**: the boundary section is a brass double rule with no panel; the Home record unit is a hairline
+  above the record line with no plate; the figure is a white plate under its deep-green rule, open at the sides; table
+  heads are ruled, not filled.
+- **The phone index** is a plain numbered list (the chips, their clamp and their sideways layout are gone); the desktop
+  rail is lighter and narrower (236 px, no side rule, muted tabular numerals, smaller rows).
+- **Home's topics block** is one compact line under a small brass heading. **The edition strip** is one line at 390 in
+  both editions (12 px Arabic, 12.5 px English, the clock size from 600 px).
+- **Calls to action**: one filled, one outlined at one pixel, 40 px tall.
+
+### 5.2 Class-C decisions (charter §2 C, §11)
+
+| Candidate | Decision | Evidence |
+|---|---|---|
+| masthead treatment | kept as it is (five hubs, the logo lockup) | not a judged weakness in G1; D8 and the first-click test stand |
+| desktop TOC presentation | the lighter rail, accepted | A's rail scored highest on source path and calm with the data professional; C's rail-less page lost the record list |
+| compact source rows | decided in B4b on /data/ | — |
+| display scale one notch down | accepted | every candidate that stepped down beat the incumbent on calm tone (A 13, C 12, E 12 vs 9) |
+| the Home limit beside each observation (PR #51) | rejected | it repeats the records' and the boundary section's governed limits and lengthens Home (item 15: never adds length); the ruled unit with the record line is the composition the judges scored |
+| the Home question entry with three examples (item 32) | DROP | the starting questions are section 9 and the search is one tap in the masthead; an entry above the figures would push the first figure out of the first screen, which is the owner's main complaint |
+
+### 5.3 Pass one, measured (`design/evidence/v2/g2/pass1_before_after.md`; the same script and widths as G0)
+
+Every route is shorter on both phones (Home 9.5 → 9.0 AR 390; /payments/ 20.4 → 19.6; /reforms/ 21.7 → 20.3;
+/remittances/ 17.4 → 16.4). Home's AR 390 first screen now carries the first figure (11.9 % with its universe) and
+the evidence link; records carry figure, clock and evidence link. No overflow at any width; targets under 24 px
+unchanged (1 on the record family, carried from B1-F01 to W4F). Gates on the pass-one build: validator 306/0; literal
+audit 19,883 / 0; content parity 304/0; cutover oracle; determinism; diagrams, social (frame hash), logo current;
+projections; public tools 40/41; security headers; no-JavaScript; HTTP contract; base path; accessibility audit
+(axe 4.10.2, 24 pages × 2 widths: 0 rule violations, 0 contrast failures, 30 targets under 24 px — the record under
+`docs/ACCESSIBILITY_AUDIT.md`, which is a measurement, never a conformance claim).
+
+### 5.4 The rendered-visibility gate (charter §12.1, new: `scripts/tests/test_rendered_visibility.py`)
+
+One page per family in both editions at 390 and 1440: the answer, the head clocks, the boundary sections and the
+tools are rendered and never inside a closed disclosure; no clamp, ellipsis or clip on governed text (the only
+`overflow: hidden` allowed is the listed scroll wrappers and screen-reader text); every governed text node is rendered
+or belongs to a listed set with its reason (screen-reader labels, the phone index and the foot rail which duplicate
+the desktop rail and vice versa, print-only identity, the no-script note, regions the HTML marks hidden, a chart's
+width-dependent tick labels, the phone-hidden product rubric the masthead already carries); every closed disclosure
+has a visible summary. Two negative controls (`--self-check`: a hidden boundary; a clamped paragraph) are caught by
+their own code. 44 page views PASS.
+
+### 5.5 Pass two on the proving families
+
+- **Home on a phone: figures before topics.** Under 900 px the three-figure section, then the index, then the topics
+  line, then the boundary; on a wide screen the register keeps the topics line first (G1: the figure-first candidates
+  scored 15 and 12 of 15 on first-screen comprehension against 12 for topics-first; the topics stay one step from Home
+  at every width, so DL-V2-007 holds). Home AR 390: 9.5 (t1) → 8.9 screens; the first figure at 0.8 screens.
+- **Disclosures as ruled rows.** The named bars of the folds (`details.fold`, `details.more`, Home's folds) lose
+  their white boxes and sage fills and become ruled rows with the boxed +/− control, consistent with the direction.
+- **Compact source rows** (class C): kept as they are — the source card's two-column grid from 1200 px and the stacked
+  row on phones; the Arabic reader scored /data/'s single column highest on calm (G1). Decided: accepted as is.
+- **The figure boundary inside the figure element** (G2 open item, 27 of 42 in G0): measured on this build, 67 of 67
+  figures in the English edition carry the boundary part inside `<figure>` (closed by the B1/B2 frame work; recorded).
+- **The English title tracking** stays at the V1 value (−.02 em): a nudge to −.018 em reached the social-card title
+  through the generic heading rule and changed all 151 English cards for no visible benefit (fingerprint, §6).
+
+---
+
+## 6. B5 — W4F, 18 October 2026
+
+- **Fonts.** Three files per edition stay (Regular, Medium, SemiBold of the text face): no face added (DL-V2-001),
+  none removed. The Medium weight carries the statement, the clocks' labels, the controls and the source kinds; two
+  weights would flatten the clock against its value and the kind against the title on the record family, so it earns
+  its file. AR /data/ cold bytes 331 KB, within the ≤ 350 KB target; Home AR 274 KB (`g2/w4f_performance.md`).
+- **Tap targets (B1-F01).** The accessibility audit on this build measures 5,126 targets, 30 under 24 × 24 px, of
+  which 29 meet the inline exception and 1 the spacing exception: 0 meet neither. Closed on measurement
+  (`docs/ACCESSIBILITY_AUDIT.md`, a measurement and never a conformance claim).
+- **Social cards (charter §12.3).** `scripts/social_images.py --check` now compares a template fingerprint — the
+  stylesheet rules the frame uses (token lines and every `social-doc` / `.soc-` rule), the `@font-face` block, the
+  shipped font bytes and the logo — recorded in `INDEX.json` as `template_sha256`, with a negative control
+  (`--check --control`: one byte of the frame CSS changed in memory reads as stale; CAUGHT). The cards were regenerated
+  on the final stylesheet and compared byte for byte with the committed set (§5.5): the frame's own rules are
+  untouched by G2, so the images are unchanged and only `INDEX.json` carries the fingerprint.
+- **Performance before/after (P6).** `g2/w4f_performance.md` and `g2/perf_g2.json`: the only persistent bytes added
+  are stylesheet rules (+1.7 KB gzip on every page); no JavaScript, image or font delta; first paint with the system
+  fallback and no layout jump (font-display: swap, the preloads unchanged).
+- **The chronology fold** on the long domains already exists (V1B-1); /payments/ 19.6 and /reforms/ 20.3 AR 390
+  screens are governed signal tables and event lists (S-stage decisions), carried to the stage report as recorded misses.
+
+---
+
+## 7. B6 — G3 acceptance, 18 October 2026
+
+### 7.1 The independent visual review (one fresh AI reviewer, Fable 5.1, before/after pairs of twelve views, both editions)
+
+Verdict: English improved (calmer rail, demoted tools, better headline breaks); Arabic improved (tighter phone heads,
+the boundary on the first phone screen of /payments/, nothing less readable); shaping and diacritics fine everywhere.
+Three defects named, most severe first, and their disposition — corrected once, then the affected surfaces rechecked:
+
+| # | Finding (view, region) | Disposition |
+|---|---|---|
+| 1 | The two-column head with a long statement leaves a blank title column (/data/, /methodology/, the Reading at 1440) and on /payments/ pushes the boundary section below the fold | **Corrected.** The register head is now applied by the renderer only where the statement is short enough to sit beside the title (`render.head_class`: ≤ 420 characters EN, ≤ 360 AR): Home, Explore, /about/, /measurement/. The domains, /data/, /methodology/ and the Readings keep the stacked head at the reading measure. /payments/ EN 1440: the boundary heading is back in the first screen (12.9 screens; before the fix 13.1) |
+| 2 | The rail lost its numerals while the sections keep "01, 02 …", so the index no longer maps; the section numeral demoted to label size | **Corrected.** The numerals had hung 21 px into a rail padding the lighter rail no longer has and were clipped by the rail's scroll box; the hang is removed and the numerals are back in the primary green. The section numeral returns to 1.3 em in green as the anchor |
+| 3 | Home's topics line absent from the Arabic phone first screen though present on desktop at that point | **Not a defect: a recorded decision** (§5.5, figures before topics under 900 px; the topics stay one step from Home at every width). Recorded here so the reviewer's reading is answered |
+
+Reviewer's preferences, not taken: a lighter group-label weight in the rail's lower groups; the record family's
+single column (right as it is, in the reviewer's own words). Also noted and carried: a Reading's figures in prose are
+plain weight while the record marks them (`b.fnum` is a record and Home device by design, D3); the long Arabic titles
+no longer step down (the `long` rule now applies from 72 Arabic characters).
+
+### 7.2 The editors' reading (P9, charter v3.2): `g2/p9_editors.md`
+
+PRESENTATION VARIANCE ACCEPTED: 0 material, 7 minor differences in hedging, causality or scope across CLM-001 (01, 04),
+Home's clocks section, two Reading theses; the Compare verdict is not static. Two Arabic dual forms are correct only
+if the Master holds exactly two figures and two reports — a content question for the owner's Arabic editor, not a
+presentation item. An AI editorial reviewer; not a native-language certification.
+
+### 7.3 The six-persona reader-job audit, re-run (charter §13): `g2/persona_audit_g3.md`
+
+G0 → G3 outcomes: 1 PASS → PASS; 2 PASS with frictions → PASS; 3 PASS (naming partly met) → PASS (naming met);
+4 INCONCLUSIVE → PASS with frictions; 5 PASS (marginal) → PASS; 6 FAIL → PASS with frictions. Closed since G0: the
+interval on CLM-001, BibTeX/RIS, SDG 8.10.2 on the record, the Payments route and topics on Home, the definition at
+zero clicks, the stage-row tag, CBY-Sana'a named, /corrections/ consistent, the Reading path one click shorter. What
+persists is content (Master cells: the 45,460 teaser scope, sample n on CLM-001, the record → MA-001 binding, the
+Reading's correction note) or a recorded structure decision (the priorities' fold, the Reading link position with the
+index jump); two hosting-stage items (the path-only canonical and no-JS citation address until `public_origin` is set).
+
+### 7.4 P1 on AR 390 per family (charter §13) and the recorded exceptions
+
+Records: figure, clock and evidence link in the first screen (CLM-001, CLM-003, VIS-POS-TERMINALS). Home: the first
+figure and the evidence link; the clock is the first record's, one screen down (exception recorded: the statement and
+the two actions come first by the Home contract, item 19). Domains: the evidence link; the figure is governed prose on
+every domain and the boundary section follows the head (exception recorded: a domain's first screen is its question,
+title and statement by S11; the boundary at 1.0–1.2 screens on every domain). /data/, Readings, /methodology/,
+/measurement/, trust pages: no figure in the contract; the evidence link where the family has one. Phone screens per
+family, before and after: `g2/final_before_after.md`.
+
+### 7.5 Gates on the accepted build
+
+See §5.3 and the PROGRESS line of this PR: every standing gate and the four W4 gates (rendered visibility with its
+two controls; the drift of `site-src/content/**` and the route list is zero — no transaction in this PR; the social
+fingerprint with its control; the performance before/after) green on the exact tree pushed; the gate negative
+controls run in full before the push. Never claimed: accessibility conformance, live performance, release readiness.
+
+---
+
+## 8. B4c — the G2 refinement and the integration branch, 18 October 2026, branch `pr/stage-b-g2` on main `1d37d9c6` (G1 merged as PR #61)
+
+### 8.1 Recovery
+
+PR #61 merged the G1 record and GitHub deleted `origin/pr/stage-b-g1`; the two G2 commits (`520a42f8`, `2e6bc8f4`) sat only in
+the local checkout. They were rebased onto `1d37d9c6` as `a8e85144` and `64dd2d23` (trees byte-identical) and the branch
+renamed `pr/stage-b-g2`. Nothing was reset, recreated or rewritten; the shipped stylesheet is still `scripts/yfie/theme.py`
+edited in place. A second local session had run the gate negative-control suite on the `2e6bc8f4` tree (its PROGRESS line,
+170 of 170, stands as that session's record; its worker copies overlapped this session's first edit, so the suite is re-run
+on the final tree below).
+
+### 8.2 The owner's visual-quality clarification (18 October 2026) and the three candidate shortcomings
+
+The owner supplied three references — an Arabic Home with a large right-aligned title and an evidence example (primary), a
+refined English-led Home (secondary: headline composition, spacing, institutional polish), and a second Arabic Home — as
+sources of *quality*, not as templates: their figures, headings, illustrations, icons, cards, routes and layouts are not
+reproduced; where a reference conflicts with a settled constraint (the display face, the card wall, the decorative map, the
+icon set, the photo hero, the side-by-side bilingual page) the constraint stands. The accepted G2 pages (§5–§7) were
+inspected first at AR 390 (Home, CLM-001, /payments/) and EN 1440 (Home, /data/, CLM-001). Against the references' qualities
+— exceptional Arabic editorial typography, confident hierarchy, elegant whitespace, balanced asymmetry, subtle brass
+detailing — at most three shortcomings were named:
+
+| # | Shortcoming in the accepted G2 output | Disposition |
+|---|---|---|
+| 1 | The head has no fixed point: rubric, title, statement and actions stack with even gaps, and the finding does not part from its statement (the reference's title carries a short brass rule) | **Changed** (DL-V2-011): a 36 × 2 px brass-300 rule under every page title, at the start edge (right in Arabic), 12 px below the title and 8 px on phones. One rule, every family, both editions; no element, text or font added |
+| 2 | Title and statement share the primary ink, so on the Arabic phone head (28 px title, 20 px statement, both dark) the title does not lead | **Changed** (DL-V2-011): the head statement in the secondary ink (`--ink-2`, 8.6 : 1 on the paper), its figures in the primary ink through the existing `.head .st b` rule. V1 had the secondary ink; G2 pass one had set the primary for the register and the Arabic phone paid for it |
+| 3 | The Arabic phone head opens bare under the edition strip (the reference carries a small brass rubric above the title) | **Not changed**: the product rubric is hidden on phones by a recorded decision (the masthead already carries the product name; §5.4 lists it among the hidden sets), and a second rubric would push the first figure out of Home's Arabic first screen (the owner's main complaint in G0) |
+
+Candidates were rendered live on the built site (the gzip server of `g0_measure.py`, the rule injected as a style tag, no
+file changed): v0 as shipped, v1 the anchor alone, v2 the anchor with the secondary-ink statement, on AR 390 Home and
+/payments/ and on EN 1440 Home and CLM-001. v2 read best in both editions: the Arabic title regains its lead, the English
+register head reads title → statement → actions in order, and CLM-001's title parts from its clocks. The first-screen
+cost on phones was measured and the phone margin set to 8 px (`g2/refinement_head_390.md`).
+
+### 8.3 Verification on the final tree (every number from this tree, the pinned interpreter Python 3.11.9)
+
+- Build deterministic (clean tree after the rebuild); literal audit 19,883 records / 0 unresolved; validator 306 / 0;
+  content parity 304 / 0; projections, diagrams, logo current; social cards current with the template fingerprint and its
+  control (the anchor rule is not a frame rule; the 302 cards are unchanged); literal-audit determinism.
+- Browser: rendered visibility 44 views with both controls; no-JavaScript; security headers 306 pages; base path; public
+  tools 40 / 41 (1 not applicable).
+- Accessibility audit (axe 4.10.2, 24 pages × 2 widths): 0 rule violations, 0 contrast failures, 5,126 targets, 30 under
+  24 px (the same 30 as §6; 0 fail both exceptions) — a measurement, never a conformance claim.
+- Phone screens and first-screen proxies re-measured with `g0_measure.py` on the same routes and widths as G0–G3
+  (`g0/g2r_metrics.json`, `g2/final_before_after.md` updated with the g2r column): no route moves by more than 0.1
+  screen at 390 in either edition, no overflow at any width, the H1 line counts unchanged, Home's and the records'
+  first figure still in the Arabic first screen.
+- The twelve `after_*` shots re-rendered on this tree; `before_*` and `pass1_*` untouched.
+- Gate negative controls, full suite, on this exact tree: the PROGRESS line of this PR records the result.
+
+Never claimed: accessibility conformance, live performance, release readiness. Stage B ends with this PR's report.
+
+### 8.4 The keyboard-focus walk and the markup order (owner's review concern, 18 October 2026)
+
+An independent source review asked whether the stylesheet's visual reordering on Home (`#s3` before `#topics` on phones)
+and in the head (`.page-tools` earlier in the markup, visually after the statement and the actions) breaks sequential
+focus. Tested, not inferred: `g2/focus_walk.md` — Tab pressed sixty times from the top of Home, /payments/, CLM-001,
+/data/ and a long Reading, both editions, 390 and 1440 px, every focused element's position recorded. Before the fix the
+two tools were reached before the two calls to action on every family with a statement (both widths, both editions),
+and on Home at 390 the eight topic links were reached before the first figure's evidence link, after which focus jumped
+up about 1.4 screens. Material, so corrected at the source with the smallest change: the tools follow the actions in the
+markup (`families.head_block`, `render.home`; the `order:9` rule is gone), and Home's figures, index and topics block are
+in the markup in the phone order (`render.home`; the phone `order` rules are gone, and two declarations keep the topics
+line first on the wide screen, as G2 pass two decided). No positive tabindex, no duplicated control, no text changed; the
+Home figure's early visibility, the direct domain access and the governed evidence sequence are unchanged. After the fix:
+zero upward jumps on every phone view; on the wide screen three patterns remain and are recorded as expected rather than
+defects — Home's topics line above the figures (the recorded composition), the desktop rail reached after the page's last
+control (a navigation landmark after main), and column-wise tabbing through the two-column source cards on /data/. A
+side effect: the spacing rule that had followed the tools no longer applies, so every phone head with a statement is
+8 px shorter (`g2/refinement_head_390.md`, both measurements kept); the twelve after-shots were re-rendered. The validator's
+RC-NAV rule, which read the tools row as the h1's immediate successor, now admits the statement and the two calls to action
+between them and nothing else; its negative control (a stray paragraph after the h1, before the row's allowed companions)
+has its selector updated to the new markup and is caught.

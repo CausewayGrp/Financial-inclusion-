@@ -441,3 +441,54 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   observation survive as G2 composition questions; to be closed without merging by the owner (the harness refuses PR state
   changes from this session). No Master, projection, page, stylesheet or hosting state changed; nothing hidden, no JavaScript
   added. Next: B4a G2 shell/Home/domain on this branch, continuing without an owner stop (veto window open on this PR).
+
+- 2026-10-18 · Phase 2 · B4 G2, B5 W4F, B6 G3 · branch `pr/stage-b-g1` (PR #61 → main). DL-V2-001 implemented in the shipped
+  stylesheet, edited in place (no parallel system, no obsolete block): the type scale one notch down with a length-aware title
+  (`render.h1`), the register head where the statement is short (`render.head_class`), the domain head actions inside the head,
+  text-link tools after the actions, rules instead of fills (boundary, record unit, figures, table heads, folds), the phone index
+  as a numbered list, a lighter rail with its numerals, Home's topics as one line with figures first on phones, a one-line
+  edition strip. Two refinement passes on the proving families; memos and class-C decisions in the design record §5. W4F: three
+  font files per edition unchanged (pairing rejected on evidence; Medium kept); tap targets closed on measurement (0 fail both
+  exceptions); the social template fingerprint with a negative control (cards byte-identical, only INDEX.json changed); the
+  performance before/after (+0.7 KB per page, no JS, image or font delta). New gate `test_rendered_visibility.py` (charter
+  §12.1) with two negative controls, in CI. G3: an independent visual review (improved in both editions; two defects corrected
+  once — the register head scoped to short statements, the rail numerals unclipped — one recorded decision), the P9 editors'
+  reading (0 material, 7 minor), the six-persona audit re-run (6 of 6 PASS or PASS with frictions; G0 had a FAIL and an
+  INCONCLUSIVE), the accessibility audit (0 axe violations, 0 contrast failures; a measurement). Phone screens shorter on every
+  route (Home AR 390 9.5 → 8.9; /payments/ 20.4 → 19.6; /reforms/ 21.7 → 20.3); first figure in Home's AR first screen. Gates
+  on the pushed head: the standing chain and the W4 gates green, the full gate negative-control suite run before the push (its
+  result is the next record line). Carried to Stage C (content): the 45,460 teaser scope, sample n on CLM-001, record → MA-001,
+  the Reading correction note, the two Arabic dual forms (p9), fin24*/fin28-29, /providers/ EN-only boundaries; hosting: the
+  path-only canonical until `public_origin`. Open owner items unchanged: F-12 visibility, F-06 Workers check, F-16, seeds 23
+  and 28, the CORRECTIONS_PROCESS.md times; plus: close PR #51 without merging. Never claimed: accessibility conformance, live
+  performance, release readiness. Stage B ends with this PR's report.
+
+- 2026-10-18 · Phase 2 · B6 G3 · gates on the accepted tree at `2e6bc8f4` (Python 3.11.9): the full standing chain 0 failures
+  (compileall; projections; generator tests; validator 306/0; literal audit 19,883 / 0; determinism; lineage 8/8; invariance 0 of
+  152; content parity 304/0; cutover oracle pinned, release parity PASS; diagrams, social (fingerprint and control), logo current;
+  public tools 40/41; security headers; no-JavaScript; HTTP contract; base path; viewport 308/308; Stage A reconciliation 16;
+  exports; rendered visibility 44 views with both controls caught; re-entry; portability; public-path documentation). Gate
+  negative controls, full suite: **170 of 170 faults caught (8 workers, 5,168 s; the clean copies passed first)**. The record line
+  you are reading, with its manifest and checksums, is the only difference between that tree and the pushed head.
+
+- 2026-10-18 · Phase 2 · B4c G2 refinement and integration · branch `pr/stage-b-g2` → PR #62 on main `1d37d9c6` (PR #61 G1).
+  Recovery: the two G2 commits rebased with identical trees (`a8e85144`, `64dd2d23`), the branch renamed. The owner's
+  visual-quality clarification applied as DL-V2-011 (`cd3e951a`: the brass anchor under every page title, the head statement in
+  the secondary ink; design record §8, `design/evidence/v2/g2/refinement_head_390.md`). Gates on `cd3e951a` (Python 3.11.9): the
+  standing chain 0 failures; rendered visibility 44 views with both controls; social fingerprint with its control; no-JavaScript;
+  security headers; base path (one FAIL inside the parallel chain while the suite copied the tree, PASS alone on the same tree);
+  public tools 40/41; accessibility audit 0 violations, 0 contrast failures; every route re-measured (no route moves more than
+  0.1 screen, no overflow). Gate negative controls, full suite, on `cd3e951a`: **170 of 170 faults caught (8 workers, 4,179 s; the
+  clean copies passed first)**; CI on the same head: Verify 9 of 9 (six negative-control shards, browser acceptance, governance),
+  the Cloudflare Workers check excluded (OD-1017-06, F-06). Then the owner's review concern, tested with a keyboard-focus walk
+  (`g2/focus_walk.md`): the page tools were tabbed before the calls to action on every family with a statement, and on Home at
+  390 the topic links before the first figure's link — material, corrected in the markup order (`families.head_block`,
+  `render.home`), the stylesheet's `order` rules for them removed, the wide screen's topics-first Home kept by two declarations;
+  after the fix zero upward jumps on every phone view, the wide-screen patterns recorded as expected (design record §8.4); the
+  validator's RC-NAV rule admits the statement and the actions between the h1 and the tools (its control still caught). On the
+  fixed tree: the same chain re-run (validator 306/0, content parity 304/0, cutover oracle pinned, rendered visibility with both
+  controls, social with its control, no-JavaScript, security headers, base path, public tools, accessibility audit 0/0),
+  the twelve after-shots re-rendered, the phone heads 8 px shorter (the AR 390 /payments/ boundary heading back in the first
+  screen, 811–843 px). The gate negative controls on the fixed head are the six CI shards on its exact head (the local suite
+  on `cd3e951a` covers a tree that differs only in markup order and the three rules). No Master, projection or hosting state
+  changed. Never claimed: accessibility conformance, live performance, release readiness.

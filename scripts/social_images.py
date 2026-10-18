@@ -53,7 +53,26 @@ def frames() -> dict[str, str]:
     return out
 
 
-def check() -> int:
+def template_fingerprint(perturb: bool = False) -> str:
+    """Stage B charter §12.3 (G2): the SHA-256 of everything a card's pixels depend on besides its frame HTML — the
+    stylesheet rules the social frame uses (the token lines and every rule naming `social-doc` or `.soc-`), the
+    `@font-face` block, the bytes of the shipped font files and the logo. A redesign that leaves every frame's HTML
+    intact would otherwise pass `--check` while every card still showed the old design. `perturb` is the negative
+    control: one byte of the frame CSS changed in memory must read as stale."""
+    import build as B
+    from yfie import theme
+    css = theme.FONT_FACES + "\n" + theme.CSS + "\n" + theme.CSS_D2 + "\n" + theme.CSS_D6
+    rules = [ln for ln in css.splitlines() if "social-doc" in ln or ".soc-" in ln or ln.startswith(":root{") or ln.startswith("html[dir=rtl]{")]
+    h = hashlib.sha256(("\n".join(rules) + ("x" if perturb else "")).encode("utf-8"))
+    h.update(theme.FONT_FACES.encode("utf-8"))
+    for folder, names in sorted(B.FONT_FILES.items()):
+        for name in names:
+            h.update((ROOT / "vendor/fonts" / folder / name).read_bytes())
+    h.update((ROOT / "site-src/assets/CauseWay_Master_Logo.png").read_bytes())
+    return h.hexdigest()
+
+
+def check(control: bool = False) -> int:
     if not INDEX.exists():
         print("SOCIAL IMAGES STALE: no site-src/assets/social/INDEX.json; run python3 scripts/social_images.py")
         return 1
@@ -64,8 +83,16 @@ def check() -> int:
     extra = sorted(k for k in recorded if k not in current)
     stale = sorted(k for k, h in current.items() if k in recorded and recorded[k].get("frame_sha256") != h)
     absent = sorted(k for k in recorded if not (OUT / f"{k}.png").exists())
-    if missing or extra or stale or absent:
+    template_stale = index.get("template_sha256") != template_fingerprint()
+    if control:
+        caught = index.get("template_sha256") != template_fingerprint(perturb=True)
+        print(f"negative control, one byte of the frame CSS changed: {'CAUGHT' if caught else 'MISSED'}")
+        if not caught:
+            return 1
+    if missing or extra or stale or absent or template_stale:
         print("SOCIAL IMAGES STALE: run python3 scripts/social_images.py and commit")
+        if template_stale:
+            print("  the template changed since the images were made (frame CSS, token lines, font faces, font files or logo): every card is stale")
         for label, rows in (("no image for", missing), ("image for a route that no longer exists", extra),
                             ("governed text changed since the image was made", stale), ("recorded but the file is gone", absent)):
             for k in rows[:10]:
@@ -141,6 +168,10 @@ def generate() -> int:
         "rule": "frame_sha256 is the SHA-256 of the template's HTML at the time the image was made. --check rebuilds "
                 "the templates and compares, so a governed text change is caught without rendering anything.",
         "width": WIDTH, "height": HEIGHT,
+        "template_rule": "template_sha256 is the SHA-256 of the stylesheet rules the social frame uses, the @font-face block, "
+                         "the shipped font files and the logo at the time the images were made (Stage B charter 12.3); "
+                         "--check recomputes it, so a presentation change marks every card stale without rendering anything.",
+        "template_sha256": template_fingerprint(),
         "images": {k: {"frame_sha256": hashlib.sha256(v.encode("utf-8")).hexdigest()} for k, v in sorted(built.items())},
     }
     INDEX.write_text(json.dumps(index, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
@@ -150,4 +181,4 @@ def generate() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(check() if "--check" in sys.argv else generate())
+    raise SystemExit(check(control="--control" in sys.argv) if "--check" in sys.argv else generate())

@@ -468,7 +468,7 @@ CONTROLS = [
     # RC-NAV (owner decisions of 9 October 2026, B-c): the page-tools row under the h1, the hubs' numerals, the eight
     # domain answers in the opened menu, a header of search, language and menu only, and a record's report context.
     ("the page-tools row leaves the h1", "en/people/index.html",
-     sub_once(r'(</h1>)(<div class="page-tools" data-page-tools>.*?</div>)', r'\1<p></p>\2'),
+     sub_once(r'(</h1>)(<div class="st")', r'\1<p></p>\2'),   # G2 §8.4: the tools follow the statement and the actions; a stray element after the h1 still breaks the row's place
      "RC-NAV en/people/index.html has no single page-tools row under its h1"),
     ("the opened menu drops a hub (D8)", "ar/data/index.html",
      sub_once(r'<a href="/ar/methodology/">[^<]*</a>', ''),

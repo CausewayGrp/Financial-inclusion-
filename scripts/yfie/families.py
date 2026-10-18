@@ -139,10 +139,14 @@ def lead_paragraphs(lead: str) -> str:
     return "".join(f"<p>{linkify(iso(esc(x.strip())))}</p>" for x in re.split(r"\n\s*\n", lead) if x.strip())
 
 
-def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "", lead: str = "", crumb_html: str = "") -> str:
+def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "", lead: str = "", crumb_html: str = "", actions_html: str = "") -> str:
+    # G2 (DL-V2-001): a family's head actions are part of the head, as on Home, so the register head on a wide screen
+    # and the phone order (title, statement, actions, then the tools) hold for every family that has a statement
     return (f'<div class="head">{crumb_html}' + (f'<span class="rubric">{esc(rubric_text)}</span>' if rubric_text else "")
-            + (f'<p class="q">{esc(question)}</p>' if question else "") + f'<h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell)}'
-            + (f'<div class="st">{lead_paragraphs(lead)}</div>' if lead else "") + "</div>")   # B7 review: a blank line starts a paragraph
+            + (f'<p class="q">{esc(question)}</p>' if question else "") + f'{R.h1(page["title"])}'
+            + (f'<div class="st"{R.head_class(lead)}>{lead_paragraphs(lead)}</div>' if lead else "") + actions_html + page_tools(shell) + "</div>")   # B7 review: a blank line starts a paragraph
+    # the tools follow the statement and the actions in the markup, as they do on the screen at every width (the
+    # keyboard-focus walk of 18 October 2026 found them tabbed before the actions and above them visually)
 
 
 def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True, foot_spine: bool = True) -> str:
@@ -195,10 +199,10 @@ def domain(page: dict, shell: dict) -> str:
     L = page["labels"]; route = page["route"]
     origin = R.DISC.origin()
     # the governed question is the head's framing line (rubric "the question this page answers"); the Explore link sits in the head's actions
-    parts = [head_block(page, shell, L["answer_crumb"] if page["question"] else L["question_flow"], question=page["question"], lead=page["lead"])]
-    # the two governed head actions. The reading rule ("How numbers are presented") is printed once, on /methodology/,
-    # and reached from this page's spine (owner instructions of 3 October 2026, 09:50, C5)
-    parts.append(f'<div class="head-rule"><div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["primary_verify"]}">{esc(L["verify_action"])}</a></div></div>')
+    # the two governed head actions, inside the head (G2). The reading rule ("How numbers are presented") is printed once,
+    # on /methodology/, and reached from this page's spine (owner instructions of 3 October 2026, 09:50, C5)
+    actions = f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["primary_verify"]}">{esc(L["verify_action"])}</a></div>'
+    parts = [head_block(page, shell, L["answer_crumb"] if page["question"] else L["question_flow"], question=page["question"], lead=page["lead"], actions_html=actions)]
     index = []
     # the always-visible boundaries (the contract's supporting sections) come before the answers, as the contract's mobile priority orders them
     for s in page["band"]:

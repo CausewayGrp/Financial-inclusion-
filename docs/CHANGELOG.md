@@ -1,5 +1,43 @@
 # Repository Change Log
 
+## 18 October 2026 — Stage B G2 refinement (B4c; DL-V2-011) and the G2 integration branch
+
+The owner's visual-quality clarification of 18 October 2026, applied as one small, coherent adjustment to the shipped
+stylesheet (`scripts/yfie/theme.py`, edited in place): a short brass anchor rule under every page title and the head
+statement in the secondary ink, so the title leads and the finding parts from its statement in both editions; the
+statement's figures stay in the primary ink; on phones the anchor costs 8 px of the head's rhythm, not 14. Decided on
+rendered candidates (design record §8), no new element, text, font or route; the pages' words are unchanged. The G2
+commits were rebased onto main after PR #61 and the branch renamed `pr/stage-b-g2`; the after-shots, the measurement,
+the accessibility audit and the gate negative controls re-run on the final tree. The keyboard-focus walk (an owner's
+review concern) found the page tools tabbed before the calls to action and, on Home at 390, the topic links before the
+first figure's link; both corrected in the markup order (`families.head_block`, `render.home`), the stylesheet's `order`
+rules for them removed, the wide screen's topics-first Home kept by two declarations; the validator's RC-NAV rule reads
+the new order (its negative control unchanged); `design/evidence/v2/g2/focus_walk.md`.
+No Master, projection or hosting state changed.
+
+## 18 October 2026 — Stage B G2 complete, W4F and G3 acceptance (B4–B6)
+
+Pass two and the G3 correction pass on the A · Register direction: the register head only where the statement is
+short (`render.head_class`; the domains, /data/, /methodology/ and the Readings keep the stacked head at the reading
+measure), the rail numerals restored, the section numeral as the anchor, the folds as ruled rows, Home's figures before
+the topics line on phones, the Arabic long-title threshold at 72 characters. W4F: the social template fingerprint in
+`scripts/social_images.py --check` (charter §12.3; `--control` negative control; the cards are byte-identical, only
+`INDEX.json` changed), the performance before/after, the fonts decision (three files per edition unchanged), tap targets
+closed on measurement. G3: independent visual review, the P9 editors' reading, the six-persona audit re-run, the
+accessibility audit; design record §5.5–§7 and `design/evidence/v2/g2/`. No Master, projection or hosting state changed.
+
+## 18 October 2026 — Stage B G2 shell, pass one (B4a; DL-V2-001 implemented)
+
+The A · Register direction in the shipped stylesheet (`scripts/yfie/theme.py`, edited in place): the type scale one
+notch down with a length-aware title size (`render.h1`), the register head on wide screens for every family with a
+statement, the head actions inside the head (domains), the tools as text links after the actions, the boundary and
+the Home record unit as rules without fills, figures and table heads ruled, the phone index as a plain numbered list,
+a lighter desktop rail, Home's topics as one line, a one-line edition strip at 390. New gate
+`scripts/tests/test_rendered_visibility.py` (charter §12.1) with two negative controls, in the CI browser job and
+`CONTRIBUTING.md` §5. The accessibility audit record is re-run on this build (0 axe violations, 0 contrast failures).
+Every route is shorter on both phones; Home's Arabic first screen carries the first figure. Design record §5;
+evidence `design/evidence/v2/g2/`. No Master, projection or hosting state changed; the pages' words are unchanged.
+
 ## 18 October 2026 — Stage B direction challenge (B3 G1, DL-V2-001)
 
 Records the G1 direction decision without changing any page: five candidates built as CSS deltas over the shipped

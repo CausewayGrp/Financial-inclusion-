@@ -2,7 +2,17 @@
  "schema": "YFIE_STAGE_B_STATE/1.0",
  "role": "Live state of the Stage B/C programme for session resume (owner directive 17 October 2026, section 12). Not an authority: the Production Master decides content; audit/close_out/PROGRESS.md is the dated ledger.",
  "updated": "2026-10-18",
- "phase": "B3 G1 recorded (DL-V2-001); B4a G2 shell/Home/domain next, same branch",
+ "phase": "Stage B done on pr/stage-b-g2 (the G2 commits rebased onto main 1d37d9c6 after PR #61 merged G1): B4 G2 (shell and every family), B5 W4F, B6 G3 accepted after one correction pass, B4c the owner's visual-quality refinement (DL-V2-011) re-verified on the final tree; next C1 W5 (Stage C) after the PR merges",
+ "g2_refinement": {"decision": "DL-V2-011: the brass anchor under every page title; the head statement in the secondary ink", "record": "design/DESIGN_INTEGRATION_V2.md section 8", "evidence": "design/evidence/v2/g2/refinement_head_390.md, shots/after_* (re-rendered), g0/g2r_metrics.json", "not_changed": "the phone head's product rubric (recorded: the masthead carries it)", "focus_walk": "design record section 8.4, g2/focus_walk.md: tools after the actions and Home figures before topics in the markup; zero upward jumps on every phone view; wide-screen patterns recorded as expected"},
+ "g2_g3": {
+  "record": "design/DESIGN_INTEGRATION_V2.md sections 5-7",
+  "evidence": "design/evidence/v2/g2/ (final_before_after.md, w4f_performance.md, perf_g2.json, p9_editors.md, persona_audit_g3.md, shots/before_* and after_*); design/evidence/v2/g0/g2_metrics.json and g2_scoreboard.md",
+  "implemented": ["type scale one notch down, length-aware title (render.h1)", "register head only for short statements (render.head_class: Home, Explore, /about/, /measurement/)", "domain head actions inside the head", "tools as text links after the actions", "rules not fills: boundary, record unit, figures, table heads, folds", "phone index as a numbered list", "lighter rail with numerals", "Home topics one line; figures before topics on phones", "one-line edition strip at 390"],
+  "new_gates": ["scripts/tests/test_rendered_visibility.py (charter 12.1, two negative controls; CI browser job)", "social template fingerprint in scripts/social_images.py --check (charter 12.3, --control)"],
+  "g3": {"visual_review": "improved in both editions; 2 defects corrected (register head scope, rail numerals), 1 recorded decision", "editors_p9": "0 material, 7 minor", "personas": "6 of 6 PASS or PASS with frictions (G0: 1 FAIL, 1 INCONCLUSIVE)", "accessibility_audit": "0 axe violations, 0 contrast failures, 0 targets failing both exceptions (a measurement, not a claim)"},
+  "fonts": "3 files per edition unchanged; pairing rejected (DL-V2-001); Medium kept",
+  "carried": ["Master content items: 45,460 teaser scope (G0-F09), sample n on CLM-001, record->MA-001 binding, Reading correction note (seed 25), the two Arabic dual forms (p9), fin24*/fin28-29 method note, EN-only /providers/ time boundaries", "structure decisions: priorities fold (S8), Reading link position (S7, index jump)", "hosting: path-only canonical and no-JS citation address until public_origin (Stage C); /corrections/ '#' link without JS (C-stage finding)", "Compare table JS-only NOT_TESTED", "/payments/ and /reforms/ length (governed tables and lists)"]
+ },
  "programme": {
   "brief": "audit/close_out/TAKEOVER_BRIEF_2026-10-17.md",
   "directive": "audit/OWNER_DIRECTIVE_2026-10-17.md",
@@ -26,11 +36,11 @@
   ]
  },
  "repository": {
-  "main": "8c78fa0e (PR #60 B2; PR #58 B1; PR #59 OD-1017-14 at 3ef16ade; PR #57 B0 at ce4ae5c8)",
+  "main": "1d37d9c6 (PR #61 G1; PR #60 B2 at 8c78fa0e; PR #58 B1; PR #59 OD-1017-14 at 3ef16ade; PR #57 B0 at ce4ae5c8)",
   "master_sha256": "03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e",
   "page_specs_sha256": "cf8138806a4e43be3947e6e460d9e498f5a854ef0adc3813fe161d1d750be328",
-  "current_branch": "pr/stage-b-g1",
-  "stacked_on": "main (8c78fa0e: PR #60 merged)",
+  "current_branch": "pr/stage-b-g2",
+  "stacked_on": "main (1d37d9c6: PR #61 merged)",
   "merged_prs": {
    "PR-A": "#52 a7c7bf8a",
    "PR-B": "#54 a03e99a2",
@@ -42,8 +52,7 @@
    "B2": "#60 8c78fa0e (B2-F02 fix d819e4a7; gates on Python 3.11.9)"
   },
   "open_prs": {
-   "#51": "draft; assessed as G1 evidence in DL-V2-001 (design record §4.4); the OWNER closes it without merging (the harness refuses PR state changes from the writing session)",
-   "B3": "pr/stage-b-g1 -> main; G1 record and DL-V2-001, then G2 on the same branch"
+   "B4-B6": "pr/stage-b-g2 -> main; G2, W4F, G3 and the DL-V2-011 refinement (PR #51 closed without merging; PR #61 merged the G1 record)"
   }
  },
  "baseline": {
@@ -115,7 +124,8 @@
   "DL-V2-008 report-an-error form and process",
   "DL-V2-009 citation formats",
   "DL-V2-010 Compare reason, summary; no qualified pair",
-  "DL-V2-001 G1 direction: A Register (quiet official-statistical); pairing rejected on evidence; weight 600; list index; unit = ruled unit; item 29 DROP"
+  "DL-V2-001 G1 direction: A Register (quiet official-statistical); pairing rejected on evidence; weight 600; list index; unit = ruled unit; item 29 DROP",
+  "DL-V2-011 G2 refinement: the brass anchor under every page title (36x2 px, 12 px / 8 px on phones); the head statement in the secondary ink, figures in the primary"
  ],
  "reserved": [],
  "test_in_g1": [],
@@ -219,7 +229,7 @@
   "cite button state (INCONCLUSIVE)",
   "JS Compare table verdict per field"
  ],
- "next": "B4a G2 shell/Home/domain on pr/stage-b-g1: implement DL-V2-001 (A Register) in scripts/yfie/theme.py with the G2 levers of design record 4.3 and 4.6; memos per family; two refinement passes on the proving pages; then B4b record//data//Reading/Methodology, B4c propagation, B5 W4F, B6 G3. Owner veto window on the G1 PR; no stop.",
+ "next": "Owner: Verify 9/9 on the exact head of the pr/stage-b-g2 PR, merge. Then Stage C (C1 W5 ...) from a fresh session, resuming from PROGRESS.md and this file. The Master content items listed under g2_g3.carried go into the first Stage C content transaction.",
  "g1": {
   "label": "g1",
   "record": "design/DESIGN_INTEGRATION_V2.md section 4",

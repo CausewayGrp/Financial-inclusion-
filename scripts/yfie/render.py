@@ -210,6 +210,26 @@ def footer(shell: dict, tail: str = "") -> str:
 
 
 # ------------------------------------------------------------------------------------------------ objects
+def h1(title: str) -> str:
+    """The page title. G2 (DL-V2-001): a title over 56 characters carries `long`, and the stylesheet steps its display
+    size down a fifth, so a governed title never runs past three lines in the register head at 1440 or four at 390;
+    the wording is the Master's and is never shortened."""
+    arabic = any("؀" <= ch <= "ۿ" for ch in title)
+    cls = ' class="long"' if len(title) > (72 if arabic else 56) else ""   # Arabic runs narrower per character
+    return f'<h1 id="page-title"{cls}>{esc(title)}</h1>'
+
+
+def head_class(statement: str) -> str:
+    """G2 (G3 review, defect 1): the register head (title beside the statement on a wide screen) only where the
+    statement is short enough to sit beside the title — about 420 characters in English, 360 in Arabic; a longer
+    statement (the domains' leads, /data/, /methodology/, a Reading's thesis) stays stacked at the reading measure."""
+    text = re.sub(r"<[^>]+>", "", statement or "")
+    arabic = any("؀" <= ch <= "ۿ" for ch in text)
+    # the marker sits on the statement element, not on the head: the validator's S03 order check anchors on the literal
+    # `<div class="head">`; the stylesheet selects `.head:has(> .st[data-register])`
+    return ' data-register=""' if text and len(text) <= (360 if arabic else 420) else ""
+
+
 def rubric(t, n: int | None = None, tag: str = "span", cls: str = "rubric") -> str:
     num_ = f'<span class="n">{n:02d}</span>' if n else ""
     return f'<{tag} class="{cls}">{num_}{esc(t)}</{tag}>'
@@ -433,7 +453,7 @@ def evidence_record(page: dict, shell: dict) -> str:
     # id="q3" (its section is dropped: its body was the same governed universe), so the anchor survives.
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
     for_whom = clock(L["applies"], esc(page["universe"]), "q3") if page.get("universe") else ""
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}<h1 id="page-title">{esc(page["title"])}</h1>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{h1(page["title"])}'
              f'<div class="record-line" data-record-line>{clock(L["period"], esc(page["period"]))}{for_whom}</div>{page_tools(shell, (page.get("hrefs") or {}).get("report", ""))}'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
     own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure({**page["visual"], "here": True}, shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
@@ -484,12 +504,12 @@ def home(page: dict, shell: dict) -> str:
     # The product's statement (section 1) and its two governed actions sit in the head, under the headline and before
     # the first figure: four cold readers (EN/AR × 390/1440, D3) reached the third screen before learning what the
     # product is. The product rubric is kept for the wide head; the masthead already names the product on a phone.
-    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell)}<div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
-             f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div>']
+    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}{h1(page["title"])}<div class="st" id="s1"{head_class(" ".join(S[1]["paragraphs"]))}>{paras(S[1]["paragraphs"])}</div>'
+             f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div>{page_tools(shell)}</div>']   # the tools last, as on the screen
     # DL-V2-007 (F-15, first-click test of 17 October 2026: 21-25% one-step before, 92-100% after): the eight domain
     # answers by their governed names, one step from Home, right under the product statement
     topics = "".join(f'<li><a href="{d["href"]}">{esc(d["label"])}</a></li>' for d in shell.get("domains") or [])
-    parts.append(f'<section class="qa topics" id="topics" data-home-topics><div><h2>{esc(shell["labels"]["topics"])}</h2></div><nav aria-label="{esc(shell["labels"]["topics"])}"><ul class="rlist">{topics}</ul></nav></section>')
+    topics_html = f'<section class="qa topics" id="topics" data-home-topics><div><h2>{esc(shell["labels"]["topics"])}</h2></div><nav aria-label="{esc(shell["labels"]["topics"])}"><ul class="rlist">{topics}</ul></nav></section>'
     recs = list(page["records"])
     demo = []
     for res, html_ in paced_groups(S[3]["body"]):
@@ -499,6 +519,10 @@ def home(page: dict, shell: dict) -> str:
     def h2(sec):   # governed kicker (role) above the governed heading
         return (f'<span class="rubric">{esc(sec["role"])}</span>' if sec.get("role") else "") + f'<h2>{esc(sec["heading"])}</h2>'
     parts.append(f'<section class="qa first" id="s3"><div>{h2(S[3])}</div><div class="paced">{"".join(demo)}</div></section>')
+    # the topics block follows the figures in the markup — the phone order (G2 pass two) and the reading order are one;
+    # the wide screen keeps the topics line first by two `order` declarations in the stylesheet (keyboard-focus walk,
+    # 18 October 2026: eight topic links were tabbed before the first figure's link, then focus jumped up a screen and a half)
+    parts.append(topics_html)
     prog = set(page["tiers"]["progressive"])
     assert 4 not in prog, "Home's boundary (section 4) is always visible and cannot be progressive"
     parts.append(f'<section class="bnd" id="s4">{rubric(S[4]["role"])}<h2>{esc(S[4]["heading"])}</h2><div class="mt8">{paras(S[4]["paragraphs"])}</div></section>')
@@ -532,7 +556,7 @@ def home(page: dict, shell: dict) -> str:
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
-    parts.insert(3, toc_strip(shell, "/", "Orientation", index, {**{f"s{o}": {"kind": "section", "order": o} for o in (3, 4, 9, 5, 6, 7, 8)}, "sf": {"kind": "block"}, "topics": {"kind": "block"}}))   # S10; after the topics block and the first figure group (DEBT-014)
+    parts.insert(2, toc_strip(shell, "/", "Orientation", index, {**{f"s{o}": {"kind": "section", "order": o} for o in (3, 4, 9, 5, 6, 7, 8)}, "sf": {"kind": "block"}, "topics": {"kind": "block"}}))   # S10; after the topics block and the first figure group (DEBT-014)
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
     body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'
@@ -544,7 +568,7 @@ def reading(page: dict, shell: dict) -> str:
     origin = DISC.origin()
     index = ([(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"])]
              + ([("measure", L["measurement"])] if page.get("measurement") else []) + [("related", L["related"])])
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell, report_for(shell, page))}<div class="st"><p>{esc(page["thesis"])}</p></div>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p>{h1(page["title"])}{page_tools(shell, report_for(shell, page))}<div class="st"{head_class(page["thesis"])}><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
     essay = []

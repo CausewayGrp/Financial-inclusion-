@@ -170,6 +170,9 @@ jobs:
       - name: No JavaScript (R-05; the note, the language switch and the menu with JavaScript off; negative control included)
         run: python3 scripts/tests/test_no_javascript.py
 
+      - name: Rendered visibility (Stage B charter §12.1; the stylesheet hides, clamps or folds no governed text; two negative controls)
+        run: python3 scripts/tests/test_rendered_visibility.py --self-check
+
   controls:
     # Every gate that finds its evidence in the built site is proved to still fail on the fault it was written to catch
     # (EAD-01: the cutover re-pointed those selectors, and a selector that silently matches nothing would pass the
