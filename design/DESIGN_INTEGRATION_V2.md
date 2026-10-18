@@ -26,7 +26,7 @@ Evidence files: `design/evidence/v2/g0/` (metrics, scoreboard, visual audit, scr
 | ID | Date | Decision | Evidence | Trade-off |
 |---|---|---|---|---|
 | DL-V2-000 | 2026-10-17 | G0 method: one committed script (`design/evidence/v2/g0_measure.py`) measures every family at 320/390/768/1440 in AR and EN, served gzip as `_headers` declares; screens = scrollHeight ÷ viewport height; the same routes, widths, states and link-graph journeys run again in G3 and W8, so before and after are one measure. Reader jobs are AI-simulated walkthroughs on rendered text with link counts from the built HTML. | `g0_metrics.json` reproduces the brief's Part 2 table to the decimal (Home 8.5 · /data/ 70.5 · /measurement/ 44.7 · /payments/ 26.8). | First-screen proxies look for marked elements (`.fnum`, `.clock`, boundary parts); unmarked prose that carries the same meaning is judged by eye on the decisive views and noted as such. |
-| DL-V2-001 | — | Reserved: the G1 direction (scorecard, judges, phone screens, bytes, source-owner test). | — | — |
+| DL-V2-001 | 2026-10-18 | G1 direction: **A · Register** — the quiet official-statistical direction, led by the data professional, chosen over the incumbent and over the editorial-evidence (B), compact (C) and hybrid (E) candidates (§4). Its grammar: a two-column register head on wide screens (title · statement and actions), the page tools as quiet text links, a lighter and narrower rail, rules instead of fills on the boundary, the record unit and the figures, the phone index as a plain numbered list, the topics block as one compact line, the type scale one notch down. Item 21: the one heading pairing (Markazi Text 600 / IBM Plex Serif 600) was built, specimen-tested and blind-judged twice and is **not adopted**: it lost on Arabic quality to the same three judges in both rounds (10 vs 12 of 15, then 9 vs 12) and gained only distinctiveness, mostly on English desktop views; the directive admits it only on a demonstrated readability benefit. The Arabic heading weight stays 600 (blind crop test: 600 preferred, 700 clots counters and diacritics). Item 13: the unit composition that judged best is the ruled unit (sentence, then the record line under a hairline, no plate, no fill). Item 19/32: the first-screen hypothesis is partly confirmed by C and E (the figure enters the AR 390 first screen at 0.7–0.8 screens when the chrome is compact and the tools follow the actions); the question entry with three examples needs markup and is a G2 memo. G0-F04: list beats strip (every judge). Item 29: DROP — no governed audience labels exist and the topics block already gives 92–100 % one-step reach (DL-V2-007). PR #51: assessed as evidence (§4.4), closed without merging. | `design/evidence/v2/g1/`: scorecard (A 108 · B 106 · C 102 · E 102 · incumbent 93 and last for every judge; round 2 A preferred by all three), 36 rendered views, bytes, disqualifiers (HTML and JS identical to dist/, nothing hidden, no overflow), source-owner test PASS on five records in both editions, the specimen. | What A sacrifices: a display face; its identity must come from composition, rules, numerals and rhythm. What B sacrificed: Arabic headings that read as designed in Arabic. What C sacrificed: the desktop route to the record list and the index. What E sacrificed: simplicity. The incumbent sacrificed the first screen to chrome. |
 | DL-V2-002 | 2026-10-17 | The evidence unit (directive §5) is the design method for Stage B: value · unit · universe · period · publisher · evidence class · what it does not establish · what would settle it · verification trail, composed at Home, domain, record, Reading, Compare, /data/ and Measurement scale. Its composition is tested in G1, not pre-decided here. | G0 shows no family carries a marked figure, clock and boundary together in its first phone screen (§1.4); personas 4 and 6 fail or stall exactly where a unit field is missing (interval, measurement link, citation). | One shared order across families costs some editorial freedom; it buys the one repeated experience the owner named. |
 | DL-V2-003 | 2026-10-17 | G0 dispositions of Part 6 items 13–22 and seeds 23–32 (§1.10): each is ADOPT, ADAPT, DROP or TEST IN G1 with the measure that decides it. | §1.10 cites the G0 measurement or audit line for each. | Items marked TEST IN G1 add candidate scope to G1; the proving pages stay four. |
 | DL-V2-004 | 2026-10-17 | S10 executed: the phone table of contents is a grouped map of at most six entries, grouped by the contract's tiers and the Master's section roles (`presentation_priority.json` `toc_rule`, steward edit under OD-1017-03) with governed labels UI-TOC-* (transaction STAGE-B-S); a page under six phone screens (`min_main_words` 700, calibrated on G0 and the B1 re-measurement of the short pages in both editions) renders none, decided per route on both editions together. The desktop spine keeps the full numbered index (DEBT-019). | G0: the strip overflowed in 134 page×width cells (every route at 390, both editions) and exceeded six entries on 17 routes; B1: at most 6 entries on every route and width, 0 overflow (`g0/s1_metrics.json`). | Grouped entries lose the section-level jump on phones; the spine keeps it on desktop. Pages with their own grouping are the eight domains, /methodology/, /measurement/, Home and the Readings; /about/ and /data/ drop "Continue from here" from the map. |
@@ -556,3 +556,70 @@ stays as it is, conflicts included, and is closed without merging when DL-V2-001
 only: the appended OD-1017-14 of 17 October 2026 (PR #59 at `3ef16ade`) selects a DigitalOcean Droplet via EasyPanel
 at `https://yemen-financial-inclusion.causewaygrp.com` prospectively, with `public_origin` still null, `pre_release`
 still true and implementation in Stage C; no build, contract, workflow or DNS state changed in B2.
+
+---
+
+## 4. B3 — G1, the direction challenge, 18 October 2026, branch `pr/stage-b-g1` on main `8c78fa0e` (B2 merged as PR #60; Master `03d194a2…`, Page Specs `cf813880…`)
+
+### 4.1 Method (charter §10; directive §9 "G1")
+
+Candidates are CSS deltas appended to the shipped stylesheet in scratch copies of `dist/` (`design/exploration/v2/`,
+regenerated by `build_candidates.py`); the HTML and JavaScript of every candidate are byte-identical to `dist/`, so
+content parity, the literal audit and bilingual invariance hold by construction and the disqualifiers a stylesheet can
+fail were measured (`g1/disqualifiers.json`: nothing hidden, no overflow, no JS). Proving pages: Home, `/payments/`,
+CLM-001, `/data/`; views AR 390, EN 390, EN 1440, AR 1440. Three AI judges (Fable 5.1, high effort), blind to the
+labels, scored 30 rendered views each on the nine charter criteria; the mapping was decoded after all three reported.
+Measured columns: phone screens and the first-answer position at AR 390, cold bytes by type, font files. The
+source-owner test (charter §3.5) ran on the five records in both editions for every candidate. No human testing; the
+judges are language models reading rendered pages, and are reported as such.
+
+### 4.2 The candidates
+
+| | Led by | Hierarchy and reading order | Total (45 max per judge, ×3) |
+|---|---|---|---|
+| A · Register | the data professional | Plex only; two-column register head on wide screens; text-link tools; lighter rail; rules, not fills; list index on phone; topics as one line | **108** (ranks 2 · 1 · 1) |
+| B · Argument | the statistician-journalist | the heading pairing (item 21); ruled masthead; serif deck; margin units; boundary as a ruled note; phone order title → figures → boundary → questions → topics | 106 (1 · 4 · 2) |
+| C · Compact | the citizen on a phone | smallest chrome; compact scale; record rows with the clock inline; inline index; no rail; phone order title → figures → boundary → topics → questions | 102 (3 · 3 · 3) |
+| D · Incumbent | — | T4 · Instrument as shipped | 93 (5 · 5 · 5) |
+| E · Argument, compact | the hybrid | B's identity with C's phone economy and order | 102 (4 · 2 · 4) |
+
+Round 2 isolated the pairing: F = A plus the corrected pairing (Latin inside Arabic headings at the Arabic's optical
+size through `unicode-range` and `size-adjust`; the deck never above its heading). All three judges preferred A; the
+pairing lost Arabic quality 9 to 12 and gained distinctiveness 12 to 9 (`g1/g1_scoreboard.md`).
+
+### 4.3 What the judges saw (used as the G2 levers)
+
+- The incumbent's phone first screen is spent on chrome: a two-line edition strip, boxed cite/report buttons above the
+  statement, the topics grid; no figure before the scroll (every judge). A, C and E fix it in different degrees; C and E
+  bring the figure to 0.7–0.8 screens by compact chrome and tools after the actions.
+- The list index beats the chip strip on every phone view (G0-F04 closed: list).
+- Fills read as "UI energy"; rules read as a statistical office (A, B, E all scored higher on tone than D).
+- The register head on 1440 is the preferred desktop composition (A); C's rail-less page left the right half empty and
+  lost the route to the record list and the index.
+- The Arabic reader scored the largest, best-leaded Arabic body (B/E) highest on long text, and A's /data/ single-column
+  numbered index highest on calm; A's weakness is the tools between the title and the statement on phones (E's order fixes it).
+- The serif pairing: a four-line record title in EN 1440 and a Latin line that stands apart in Arabic titles.
+
+### 4.4 PR #51 as evidence (closed without merging)
+
+Survives into G2 as composition, not code: the page tools as text links (adopted by every candidate); the secondary
+call to action as a link beside one filled control (B, E); the limit sentence adjacent to each Home observation
+(a markup change: the G2 Home memo tests it against the ruled unit); the boundary before the in-page index on Home.
+Not adopted: the second domain list under the questions (the topics block of DL-V2-007 already gives one-step reach);
+the paper-coloured institutional footer (the colophon band is the institutional layer, charter §6.1); a body class per
+route (the direction is one system). Its screenshots and metrics stay on its branch as lineage.
+
+### 4.5 Item dispositions closed here
+
+13 unit composition → the ruled unit (A); 19/32 first-screen hypothesis → confirmed by proxy, question entry with three
+examples to the G2 Home memo (markup); 21 typography → pairing rejected on evidence, weight 600 kept, no new font file;
+29 audience entry → DROP; G0-F04 strip vs list → list. Byte budget: A adds 1.0 KB of CSS and no font; AR /data/ stays at
+322 KB cold (target ≤ 350 KB). The Medium (500) text weight (74 KB AR, 71 KB EN) is a G2 question: it stays unless the
+proving pages show that two weights carry every role.
+
+### 4.6 G2 order (charter §11)
+
+Shell on the proving pages (the register head, the text-link tools after the actions, the one-line edition strip, the
+list index, the rail) → Home (memo: the first screen; the limit beside each observation; the question entry) → domain →
+record → /data/ → Reading → Methodology → propagation. Two refinement passes on each proving family; every class-C
+candidate decided with evidence (the masthead treatment, the desktop TOC presentation, compact source rows, display scale).

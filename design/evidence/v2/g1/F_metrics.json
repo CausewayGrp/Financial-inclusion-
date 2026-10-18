@@ -1,0 +1,322 @@
+{
+ "ar:390:/": {
+  "scrollHeight": 7779,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 9.2,
+  "overflow": false
+ },
+ "ar:390:/payments/": {
+  "scrollHeight": 16886,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 20.0,
+  "overflow": false
+ },
+ "ar:390:/evidence/CLM-001/": {
+  "scrollHeight": 8702,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 10.3,
+  "overflow": false
+ },
+ "ar:390:/data/": {
+  "scrollHeight": 15865,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 18.8,
+  "overflow": false
+ },
+ "en:390:/": {
+  "scrollHeight": 7740,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 9.2,
+  "overflow": false
+ },
+ "en:390:/payments/": {
+  "scrollHeight": 16561,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 19.6,
+  "overflow": false
+ },
+ "en:390:/evidence/CLM-001/": {
+  "scrollHeight": 8148,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 5,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 9.7,
+  "overflow": false
+ },
+ "en:390:/data/": {
+  "scrollHeight": 15349,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 18.2,
+  "overflow": false
+ },
+ "en:1440:/": {
+  "scrollHeight": 5122,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 4,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.7,
+  "overflow": false
+ },
+ "en:1440:/payments/": {
+  "scrollHeight": 11978,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 4,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 13.3,
+  "overflow": false
+ },
+ "en:1440:/evidence/CLM-001/": {
+  "scrollHeight": 4812,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 4,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.3,
+  "overflow": false
+ },
+ "en:1440:/data/": {
+  "scrollHeight": 15329,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 4,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600",
+   "IBM Plex Serif 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 17.0,
+  "overflow": false
+ },
+ "ar:1440:/": {
+  "scrollHeight": 5200,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.8,
+  "overflow": false
+ },
+ "ar:1440:/payments/": {
+  "scrollHeight": 12577,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": true,
+   "evidence": true
+  },
+  "screens": 14.0,
+  "overflow": false
+ },
+ "ar:1440:/evidence/CLM-001/": {
+  "scrollHeight": 5201,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.8,
+  "overflow": false
+ },
+ "ar:1440:/data/": {
+  "scrollHeight": 14676,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600",
+   "Markazi Text 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 16.3,
+  "overflow": false
+ }
+}

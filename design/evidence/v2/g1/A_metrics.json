@@ -1,0 +1,306 @@
+{
+ "ar:390:/": {
+  "scrollHeight": 7596,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 9.0,
+  "overflow": false
+ },
+ "ar:390:/payments/": {
+  "scrollHeight": 16598,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": true,
+   "evidence": false
+  },
+  "screens": 19.7,
+  "overflow": false
+ },
+ "ar:390:/evidence/CLM-001/": {
+  "scrollHeight": 8617,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 10.2,
+  "overflow": false
+ },
+ "ar:390:/data/": {
+  "scrollHeight": 15676,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 18.6,
+  "overflow": false
+ },
+ "en:390:/": {
+  "scrollHeight": 7427,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 8.8,
+  "overflow": false
+ },
+ "en:390:/payments/": {
+  "scrollHeight": 16361,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 19.4,
+  "overflow": false
+ },
+ "en:390:/evidence/CLM-001/": {
+  "scrollHeight": 8094,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 4,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 9.6,
+  "overflow": false
+ },
+ "en:390:/data/": {
+  "scrollHeight": 15319,
+  "scrollWidth": 390,
+  "clientWidth": 390,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": false
+  },
+  "screens": 18.2,
+  "overflow": false
+ },
+ "en:1440:/": {
+  "scrollHeight": 4892,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.4,
+  "overflow": false
+ },
+ "en:1440:/payments/": {
+  "scrollHeight": 11789,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": true,
+   "evidence": true
+  },
+  "screens": 13.1,
+  "overflow": false
+ },
+ "en:1440:/evidence/CLM-001/": {
+  "scrollHeight": 4761,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.3,
+  "overflow": false
+ },
+ "en:1440:/data/": {
+  "scrollHeight": 15332,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans 400",
+   "IBM Plex Sans 500",
+   "IBM Plex Sans 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 17.0,
+  "overflow": false
+ },
+ "ar:1440:/": {
+  "scrollHeight": 5028,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.6,
+  "overflow": false
+ },
+ "ar:1440:/payments/": {
+  "scrollHeight": 12367,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 3,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": true,
+   "evidence": true
+  },
+  "screens": 13.7,
+  "overflow": false
+ },
+ "ar:1440:/evidence/CLM-001/": {
+  "scrollHeight": 5086,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": true,
+   "clock": true,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 5.7,
+  "overflow": false
+ },
+ "ar:1440:/data/": {
+  "scrollHeight": 14552,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "h1Lines": 2,
+  "fonts": [
+   "IBM Plex Sans Arabic 400",
+   "IBM Plex Sans Arabic 500",
+   "IBM Plex Sans Arabic 600"
+  ],
+  "p1": {
+   "figure": false,
+   "clock": false,
+   "boundary": false,
+   "evidence": true
+  },
+  "screens": 16.2,
+  "overflow": false
+ }
+}

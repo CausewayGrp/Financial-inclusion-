@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 291,
-  "DESIGN_PACKAGE": 597,
+  "DESIGN_PACKAGE": 658,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
@@ -5052,6 +5052,222 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/evidence/v2/g1/A_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/B_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/C_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/D_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/E_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/F_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/README.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/bytes.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/disqualifiers.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/g1_scoreboard.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/judge_mapping.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/judge_mapping2.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/judges.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/judges_round2.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/A_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/A_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/A_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/A_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/A_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/A_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/B_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/B_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/B_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/B_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/B_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/B_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/C_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/C_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/C_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/C_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/C_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/C_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/D_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/D_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/D_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/D_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/D_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/D_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/E_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/E_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/E_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/E_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/E_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/E_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/F_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/F_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/F_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/F_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/F_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/shots/F_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/sourceowner.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/specimen/spec_ar.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/specimen/spec_en.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g1/specimen/w_mapping.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/exploration/d1_canvas/LENS_BRIEF.md",
    "class": "DESIGN_PACKAGE"
   },
@@ -5153,6 +5369,34 @@
   },
   {
    "path": "design/exploration/d1_canvas/tiles.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v2/README.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v2/build_candidates.py",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v2/cand_A.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v2/cand_B.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v2/cand_C.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v2/cand_E.css",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/exploration/v2/cand_F.css",
    "class": "DESIGN_PACKAGE"
   },
   {
