@@ -623,3 +623,64 @@ Shell on the proving pages (the register head, the text-link tools after the act
 list index, the rail) → Home (memo: the first screen; the limit beside each observation; the question entry) → domain →
 record → /data/ → Reading → Methodology → propagation. Two refinement passes on each proving family; every class-C
 candidate decided with evidence (the masthead treatment, the desktop TOC presentation, compact source rows, display scale).
+
+---
+
+## 5. B4a — G2, the shell on every family, 18 October 2026, branch `pr/stage-b-g1`
+
+### 5.1 What changed (DL-V2-001 implemented in `scripts/yfie/theme.py`, edited in place; no parallel stylesheet)
+
+- **Type scale** one notch down at every width: display 32/30 → 30/28 px on phones (EN/AR), 52/44 → 42/38 at 900 px and
+  above; question headings 20/21 → 19/20 and 23/24 → 22/23; the paced lead 22/23 → 20/21. A governed title over 56
+  characters carries `class="long"` (renderer helper `render.h1`, used by every family) and steps down a fifth, so the
+  84-character titles of /finance/ and /about/ run to four lines at 1440 instead of six and five; nothing is shortened.
+- **The register head** at 900 px and above for every head that has a statement (Home, the eight domains, /data/,
+  Readings, /methodology/, /measurement/, the trust pages): title on the left, statement, the two calls to action and
+  the tools on the right; the crumb, the family rubric and the governed question stay full-width above. Record heads
+  (no statement) keep the stacked order with the clocks under the title.
+- **The head actions inside the head** for the domain family (`families.head_block` takes the actions; the
+  `.head-rule` wrapper is gone from domains), so the phone order is title, statement, actions, then the tools, and the
+  register grid holds. Content parity, the cutover oracle and the literal audit are unchanged (the strings are the same).
+- **The tools** (cite, report) are quiet underlined text links, after the actions on phones and in the register's
+  right column on wide screens; the record family keeps them under the record line.
+- **Rules, not fills**: the boundary section is a brass double rule with no panel; the Home record unit is a hairline
+  above the record line with no plate; the figure is a white plate under its deep-green rule, open at the sides; table
+  heads are ruled, not filled.
+- **The phone index** is a plain numbered list (the chips, their clamp and their sideways layout are gone); the desktop
+  rail is lighter and narrower (236 px, no side rule, muted tabular numerals, smaller rows).
+- **Home's topics block** is one compact line under a small brass heading. **The edition strip** is one line at 390 in
+  both editions (12 px Arabic, 12.5 px English, the clock size from 600 px).
+- **Calls to action**: one filled, one outlined at one pixel, 40 px tall.
+
+### 5.2 Class-C decisions (charter §2 C, §11)
+
+| Candidate | Decision | Evidence |
+|---|---|---|
+| masthead treatment | kept as it is (five hubs, the logo lockup) | not a judged weakness in G1; D8 and the first-click test stand |
+| desktop TOC presentation | the lighter rail, accepted | A's rail scored highest on source path and calm with the data professional; C's rail-less page lost the record list |
+| compact source rows | decided in B4b on /data/ | — |
+| display scale one notch down | accepted | every candidate that stepped down beat the incumbent on calm tone (A 13, C 12, E 12 vs 9) |
+| the Home limit beside each observation (PR #51) | rejected | it repeats the records' and the boundary section's governed limits and lengthens Home (item 15: never adds length); the ruled unit with the record line is the composition the judges scored |
+| the Home question entry with three examples (item 32) | DROP | the starting questions are section 9 and the search is one tap in the masthead; an entry above the figures would push the first figure out of the first screen, which is the owner's main complaint |
+
+### 5.3 Pass one, measured (`design/evidence/v2/g2/pass1_before_after.md`; the same script and widths as G0)
+
+Every route is shorter on both phones (Home 9.5 → 9.0 AR 390; /payments/ 20.4 → 19.6; /reforms/ 21.7 → 20.3;
+/remittances/ 17.4 → 16.4). Home's AR 390 first screen now carries the first figure (11.9 % with its universe) and
+the evidence link; records carry figure, clock and evidence link. No overflow at any width; targets under 24 px
+unchanged (1 on the record family, carried from B1-F01 to W4F). Gates on the pass-one build: validator 306/0; literal
+audit 19,883 / 0; content parity 304/0; cutover oracle; determinism; diagrams, social (frame hash), logo current;
+projections; public tools 40/41; security headers; no-JavaScript; HTTP contract; base path; accessibility audit
+(axe 4.10.2, 24 pages × 2 widths: 0 rule violations, 0 contrast failures, 30 targets under 24 px — the record under
+`docs/ACCESSIBILITY_AUDIT.md`, which is a measurement, never a conformance claim).
+
+### 5.4 The rendered-visibility gate (charter §12.1, new: `scripts/tests/test_rendered_visibility.py`)
+
+One page per family in both editions at 390 and 1440: the answer, the head clocks, the boundary sections and the
+tools are rendered and never inside a closed disclosure; no clamp, ellipsis or clip on governed text (the only
+`overflow: hidden` allowed is the listed scroll wrappers and screen-reader text); every governed text node is rendered
+or belongs to a listed set with its reason (screen-reader labels, the phone index and the foot rail which duplicate
+the desktop rail and vice versa, print-only identity, the no-script note, regions the HTML marks hidden, a chart's
+width-dependent tick labels, the phone-hidden product rubric the masthead already carries); every closed disclosure
+has a visible summary. Two negative controls (`--self-check`: a hidden boundary; a clamped paragraph) are caught by
+their own code. 44 page views PASS.

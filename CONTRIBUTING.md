@@ -143,6 +143,7 @@ python3 scripts/tests/test_security_headers.py         # browser: every page und
 python3 scripts/tests/test_base_path.py                # browser: built for the decided origin, served under its path (B2)
 python3 scripts/tests/test_digitalocean_hosting.py    # nginx: the _headers block in a real nginx; --image: in the pinned App Platform image (Docker)
 python3 scripts/tests/test_no_javascript.py           # browser: the note, the language switch and the menu with JavaScript off (R-05)
+python3 scripts/tests/test_rendered_visibility.py --self-check   # browser: the stylesheet hides, clamps or folds no governed text (W4 §12.1), with two negative controls
 # Before the corporate route goes live (Node.js, npm and nginx; not in CI):
 python3 scripts/tests/test_corporate_proxy.py         # the runbook's forwarding middleware in a pinned Nitro, in front of our nginx block
 # Slow, and its own CI job: one full validator run per fault, so run it when a gate or the markup it reads changes.

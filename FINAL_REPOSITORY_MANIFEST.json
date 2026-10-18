@@ -25,11 +25,11 @@
   "AUTHORITY_MASTER": 1,
   "AUTHORITY_POINTER": 2,
   "AUTHORITY_RULES": 1,
-  "BUILD_AND_GATES": 52,
+  "BUILD_AND_GATES": 53,
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 291,
-  "DESIGN_PACKAGE": 658,
+  "DESIGN_PACKAGE": 679,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
@@ -4480,6 +4480,14 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/evidence/v2/g0/g2a_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/g2a_scoreboard.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/evidence/v2/g0/s1_metrics.json",
    "class": "DESIGN_PACKAGE"
   },
@@ -5265,6 +5273,82 @@
   },
   {
    "path": "design/evidence/v2/g1/specimen/w_mapping.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/pass1_before_after.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_en1440_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/before_en1440_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_ar390_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_ar390_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_ar390_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_ar390_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_en1440_data.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_en1440_evidence_CLM-001.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_en1440_finance.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_en1440_home.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_en1440_payments.png",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/shots/pass1_en1440_reading.png",
    "class": "DESIGN_PACKAGE"
   },
   {
@@ -8457,6 +8541,10 @@
   },
   {
    "path": "scripts/tests/test_release_parity.py",
+   "class": "BUILD_AND_GATES"
+  },
+  {
+   "path": "scripts/tests/test_rendered_visibility.py",
    "class": "BUILD_AND_GATES"
   },
   {

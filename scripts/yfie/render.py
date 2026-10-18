@@ -210,6 +210,14 @@ def footer(shell: dict, tail: str = "") -> str:
 
 
 # ------------------------------------------------------------------------------------------------ objects
+def h1(title: str) -> str:
+    """The page title. G2 (DL-V2-001): a title over 56 characters carries `long`, and the stylesheet steps its display
+    size down a fifth, so a governed title never runs past three lines in the register head at 1440 or four at 390;
+    the wording is the Master's and is never shortened."""
+    cls = ' class="long"' if len(title) > 56 else ""
+    return f'<h1 id="page-title"{cls}>{esc(title)}</h1>'
+
+
 def rubric(t, n: int | None = None, tag: str = "span", cls: str = "rubric") -> str:
     num_ = f'<span class="n">{n:02d}</span>' if n else ""
     return f'<{tag} class="{cls}">{num_}{esc(t)}</{tag}>'
@@ -433,7 +441,7 @@ def evidence_record(page: dict, shell: dict) -> str:
     # id="q3" (its section is dropped: its body was the same governed universe), so the anchor survives.
     index = [("q1", L["establishes"]), ("q2", L["measures"]), ("q4", L["currentness"]), ("q5", L["does_not_establish"]), ("q6", L["source"]), ("q7", L["more"])]
     for_whom = clock(L["applies"], esc(page["universe"]), "q3") if page.get("universe") else ""
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}<h1 id="page-title">{esc(page["title"])}</h1>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["family"])}{h1(page["title"])}'
              f'<div class="record-line" data-record-line>{clock(L["period"], esc(page["period"]))}{for_whom}</div>{page_tools(shell, (page.get("hrefs") or {}).get("report", ""))}'
              + (f'<p class="st">{esc(page["lead"])}</p>' if page["lead"] else "") + "</div>")
     own_fig = (f'<span class="rubric mt18">{esc(L["visual_eyebrow"])}</span>' + figure({**page["visual"], "here": True}, shell["labels"]["cite"], DISC.origin(), heading="h3")) if page.get("visual") and page["visual"].get("tier") != "RETIRE_FROM_DESIGN" else ""
@@ -484,7 +492,7 @@ def home(page: dict, shell: dict) -> str:
     # The product's statement (section 1) and its two governed actions sit in the head, under the headline and before
     # the first figure: four cold readers (EN/AR × 390/1440, D3) reached the third screen before learning what the
     # product is. The product rubric is kept for the wide head; the masthead already names the product on a phone.
-    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}<h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell)}<div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
+    parts = [f'<div class="head">{rubric(L["product"], cls="rubric product")}{h1(page["title"])}{page_tools(shell)}<div class="st" id="s1">{paras(S[1]["paragraphs"])}</div>'
              f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div></div>']
     # DL-V2-007 (F-15, first-click test of 17 October 2026: 21-25% one-step before, 92-100% after): the eight domain
     # answers by their governed names, one step from Home, right under the product statement
@@ -544,7 +552,7 @@ def reading(page: dict, shell: dict) -> str:
     origin = DISC.origin()
     index = ([(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"])]
              + ([("measure", L["measurement"])] if page.get("measurement") else []) + [("related", L["related"])])
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell, report_for(shell, page))}<div class="st"><p>{esc(page["thesis"])}</p></div>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p>{h1(page["title"])}{page_tools(shell, report_for(shell, page))}<div class="st"><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
     essay = []
