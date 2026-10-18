@@ -2,7 +2,7 @@
 
 **Status:** AUDIT RECORD — NOT A CONFORMANCE CLAIM. Machine-checkable outcomes only. Screen readers in Arabic and English, and every judgement a person must make, are outstanding (see 'outstanding_for_a_human_auditor'). The Accessibility page states no result.
 
-Measured 2026-10-18 on `64dd2d235423`, with `scripts/accessibility_audit.py`: 24 pages (12 routes in both languages, one per route class) at 1440 px and 390 px, plus a 320 px reflow pass, reduced motion, images off, and a keyboard walk. The general ruleset is `C:\Users\MAHERF~1\AppData\Local\Temp\claude\c--Users-Maher-Farea-Financial-inclusion-\73932652-98b2-4298-9580-7a3c025987e9\scratchpad\axe\node_modules\axe-core\axe.min.js` (SHA-256 `b511cd9dec01c76f…`).
+Measured 2026-10-18 on `cd3e951ad0cf`, with `scripts/accessibility_audit.py`: 24 pages (12 routes in both languages, one per route class) at 1440 px and 390 px, plus a 320 px reflow pass, reduced motion, images off, and a keyboard walk. The general ruleset is `C:\Users\MAHERF~1\AppData\Local\Temp\claude\c--Users-Maher-Farea-Financial-inclusion-\73932652-98b2-4298-9580-7a3c025987e9\scratchpad\axe\node_modules\axe-core\axe.min.js` (SHA-256 `b511cd9dec01c76f…`).
 
 ## What the general ruleset found
 

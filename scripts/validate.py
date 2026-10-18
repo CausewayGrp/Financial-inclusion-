@@ -3496,8 +3496,10 @@ except Exception as _e:
 # 17 October 2026): below 900 px the opened menu holds the five direct hubs (Methodology the fifth; no numerals), the
 # eight domain answers under Explore by their
 # governed names in the contract's order, the governed trust links (About first, in the contract's order), the language
-# switch and the governed "Cite this page" control. Cite and report sit in one page-tools row directly under the h1 of
-# every page (an Evidence Record's report link carries its record); the header keeps search, language and menu only.
+# switch and the governed "Cite this page" control. Cite and report sit in one page-tools row in the head of every page,
+# under the h1 and, where the head has them, after the statement and the two calls to action (G2 §8.4, 18 October 2026:
+# the markup order is the screen order; an Evidence Record's report link carries its record); the header keeps search,
+# language and menu only.
 # Read from the navigation contract's `page_tools` and `mobile_menu` keys and the built pages.
 try:
     _nv = json.loads((C / "content" / "navigation_interaction.json").read_text(encoding="utf-8"))
@@ -3562,7 +3564,7 @@ try:
         _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
         if "data-cite" in _ctl or 'class="report"' in _ctl or not all(t in _ctl for t in ("data-search-open", "data-lang=", "data-menu ")):
             errors.append(f"RC-NAV {_p} the header's controls are not search, language and menu")
-        _pts = re.findall(r'</h1>(?:<div class="record-line" data-record-line>.*?</div></div>)?<div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>([^<]*)</button><a class="report" href="([^"]+)"(?: data-report-link)?>([^<]*)</a></div>', _h, re.S)   # S12: the record line between
+        _pts = re.findall(r'</h1>(?:<div class="record-line" data-record-line>.*?</div></div>)?(?:<div class="st"[^>]*>.*?</div>)?(?:<div class="actions">.*?</div>)?<div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>([^<]*)</button><a class="report" href="([^"]+)"(?: data-report-link)?>([^<]*)</a></div>', _h, re.S)   # S12: the record line between; G2 §8.4: the statement and the two calls to action may sit between (the tools follow them in the markup as on the screen)
         if len(_pts) != 1 or _h.count("data-page-tools") != 1 or _h.count("<h1") != 1:
             errors.append(f"RC-NAV {_p} has no single page-tools row under its h1")
         else:

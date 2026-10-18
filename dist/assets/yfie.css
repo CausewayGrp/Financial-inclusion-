@@ -897,9 +897,8 @@ details.home-fold{margin-top:6px}
 details.home-fold>summary{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 0}
 /* G2 pass two: on a phone Home's figures come before the topics line (G1: the figure-first candidates scored 15 and 12
    of 15 on first-screen comprehension against 12 for topics-first); on a wide screen the register keeps topics first */
-@media (max-width:899px){
-.obj.page-obj:has(> #topics)>*{order:10}
-.obj.page-obj:has(> #topics)>.head{order:0}.obj.page-obj:has(> #topics)>#s3{order:1}.obj.page-obj:has(> #topics)>.strip{order:2}.obj.page-obj:has(> #topics)>#topics{order:3}.obj.page-obj:has(> #topics)>#s4{order:4}
+@media (min-width:900px){
+.obj.page-obj:has(> #topics)>.head{order:-2}.obj.page-obj:has(> #topics)>#topics{order:-1}   /* the markup carries the phone order (figures, index, topics); only the wide screen reorders */
 }
 details.home-fold>summary::before{grid-row:1 / span 2;align-self:center}
 details.home-fold>summary>.rubric,details.home-fold>summary>h2{grid-column:2;margin:0}
@@ -945,7 +944,7 @@ ol.objs.chron,.curated .objs,.source-locator-details .objs{display:flex;flex-dir
 .page-tools>.tbtn,.page-tools>a{display:inline-flex;align-items:center;min-height:28px;box-sizing:border-box;padding:0;border:0;background:none;color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--sage-400);font-size:var(--fs-clock);font-weight:500;line-height:1.2}
 .page-tools>.tbtn:hover,.page-tools>a:hover{color:var(--green-700);text-decoration-color:currentColor}
 .head .page-tools+.st,.head .page-tools+p.st{margin-top:8px}
-.obj .head:has(> .st)>.page-tools{order:9;margin-top:10px}
+.obj .head:has(> .st)>.page-tools{margin-top:10px}   /* the markup now places the tools last in the head; no visual reorder */
 /* the full phone menu: five numbered hubs, the eight domain answers under Explore, trust, language and cite */
 .nav.open{max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain}
 .nav.open .group.mdoms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px;padding:2px 0 8px;padding-inline-start:1.9em;border-bottom:1px solid var(--rule)}

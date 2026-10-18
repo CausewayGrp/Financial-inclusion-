@@ -143,8 +143,10 @@ def head_block(page: dict, shell: dict, rubric_text: str = "", question: str = "
     # G2 (DL-V2-001): a family's head actions are part of the head, as on Home, so the register head on a wide screen
     # and the phone order (title, statement, actions, then the tools) hold for every family that has a statement
     return (f'<div class="head">{crumb_html}' + (f'<span class="rubric">{esc(rubric_text)}</span>' if rubric_text else "")
-            + (f'<p class="q">{esc(question)}</p>' if question else "") + f'{R.h1(page["title"])}{page_tools(shell)}'
-            + (f'<div class="st"{R.head_class(lead)}>{lead_paragraphs(lead)}</div>' if lead else "") + actions_html + "</div>")   # B7 review: a blank line starts a paragraph
+            + (f'<p class="q">{esc(question)}</p>' if question else "") + f'{R.h1(page["title"])}'
+            + (f'<div class="st"{R.head_class(lead)}>{lead_paragraphs(lead)}</div>' if lead else "") + actions_html + page_tools(shell) + "</div>")   # B7 review: a blank line starts a paragraph
+    # the tools follow the statement and the actions in the markup, as they do on the screen at every width (the
+    # keyboard-focus walk of 18 October 2026 found them tabbed before the actions and above them visually)
 
 
 def page_html(page: dict, shell: dict, body: str, index: list, edges: list, kind: str = "website", extra: str = "", foot_index: bool = True, foot_spine: bool = True) -> str:

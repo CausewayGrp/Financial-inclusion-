@@ -470,3 +470,25 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   exports; rendered visibility 44 views with both controls caught; re-entry; portability; public-path documentation). Gate
   negative controls, full suite: **170 of 170 faults caught (8 workers, 5,168 s; the clean copies passed first)**. The record line
   you are reading, with its manifest and checksums, is the only difference between that tree and the pushed head.
+
+- 2026-10-18 · Phase 2 · B4c G2 refinement and integration · branch `pr/stage-b-g2` → PR #62 on main `1d37d9c6` (PR #61 G1).
+  Recovery: the two G2 commits rebased with identical trees (`a8e85144`, `64dd2d23`), the branch renamed. The owner's
+  visual-quality clarification applied as DL-V2-011 (`cd3e951a`: the brass anchor under every page title, the head statement in
+  the secondary ink; design record §8, `design/evidence/v2/g2/refinement_head_390.md`). Gates on `cd3e951a` (Python 3.11.9): the
+  standing chain 0 failures; rendered visibility 44 views with both controls; social fingerprint with its control; no-JavaScript;
+  security headers; base path (one FAIL inside the parallel chain while the suite copied the tree, PASS alone on the same tree);
+  public tools 40/41; accessibility audit 0 violations, 0 contrast failures; every route re-measured (no route moves more than
+  0.1 screen, no overflow). Gate negative controls, full suite, on `cd3e951a`: **170 of 170 faults caught (8 workers, 4,179 s; the
+  clean copies passed first)**; CI on the same head: Verify 9 of 9 (six negative-control shards, browser acceptance, governance),
+  the Cloudflare Workers check excluded (OD-1017-06, F-06). Then the owner's review concern, tested with a keyboard-focus walk
+  (`g2/focus_walk.md`): the page tools were tabbed before the calls to action on every family with a statement, and on Home at
+  390 the topic links before the first figure's link — material, corrected in the markup order (`families.head_block`,
+  `render.home`), the stylesheet's `order` rules for them removed, the wide screen's topics-first Home kept by two declarations;
+  after the fix zero upward jumps on every phone view, the wide-screen patterns recorded as expected (design record §8.4); the
+  validator's RC-NAV rule admits the statement and the actions between the h1 and the tools (its control still caught). On the
+  fixed tree: the same chain re-run (validator 306/0, content parity 304/0, cutover oracle pinned, rendered visibility with both
+  controls, social with its control, no-JavaScript, security headers, base path, public tools, accessibility audit 0/0),
+  the twelve after-shots re-rendered, the phone heads 8 px shorter (the AR 390 /payments/ boundary heading back in the first
+  screen, 811–843 px). The gate negative controls on the fixed head are the six CI shards on its exact head (the local suite
+  on `cd3e951a` covers a tree that differs only in markup order and the three rules). No Master, projection or hosting state
+  changed. Never claimed: accessibility conformance, live performance, release readiness.

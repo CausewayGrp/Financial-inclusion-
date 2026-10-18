@@ -8,8 +8,12 @@ statement in the secondary ink, so the title leads and the finding parts from it
 statement's figures stay in the primary ink; on phones the anchor costs 8 px of the head's rhythm, not 14. Decided on
 rendered candidates (design record §8), no new element, text, font or route; the pages' words are unchanged. The G2
 commits were rebased onto main after PR #61 and the branch renamed `pr/stage-b-g2`; the after-shots, the measurement,
-the accessibility audit and the gate negative controls re-run on the final tree. No Master, projection or hosting state
-changed.
+the accessibility audit and the gate negative controls re-run on the final tree. The keyboard-focus walk (an owner's
+review concern) found the page tools tabbed before the calls to action and, on Home at 390, the topic links before the
+first figure's link; both corrected in the markup order (`families.head_block`, `render.home`), the stylesheet's `order`
+rules for them removed, the wide screen's topics-first Home kept by two declarations; the validator's RC-NAV rule reads
+the new order (its negative control unchanged); `design/evidence/v2/g2/focus_walk.md`.
+No Master, projection or hosting state changed.
 
 ## 18 October 2026 — Stage B G2 complete, W4F and G3 acceptance (B4–B6)
 
