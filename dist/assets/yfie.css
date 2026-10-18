@@ -224,7 +224,7 @@ b.fnum{font-weight:700;font-size:1.08em;font-variant-numeric:lining-nums}
 @media (forced-colors:active){.bnd,.between,.obj,.fig,.inst,.spine,.strip a,.compact,.qa{border-color:CanvasText!important}.mark.a{fill:CanvasText}.mark.b{stroke:CanvasText;fill:Canvas}.path,.axis,.tick,.stem,.grid{stroke:CanvasText}.lbl,.lbl.origin,.val,.unit{fill:CanvasText}.rubric,.clock .k,.clock .v,.lane .base,.between,.bnd,.bnd p,.bnd h2{color:CanvasText}}
 @media print{
 /* D1: what the print system of D6 (CSS_D6, the last block of the stylesheet) does not restate */
-.bar .nav,.controls,dialog,.noscript,.skip,.strip,.spine .index,.inst .groups,.util .actions,.fig .foot button{display:none!important}
+.bar .nav,.controls,dialog,.noscript,.skip,.strip,.spine .index,.inst .groups,.util .actions,.fig .foot button,.fig .foot .rep,.cite-format,[data-report-nojs]{display:none!important}
 .page{display:block;padding:0}
 }
 @media (min-width:600px){
@@ -836,6 +836,19 @@ details.chron-fold>p.small{margin:14px 0 4px}
 .topics ul.rlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px}
 @media (min-width:600px){.topics ul.rlist{grid-template-columns:repeat(4,minmax(0,1fr))}}
 /* Home's named disclosures (owner decision B-a): the control beside the section's own kicker and heading */
+/* B2 T (BRIEF W4 T): the report-an-error form, the citation format control and the Compare reason */
+.report-form .rf{display:flex;flex-direction:column;gap:4px;margin:10px 0;font-size:var(--fs-clock);font-weight:600;color:var(--ink-2)}
+.report-form input,.report-form textarea,.report-form select{font:inherit;font-size:var(--fs-src);font-weight:400;color:var(--ink);background:var(--paper);border:1px solid var(--rule-2);border-radius:2px;padding:10px 12px;min-height:44px;width:100%;max-width:100%;box-sizing:border-box}
+.report-form textarea{min-height:88px;resize:vertical}
+.report-form [aria-invalid="true"]{border-width:2px;border-color:var(--ink)}
+.report-form .rf-err{font-weight:600;color:var(--ink)}.report-form .rf-err[hidden]{display:none}
+.report-form .rf-errors{border:1px solid var(--ink);padding:8px 12px;margin:8px 0;font-weight:600}.report-form .rf-errors[hidden]{display:none}
+.report-form .req{color:var(--ink)}.report-form .actions{margin-top:12px}.report-form .button{font:inherit;font-weight:600;background:var(--paper);border:1px solid var(--ink);padding:10px 16px;min-height:44px;cursor:pointer;color:var(--ink)}
+.rf-grid{display:grid;grid-template-columns:1fr;gap:0 16px}@media (min-width:600px){.rf-grid{grid-template-columns:1fr 1fr}}
+[data-report-nojs][hidden],[data-report-ref][hidden]{display:none}
+.cite-format{margin:8px 0 0}.cite-format select{min-height:40px}
+.cite-out{white-space:pre-wrap;word-break:break-word;font:inherit;font-size:var(--fs-src);background:var(--paper);border:1px solid var(--rule);padding:8px 12px;margin:8px 0;direction:ltr;text-align:left}.cite-out[hidden]{display:none}
+.compare-reason{margin-top:4px;font-weight:600}
 details.home-fold{margin-top:6px}
 details.home-fold>summary{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 16px}
 details.home-fold>summary::before{grid-row:1 / span 2;align-self:center}

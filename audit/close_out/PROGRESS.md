@@ -365,10 +365,64 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   record line keeps the q3 anchor on every record (232 of 232); the RC-1115 rule only enforced an aggregate floor (≥200 record lines with
   the anchor), so one page losing it was invisible, and the B1 control expected the floor's message. Fix in its own commit `bf9b8323`: RC-1115
   fails per record page whose record line lacks the FOR WHOM clock with id q3; the control expects that message. Local verification:
-  `--only RC-1115` caught 9 of 9; the full suite (170 controls) 167 of 167 caught. Correction of the B1 record: the local B1 run covered only the `--only`
+  `--only RC-1115` caught 9 of 9; the full suite caught 167 of 167. Correction of the B1 record: the local B1 run covered only the `--only`
   subset (RC-S10 ×3, RC-NAV/D8) and the built-in controls of the base-path and no-JS suites — "negative controls CAUGHT" is withdrawn
   for the full suite; #58 is reported again only after Verify 9/9 on its exact head. Also on record: OD-1017-14 (PR #59, merged at
   `3ef16ade`, 15:46 UTC) prospectively selects a DigitalOcean Droplet via EasyPanel at https://yemen-financial-inclusion.causewaygrp.com;
   `public_origin` stays null; implementation stays Stage C. PR #51 stays as it is, conflicts included (G1 design evidence; closed without
   merging later). B2 is held unpushed until #58 is green; then `pr/stage-b-s` is merged (not rebased) into `pr/stage-b-t` and B2's PR
   targets `pr/stage-b-s`.
+
+- 2026-10-17 · Phase 2 · B2 T · branch `pr/stage-b-t`. B1 merged as PR #58 at `8a772350` after its RC-1115 fix (`bf9b8323`, Verify 9/9 on the exact
+  head); `pr/stage-b-s` merged into this branch at `0e2003bf` and main at `47e71084`, so B2 carries the fix and OD-1017-14,
+  and the PR targets main. The tools of BRIEF W4 T: search zero-result help (alias suggestions, the Questions hub, the other
+  edition) with the P2-G01 query-set gate recorded as the search gate; Compare's one-sentence verdict reason (SIG-5) and copied summary; live counts on
+  the /data/ facets; the structured report-an-error form on /contact/#report with mailto and copy transport, a reference code, a fixed
+  body and a no-JavaScript mailto (DL-V2-008); citation formats APA 7, Chicago, BibTeX and RIS (OD-1017-04(a), DL-V2-009);
+  `docs/CORRECTIONS_PROCESS.md` linked from /corrections/. One Master transaction, EN and AR together: STAGE-B-T (`audit/stage_b_t/`,
+  55 interface labels, Master `03d194a2…`, Page Specs `cf813880…`), COMMITTED with idempotence; the Arabic reviewed by an AI
+  Arabic editor (16 rows changed). F-16 tested as the brief asked: no legitimately qualified pair exists among the 14 comparable records
+  (the Findex waves are a visual and a crosswalk, not per-wave records); none manufactured (DL-V2-010); an owner content question.
+  Tests: five new browser tests with negative controls (40/41 passed); gate RC-T1 with three negative controls (run locally with
+  `--only 'T:'`, 3 of 3 caught; the full suite, 170 controls with the three B2 additions, run on this tree before the
+  push — its first run caught 169 of 170 and found a second control whose selector B2 had outdated, "a record's report
+  link loses its record" (the link now carries `#report` and `data-report-link`), fixed in its own commit like RC-1115;
+  the result of the re-run is the record line that follows). Gates after the last
+  change: validator 306/0; literal audit 19,883 records / 0 unresolved; content parity 304/0; invariance 0 of 152; viewport
+  308/308; security headers, base path, HTTP contract and no-JS PASS;
+  manifest and checksums regenerated last. Re-measured (`g0/t1_metrics.json`): /contact/ AR 390 4.1 → 6.0 screens; Home 9.5;
+  TOC ≤6, overflow 0. Not done, routed: seeds 23 and 28 (ask once → C-stage), seed 25 (B4c), G0-F09 (B4b). Open owner items unchanged:
+  F-12 visibility, F-06 Workers check; 19 Dependabot alerts noted; new: the CORRECTIONS_PROCESS.md times. Next: B3 G1 on
+  `pr/stage-b-g1`, in a fresh session by the owner's instruction of 17 October 2026 (B2 is the stop: this session does not
+  start G1); it resumes from this file and `design/evidence/v2/STATE.json` under the §12 resume message.
+
+- 2026-10-17 · Phase 2 · B2 T · gate negative controls, full suite, before the push: **170 of 170 faults caught (8 workers, 3,942 s; the clean copies passed first, so no expected message was already present)**, run on the tree at `95554840`
+  (the commit that carries the code, the Master transaction, the records and this fix set). The record line you are reading, and the
+  manifest and checksums it regenerates, are the only difference between that tree and the pushed head. First run on the B2 tree: 169
+  of 170, which found one control whose selector B2's markup had outdated ("a record's report link loses its record"); fixed at
+  `95554840` and caught on the re-run. Scope stated in full, as the owner required: no run is reported as CAUGHT for a subset.
+
+- 2026-10-18 · Phase 2 · B2 T · finding B2-F02, interpreter version. The first CI run of `pr/stage-b-t` failed at the build step:
+  `scripts/yfie/families.py` raised "f-string expression part cannot include a backslash" on Python 3.11, because the report form
+  built its input attributes inside f-string expression parts — legal from 3.12 under PEP 701, rejected by 3.11. One cause, four
+  symptoms: Governance gates died at the build, Browser acceptance and the six negative-control shards were skipped because they
+  depend on it, and the aggregate failed in two seconds. The local environment ran Python 3.12.10 while `requirements.txt` and all
+  three CI jobs pin 3.11, so every local result — including the 170-of-170 negative-control run — came from an interpreter that
+  accepts syntax CI rejects; `CONTRIBUTING.md` §9 stated the rule and nothing enforced it. Closed three ways: the fragments are
+  hoisted into locals and the rendered contact pages are byte-identical in both editions (no behaviour change);
+  `scripts/tests/test_python311_syntax.py` is the guard, reading every tracked file's f-strings for a backslash in an expression
+  part or a nested string reusing the f-string's delimiter (textual by necessity — `ast.parse(..., feature_version=(3, 11))` does
+  not re-impose the rule, verified before relying on it; the detector was tested on five cases, including the triple-quoted
+  f-strings in the hosting tests that must not be flagged), and `compileall` over `scripts`, `site-src`, `audit` and `design` is
+  now CI's first governance step; and the local toolchain: the repository's own pin is Python 3.11 (`requirements.txt`: "Pinned Python 3.11 toolchain … CI installs exactly this"), so the local environment was aligned to it rather than excused: Python 3.11.9 installed and a second virtual environment built from `requirements.txt` with Chromium, and the local gate chain now runs on it, interpreter version printed first. The 3.12 environment is left in place, unused by the gates, so no earlier result silently changes meaning. `CONTRIBUTING.md` §5 and §9 record both the interpreter
+  requirement and the guard. No Master, projection, page or hosting state changed.
+
+- 2026-10-18 · Phase 2 · B2 T · gates re-run on the pinned interpreter, Python 3.11.9, at `d819e4a7` — the first local run that is
+  evidence about CI. Full chain: 0 failures (compileall; the f-string guard, which reports NOT APPLICABLE on 3.11 because the
+  interpreter enforces the rule; projections; generator tests 22; build 306 pages; literal audit 19,883 records / 0 unresolved;
+  validator 306/0; determinism; lineage 8/8; diagrams, social 302, logo current; invariance 0 of 152; content parity 304/0;
+  re-entry 15; public tools 40/41 with 1 not applicable; viewport 308/308; security headers; base path; portable HTTP contract;
+  no-JavaScript). Gate negative controls, full suite: **170 of 170 faults caught** (8 workers, 3,524 s; the clean copies passed
+  first). The same suite had passed 170 of 170 on 3.12 before the interpreter gap was found, which is why that result proved
+  nothing; this one does. The record line you are reading, with its manifest and checksums, is the only difference between the
+  tree these ran on and the pushed head.

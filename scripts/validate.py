@@ -3450,6 +3450,48 @@ try:
 except Exception as _x:
     errors.append("RC-S10 unreadable " + repr(_x))
 
+# RC-T1 (BRIEF W4 T, report an error; Stage B B2, 17 October 2026): every "Report an error" control opens the structured
+# form at /contact/#report — a record's or a Reading's with its ID, a figure's with its record and figure — and the form
+# exists in both editions with its governed fields, a governed address, no action attribute (nothing is posted anywhere)
+# and the no-JavaScript mailto that carries the same field list.
+try:
+    _rt_fields = ("url", "record", "anchor", "lang", "edition", "value", "type", "should", "evidence", "name", "email")
+    for _lang in ("en", "ar"):
+        _cf = DIST / _lang / "contact" / "index.html"
+        _cs = _cf.read_text(encoding="utf-8") if _cf.exists() else ""
+        _ftag = re.search(r'<div class="report-form" role="form"[^>]*data-report[^>]*>', _cs)
+        if 'id="report"' not in _cs or not _ftag:
+            errors.append(f"RC-T1 {_lang}/contact/index.html has no report form at #report")
+            continue
+        for _k in _rt_fields:
+            if f'data-rf="{_k}"' not in _cs:
+                errors.append(f"RC-T1 {_lang}/contact/index.html report form lacks the field {_k}")
+        if not re.search(r'data-address="[^"@]+@[^"]+"', _ftag.group(0)):
+            errors.append(f"RC-T1 {_lang}/contact/index.html report form lacks the governed contact address")
+        if re.search(r'\saction=', _ftag.group(0)):
+            errors.append(f"RC-T1 {_lang}/contact/index.html report form has an action: nothing may be posted anywhere")
+        if "data-report-nojs" not in _cs or not re.search(r'data-correction-mail href="mailto:[^"]*body=[^"]*Reference', _cs):
+            errors.append(f"RC-T1 {_lang}/contact/index.html lacks the no-JavaScript mailto with the field list")
+        for _k in ("data-report-send", "data-report-copy", "data-report-errors", "data-report-status"):
+            if _k not in _cs:
+                errors.append(f"RC-T1 {_lang}/contact/index.html report form lacks {_k}")
+    for _f in sorted(DIST.rglob("index.html")):
+        _rel = "/".join(_f.relative_to(DIST).parts)
+        if not _rel.startswith(("en/", "ar/")):
+            continue
+        _s = _f.read_text(encoding="utf-8")
+        _rid = (re.search(r'<meta name="yfie-record-id" content="([^"]+)"', _s) or [None, ""])[1]
+        for _m in re.finditer(r'<a [^>]*data-report-link[^>]*>', _s):
+            _h = (re.search(r'href="([^"]*)"', _m.group(0)) or [None, ""])[1]
+            if "/contact/" not in _h or not _h.endswith("#report"):
+                errors.append(f"RC-T1 {_rel} report link {_h} does not open the form at /contact/#report")
+            elif 'class="report-l"' in _m.group(0) and "&amp;figure=" not in _h and "&figure=" not in _h:
+                errors.append(f"RC-T1 {_rel} figure report link {_h} carries no figure")
+        if _rid and f"?record={quote(_rid)}#report" not in _s:   # the ID is percent-encoded in the link (MF-ORIG-001+002)
+            errors.append(f"RC-T1 {_rel} record {_rid} has no report link carrying its ID")
+except Exception as _e:
+    errors.append("RC-T1 report-form check unreadable " + str(_e))
+
 # RC-NAV (owner decisions of 3 October 2026, point 3, findings A-12, C-6, C-8; of 9 October 2026, B-c; and D8 of
 # 17 October 2026): below 900 px the opened menu holds the five direct hubs (Methodology the fifth; no numerals), the
 # eight domain answers under Explore by their
@@ -3520,7 +3562,7 @@ try:
         _ctl = _h.split('<div class="controls">', 1)[1].split("</div>", 1)[0] if '<div class="controls">' in _h else ""
         if "data-cite" in _ctl or 'class="report"' in _ctl or not all(t in _ctl for t in ("data-search-open", "data-lang=", "data-menu ")):
             errors.append(f"RC-NAV {_p} the header's controls are not search, language and menu")
-        _pts = re.findall(r'</h1>(?:<div class="record-line" data-record-line>.*?</div></div>)?<div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>([^<]*)</button><a class="report" href="([^"]+)">([^<]*)</a></div>', _h, re.S)   # S12: the record line between
+        _pts = re.findall(r'</h1>(?:<div class="record-line" data-record-line>.*?</div></div>)?<div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>([^<]*)</button><a class="report" href="([^"]+)"(?: data-report-link)?>([^<]*)</a></div>', _h, re.S)   # S12: the record line between
         if len(_pts) != 1 or _h.count("data-page-tools") != 1 or _h.count("<h1") != 1:
             errors.append(f"RC-NAV {_p} has no single page-tools row under its h1")
         else:
@@ -3528,7 +3570,15 @@ try:
             if _html.unescape(_c) != _ucite[_l] or _html.unescape(_r) != _urep[_l]:
                 errors.append(f"RC-NAV {_p} the page-tools row does not carry the governed cite and report labels")
             _rid = _rel[2] if len(_rel) == 4 and _rel[1] == "evidence" and _rel[2] != "compare" and "data-moved-to" not in _h else None
-            if _rh != (f"/{_l}/contact/?record={quote(_rid)}" if _rid else f"/{_l}/contact/"):
+            # B2 T (BRIEF W4 T): every report link opens the structured form at #report; a record's carries its ID, a
+            # Reading's its reading ID (not derivable from the slug: any governed ID is accepted), a page's none
+            if _rid:
+                _ok = _rh == f"/{_l}/contact/?record={quote(_rid)}#report"
+            elif len(_rel) == 4 and _rel[1] == "readings":
+                _ok = bool(re.fullmatch(rf"/{_l}/contact/\?record=[A-Za-z0-9._%+-]+#report", _rh))
+            else:
+                _ok = _rh == f"/{_l}/contact/#report"
+            if not _ok:
                 errors.append(f"RC-NAV {_p} the page-tools report link is {_rh}")
         _nnav += 1
     if _nnav < 100:

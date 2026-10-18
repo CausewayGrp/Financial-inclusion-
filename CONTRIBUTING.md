@@ -114,9 +114,15 @@ adapter is selected later. No hosting account is required by Verify. See
 CI (`.github/workflows/verify.yml`) runs all of these on every push to `main` and every pull request. Run them locally
 before you commit; together they take about a minute.
 
+Use the interpreter `requirements.txt` pins, Python 3.11, the one CI installs. A newer interpreter accepts syntax 3.11
+rejects (PEP 701 f-strings), so a local pass on 3.12 or later proves nothing about CI: that cost a session on 17 October
+2026 (B2). The first gate below is the guard.
+
 ```bash
-python3 -m pip install -r requirements.txt && python3 -m playwright install chromium    # once
+python3 -m pip install -r requirements.txt && python3 -m playwright install chromium    # once, on Python 3.11
 export PYTHONDONTWRITEBYTECODE=1
+python3 -m compileall -q scripts site-src audit design   # every tracked module parses on this interpreter
+python3 scripts/tests/test_python311_syntax.py         # and holds no f-string that needs 3.12 (run it on any interpreter)
 python3 scripts/checksums.py --check                   # manifest lists every tracked file with its current hash
 python3 scripts/generate_projections.py --check        # the Master regenerates every projection byte for byte
 python3 -m unittest discover -s scripts/projection/tests -t .
@@ -219,7 +225,12 @@ The bullets below document the **former D0–D7 programme only** and grant no cu
   constant needs an entry in `scripts/literal_audit_allowances.json` with route, context and reason.
 - `03_PAGE_SECTIONS` rows are split per language: the English and Arabic of one section are different rows (`section_row`).
 - Substring replacements must match exactly once; an earlier edit can make a replacement apply twice.
-- Python 3.11: an f-string cannot contain a backslash inside `{}`.
+- Python 3.11: an f-string cannot contain a backslash inside `{}`, and a nested string cannot reuse the f-string's own
+  delimiter. Both are legal from 3.12 (PEP 701), so a local run on a newer interpreter hides the breakage and CI fails at
+  the build step, which skips every job that depends on it. Build the local environment on 3.11 as `requirements.txt`
+  pins, and run `scripts/tests/test_python311_syntax.py`: it reads the f-strings textually, because
+  `ast.parse(..., feature_version=(3, 11))` does **not** re-impose the restriction. Hoist the fragment into a local and
+  interpolate the local.
 - README, the checkpoint and the handoff files may print only the current Master and Page Specs SHA-256 or the labelled
   Drive lineage pair; write any other hash as a short prefix.
 - `scripts/rebind_authority.py` needs `--timestamp`.

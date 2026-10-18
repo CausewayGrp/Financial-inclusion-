@@ -1,8 +1,8 @@
 {
   "schema": "YFIE_PUBLIC_LITERAL_CLOSURE/3.0",
   "audit_version": "3.0 — close-out addendum (11 October 2026): Measurement Agenda priorities and Reading fields in scope; composite records trace through a listed member or a governed data row; the inventory/method fallback is removed. v2.0 (Pre-Tranche-C P1-D) removed v1 substring and paragraph-keyword rules.",
-  "authority_master_sha256": "6a851a14909ebe925c71ada64765f9018c7a204b0e72742efc928c1b88b51260",
-  "page_specs_sha256": "b3197c6637f763a46d72f6f92e25d485a29e2d39e5bcad047c97a8e21146f7e3",
+  "authority_master_sha256": "03d194a2c402b7d4673c4c4106cab5f1ce9b0f92128e98fc405342889f3e9f9e",
+  "page_specs_sha256": "cf8138806a4e43be3947e6e460d9e498f5a854ef0adc3813fe161d1d750be328",
   "scope": "Every number a reader sees in a page title and its section text (S1), the governed copy of the records, claims and visual contracts bound to the page (S2), the Measurement Agenda priorities the page renders (S3) and the Reading fields the page renders outside its sections (S4). Each must resolve to a source-closed record (directly, through a listed member record or through a governed data row with a public locator) or be a date, period, identifier, document reference, contract inventory count, recomputed inventory count or allowed method constant.",
   "classification_rule": "UNRESOLVED_SUBSTANTIVE_PUBLIC_NUMBER is a hard validation failure, and so is any audit problem. OPEN_TRACE_LISTED is reported, never resolved, and valid only for the Master its list names. Route/source presence without an object-level source-closed trace is not sufficient; a composite record's own text never traces itself.",
   "record_count": 19883,

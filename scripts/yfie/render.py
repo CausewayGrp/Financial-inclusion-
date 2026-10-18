@@ -62,7 +62,7 @@ def head(page: dict, shell: dict, route: str, kind: str = "website", extra: str 
     lic_link = f'<link rel="license" href="{esc(lic["url"])}">' if lic.get("url") else ""   # NB-1 (B4): machine-readable licence
     return (f'<!doctype html><html lang="{lang}" dir="{shell["dir"]}"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width,initial-scale=1">{DISC.robots_meta()}<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/CauseWay_logo_32.png"><title>{esc(title)} — {esc(shell["product"])}</title>'
-            f'<meta name="description" content="{esc(page.get("meta_description"))}">{extra}{lic_link}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
+            f'<meta name="description" content="{esc(page.get("meta_description"))}"><meta name="yfie-edition" content="{esc(shell["edition"])}"><meta name="yfie-publisher" content="CauseWay">{extra}{lic_link}<link rel="stylesheet" href="/assets/yfie.css">{font_preloads(lang)}'
             f'{DISC.head_links(route, lang, origin)}{DISC.social_meta(title, page.get("meta_description") or "", lang, route, shell["product"], kind, origin)}'
             f"{structured_data(page, shell, route)}</head><body>")
 
@@ -148,7 +148,7 @@ def header(shell: dict) -> str:
                    + f'<button type="button" class="tbtn m-only" data-cite data-menu-cite>{esc(L["cite"])}</button>')
     # B-c (owner decisions of 9 October 2026): with the page-tools row, cite and report leave the header
     tools_ = "" if shell.get("page_tools") else (f'<button type="button" class="tbtn cite" data-cite aria-label="{esc(L["cite"])}">{esc(L["cite"])}</button>'
-                                                 f'<a class="report" href="{shell["contact_href"]}">{esc(L["report"])}</a>')
+                                                 f'<a class="report" href="{shell["contact_href"]}#report" data-report-link>{esc(L["report"])}</a>')
     return (f'<noscript><div class="noscript">{esc(L["noscript"])}</div></noscript><a class="skip" href="#main">{esc(L["skip"])}</a>'
             f'<header class="bar"><div class="bar-in"><a class="brand" href="{shell["home_href"]}" aria-label="CauseWay — {esc(shell["product"])}">{logo(40, "(min-width: 900px) 48px, 40px")}<span class="brand-text"><span class="brand-pub" dir="ltr">CauseWay</span><span class="brand-name">{esc(shell["product"])}</span></span></a>'
             f'<nav id="primary-nav" class="nav" aria-label="{esc(L["primary_nav"])}">{"".join(nav)}</nav>'
@@ -266,7 +266,17 @@ def page_tools(shell: dict, report_href: str = "") -> str:
         return ""
     L = shell["labels"]
     return (f'<div class="page-tools" data-page-tools><button type="button" class="tbtn cite" data-cite>{esc(L["cite"])}</button>'
-            f'<a class="report" href="{report_href or shell["contact_href"]}">{esc(L["report"])}</a></div>')
+            f'<a class="report" href="{report_href or shell["contact_href"] + "#report"}" data-report-link>{esc(L["report"])}</a></div>')
+
+
+def report_for(shell: dict, page: dict | None) -> str:
+    """B2 T: the report link of a page — the form pre-filled with the record or Reading it came from, else the form itself."""
+    from urllib.parse import quote as _q
+    href = ((page or {}).get("hrefs") or {}).get("report")
+    if href:
+        return href
+    rid = (page or {}).get("id") if (page or {}).get("family") in ("Reading", "Evidence Record") else ""
+    return f'{shell["contact_href"]}?record={_q(str(rid))}#report' if rid else f'{shell["contact_href"]}#report'
 
 
 def source_card(s: dict) -> str:
@@ -534,7 +544,7 @@ def reading(page: dict, shell: dict) -> str:
     origin = DISC.origin()
     index = ([(f's-{s["section_id"]}', s["heading"]) for s in page["sections"] if s["heading"]] + [("trace", L["trace"]), ("sources", L["sources"])]
              + ([("measure", L["measurement"])] if page.get("measurement") else []) + [("related", L["related"])])
-    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell)}<div class="st"><p>{esc(page["thesis"])}</p></div>'
+    head_ = (f'<div class="head">{crumb(page["breadcrumb"], shell)}{rubric(L["eyebrow"])}<p class="q">{esc(page["question"])}</p><h1 id="page-title">{esc(page["title"])}</h1>{page_tools(shell, report_for(shell, page))}<div class="st"><p>{esc(page["thesis"])}</p></div>'
              f'<div class="clocks">{clock(L["evidence_period"], esc(page["evidence_period"]))}<div class="clock"><span class="k">{esc(L["last_reviewed"])}</span><span class="v"><time datetime="{esc(page["last_reviewed_iso"])}">{esc(page["last_reviewed"])}</time></span></div></div></div>')
     bnd = f'<section class="bnd" data-reading-boundary>{rubric(L["do_not_infer"], tag="h2")}<p>{esc(page["prohibited_inference"])}</p></section>'
     essay = []
@@ -611,11 +621,15 @@ def cite_tools(shell: dict, route: str, citation: str, record: bool = False, lon
     # limits, is one disclosure away and copies on its own
     long_ = (f'<details class="cite-long"><summary>{esc(L["cite_long"])}</summary><p class="cite-text" data-cite-long-text>{cite_isolate(iso(esc(long_form)))}{lead}'
              f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></p><button type="button" class="tbtn" data-cite-long>{esc(L["copy_long"])}</button></details>') if long_form else ""
+    # OD-1017-04(a) (B2 T): the format control; the runtime renders APA 7, Chicago, BibTeX or RIS from the page's metadata
+    fmt = ((f'<label class="slot cite-format"><span>{esc(L["cite_format"])}</span><select data-cite-format>'
+            + "".join(f'<option value="{k}">{esc(v)}</option>' for k, v in L["cite_formats"]) + '</select></label>'
+            f'<pre class="cite-out" data-cite-out hidden tabindex="0"></pre>') if L.get("cite_formats") else "")
     # a record's short citation has two lines: this resource (ending with the page address), then the original sources
     line1, _, line2 = str(citation).partition("\n")
     second = f'<br><span class="cite-l2" data-cite-line>{cite_isolate(iso(esc(line2)))}</span>' if line2 else ""
     return (f'<div class="cite-preview"><p class="cite-h">{esc(L["cite_preview"])}</p><p class="cite-text" data-cite-text><span data-cite-line>{cite_isolate(iso(esc(line1)))}{lead}'
-            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></span>{second}</p>{long_}</div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
+            f' <bdi dir="ltr" data-cite-url>{esc(canon)}</bdi></span>{second}</p>{long_}{fmt}</div><button type="button" class="{cls}" data-cite>{esc(L["copy_citation"])}</button>'
             f'<button type="button" class="tbtn" data-print>{esc(L["print"])}</button>')
 
 
@@ -625,7 +639,7 @@ def page_util(shell: dict, page: dict | None = None) -> str:
     L = shell["labels"]
     tools = cite_tools(shell, page["route"], page_citation(shell, page.get("title"))) if page else f'<button type="button" class="tbtn" data-cite>{esc(L["cite"])}</button>'
     return (f'<section class="util" id="cite-tools"><div class="actions">{tools}'
-            f'<a href="{shell["contact_href"]}">{esc(L["report"])}</a></div></section>')
+            f'<a href="{report_for(shell, page)}" data-report-link>{esc(L["report"])}</a></div></section>')
 
 
 def print_foot(shell: dict, route: str, title: str, citation: str = "") -> str:

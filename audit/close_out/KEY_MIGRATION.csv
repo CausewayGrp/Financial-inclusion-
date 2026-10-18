@@ -15,3 +15,12 @@ a[data-hub-num] and span.glabel[data-hub-num] (masthead),"a (five direct hubs, n
 span.group[aria-label=Method and measurement] > a /methodology/ + a /measurement/,a[href=/methodology/] (masthead); /measurement/ in the footer group,D8: one Methodology link; Measurement priorities stays a footer destination,B1
 none,section#topics[data-home-topics] (Home) and the footer's first group Topics,DL-V2-007: the eight domain answers in one step from Home and from every footer,B1
 a.m-only.mlang[data-menu-lang],a.m-only.mlang[data-menu-lang] (bound by app.js like [data-lang]),item 11: the opened menu's language switch keeps the query and the anchor,B1
+a.report[href="/{lang}/contact/?record=ID"],a.report[data-report-link][href="/{lang}/contact/?record=ID#report"],B2 T: every report link opens the structured form; the record ID stays in the query,B2
+section.ctx[data-correction-context] > div > div.actions > a.mail[data-correction-mail] (shown only with a known record),section#report[data-report-form] > form[data-report] + p[data-report-nojs] > a.mail[data-correction-mail] (always rendered; the runtime hides the no-JS line),B2 T: the mail link becomes the no-JavaScript transport under the form (DL-V2-008),B2
+— (none),figure .foot a.report-l[data-report-link][href="…?record=VIS&figure=VIS#report"],B2 T: every figure with its own record carries Report an error,B2
+— (none),label.cite-format > select[data-cite-format] + pre[data-cite-out],OD-1017-04(a): the citation format control beside the preview (DL-V2-009),B2
+section.compare-verdict > h3,section.compare-verdict > h3 + p.compare-reason[data-compare-reason],B2 T: the one-sentence verdict reason (SIG-5; DL-V2-010),B2
+— (none),button[data-compare-summary],B2 T: Copy summary beside Copy link,B2
+div.empty[data-search-empty],div.empty[data-search-empty] > p[data-search-try] + p[data-search-help],B2 T: zero-result help (suggestions; the Questions hub; the other edition),B2
+select[data-source-facet] > option (label),select[data-source-facet] > option (label + live count),B2 T: live facet counts; the value attribute is unchanged,B2
+meta[name=yfie-citation] + meta[name=yfie-record-id],+ meta[name=yfie-edition] + meta[name=yfie-publisher] (every page),B2 T: the metadata the citation formats and the report form read,B2

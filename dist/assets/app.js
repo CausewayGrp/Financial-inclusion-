@@ -75,6 +75,9 @@ async function copyText(text,button,promptLabel){
 const canonicalHref=$('link[rel="canonical"]')?.href||location.href;
 $$('[data-cite-url]').forEach(e=>{e.textContent=canonicalHref;});
 $$('[data-cite]').forEach(b=>b.addEventListener('click',async()=>{
+  // OD-1017-04(a) (B2 T): with a format other than plain text selected, the action copies exactly the rendered format
+  const fsel=$('[data-cite-format]');
+  if(fsel&&fsel.value&&fsel.value!=='plain'){await copyText(formatCitation(fsel.value,citeMeta()),b,T('UI-JS-COPY-CITATION'));return;}
   const preview=$('[data-cite-text]');
   const governed=$('meta[name="yfie-citation"]')?.content?.trim();
   const lines=preview ? [...preview.querySelectorAll('[data-cite-line]')] : [];
@@ -185,10 +188,23 @@ function markTerms(text,tokens){
   let out='',at=0;merged.forEach(([a,b])=>{out+=iso(s.slice(at,a))+'<mark>'+esc(s.slice(a,b))+'</mark>';at=b;});
   return out+iso(s.slice(at));
 }
-function renderHits(hits,tokens=[]){
+// B2 T (BRIEF W4 T, zero-result help): up to three alias terms that share a stem with the query, the Questions hub and
+// the same query in the other edition — each a link, so the help works from the dialog and from the directory alike
+function zeroHelp(help){
+  if(!help)return '';
+  const other=prefix.slice(0,-2)+(prefix.endsWith('en')?'ar':'en'), toks=help.tokens||[], sugg=[];   // the other edition under the same base path
+  for(const a of (help.aliases||[])){
+    const terms=String((isAr?a.terms_ar:a.terms_en)||'').split(';').map(x=>x.trim()).filter(Boolean);
+    for(const t of terms){const nt=normalize(t);if(nt&&toks.some(k=>k.length>=3&&nt.length>=3&&(nt.startsWith(k.slice(0,3))||k.startsWith(nt.slice(0,3))))&&!sugg.includes(t)){sugg.push(t);break;}}
+    if(sugg.length>=3)break;
+  }
+  const tries=sugg.length?`<p class="small" data-search-try>${esc(T('UI-JS-SEARCH-TRY'))} ${sugg.map(t=>`<a href="${prefix}/evidence/?q=${encodeURIComponent(t)}" data-search-suggest>${esc(t)}</a>`).join(' · ')}</p>`:'';
+  return tries+`<p class="small" data-search-help><a href="${prefix}/explore/">${esc(T('UI-JS-SEARCH-QUESTIONS'))}</a> · <a href="${other}/evidence/?q=${encodeURIComponent(help.query||'')}" hreflang="${other.slice(1)}" data-search-other-edition>${esc(T('UI-JS-SEARCH-OTHER-EDITION'))}</a></p>`;
+}
+function renderHits(hits,tokens=[],help=null){
   // RC-17 (owner decisions of 3 October 2026, point 2): names from the regulator's lists and enforcement decisions are
   // not in the index; the empty state says so once and points to the original documents on Data & sources
-  if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')
+  if(!hits.length) return '<div class="empty" data-search-empty>'+T('UI-JS-SEARCH-NO-RESULT')+zeroHelp(help)
     +'<p class="small" data-search-names-note><a href="'+prefix+'/data/#regulatory">'+esc(T('UI-JS-SEARCH-NAMES-NOTE'))+'</a></p></div>';
   return hits.map(x=>{
     const title=(isAr?(x.title_ar||x.question_ar||x.label_ar):(x.title_en||x.question_en||x.label_en))||x.id||'Evidence';
@@ -252,7 +268,7 @@ function bindSearch(input,box,status,urlState){
         // A6 / C7: when fewer hits are shown than match, say so with the true total and carry the query to the Evidence directory (?q=, EAD-06)
         const capped=scored.length<matching.length;
         const seeAll=capped?`<p class="search-see-all"><a href="${prefix}/evidence/?q=${encodeURIComponent(input.value.trim())}&amp;type=evidence">${esc(T('UI-JS-SEARCH-SEE-ALL-EVIDENCE'))}</a></p>`:'';
-        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored,tokens)+seeAll;
+        box.innerHTML=(note?`<p class="search-boundary-note">${esc(note)}</p>`:'')+renderHits(scored,tokens,{query:input.value.trim(),tokens,aliases})+seeAll;
         if(status)status.textContent=capped?TF('UI-JS-SEARCH-RESULTS-OF',{n:scored.length,m:matching.length})
           :TF(scored.length===1?'UI-JS-SEARCH-RESULT-ONE':'UI-JS-SEARCH-RESULTS',{n:scored.length});   // TOOL-19
       }catch(e){
@@ -323,6 +339,16 @@ if(sourceInput){
     if(filtering&&visibleLocators&&locatorDetails&&!locatorDetails.open)locatorDetails.open=true;
     if(noResults)noResults.hidden=shown!==0;
     if(status)status.textContent=TF(shown===1?'UI-JS-SOURCES-SHOWN-ONE':'UI-JS-SOURCES-SHOWN',{n:shown});   // TOOL-19
+    counts();
+  };
+  // B2 T (BRIEF W4 T, live counts): every option shows how many sources it would leave, given the term and the other facets
+  const counts=()=>{
+    const term=normalize(sourceInput.value.trim());
+    facets.forEach(f=>{[...f.options].forEach(o=>{
+      if(!o.value)return; if(!o.dataset.label)o.dataset.label=o.textContent;
+      const n=records.filter(r=>(!term||normalize(r.dataset.sourceSearch||'').includes(term))&&facets.every(g=>{const v=g===f?o.value:g.value;if(!v)return true;
+        return g.dataset.sourceFacet==='domain'?(r.dataset.fDomain||'').split(' ').includes(v):r.dataset['f'+g.dataset.sourceFacet[0].toUpperCase()+g.dataset.sourceFacet.slice(1)]===v;})).length;
+      o.textContent=`${o.dataset.label} (${n})`;});});
   };
   sourceInput.addEventListener('input',()=>{apply();share();});
   if(facetBox){
@@ -363,8 +389,6 @@ if(correctionContext){
     else if(!known.has(record)){ if(err){err.textContent=err.dataset.msgUnknown;err.dataset.correctionError='unknown';err.hidden=false;} }
     else if(origin&&rid&&link){
       rid.textContent=record;link.href=`${prefix}/evidence/${encodeURIComponent(record)}/`;origin.hidden=false;
-      const mail=$('[data-correction-mail]',correctionContext);
-      if(mail){mail.href=`mailto:${mail.dataset.mailAddress}?subject=${encodeURIComponent(mail.dataset.mailSubject+' '+record)}`;mail.hidden=false;}
     }
   }
 }
@@ -385,6 +409,7 @@ if(compareSelects.length>=2&&out){
     if(f==='source')return {state:same?'same':'different',label:labels.informational};
     return same?{state:'same',label:labels.same}:{state:'different',label:labels.different};
   };
+  let lastSummary='';
   const verdict=(records,rows)=>{
     if(new Set(records.map(r=>r.id)).size!==records.length)return {state:'same-record',title:labels.sameRecord,copy:labels.sameRecordCopy};
     if(rows.some(r=>requiredHard.has(r.field)&&r.state==='different'))return {state:'not-direct',title:labels.notDirect,copy:labels.notDirectCopy};
@@ -425,19 +450,32 @@ if(compareSelects.length>=2&&out){
     out.innerHTML=`<div class="compare-url-error" role="alert" data-compare-url-error="${esc(r.reason)}"><h3>${esc(errorText.title)}</h3><p>${esc(detail)}</p><p>${esc(errorText.note)}</p>${offered}</div>`;
     if(compareStatus)compareStatus.textContent='';
     const cb=$('[data-compare-copy]'); if(cb)cb.disabled=true;   // TOOL-18: never copy a comparison the page is not showing
+    const sb=$('[data-compare-summary]'); if(sb)sb.disabled=true; lastSummary='';
   };
   const draw=()=>{
     const records=compareSelects.map(sel=>data.find(x=>x.id===sel.value)).filter(Boolean);
     writeUrl();
     const cb=$('[data-compare-copy]'); if(cb)cb.disabled=records.length<2;
     const prompt=$('[data-compare-prompt]'); if(prompt)prompt.hidden=records.length>=2;   // G4: the prompt only while fewer than two are selected
-    if(records.length<2){out.innerHTML='';return;}
+    if(records.length<2){out.innerHTML='';const sb=$('[data-compare-summary]');if(sb)sb.disabled=true;lastSummary='';return;}
     const rows=dimensions.map(field=>({field,...assessMany(records,field)}));
     const v=verdict(records,rows);
+    // B2 T (SIG-5): one sentence naming the dimension(s) behind the verdict, in the governed field words
+    const fieldList=arr=>arr.map(f=>labels[f]||f).join(T('UI-JS-LIST-SEPARATOR')+' ');   // R85-G01: the separator is governed
+    const diff=rows.filter(r=>r.state==='different'&&r.field!=='source').map(r=>r.field);
+    const miss=rows.filter(r=>r.state==='missing'&&r.field!=='source').map(r=>r.field);
+    const reason=v.state==='same-record'?T('UI-JS-COMPARE-REASON-SAME-RECORD')
+      :v.state==='aligned'?T('UI-JS-COMPARE-REASON-ALIGNED')
+      :v.state==='unresolved'?TF('UI-JS-COMPARE-REASON-MISSING',{fields:fieldList(miss)})
+      :TF('UI-JS-COMPARE-REASON-DIFFERS',{fields:fieldList(v.state==='qualified'?diff.filter(f=>temporal.has(f)):diff.filter(f=>requiredHard.has(f)))});
+    lastSummary=[TF('UI-JS-COMPARE-SUMMARY-HEAD',{n:records.length}),`${v.title}. ${reason}`,'']
+      .concat(records.map(x=>`— ${x.title} (${x.id}): ${labels.period}: ${x.period||'—'}; ${labels.universe}: ${x.universe||'—'}; ${labels.boundary}: ${x.boundary||'—'}`))
+      .concat(['',labels.noMerge,location.href]).join('\n');
+    const sb=$('[data-compare-summary]'); if(sb)sb.disabled=false;
     const head=records.map(x=>`<th scope="col">${iso(x.title)}</th>`).join('');
     const body=rows.map(r=>`<tr data-compare-state="${esc(r.state)}"><th scope="row">${esc(labels[r.field]||r.field)}</th>${records.map(x=>`<td>${iso(x[r.field]||'—')}</td>`).join('')}<td><span class="compare-state">${esc(r.label)}</span></td></tr>`).join('');
     const boundaries=records.some(x=>x.boundary)?`<div class="compare-boundaries">${records.map(x=>`<article><strong>${iso(x.title)}</strong><p>${iso(x.boundary||'—')}</p></article>`).join('')}</div>`:'';
-    out.innerHTML=`<section class="compare-verdict" data-compare-verdict="${esc(v.state)}" data-noncolour-semantic="text-label-structure"><div class="eyebrow">${esc(labels.assessment)}</div><h3>${esc(v.title)}</h3><p>${esc(v.copy)}</p><p class="compare-no-merge">${esc(labels.noMerge)}</p></section><div class="table-wrap" tabindex="0" role="region" aria-label="${esc(labels.table)}" data-noncolour-semantic="caption-headers-text-labels"><table class="compare-table"><caption class="sr-only">${esc(labels.table)}</caption><thead><tr><th scope="col">${esc(labels.dimension)}</th>${head}<th scope="col">${esc(labels.assessment)}</th></tr></thead><tbody>${body}</tbody></table></div>${boundaries}<div class="compare-record-actions">${records.map(recordLink).join('')}</div>`;
+    out.innerHTML=`<section class="compare-verdict" data-compare-verdict="${esc(v.state)}" data-noncolour-semantic="text-label-structure"><div class="eyebrow">${esc(labels.assessment)}</div><h3>${esc(v.title)}</h3><p class="compare-reason" data-compare-reason>${esc(reason)}</p><p>${esc(v.copy)}</p><p class="compare-no-merge">${esc(labels.noMerge)}</p></section><div class="table-wrap" tabindex="0" role="region" aria-label="${esc(labels.table)}" data-noncolour-semantic="caption-headers-text-labels"><table class="compare-table"><caption class="sr-only">${esc(labels.table)}</caption><thead><tr><th scope="col">${esc(labels.dimension)}</th>${head}<th scope="col">${esc(labels.assessment)}</th></tr></thead><tbody>${body}</tbody></table></div>${boundaries}<div class="compare-record-actions">${records.map(recordLink).join('')}</div>`;
     if(compareStatus)compareStatus.textContent=`${v.title}. ${TF('UI-JS-COMPARE-SELECTED',{n:records.length})}`;   // RC-3: label-value form ("Records selected: 2")
   };
   compareSelects.forEach(sel=>sel.addEventListener('change',draw));
@@ -451,7 +489,92 @@ if(compareSelects.length>=2&&out){
   }
   const copyBtn=$('[data-compare-copy]');
   if(copyBtn)copyBtn.addEventListener('click',async()=>{writeUrl();await copyText(location.href,copyBtn,copyBtn.textContent);});
+  const sumBtn=$('[data-compare-summary]');   // B2 T: the verdict, its reason and each record's scope, with the comparison link
+  if(sumBtn)sumBtn.addEventListener('click',async()=>{if(!lastSummary)return;writeUrl();await copyText(lastSummary.replace(/[^\n]*$/,location.href),sumBtn,sumBtn.textContent);});
 }
+// OD-1017-04(a) (B2 T): APA 7, Chicago, BibTeX and RIS from the page's own metadata — the governed title, the record ID,
+// the edition, the publisher and the canonical address — with the access date; plain text stays the governed preview.
+function dateWords(d){try{return d.toLocaleDateString(document.documentElement.lang+'-u-nu-latn',{day:'numeric',month:'long',year:'numeric'});}catch(e){return d.toISOString().slice(0,10);}}
+function citeMeta(){
+  const title=document.title.replace(/\s+—\s+[^—]*$/,'').trim();
+  const site=(document.title.split(' — ').pop()||'').trim();
+  const id=$('meta[name="yfie-record-id"]')?.content?.trim()||'';
+  const ed=$('meta[name="yfie-edition"]')?.content?.trim()||'';
+  const pub=$('meta[name="yfie-publisher"]')?.content?.trim()||'CauseWay';
+  const now=new Date(), iso=now.toISOString().slice(0,10);
+  const year=(ed.match(/\d{4}/)||[String(now.getUTCFullYear())])[0];
+  return {title,site,id,ed,pub,url:canonicalHref,iso,year,date:dateWords(now)};
+}
+function formatCitation(fmt,m){
+  const rec=m.id?TF('UI-JS-CITE-RECORD',{id:m.id}):'';
+  const kind=m.id?T('UI-JS-CITE-TYPE-RECORD'):T('UI-JS-CITE-TYPE-PAGE');
+  if(fmt==='apa')return `${m.pub}. (${m.year}). ${m.title}${rec?` (${rec})`:''} ${kind}. ${m.site}, ${m.ed}. ${TF('UI-JS-CITE-RETRIEVED',{date:m.date,url:m.url})}`;
+  if(fmt==='chicago')return `${m.pub}. “${m.title}.” ${m.site}${rec?`, ${rec}`:''}, ${m.ed}. ${TF('UI-JS-CITE-ACCESSED',{date:m.date})} ${m.url}.`;
+  if(fmt==='bibtex'){
+    const key='yfie_'+((m.id||m.url.replace(/^.*\/(ar|en)\//,'')).replace(/[^A-Za-z0-9]+/g,'_').replace(/^_+|_+$/g,'')||'page');
+    const b=s=>String(s).replace(/[{}]/g,'');
+    return `@misc{${key},\n  author = {${b(m.pub)}},\n  title = {{${b(m.title)}}},\n  howpublished = {${b(m.site)}${rec?', '+b(rec):''}},\n  note = {${b(m.ed)}. Accessed ${m.iso}},\n  year = {${m.year}},\n  url = {${m.url}}\n}`;
+  }
+  if(fmt==='ris')return ['TY  - ELEC',`AU  - ${m.pub}`,`TI  - ${m.title}`,`T2  - ${m.site}`,`PY  - ${m.year}`,`ET  - ${m.ed}`,m.id?`ID  - ${m.id}`:'',`UR  - ${m.url}`,`Y2  - ${m.iso.slice(0,4)}/${m.iso.slice(5,7)}/${m.iso.slice(8,10)}`,'ER  - '].filter(Boolean).join('\n');
+  return '';
+}
+$$('[data-cite-format]').forEach(sel=>{
+  const out=sel.closest('.cite-preview')?.querySelector('[data-cite-out]')||$('[data-cite-out]');
+  const render=()=>{if(!out)return;if(!sel.value||sel.value==='plain'){out.hidden=true;out.textContent='';return;}out.textContent=formatCitation(sel.value,citeMeta());out.hidden=false;};
+  sel.addEventListener('change',render);
+});
+
+// B2 T (BRIEF W4 T, report an error): the structured form on /contact/#report. Pre-filled from ?record= and ?figure= (known
+// IDs only) or the same-origin referrer; validated inline; on submit a fixed "key: value" report under a reference code
+// opens the mail app, or is copied for webmail. Nothing is posted anywhere.
+const rform=$('[data-report]');
+if(rform){
+  const P=new URLSearchParams(location.search);
+  const F=k=>$(`[data-rf="${k}"]`,rform);
+  const setv=(k,v)=>{const e=F(k);if(e&&v&&!e.value)e.value=v;};
+  const refUrl=(()=>{try{const u=new URL(document.referrer);return u.origin===location.origin?u:null;}catch(e){return null;}})();
+  const known=new Set(DATA('yfie-record-ids')||[]);
+  const record=(P.get('record')||'').trim(), figure=(P.get('figure')||'').trim();
+  if(/^[A-Za-z0-9._+-]+$/.test(record)&&known.has(record)){setv('record',record);setv('url',`${location.origin}${prefix}/evidence/${encodeURIComponent(record)}/`);}
+  else if(refUrl){setv('url',refUrl.href.split('#')[0]);if(refUrl.hash)setv('anchor',refUrl.hash);}
+  if(/^[A-Za-z0-9._+-]+$/.test(figure)&&known.has(figure))setv('anchor',figure);
+  setv('lang',document.documentElement.lang); setv('edition',$('meta[name="yfie-edition"]')?.content||'');
+  const nojs=$('[data-report-nojs]'); if(nojs)nojs.hidden=true;
+  const errBox=$('[data-report-errors]',rform), status=$('[data-report-status]',rform), refBox=$('[data-report-ref]',rform), refCode=$('[data-report-ref-code]',rform);
+  const showErr=(k,msg)=>{const e=$(`[data-rf-err="${k}"]`,rform), f=F(k);if(e){e.textContent=msg||'';e.hidden=!msg;}if(f){f.setAttribute('aria-invalid',msg?'true':'false');if(msg&&e)f.setAttribute('aria-describedby',e.id);else f.removeAttribute('aria-describedby');}};
+  const validate=()=>{
+    let n=0; const v=F('value').value.trim(), s=F('should').value.trim();
+    if(!v&&!s){showErr('value',T('UI-JS-REPORT-NEED-ONE'));showErr('should',T('UI-JS-REPORT-NEED-ONE'));n++;}else{showErr('value','');showErr('should','');}
+    if(!F('type').value){showErr('type',T('UI-JS-REPORT-REQUIRED'));n++;}else showErr('type','');
+    const em=F('email').value.trim();
+    if(em&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){showErr('email',T('UI-JS-REPORT-EMAIL-INVALID'));n++;}else showErr('email','');
+    if(n){errBox.textContent=TF('UI-JS-REPORT-ERRORS',{n});errBox.hidden=false;announceUtility(errBox.textContent);const first=$('[aria-invalid="true"]',rform);if(first)first.focus();}
+    else{errBox.hidden=true;errBox.textContent='';}
+    return n===0;
+  };
+  const pad=x=>String(x).padStart(2,'0');
+  const refFor=()=>{const d=new Date(), r=(F('record').value.trim()||'PAGE').replace(/[^A-Za-z0-9._-]/g,'')||'PAGE';
+    return `YFIE-ERR-${r}-${d.getUTCFullYear()}${pad(d.getUTCMonth()+1)}${pad(d.getUTCDate())}-${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}`;};
+  const body=code=>['Reference: '+code,'Page: '+F('url').value.trim(),'Record: '+F('record').value.trim(),'Section: '+F('anchor').value.trim(),
+    'Language: '+F('lang').value.trim(),'Edition: '+F('edition').value.trim(),'Error type: '+F('type').value,'In question: '+F('value').value.trim(),
+    'Should say: '+F('should').value.trim(),'Evidence: '+F('evidence').value.trim(),'Name: '+F('name').value.trim(),'Reply to: '+F('email').value.trim()].join('\n');
+  let current='';
+  const prepare=()=>{current=current||refFor();refCode.textContent=current;refBox.hidden=false;rform.dataset.reportBody=body(current);return current;};
+  const send=()=>{
+    if(!validate())return;
+    const code=prepare();
+    const subject=`${rform.dataset.product} — ${TF('UI-JS-REPORT-SUBJECT',{ref:code})}`;
+    const href=`mailto:${rform.dataset.address}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body(code))}`;
+    rform.dataset.mailto=href; status.textContent=TF('UI-JS-REPORT-PREPARED',{ref:code}); announceUtility(status.textContent);
+    if(!rform.dataset.noMail)location.href=href;   // the browser tests set data-no-mail: headless Chromium has no mail app
+  };
+  const sb=$('[data-report-send]',rform); if(sb)sb.addEventListener('click',send);
+  rform.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();send();}});   // Enter in a field sends, as a form would
+  const cp=$('[data-report-copy]',rform);
+  if(cp)cp.addEventListener('click',async()=>{if(!validate())return;const code=prepare();await copyText(body(code),cp,cp.textContent);status.textContent=T('UI-JS-REPORT-COPIED');});
+  F('record').addEventListener('input',()=>{current='';});
+}
+
 // V1 Phase B: a link to a target inside a closed disclosure (Home's /#system, a dated event, a source's detail) opens
 // every disclosure around it, so a fragment never lands on hidden content.
 function revealHash(){
