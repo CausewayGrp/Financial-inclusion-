@@ -1,5 +1,16 @@
 # Repository Change Log
 
+## 18 October 2026 — Stage B G2 refinement (B4c; DL-V2-011) and the G2 integration branch
+
+The owner's visual-quality clarification of 18 October 2026, applied as one small, coherent adjustment to the shipped
+stylesheet (`scripts/yfie/theme.py`, edited in place): a short brass anchor rule under every page title and the head
+statement in the secondary ink, so the title leads and the finding parts from its statement in both editions; the
+statement's figures stay in the primary ink; on phones the anchor costs 8 px of the head's rhythm, not 14. Decided on
+rendered candidates (design record §8), no new element, text, font or route; the pages' words are unchanged. The G2
+commits were rebased onto main after PR #61 and the branch renamed `pr/stage-b-g2`; the after-shots, the measurement,
+the accessibility audit and the gate negative controls re-run on the final tree. No Master, projection or hosting state
+changed.
+
 ## 18 October 2026 — Stage B G2 complete, W4F and G3 acceptance (B4–B6)
 
 Pass two and the G3 correction pass on the A · Register direction: the register head only where the statement is

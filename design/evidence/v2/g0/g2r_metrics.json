@@ -1,0 +1,7178 @@
+{
+ "label": "g2r",
+ "commit": "64dd2d235423926ff623e804a4b24fa5aa0d6588",
+ "site": "dist",
+ "measured_at_utc": "2026-10-18T09:16:40Z",
+ "method": "Chromium (Playwright), gzip static server as dist/_headers declares; screens = scrollHeight / viewport height (320x568, 390x844, 768x1024, 1440x900); cold bytes = transferSize of the navigation and every resource in a fresh context at 390; journeys = shortest click path over the built HTML link graph from Home; automated, not human timing",
+ "routes": [
+  "/",
+  "/explore/",
+  "/people/",
+  "/payments/",
+  "/remittances/",
+  "/firms/",
+  "/finance/",
+  "/providers/",
+  "/access/",
+  "/reforms/",
+  "/evidence/",
+  "/evidence/CLM-001/",
+  "/evidence/CLM-003/",
+  "/evidence/VIS-POS-TERMINALS/",
+  "/evidence/compare/",
+  "/readings/",
+  "/readings/how-money-reaches-households/",
+  "/data/",
+  "/methodology/",
+  "/measurement/",
+  "/about/",
+  "/corrections/",
+  "/contact/"
+ ],
+ "widths": [
+  320,
+  390,
+  768,
+  1440
+ ],
+ "pages": {
+  "ar:/": {
+   "lang": "ar",
+   "route": "/",
+   "widths": {
+    "320": {
+     "screens": 14.9,
+     "px": 8447,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 40,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 850,
+     "targets": 52,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 56,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 766,
+       "clock": 1325,
+       "boundary": 1320,
+       "evidence_link": 392,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 8.9,
+     "px": 7534,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 40,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 850,
+     "targets": 52,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 72,
+      "figure": true,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 677,
+       "clock": 1135,
+       "boundary": 1130,
+       "evidence_link": 371,
+       "source_link": null
+      }
+     },
+     "h1_text": "الشمول المالي في اليمن ليس رقمًا واحدًا.",
+     "cold_bytes": 274514,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 11149,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.8,
+     "px": 5904,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 40,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 855,
+     "targets": 52,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 230,
+      "figure": true,
+      "clock": true,
+      "boundary": true,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 553,
+       "clock": 807,
+       "boundary": 802,
+       "evidence_link": 313,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.6,
+     "px": 5041,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 40,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 889,
+     "targets": 55,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 223,
+      "figure": true,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 713,
+       "clock": 1060,
+       "boundary": 1055,
+       "evidence_link": 388,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/explore/": {
+   "lang": "ar",
+   "route": "/explore/",
+   "widths": {
+    "320": {
+     "screens": 13.7,
+     "px": 7781,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 751,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 51,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 5342,
+       "boundary": null,
+       "evidence_link": 3201,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 8.2,
+     "px": 6907,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 751,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 99,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4661,
+       "boundary": null,
+       "evidence_link": 2731,
+       "source_link": null
+      }
+     },
+     "h1_text": "ابدأ بالسؤال، لا بالبيانات.",
+     "cold_bytes": 272219,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 8854,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.3,
+     "px": 5474,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 751,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 175,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3526,
+       "boundary": null,
+       "evidence_link": 1877,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.7,
+     "px": 5087,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 751,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 177,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3692,
+       "boundary": null,
+       "evidence_link": 2362,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/people/": {
+   "lang": "ar",
+   "route": "/people/",
+   "widths": {
+    "320": {
+     "screens": 22.6,
+     "px": 12862,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1740,
+     "targets": 90,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 22,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7301,
+       "boundary": null,
+       "evidence_link": 863,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 13.4,
+     "px": 11326,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1740,
+     "targets": 90,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 125,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6237,
+       "boundary": null,
+       "evidence_link": 712,
+       "source_link": null
+      }
+     },
+     "h1_text": "الأفراد: مجتمع سكاني واحد، وأدلة من تواريخ مختلفة",
+     "cold_bytes": 282885,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 19520,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.6,
+     "px": 7816,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1740,
+     "targets": 90,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 221,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4398,
+       "boundary": null,
+       "evidence_link": 523,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 9.1,
+     "px": 8190,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1901,
+     "targets": 103,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 277,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4431,
+       "boundary": null,
+       "evidence_link": 602,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/payments/": {
+   "lang": "ar",
+   "route": "/payments/",
+   "widths": {
+    "320": {
+     "screens": 33.7,
+     "px": 19169,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 60,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2708,
+     "targets": 77,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 32,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 13601,
+       "boundary": 4242,
+       "evidence_link": 773,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 19.6,
+     "px": 16569,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 60,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2708,
+     "targets": 77,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 118,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 11677,
+       "boundary": 3583,
+       "evidence_link": 652,
+       "source_link": null
+      }
+     },
+     "h1_text": "المدفوعات: تزايد الأجهزة المُبلَّغ عنها، والاستخدام غير مقيس",
+     "cold_bytes": 285038,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 21673,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 11.7,
+     "px": 12022,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 60,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2708,
+     "targets": 77,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 216,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 8696,
+       "boundary": 2655,
+       "evidence_link": 487,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 13.6,
+     "px": 12270,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 60,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2909,
+     "targets": 94,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 283,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 8767,
+       "boundary": 2579,
+       "evidence_link": 598,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/remittances/": {
+   "lang": "ar",
+   "route": "/remittances/",
+   "widths": {
+    "320": {
+     "screens": 28.2,
+     "px": 15999,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 63,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2421,
+     "targets": 65,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 28,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 11443,
+       "boundary": null,
+       "evidence_link": 710,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 16.4,
+     "px": 13874,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 63,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2421,
+     "targets": 65,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 106,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 9842,
+       "boundary": null,
+       "evidence_link": 628,
+       "source_link": null
+      }
+     },
+     "h1_text": "الحوالات: كل رقم يتوقف على مصدره ومفهومه والإصدار الذي نُشر فيه",
+     "cold_bytes": 281886,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 18521,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 9.5,
+     "px": 9686,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 63,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2435,
+     "targets": 65,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 196,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6603,
+       "boundary": null,
+       "evidence_link": 494,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 10.7,
+     "px": 9653,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 63,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2608,
+     "targets": 80,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 267,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6778,
+       "boundary": null,
+       "evidence_link": 613,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/firms/": {
+   "lang": "ar",
+   "route": "/firms/",
+   "widths": {
+    "320": {
+     "screens": 23.2,
+     "px": 13158,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1724,
+     "targets": 57,
+     "targets_under_24px": 0,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 24,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 8138,
+       "boundary": null,
+       "evidence_link": 963,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 13.6,
+     "px": 11519,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1724,
+     "targets": 57,
+     "targets_under_24px": 0,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 134,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7083,
+       "boundary": null,
+       "evidence_link": 788,
+       "source_link": null
+      }
+     },
+     "h1_text": "المنشآت: الإجابة تتوقف على السؤال المطروح",
+     "cold_bytes": 278892,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 15527,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.6,
+     "px": 7774,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1724,
+     "targets": 57,
+     "targets_under_24px": 0,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 151,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4714,
+       "boundary": null,
+       "evidence_link": 608,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 8.6,
+     "px": 7768,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1918,
+     "targets": 72,
+     "targets_under_24px": 0,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 314,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4646,
+       "boundary": null,
+       "evidence_link": 669,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/finance/": {
+   "lang": "ar",
+   "route": "/finance/",
+   "widths": {
+    "320": {
+     "screens": 22.2,
+     "px": 12631,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 76,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1689,
+     "targets": 110,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 32,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7944,
+       "boundary": null,
+       "evidence_link": 904,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 12.9,
+     "px": 10857,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 76,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1689,
+     "targets": 110,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 123,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6602,
+       "boundary": null,
+       "evidence_link": 697,
+       "source_link": null
+      }
+     },
+     "h1_text": "البنوك والتمويل الأصغر: أرقام المقترضين والمدخرين والأرصدة تقيس أشياء مختلفة",
+     "cold_bytes": 297762,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 34397,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.4,
+     "px": 7550,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 76,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1689,
+     "targets": 110,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 200,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4541,
+       "boundary": null,
+       "evidence_link": 547,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 8.3,
+     "px": 7434,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 76,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1877,
+     "targets": 126,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 288,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4462,
+       "boundary": null,
+       "evidence_link": 690,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/providers/": {
+   "lang": "ar",
+   "route": "/providers/",
+   "widths": {
+    "320": {
+     "screens": 27.9,
+     "px": 15839,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 53,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2359,
+     "targets": 74,
+     "targets_under_24px": 0,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 30,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 11824,
+       "boundary": null,
+       "evidence_link": 804,
+       "source_link": 8393
+      }
+     }
+    },
+    "390": {
+     "screens": 16.2,
+     "px": 13646,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 53,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2359,
+     "targets": 74,
+     "targets_under_24px": 0,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 119,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 10046,
+       "boundary": null,
+       "evidence_link": 682,
+       "source_link": 7157
+      }
+     },
+     "h1_text": "مقدمو الخدمات المالية: الإدراج في القائمة ليس تشغيلًا",
+     "cold_bytes": 279789,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 16424,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 9.4,
+     "px": 9666,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 53,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2359,
+     "targets": 74,
+     "targets_under_24px": 0,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 191,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6906,
+       "boundary": null,
+       "evidence_link": 489,
+       "source_link": 5038
+      }
+     }
+    },
+    "1440": {
+     "screens": 11.2,
+     "px": 10037,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 53,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2516,
+     "targets": 87,
+     "targets_under_24px": 0,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 275,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7478,
+       "boundary": null,
+       "evidence_link": 602,
+       "source_link": 5514
+      }
+     }
+    }
+   }
+  },
+  "ar:/access/": {
+   "lang": "ar",
+   "route": "/access/",
+   "widths": {
+    "320": {
+     "screens": 16.2,
+     "px": 9229,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 66,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1167,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 31,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 5425,
+       "boundary": null,
+       "evidence_link": 742,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 9.5,
+     "px": 8045,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 66,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1167,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 118,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4542,
+       "boundary": null,
+       "evidence_link": 628,
+       "source_link": null
+      }
+     },
+     "h1_text": "الوصول إلى الخدمات: أماكن الحصول عليها لم تُرسم خريطتها إلا جزئيًا",
+     "cold_bytes": 274451,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 11086,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.9,
+     "px": 6088,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 66,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1167,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 192,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3313,
+       "boundary": null,
+       "evidence_link": 494,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 6.2,
+     "px": 5566,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 66,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1301,
+     "targets": 45,
+     "targets_under_24px": 0,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 262,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3088,
+       "boundary": null,
+       "evidence_link": 584,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/reforms/": {
+   "lang": "ar",
+   "route": "/reforms/",
+   "widths": {
+    "320": {
+     "screens": 35.4,
+     "px": 20134,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 52,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3134,
+     "targets": 79,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 25,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7764,
+       "boundary": null,
+       "evidence_link": 957,
+       "source_link": 7792
+      }
+     }
+    },
+    "390": {
+     "screens": 20.3,
+     "px": 17159,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 52,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3134,
+     "targets": 79,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 130,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6428,
+       "boundary": null,
+       "evidence_link": 742,
+       "source_link": 6428
+      }
+     },
+     "h1_text": "الإصلاحات: قد يقع الإصلاح فعلًا وتبقى نتيجته مجهولة.",
+     "cold_bytes": 281535,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 18170,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 11.1,
+     "px": 11384,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 52,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3134,
+     "targets": 79,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 214,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4386,
+       "boundary": null,
+       "evidence_link": 557,
+       "source_link": 4386
+      }
+     }
+    },
+    "1440": {
+     "screens": 13.3,
+     "px": 11992,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 52,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3327,
+     "targets": 94,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 304,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4344,
+       "boundary": null,
+       "evidence_link": 650,
+       "source_link": 4344
+      }
+     }
+    }
+   }
+  },
+  "ar:/evidence/": {
+   "lang": "ar",
+   "route": "/evidence/",
+   "widths": {
+    "320": {
+     "screens": 22.5,
+     "px": 12807,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1942,
+     "targets": 271,
+     "targets_under_24px": 0,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 20,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1401,
+       "boundary": null,
+       "evidence_link": 498,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 13.2,
+     "px": 11136,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1942,
+     "targets": 271,
+     "targets_under_24px": 0,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 53,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1264,
+       "boundary": null,
+       "evidence_link": 477,
+       "source_link": null
+      }
+     },
+     "h1_text": "افحص الدليل الذي تستند إليه الإجابة",
+     "cold_bytes": 286075,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 22710,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.9,
+     "px": 8041,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1942,
+     "targets": 271,
+     "targets_under_24px": 0,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 128,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1107,
+       "boundary": null,
+       "evidence_link": 446,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 9.8,
+     "px": 8860,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1942,
+     "targets": 271,
+     "targets_under_24px": 0,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 154,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 838,
+       "boundary": null,
+       "evidence_link": 353,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/evidence/CLM-001/": {
+   "lang": "ar",
+   "route": "/evidence/CLM-001/",
+   "widths": {
+    "320": {
+     "screens": 17.3,
+     "px": 9830,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 55,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1173,
+     "targets": 44,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 55,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 829,
+       "clock": 358,
+       "boundary": 2989,
+       "evidence_link": 154,
+       "source_link": 4252
+      }
+     }
+    },
+    "390": {
+     "screens": 10.2,
+     "px": 8600,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 55,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1173,
+     "targets": 44,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 69,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 715,
+       "clock": 337,
+       "boundary": 2516,
+       "evidence_link": 134,
+       "source_link": 3578
+      }
+     },
+     "h1_text": "امتلاك الحساب: القياس الممثل من موجة Global Findex 2021",
+     "cold_bytes": 275152,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 11787,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.8,
+     "px": 5979,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 55,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1173,
+     "targets": 44,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 244,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 531,
+       "clock": 269,
+       "boundary": 1706,
+       "evidence_link": 134,
+       "source_link": 2403
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.7,
+     "px": 5096,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 55,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1173,
+     "targets": 44,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 165,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 641,
+       "clock": 362,
+       "boundary": 1677,
+       "evidence_link": 163,
+       "source_link": 2374
+      }
+     }
+    }
+   }
+  },
+  "ar:/evidence/CLM-003/": {
+   "lang": "ar",
+   "route": "/evidence/CLM-003/",
+   "widths": {
+    "320": {
+     "screens": 17.2,
+     "px": 9774,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1130,
+     "targets": 60,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 56,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 653,
+       "clock": 319,
+       "boundary": 2126,
+       "evidence_link": 154,
+       "source_link": 2916
+      }
+     }
+    },
+    "390": {
+     "screens": 9.9,
+     "px": 8361,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1130,
+     "targets": 60,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 65,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 535,
+       "clock": 259,
+       "boundary": 1780,
+       "evidence_link": 134,
+       "source_link": 2436
+      }
+     },
+     "h1_text": "توسع البنية التحتية لنقاط البيع",
+     "cold_bytes": 274321,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 10956,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 6.1,
+     "px": 6204,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1130,
+     "targets": 60,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 199,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 488,
+       "clock": 269,
+       "boundary": 1403,
+       "evidence_link": 134,
+       "source_link": 1861
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.7,
+     "px": 5144,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1130,
+     "targets": 60,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 292,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 543,
+       "clock": 310,
+       "boundary": 1212,
+       "evidence_link": 163,
+       "source_link": 1661
+      }
+     }
+    }
+   }
+  },
+  "ar:/evidence/VIS-POS-TERMINALS/": {
+   "lang": "ar",
+   "route": "/evidence/VIS-POS-TERMINALS/",
+   "widths": {
+    "320": {
+     "screens": 27.7,
+     "px": 15730,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2162,
+     "targets": 90,
+     "targets_under_24px": 1,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 59,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 653,
+       "clock": 319,
+       "boundary": 4494,
+       "evidence_link": 154,
+       "source_link": 5494
+      }
+     }
+    },
+    "390": {
+     "screens": 15.8,
+     "px": 13308,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2162,
+     "targets": 90,
+     "targets_under_24px": 1,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 68,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 574,
+       "clock": 298,
+       "boundary": 3795,
+       "evidence_link": 134,
+       "source_link": 4662
+      }
+     },
+     "h1_text": "أجهزة نقاط البيع المبلغ عنها شهريًا",
+     "cold_bytes": 277567,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 14202,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 9.1,
+     "px": 9310,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2167,
+     "targets": 90,
+     "targets_under_24px": 1,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 231,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 488,
+       "clock": 269,
+       "boundary": 2760,
+       "evidence_link": 134,
+       "source_link": 3360
+      }
+     }
+    },
+    "1440": {
+     "screens": 10.0,
+     "px": 8987,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 35,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2167,
+     "targets": 90,
+     "targets_under_24px": 1,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 129,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 594,
+       "clock": 362,
+       "boundary": 2813,
+       "evidence_link": 163,
+       "source_link": 3410
+      }
+     }
+    }
+   }
+  },
+  "ar:/evidence/compare/": {
+   "lang": "ar",
+   "route": "/evidence/compare/",
+   "widths": {
+    "320": {
+     "screens": 20.2,
+     "px": 11454,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 50,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2255,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 16,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 7869,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 11.7,
+     "px": 9888,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 50,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2255,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 134,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 6693,
+       "source_link": null
+      }
+     },
+     "h1_text": "قارن الأدلة من دون وضع ما لا يتماثل على مقياس واحد",
+     "cold_bytes": 283510,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 20145,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.1,
+     "px": 7265,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 50,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2255,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 201,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 4690,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 6.9,
+     "px": 6240,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 50,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2255,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 140,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 266,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/readings/": {
+   "lang": "ar",
+   "route": "/readings/",
+   "widths": {
+    "320": {
+     "screens": 13.4,
+     "px": 7628,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 18,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 905,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 47,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 497,
+       "boundary": null,
+       "evidence_link": 5013,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 7.9,
+     "px": 6670,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 18,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 905,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 110,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 446,
+       "boundary": null,
+       "evidence_link": 4193,
+       "source_link": null
+      }
+     },
+     "h1_text": "القراءات التحليلية",
+     "cold_bytes": 272391,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 9026,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 4.9,
+     "px": 5029,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 18,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 905,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 169,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 402,
+       "boundary": null,
+       "evidence_link": 2826,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.2,
+     "px": 4637,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 18,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 905,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 226,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 452,
+       "boundary": null,
+       "evidence_link": 3462,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/readings/how-money-reaches-households/": {
+   "lang": "ar",
+   "route": "/readings/how-money-reaches-households/",
+   "widths": {
+    "320": {
+     "screens": 62.5,
+     "px": 35477,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5157,
+     "targets": 161,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 41,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1355,
+       "boundary": null,
+       "evidence_link": 14767,
+       "source_link": 20536
+      }
+     }
+    },
+    "390": {
+     "screens": 35.8,
+     "px": 30223,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5157,
+     "targets": 161,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 41,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1110,
+       "boundary": null,
+       "evidence_link": 12108,
+       "source_link": 17309
+      }
+     },
+     "h1_text": "الحوالات المحلية والحسابات: ما الذي تثبته الأدلة؟",
+     "cold_bytes": 284385,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 21020,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 19.5,
+     "px": 19988,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5157,
+     "targets": 161,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 302,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 797,
+       "boundary": null,
+       "evidence_link": 7501,
+       "source_link": 10911
+      }
+     }
+    },
+    "1440": {
+     "screens": 24.4,
+     "px": 21916,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 49,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5198,
+     "targets": 166,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 194,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 921,
+       "boundary": null,
+       "evidence_link": 516,
+       "source_link": 12595
+      }
+     }
+    }
+   }
+  },
+  "ar:/data/": {
+   "lang": "ar",
+   "route": "/data/",
+   "widths": {
+    "320": {
+     "screens": 31.1,
+     "px": 17640,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 46,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2723,
+     "targets": 1287,
+     "targets_under_24px": 0,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 14,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 3469,
+       "source_link": 3188
+      }
+     }
+    },
+    "390": {
+     "screens": 18.6,
+     "px": 15666,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 46,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2723,
+     "targets": 1287,
+     "targets_under_24px": 0,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 128,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2951,
+       "source_link": 2697
+      }
+     },
+     "h1_text": "اعثر على المصدر الأصلي الذي يستند إليه كل دليل",
+     "cold_bytes": 332012,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 68647,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 12.6,
+     "px": 12866,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 46,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2723,
+     "targets": 1287,
+     "targets_under_24px": 1,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 182,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2451,
+       "source_link": 2251
+      }
+     }
+    },
+    "1440": {
+     "screens": 16.1,
+     "px": 14498,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 46,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3855,
+     "targets": 1260,
+     "targets_under_24px": 0,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 211,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 382,
+       "source_link": 2204
+      }
+     }
+    }
+   }
+  },
+  "ar:/methodology/": {
+   "lang": "ar",
+   "route": "/methodology/",
+   "widths": {
+    "320": {
+     "screens": 27.3,
+     "px": 15524,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 42,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2368,
+     "targets": 31,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 13,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 9519,
+       "boundary": null,
+       "evidence_link": 9625,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 15.8,
+     "px": 13331,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 42,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2368,
+     "targets": 31,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 145,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7990,
+       "boundary": null,
+       "evidence_link": 8096,
+       "source_link": null
+      }
+     },
+     "h1_text": "حافظ على معنى الدليل قبل أن تقارن الأرقام.",
+     "cold_bytes": 277370,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 14005,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 8.8,
+     "px": 9004,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 42,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2368,
+     "targets": 31,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 186,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 5319,
+       "boundary": null,
+       "evidence_link": 5400,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 10.1,
+     "px": 9093,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 42,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2451,
+     "targets": 41,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 281,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4818,
+       "boundary": null,
+       "evidence_link": 661,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/measurement/": {
+   "lang": "ar",
+   "route": "/measurement/",
+   "widths": {
+    "320": {
+     "screens": 40.0,
+     "px": 22737,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3617,
+     "targets": 194,
+     "targets_under_24px": 0,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 14,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3820,
+       "boundary": null,
+       "evidence_link": 6406,
+       "source_link": 7069
+      }
+     }
+    },
+    "390": {
+     "screens": 23.1,
+     "px": 19495,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3617,
+     "targets": 194,
+     "targets_under_24px": 0,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 104,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3290,
+       "boundary": null,
+       "evidence_link": 5340,
+       "source_link": 5840
+      }
+     },
+     "h1_text": "تكتسب فجوة الدليل أهميتها عندما يمكن أن تغيّر قرارًا.",
+     "cold_bytes": 294530,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 31165,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 13.5,
+     "px": 13784,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3617,
+     "targets": 194,
+     "targets_under_24px": 0,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 160,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 2579,
+       "boundary": null,
+       "evidence_link": 3879,
+       "source_link": 4151
+      }
+     }
+    },
+    "1440": {
+     "screens": 15.9,
+     "px": 14338,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3658,
+     "targets": 199,
+     "targets_under_24px": 0,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 286,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 2139,
+       "boundary": null,
+       "evidence_link": 3539,
+       "source_link": 3892
+      }
+     }
+    }
+   }
+  },
+  "ar:/about/": {
+   "lang": "ar",
+   "route": "/about/",
+   "widths": {
+    "320": {
+     "screens": 12.4,
+     "px": 7056,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 788,
+     "targets": 17,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 63,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 7.2,
+     "px": 6083,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 788,
+     "targets": 17,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 113,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     },
+     "h1_text": "مورد عام ثنائي اللغة لفهم أدلة الشمول المالي في اليمن.",
+     "cold_bytes": 272037,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 8672,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 4.6,
+     "px": 4729,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 788,
+     "targets": 17,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 190,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 4.1,
+     "px": 3720,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 792,
+     "targets": 18,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 199,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "ar:/corrections/": {
+   "lang": "ar",
+   "route": "/corrections/",
+   "widths": {
+    "320": {
+     "screens": 8.9,
+     "px": 5054,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 24,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 458,
+     "targets": 12,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 51,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2882,
+       "source_link": 744
+      }
+     }
+    },
+    "390": {
+     "screens": 5.2,
+     "px": 4393,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 24,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 458,
+     "targets": 12,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 109,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": true,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2359,
+       "source_link": 627
+      }
+     },
+     "h1_text": "التصحيحات وسجل الإصدارات",
+     "cold_bytes": 272172,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 8807,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 3.6,
+     "px": 3645,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 24,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 458,
+     "targets": 12,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 187,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": true,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 1858,
+       "source_link": 535
+      }
+     }
+    },
+    "1440": {
+     "screens": 3.3,
+     "px": 2956,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 24,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 487,
+     "targets": 18,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 184,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": true,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 353,
+       "source_link": 602
+      }
+     }
+    }
+   }
+  },
+  "ar:/contact/": {
+   "lang": "ar",
+   "route": "/contact/",
+   "widths": {
+    "320": {
+     "screens": 9.3,
+     "px": 5303,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 23,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 359,
+     "targets": 25,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 54,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 3158,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 5.9,
+     "px": 4984,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 23,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 359,
+     "targets": 25,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 114,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2950,
+       "source_link": null
+      }
+     },
+     "h1_text": "التواصل والإبلاغ عن خطأ",
+     "cold_bytes": 272363,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 8998,
+      "css": 18881,
+      "font": 225148,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 4.1,
+     "px": 4205,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 23,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 359,
+     "targets": 25,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 126,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2418,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 3.9,
+     "px": 3525,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 23,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 385,
+     "targets": 31,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 151,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 388,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/": {
+   "lang": "en",
+   "route": "/",
+   "widths": {
+    "320": {
+     "screens": 14.8,
+     "px": 8381,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 909,
+     "targets": 52,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 52,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 911,
+       "clock": 1475,
+       "boundary": 1462,
+       "evidence_link": 555,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 8.8,
+     "px": 7441,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 909,
+     "targets": 52,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 85,
+      "figure": true,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 742,
+       "clock": 1221,
+       "boundary": 1208,
+       "evidence_link": 414,
+       "source_link": null
+      }
+     },
+     "h1_text": "Financial inclusion in Yemen is not one number.",
+     "cold_bytes": 245745,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 9808,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.5,
+     "px": 5636,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 913,
+     "targets": 52,
+     "targets_under_24px": 1,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 258,
+      "figure": true,
+      "clock": true,
+      "boundary": true,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 574,
+       "clock": 796,
+       "boundary": 783,
+       "evidence_link": 326,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.5,
+     "px": 4952,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 941,
+     "targets": 55,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 223,
+      "figure": true,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 746,
+       "clock": 1099,
+       "boundary": 1086,
+       "evidence_link": 448,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/explore/": {
+   "lang": "en",
+   "route": "/explore/",
+   "widths": {
+    "320": {
+     "screens": 14.1,
+     "px": 8006,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 821,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 54,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 5721,
+       "boundary": null,
+       "evidence_link": 3382,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 8.2,
+     "px": 6948,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 821,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 128,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4768,
+       "boundary": null,
+       "evidence_link": 2780,
+       "source_link": null
+      }
+     },
+     "h1_text": "Start with the question, not the dataset.",
+     "cold_bytes": 243809,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 7872,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.2,
+     "px": 5340,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 821,
+     "targets": 35,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 211,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3524,
+       "boundary": null,
+       "evidence_link": 1873,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.5,
+     "px": 4944,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 41,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 821,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 207,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3636,
+       "boundary": null,
+       "evidence_link": 2369,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/people/": {
+   "lang": "en",
+   "route": "/people/",
+   "widths": {
+    "320": {
+     "screens": 21.9,
+     "px": 12420,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1777,
+     "targets": 90,
+     "targets_under_24px": 1,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 24,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7108,
+       "boundary": null,
+       "evidence_link": 839,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 12.9,
+     "px": 10911,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1777,
+     "targets": 90,
+     "targets_under_24px": 4,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 127,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6094,
+       "boundary": null,
+       "evidence_link": 682,
+       "source_link": null
+      }
+     },
+     "h1_text": "People: one population, evidence from different dates",
+     "cold_bytes": 252580,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 16643,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.2,
+     "px": 7355,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1777,
+     "targets": 90,
+     "targets_under_24px": 4,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 224,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4129,
+       "boundary": null,
+       "evidence_link": 474,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 8.7,
+     "px": 7787,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 53,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1950,
+     "targets": 103,
+     "targets_under_24px": 0,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 4,
+     "first_screen": {
+      "words": 270,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4109,
+       "boundary": null,
+       "evidence_link": 578,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/payments/": {
+   "lang": "en",
+   "route": "/payments/",
+   "widths": {
+    "320": {
+     "screens": 33.1,
+     "px": 18807,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 51,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2832,
+     "targets": 77,
+     "targets_under_24px": 1,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 31,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 13661,
+       "boundary": 4381,
+       "evidence_link": 916,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 19.4,
+     "px": 16355,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 51,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2832,
+     "targets": 77,
+     "targets_under_24px": 3,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 121,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 11753,
+       "boundary": 3704,
+       "evidence_link": 733,
+       "source_link": null
+      }
+     },
+     "h1_text": "Payments: more reported terminals, use not measured",
+     "cold_bytes": 254839,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 18902,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 11.0,
+     "px": 11220,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 51,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2832,
+     "targets": 77,
+     "targets_under_24px": 5,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 230,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 8148,
+       "boundary": 2568,
+       "evidence_link": 499,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 13.0,
+     "px": 11664,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 51,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3040,
+     "targets": 94,
+     "targets_under_24px": 1,
+     "details": 7,
+     "details_open": 0,
+     "figures": 5,
+     "tables": 5,
+     "first_screen": {
+      "words": 287,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 8342,
+       "boundary": 2441,
+       "evidence_link": 608,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/remittances/": {
+   "lang": "en",
+   "route": "/remittances/",
+   "widths": {
+    "320": {
+     "screens": 26.6,
+     "px": 15106,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 67,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2484,
+     "targets": 65,
+     "targets_under_24px": 1,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 31,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 10961,
+       "boundary": null,
+       "evidence_link": 818,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 15.4,
+     "px": 13004,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 67,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2484,
+     "targets": 65,
+     "targets_under_24px": 2,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 113,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 9284,
+       "boundary": null,
+       "evidence_link": 636,
+       "source_link": null
+      }
+     },
+     "h1_text": "Remittances: each figure depends on its source, concept and edition",
+     "cold_bytes": 251791,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 15854,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 8.7,
+     "px": 8895,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 67,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2498,
+     "targets": 65,
+     "targets_under_24px": 3,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 212,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6117,
+       "boundary": null,
+       "evidence_link": 464,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 9.9,
+     "px": 8922,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 67,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2665,
+     "targets": 80,
+     "targets_under_24px": 1,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 4,
+     "first_screen": {
+      "words": 263,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6367,
+       "boundary": null,
+       "evidence_link": 597,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/firms/": {
+   "lang": "en",
+   "route": "/firms/",
+   "widths": {
+    "320": {
+     "screens": 21.9,
+     "px": 12444,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1749,
+     "targets": 57,
+     "targets_under_24px": 1,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 30,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7860,
+       "boundary": null,
+       "evidence_link": 890,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 12.8,
+     "px": 10813,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1749,
+     "targets": 57,
+     "targets_under_24px": 3,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 129,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6764,
+       "boundary": null,
+       "evidence_link": 733,
+       "source_link": null
+      }
+     },
+     "h1_text": "Firms: the answer depends on the question asked",
+     "cold_bytes": 249250,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 13313,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.1,
+     "px": 7262,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1749,
+     "targets": 57,
+     "targets_under_24px": 3,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 140,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4417,
+       "boundary": null,
+       "evidence_link": 499,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 8.1,
+     "px": 7295,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 47,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1942,
+     "targets": 72,
+     "targets_under_24px": 0,
+     "details": 5,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 296,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4434,
+       "boundary": null,
+       "evidence_link": 608,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/finance/": {
+   "lang": "en",
+   "route": "/finance/",
+   "widths": {
+    "320": {
+     "screens": 21.5,
+     "px": 12213,
+     "overflow_x": false,
+     "h1_lines": 4,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1706,
+     "targets": 110,
+     "targets_under_24px": 1,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 29,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7806,
+       "boundary": null,
+       "evidence_link": 897,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 12.4,
+     "px": 10503,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1706,
+     "targets": 110,
+     "targets_under_24px": 2,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 117,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6464,
+       "boundary": null,
+       "evidence_link": 712,
+       "source_link": null
+      }
+     },
+     "h1_text": "Banks and microfinance: borrower, saver and balance figures measure different things",
+     "cold_bytes": 265658,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 29721,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.0,
+     "px": 7143,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1706,
+     "targets": 110,
+     "targets_under_24px": 2,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 202,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4309,
+       "boundary": null,
+       "evidence_link": 520,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 7.9,
+     "px": 7154,
+     "overflow_x": false,
+     "h1_lines": 4,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1896,
+     "targets": 126,
+     "targets_under_24px": 0,
+     "details": 6,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 2,
+     "first_screen": {
+      "words": 257,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4315,
+       "boundary": null,
+       "evidence_link": 666,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/providers/": {
+   "lang": "en",
+   "route": "/providers/",
+   "widths": {
+    "320": {
+     "screens": 27.4,
+     "px": 15544,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 46,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 2,
+     "words": 2448,
+     "targets": 74,
+     "targets_under_24px": 0,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 29,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 11622,
+       "boundary": null,
+       "evidence_link": 915,
+       "source_link": 8065
+      }
+     }
+    },
+    "390": {
+     "screens": 16.0,
+     "px": 13462,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 46,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 2,
+     "words": 2448,
+     "targets": 74,
+     "targets_under_24px": 2,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 128,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 9917,
+       "boundary": null,
+       "evidence_link": 698,
+       "source_link": 6919
+      }
+     },
+     "h1_text": "Providers: listed is not the same as operating",
+     "cold_bytes": 250079,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 14142,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 9.1,
+     "px": 9315,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 46,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 2,
+     "words": 2448,
+     "targets": 74,
+     "targets_under_24px": 2,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 205,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6622,
+       "boundary": null,
+       "evidence_link": 499,
+       "source_link": 4727
+      }
+     }
+    },
+    "1440": {
+     "screens": 10.6,
+     "px": 9517,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 46,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 2,
+     "words": 2622,
+     "targets": 87,
+     "targets_under_24px": 0,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 5,
+     "first_screen": {
+      "words": 289,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 7004,
+       "boundary": null,
+       "evidence_link": 608,
+       "source_link": 5060
+      }
+     }
+    }
+   }
+  },
+  "en:/access/": {
+   "lang": "en",
+   "route": "/access/",
+   "widths": {
+    "320": {
+     "screens": 16.2,
+     "px": 9179,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 59,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1178,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 32,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 5543,
+       "boundary": null,
+       "evidence_link": 818,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 9.4,
+     "px": 7918,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 59,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1178,
+     "targets": 35,
+     "targets_under_24px": 3,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 122,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4664,
+       "boundary": null,
+       "evidence_link": 608,
+       "source_link": null
+      }
+     },
+     "h1_text": "Access: where services can be reached is only partly mapped",
+     "cold_bytes": 245446,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 9509,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.6,
+     "px": 5714,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 59,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1178,
+     "targets": 35,
+     "targets_under_24px": 3,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 190,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3168,
+       "boundary": null,
+       "evidence_link": 464,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 6.1,
+     "px": 5461,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 59,
+     "toc_entries": 5,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1319,
+     "targets": 45,
+     "targets_under_24px": 0,
+     "details": 2,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 254,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3119,
+       "boundary": null,
+       "evidence_link": 597,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/reforms/": {
+   "lang": "en",
+   "route": "/reforms/",
+   "widths": {
+    "320": {
+     "screens": 36.0,
+     "px": 20428,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 58,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3268,
+     "targets": 79,
+     "targets_under_24px": 1,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 28,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 8134,
+       "boundary": null,
+       "evidence_link": 971,
+       "source_link": 8153
+      }
+     }
+    },
+    "390": {
+     "screens": 20.3,
+     "px": 17131,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 58,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3268,
+     "targets": 79,
+     "targets_under_24px": 4,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 123,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 6701,
+       "boundary": null,
+       "evidence_link": 761,
+       "source_link": 6721
+      }
+     },
+     "h1_text": "Reforms: a reform can be real before its outcome is known.",
+     "cold_bytes": 251361,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 15424,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 10.8,
+     "px": 11042,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 58,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3268,
+     "targets": 79,
+     "targets_under_24px": 4,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 227,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4338,
+       "boundary": null,
+       "evidence_link": 550,
+       "source_link": 4335
+      }
+     }
+    },
+    "1440": {
+     "screens": 12.8,
+     "px": 11561,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 58,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3470,
+     "targets": 94,
+     "targets_under_24px": 0,
+     "details": 4,
+     "details_open": 0,
+     "figures": 4,
+     "tables": 2,
+     "first_screen": {
+      "words": 286,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4300,
+       "boundary": null,
+       "evidence_link": 648,
+       "source_link": 4297
+      }
+     }
+    }
+   }
+  },
+  "en:/evidence/": {
+   "lang": "en",
+   "route": "/evidence/",
+   "widths": {
+    "320": {
+     "screens": 23.0,
+     "px": 13041,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 38,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2141,
+     "targets": 271,
+     "targets_under_24px": 0,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 20,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1441,
+       "boundary": null,
+       "evidence_link": 511,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 13.3,
+     "px": 11196,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 38,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2141,
+     "targets": 271,
+     "targets_under_24px": 1,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 52,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1256,
+       "boundary": null,
+       "evidence_link": 479,
+       "source_link": null
+      }
+     },
+     "h1_text": "Inspect the evidence behind the answer",
+     "cold_bytes": 254791,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 18854,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 7.8,
+     "px": 7974,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 38,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2141,
+     "targets": 271,
+     "targets_under_24px": 1,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 132,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1049,
+       "boundary": null,
+       "evidence_link": 434,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 9.9,
+     "px": 8924,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 38,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2141,
+     "targets": 271,
+     "targets_under_24px": 0,
+     "details": 11,
+     "details_open": 0,
+     "figures": 3,
+     "tables": 1,
+     "first_screen": {
+      "words": 157,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 851,
+       "boundary": null,
+       "evidence_link": 373,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/evidence/CLM-001/": {
+   "lang": "en",
+   "route": "/evidence/CLM-001/",
+   "widths": {
+    "320": {
+     "screens": 16.7,
+     "px": 9470,
+     "overflow_x": false,
+     "h1_lines": 4,
+     "h1_chars": 78,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1186,
+     "targets": 44,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 56,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 682,
+       "clock": 377,
+       "boundary": 2744,
+       "evidence_link": 188,
+       "source_link": 4057
+      }
+     }
+    },
+    "390": {
+     "screens": 9.5,
+     "px": 8045,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 78,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1186,
+     "targets": 44,
+     "targets_under_24px": 2,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 65,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 559,
+       "clock": 317,
+       "boundary": 2314,
+       "evidence_link": 155,
+       "source_link": 3314
+      }
+     },
+     "h1_text": "Account ownership: the representative measure from the Global Findex 2021 wave",
+     "cold_bytes": 245758,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 9821,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.5,
+     "px": 5589,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 78,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1186,
+     "targets": 44,
+     "targets_under_24px": 2,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 260,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 477,
+       "clock": 281,
+       "boundary": 1587,
+       "evidence_link": 136,
+       "source_link": 2205
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.3,
+     "px": 4744,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 78,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1186,
+     "targets": 44,
+     "targets_under_24px": 2,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 171,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 549,
+       "clock": 369,
+       "boundary": 1602,
+       "evidence_link": 164,
+       "source_link": 2222
+      }
+     }
+    }
+   }
+  },
+  "en:/evidence/CLM-003/": {
+   "lang": "en",
+   "route": "/evidence/CLM-003/",
+   "widths": {
+    "320": {
+     "screens": 17.8,
+     "px": 10107,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1208,
+     "targets": 60,
+     "targets_under_24px": 1,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 62,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 631,
+       "clock": 336,
+       "boundary": 2104,
+       "evidence_link": 188,
+       "source_link": 3040
+      }
+     }
+    },
+    "390": {
+     "screens": 9.9,
+     "px": 8317,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1208,
+     "targets": 60,
+     "targets_under_24px": 2,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 65,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 583,
+       "clock": 303,
+       "boundary": 1801,
+       "evidence_link": 155,
+       "source_link": 2514
+      }
+     },
+     "h1_text": "POS infrastructure expanded",
+     "cold_bytes": 245303,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 9366,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 5.8,
+     "px": 5934,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1208,
+     "targets": 60,
+     "targets_under_24px": 2,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 209,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 475,
+       "clock": 260,
+       "boundary": 1303,
+       "evidence_link": 136,
+       "source_link": 1743
+      }
+     }
+    },
+    "1440": {
+     "screens": 5.4,
+     "px": 4872,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 27,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 1208,
+     "targets": 60,
+     "targets_under_24px": 2,
+     "details": 2,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 305,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 500,
+       "clock": 302,
+       "boundary": 1172,
+       "evidence_link": 164,
+       "source_link": 1608
+      }
+     }
+    }
+   }
+  },
+  "en:/evidence/VIS-POS-TERMINALS/": {
+   "lang": "en",
+   "route": "/evidence/VIS-POS-TERMINALS/",
+   "widths": {
+    "320": {
+     "screens": 28.5,
+     "px": 16213,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2275,
+     "targets": 90,
+     "targets_under_24px": 1,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 64,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 631,
+       "clock": 336,
+       "boundary": 4355,
+       "evidence_link": 188,
+       "source_link": 5470
+      }
+     }
+    },
+    "390": {
+     "screens": 15.5,
+     "px": 13092,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2275,
+     "targets": 90,
+     "targets_under_24px": 2,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 67,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 583,
+       "clock": 303,
+       "boundary": 3754,
+       "evidence_link": 155,
+       "source_link": 4617
+      }
+     },
+     "h1_text": "Reported POS terminals, monthly",
+     "cold_bytes": 248274,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 12337,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 8.8,
+     "px": 8984,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2280,
+     "targets": 90,
+     "targets_under_24px": 2,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 233,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 475,
+       "clock": 260,
+       "boundary": 2579,
+       "evidence_link": 136,
+       "source_link": 3114
+      }
+     }
+    },
+    "1440": {
+     "screens": 9.3,
+     "px": 8368,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 31,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2280,
+     "targets": 90,
+     "targets_under_24px": 2,
+     "details": 3,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 1,
+     "first_screen": {
+      "words": 248,
+      "figure": true,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": 548,
+       "clock": 350,
+       "boundary": 2669,
+       "evidence_link": 164,
+       "source_link": 3204
+      }
+     }
+    }
+   }
+  },
+  "en:/evidence/compare/": {
+   "lang": "en",
+   "route": "/evidence/compare/",
+   "widths": {
+    "320": {
+     "screens": 19.0,
+     "px": 10782,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 63,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2312,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 15,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 7303,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 11.0,
+     "px": 9247,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 63,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2312,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 129,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 6137,
+       "source_link": null
+      }
+     },
+     "h1_text": "Compare evidence without forcing unlike measures onto one scale",
+     "cold_bytes": 252544,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 16607,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 6.7,
+     "px": 6905,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 63,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2312,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 217,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 4494,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 6.8,
+     "px": 6090,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 63,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2312,
+     "targets": 24,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 1,
+     "first_screen": {
+      "words": 156,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 267,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/readings/": {
+   "lang": "en",
+   "route": "/readings/",
+   "widths": {
+    "320": {
+     "screens": 12.1,
+     "px": 6878,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 8,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 854,
+     "targets": 35,
+     "targets_under_24px": 3,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 40,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 493,
+       "boundary": null,
+       "evidence_link": 4367,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 7.4,
+     "px": 6245,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 8,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 854,
+     "targets": 35,
+     "targets_under_24px": 3,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 98,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 435,
+       "boundary": null,
+       "evidence_link": 3862,
+       "source_link": null
+      }
+     },
+     "h1_text": "Readings",
+     "cold_bytes": 243732,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 7795,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 4.5,
+     "px": 4577,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 8,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 854,
+     "targets": 35,
+     "targets_under_24px": 6,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 196,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 382,
+       "boundary": null,
+       "evidence_link": 2527,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 4.6,
+     "px": 4103,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 8,
+     "toc_entries": 3,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 854,
+     "targets": 35,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 224,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 422,
+       "boundary": null,
+       "evidence_link": 2985,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/readings/how-money-reaches-households/": {
+   "lang": "en",
+   "route": "/readings/how-money-reaches-households/",
+   "widths": {
+    "320": {
+     "screens": 61.9,
+     "px": 35159,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 64,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5238,
+     "targets": 161,
+     "targets_under_24px": 2,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 42,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1385,
+       "boundary": null,
+       "evidence_link": 14464,
+       "source_link": 19611
+      }
+     }
+    },
+    "390": {
+     "screens": 34.3,
+     "px": 28946,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 64,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5238,
+     "targets": 161,
+     "targets_under_24px": 7,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 42,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 1173,
+       "boundary": null,
+       "evidence_link": 11744,
+       "source_link": 16248
+      }
+     },
+     "h1_text": "Domestic remittances and accounts: what the evidence establishes",
+     "cold_bytes": 253612,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 17675,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 18.3,
+     "px": 18705,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 64,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5238,
+     "targets": 161,
+     "targets_under_24px": 7,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 284,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 726,
+       "boundary": null,
+       "evidence_link": 6859,
+       "source_link": 9769
+      }
+     }
+    },
+    "1440": {
+     "screens": 22.1,
+     "px": 19897,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 64,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 5280,
+     "targets": 166,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 349,
+      "figure": false,
+      "clock": true,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 871,
+       "boundary": null,
+       "evidence_link": 536,
+       "source_link": 11392
+      }
+     }
+    }
+   }
+  },
+  "en:/data/": {
+   "lang": "en",
+   "route": "/data/",
+   "widths": {
+    "320": {
+     "screens": 32.4,
+     "px": 18384,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2770,
+     "targets": 1287,
+     "targets_under_24px": 0,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 14,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 3599,
+       "source_link": 3303
+      }
+     }
+    },
+    "390": {
+     "screens": 18.2,
+     "px": 15331,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2770,
+     "targets": 1287,
+     "targets_under_24px": 0,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 129,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 3001,
+       "source_link": 2763
+      }
+     },
+     "h1_text": "Find the original source behind each piece of evidence",
+     "cold_bytes": 299200,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 63263,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 11.7,
+     "px": 12001,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2770,
+     "targets": 1287,
+     "targets_under_24px": 1,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 196,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2362,
+       "source_link": 2167
+      }
+     }
+    },
+    "1440": {
+     "screens": 17.0,
+     "px": 15291,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 54,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3839,
+     "targets": 1260,
+     "targets_under_24px": 0,
+     "details": 407,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 208,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 420,
+       "source_link": 2191
+      }
+     }
+    }
+   }
+  },
+  "en:/methodology/": {
+   "lang": "en",
+   "route": "/methodology/",
+   "widths": {
+    "320": {
+     "screens": 28.5,
+     "px": 16204,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 66,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2631,
+     "targets": 31,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 15,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 10507,
+       "boundary": null,
+       "evidence_link": 10609,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 16.2,
+     "px": 13690,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 66,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2631,
+     "targets": 31,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 15,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 8561,
+       "boundary": null,
+       "evidence_link": 8663,
+       "source_link": null
+      }
+     },
+     "h1_text": "Preserve the meaning of the evidence before comparing the numbers.",
+     "cold_bytes": 247742,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 11805,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 8.7,
+     "px": 8905,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 66,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2631,
+     "targets": 31,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 208,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 5461,
+       "boundary": null,
+       "evidence_link": 5545,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 10.3,
+     "px": 9294,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 66,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 2719,
+     "targets": 41,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 329,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 5190,
+       "boundary": null,
+       "evidence_link": 737,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/measurement/": {
+   "lang": "en",
+   "route": "/measurement/",
+   "widths": {
+    "320": {
+     "screens": 40.5,
+     "px": 22979,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 57,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3770,
+     "targets": 194,
+     "targets_under_24px": 1,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 14,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 4190,
+       "boundary": null,
+       "evidence_link": 6754,
+       "source_link": 7330
+      }
+     }
+    },
+    "390": {
+     "screens": 23.2,
+     "px": 19590,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 57,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3770,
+     "targets": 194,
+     "targets_under_24px": 1,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 106,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 3705,
+       "boundary": null,
+       "evidence_link": 5809,
+       "source_link": 6304
+      }
+     },
+     "h1_text": "Missing evidence matters when it could change a decision.",
+     "cold_bytes": 260827,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 24890,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 12.7,
+     "px": 12959,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 57,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3770,
+     "targets": 194,
+     "targets_under_24px": 1,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 197,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 2535,
+       "boundary": null,
+       "evidence_link": 3831,
+       "source_link": 4053
+      }
+     }
+    },
+    "1440": {
+     "screens": 15.9,
+     "px": 14275,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 57,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 3811,
+     "targets": 199,
+     "targets_under_24px": 0,
+     "details": 10,
+     "details_open": 0,
+     "figures": 1,
+     "tables": 0,
+     "first_screen": {
+      "words": 263,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": 2376,
+       "boundary": null,
+       "evidence_link": 3805,
+       "source_link": 4107
+      }
+     }
+    }
+   }
+  },
+  "en:/about/": {
+   "lang": "en",
+   "route": "/about/",
+   "widths": {
+    "320": {
+     "screens": 13.3,
+     "px": 7582,
+     "overflow_x": false,
+     "h1_lines": 4,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 877,
+     "targets": 17,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 16,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 7.7,
+     "px": 6514,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 877,
+     "targets": 17,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 128,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     },
+     "h1_text": "A bilingual public evidence resource for understanding financial inclusion in Yemen.",
+     "cold_bytes": 243620,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 7683,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 4.5,
+     "px": 4617,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 877,
+     "targets": 17,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 189,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 4.3,
+     "px": 3912,
+     "overflow_x": false,
+     "h1_lines": 3,
+     "h1_chars": 84,
+     "toc_entries": 6,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 881,
+     "targets": 18,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 198,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": null,
+       "source_link": null
+      }
+     }
+    }
+   }
+  },
+  "en:/corrections/": {
+   "lang": "en",
+   "route": "/corrections/",
+   "widths": {
+    "320": {
+     "screens": 9.0,
+     "px": 5103,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 31,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 496,
+     "targets": 12,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 55,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 3076,
+       "source_link": 841
+      }
+     }
+    },
+    "390": {
+     "screens": 5.3,
+     "px": 4482,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 31,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 496,
+     "targets": 12,
+     "targets_under_24px": 1,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 130,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": true,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2544,
+       "source_link": 689
+      }
+     },
+     "h1_text": "Corrections and release history",
+     "cold_bytes": 243774,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 7837,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 3.3,
+     "px": 3364,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 31,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 496,
+     "targets": 12,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 211,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": true,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 1701,
+       "source_link": 512
+      }
+     }
+    },
+    "1440": {
+     "screens": 3.3,
+     "px": 2985,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 31,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 526,
+     "targets": 18,
+     "targets_under_24px": 0,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 199,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": true,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 354,
+       "source_link": 655
+      }
+     }
+    }
+   }
+  },
+  "en:/contact/": {
+   "lang": "en",
+   "route": "/contact/",
+   "widths": {
+    "320": {
+     "screens": 9.1,
+     "px": 5191,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 27,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 375,
+     "targets": 25,
+     "targets_under_24px": 3,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 47,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 3164,
+       "source_link": null
+      }
+     }
+    },
+    "390": {
+     "screens": 5.7,
+     "px": 4817,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 27,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 375,
+     "targets": 25,
+     "targets_under_24px": 3,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 104,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2879,
+       "source_link": null
+      }
+     },
+     "h1_text": "Contact and report an error",
+     "cold_bytes": 244075,
+     "requests": 7,
+     "bytes_by_type": {
+      "html": 8138,
+      "css": 18881,
+      "font": 197720,
+      "image": 2109,
+      "js": 17227
+     },
+     "font_files": 3
+    },
+    "768": {
+     "screens": 3.8,
+     "px": 3892,
+     "overflow_x": false,
+     "h1_lines": 1,
+     "h1_chars": 27,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 375,
+     "targets": 25,
+     "targets_under_24px": 2,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 122,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": false,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 2230,
+       "source_link": null
+      }
+     }
+    },
+    "1440": {
+     "screens": 3.7,
+     "px": 3294,
+     "overflow_x": false,
+     "h1_lines": 2,
+     "h1_chars": 27,
+     "toc_entries": 0,
+     "toc_strip_overflows": false,
+     "iso_dates_visible": 0,
+     "words": 404,
+     "targets": 31,
+     "targets_under_24px": 2,
+     "details": 0,
+     "details_open": 0,
+     "figures": 0,
+     "tables": 0,
+     "first_screen": {
+      "words": 146,
+      "figure": false,
+      "clock": false,
+      "boundary": false,
+      "evidence_link": true,
+      "source_link": false,
+      "positions_px": {
+       "figure": null,
+       "clock": null,
+       "boundary": null,
+       "evidence_link": 389,
+       "source_link": null
+      }
+     }
+    }
+   }
+  }
+ },
+ "states": [],
+ "journeys": {
+  "ar:main": {
+   "people_answer": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/people/"
+    ],
+    "external_links_on_target": 0
+   },
+   "payments": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/payments/"
+    ],
+    "external_links_on_target": 0
+   },
+   "reforms": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/reforms/"
+    ],
+    "external_links_on_target": 11
+   },
+   "record_clm001": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-001/"
+    ],
+    "external_links_on_target": 4
+   },
+   "record_clm003": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-003/"
+    ],
+    "external_links_on_target": 8
+   },
+   "compare": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/",
+     "/evidence/compare/"
+    ],
+    "external_links_on_target": 0
+   },
+   "methodology": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/methodology/"
+    ],
+    "external_links_on_target": 0
+   },
+   "measurement": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/measurement/"
+    ],
+    "external_links_on_target": 92
+   },
+   "reading_cwr012": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/VIS-PAYMENT-RAILS/",
+     "/readings/how-money-reaches-households/"
+    ],
+    "external_links_on_target": 29
+   },
+   "sources": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/data/"
+    ],
+    "external_links_on_target": 193
+   },
+   "corrections": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/corrections/"
+    ],
+    "external_links_on_target": 1
+   },
+   "contact": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/contact/"
+    ],
+    "external_links_on_target": 0
+   },
+   "about": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/about/"
+    ],
+    "external_links_on_target": 0
+   },
+   "explore": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/explore/"
+    ],
+    "external_links_on_target": 0
+   }
+  },
+  "ar:all": {
+   "people_answer": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/people/"
+    ],
+    "external_links_on_target": 1
+   },
+   "payments": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/payments/"
+    ],
+    "external_links_on_target": 1
+   },
+   "reforms": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/reforms/"
+    ],
+    "external_links_on_target": 12
+   },
+   "record_clm001": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-001/"
+    ],
+    "external_links_on_target": 5
+   },
+   "record_clm003": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-003/"
+    ],
+    "external_links_on_target": 9
+   },
+   "compare": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/",
+     "/evidence/compare/"
+    ],
+    "external_links_on_target": 1
+   },
+   "methodology": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/methodology/"
+    ],
+    "external_links_on_target": 1
+   },
+   "measurement": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/measurement/"
+    ],
+    "external_links_on_target": 93
+   },
+   "reading_cwr012": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/VIS-PAYMENT-RAILS/",
+     "/readings/how-money-reaches-households/"
+    ],
+    "external_links_on_target": 30
+   },
+   "sources": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/data/"
+    ],
+    "external_links_on_target": 194
+   },
+   "corrections": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/corrections/"
+    ],
+    "external_links_on_target": 2
+   },
+   "contact": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/contact/"
+    ],
+    "external_links_on_target": 1
+   },
+   "about": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/about/"
+    ],
+    "external_links_on_target": 1
+   },
+   "explore": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/explore/"
+    ],
+    "external_links_on_target": 1
+   }
+  },
+  "en:main": {
+   "people_answer": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/people/"
+    ],
+    "external_links_on_target": 0
+   },
+   "payments": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/payments/"
+    ],
+    "external_links_on_target": 0
+   },
+   "reforms": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/reforms/"
+    ],
+    "external_links_on_target": 11
+   },
+   "record_clm001": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-001/"
+    ],
+    "external_links_on_target": 4
+   },
+   "record_clm003": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-003/"
+    ],
+    "external_links_on_target": 8
+   },
+   "compare": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/",
+     "/evidence/compare/"
+    ],
+    "external_links_on_target": 0
+   },
+   "methodology": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/methodology/"
+    ],
+    "external_links_on_target": 0
+   },
+   "measurement": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/measurement/"
+    ],
+    "external_links_on_target": 92
+   },
+   "reading_cwr012": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/VIS-PAYMENT-RAILS/",
+     "/readings/how-money-reaches-households/"
+    ],
+    "external_links_on_target": 29
+   },
+   "sources": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/data/"
+    ],
+    "external_links_on_target": 193
+   },
+   "corrections": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/corrections/"
+    ],
+    "external_links_on_target": 1
+   },
+   "contact": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/contact/"
+    ],
+    "external_links_on_target": 0
+   },
+   "about": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/about/"
+    ],
+    "external_links_on_target": 0
+   },
+   "explore": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/explore/"
+    ],
+    "external_links_on_target": 0
+   }
+  },
+  "en:all": {
+   "people_answer": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/people/"
+    ],
+    "external_links_on_target": 1
+   },
+   "payments": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/payments/"
+    ],
+    "external_links_on_target": 1
+   },
+   "reforms": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/reforms/"
+    ],
+    "external_links_on_target": 12
+   },
+   "record_clm001": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-001/"
+    ],
+    "external_links_on_target": 5
+   },
+   "record_clm003": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/evidence/CLM-003/"
+    ],
+    "external_links_on_target": 9
+   },
+   "compare": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/",
+     "/evidence/compare/"
+    ],
+    "external_links_on_target": 1
+   },
+   "methodology": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/methodology/"
+    ],
+    "external_links_on_target": 1
+   },
+   "measurement": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/measurement/"
+    ],
+    "external_links_on_target": 93
+   },
+   "reading_cwr012": {
+    "clicks": 2,
+    "path": [
+     "/",
+     "/evidence/VIS-PAYMENT-RAILS/",
+     "/readings/how-money-reaches-households/"
+    ],
+    "external_links_on_target": 30
+   },
+   "sources": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/data/"
+    ],
+    "external_links_on_target": 194
+   },
+   "corrections": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/corrections/"
+    ],
+    "external_links_on_target": 2
+   },
+   "contact": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/contact/"
+    ],
+    "external_links_on_target": 1
+   },
+   "about": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/about/"
+    ],
+    "external_links_on_target": 1
+   },
+   "explore": {
+    "clicks": 1,
+    "path": [
+     "/",
+     "/explore/"
+    ],
+    "external_links_on_target": 1
+   }
+  }
+ },
+ "duration_s": 666.1
+}

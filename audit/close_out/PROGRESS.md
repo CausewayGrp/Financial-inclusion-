@@ -462,3 +462,11 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   path-only canonical until `public_origin`. Open owner items unchanged: F-12 visibility, F-06 Workers check, F-16, seeds 23
   and 28, the CORRECTIONS_PROCESS.md times; plus: close PR #51 without merging. Never claimed: accessibility conformance, live
   performance, release readiness. Stage B ends with this PR's report.
+
+- 2026-10-18 · Phase 2 · B6 G3 · gates on the accepted tree at `2e6bc8f4` (Python 3.11.9): the full standing chain 0 failures
+  (compileall; projections; generator tests; validator 306/0; literal audit 19,883 / 0; determinism; lineage 8/8; invariance 0 of
+  152; content parity 304/0; cutover oracle pinned, release parity PASS; diagrams, social (fingerprint and control), logo current;
+  public tools 40/41; security headers; no-JavaScript; HTTP contract; base path; viewport 308/308; Stage A reconciliation 16;
+  exports; rendered visibility 44 views with both controls caught; re-entry; portability; public-path documentation). Gate
+  negative controls, full suite: **170 of 170 faults caught (8 workers, 5,168 s; the clean copies passed first)**. The record line
+  you are reading, with its manifest and checksums, is the only difference between that tree and the pushed head.

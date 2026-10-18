@@ -738,7 +738,12 @@ button:disabled,.tbtn:disabled{color:var(--ink-2);cursor:not-allowed;text-decora
 .head .actions a:first-child,.head-rule .actions a:first-child{background:var(--green-700);color:var(--white)}
 .head .actions a:hover,.head-rule .actions a:hover{background:var(--green-900);border-color:var(--green-900);color:var(--white)}
 .head-rule{border-top:1px solid var(--rule);padding-top:4px}
-.head .st{font-weight:400;color:var(--ink)}
+.head .st{font-weight:400;color:var(--ink-2)}
+/* G2 refinement (DL-V2-011): the brass anchor under every page title — a short rule at the start edge that fixes the
+   head and parts the finding from its statement; the statement in the secondary ink so the title leads, its figures
+   stay in the primary ink (the rule above). No new element, text or font; the head's words are unchanged */
+.head h1::after{content:"";display:block;width:36px;height:2px;background:var(--brass-300);margin-top:12px}
+@media (max-width:599px){.head h1::after{margin-top:8px}.obj .head:has(> .st)>.page-tools{margin-top:8px}}   /* the phone head keeps its rhythm: the anchor costs 8 px, not 14 */
 @media (min-width:900px){
 .obj .head:has(> .st[data-register]){display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:44px;row-gap:0;align-items:start}
 .obj .head:has(> .st[data-register])>.crumb{grid-column:1 / -1;grid-row:1;margin-bottom:8px}

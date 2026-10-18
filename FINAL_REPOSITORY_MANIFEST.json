@@ -29,7 +29,7 @@
   "CONTROLLED_CONTRACT": 2,
   "CURRENT_DOCUMENT": 13,
   "CURRENT_PROGRAMME_RECORD": 291,
-  "DESIGN_PACKAGE": 695,
+  "DESIGN_PACKAGE": 698,
   "GENERATED_DIAGRAMS": 9,
   "GENERATED_LITERAL_CLOSURE": 1,
   "GENERATED_LOGO_DERIVATIVES": 9,
@@ -4488,6 +4488,14 @@
    "class": "DESIGN_PACKAGE"
   },
   {
+   "path": "design/evidence/v2/g0/g2r_metrics.json",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g0/g2r_scoreboard.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
    "path": "design/evidence/v2/g0/s1_metrics.json",
    "class": "DESIGN_PACKAGE"
   },
@@ -5289,6 +5297,10 @@
   },
   {
    "path": "design/evidence/v2/g2/persona_audit_g3.md",
+   "class": "DESIGN_PACKAGE"
+  },
+  {
+   "path": "design/evidence/v2/g2/refinement_head_390.md",
    "class": "DESIGN_PACKAGE"
   },
   {

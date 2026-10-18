@@ -36,6 +36,7 @@ Evidence files: `design/evidence/v2/g0/` (metrics, scoreboard, visual audit, scr
 | DL-V2-008 | 2026-10-17 | Report an error (BRIEF W4 T): a structured form on /contact/#report — page address, record or chart ID, section, language and edition pre-filled and editable; the value in question; seven error types; what it should say; evidence; optional name and reply address; a consent line to /privacy/. Transport is static and hosting-neutral: a valid report becomes an e-mail to the governed contact address in a fixed `key: value` body under `YFIE-ERR-<record>-<yyyymmdd-hhmm>`, opened in the mail app or copied for webmail; without JavaScript the page offers a pre-addressed e-mail carrying the same field list. Nothing is posted to any endpoint; a first-party endpoint stays a hosting option, off. The process (`docs/CORRECTIONS_PROCESS.md`: triage and classification within ten working days, the Master-first fix, the public log against the stable ID and edition, the reply) is linked from /corrections/ through the canonical repository address. | Browser test `t_report_form` in both editions with three negative controls (empty form, invalid address, unknown record); gate RC-T1 with three negative controls (a link missing the form, a lost field, a form that posts); /contact/ AR 390 4.1 → 6.0 screens. | The stated times are the resource's own commitments (the owner may change them); the repository link is the site's one external link that is not a source; the reporter's mail app must handle `mailto:` bodies. |
 | DL-V2-009 | 2026-10-17 | Cite formats (OD-1017-04(a)): beside the governed plain-text preview, APA 7, Chicago, BibTeX and RIS are rendered from the page's own metadata — the governed title, the record ID, the edition, the publisher and the canonical address — with the access date; the copy action copies exactly the rendered text; machine formats keep their English keys; the Arabic edition uses the governed Arabic access phrases with Latin digits. | Browser test `t_cite_formats` parses the BibTeX and the RIS (and rejects a keyless BibTeX and a RIS without its end tag); every format carries the record ID, the edition and the address. | The access date is the reader's clock; APA and Chicago forms are house renderings of the governed metadata, not a style authority's certification. |
 | DL-V2-010 | 2026-10-17 | Compare (SIG-5; F-16, Part 6 item 16): every controlled verdict carries one reason sentence naming the dimension behind it in the governed field words (differs: … / not recorded: … / the same record / all match), and a copied summary carries the verdict, the reason, each record's title, period, population and boundary, the no-merge rule and the comparison link. The Master holds no legitimately qualified pair among the 14 comparable records (no two with identical recorded definition, population and method and a different period); the Findex 2011, 2014 and 2021 waves exist as a visual (VIS-FINDEX-OBSERVED-WAVES) and a crosswalk dataset, not as per-wave records, so no pair is admitted and none is manufactured. A one-record entry from a record keeps the prompt for a second record by design. | Scan of the built Compare data (0 candidate pairs); browser test `t_compare_reason` (reason per verdict, summary, same-record, input error). | Compare keeps returning only qualified, not-direct or unresolved verdicts until the owner adds per-wave records by a transaction; F-16 stays open as a content question. |
+| DL-V2-011 | 2026-10-18 | G2 refinement (the owner's visual-quality clarification of 18 October 2026, §8): **the brass anchor under every page title** — a 36 × 2 px rule in brass-300 at the start edge, 12 px under the title (8 px on phones) — and **the head statement in the secondary ink** (`--ink-2`), its figures staying in the primary ink. The owner's references were read for their qualities (a dominant title, a parted statement, subtle brass detailing, confident hierarchy), not their elements: no display face, no card, no illustration, no new text, route or font. The only two of three candidate shortcomings that earned a change; the third (a product rubric on the phone head) stays as recorded (the masthead carries it). | `design/evidence/v2/g2/shots/after_*` (re-rendered on the final tree; the committed `before_*` and `pass1_*` unchanged), the live candidate test on four views (v0 none · v1 anchor · v2 anchor + ink-2; v2 chosen on both editions), `g2/refinement_head_390.md` (head, boundary-heading and first-figure positions at 390 on the final tree). | +14 px (desktop) / +8 px (phone) in every head: the AR 390 /payments/ boundary heading ends at 851 px against an 844 px viewport (843 before; the domain exception of §7.4, boundary at 1.0–1.2 screens, holds); the phone actions and tools keep their G2 rhythm rather than being tightened to buy those 8 px back. |
 
 ---
 
@@ -777,3 +778,57 @@ See §5.3 and the PROGRESS line of this PR: every standing gate and the four W4 
 two controls; the drift of `site-src/content/**` and the route list is zero — no transaction in this PR; the social
 fingerprint with its control; the performance before/after) green on the exact tree pushed; the gate negative
 controls run in full before the push. Never claimed: accessibility conformance, live performance, release readiness.
+
+---
+
+## 8. B4c — the G2 refinement and the integration branch, 18 October 2026, branch `pr/stage-b-g2` on main `1d37d9c6` (G1 merged as PR #61)
+
+### 8.1 Recovery
+
+PR #61 merged the G1 record and GitHub deleted `origin/pr/stage-b-g1`; the two G2 commits (`520a42f8`, `2e6bc8f4`) sat only in
+the local checkout. They were rebased onto `1d37d9c6` as `a8e85144` and `64dd2d23` (trees byte-identical) and the branch
+renamed `pr/stage-b-g2`. Nothing was reset, recreated or rewritten; the shipped stylesheet is still `scripts/yfie/theme.py`
+edited in place. A second local session had run the gate negative-control suite on the `2e6bc8f4` tree (its PROGRESS line,
+170 of 170, stands as that session's record; its worker copies overlapped this session's first edit, so the suite is re-run
+on the final tree below).
+
+### 8.2 The owner's visual-quality clarification (18 October 2026) and the three candidate shortcomings
+
+The owner supplied three references — an Arabic Home with a large right-aligned title and an evidence example (primary), a
+refined English-led Home (secondary: headline composition, spacing, institutional polish), and a second Arabic Home — as
+sources of *quality*, not as templates: their figures, headings, illustrations, icons, cards, routes and layouts are not
+reproduced; where a reference conflicts with a settled constraint (the display face, the card wall, the decorative map, the
+icon set, the photo hero, the side-by-side bilingual page) the constraint stands. The accepted G2 pages (§5–§7) were
+inspected first at AR 390 (Home, CLM-001, /payments/) and EN 1440 (Home, /data/, CLM-001). Against the references' qualities
+— exceptional Arabic editorial typography, confident hierarchy, elegant whitespace, balanced asymmetry, subtle brass
+detailing — at most three shortcomings were named:
+
+| # | Shortcoming in the accepted G2 output | Disposition |
+|---|---|---|
+| 1 | The head has no fixed point: rubric, title, statement and actions stack with even gaps, and the finding does not part from its statement (the reference's title carries a short brass rule) | **Changed** (DL-V2-011): a 36 × 2 px brass-300 rule under every page title, at the start edge (right in Arabic), 12 px below the title and 8 px on phones. One rule, every family, both editions; no element, text or font added |
+| 2 | Title and statement share the primary ink, so on the Arabic phone head (28 px title, 20 px statement, both dark) the title does not lead | **Changed** (DL-V2-011): the head statement in the secondary ink (`--ink-2`, 8.6 : 1 on the paper), its figures in the primary ink through the existing `.head .st b` rule. V1 had the secondary ink; G2 pass one had set the primary for the register and the Arabic phone paid for it |
+| 3 | The Arabic phone head opens bare under the edition strip (the reference carries a small brass rubric above the title) | **Not changed**: the product rubric is hidden on phones by a recorded decision (the masthead already carries the product name; §5.4 lists it among the hidden sets), and a second rubric would push the first figure out of Home's Arabic first screen (the owner's main complaint in G0) |
+
+Candidates were rendered live on the built site (the gzip server of `g0_measure.py`, the rule injected as a style tag, no
+file changed): v0 as shipped, v1 the anchor alone, v2 the anchor with the secondary-ink statement, on AR 390 Home and
+/payments/ and on EN 1440 Home and CLM-001. v2 read best in both editions: the Arabic title regains its lead, the English
+register head reads title → statement → actions in order, and CLM-001's title parts from its clocks. The first-screen
+cost on phones was measured and the phone margin set to 8 px (`g2/refinement_head_390.md`).
+
+### 8.3 Verification on the final tree (every number from this tree, the pinned interpreter Python 3.11.9)
+
+- Build deterministic (clean tree after the rebuild); literal audit 19,883 records / 0 unresolved; validator 306 / 0;
+  content parity 304 / 0; projections, diagrams, logo current; social cards current with the template fingerprint and its
+  control (the anchor rule is not a frame rule; the 302 cards are unchanged); literal-audit determinism.
+- Browser: rendered visibility 44 views with both controls; no-JavaScript; security headers 306 pages; base path; public
+  tools 40 / 41 (1 not applicable).
+- Accessibility audit (axe 4.10.2, 24 pages × 2 widths): 0 rule violations, 0 contrast failures, 5,126 targets, 30 under
+  24 px (the same 30 as §6; 0 fail both exceptions) — a measurement, never a conformance claim.
+- Phone screens and first-screen proxies re-measured with `g0_measure.py` on the same routes and widths as G0–G3
+  (`g0/g2r_metrics.json`, `g2/final_before_after.md` updated with the g2r column): no route moves by more than 0.1
+  screen at 390 in either edition, no overflow at any width, the H1 line counts unchanged, Home's and the records'
+  first figure still in the Arabic first screen.
+- The twelve `after_*` shots re-rendered on this tree; `before_*` and `pass1_*` untouched.
+- Gate negative controls, full suite, on this exact tree: the PROGRESS line of this PR records the result.
+
+Never claimed: accessibility conformance, live performance, release readiness. Stage B ends with this PR's report.
