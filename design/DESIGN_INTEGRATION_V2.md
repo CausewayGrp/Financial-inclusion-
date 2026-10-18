@@ -875,7 +875,7 @@ Naskh subset design and recipe are reused (rebuilt from the same upstream releas
 ### 9.1 Family by family: the canvas components each family uses
 
 (The per-family plan below was fixed in the session's working notes before the first build; it is committed here
-after the first build pass, unchanged except where §9.4 records a deviation.)
+after the first build pass, unchanged except where §9.3 records a deviation.)
 
 | Family | Canvas components |
 |---|---|
@@ -952,6 +952,9 @@ The dark panel's call to action takes `--gold-300` text on the deep green (6.5 :
 13. **Phone spacing one step tighter on Home** (section rhythm 22 px, a 50 px search band, 16 px above the first card's
     sentence): with the canvas's own spacing the first figure's value ended at 862 px, past the AR 390 first screen.
 14. **At 320 px the header shows its labels without the search and menu marks**: with them it overflowed every page.
+15. **The 302 share cards are unchanged** (byte-identical to main's; only the template fingerprint in their `INDEX.json`
+    moves): they are not a page family, and giving their titles the display face would have rewritten 22 MB of governed
+    images, past the directive's image budget for one PR.
 
 ### 9.4 Measured (`design/evidence/v2/p1/`: `base_metrics.json` on main `886a8160` before any change, `p1_metrics.json` on the final build; `before_after.md`)
 
@@ -960,7 +963,7 @@ The dark panel's call to action takes `--gold-300` text on the deep green (6.5 :
   /reforms/ 20.3 → 18.6, /data/ 18.6 → 16.9, /measurement/ 23.1 → 20.2, /methodology/ 15.8 → 13.5, CLM-001 10.2 → 9.2,
   the long Reading 35.8 → 32.1.
 - English: at 390 Home grows 8.8 → 9.8 (the topic cards carry the theses; not a guarded value), the other families move by
-  −1.1 to +0.6; at 1440 Home 5.5 → 5.8 and the others −1.3 to +0.3. Arabic 1440: every family the same or shorter.
+  −1.1 to +0.5; at 1440 Home 5.5 → 5.8 and the others −1.3 to +0.3. Arabic 1440: every family the same or shorter.
 - No horizontal overflow at 320, 390, 768 or 1440 in either edition; H1 at most 3 lines (AR 390 and EN 1440); four font
   files on every page, each edition requesting only its own display face (the bilingual 404: three).
 - First figure (`.fnum`) at AR 390: Home 669 → 787 px (the whole value inside the 844 px first screen), CLM-001 715 → 616.
@@ -978,7 +981,7 @@ The dark panel's call to action takes `--gold-300` text on the deep green (6.5 :
 ### 9.5 Verification on the final tree (the pinned interpreter, Python 3.11.9)
 
 The standing chain (compileall; projections; generator tests; build; literal audit 19,883 / 0; validator; literal
-determinism; lineage; diagrams; social images, regenerated and byte-identical on a second run; logo; bilingual
+determinism; lineage; diagrams; social images, regenerated and byte-identical to main's 302 cards; logo; bilingual
 invariance; content parity; the cutover oracle pinned and release parity; the new display-face coverage gate with its
 control; public tools; viewport acceptance; security headers; base path; no-JavaScript; rendered visibility with both
 controls; exports; HTTP contract; Stage A; re-entry; portability; public-path documentation) and the accessibility audit

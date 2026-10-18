@@ -885,10 +885,11 @@ details.more summary:hover,details.hub summary:hover,details.grp summary:hover,d
 .inst a{color:var(--paper);text-decoration-color:var(--sage-400)}
 .inst a:hover{color:var(--gold-300);text-decoration-color:var(--gold-300)}
 .inst :focus-visible{outline-color:var(--gold-300)}
-/* the social and export frames share the deep-green structure rule; a card's title takes the edition's display face */
+/* the social and export frames share the deep-green structure rule; the share cards are not a page family and keep their
+   title in the body face and ink, so the 302 governed cards stay as they were */
 body.social-doc main{border-top-color:var(--green-900)}
 body.export-doc .exp{border-top-color:var(--green-900)}
-.soc-title{font-family:var(--font-display);color:var(--green-900)}
+.soc-title{font-family:var(--font);color:var(--ink)}[dir=ltr] .soc-title{letter-spacing:-.02em}
 
 /* ---- Canvas Home (OD-1018 D4): the hero, the search band, the topic cards, the figure cards, the bands ---- */
 .obj.page-obj:has(> #topics) h1{font-size:var(--fs-home);line-height:var(--lh-home)}
