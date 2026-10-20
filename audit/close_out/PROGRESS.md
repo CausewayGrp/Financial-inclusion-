@@ -492,3 +492,38 @@ Format: `date · session · workstream · ID · outcome · PR · merge SHA · no
   screen, 811–843 px). The gate negative controls on the fixed head are the six CI shards on its exact head (the local suite
   on `cd3e951a` covers a tree that differs only in markup order and the three rules). No Master, projection or hosting state
   changed. Never claimed: accessibility conformance, live performance, release readiness.
+
+- 2026-10-18 · Phase 2 · PR #62 merged · main `886a8160` (Verify 9 of 9 on the exact head `b5ca7ba6`; the Workers check
+  excluded, OD-1017-06). Stage B's design programme is integrated: G1 (PR #61), G2, W4F, G3, DL-V2-011 and the markup-order
+  fix (PR #62). (Recorded here on main by the OD-1018 branch: the same line was written on the Folio branch, draft PR #63,
+  which the owner's OD-1018 supersedes; that branch is kept as lineage.)
+
+- 2026-10-18 · Presentation interlude (owner decision OD-1018) · branch `pr/presentation-canvas` on main `886a8160`. The
+  owner's canvas "Yemen FI Evidence Home" as the visual language of every family: OD-1018 appended to
+  `audit/OWNER_DECISIONS_2026-10-17.md` (D1–D6) with DL-V2-012…017; design record §9 (the components of every family, the
+  colour mapping by CIEDE2000, fifteen recorded deviations from the canvas, the measurements). Implemented in place: the
+  screen layer of `scripts/yfie/theme.py` that held the V1 palette and A · Register's G2 rules is now the canvas layer (the
+  base rules the print system reads are unchanged); markup only under the DL-V2 lines (`render.home`: the illustration,
+  the search band, the topic cards with the domains' S11 theses, the figure cards; `families.page_html`: the domain hub
+  hook; `render.font_preloads`), the domain thesis added to the loader's topics entries. The display faces vendored with
+  provenance and a byte-reproducible recipe (`vendor/fonts/README.md`, `display_coverage.json`, `scripts/font_subset.py`);
+  P3-G02 narrowed to the owner's Home exception, with three new negative controls; a new gate,
+  `scripts/tests/test_display_font_coverage.py --control` (CI Governance job); `social_images.py` waits for the fonts; the
+  302 share cards stay byte-identical to main's (their titles keep the body face; only `INDEX.json`'s template fingerprint
+  moves). Measured with `g0_measure.py` (`design/evidence/v2/p1/`): the AR 390
+  guard passes on every family (Home 8.9 → 9.2 screens against 9.79; every other family shorter), no overflow at any width,
+  four font files per page, AR /data/ 349,402 bytes cold (limit 358,400); the first evidence unit at AR 390 × 844 shows
+  Home's value, CLM-001's value, scope and period, nothing on /payments/ (each as before). Gates on the final tree (Python
+  3.11.9): the standing chain 0 failures (validator 306/0; literal audit 19,883/0; content parity 304/0; viewport 308/308;
+  public tools 40/41; rendered visibility 44 views with both controls; no-JavaScript; security headers; base path; HTTP
+  contract; exports; the cutover oracle pinned, release parity PASS); the accessibility audit 0 axe violations, 0 contrast
+  failures, 30 targets under 24 px; the keyboard-focus walk zero upward jumps on every phone view. The full local
+  negative-control suite runs on this commit's tree; its result is the next line. No Master, projection, route, ID, hook,
+  tool, publication flag, `public_origin` or deployment state changed. Never claimed: accessibility conformance, live
+  performance, release readiness.
+
+- 2026-10-18 · OD-1018 · PR #64 · gate negative controls, full suite, on the tree of `e8ec3f83`: **173 of 173 faults caught**
+  (8 workers, 3,690 s; the clean copies passed first; the 170 standing controls and P3-G02's three new ones). The PR's
+  head differs from that tree only in the share cards restored to main's bytes (one `.soc-title` rule and `INDEX.json`'s
+  template fingerprint; the social gate with its control re-run on it, caught), the record text, this line, and the
+  manifest and checksums.

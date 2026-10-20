@@ -210,3 +210,57 @@ Production Master remains the sole authority; no CMS sits in the publication pat
 
 **Not decided here:** repository visibility (F-12, OD-1017-13), public downloads, release timing. These remain open
 owner items and are repeated in each phase report.
+
+## Appended 18 October 2026 — OD-1018: presentation interlude before Stage C (the canvas "Yemen FI Evidence Home")
+
+Recorded by the Claude Code run from the owner's written direction of 18 October 2026, which is the source; this entry
+restates it and decides nothing beyond it. **Scope:** how the site looks, on every page family, after the visual
+direction of the owner's Claude Design canvas "Yemen FI Evidence Home" (three boards — Arabic at 1440 and 390, English at
+1440 — and a handoff sheet; the canvas draws Home only). **Unchanged:** every governed word and number, the Production
+Master, the information structure, the tools, the routes, the IDs and `data-*` hooks, every gate, the publication flags,
+`public_origin` and the disabled deployment. The boards are a look, not content: every string and number comes from the
+generator; a string that is not already governed goes Master-first in both languages or is left out. One pull request;
+the run does not merge, deploy or begin Stage C. Draft PR #63 (the Folio proof) is superseded; its fonts and subset
+recipe are reused, its treatment is not, and its branch stays as lineage.
+
+DL-V2-001 (G1, 18 October 2026) chose A · Register. **This decision replaces A · Register's visual language and keeps
+its information hierarchy; it is an owner decision, not a G1 result.**
+
+**OD-1018 D1 — Visual language, site-wide.** The canvas's tokens, type scale, spacing, radii, header, footer, buttons,
+search field, eyebrows, cards and bands replace A · Register's styling on every family. The information hierarchy, the
+order rules and the evidence unit's composition are unchanged.
+
+**OD-1018 D2 — Type.** Noto Naskh Arabic 600 (the subset without Latin) for Arabic display and IBM Plex Serif 600 for
+English display; IBM Plex Sans and IBM Plex Sans Arabic for body text and the interface. Only the display face of the
+page's edition is loaded; the canvas's Source Serif 4 and Naskh 700 are not used. Figures use Western tabular digits from
+a face already loaded on the page, with no extra font file; at most four font files per page. The upstream versions, the
+reproducible subset recipe, the hashes and the licences are recorded, #63's outdated font README is reconciled, and glyph
+coverage is verified for every generated heading in both editions.
+
+**OD-1018 D3 — Colour.** Every canvas colour maps to its nearest shipped V1 token; no new literals. The only new tokens
+are the eight hub tints, used on Home's topic cards and on each domain page's masthead band, never on data and never
+carrying meaning. Every text pair passes the existing contrast gate.
+
+**OD-1018 D4 — Home.** The canvas composition, with every governed section kept. At phone widths the three figures come
+before the topic grid, in matching DOM and visual order (a necessary adaptation of the canvas). Sections 05 and 06 stay
+below the fold as generated. Topic cards use the hub short theses (governed S11 text) as blurbs. Owner exceptions to
+directive §5, for Home only: the 4 × 2 topic cards with one inline stroke icon each; the figure cards; the hero
+illustration as inline SVG, `aria-hidden`, with recorded provenance. At Arabic 390 the illustration is dropped if it
+pushes the first evidence unit below the first screen.
+
+**OD-1018 D5 — Extension to the families the canvas did not draw.** The canvas's header and footer on every page. The
+evidence unit everywhere (domain pages, records, Compare) takes the anatomy of the canvas figure card, with value,
+scope, period, limit and verification link together. Every "what this does not establish" block takes the canvas
+caution band; every source and verification block takes the canvas verify band. Questions hub items take the canvas
+question cards; the Readings index and Reading heads take the canvas reading row. Section labels take the canvas
+eyebrows; body measure, rhythm and type scale come from the canvas tokens, with an interior heading scale one step
+below Home's. Anything with no canvas analogue takes the nearest canvas component, never a new pattern; before building,
+one line per family names the components it uses (design record §9).
+
+**OD-1018 D6 — Logo.** Existing approved assets only; nothing from the canvas runtime, its export or its logo crop ships.
+
+**Held by this decision, unchanged:** B1's structure rules S1–S13; B2's tools (search, Compare, cite, report an error,
+facet counts); no-JavaScript behaviour; print; lists stay lists (/data/, the evidence directory, Measurement and every
+other long list keep rule-separated rows, never card grids); every figure keeps its governed visual contract and
+source-reference closure, and where the canvas's drawing differs from a contract (the POS figure) the contract wins.
+**Not decided here:** F-12 (repository visibility) and F-06 (the Workers check) remain open owner items.

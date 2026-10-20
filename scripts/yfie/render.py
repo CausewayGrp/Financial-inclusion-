@@ -83,7 +83,11 @@ def font_preloads(lang: str) -> str:
     language's faces load on demand with `font-display: swap`. Same origin; `crossorigin` because fonts are fetched in
     CORS mode and a preload without it is fetched twice."""
     folder, stem = ("ibm-plex-sans-arabic", "IBMPlexSansArabic") if lang == "ar" else ("ibm-plex-sans", "IBMPlexSans")
-    return "".join(f'<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/{folder}/{stem}-{w}.woff2">' for w in ("Regular", "SemiBold"))
+    # OD-1018 D2: and the edition's own display face (the title's), never the other edition's
+    display = ("noto-naskh-arabic/NotoNaskhArabic-SemiBold-subset.woff2" if lang == "ar"
+               else "ibm-plex-serif/IBMPlexSerif-SemiBold-Latin1.woff2")
+    return ("".join(f'<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/{folder}/{stem}-{w}.woff2">' for w in ("Regular", "SemiBold"))
+            + f'<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/{display}">')
 
 
 def structured_data(page: dict, shell: dict, route: str) -> str:
@@ -498,6 +502,39 @@ def evidence_record(page: dict, shell: dict) -> str:
     return head(page, shell, page["route"], extra=meta) + header(shell) + body + footer(shell, print_foot(shell, page["route"], page["title"], page["citation"]))
 
 
+# OD-1018 D4 (owner exceptions to directive §5, Home only): the canvas "Yemen FI Evidence Home" hero illustration and the
+# topic cards' stroke icons, redrawn from the canvas geometry (Main.dc.html, Home-AR-Mobile.dc.html) as inline SVG with
+# no text, every colour a stylesheet token through a class (no colour literal, no style attribute), aria-hidden.
+HERO_ART = ('<div class="hero-art" aria-hidden="true"><svg viewBox="0 0 640 440" focusable="false">'
+            '<defs><pattern id="ha-dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle class="ha-dot" cx="2" cy="2" r="1.3"/></pattern>'
+            '<pattern id="ha-dotsg" width="10" height="10" patternUnits="userSpaceOnUse"><circle class="ha-dotg" cx="2" cy="2" r="1.5"/></pattern></defs>'
+            '<ellipse class="ha-ground" cx="330" cy="400" rx="220" ry="18"/>'
+            '<polygon class="ha-p4" points="430,60 560,100 560,330 430,290"/><polygon class="ha-fill" points="445,86 545,116 545,310 445,280"/>'
+            '<polygon class="ha-p3" points="330,40 460,80 460,340 330,300"/><polygon class="ha-fill" points="345,66 445,96 445,320 345,290"/>'
+            '<polygon class="ha-p2" points="230,22 360,62 360,352 230,312"/><polygon class="ha-fill" points="245,48 345,78 345,332 245,302"/>'
+            '<polygon class="ha-p1" points="120,6 262,46 262,366 120,326"/><polygon class="ha-fill" points="138,36 246,66 246,340 138,310"/>'
+            '<polygon class="ha-fillg" points="160,120 232,138 240,200 215,250 170,240 150,190"/>'
+            '<line class="ha-l1" x1="120" y1="166" x2="40" y2="166"/><circle class="ha-ng" cx="120" cy="166" r="4.5"/>'
+            '<line class="ha-l2" x1="360" y1="130" x2="600" y2="130"/><circle class="ha-np" cx="360" cy="130" r="4.5"/>'
+            '<line class="ha-l2" x1="460" y1="210" x2="600" y2="210"/><circle class="ha-np" cx="460" cy="210" r="4.5"/>'
+            '<line class="ha-l2" x1="560" y1="290" x2="600" y2="290"/><circle class="ha-ng" cx="560" cy="290" r="4.5"/></svg></div>')
+HUB_ICONS = {
+    "people": '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 5"/>',
+    "access": '<path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.3"/>',
+    "payments": '<rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19"/><path d="M6 15h4"/>',
+    "remittances": '<path d="M4 8h14"/><path d="M14 4l4 4-4 4"/><path d="M20 16H6"/><path d="M10 12l-4 4 4 4"/>',
+    "providers": '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+    "finance": '<path d="M3 10l9-6 9 6"/><path d="M5 10v9"/><path d="M9.5 10v9"/><path d="M14.5 10v9"/><path d="M19 10v9"/><path d="M3 20h18"/>',
+    "firms": '<rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M7 20V8h4v12"/><path d="M13 20v-6h4v6"/>',
+    "reforms": '<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6"/><path d="M9 16h6"/>',
+}
+
+
+def hub_icon(slug: str) -> str:
+    paths = HUB_ICONS.get(slug)
+    return f'<svg class="ticon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{paths}</svg>' if paths else ""
+
+
 def home(page: dict, shell: dict) -> str:
     L = page["labels"]; S = {s["order"]: s for s in page["sections"]}
     index = [("topics", shell["labels"]["topics"]), ("s3", S[3]["heading"]), ("s4", S[4]["heading"]), ("s9", S[9]["heading"]), ("s5", S[5]["heading"]), ("s6", S[6]["heading"]), ("s7", S[7]["heading"]), ("s8", S[8]["heading"]), ("sf", L["featured"])]
@@ -508,14 +545,27 @@ def home(page: dict, shell: dict) -> str:
              f'<div class="actions"><a href="{page["hrefs"]["explore"]}">{esc(L["start"])}</a><a href="{page["hrefs"]["evidence"]}">{esc(L["verify"])}</a></div>{page_tools(shell)}</div>']   # the tools last, as on the screen
     # DL-V2-007 (F-15, first-click test of 17 October 2026: 21-25% one-step before, 92-100% after): the eight domain
     # answers by their governed names, one step from Home, right under the product statement
-    topics = "".join(f'<li><a href="{d["href"]}">{esc(d["label"])}</a></li>' for d in shell.get("domains") or [])
+    # OD-1018 D4: each topic is a card — the governed domain name as the link, the domain's governed short thesis (its S11
+    # title, whole) as the blurb, one decorative stroke icon; the hub tint is keyed by the slug and carries no meaning
+    topics = "".join(f'<li data-hub="{esc(d.get("slug") or "")}">{hub_icon(d.get("slug") or "")}<a href="{d["href"]}">{esc(d["label"])}</a>'
+                     + (f'<p class="tthesis">{esc(d["thesis"])}</p>' if d.get("thesis") else "") + "</li>" for d in shell.get("domains") or [])
     topics_html = f'<section class="qa topics" id="topics" data-home-topics><div><h2>{esc(shell["labels"]["topics"])}</h2></div><nav aria-label="{esc(shell["labels"]["topics"])}"><ul class="rlist">{topics}</ul></nav></section>'
+    # OD-1018 D4: the canvas's search band — the existing search, opened from a field-shaped control carrying the governed
+    # placeholder; a button, not a form (the security policy's form-action 'none'), like the header's search control
+    parts.append(HERO_ART + f'<div class="home-search"><button type="button" class="hsearch" data-search-open><span>{esc(shell["labels"]["search_placeholder"])}</span></button></div>')
     recs = list(page["records"])
-    demo = []
+    lead, cards, after = [], [], []
     for res, html_ in paced_groups(S[3]["body"]):
-        demo.append(fig_emph(html_))
-        if recs and not res:
-            demo.append(compact(recs.pop(0), L, L["open_evidence_record"], cls="compact bound"))
+        if 'class="sent lead"' in html_:
+            lead.append(fig_emph(html_))
+        elif recs and not res:
+            # OD-1018 D4/D5: a figure card is one paced group (its governed sentences, figures emphasised in place, the
+            # limit inside them) with the record bound to it (period, title, population, verification link), in the
+            # generated order; no figure is repeated or lifted out of its sentence
+            cards.append(f'<div class="fcard">{fig_emph(html_)}{compact(recs.pop(0), L, L["open_evidence_record"], cls="compact bound")}</div>')
+        else:
+            after.append(fig_emph(html_))
+    demo = lead + ([f'<div class="fcards">{"".join(cards)}</div>'] if cards else []) + after
     def h2(sec):   # governed kicker (role) above the governed heading
         return (f'<span class="rubric">{esc(sec["role"])}</span>' if sec.get("role") else "") + f'<h2>{esc(sec["heading"])}</h2>'
     parts.append(f'<section class="qa first" id="s3"><div>{h2(S[3])}</div><div class="paced">{"".join(demo)}</div></section>')
@@ -556,7 +606,7 @@ def home(page: dict, shell: dict) -> str:
     f = page["featured"]
     if f:
         parts.append(f'<section class="qa" id="sf">{rubric(L["featured"], tag="h2")}<div><article class="compact first-obj">{clock(L["evidence_period"], esc(f["evidence_period"]))}<div class="q"><a href="{f["href"]}">{esc(f["title"])}</a></div><div class="st"><p>{esc(f["thesis"])}</p></div><div class="open"><a href="{f["href"]}">{esc(L["open_reading"])}</a> · <a href="{page["hrefs"]["readings"]}">{esc(L["all_readings"])}</a></div></article></div></section>')
-    parts.insert(2, toc_strip(shell, "/", "Orientation", index, {**{f"s{o}": {"kind": "section", "order": o} for o in (3, 4, 9, 5, 6, 7, 8)}, "sf": {"kind": "block"}, "topics": {"kind": "block"}}))   # S10; after the topics block and the first figure group (DEBT-014)
+    parts.insert(3, toc_strip(shell, "/", "Orientation", index, {**{f"s{o}": {"kind": "section", "order": o} for o in (3, 4, 9, 5, 6, 7, 8)}, "sf": {"kind": "block"}, "topics": {"kind": "block"}}))   # S10; after the topics block and the first figure group (DEBT-014)
     edges = [(f'{L["records_heading"]} ({len(page["records"])})', [f'<a href="{r["href"]}">{esc(r["title"])}</a>' for r in page["records"]]),
              (L["flow"], [f'<a href="{h}">{esc(t)}</a><br><span class="small">{esc(d)}</span>' for h, t, d in ((page["hrefs"]["readings"], L["readings_nav"], L["cta_readings"]), (page["hrefs"]["measurement"], L["measurement_nav"], L["cta_measurement"]), (page["hrefs"]["data"], L["data_nav"], L["cta_data"]))], L["side"])]
     body = f'<article class="obj page-obj">{"".join(parts)}{page_util(shell, page)}</article>{spine(index, edges)}{spine(index, edges, foot=True, foot_index=False)}'

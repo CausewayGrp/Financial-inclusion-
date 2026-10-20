@@ -224,7 +224,10 @@ class Content:
         # B-c: the full phone menu names the eight domain answers by their governed domain names, under the Explore hub
         mm = self.nav.get("mobile_menu") or {}
         dom = mm.get("domains") or {}
-        domains = [{"label": self.t(u, lang), "href": self.href(rt, lang), "active": self._active(rt, route)}
+        # OD-1018 D4: Home's topic cards carry each domain's governed short thesis (its S11 title, whole) and the
+        # domain's slug, which keys the decorative hub tint and icon; neither is shown anywhere else
+        domains = [{"label": self.t(u, lang), "href": self.href(rt, lang), "active": self._active(rt, route),
+                    "slug": str(rt).strip("/"), "thesis": self.loc(self.spec_by_route.get(rt) or {}, "title", lang)}
                    for rt, u in zip(dom.get("routes") or [], dom.get("label_ui_ids") or [])]
         # DL-V2-007 (F-15, 17 October 2026): the footer's first group is the eight domain answers under the governed
         # topics label, so every page offers the one-step route that Home's topics block offers

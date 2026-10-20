@@ -1,0 +1,68 @@
+{
+ "schema": "YFIE_DISPLAY_COVERAGE/1.0",
+ "decision": "OD-1018 D2 (18 October 2026): display faces for titles and section headings, one per edition",
+ "faces": {
+  "ar": {
+   "family": "Noto Naskh Arabic",
+   "weight": 600,
+   "file": "noto-naskh-arabic/NotoNaskhArabic-SemiBold-subset.woff2",
+   "upstream": "notofonts/arabic release NotoNaskhArabic-v2.021 (16 January 2026), NotoNaskhArabic/unhinted/ttf/NotoNaskhArabic-SemiBold.ttf",
+   "upstream_zip_sha256": "6c050ab9bd087d69b733c505a7576e60c528c2f33cd7b91005a5bd7da4514032",
+   "recipe": "scripts/font_subset.py (fontTools 4.67.0, brotli 1.2.0)",
+   "licence": "SIL Open Font License 1.1, no Reserved Font Name (noto-naskh-arabic/OFL.txt)",
+   "sha256": "e0f9f65db3447041cd631fc46e4f807d2fc263685317727be4af381a198e45dd",
+   "bytes": 12616,
+   "codepoints": [
+    "0020-0021",
+    "002C",
+    "002E",
+    "003A",
+    "00A0",
+    "00AB",
+    "00BB",
+    "060C",
+    "061B-061C",
+    "061F",
+    "0621-063A",
+    "0640-0655",
+    "0660-066D",
+    "0670-0671",
+    "06D4",
+    "200C-2010"
+   ],
+   "fallback": "IBM Plex Sans Arabic 600 for any character outside the subset (Latin letters, Western digits): by design"
+  },
+  "en": {
+   "family": "IBM Plex Serif",
+   "weight": 600,
+   "file": "ibm-plex-serif/IBMPlexSerif-SemiBold-Latin1.woff2",
+   "upstream": "npm @ibm/plex-serif@2.0.0 (2 February 2026), fonts/split/woff2/IBMPlexSerif-SemiBold-Latin1.woff2, unchanged",
+   "upstream_integrity": "sha512-xVu9JsC18tBoQF2M6fofpsWrHj5a94saxlOZbYmXoC0E3UfjgS1JlibgrnaUJjnkLlEyCpMgI2PdhkDxijw0gA==",
+   "licence": "SIL Open Font License 1.1, Reserved Font Name \"Plex\" (ibm-plex-serif/LICENSE.txt)",
+   "sha256": "c1487f9484cc8f04c656f7f074724154a04fdefd2ce7ffeab653f517bb4d366d",
+   "bytes": 24016,
+   "codepoints": [
+    "0020-007E",
+    "00A0-00FF",
+    "0131",
+    "0152-0153",
+    "02C6",
+    "02DA",
+    "02DC",
+    "2013-2014",
+    "2018-201A",
+    "201C-201E",
+    "2020-2022",
+    "2026",
+    "2030",
+    "2039-203A",
+    "2044",
+    "20AC",
+    "2122",
+    "2212",
+    "FB01-FB02"
+   ],
+   "fallback": "none expected: the gate fails on any heading character outside this file"
+  }
+ }
+}

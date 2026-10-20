@@ -136,6 +136,7 @@ python3 scripts/social_images.py --check               # one governed social ima
 python3 scripts/logo_derivatives.py --check            # every logo derivative is a pure resample of the unchanged master (EAD-03)
 python3 audit/tranche_c/checks/bilingual_invariance.py # 0 differing English/Arabic page pairs (exit 1 otherwise)
 python3 scripts/tests/test_content_parity.py           # every page prints its governed copy and no ungoverned number (standing)
+python3 scripts/tests/test_display_font_coverage.py --control   # every heading set in a display face is covered by it (OD-1018)
 python3 scripts/tests/test_cutover_parity.py           # the cutover proof; exits 2 ("pinned") once a Master change moves its oracle
 python3 scripts/tests/test_public_tools.py             # browser
 python3 audit/tranche_c/checks/viewport_acceptance.py  # browser

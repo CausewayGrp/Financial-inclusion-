@@ -101,6 +101,9 @@ jobs:
       - name: Content parity (every page prints its governed copy and no ungoverned number)
         run: python3 scripts/tests/test_content_parity.py
 
+      - name: Display faces cover every generated heading in both editions (OD-1018 D2), with its negative control
+        run: python3 scripts/tests/test_display_font_coverage.py --control
+
       - name: Cutover parity (the runtime prints everything the pre-design renderer printed, while the frozen oracle is current)
         # Exit 2 means the oracle is pinned to projections a later Master transaction moved: the cutover comparison can no
         # longer be made and the content-parity step above is the standing gate (scripts/tests/test_cutover_parity.py docstring).

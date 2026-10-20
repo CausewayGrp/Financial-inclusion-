@@ -153,6 +153,7 @@ def generate() -> int:
                 page = ctx.new_page()
                 for i, key in enumerate(sorted(built), 1):
                     page.goto(f"http://127.0.0.1:{port}/{key}.html", wait_until="load")
+                    page.evaluate("document.fonts.ready")   # OD-1018: every face the frame lays out (the display face too) is in before the shot
                     page.wait_for_timeout(120)   # let the shipped faces settle before the shot
                     page.screenshot(path=str(OUT / f"{key}.png"))
                     if i % 50 == 0:

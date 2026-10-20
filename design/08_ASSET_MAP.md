@@ -5,6 +5,8 @@
 > (`FONT_FACES`, the social and export frame styles), `design/reference/yfie/render.py` (`logo()`), `design/reference/yfie/frames.py`
 > (the portable frames). The logo and the fonts are the owner's canonical files, served unchanged (brief §8, EAD-04;
 > `vendor/fonts/` with their licence). No icon set, no illustration, no decorative image exists or is planned (brief §7).
+> Since owner decision OD-1018 (18 October 2026, the canvas "Yemen FI Evidence Home"): one display face per edition
+> (§2.1) and, on Home only, one illustration and eight topic icons as inline SVG (§3.1); nothing else changed here.
 
 ## 1. The mark and the publisher lockup
 
@@ -67,6 +69,22 @@ preloads the two faces its first paint needs — Regular and SemiBold of the pag
 load on demand with `font-display: swap`. IBM's pre-split Latin subsets stay a Code option (anticipated escalation,
 `ESCALATIONS.md`; vendoring needs provenance). Type roles and the two scales: `02_TOKENS.json`.
 
+### 2.1 Display faces (OD-1018 D2, 18 October 2026)
+
+Titles (`h1`), section headings (`h2` that is not an eyebrow) and the featured Reading's title take one display face
+per edition, declared in `theme.FONT_FACES` and loaded only by its own edition (`html[dir]` sets `--font-display`):
+
+| Face | File (`vendor/fonts/`, copied to `assets/fonts/`) | Upstream | Licence | Bytes |
+|---|---|---|---|---|
+| Noto Naskh Arabic SemiBold 600 | `noto-naskh-arabic/NotoNaskhArabic-SemiBold-subset.woff2` | notofonts/arabic release NotoNaskhArabic-v2.021, the unhinted TTF, subset by `scripts/font_subset.py` (Arabic letters, marks, Arabic punctuation and digits; no Latin, no Western digit) | OFL 1.1, no Reserved Font Name | 12,616 |
+| IBM Plex Serif SemiBold 600 | `ibm-plex-serif/IBMPlexSerif-SemiBold-Latin1.woff2` | npm `@ibm/plex-serif@2.0.0`, IBM's own Latin-1 split, unchanged | OFL 1.1, Reserved Font Name "Plex" | 24,016 |
+
+Body, controls and figures keep IBM Plex Sans and IBM Plex Sans Arabic; a figure is set in Western tabular digits from a
+face the page already loads (`--font-fig`: Plex Serif in English, Plex Sans Arabic in Arabic). Latin inside an Arabic
+title falls back to IBM Plex Sans Arabic 600 by design. Each page preloads Regular, SemiBold and its own display face and
+loads at most four font files. Hashes and the covered code points: `vendor/fonts/display_coverage.json`; the gate
+`scripts/tests/test_display_font_coverage.py` checks every generated heading of both editions against them.
+
 ## 3. Icons and glyphs
 
 There is no icon set. Every non-text sign is a glyph of the shipped fonts or an SVG primitive, and each carries a text
@@ -83,6 +101,20 @@ label beside it:
 | ↗ | opens the original source in a new window | every external `a.source-locator` | the link's accessible name (`UI-VIS-SOURCE` + the event label); bound to the word before it by a no-break space; the visible cue, and its mirrored form for Arabic, are escalated (D5, D6) |
 | → | the governed flow | the rubric `UI-DOM-UNDERSTAND-EXPLORE-VERIFY` | (it is the label) |
 | ─ ═ ┄ | hairline, double rule, dashed hairline | body, boundary, technical voice | — |
+
+### 3.1 The Home exception and the interface marks (OD-1018 D4/D5, 18 October 2026)
+
+The owner's exception to directive §5, Home only: the canvas's hero illustration (four stacked dotted planes, a ground
+and four connectors; `render.HERO_ART`) and one stroke icon per topic card (`render.HUB_ICONS`, a 24-unit grid at
+1.8 stroke) as inline SVG. Provenance: redrawn from the owner's Claude Design canvas "Yemen FI Evidence Home"
+(`Main.dc.html`, `Home-AR-Mobile.dc.html`, 18 October 2026) — the canvas's geometry, none of its text, every colour a
+stylesheet token through a class (no literal, no style attribute). Both are `aria-hidden` and carry no meaning; the
+illustration is shown from 1200 px only (on a phone it would push the first figure card below the first screen). The
+gate P3-G02 admits exactly these on the two Home pages and refuses any other graphic outside a governed figure.
+
+The interface's other marks — the search, menu and go/arrow marks, the caution band's warning circle — are stylesheet
+masks and gradients in the text colour (`theme.CSS`, `--ico-*`), never markup and never meaning: each sits beside its
+own governed label.
 
 ## 4. Social-image templates (`frames.social_document`; brief §16)
 
@@ -128,5 +160,6 @@ action copies (`06_VISUAL_TABLE_SYSTEM.md` §7).
 ## 7. What `out/assets/` holds
 
 `yfie.css` (FONT_FACES + CSS + CSS_D2 + CSS_D6), `app.js` and `lang-redirect.js` (the baseline runtime, unchanged),
-`CauseWay_Master_Logo.png`, `fonts/ibm-plex-sans/` and `fonts/ibm-plex-sans-arabic/` (as vendored, with licences).
+`CauseWay_Master_Logo.png`, `fonts/ibm-plex-sans/` and `fonts/ibm-plex-sans-arabic/` (as vendored, with licences),
+and since OD-1018 `fonts/noto-naskh-arabic/` and `fonts/ibm-plex-serif/` (§2.1, with their licences).
 `static-data/` holds the two JSON files the runtime fetches. Nothing else is shipped; no third-party resource is loaded.
